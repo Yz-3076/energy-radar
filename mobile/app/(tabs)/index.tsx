@@ -24,7 +24,6 @@ import {
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import Supercluster from "supercluster";
 
-import { BrandMark } from "@/components/BrandMark";
 import { Can } from "@/components/Can";
 import { CanGL } from "@/components/CanGL";
 import { ClusterBadge, StorePin, UserPuck } from "@/components/MapPins";
@@ -302,7 +301,6 @@ export default function MapScreen() {
       <View style={[styles.topBar, { top: insets.top + 6 }]} pointerEvents="box-none">
         <View style={styles.brandRow}>
           <View style={styles.brandLeft}>
-            <BrandMark size={38} />
             <View style={styles.brandText}>
               <Text style={styles.kicker}>Hunting near</Text>
               <Text style={styles.place} numberOfLines={1}>

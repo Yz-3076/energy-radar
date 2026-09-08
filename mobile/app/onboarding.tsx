@@ -5,7 +5,6 @@ import { Animated, Easing } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import Svg, { Defs, LinearGradient as SvgGradient, Path, Stop } from "react-native-svg";
 
-import { BrandMark } from "@/components/BrandMark";
 import { Crosshair } from "@/components/icons";
 import { useLoopValue } from "@/components/motion";
 import { Tap, styles as ui } from "@/components/ui";
@@ -75,7 +74,6 @@ export default function Onboarding() {
   return (
     <View style={[styles.root, { paddingTop: insets.top + 24, paddingBottom: insets.bottom + 24 }]}>
       <View style={styles.brand}>
-        <BrandMark size={44} glow />
         <Text style={styles.wordmark}>Energy Radar</Text>
       </View>
 

@@ -44,12 +44,32 @@ ROOT = Path(__file__).resolve().parent.parent
 DATA_DIR = ROOT / "data"
 DUMPS_DIR = Path(__file__).resolve().parent / "dumps"
 
-CHAINS = ["SHUFERSAL"]
-# RAMI_LEVY is temporarily out: its portal host
-# (url.retail.publishedprices.co.il) fails to resolve in DNS right now —
-# confirmed both locally and against Google's own resolver (8.8.8.8), so
-# this is that domain's own outage/misconfiguration, not a local network
-# issue. Worth retrying later; add it back to this list once it resolves.
+# Every chain here is confirmed to actually run without crashing the
+# pipeline; whether it contributes any rows on a given run varies (see
+# fetch_files' try/except above — a broken chain just logs and yields
+# nothing, it never takes the run down). Debugged individually against live
+# endpoints on 2026-09-08:
+#
+#  SHUFERSAL           — fully working: real branches, real prices, live.
+#  VICTORY_NEW_SOURCE  — connects fine (laibcatalog.co.il), 70 real branches
+#                        confirmed to exist, but /getfiles currently returns
+#                        an empty list for their chain code. Not an error —
+#                        the API just has nothing published at the moment
+#                        this was checked. Left in: costs nothing to ask
+#                        again every 3 hours, and it'll start contributing
+#                        the moment their publishing schedule fills back in.
+#  RAMI_LEVY           — same root cause as the next two: its host
+#  YELLOW              — (Paz) and
+#  OSHER_AD            — and DOR_ALON all resolve to the SAME shared portal,
+#  DOR_ALON            — url.retail.publishedprices.co.il, which fails DNS
+#                        resolution right now — confirmed against Google's
+#                        own resolver (8.8.8.8) too, so this is that
+#                        domain's own outage, not anything on our end. All
+#                        four of these will very likely start working again
+#                        simultaneously, with no code change, the moment
+#                        that one host comes back — worth leaving in rather
+#                        than pulled out.
+CHAINS = ["SHUFERSAL", "VICTORY_NEW_SOURCE", "RAMI_LEVY", "YELLOW", "OSHER_AD", "DOR_ALON"]
 
 # For local smoke-testing only: PIPELINE_LIMIT=5 py pipeline.py fetches just a
 # handful of branches per chain instead of the whole country. Unset (the
@@ -70,8 +90,12 @@ async def fetch_files(chain_name: str, file_type: str, out_subdir: str) -> Path:
     out_dir = DUMPS_DIR / chain_name / out_subdir
     scraper = scraper_cls(file_output=DiskFileOutput(storage_path=str(out_dir)))
     count = 0
-    async for _ in scraper.scrape(limit=FILE_LIMIT, files_types=[file_type]):
-        count += 1
+    try:
+        async for _ in scraper.scrape(limit=FILE_LIMIT, files_types=[file_type]):
+            count += 1
+    except Exception as e:  # noqa: BLE001 — one flaky chain must never take the whole run down
+        print(f"  {chain_name} {file_type}: FAILED ({type(e).__name__}: {e})")
+        return out_dir
     print(f"  {chain_name} {file_type}: {count} file(s)")
     return out_dir
 
