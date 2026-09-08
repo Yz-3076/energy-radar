@@ -1,0 +1,26 @@
+{
+  "generated_at": "2026-09-08T21:18:19.963039+00:00",
+  "chains_covered": [
+    "SHUFERSAL",
+    "VICTORY_NEW_SOURCE",
+    "RAMI_LEVY",
+    "YELLOW",
+    "OSHER_AD",
+    "DOR_ALON"
+  ],
+  "store_count": 321,
+  "total_observations": 2695,
+  "observations_this_run": 2695,
+  "listings_per_variant": {
+    "ultra": 496,
+    "mango-loco": 462,
+    "ultra-paradise": 447,
+    "ultra-fiesta": 439,
+    "original": 447,
+    "full-zero": 404
+  },
+  "depletion_breakdown": {
+    "insufficient_data": 2671,
+    "healthy": 24
+  }
+}
