@@ -1,0 +1,19 @@
+{
+  "name": "monster-tracker-app",
+  "private": true,
+  "version": "0.0.1",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "maplibre-gl": "^4.7.1",
+    "three": "^0.169.0",
+    "supercluster": "^8.0.1"
+  },
+  "devDependencies": {
+    "vite": "^5.4.10"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "name": "monster-tracker-server",
+  "private": true,
+  "version": "0.0.1",
+  "type": "module",
+  "scripts": {
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.1",
+    "multer": "^2.0.0",
+    "stripe": "^17.3.1"
+  }
+}

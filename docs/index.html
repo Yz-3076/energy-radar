@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Energy Radar — data stats</title>
+<style>
+  :root { color-scheme: dark; }
+  body {
+    margin: 0; background: #0a0b0a; color: #eaf0ea;
+    font-family: -apple-system, system-ui, sans-serif;
+    padding: 24px 16px 60px;
+  }
+  h1 { font-size: 22px; font-weight: 800; letter-spacing: -0.5px; margin: 0 0 4px; }
+  .sub { color: rgba(234,240,234,.5); font-size: 13px; margin-bottom: 28px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 12px; margin-bottom: 32px; }
+  .card {
+    border: 1px solid rgba(255,255,255,.1); border-radius: 10px; padding: 14px;
+    background: rgba(255,255,255,.02);
+  }
+  .card .n { font-size: 28px; font-weight: 800; color: #00ff41; line-height: 1; }
+  .card .k { font-size: 10.5px; letter-spacing: .1em; text-transform: uppercase; color: rgba(234,240,234,.45); margin-top: 6px; }
+  h2 { font-size: 14px; letter-spacing: .08em; text-transform: uppercase; color: rgba(234,240,234,.6); margin: 32px 0 12px; }
+  .bar-row { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; font-size: 13px; }
+  .bar-label { width: 130px; flex: none; color: rgba(234,240,234,.8); text-align: right; }
+  .bar-track { flex: 1; height: 18px; background: rgba(255,255,255,.05); border-radius: 4px; overflow: hidden; }
+  .bar-fill { height: 100%; background: #00ff41; }
+  .bar-value { width: 36px; flex: none; color: rgba(234,240,234,.5); font-size: 11px; }
+  .depletion-healthy { background: #00ff41; }
+  .depletion-slowing { background: #e0b23d; }
+  .depletion-likely_out { background: #ff5a5a; }
+  .depletion-insufficient_data { background: rgba(255,255,255,.25); }
+  .empty { color: rgba(234,240,234,.4); font-size: 13px; padding: 20px 0; }
+  a { color: #00ff41; }
+</style>
+</head>
+<body>
+  <h1>Energy Radar — price data</h1>
+  <div class="sub" id="subtitle">Loading…</div>
+
+  <div class="grid" id="stat-cards"></div>
+
+  <h2>Listings per flavour</h2>
+  <div id="per-variant"></div>
+
+  <h2>Stock status right now</h2>
+  <div id="depletion"></div>
+
+  <p class="sub" style="margin-top:40px">
+    Raw data:
+    <a id="latest-link" href="#">latest.json</a> ·
+    <a id="stats-link" href="#">stats.json</a> ·
+    <a id="history-link" href="#">history.ndjson</a>
+  </p>
+
+<script>
+// Fill this in once the repo exists — data lives at repo root, not under
+// docs/, so this dashboard reads it via the raw-content URL rather than a
+// relative path (works the same regardless of how Pages is configured).
+const REPO = "OWNER/REPO"; // <-- e.g. "joshuazisel/monster-tracker"
+const BRANCH = "main";
+const RAW = `https://raw.githubusercontent.com/${REPO}/${BRANCH}/data`;
+
+document.getElementById("latest-link").href = `${RAW}/latest.json`;
+document.getElementById("stats-link").href = `${RAW}/stats.json`;
+document.getElementById("history-link").href = `${RAW}/history.ndjson`;
+
+function bar(label, value, max, cls) {
+  const pct = max > 0 ? Math.round((value / max) * 100) : 0;
+  return `<div class="bar-row">
+    <div class="bar-label">${label}</div>
+    <div class="bar-track"><div class="bar-fill ${cls || ""}" style="width:${pct}%"></div></div>
+    <div class="bar-value">${value}</div>
+  </div>`;
+}
+
+async function load() {
+  try {
+    const stats = await fetch(`${RAW}/stats.json`, { cache: "no-store" }).then((r) => {
+      if (!r.ok) throw new Error("no stats.json yet");
+      return r.json();
+    });
+
+    document.getElementById("subtitle").textContent =
+      `Chains: ${stats.chains_covered.join(", ")} · generated ${new Date(stats.generated_at).toLocaleString()}`;
+
+    document.getElementById("stat-cards").innerHTML = `
+      <div class="card"><div class="n">${stats.store_count}</div><div class="k">Stores covered</div></div>
+      <div class="card"><div class="n">${stats.total_observations.toLocaleString()}</div><div class="k">Total observations</div></div>
+      <div class="card"><div class="n">${stats.observations_this_run}</div><div class="k">This run</div></div>
+    `;
+
+    const variantCounts = stats.listings_per_variant || {};
+    const maxV = Math.max(1, ...Object.values(variantCounts));
+    document.getElementById("per-variant").innerHTML =
+      Object.entries(variantCounts).sort((a, b) => b[1] - a[1])
+        .map(([id, n]) => bar(id, n, maxV)).join("") ||
+      `<div class="empty">No listings yet.</div>`;
+
+    const depletion = stats.depletion_breakdown || {};
+    const maxD = Math.max(1, ...Object.values(depletion));
+    const order = ["healthy", "slowing", "likely_out", "insufficient_data"];
+    document.getElementById("depletion").innerHTML =
+      order.filter((k) => depletion[k] != null)
+        .map((k) => bar(k.replace("_", " "), depletion[k], maxD, `depletion-${k}`)).join("") ||
+      `<div class="empty">No data yet.</div>`;
+  } catch (e) {
+    document.getElementById("subtitle").textContent =
+      "No data yet — this fills in after the first scheduled run (or a manual run from the Actions tab).";
+    document.getElementById("per-variant").innerHTML = `<div class="empty">—</div>`;
+    document.getElementById("depletion").innerHTML = `<div class="empty">—</div>`;
+  }
+}
+
+load();
+</script>
+</body>
+</html>

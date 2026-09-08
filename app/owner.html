@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>List your store — Monster Finder</title>
+</head>
+<body>
+  <div id="owner-app">
+    <div class="owner-topbar">
+      <a href="/" class="owner-back">← Map</a>
+      <div id="brand">MONSTER FINDER</div>
+    </div>
+
+    <div class="owner-card" id="view-form">
+      <h1>List your store</h1>
+      <p class="owner-sub">
+        Get a featured pin on the map so nearby hunters buy Monster at your
+        place. $9.99/month once your shelf photo is verified.
+      </p>
+
+      <form id="listing-form">
+        <label class="owner-label">Store name</label>
+        <input class="owner-input" type="text" name="storeName" placeholder="e.g. Pike Street Mini Mart" required />
+
+        <label class="owner-label">Address / location</label>
+        <input class="owner-input" type="text" name="address" placeholder="Street, city" required />
+
+        <label class="owner-label">Flavors you carry &amp; their price</label>
+        <div id="flavor-rows"></div>
+        <button type="button" id="add-flavor" class="owner-btn-ghost">+ Add another flavor</button>
+
+        <label class="owner-label">Shelf photo</label>
+        <div class="owner-dropzone" id="dropzone">
+          <input type="file" id="photo-input" accept="image/*" required />
+          <span id="dropzone-label">Choose a photo of your Monster shelf</span>
+          <img id="photo-preview" hidden />
+        </div>
+        <p class="owner-hint">
+          This photo is checked against what you entered above before your
+          listing goes live — see the status screen for details.
+        </p>
+
+        <button type="submit" class="owner-btn-primary">Submit listing</button>
+      </form>
+      <p class="owner-error" id="form-error" hidden></p>
+    </div>
+
+    <div class="owner-card" id="view-status" hidden>
+      <h1 id="status-title">Reviewing your submission…</h1>
+      <p class="owner-sub" id="status-sub"></p>
+
+      <div class="owner-status-row" id="status-pending">
+        <span class="owner-spinner"></span>
+        <span>Waiting on manual review — no automatic AI check is wired up yet.</span>
+      </div>
+
+      <button type="button" id="dev-force-verify" class="owner-btn-ghost">
+        Dev-only: force-verify now (skips manual review, for testing)
+      </button>
+
+      <div id="status-verified" hidden>
+        <div class="owner-status-row owner-status-ok">✓ Verified</div>
+        <button type="button" id="go-subscribe" class="owner-btn-primary">
+          Continue to payment — $9.99/mo
+        </button>
+      </div>
+
+      <div id="status-featured" hidden>
+        <div class="owner-status-row owner-status-ok">✓ Featured — live on the map</div>
+      </div>
+    </div>
+
+    <script type="module" src="/src/owner.js"></script>
+  </div>
+</body>
+</html>

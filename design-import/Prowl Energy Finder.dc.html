@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style data-omelette-injected>html,body{background:transparent}</style><script data-omelette-injected>(()=>{{const n=new URLSearchParams(location.search).get("theme");if(n==="light"||n==="dark"){document.documentElement.dataset.theme=n}}{if(new URLSearchParams(location.search).get("_omthumb")==="1"){const n=(f)=>{const g=f.focus;if(!g)return;f.focus=function(h){g.call(this,{...h,preventScroll:true})}};n(HTMLElement.prototype);n(SVGElement.prototype);if(typeof MathMLElement!=="undefined"){n(MathMLElement.prototype)}const d=(f)=>{f.removeAttribute("autofocus");f.inert=true;if(!(f instanceof HTMLElement))f.removeAttribute("tabindex")};const p=(f)=>{if(f.hasAttribute("autofocus"))d(f);for(const g of f.querySelectorAll("[autofocus]")){d(g)}};p(document.documentElement);new MutationObserver((f)=>{for(const g of f){for(const h of g.addedNodes){if(h.nodeType===1)p(h)}}}).observe(document,{childList:true,subtree:true})}}{const n=()=>{try{if(document.querySelector('meta[name="color-scheme"]'))return;const d=getComputedStyle(document.documentElement).getPropertyValue("color-scheme").trim();if(d&&d!=="normal")return;const p=(y)=>{if(!y)return null;const m=getComputedStyle(y).backgroundColor.match(/^rgba?\(\s*(\d+)[,\s]+(\d+)[,\s]+(\d+)(?:[,\s/]+([\d.]+%?))?\s*\)$/);if(!m)return null;const w=m[4]==null?1:parseFloat(m[4])/(m[4].endsWith("%")?100:1);if(w<0.99)return null;return[+m[1],+m[2],+m[3]]};const f=p(document.body)||p(document.documentElement);if(!f)return;const g=(y)=>{const m=y/255;return m<=0.04045?m/12.92:((m+0.055)/1.055)**2.4};const h=0.2126*g(f[0])+0.7152*g(f[1])+0.0722*g(f[2]);document.documentElement.style.setProperty("color-scheme",h<0.4?"dark":"light")}catch{}};if(document.readyState==="complete")n();else window.addEventListener("load",n)}var I=[];var B=false;var K=false;var C=()=>{};if(K===true){try{const n=setTimeout.bind(window);const d=1e4;const p=15;const f=1e4;const g=120000;const h=200;const y=(o)=>{try{let r;if(typeof o==="string")r=o;else if(o instanceof URL)r=o.href;else if(typeof Request!=="undefined"&&o instanceof Request)r=o.url;else return null;if(!r)return null;const l=document.baseURI;const i=new URL(r,l);if(i.protocol!=="http:"&&i.protocol!=="https:")return null;if(i.origin!==new URL(l).origin)return null;return i.origin+i.pathname}catch{return null}};const m=new Map;const w=(o)=>{let r=m.get(o);if(!r){if(m.size>=h){const l=m.keys().next().value;if(l!==undefined)m.delete(l)}r={fails:[],until:0,cooldown:f,hard:false};m.set(o,r)}return r};const R=(o)=>{const r=m.get(o);return r!==undefined&&r.until>Date.now()};const O=(o,r)=>{const l=Date.now();const i=w(o);if(r)i.hard=true;if(i.until>l)return;i.fails.push(l);while(i.fails.length>0&&i.fails[0]<=l-d)i.fails.shift();if(i.fails.length>=p){i.until=l+i.cooldown;if(i.hard)i.cooldown=Math.min(i.cooldown*2,g);i.fails.length=0;try{n(()=>{try{S(true)}catch{}},i.until-l+100)}catch{}console.warn("[omelette] asset circuit breaker: pausing requests to "+o+" for "+Math.round((i.until-l)/1000)+"s after "+p+" failures in "+d/1000+"s")}};const e=(o)=>{m.delete(o)};const t=100;const a=new WeakMap;const u=new Set;let s=null;const S=(o)=>{for(const r of Array.from(u)){try{const l=a.get(r);if(l===undefined){u.delete(r);continue}if(o){const i=y(l);if(i!==null&&R(i))continue}a.delete(r);u.delete(r);if(s!==null)s.call(r,l)}catch{}}};C=()=>{try{m.clear();S(false)}catch{}};document.addEventListener("visibilitychange",()=>{if(document.visibilityState==="visible")C()});const _=window.fetch;if(typeof _==="function"){const o=function(...r){let l=null;try{l=y(r[0])}catch{}if(l!==null&&R(l)){let c;try{if(r[1]&&r[1].signal!==undefined){c=r[1].signal||undefined}else if(typeof Request!=="undefined"&&r[0]instanceof Request){c=r[0].signal||undefined}}catch{c=undefined}return new Promise((k,b)=>{const E=()=>{try{return c.reason!==undefined?c.reason:new DOMException("The operation was aborted.","AbortError")}catch{return new DOMException("The operation was aborted.","AbortError")}};try{if(c&&c.aborted){b(E());return}}catch{}let T=false;const j=()=>{if(T)return;T=true;b(E())};try{if(c)c.addEventListener("abort",j,{once:true})}catch{}n(()=>{if(T)return;T=true;try{if(c)c.removeEventListener("abort",j)}catch{}let L;try{L=new Response(null,{status:429,statusText:"Too Many Requests",headers:{"Retry-After":"10"}})}catch{L={ok:false,status:429}}k(L)},250)})}const i=_.apply(window,r);if(l!==null){const c=l;i.then((k)=>{try{if(k.ok)e(c);else if(k.status===401||k.status===403||k.status===404||k.status===429){O(c,k.status!==404)}}catch{}},()=>{})}return i};window.fetch=o}const v=Object.getOwnPropertyDescriptor(HTMLImageElement.prototype,"src");if(v!==undefined&&v.set!==undefined&&v.get!==undefined){const o=v.set;s=o;Object.defineProperty(HTMLImageElement.prototype,"src",{configurable:true,enumerable:v.enumerable,get:v.get,set(r){const l=`${r}`;try{const i=y(l);if(i!==null&&R(i)){a.set(this,l);if(u.size<t)u.add(this);return}}catch{}try{a.delete(this);u.delete(this)}catch{}o.call(this,l)}})}try{const o=HTMLImageElement.prototype.setAttribute;HTMLImageElement.prototype.setAttribute=function(r,l){if(arguments.length<2){o.apply(this,arguments);return}if(typeof r==="string"&&r.toLowerCase()==="src"){const i=`${l}`;try{const c=y(i);if(c!==null&&R(c)){a.set(this,i);if(u.size<t)u.add(this);return}a.delete(this);u.delete(this)}catch{}o.call(this,r,i);return}o.call(this,r,l)}}catch{}window.addEventListener("error",(o)=>{try{const r=o.target;if(r instanceof HTMLImageElement){const l=y(r.currentSrc||r.src||"");if(l!==null)O(l,true)}}catch{}},true);window.addEventListener("load",(o)=>{try{const r=o.target;if(r instanceof HTMLImageElement){const l=y(r.currentSrc||r.src||"");if(l!==null)e(l);const i=a.get(r);if(i!==undefined){let c=false;try{c=new URL(i,document.baseURI).href===new URL(r.currentSrc||r.src||"",document.baseURI).href}catch{c=false}if(c){a.delete(r);u.delete(r)}}}}catch{}},true)}catch{}}var J=30000;var G=3000;document.addEventListener("DOMContentLoaded",()=>{const n=window.Babel;const d="om-src-id";if(n&&n.registerPlugin&&!(n.availablePlugins&&n.availablePlugins[d])){n.registerPlugin(d,({types:h})=>({visitor:{JSXOpeningElement(y,m){const w=y.node;if(w.name&&w.name.type==="JSXMemberExpression")return;for(let t=0;t<w.attributes.length;t++){const a=w.attributes[t];if(a.type==="JSXAttribute"&&a.name&&a.name.name==="data-om-id")return}const R=m.file&&m.file.opts&&m.file.opts.filename||"?";const O=w.loc&&w.loc.start;const e=`jsx:${R}:${w.start??0}:${O?O.line:0}:${O?O.column+1:0}`;w.attributes.push(h.jsxAttribute(h.jsxIdentifier("data-om-id"),h.stringLiteral(e)))}}}))}const p="om-text-extract";let f=false;if(B&&n&&n.registerPlugin&&!(n.availablePlugins&&n.availablePlugins[p])){const h=window.React;if(h&&h.useSyncExternalStore&&h.createElement){f=true;const y={};const m=new Set;let w=0;window.__omTextO=y;window.__omTextSet=(e)=>{for(const t in e){const a=e[t];if(a==null)delete y[t];else y[t]=a}w++;m.forEach((t)=>t())};const R=(e)=>{m.add(e);return()=>m.delete(e)};const O=()=>w;window.__OmT=function e(t){h.useSyncExternalStore(R,O,O);return h.createElement("span",{"data-om-text":t.i,className:"__om-t"},t.i in y?y[t.i]:t.children)};n.registerPlugin(p,({types:e})=>{const t={style:1,script:1,noscript:1,textarea:1,title:1,option:1,text:1,tspan:1,textPath:1};const a={placeholder:1,alt:1,title:1,label:1,"aria-label":1,"aria-description":1,"aria-placeholder":1};const u=(o,r)=>e.logicalExpression("??",e.memberExpression(e.logicalExpression("||",e.memberExpression(e.identifier("window"),e.identifier("__omTextO")),e.objectExpression([])),e.stringLiteral(o),true),r);const s=(o)=>o.file&&o.file.opts&&o.file.opts.filename||"?";const S=(o)=>o.file&&o.file.code||"";const _=(o,r)=>{const l=(c)=>c&&c.start!=null&&c.end!=null&&(c.type==="StringLiteral"||c.type==="TemplateLiteral"&&c.expressions.length===0)?[c.start,c.end]:null;const i=l(r);if(i)return i;if(r&&r.type==="Identifier"){const c=o.scope.getBinding(r.name);if(c&&c.constant&&c.path.node.type==="VariableDeclarator"){return l(c.path.node.init)}}return null};const v=(o,r,l)=>{const i=o.node;let c=false;const k=(E,T)=>{c=true;return e.jsxElement(e.jsxOpeningElement(e.jsxIdentifier("__OmT"),[e.jsxAttribute(e.jsxIdentifier("i"),e.stringLiteral(E))],false),e.jsxClosingElement(e.jsxIdentifier("__OmT")),[T],false)};const b=i.children.map((E)=>{if(E.type==="JSXText"){if(E.start==null||E.end==null)return E;const T=l.slice(E.start,E.end);const j=T.length-T.trimStart().length;const L=T.length-T.trimEnd().length;if(j+L>=T.length)return E;return k(`txt:${r}:${E.start+j}:${E.end-L}`,E)}if(E.type==="JSXExpressionContainer"){const T=_(o,E.expression);if(T)return k(`str:${r}:${T[0]}:${T[1]}`,E)}return E});if(c)i.children=b};return{visitor:{JSXOpeningElement(o,r){const l=o.node;const i=s(r);const c={};for(let k=0;k<l.attributes.length;k++){const b=l.attributes[k];if(b.type!=="JSXAttribute"||!b.name)continue;const E=b.name.name;if(!a[E])continue;if(!b.value||b.value.type!=="StringLiteral")continue;if(b.value.start==null||b.value.end==null)continue;const T=`txt:${i}:${b.value.start}:${b.value.end}`;c[E]=T;b.value=e.jsxExpressionContainer(u(T,e.stringLiteral(b.value.value)))}if(Object.keys(c).length){l.attributes.push(e.jsxAttribute(e.jsxIdentifier("data-om-text-attrs"),e.stringLiteral(JSON.stringify(c))))}},JSXElement(o,r){const l=o.node.openingElement;const i=l&&l.name&&l.name.name;if(i==="__OmT")return;if(typeof i==="string"&&t[i])return;v(o,s(r),S(r))},JSXFragment(o,r){v(o,s(r),S(r))}}}})}}const g=f?["transform-react-jsx-source",d,p]:["transform-react-jsx-source",d];document.querySelectorAll('script[type="text/babel"],script[type="text/jsx"]').forEach((h,y)=>{const m=h.getAttribute("data-plugins")||"";const w=g.filter((R)=>m.indexOf(R)<0);if(w.length){h.setAttribute("data-plugins",m?`${m},${w.join(",")}`:w.join(","))}if(!h.hasAttribute("data-filename")){h.setAttribute("data-filename",h.getAttribute("src")||`inline-${y}`)}})});var A=window.parent;var U="not editable here — open the project in the Claude Design editor to save";var W=()=>Promise.resolve({persisted:false,noHost:true,reason:U});var H=W;var M="data/storage.json";var z=()=>{try{const n=new URL(document.baseURI);const d=n.pathname.match(/\/projects\/([^/]+)\/serve\//);if(d)return d[1];return n.hostname.split(".")[0]||""}catch{return location.hostname.split(".")[0]||""}};var Z=()=>{try{const n=new URL(document.baseURI);const d=n.pathname.indexOf("/serve/");if(d>=0)return n.origin+n.pathname.slice(0,d+"/serve/".length)+M}catch{}return"./"+M};var x=null;var N=()=>{if(!x){x=fetch(Z(),{cache:"no-store"}).then((n)=>{if(n.ok)return n.text();return n.status===404?"":null}).catch(()=>null).then((n)=>{if(n===null){x=null;return null}const d=new Map;if(!n)return d;let p;try{p=JSON.parse(n)}catch{console.warn("[omelette.storage] "+M+" is not valid JSON; treating the store as unreadable so a save cannot overwrite the "+"hand-edited bytes. Fix the JSON (or delete the file) to re-enable persistence.");x=null;return null}if(p===null||typeof p!=="object"||Array.isArray(p)){console.warn("[omelette.storage] "+M+" doesn't hold a JSON object; treating the store as unreadable so a save cannot "+"overwrite the hand-edited bytes. Make the top level a JSON object to re-enable persistence.");x=null;return null}const f=p;if("data"in f){const g=f.data;if(g===null||typeof g!=="object"||Array.isArray(g)){console.warn("[omelette.storage] "+M+' has a "data" field that is not a JSON object; treating the store as unreadable so a '+'save cannot overwrite the hand-edited bytes. Make "data" a JSON object to re-enable persistence.');x=null;return null}const h=f._meta;const y=h!==null&&typeof h==="object"?h.project:undefined;if(typeof y==="string"&&y!==""&&y!==z())return d;for(const m of Object.keys(g))d.set(m,g[m]);return d}for(const g of Object.keys(f)){if(g!=="_meta")d.set(g,f[g])}return d})}return x};var F=(n)=>H(M,JSON.stringify({_meta:{project:z(),version:1},data:Object.fromEntries(n)},null,2));var D=Promise.resolve();var $=(n)=>{const d=D.then(n);D=d.then(()=>{return},()=>{return});return d};var V=/sk-(?:ant-)?[A-Za-z0-9_-]{16,}|AKIA[0-9A-Z]{16}|gh[pousr]_[A-Za-z0-9]{20,}|xox[a-z]-[A-Za-z0-9][A-Za-z0-9-]{9,}|AIza[0-9A-Za-z_-]{30,}|-----BEGIN [A-Z ]*PRIVATE KEY-----/;var Y=/password|passwd|secret|api[_-]?key|access[_-]?token|auth[_-]?token|credential/i;var Q=(n,d,p)=>{if(V.test(d)||Y.test(n)&&typeof p==="string"&&p.length>=8){console.warn('[omelette.storage] the value for "'+n+'" looks like a credential. The storage file is a plaintext project file — visible to '+"everyone with project access and copied when the project is duplicated. Do not store secrets here.")}};var q={persisted:false,reason:"could not load the existing store — not overwriting it"};var X={persisted:false,reason:"stored value changed since a failed read — re-read this key before saving"};var P=new Set;var ee={get:(n)=>{if(typeof n!=="string"){return Promise.reject(new TypeError("storage.get: key must be a string"))}return $(N).then((d)=>{if(d===null){P.add(n);return null}P.delete(n);if(!d.has(n))return null;const p=d.get(n);return p==null?null:JSON.parse(JSON.stringify(p))})},set:(n,d)=>{if(typeof n!=="string"){return Promise.reject(new TypeError("storage.set: key must be a string"))}let p;try{p=JSON.stringify(d)}catch(g){return Promise.reject(new TypeError("storage.set: value must be JSON-serializable ("+String(g)+")"))}if(p===undefined){return Promise.reject(new TypeError("storage.set: value must be JSON-serializable"))}Q(n,p,d);const f=JSON.parse(p);return $(()=>N().then((g)=>{if(g===null)return q;if(P.has(n)){if(g.has(n))return X;P.delete(n)}g.set(n,f);return F(g)}))},delete:(n)=>{if(typeof n!=="string"){return Promise.reject(new TypeError("storage.delete: key must be a string"))}return $(()=>N().then((d)=>{if(d===null)return q;if(P.has(n)){if(d.has(n))return X;P.delete(n)}d.delete(n);return F(d)}))},keys:()=>$(N).then((n)=>n===null?[]:Array.from(n.keys()))};window.omelette={writeFile:(n,d)=>H(n,d).then((p)=>{if(!p.persisted&&!p.noHost){throw new Error(p.reason||"write failed")}}),storage:ee};if(A&&A!==window){const n=(e,t)=>{try{A.postMessage({__omelette_log:true,type:e,data:t},"*")}catch{}};["log","warn","error"].forEach((e)=>{const t=console[e];console[e]=(...a)=>{const u=a.map((s)=>{try{return typeof s==="object"?JSON.stringify(s):String(s)}catch{try{return String(s)}catch{return"[unstringifiable]"}}}).join(" ");n(e,u);t.apply(console,a)}});window.addEventListener("error",(e)=>{const t=e.target;if(t&&t!==window&&t.tagName){const a=t.src||t.href||"";n("resource_error",`${t.tagName} failed to load: ${a}`)}else{n("error",`${e.message||"Unknown error"} at ${e.filename||"?"}:${e.lineno||0}:${e.colno||0}`)}},true);window.addEventListener("unhandledrejection",(e)=>{const t=e.reason;const a=t instanceof Error?`${t.message} ${t.stack}`:String(t);n("error",`Unhandled rejection: ${a}`)});window.addEventListener("click",(e)=>{if(e.defaultPrevented||e.button!==0)return;if(e.metaKey||e.ctrlKey||e.shiftKey||e.altKey)return;const t=e.composedPath?e.composedPath():[];const a=["button","input","select","textarea","summary","label"];let u=null;for(const v of t){if(!(v instanceof Element))continue;if(v.localName==="a"){if(!(v instanceof HTMLAnchorElement))return;u=v;break}if(a.indexOf(v.localName)!==-1)return}if(!u)return;if(u.isContentEditable)return;const s=u.closest("[contenteditable]");if(s&&s.getAttribute("contenteditable")!=="false")return;const S=(u.getAttribute("target")||"_self").toLowerCase();if(S!=="_self"&&S!=="_top"&&S!=="_parent")return;let _;try{_=new URL(u.href)}catch{return}if(_.protocol!=="http:"&&_.protocol!=="https:")return;if(location.origin==="null")return;if(_.origin===location.origin)return;e.preventDefault();window.open(_.href,"_blank","noopener,noreferrer")});const d=()=>{try{A.postMessage({type:"omelette:height",height:document.documentElement.scrollHeight},"*")}catch{}};if(window.ResizeObserver)new ResizeObserver(d).observe(document.documentElement);const p=()=>{d();if(!document.querySelector('script[type="text/babel"],script[type="text/jsx"]'))return;const e=()=>document.getElementById("root")||document.querySelector("body > div[id]");const t=e()?.firstElementChild??null;let a=0;const u=()=>{const s=e();if(s&&s.firstElementChild!==t||++a>30){d();return}setTimeout(u,100)};setTimeout(u,100)};if(document.readyState==="complete")p();else window.addEventListener("load",p);const f={};let g=0;const h=(e)=>new Promise((t,a)=>{if(!I.length){a(new Error("claude.complete: no parent origin"));return}const u=`c${++g}`;const s=()=>setTimeout(()=>{delete f[u];a(new Error(`claude.complete: no data for ${J/1000}s`))},J);const S=s();f[u]={resolve:t,reject:a,text:"",t:S,arm:s};try{for(const _ of I){A.postMessage({__om_api:true,id:u,body:e},_)}}catch(_){clearTimeout(S);delete f[u];a(_)}});const y=8;const m=async(e,t)=>{if(!Array.isArray(e.messages)){throw new Error("claude.complete: tools require a messages array")}const a=e.messages.slice();const u={...e,tools:e.tools.map((_)=>{if(_===null||typeof _!=="object")return _;const v={};for(const o of Object.keys(_)){if(typeof _[o]!=="function")v[o]=_[o]}return v})};const s=u.tool_choice;const S=s!=null&&(s.type==="any"||s.type==="tool")?{...u,tool_choice:s.disable_parallel_tool_use!==undefined?{type:"auto",disable_parallel_tool_use:s.disable_parallel_tool_use}:{type:"auto"}}:u;for(let _=0;_<y;_++){const v=await h({..._===0?u:S,messages:a});const o=v.message;const r=o&&Array.isArray(o.content)?o.content:null;const l=r?r.filter((c)=>c?.type==="tool_use"):[];if(o?.stop_reason!=="tool_use"||l.length===0){return v.text}const i=[];for(const c of l){const k=t.get(c.name);if(!k){i.push({type:"tool_result",tool_use_id:c.id,content:`no handler for tool "${c.name}"`,is_error:true});continue}try{const b=await k(c.input);const E=typeof b==="string"?b:O(b)??"";i.push({type:"tool_result",tool_use_id:c.id,content:E})}catch(b){i.push({type:"tool_result",tool_use_id:c.id,content:String(b?.message??b??"tool handler failed"),is_error:true})}}a.push({role:"assistant",content:r},{role:"user",content:i})}throw new Error(`claude.complete: exceeded ${y} tool turns`)};window.claude={complete(e){const t=e;if(t!==null&&typeof t==="object"&&Array.isArray(t.tools)&&t.tools.some((a)=>a!==null&&typeof a==="object"&&typeof a.run==="function")){const a=new Map;for(const u of t.tools){if(u!==null&&typeof u==="object"&&typeof u.run==="function"){a.set(String(u.name),u.run)}}return m(t,a)}return h(e).then((a)=>a.text)}};const w={};let R=0;H=(e,t)=>new Promise((a)=>{if(!I.length){a({persisted:false,noHost:true,reason:U});return}const u=`f${++R}`;const s=setTimeout(()=>{delete w[u];a({persisted:false,noHost:true,reason:U})},G);w[u]={settle:a,t:s};try{for(const S of I){A.postMessage({__om_file:true,id:u,op:"write",path:e,content:t},S)}}catch{clearTimeout(s);delete w[u];a({persisted:false,noHost:true,reason:U})}});const O=(e)=>{try{return JSON.stringify(e)}catch{return JSON.stringify(String(e))}};window.addEventListener("message",(e)=>{if(I.indexOf(e.origin)<0)return;if(e.source!==A)return;const t=e.data;if(!t)return;if(t.type==="omelette-preview-refresh"){if(typeof t.token!=="string"||!/^[0-9a-f.-]+(\.(rc|pr-[0-9]+))?(\.[0-9]+\.[0-9a-f]{16})?$/.test(t.token))return;const s=Math.max(1,Math.floor((t.expiresAt||0)-Date.now()/1000));document.cookie="__Host-omelette-preview="+t.token+"; Path=/; Secure; SameSite=None; Partitioned; Max-Age="+s;C();return}if(t.__om_file_r){const s=w[t.id];if(!s)return;clearTimeout(s.t);delete w[t.id];s.settle(t.ok?{persisted:true}:{persisted:false,reason:t.error||"write failed"});return}if(t.__om_api_r){const s=f[t.id];if(!s)return;if(t.error!=null){clearTimeout(s.t);delete f[t.id];s.reject(new Error(t.error));return}if(t.chunk!=null){clearTimeout(s.t);s.t=s.arm();s.text+=t.chunk;return}if(t.done){clearTimeout(s.t);delete f[t.id];s.resolve({text:t.text!=null?t.text:s.text,message:t.message});return}return}if(!t.__om_eval)return;const a=t;const u=(s)=>{e.source.postMessage({...s,__om_eval_r:1,id:a.id},e.origin)};try{const s=(0,eval)(a.code);if(s&&typeof s.then==="function"){s.then((S)=>u({ok:1,v:O(S)}),(S)=>u({ok:0,e:String(S)}))}else{u({ok:1,v:O(s)})}}catch(s){u({ok:0,e:String(s)})}})}})();
+</script>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet data-dc-atomics>
+<link rel="stylesheet" href="ds/nocturne.css">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/fill/style.css">
+<script type="module" src="./gl-can.js"></script>
+<style>
+body{margin:0;background:var(--color-bg);color:var(--color-text)}
+a{color:var(--color-accent);text-decoration:none}a:hover{color:var(--color-accent-400)}
+@keyframes pulse{0%{transform:scale(.55);opacity:.7}100%{transform:scale(2.5);opacity:0}}
+@keyframes sweep{to{transform:rotate(360deg)}}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}
+</style>
+</helmet>
+<div style="min-height:100vh;display:flex;gap:34px;justify-content:center;align-items:flex-start;padding:34px 22px 60px;font-family:var(--font-body);box-sizing:border-box">
+
+  <div style="width:206px;flex:none;display:flex;flex-direction:column;gap:var(--space-4);position:sticky;top:34px">
+    <div>
+      <div style="font:800 17px/1 var(--font-heading);letter-spacing:.14em;text-transform:uppercase">Prowl</div>
+      <div style="font:500 10px/1.6 var(--font-body);letter-spacing:.14em;text-transform:uppercase;color:var(--color-accent);margin-top:6px">Energy finder · iOS · v1.0</div>
+    </div>
+    <div style="height:1px;background:linear-gradient(90deg,rgba(0,0,0,0),var(--color-neutral-800) 20%,var(--color-neutral-800) 80%,rgba(0,0,0,0))"></div>
+    <div style="display:flex;flex-direction:column;gap:2px">
+      <sc-for list="{{ nav }}" as="s" hint-placeholder-count="14">
+        <div onClick="{{ s.go }}" style="cursor:pointer;padding:var(--space-2) var(--space-3);border-radius:var(--radius-md);display:flex;align-items:center;gap:var(--space-3);background:{{s.bg}};border:1px solid {{s.bd}}">
+          <span style="font:500 9.5px/1 var(--font-body);letter-spacing:.06em;color:{{s.num}};width:15px">{{ s.n }}</span>
+          <span style="font:500 12.5px/1.3 var(--font-body);color:{{s.fg}};white-space:nowrap">{{ s.label }}</span>
+        </div>
+      </sc-for>
+    </div>
+    <div style="height:1px;background:linear-gradient(90deg,rgba(0,0,0,0),var(--color-neutral-800) 20%,var(--color-neutral-800) 80%,rgba(0,0,0,0))"></div>
+    <div style="font:400 11.5px/1.55 var(--font-body);color:color-mix(in srgb,var(--color-text) 50%,transparent)">Tap any can pin on the map: the camera dollies it to the left, the pin becomes a real 3D can you can drag to spin, and the location bubble opens beside it.</div>
+  </div>
+
+  <x-import component-from-global-scope="IOSDevice" from="./ios-frame.jsx" dark="{{ true }}" hint-size="402px,874px">
+    <div style="position:absolute;inset:0;background:var(--color-bg);color:var(--color-text);overflow:hidden;font-family:var(--font-body)">
+
+      <sc-if value="{{ isPaywall }}" hint-placeholder-val="{{ false }}">
+        <div style="position:absolute;inset:0;display:flex;flex-direction:column;padding:66px 22px 26px;box-sizing:border-box;background:radial-gradient(120% 62% at 50% 6%,var(--color-accent-900),rgba(0,0,0,0) 62%),var(--color-bg)">
+          <div style="font:500 10px/1 var(--font-body);letter-spacing:.24em;color:var(--color-accent);text-transform:uppercase">Prowl · energy finder</div>
+          <div style="flex:1;position:relative;display:flex;align-items:center;justify-content:center;min-height:0">
+            <div style="position:absolute;width:248px;height:248px;border-radius:50%;background:radial-gradient(circle,color-mix(in srgb,var(--color-accent) 22%,transparent),rgba(0,0,0,0) 66%)"></div>
+            <x-import component-from-global-scope="gl-can" accent="#00ff41" label="Original" hint-size="190px,300px" style="width:190px;height:300px"></x-import>
+          </div>
+          <div style="font:800 37px/.96 var(--font-heading);letter-spacing:-.035em;text-transform:uppercase">Every flavour.<br>Every shelf.<br><span style="color:var(--color-accent)">Priced live.</span></div>
+          <div style="font:400 13.5px/1.5 var(--font-body);color:color-mix(in srgb,var(--color-text) 62%,transparent);margin-top:var(--space-4);max-width:300px">Find the nearest can, the rarest flavour and the cheapest price — from 40,000 hunters logging shelves in real time.</div>
+          <div style="display:flex;flex-direction:column;gap:var(--space-2);margin-top:var(--space-6)">
+            <sc-for list="{{ sell }}" as="b" hint-placeholder-count="3">
+              <div style="display:flex;align-items:center;gap:var(--space-3)"><i class="{{ b.icon }}" style="font-size:16px;color:var(--color-accent)"></i><span style="font:400 13px/1.3 var(--font-body)">{{ b.t }}</span></div>
+            </sc-for>
+          </div>
+          <div onClick="{{ goPerm }}" style="margin-top:var(--space-8);height:52px;border-radius:var(--radius-md);background:var(--color-accent);display:flex;align-items:center;justify-content:center;cursor:pointer" style-hover="background:var(--color-accent-400)">
+            <span style="font:600 14.5px/1 var(--font-heading);color:#04140a">Buy Prowl — $4.99</span>
+          </div>
+          <div style="display:flex;justify-content:center;gap:var(--space-6);margin-top:var(--space-4)">
+            <span style="font:400 11px/1 var(--font-body);color:color-mix(in srgb,var(--color-text) 45%,transparent)">One-time purchase · no ads</span>
+            <span onClick="{{ goPerm }}" style="font:500 11px/1 var(--font-body);color:var(--color-accent-300);cursor:pointer">Restore</span>
+          </div>
+        </div>
+      </sc-if>
+
+      <sc-if value="{{ isPerm }}" hint-placeholder-val="{{ false }}">
+        <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;padding:104px 26px 30px;box-sizing:border-box">
+          <div style="position:relative;width:224px;height:224px;display:flex;align-items:center;justify-content:center">
+            <div style="position:absolute;inset:0;border-radius:50%;border:1px solid color-mix(in srgb,var(--color-accent) 20%,transparent);animation:pulse 3.2s ease-out infinite"></div>
+            <div style="position:absolute;inset:34px;border-radius:50%;border:1px solid color-mix(in srgb,var(--color-accent) 22%,transparent)"></div>
+            <div style="position:absolute;inset:74px;border-radius:50%;border:1px solid color-mix(in srgb,var(--color-accent) 30%,transparent)"></div>
+            <div style="position:absolute;inset:0;border-radius:50%;overflow:hidden"><div style="position:absolute;inset:0;background:conic-gradient(from 0deg,color-mix(in srgb,var(--color-accent) 28%,transparent),rgba(0,0,0,0) 30%);animation:sweep 3.6s linear infinite"></div></div>
+            <i class="ph-fill ph-crosshair" style="font-size:30px;color:var(--color-accent)"></i>
+          </div>
+          <div style="font:800 29px/1 var(--font-heading);letter-spacing:-.03em;text-transform:uppercase;text-align:center;margin-top:40px">Turn on the radar</div>
+          <div style="font:400 13.5px/1.55 var(--font-body);color:color-mix(in srgb,var(--color-text) 60%,transparent);text-align:center;margin-top:var(--space-4);max-width:290px">Prowl sorts shelves by walking distance and verifies sightings around you. Your location never leaves the device unless you log a can.</div>
+          <div style="flex:1"></div>
+          <div onClick="{{ goMap }}" style="width:100%;height:52px;border-radius:var(--radius-md);background:transparent;border:1px solid var(--color-accent);display:flex;align-items:center;justify-content:center;cursor:pointer" style-hover="background:var(--color-accent-900)"><span style="font:600 14px/1 var(--font-heading);color:var(--color-accent)">Allow while using app</span></div>
+          <div onClick="{{ goMap }}" style="margin-top:var(--space-4);font:400 12px/1 var(--font-body);color:color-mix(in srgb,var(--color-text) 45%,transparent);cursor:pointer">Not now</div>
+        </div>
+      </sc-if>
+
+      <sc-if value="{{ isMap }}" hint-placeholder-val="{{ true }}">
+        <div style="position:absolute;inset:0;overflow:hidden;background:#070807">
+          <div style="position:absolute;left:0;top:0;width:402px;height:874px;transform:{{ cam }};transition:transform .9s cubic-bezier(.22,.8,.22,1);transform-origin:50% 50%">
+            <div style="position:absolute;inset:0;transform:{{ tilt }};transform-style:preserve-3d">
+              <div style="position:absolute;inset:-90% -70%;background:#0c0e0c;background-image:repeating-linear-gradient(90deg,rgba(0,255,65,.045) 0 1.5px,rgba(0,0,0,0) 1.5px 76px),repeating-linear-gradient(0deg,rgba(0,255,65,.045) 0 1.5px,rgba(0,0,0,0) 1.5px 94px)"></div>
+              <div style="position:absolute;left:-70%;right:-70%;top:404px;height:15px;background:var(--color-neutral-900)"></div>
+              <div style="position:absolute;left:-70%;right:-70%;top:648px;height:10px;background:color-mix(in srgb,var(--color-neutral-900) 80%,transparent)"></div>
+              <div style="position:absolute;top:-90%;bottom:-90%;left:150px;width:15px;background:var(--color-neutral-900)"></div>
+              <div style="position:absolute;top:-90%;bottom:-90%;left:306px;width:9px;background:color-mix(in srgb,var(--color-neutral-900) 80%,transparent)"></div>
+              <div style="position:absolute;left:24px;top:462px;width:104px;height:158px;background:color-mix(in srgb,var(--color-accent) 7%,transparent);border:1px solid color-mix(in srgb,var(--color-accent) 14%,transparent);border-radius:var(--radius-sm)"></div>
+              <div style="position:absolute;left:186px;top:430px;width:104px;height:104px;background:rgba(255,255,255,.022);border:1px solid rgba(255,255,255,.04)"></div>
+              <div style="position:absolute;left:186px;top:560px;width:104px;height:74px;background:rgba(255,255,255,.022);border:1px solid rgba(255,255,255,.04)"></div>
+              <div style="position:absolute;left:330px;top:430px;width:120px;height:204px;background:rgba(255,255,255,.018);border:1px solid rgba(255,255,255,.035)"></div>
+              <div style="position:absolute;left:-40px;top:672px;width:170px;height:120px;background:rgba(255,255,255,.022);border:1px solid rgba(255,255,255,.04)"></div>
+              <div style="position:absolute;left:170px;top:248px;width:262px;height:118px;background:rgba(120,150,255,.05);border:1px solid rgba(120,150,255,.09);transform:rotate(-6deg)"></div>
+              <div style="position:absolute;left:201px;top:520px;width:0;height:0">
+                <div style="position:absolute;left:-70px;top:-70px;width:140px;height:140px;border-radius:50%;background:radial-gradient(circle,color-mix(in srgb,var(--color-accent) 13%,transparent),rgba(0,0,0,0) 70%)"></div>
+                <div style="position:absolute;left:-8px;top:-8px;width:16px;height:16px;border-radius:50%;background:var(--color-accent);border:3px solid #04140a;box-shadow:0 0 18px color-mix(in srgb,var(--color-accent) 70%,transparent)"></div>
+              </div>
+              <sc-for list="{{ pins }}" as="p" hint-placeholder-count="6">
+                <div onClick="{{ p.tap }}" style="position:absolute;left:{{p.x}}px;top:{{p.y}}px;width:0;height:0;z-index:{{p.z}};cursor:pointer;opacity:{{p.o}};transition:opacity .4s ease">
+                  <div style="position:absolute;left:-24px;top:-24px;width:48px;height:48px;border-radius:50%;border:1px solid {{p.ring}};animation:pulse 2.8s ease-out infinite"></div>
+                  <div style="position:absolute;left:-15px;top:-7px;width:30px;height:14px;border-radius:50%;background:radial-gradient(ellipse,rgba(0,0,0,.65),rgba(0,0,0,0) 70%)"></div>
+                  <div style="position:absolute;left:0;bottom:0;transform:{{ p.stand }};transform-origin:50% 100%">
+                    <div style="position:absolute;bottom:0;left:-16px">
+                      <dc-import name="Can" w="32" h="59" accent="{{ p.accent }}" name="{{ p.variant }}" hint-size="32px,59px"></dc-import>
+                    </div>
+                    <div style="display:{{ pinPrices }};position:absolute;bottom:64px;left:-27px;width:54px;padding:2px 0;border-radius:var(--radius-sm);background:rgba(10,11,10,.85);border:1px solid {{p.ring}};text-align:center"><span style="font:600 9px/1.3 var(--font-body);color:var(--color-accent)">{{ p.price }}</span></div>
+                  </div>
+                </div>
+              </sc-for>
+            </div>
+          </div>
+
+          <div style="position:absolute;left:0;right:0;top:0;height:196px;background:linear-gradient(180deg,rgba(7,8,7,.96),rgba(7,8,7,.55) 58%,rgba(7,8,7,0));pointer-events:none"></div>
+          <div style="position:absolute;left:0;right:0;top:54px;padding:0 16px;box-sizing:border-box;display:flex;flex-direction:column;gap:var(--space-4)">
+            <div style="display:flex;align-items:center;justify-content:space-between">
+              <div>
+                <div style="font:500 9.5px/1 var(--font-body);letter-spacing:.2em;color:var(--color-accent);text-transform:uppercase">Hunting near</div>
+                <div style="font:800 20px/1.1 var(--font-heading);letter-spacing:-.03em;text-transform:uppercase;margin-top:5px">Capitol Hill</div>
+              </div>
+              <div onClick="{{ goProfile }}" style="width:36px;height:36px;border-radius:50%;background:var(--color-surface);border:1px solid var(--color-neutral-800);display:flex;align-items:center;justify-content:center;cursor:pointer"><span style="font:600 12px/1 var(--font-heading);color:var(--color-accent)">DK</span></div>
+            </div>
+            <div onClick="{{ goSearch }}" style="height:42px;border-radius:var(--radius-md);background:rgba(20,22,20,.86);border:1px solid var(--color-neutral-800);backdrop-filter:blur(14px);display:flex;align-items:center;gap:var(--space-3);padding:0 var(--space-4);cursor:pointer">
+              <i class="ph ph-magnifying-glass" style="font-size:15px;color:color-mix(in srgb,var(--color-text) 45%,transparent)"></i>
+              <span style="font:400 13px/1 var(--font-body);color:color-mix(in srgb,var(--color-text) 45%,transparent)">Flavour, store or price…</span>
+            </div>
+            <div style="display:flex;gap:var(--space-2);overflow:hidden">
+              <sc-for list="{{ chips }}" as="c" hint-placeholder-count="5">
+                <div onClick="{{ c.tap }}" style="flex:none;height:29px;padding:0 var(--space-4);border-radius:var(--radius-md);background:{{c.bg}};border:1px solid {{c.bd}};display:flex;align-items:center;cursor:pointer"><span style="font:500 11.5px/1 var(--font-body);color:{{c.fg}};white-space:nowrap">{{ c.label }}</span></div>
+              </sc-for>
+            </div>
+          </div>
+
+          <div style="position:absolute;right:14px;top:232px;display:flex;flex-direction:column;gap:var(--space-2)">
+            <div onClick="{{ toggle3d }}" style="width:40px;height:40px;border-radius:var(--radius-md);background:{{ d3bg }};border:1px solid {{ d3bd }};display:flex;align-items:center;justify-content:center;cursor:pointer;backdrop-filter:blur(12px)"><span style="font:600 10.5px/1 var(--font-heading);color:{{ d3fg }}">3D</span></div>
+            <div style="width:40px;height:40px;border-radius:var(--radius-md);background:rgba(20,22,20,.85);border:1px solid var(--color-neutral-800);display:flex;align-items:center;justify-content:center;cursor:pointer;backdrop-filter:blur(12px)"><i class="ph ph-crosshair-simple" style="font-size:17px;color:var(--color-text)"></i></div>
+            <div style="width:40px;height:40px;border-radius:var(--radius-md);background:rgba(20,22,20,.85);border:1px solid var(--color-neutral-800);display:flex;align-items:center;justify-content:center;cursor:pointer;backdrop-filter:blur(12px)"><i class="ph ph-stack-simple" style="font-size:17px;color:var(--color-text)"></i></div>
+          </div>
+
+          <sc-if value="{{ noFocus }}" hint-placeholder-val="{{ true }}">
+            <div style="position:absolute;left:0;right:0;bottom:104px;padding:0 16px 4px;box-sizing:border-box;display:flex;gap:var(--space-3);overflow:hidden">
+              <sc-for list="{{ deck }}" as="d" hint-placeholder-count="2">
+                <div onClick="{{ d.tap }}" style="flex:none;width:206px;border-radius:var(--radius-lg);background:rgba(20,22,20,.9);border:1px solid var(--color-neutral-800);backdrop-filter:blur(16px);padding:var(--space-4);box-sizing:border-box;display:flex;gap:var(--space-4);cursor:pointer" style-hover="border-color:var(--color-accent)">
+                  <dc-import name="Can" w="32" h="59" accent="{{ d.accent }}" hint-size="32px,59px"></dc-import>
+                  <div style="min-width:0">
+                    <div style="font:500 12.5px/1.25 var(--font-heading);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ d.store }}</div>
+                    <div style="font:400 10.5px/1.3 var(--font-body);color:color-mix(in srgb,var(--color-text) 50%,transparent);margin-top:3px">{{ d.dist }} · {{ d.variant }}</div>
+                    <div style="display:flex;align-items:baseline;gap:var(--space-2);margin-top:var(--space-2)"><span style="font:600 16px/1 var(--font-heading);color:var(--color-accent)">{{ d.price }}</span><span style="font:400 9.5px/1 var(--font-body);color:color-mix(in srgb,var(--color-text) 45%,transparent)">{{ d.stock }}</span></div>
+                  </div>
+                </div>
+              </sc-for>
+            </div>
+          </sc-if>
+
+          <sc-if value="{{ hasFocus }}" hint-placeholder-val="{{ false }}">
+            <div onClick="{{ closeFocus }}" style="position:absolute;inset:0;background:radial-gradient(66% 38% at 24% 44%,rgba(0,0,0,0),rgba(4,5,4,.76))"></div>
+            <div style="position:absolute;left:12px;top:220px;width:150px;height:276px;display:flex;align-items:center;justify-content:center">
+              <div style="position:absolute;width:210px;height:210px;border-radius:50%;background:radial-gradient(circle,color-mix(in srgb,var(--color-accent) 20%,transparent),rgba(0,0,0,0) 68%)"></div>
+              <x-import component-from-global-scope="gl-can" accent="{{ f.accent }}" label="{{ f.variant }}" hint-size="146px,262px" style="width:146px;height:262px"></x-import>
+              <div style="position:absolute;bottom:2px;left:0;right:0;text-align:center;font:500 9px/1 var(--font-body);letter-spacing:.16em;text-transform:uppercase;color:color-mix(in srgb,var(--color-text) 40%,transparent)">Drag to spin</div>
+            </div>
+            <div style="position:absolute;left:158px;top:262px;width:226px;background:var(--color-neutral-100);border-radius:var(--radius-lg);padding:var(--space-6) var(--space-6) var(--space-4);box-sizing:border-box;box-shadow:0 24px 56px rgba(0,0,0,.65);color:#111411">
+              <div style="position:absolute;left:-8px;top:64px;width:18px;height:18px;background:var(--color-neutral-100);transform:rotate(45deg);border-radius:3px"></div>
+              <div onClick="{{ closeFocus }}" style="position:absolute;right:10px;top:10px;width:24px;height:24px;border-radius:50%;background:var(--color-neutral-200);display:flex;align-items:center;justify-content:center;cursor:pointer"><i class="ph ph-x" style="font-size:12px;color:#474d47"></i></div>
+              <div style="position:relative">
+                <div style="display:flex;align-items:center;gap:var(--space-2)"><i class="ph-fill ph-check-circle" style="font-size:13px;color:#009a28"></i><span style="font:600 9.5px/1 var(--font-body);letter-spacing:.14em;color:#009a28;text-transform:uppercase;white-space:nowrap">In stock now</span></div>
+                <div style="font:800 16.5px/1.16 var(--font-heading);letter-spacing:-.025em;margin-top:var(--space-3);padding-right:20px">{{ f.store }}</div>
+                <div style="font:400 11px/1.45 var(--font-body);color:#5a615a;margin-top:4px">{{ f.address }}</div>
+                <div style="height:1px;background:#d8ddd8;margin:var(--space-4) 0"></div>
+                <div style="display:flex;align-items:flex-end;justify-content:space-between">
+                  <div>
+                    <div style="font:500 9px/1 var(--font-body);letter-spacing:.14em;color:#767c76;text-transform:uppercase">Shelf price</div>
+                    <div style="font:800 29px/1 var(--font-heading);letter-spacing:-.035em;margin-top:5px">{{ f.price }}</div>
+                  </div>
+                  <div style="padding:4px 8px;border-radius:var(--radius-sm);border:1px solid #009a28"><span style="font:600 9.5px/1 var(--font-body);color:#00691b;letter-spacing:.04em;text-transform:uppercase">{{ f.priceTag }}</span></div>
+                </div>
+                <div style="display:flex;align-items:center;gap:var(--space-3);margin-top:var(--space-4);padding:var(--space-3);border-radius:var(--radius-md);background:#e8ece8">
+                  <dc-import name="Can" w="22" h="41" accent="{{ f.accent }}" hint-size="22px,41px"></dc-import>
+                  <div>
+                    <div style="font:600 12px/1.2 var(--font-heading)">Venom {{ f.variant }}</div>
+                    <div style="font:400 10px/1.3 var(--font-body);color:#5a615a;margin-top:2px">{{ f.size }} · {{ f.rarity }} · {{ f.dist }} walk</div>
+                  </div>
+                </div>
+                <div style="font:400 10.5px/1.4 var(--font-body);color:#767c76;margin-top:var(--space-3)">{{ f.stock }} on shelf · verified {{ f.verified }} by {{ f.by }}</div>
+                <div style="display:flex;gap:var(--space-2);margin-top:var(--space-4)">
+                  <div style="flex:1;height:38px;border-radius:var(--radius-md);background:#111411;display:flex;align-items:center;justify-content:center;gap:6px;cursor:pointer" style-hover="background:#009a28"><i class="ph-fill ph-navigation-arrow" style="font-size:13px;color:#f2f5f2"></i><span style="font:600 11.5px/1 var(--font-heading);color:#f2f5f2">Directions</span></div>
+                  <div onClick="{{ goStore }}" style="flex:none;padding:0 var(--space-4);height:38px;border-radius:var(--radius-md);border:1px solid #b6bdb6;display:flex;align-items:center;cursor:pointer" style-hover="border-color:#111411"><span style="font:600 11.5px/1 var(--font-heading);color:#111411">Details</span></div>
+                </div>
+              </div>
+            </div>
+          </sc-if>
+        </div>
+      </sc-if>
+
+      <sc-if value="{{ isSearch }}" hint-placeholder-val="{{ false }}">
+        <div style="position:absolute;inset:0;overflow:auto">
+          <div style="padding:54px 16px 120px;box-sizing:border-box">
+            <div style="display:flex;align-items:center;gap:var(--space-3)">
+              <div style="flex:1;height:42px;border-radius:var(--radius-md);background:var(--color-surface);border:1px solid var(--color-accent);display:flex;align-items:center;gap:var(--space-3);padding:0 var(--space-4)">
+                <i class="ph ph-magnifying-glass" style="font-size:15px;color:var(--color-accent)"></i>
+                <span style="font:400 13px/1 var(--font-body)">kiwi</span>
+                <span style="width:1px;height:15px;background:var(--color-accent)"></span>
+              </div>
+              <div onClick="{{ goMap }}" style="font:500 12.5px/1 var(--font-body);color:var(--color-accent);cursor:pointer">Cancel</div>
+            </div>
+            <div style="display:flex;gap:var(--space-2);margin-top:var(--space-4);flex-wrap:wrap">
+              <sc-for list="{{ filters }}" as="c" hint-placeholder-count="6">
+                <div onClick="{{ c.tap }}" style="height:29px;padding:0 var(--space-4);border-radius:var(--radius-md);background:{{c.bg}};border:1px solid {{c.bd}};display:flex;align-items:center;gap:5px;cursor:pointer"><span style="font:500 11.5px/1 var(--font-body);color:{{c.fg}}">{{ c.label }}</span></div>
+              </sc-for>
+            </div>
+            <div style="font:600 10px/1 var(--font-body);letter-spacing:.16em;text-transform:uppercase;color:color-mix(in srgb,var(--color-text) 45%,transparent);margin:var(--space-8) 0 var(--space-4)">Flavour matches</div>
+            <div style="border-radius:var(--radius-md);border:1px solid var(--color-neutral-800);overflow:hidden">
+              <sc-for list="{{ results }}" as="r" hint-placeholder-count="3">
+                <div onClick="{{ r.tap }}" style="display:flex;align-items:center;gap:var(--space-4);padding:var(--space-3) var(--space-4);border-bottom:1px solid var(--color-neutral-900);cursor:pointer" style-hover="background:var(--color-accent-900)">
+                  <dc-import name="Can" w="24" h="45" accent="{{ r.accent }}" hint-size="24px,45px"></dc-import>
+                  <div style="flex:1;min-width:0"><div style="font:500 13px/1.2 var(--font-heading)">{{ r.name }}</div><div style="font:400 10.5px/1.3 var(--font-body);color:color-mix(in srgb,var(--color-text) 48%,transparent);margin-top:3px">{{ r.sub }}</div></div>
+                  <span style="font:600 13px/1 var(--font-heading);color:var(--color-accent)">{{ r.price }}</span>
+                </div>
+              </sc-for>
+            </div>
+            <div style="font:600 10px/1 var(--font-body);letter-spacing:.16em;text-transform:uppercase;color:color-mix(in srgb,var(--color-text) 45%,transparent);margin:var(--space-8) 0 var(--space-4)">Recent hunts</div>
+            <div style="display:flex;flex-direction:column;gap:var(--space-3)">
+              <sc-for list="{{ recents }}" as="r" hint-placeholder-count="4">
+                <div onClick="{{ goList }}" style="display:flex;align-items:center;gap:var(--space-3);cursor:pointer"><i class="ph ph-clock-counter-clockwise" style="font-size:15px;color:color-mix(in srgb,var(--color-text) 40%,transparent)"></i><span style="font:400 12.5px/1 var(--font-body);color:color-mix(in srgb,var(--color-text) 72%,transparent)">{{ r }}</span></div>
+              </sc-for>
+            </div>
+          </div>
+        </div>
+      </sc-if>
+
+      <sc-if value="{{ isList }}" hint-placeholder-val="{{ false }}">
+        <div style="position:absolute;inset:0;overflow:auto">
+          <div style="padding:58px 16px 120px;box-sizing:border-box">
+            <div style="display:flex;align-items:flex-end;justify-content:space-between">
+              <div style="font:800 28px/1 var(--font-heading);letter-spacing:-.03em;text-transform:uppercase">Nearby</div>
+              <div style="display:flex;align-items:center;gap:5px;cursor:pointer"><span style="font:500 11.5px/1 var(--font-body);color:var(--color-accent)">Distance</span><i class="ph ph-caret-down" style="font-size:11px;color:var(--color-accent)"></i></div>
+            </div>
+            <div style="font:400 11.5px/1 var(--font-body);color:color-mix(in srgb,var(--color-text) 45%,transparent);margin-top:var(--space-3)">14 shelves · 6 within 500 m · updated 2 min ago</div>
+            <div style="display:flex;flex-direction:column;gap:var(--space-3);margin-top:var(--space-6)">
+              <sc-for list="{{ nearby }}" as="n" hint-placeholder-count="6">
+                <div onClick="{{ n.tap }}" style="border-radius:var(--radius-md);background:var(--color-surface);border:1px solid var(--color-neutral-800);padding:var(--space-4);box-sizing:border-box;display:flex;gap:var(--space-4);cursor:pointer" style-hover="border-color:var(--color-accent)">
+                  <div style="width:42px;display:flex;align-items:flex-end;justify-content:center"><dc-import name="Can" w="38" h="70" accent="{{ n.accent }}" hint-size="38px,70px"></dc-import></div>
+                  <div style="flex:1;min-width:0">
+                    <div style="display:flex;align-items:center;gap:var(--space-2)">
+                      <span style="font:500 13.5px/1.2 var(--font-heading);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ n.store }}</span>
+                      <span style="flex:none;padding:2px 6px;border-radius:var(--radius-sm);border:1px solid {{n.badgeBd}};font:600 8.5px/1.35 var(--font-body);letter-spacing:.06em;color:{{n.badgeFg}};text-transform:uppercase">{{ n.badge }}</span>
+                    </div>
+                    <div style="font:400 10.5px/1.35 var(--font-body);color:color-mix(in srgb,var(--color-text) 48%,transparent);margin-top:4px">{{ n.dist }} · {{ n.count }} variants · {{ n.verified }}</div>
+                    <div style="display:flex;align-items:baseline;gap:var(--space-2);margin-top:var(--space-2)">
+                      <span style="font:600 17px/1 var(--font-heading)">{{ n.price }}</span>
+                      <span style="font:400 10.5px/1 var(--font-body);color:color-mix(in srgb,var(--color-text) 48%,transparent)">cheapest · {{ n.variant }}</span>
+                    </div>
+                  </div>
+                  <i class="ph ph-caret-right" style="font-size:14px;color:color-mix(in srgb,var(--color-text) 30%,transparent);align-self:center"></i>
+                </div>
+              </sc-for>
+            </div>
+          </div>
+        </div>
+      </sc-if>
+
+      <sc-if value="{{ isStore }}" hint-placeholder-val="{{ false }}">
+        <div style="position:absolute;inset:0;overflow:auto">
+          <div style="position:relative;height:212px;background:repeating-linear-gradient(115deg,#101310 0 13px,#0b0d0b 13px 26px);display:flex;align-items:flex-end;justify-content:center;overflow:hidden">
+            <div style="position:absolute;inset:0;background:radial-gradient(80% 72% at 50% 112%,color-mix(in srgb,var(--color-accent) 18%,transparent),rgba(0,0,0,0) 70%)"></div>
+            <div style="position:absolute;top:92px;left:0;right:0;text-align:center;font:500 9.5px/1 var(--font-body);letter-spacing:.16em;color:color-mix(in srgb,var(--color-text) 32%,transparent);text-transform:uppercase">[ shelf photo — hunter submitted ]</div>
+            <div style="position:relative;display:flex;align-items:flex-end;gap:var(--space-2)">
+              <dc-import name="Can" w="40" h="74" accent="#f0b429" hint-size="40px,74px"></dc-import>
+              <dc-import name="Can" w="50" h="92" accent="#00ff41" hint-size="50px,92px"></dc-import>
+              <dc-import name="Can" w="40" h="74" accent="#e2536b" hint-size="40px,74px"></dc-import>
+            </div>
+            <div onClick="{{ goMap }}" style="position:absolute;left:14px;top:56px;width:34px;height:34px;border-radius:var(--radius-md);background:rgba(10,11,10,.82);border:1px solid var(--color-neutral-800);display:flex;align-items:center;justify-content:center;cursor:pointer;backdrop-filter:blur(10px)"><i class="ph ph-caret-left" style="font-size:15px;color:var(--color-text)"></i></div>
+            <div onClick="{{ goSaved }}" style="position:absolute;right:14px;top:56px;width:34px;height:34px;border-radius:var(--radius-md);background:rgba(10,11,10,.82);border:1px solid var(--color-neutral-800);display:flex;align-items:center;justify-content:center;cursor:pointer;backdrop-filter:blur(10px)"><i class="ph-fill ph-bookmark-simple" style="font-size:15px;color:var(--color-accent)"></i></div>
+          </div>
+          <div style="padding:var(--space-6) 16px 120px;box-sizing:border-box">
+            <div style="display:flex;align-items:center;gap:var(--space-2)"><i class="ph-fill ph-clock" style="font-size:12px;color:var(--color-accent)"></i><span style="font:600 9.5px/1 var(--font-body);letter-spacing:.14em;color:var(--color-accent);text-transform:uppercase">Open until 11 pm</span></div>
+            <div style="font:800 24px/1.06 var(--font-heading);letter-spacing:-.03em;margin-top:var(--space-3)">{{ f.store }}</div>
+            <div style="font:400 11.5px/1.5 var(--font-body);color:color-mix(in srgb,var(--color-text) 50%,transparent);margin-top:5px">{{ f.address }} · {{ f.dist }} walk</div>
+            <div style="display:flex;gap:var(--space-2);margin-top:var(--space-6)">
+              <div style="flex:1;height:44px;border-radius:var(--radius-md);border:1px solid var(--color-accent);display:flex;align-items:center;justify-content:center;gap:6px;cursor:pointer" style-hover="background:var(--color-accent-900)"><i class="ph-fill ph-navigation-arrow" style="font-size:14px;color:var(--color-accent)"></i><span style="font:600 12.5px/1 var(--font-heading);color:var(--color-accent)">Directions</span></div>
+              <div onClick="{{ goReport }}" style="flex:1;height:44px;border-radius:var(--radius-md);border:1px solid var(--color-neutral-700);display:flex;align-items:center;justify-content:center;cursor:pointer" style-hover="border-color:var(--color-text)"><span style="font:600 12.5px/1 var(--font-heading)">Update stock</span></div>
+            </div>
+            <div style="font:600 10px/1 var(--font-body);letter-spacing:.16em;text-transform:uppercase;color:color-mix(in srgb,var(--color-text) 45%,transparent);margin:var(--space-8) 0 var(--space-4)">On the shelf · 6</div>
+            <div style="border-radius:var(--radius-md);border:1px solid var(--color-neutral-800);overflow:hidden;background:var(--color-surface)">
+              <sc-for list="{{ shelf }}" as="s" hint-placeholder-count="6">
+                <div onClick="{{ s.tap }}" style="display:flex;align-items:center;gap:var(--space-4);padding:var(--space-3) var(--space-4);border-bottom:1px solid var(--color-neutral-900);cursor:pointer" style-hover="background:var(--color-accent-900)">
+                  <dc-import name="Can" w="24" h="45" accent="{{ s.accent }}" hint-size="24px,45px"></dc-import>
+                  <div style="flex:1;min-width:0"><div style="font:500 12.5px/1.2 var(--font-heading)">{{ s.name }}</div><div style="font:400 10px/1.3 var(--font-body);color:color-mix(in srgb,var(--color-text) 45%,transparent);margin-top:3px">{{ s.qty }} left · {{ s.rarity }}</div></div>
+                  <div style="font:600 14px/1 var(--font-heading);color:{{ s.priceFg }}">{{ s.price }}</div>
+                </div>
+              </sc-for>
+            </div>
+            <div style="font:600 10px/1 var(--font-body);letter-spacing:.16em;text-transform:uppercase;color:color-mix(in srgb,var(--color-text) 45%,transparent);margin:var(--space-8) 0 var(--space-4)">Price history · Original 500 ml</div>
+            <div style="border-radius:var(--radius-md);border:1px solid var(--color-neutral-800);background:var(--color-surface);padding:var(--space-6);box-sizing:border-box">
+              <div style="display:flex;align-items:flex-end;gap:5px;height:78px">
+                <sc-for list="{{ history }}" as="h" hint-placeholder-count="10">
+                  <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:var(--space-2)">
+                    <div style="width:100%;height:{{h.h}}px;border-radius:2px;background:{{h.bg}}"></div>
+                    <span style="font:400 8px/1 var(--font-body);color:color-mix(in srgb,var(--color-text) 32%,transparent)">{{ h.m }}</span>
+                  </div>
+                </sc-for>
+              </div>
+              <div style="display:flex;align-items:baseline;gap:var(--space-3);margin-top:var(--space-4)"><span style="font:600 18px/1 var(--font-heading);color:var(--color-accent)">$3.29</span><span style="font:400 10.5px/1 var(--font-body);color:color-mix(in srgb,var(--color-text) 48%,transparent)">−12% vs 90-day average</span></div>
+            </div>
+          </div>
+        </div>
+      </sc-if>
+
+      <sc-if value="{{ isVault }}" hint-placeholder-val="{{ false }}">
+        <div style="position:absolute;inset:0;overflow:auto">
+          <div style="padding:58px 16px 120px;box-sizing:border-box">
+            <div style="font:800 28px/1 var(--font-heading);letter-spacing:-.03em;text-transform:uppercase">The vault</div>
+            <div style="display:flex;align-items:baseline;gap:var(--space-2);margin-top:var(--space-3)"><span style="font:600 14px/1 var(--font-heading);color:var(--color-accent)">17</span><span style="font:400 11.5px/1 var(--font-body);color:color-mix(in srgb,var(--color-text) 48%,transparent)">of 34 variants logged · 3 rare</span></div>
+            <div style="height:4px;border-radius:2px;background:var(--color-neutral-900);margin-top:var(--space-4);overflow:hidden"><div style="width:50%;height:100%;background:var(--color-accent)"></div></div>
+            <div style="display:flex;gap:var(--space-2);margin-top:var(--space-6);overflow:hidden">
+              <sc-for list="{{ vaultChips }}" as="c" hint-placeholder-count="4">
+                <div onClick="{{ c.tap }}" style="flex:none;height:29px;padding:0 var(--space-4);border-radius:var(--radius-md);background:{{c.bg}};border:1px solid {{c.bd}};display:flex;align-items:center;cursor:pointer"><span style="font:500 11.5px/1 var(--font-body);color:{{c.fg}}">{{ c.label }}</span></div>
+              </sc-for>
+            </div>
+            <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:var(--space-3);margin-top:var(--space-6)">
+              <sc-for list="{{ variants }}" as="v" hint-placeholder-count="12">
+                <div onClick="{{ v.tap }}" style="border-radius:var(--radius-md);background:{{v.bg}};border:{{v.bd}};padding:var(--space-4) var(--space-2) var(--space-3);box-sizing:border-box;display:flex;flex-direction:column;align-items:center;gap:var(--space-3);cursor:pointer;opacity:{{v.op}}" style-hover="border-color:var(--color-accent)">
+                  <dc-import name="Can" w="34" h="63" accent="{{ v.accent }}" hint-size="34px,63px"></dc-import>
+                  <div style="font:500 10px/1.3 var(--font-heading);text-align:center">{{ v.name }}</div>
+                  <div style="font:500 8px/1 var(--font-body);letter-spacing:.12em;color:{{v.rarityFg}};text-transform:uppercase">{{ v.rarity }}</div>
+                </div>
+              </sc-for>
+            </div>
+          </div>
+        </div>
+      </sc-if>
+
+      <sc-if value="{{ isVariant }}" hint-placeholder-val="{{ false }}">
+        <div style="position:absolute;inset:0;overflow:auto">
+          <div style="padding:54px 18px 120px;box-sizing:border-box">
+            <div onClick="{{ goVault }}" style="width:34px;height:34px;border-radius:var(--radius-md);border:1px solid var(--color-neutral-800);background:var(--color-surface);display:flex;align-items:center;justify-content:center;cursor:pointer"><i class="ph ph-caret-left" style="font-size:15px;color:var(--color-text)"></i></div>
+            <div style="position:relative;height:270px;display:flex;align-items:center;justify-content:center;margin-top:var(--space-2)">
+              <div style="position:absolute;width:240px;height:240px;border-radius:50%;background:radial-gradient(circle,color-mix(in srgb,var(--color-accent) 18%,transparent),rgba(0,0,0,0) 66%)"></div>
+              <x-import component-from-global-scope="gl-can" accent="{{ v.accent }}" label="{{ v.name }}" hint-size="190px,300px" style="width:190px;height:300px"></x-import>
+              <div style="position:absolute;bottom:0;left:0;right:0;text-align:center;font:500 9px/1 var(--font-body);letter-spacing:.16em;text-transform:uppercase;color:color-mix(in srgb,var(--color-text) 38%,transparent)">Drag to spin the can</div>
+            </div>
+            <div style="font:500 9.5px/1 var(--font-body);letter-spacing:.18em;color:{{ v.rarityFg }};text-transform:uppercase">{{ v.rarity }} · {{ v.found }}</div>
+            <div style="font:800 31px/1 var(--font-heading);letter-spacing:-.035em;text-transform:uppercase;margin-top:var(--space-3)">{{ v.name }}</div>
+            <div style="font:400 13px/1.55 var(--font-body);color:color-mix(in srgb,var(--color-text) 62%,transparent);margin-top:var(--space-3)">{{ v.blurb }}</div>
+            <div style="display:flex;gap:var(--space-3);margin-top:var(--space-6)">
+              <sc-for list="{{ vStats }}" as="x" hint-placeholder-count="3">
+                <div style="flex:1;border-radius:var(--radius-md);border:1px solid var(--color-neutral-800);background:var(--color-surface);padding:var(--space-4);box-sizing:border-box">
+                  <div style="font:600 17px/1 var(--font-heading);color:{{x.fg}}">{{ x.v }}</div>
+                  <div style="font:400 9.5px/1.3 var(--font-body);color:color-mix(in srgb,var(--color-text) 45%,transparent);margin-top:var(--space-2)">{{ x.k }}</div>
+                </div>
+              </sc-for>
+            </div>
+            <div style="font:600 10px/1 var(--font-body);letter-spacing:.16em;text-transform:uppercase;color:color-mix(in srgb,var(--color-text) 45%,transparent);margin:var(--space-8) 0 var(--space-4)">Closest shelves</div>
+            <div style="border-radius:var(--radius-md);border:1px solid var(--color-neutral-800);overflow:hidden;background:var(--color-surface)">
+              <sc-for list="{{ variantStores }}" as="s" hint-placeholder-count="3">
+                <div onClick="{{ s.tap }}" style="display:flex;align-items:center;gap:var(--space-3);padding:var(--space-4);border-bottom:1px solid var(--color-neutral-900);cursor:pointer" style-hover="background:var(--color-accent-900)">
+                  <div style="flex:1;min-width:0"><div style="font:500 12.5px/1.2 var(--font-heading)">{{ s.store }}</div><div style="font:400 10px/1.3 var(--font-body);color:color-mix(in srgb,var(--color-text) 45%,transparent);margin-top:3px">{{ s.dist }} · {{ s.qty }}</div></div>
+                  <div style="font:600 13.5px/1 var(--font-heading);color:var(--color-accent)">{{ s.price }}</div>
+                </div>
+              </sc-for>
+            </div>
+            <div onClick="{{ toggleTrack }}" style="margin-top:var(--space-6);height:48px;border-radius:var(--radius-md);background:{{ trackBg }};border:1px solid {{ trackBd }};display:flex;align-items:center;justify-content:center;gap:var(--space-2);cursor:pointer"><i class="{{ trackIcon }}" style="font-size:15px;color:{{ trackFg }}"></i><span style="font:600 13px/1 var(--font-heading);color:{{ trackFg }}">{{ trackLabel }}</span></div>
+          </div>
+        </div>
+      </sc-if>
+
+      <sc-if value="{{ isReport }}" hint-placeholder-val="{{ false }}">
+        <div style="position:absolute;inset:0;overflow:auto">
+          <div style="padding:54px 16px 120px;box-sizing:border-box">
+            <div style="display:flex;align-items:center;justify-content:space-between">
+              <div onClick="{{ goMap }}" style="font:500 12.5px/1 var(--font-body);color:color-mix(in srgb,var(--color-text) 55%,transparent);cursor:pointer">Cancel</div>
+              <div style="padding:3px 8px;border-radius:var(--radius-sm);border:1px solid var(--color-accent)"><span style="font:600 9.5px/1.4 var(--font-body);letter-spacing:.1em;color:var(--color-accent)">+15 XP</span></div>
+            </div>
+            <div style="font:800 27px/1 var(--font-heading);letter-spacing:-.03em;text-transform:uppercase;margin-top:var(--space-6)">Log a sighting</div>
+            <div style="font:400 12px/1.5 var(--font-body);color:color-mix(in srgb,var(--color-text) 50%,transparent);margin-top:var(--space-2)">Two taps keeps the map honest for everyone hunting near you.</div>
+            <div style="height:140px;border-radius:var(--radius-md);border:1px dashed color-mix(in srgb,var(--color-accent) 45%,transparent);background:repeating-linear-gradient(115deg,color-mix(in srgb,var(--color-accent) 4%,transparent) 0 10px,rgba(0,0,0,0) 10px 20px);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:var(--space-3);margin-top:var(--space-6);cursor:pointer">
+              <i class="ph ph-camera" style="font-size:26px;color:var(--color-accent)"></i>
+              <div style="font:500 10px/1 var(--font-body);letter-spacing:.14em;color:color-mix(in srgb,var(--color-text) 50%,transparent);text-transform:uppercase">[ shelf photo ]</div>
+            </div>
+            <div style="font:600 10px/1 var(--font-body);letter-spacing:.16em;text-transform:uppercase;color:color-mix(in srgb,var(--color-text) 45%,transparent);margin:var(--space-8) 0 var(--space-4)">Which variant</div>
+            <div style="display:flex;gap:var(--space-3);overflow:hidden">
+              <sc-for list="{{ pickers }}" as="p" hint-placeholder-count="5">
+                <div onClick="{{ p.tap }}" style="flex:none;width:62px;border-radius:var(--radius-md);background:{{p.bg}};border:1px solid {{p.bd}};padding:var(--space-3) 4px;box-sizing:border-box;display:flex;flex-direction:column;align-items:center;gap:var(--space-2);cursor:pointer">
+                  <dc-import name="Can" w="26" h="48" accent="{{ p.accent }}" hint-size="26px,48px"></dc-import>
+                  <span style="font:500 8.5px/1.25 var(--font-body);text-align:center;color:{{p.fg}}">{{ p.name }}</span>
+                </div>
+              </sc-for>
+            </div>
+            <div style="font:600 10px/1 var(--font-body);letter-spacing:.16em;text-transform:uppercase;color:color-mix(in srgb,var(--color-text) 45%,transparent);margin:var(--space-8) 0 var(--space-4)">Store</div>
+            <div style="height:48px;border-radius:var(--radius-md);background:var(--color-surface);border:1px solid var(--color-neutral-800);display:flex;align-items:center;justify-content:space-between;padding:0 var(--space-4)"><span style="font:500 12.5px/1 var(--font-heading)">7-Eleven · Pike &amp; Broadway</span><span style="font:500 10.5px/1 var(--font-body);color:var(--color-accent)">80 m</span></div>
+            <div style="font:600 10px/1 var(--font-body);letter-spacing:.16em;text-transform:uppercase;color:color-mix(in srgb,var(--color-text) 45%,transparent);margin:var(--space-8) 0 var(--space-4)">Shelf price</div>
+            <div style="height:58px;border-radius:var(--radius-md);background:var(--color-surface);border:1px solid var(--color-neutral-800);display:flex;align-items:center;justify-content:space-between;padding:0 var(--space-3)">
+              <div onClick="{{ dec }}" style="width:38px;height:38px;border-radius:var(--radius-md);border:1px solid var(--color-neutral-800);display:flex;align-items:center;justify-content:center;cursor:pointer" style-hover="border-color:var(--color-accent)"><i class="ph ph-minus" style="font-size:14px;color:var(--color-text)"></i></div>
+              <span style="font:800 25px/1 var(--font-heading);letter-spacing:-.035em">{{ priceStr }}</span>
+              <div onClick="{{ inc }}" style="width:38px;height:38px;border-radius:var(--radius-md);border:1px solid var(--color-neutral-800);display:flex;align-items:center;justify-content:center;cursor:pointer" style-hover="border-color:var(--color-accent)"><i class="ph ph-plus" style="font-size:14px;color:var(--color-text)"></i></div>
+            </div>
+            <div style="font:600 10px/1 var(--font-body);letter-spacing:.16em;text-transform:uppercase;color:color-mix(in srgb,var(--color-text) 45%,transparent);margin:var(--space-8) 0 var(--space-4)">How many left</div>
+            <div style="display:flex;gap:5px">
+              <sc-for list="{{ stockOpts }}" as="o" hint-placeholder-count="4">
+                <div onClick="{{ o.tap }}" style="flex:1;height:40px;border-radius:var(--radius-md);background:{{o.bg}};border:1px solid {{o.bd}};display:flex;align-items:center;justify-content:center;cursor:pointer"><span style="font:500 12px/1 var(--font-body);color:{{o.fg}}">{{ o.label }}</span></div>
+              </sc-for>
+            </div>
+            <div onClick="{{ submitReport }}" style="margin-top:var(--space-8);height:52px;border-radius:var(--radius-md);background:var(--color-accent);display:flex;align-items:center;justify-content:center;cursor:pointer" style-hover="background:var(--color-accent-400)"><span style="font:600 13.5px/1 var(--font-heading);color:#04140a">Confirm sighting</span></div>
+          </div>
+        </div>
+      </sc-if>
+
+      <sc-if value="{{ isAlerts }}" hint-placeholder-val="{{ false }}">
+        <div style="position:absolute;inset:0;overflow:auto">
+          <div style="padding:58px 16px 120px;box-sizing:border-box">
+            <div style="font:800 28px/1 var(--font-heading);letter-spacing:-.03em;text-transform:uppercase">Alerts</div>
+            <div style="font:400 11.5px/1 var(--font-body);color:color-mix(in srgb,var(--color-text) 45%,transparent);margin-top:var(--space-3)">4 new · radar radius 1.2 km</div>
+            <div style="display:flex;flex-direction:column;gap:var(--space-3);margin-top:var(--space-6)">
+              <sc-for list="{{ alerts }}" as="a" hint-placeholder-count="4">
+                <div onClick="{{ a.tap }}" style="border-radius:var(--radius-md);background:var(--color-surface);border:1px solid var(--color-neutral-800);padding:var(--space-4);box-sizing:border-box;display:flex;gap:var(--space-4);cursor:pointer" style-hover="border-color:var(--color-accent)">
+                  <i class="{{ a.icon }}" style="font-size:19px;color:{{ a.fg }};margin-top:2px"></i>
+                  <div style="flex:1;min-width:0">
+                    <div style="display:flex;align-items:center;gap:var(--space-2)"><span style="padding:2px 6px;border-radius:var(--radius-sm);border:1px solid {{a.fg}};font:600 8.5px/1.4 var(--font-body);letter-spacing:.08em;color:{{a.fg}}">{{ a.tag }}</span><span style="font:400 9.5px/1 var(--font-body);color:color-mix(in srgb,var(--color-text) 35%,transparent)">{{ a.t }}</span></div>
+                    <div style="font:500 13px/1.3 var(--font-heading);margin-top:var(--space-3)">{{ a.title }}</div>
+                    <div style="font:400 10.5px/1.45 var(--font-body);color:color-mix(in srgb,var(--color-text) 48%,transparent);margin-top:3px">{{ a.sub }}</div>
+                  </div>
+                </div>
+              </sc-for>
+              <div style="border-radius:var(--radius-md);border:1px solid color-mix(in srgb,var(--color-accent) 40%,transparent);background:linear-gradient(160deg,var(--color-accent-900),var(--color-surface) 70%);padding:var(--space-6);box-sizing:border-box">
+                <div style="font:500 9px/1 var(--font-body);letter-spacing:.2em;color:var(--color-accent);text-transform:uppercase">Prowl Pro</div>
+                <div style="font:700 17px/1.2 var(--font-heading);margin-top:var(--space-3)">Rare-drop radar alerts you first</div>
+                <div style="font:400 11.5px/1.5 var(--font-body);color:color-mix(in srgb,var(--color-text) 55%,transparent);margin-top:var(--space-2)">Instant push the moment an Ultra or limited variant is logged within 5 km — plus full price history.</div>
+                <div onClick="{{ goProfile }}" style="margin-top:var(--space-4);height:40px;border-radius:var(--radius-md);border:1px solid var(--color-accent);display:flex;align-items:center;justify-content:center;cursor:pointer" style-hover="background:var(--color-accent-900)"><span style="font:600 12px/1 var(--font-heading);color:var(--color-accent)">Add Pro · $2.99/mo</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </sc-if>
+
+      <sc-if value="{{ isRewards }}" hint-placeholder-val="{{ false }}">
+        <div style="position:absolute;inset:0;overflow:auto">
+          <div style="padding:58px 16px 120px;box-sizing:border-box">
+            <div style="font:800 28px/1 var(--font-heading);letter-spacing:-.03em;text-transform:uppercase">Streak</div>
+            <div style="font:400 11.5px/1 var(--font-body);color:color-mix(in srgb,var(--color-text) 45%,transparent);margin-top:var(--space-3)">12 days logging · 2,480 points banked</div>
+            <div style="display:flex;gap:5px;margin-top:var(--space-6)">
+              <sc-for list="{{ week }}" as="d" hint-placeholder-count="7">
+                <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:var(--space-2)">
+                  <div style="width:100%;height:44px;border-radius:var(--radius-sm);background:{{d.bg}};border:1px solid {{d.bd}};display:flex;align-items:center;justify-content:center"><i class="{{ d.icon }}" style="font-size:13px;color:{{ d.fg }}"></i></div>
+                  <span style="font:500 9px/1 var(--font-body);color:color-mix(in srgb,var(--color-text) 40%,transparent)">{{ d.d }}</span>
+                </div>
+              </sc-for>
+            </div>
+            <div style="border-radius:var(--radius-md);border:1px solid var(--color-neutral-800);background:var(--color-surface);padding:var(--space-6);box-sizing:border-box;margin-top:var(--space-6)">
+              <div style="display:flex;align-items:baseline;justify-content:space-between"><span style="font:500 13px/1 var(--font-heading)">Level 7 · Shelf Stalker</span><span style="font:400 10.5px/1 var(--font-body);color:color-mix(in srgb,var(--color-text) 45%,transparent)">680 / 1000 XP</span></div>
+              <div style="height:4px;border-radius:2px;background:var(--color-neutral-900);margin-top:var(--space-4);overflow:hidden"><div style="width:68%;height:100%;background:var(--color-accent)"></div></div>
+              <div style="font:400 10.5px/1.5 var(--font-body);color:color-mix(in srgb,var(--color-text) 48%,transparent);margin-top:var(--space-3)">4 more verified sightings unlocks Level 8 — Aisle Ghost.</div>
+            </div>
+            <div style="font:600 10px/1 var(--font-body);letter-spacing:.16em;text-transform:uppercase;color:color-mix(in srgb,var(--color-text) 45%,transparent);margin:var(--space-8) 0 var(--space-4)">Open quests</div>
+            <div style="border-radius:var(--radius-md);border:1px solid var(--color-neutral-800);overflow:hidden;background:var(--color-surface)">
+              <sc-for list="{{ quests }}" as="q" hint-placeholder-count="3">
+                <div onClick="{{ goReport }}" style="display:flex;align-items:center;gap:var(--space-4);padding:var(--space-4);border-bottom:1px solid var(--color-neutral-900);cursor:pointer" style-hover="background:var(--color-accent-900)">
+                  <i class="{{ q.icon }}" style="font-size:18px;color:var(--color-accent)"></i>
+                  <div style="flex:1;min-width:0"><div style="font:500 12.5px/1.25 var(--font-heading)">{{ q.t }}</div><div style="font:400 10px/1.3 var(--font-body);color:color-mix(in srgb,var(--color-text) 45%,transparent);margin-top:3px">{{ q.sub }}</div></div>
+                  <span style="font:600 11px/1 var(--font-heading);color:var(--color-accent)">{{ q.xp }}</span>
+                </div>
+              </sc-for>
+            </div>
+            <div style="font:600 10px/1 var(--font-body);letter-spacing:.16em;text-transform:uppercase;color:color-mix(in srgb,var(--color-text) 45%,transparent);margin:var(--space-8) 0 var(--space-4)">Spend points</div>
+            <div style="display:flex;gap:var(--space-3)">
+              <sc-for list="{{ redeem }}" as="r" hint-placeholder-count="2">
+                <div style="flex:1;border-radius:var(--radius-md);border:1px solid var(--color-neutral-800);background:var(--color-surface);padding:var(--space-4);box-sizing:border-box;cursor:pointer" style-hover="border-color:var(--color-accent)">
+                  <div style="font:500 12.5px/1.25 var(--font-heading)">{{ r.t }}</div>
+                  <div style="font:400 10px/1.3 var(--font-body);color:color-mix(in srgb,var(--color-text) 45%,transparent);margin-top:var(--space-2)">{{ r.sub }}</div>
+                  <div style="font:600 11.5px/1 var(--font-heading);color:var(--color-accent);margin-top:var(--space-3)">{{ r.cost }}</div>
+                </div>
+              </sc-for>
+            </div>
+          </div>
+        </div>
+      </sc-if>
+
+      <sc-if value="{{ isSaved }}" hint-placeholder-val="{{ false }}">
+        <div style="position:absolute;inset:0;overflow:auto">
+          <div style="padding:54px 16px 120px;box-sizing:border-box">
+            <div onClick="{{ goProfile }}" style="width:34px;height:34px;border-radius:var(--radius-md);border:1px solid var(--color-neutral-800);background:var(--color-surface);display:flex;align-items:center;justify-content:center;cursor:pointer"><i class="ph ph-caret-left" style="font-size:15px;color:var(--color-text)"></i></div>
+            <div style="font:800 27px/1 var(--font-heading);letter-spacing:-.03em;text-transform:uppercase;margin-top:var(--space-4)">Saved</div>
+            <div style="font:600 10px/1 var(--font-body);letter-spacing:.16em;text-transform:uppercase;color:color-mix(in srgb,var(--color-text) 45%,transparent);margin:var(--space-8) 0 var(--space-4)">Tracked variants · 3</div>
+            <div style="border-radius:var(--radius-md);border:1px solid var(--color-neutral-800);overflow:hidden;background:var(--color-surface)">
+              <sc-for list="{{ trackedList }}" as="t" hint-placeholder-count="3">
+                <div onClick="{{ t.tap }}" style="display:flex;align-items:center;gap:var(--space-4);padding:var(--space-3) var(--space-4);border-bottom:1px solid var(--color-neutral-900);cursor:pointer" style-hover="background:var(--color-accent-900)">
+                  <dc-import name="Can" w="24" h="45" accent="{{ t.accent }}" hint-size="24px,45px"></dc-import>
+                  <div style="flex:1;min-width:0"><div style="font:500 12.5px/1.2 var(--font-heading)">{{ t.name }}</div><div style="font:400 10px/1.3 var(--font-body);color:color-mix(in srgb,var(--color-text) 45%,transparent);margin-top:3px">{{ t.note }}</div></div>
+                  <i class="{{ t.icon }}" style="font-size:14px;color:{{ t.fg }}"></i>
+                </div>
+              </sc-for>
+            </div>
+            <div style="font:600 10px/1 var(--font-body);letter-spacing:.16em;text-transform:uppercase;color:color-mix(in srgb,var(--color-text) 45%,transparent);margin:var(--space-8) 0 var(--space-4)">Saved shelves · 2</div>
+            <div style="display:flex;flex-direction:column;gap:var(--space-3)">
+              <sc-for list="{{ savedStores }}" as="s" hint-placeholder-count="2">
+                <div onClick="{{ s.tap }}" style="border-radius:var(--radius-md);border:1px solid var(--color-neutral-800);background:var(--color-surface);padding:var(--space-4);box-sizing:border-box;display:flex;align-items:center;justify-content:space-between;cursor:pointer" style-hover="border-color:var(--color-accent)">
+                  <div><div style="font:500 12.5px/1.2 var(--font-heading)">{{ s.store }}</div><div style="font:400 10px/1.3 var(--font-body);color:color-mix(in srgb,var(--color-text) 45%,transparent);margin-top:4px">{{ s.note }}</div></div>
+                  <span style="font:600 13.5px/1 var(--font-heading);color:var(--color-accent)">{{ s.price }}</span>
+                </div>
+              </sc-for>
+            </div>
+          </div>
+        </div>
+      </sc-if>
+
+      <sc-if value="{{ isProfile }}" hint-placeholder-val="{{ false }}">
+        <div style="position:absolute;inset:0;overflow:auto">
+          <div style="padding:58px 16px 120px;box-sizing:border-box">
+            <div style="display:flex;align-items:center;gap:var(--space-4)">
+              <div style="width:58px;height:58px;border-radius:var(--radius-md);background:linear-gradient(150deg,var(--color-accent-800),var(--color-surface));border:1px solid color-mix(in srgb,var(--color-accent) 32%,transparent);display:flex;align-items:center;justify-content:center"><span style="font:600 18px/1 var(--font-heading);color:var(--color-accent)">DK</span></div>
+              <div style="flex:1">
+                <div style="font:800 20px/1 var(--font-heading);letter-spacing:-.025em">@dmk_hunts</div>
+                <div style="font:400 10.5px/1 var(--font-body);color:color-mix(in srgb,var(--color-text) 48%,transparent);margin-top:var(--space-2)">Level 7 · Shelf Stalker · Seattle</div>
+                <div style="height:4px;border-radius:2px;background:var(--color-neutral-900);margin-top:var(--space-3);overflow:hidden"><div style="width:68%;height:100%;background:var(--color-accent)"></div></div>
+              </div>
+            </div>
+            <div style="display:flex;gap:var(--space-3);margin-top:var(--space-6)">
+              <sc-for list="{{ pStats }}" as="x" hint-placeholder-count="3">
+                <div onClick="{{ goRewards }}" style="flex:1;border-radius:var(--radius-md);border:1px solid var(--color-neutral-800);background:var(--color-surface);padding:var(--space-4);box-sizing:border-box;cursor:pointer" style-hover="border-color:var(--color-accent)">
+                  <div style="font:600 20px/1 var(--font-heading);color:{{x.fg}}">{{ x.v }}</div>
+                  <div style="font:400 9.5px/1.3 var(--font-body);color:color-mix(in srgb,var(--color-text) 45%,transparent);margin-top:var(--space-2)">{{ x.k }}</div>
+                </div>
+              </sc-for>
+            </div>
+            <div style="border-radius:var(--radius-md);border:1px solid color-mix(in srgb,var(--color-accent) 40%,transparent);background:linear-gradient(160deg,var(--color-accent-900),var(--color-surface) 72%);padding:var(--space-6);box-sizing:border-box;margin-top:var(--space-6)">
+              <div style="display:flex;align-items:center;justify-content:space-between">
+                <span style="font:500 9px/1 var(--font-body);letter-spacing:.2em;color:var(--color-accent);text-transform:uppercase">Prowl Pro · active</span>
+                <i class="ph-fill ph-lightning" style="font-size:15px;color:var(--color-accent)"></i>
+              </div>
+              <div style="font:700 18px/1.15 var(--font-heading);margin-top:var(--space-3)">$2.99 / month</div>
+              <div style="font:400 10.5px/1.5 var(--font-body);color:color-mix(in srgb,var(--color-text) 55%,transparent);margin-top:var(--space-2)">Renews 2 Oct 2026 · rare-drop radar, full price history, unlimited tracking. App licence $4.99 — paid 14 Aug 2026.</div>
+              <div style="display:flex;gap:var(--space-2);margin-top:var(--space-4)">
+                <div style="flex:1;height:38px;border-radius:var(--radius-md);border:1px solid var(--color-accent);display:flex;align-items:center;justify-content:center;cursor:pointer" style-hover="background:var(--color-accent-900)"><span style="font:600 11.5px/1 var(--font-heading);color:var(--color-accent)">Manage plan</span></div>
+                <div style="flex:1;height:38px;border-radius:var(--radius-md);border:1px solid var(--color-neutral-700);display:flex;align-items:center;justify-content:center;cursor:pointer" style-hover="border-color:var(--color-text)"><span style="font:600 11.5px/1 var(--font-heading)">Receipts</span></div>
+              </div>
+            </div>
+            <div style="border-radius:var(--radius-md);border:1px solid var(--color-neutral-800);overflow:hidden;background:var(--color-surface);margin-top:var(--space-6)">
+              <sc-for list="{{ settings }}" as="r" hint-placeholder-count="7">
+                <div onClick="{{ r.tap }}" style="display:flex;align-items:center;gap:var(--space-4);padding:var(--space-4);border-bottom:1px solid var(--color-neutral-900);cursor:pointer" style-hover="background:var(--color-accent-900)">
+                  <i class="{{ r.icon }}" style="font-size:16px;color:color-mix(in srgb,var(--color-text) 55%,transparent)"></i>
+                  <span style="flex:1;font:500 12.5px/1 var(--font-heading)">{{ r.label }}</span>
+                  <span style="font:400 10.5px/1 var(--font-body);color:color-mix(in srgb,var(--color-text) 40%,transparent)">{{ r.val }}</span>
+                  <i class="ph ph-caret-right" style="font-size:12px;color:color-mix(in srgb,var(--color-text) 28%,transparent)"></i>
+                </div>
+              </sc-for>
+            </div>
+            <div onClick="{{ goPaywall }}" style="margin-top:var(--space-6);text-align:center;font:500 11.5px/1 var(--font-body);color:color-mix(in srgb,var(--color-text) 35%,transparent);cursor:pointer">Sign out</div>
+          </div>
+        </div>
+      </sc-if>
+
+      <sc-if value="{{ showTabs }}" hint-placeholder-val="{{ true }}">
+        <div style="position:absolute;left:12px;right:12px;bottom:24px;height:60px;border-radius:var(--radius-lg);background:rgba(12,14,12,.84);border:1px solid var(--color-neutral-800);backdrop-filter:blur(20px) saturate(150%);display:flex;align-items:center;box-sizing:border-box;box-shadow:0 14px 34px rgba(0,0,0,.55)">
+          <sc-for list="{{ tabs }}" as="t" hint-placeholder-count="5">
+            <div onClick="{{ t.tap }}" style="flex:1;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;cursor:pointer">
+              <i class="{{ t.icon }}" style="font-size:19px;color:{{ t.fg }}"></i>
+              <span style="font:500 8.5px/1 var(--font-body);letter-spacing:.08em;color:{{t.fg}};text-transform:uppercase">{{ t.label }}</span>
+            </div>
+          </sc-for>
+          <div onClick="{{ goReport }}" style="position:absolute;left:50%;top:-20px;transform:translateX(-50%);width:52px;height:52px;border-radius:var(--radius-lg);background:var(--color-bg);border:1px solid var(--color-accent);display:flex;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 0 24px color-mix(in srgb,var(--color-accent) 30%,transparent)" style-hover="background:var(--color-accent-900)"><i class="ph ph-plus" style="font-size:20px;color:var(--color-accent)"></i></div>
+        </div>
+      </sc-if>
+
+    </div>
+  </x-import>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;accent&quot;:{&quot;editor&quot;:&quot;color&quot;,&quot;default&quot;:&quot;#00ff41&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;options&quot;:[&quot;#00ff41&quot;,&quot;#4ADE22&quot;,&quot;#00E676&quot;,&quot;#84CC16&quot;]},&quot;tiltDeg&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:52,&quot;min&quot;:0,&quot;max&quot;:68,&quot;step&quot;:2,&quot;unit&quot;:&quot;deg&quot;,&quot;tsType&quot;:&quot;number&quot;},&quot;showPinPrices&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;}}">
+const VARIANTS = [
+  { name: 'Original', accent: '#00ff41', owned: true, rarity: 'Common', low: '$3.29', caff: '160 mg', sugar: '54 g', found: 'at 12 shelves nearby', blurb: 'The one that started it. Citrus-forward and aggressively carbonated — stocked everywhere, which makes it the price floor every other can is judged against.' },
+  { name: 'Zero Ultra', accent: '#cbd0cb', owned: true, rarity: 'Common', low: '$3.29', caff: '150 mg', sugar: '0 g', found: 'at 9 shelves nearby', blurb: 'Light, dry, almost floral. The most-tracked variant in Prowl and the first to clear out on Mondays.' },
+  { name: 'Mango Riot', accent: '#f0b429', owned: true, rarity: 'Uncommon', low: '$3.49', caff: '160 mg', sugar: '46 g', found: 'at 5 shelves nearby', blurb: 'Thick tropical mango with a bitter finish. Restocks in waves — track it and Prowl pings you the hour it lands.' },
+  { name: 'Reef Punch', accent: '#e2536b', owned: true, rarity: 'Uncommon', low: '$3.49', caff: '160 mg', sugar: '49 g', found: 'at 6 shelves nearby', blurb: 'Guava, passionfruit and a pink that stains. Corner stores price it 20¢ over the majors, so it pays to walk two blocks.' },
+  { name: 'Melon Havoc', accent: '#c8455a', owned: true, rarity: 'Common', low: '$3.29', caff: '160 mg', sugar: '51 g', found: 'at 7 shelves nearby', blurb: 'Summer-only in most regions. Sharp watermelon, very little edge, and the cheapest of the fruit line.' },
+  { name: 'Nitro Cold Brew', accent: '#b08050', owned: false, rarity: 'Rare', low: '$4.19', caff: '200 mg', sugar: '18 g', found: 'at 2 shelves nearby', blurb: 'Nitrogen-charged coffee in the same black can. Ships to about one store in nine, usually a single facing.' },
+  { name: 'Arctic Kiwi', accent: '#5fe6b0', owned: false, rarity: 'Rare', low: '$4.49', caff: '160 mg', sugar: '44 g', found: 'at 1 shelf nearby', blurb: 'A regional test flavour: kiwi and cold mint. Hunters clear a shelf within a day of it appearing.' },
+  { name: 'Void Berry', accent: '#8f7ce0', owned: false, rarity: 'Ultra', low: '$5.29', caff: '180 mg', sugar: '38 g', found: 'at 1 shelf nearby', blurb: 'A limited 500,000-can run with a UV-reactive wrap. Resells above retail; Prowl has logged 34 cans in this city all month.' },
+];
+
+const PINS = [
+  { id: 0, x: 196, y: 470, store: '7-Eleven · Pike & Broadway', address: '1201 Pike St · aisle 3, cooler 2', dist: '80 m', price: '$3.49', priceTag: 'Cheapest nearby', variant: 'Reef Punch', accent: '#e2536b', size: '500 ml can', rarity: 'Uncommon', stock: '8', verified: '2 h ago', by: '@kelsobrews' },
+  { id: 1, x: 92, y: 592, store: 'Corner Market Deli', address: '415 15th Ave E · front cooler', dist: '240 m', price: '$3.79', priceTag: 'Fair price', variant: 'Mango Riot', accent: '#f0b429', size: '500 ml can', rarity: 'Uncommon', stock: '3', verified: '25 min ago', by: '@vee' },
+  { id: 2, x: 312, y: 520, store: 'Safeway · Broadway Market', address: '1451 Broadway · beverage aisle 11', dist: '410 m', price: '$3.29', priceTag: 'Bulk 4-pack', variant: 'Original', accent: '#00ff41', size: '500 ml can', rarity: 'Common', stock: '40+', verified: '1 h ago', by: '@dmk_hunts' },
+  { id: 3, x: 148, y: 386, store: 'QFC · Harvard Ave', address: '1531 Broadway · endcap display', dist: '520 m', price: '$4.49', priceTag: 'Above average', variant: 'Arctic Kiwi', accent: '#5fe6b0', size: '500 ml can', rarity: 'Rare', stock: '2', verified: '11 min ago', by: '@nightaisle' },
+  { id: 4, x: 268, y: 660, store: 'Rite Aid · Denny Way', address: '319 E Denny Way · checkout cooler', dist: '640 m', price: '$5.29', priceTag: 'Collector price', variant: 'Void Berry', accent: '#8f7ce0', size: '500 ml can', rarity: 'Ultra', stock: '1', verified: '4 min ago', by: '@voidhunter' },
+  { id: 5, x: 356, y: 400, store: 'Chevron · 12th & Madison', address: '1200 Madison St · door 4', dist: '780 m', price: '$3.99', priceTag: 'Fair price', variant: 'Zero Ultra', accent: '#cbd0cb', size: '500 ml can', rarity: 'Common', stock: '12', verified: '3 h ago', by: '@rjs' },
+];
+
+const ACC = 'var(--color-accent)';
+const MUTED = 'color-mix(in srgb, var(--color-text) 48%, transparent)';
+
+class Component extends DCLogic {
+  state = { screen: 'paywall', focus: null, chip: 0, filter: 2, vaultChip: 0, variant: 6, tracked: true, picker: 3, stock: 1, price: 349, threeD: true };
+
+  go = (screen, focus) => () => this.setState({ screen, focus: focus === undefined ? null : focus });
+
+  renderVals() {
+    const s = this.state;
+    const F = PINS[s.focus ?? 0];
+    const v = VARIANTS[s.variant];
+    const rarityFg = (r) => r === 'Common' ? MUTED : ACC;
+    const chipStyle = (on) => ({
+      bg: on ? 'var(--color-accent-900)' : 'rgba(20,22,20,.86)',
+      bd: on ? ACC : 'var(--color-neutral-800)',
+      fg: on ? ACC : 'color-mix(in srgb, var(--color-text) 70%, transparent)',
+    });
+
+    const sF = 1.32;
+    let cam = 'translate(0px,0px) scale(1)';
+    if (s.focus !== null && s.screen === 'map') {
+      const cx = Math.round(96 - 201 - sF * (F.x - 201));
+      const cy = Math.round(320 - 437 - sF * (F.y - 437) * 0.56);
+      cam = 'translate(' + cx + 'px,' + cy + 'px) scale(' + sF + ')';
+    }
+
+    const navItems = [
+      ['paywall', 'Paywall · $4.99', undefined], ['perm', 'Location access', undefined],
+      ['map', '3D can map', undefined], ['map', 'Pin focused + bubble', 0],
+      ['search', 'Search & filters', undefined], ['list', 'Nearby list', undefined],
+      ['store', 'Store detail', undefined], ['vault', 'Collector vault', undefined],
+      ['variant', 'Variant detail', undefined], ['report', 'Log a sighting', undefined],
+      ['alerts', 'Alerts', undefined], ['rewards', 'Streak & points', undefined],
+      ['saved', 'Saved', undefined], ['profile', 'Profile & Pro', undefined],
+    ];
+
+    return {
+      isPaywall: s.screen === 'paywall', isPerm: s.screen === 'perm', isMap: s.screen === 'map',
+      isSearch: s.screen === 'search', isList: s.screen === 'list', isStore: s.screen === 'store',
+      isVault: s.screen === 'vault', isVariant: s.screen === 'variant', isReport: s.screen === 'report',
+      isAlerts: s.screen === 'alerts', isRewards: s.screen === 'rewards', isSaved: s.screen === 'saved',
+      isProfile: s.screen === 'profile',
+      showTabs: ['map', 'list', 'vault', 'alerts', 'profile', 'rewards'].includes(s.screen),
+      hasFocus: s.screen === 'map' && s.focus !== null,
+      noFocus: s.screen === 'map' && s.focus === null,
+      cam, tilt: s.threeD ? 'perspective(1100px) rotateX(' + (this.props.tiltDeg ?? 52) + 'deg)' : 'none',
+      pinPrices: (this.props.showPinPrices ?? true) ? 'block' : 'none',
+
+      goMap: this.go('map'), goList: this.go('list'), goStore: this.go('store'), goVault: this.go('vault'),
+      goReport: this.go('report'), goProfile: this.go('profile'), goPerm: this.go('perm'),
+      goPaywall: this.go('paywall'), goSearch: this.go('search'), goSaved: this.go('saved'),
+      goRewards: this.go('rewards'),
+      closeFocus: () => this.setState({ focus: null }),
+      toggle3d: () => this.setState({ threeD: !s.threeD }),
+      d3bg: s.threeD ? 'var(--color-accent-900)' : 'rgba(20,22,20,.85)',
+      d3bd: s.threeD ? ACC : 'var(--color-neutral-800)',
+      d3fg: s.threeD ? ACC : 'var(--color-text)',
+
+      sell: [
+        { icon: 'ph-fill ph-cube', t: '3D map, can-level pin accuracy' },
+        { icon: 'ph-fill ph-tag', t: 'Live shelf prices from 40k hunters' },
+        { icon: 'ph-fill ph-sparkle', t: '34 variants tracked · rare-drop radar' },
+      ],
+
+      nav: navItems.map(([id, label, focus], i) => {
+        const on = s.screen === id && (focus === undefined ? s.focus === null : s.focus === focus);
+        return {
+          n: String(i + 1).padStart(2, '0'), label, go: this.go(id, focus),
+          bg: on ? 'var(--color-accent-900)' : 'transparent',
+          bd: on ? 'color-mix(in srgb, var(--color-accent) 45%, transparent)' : 'var(--color-neutral-900)',
+          fg: on ? 'var(--color-text)' : 'color-mix(in srgb, var(--color-text) 62%, transparent)',
+          num: on ? ACC : 'color-mix(in srgb, var(--color-text) 30%, transparent)',
+        };
+      }),
+
+      pins: PINS.map(p => ({
+        ...p, tap: this.go('map', p.id),
+        z: 10 + p.id, o: s.focus === null || s.focus === p.id ? 1 : 0.25,
+        ring: s.focus === p.id ? ACC : 'color-mix(in srgb, var(--color-accent) 30%, transparent)',
+        stand: s.threeD ? 'rotateX(-' + (this.props.tiltDeg ?? 52) + 'deg)' : 'none',
+      })),
+
+      chips: ['All 34', 'In stock', 'Rare only', 'Under $3.50', 'Zero sugar'].map((label, i) => ({
+        label, tap: () => this.setState({ chip: i }), ...chipStyle(s.chip === i),
+      })),
+
+      filters: ['Rare only', 'In stock', 'Under $4.50', 'Walk < 10 min', 'Zero sugar', 'Verified today'].map((label, i) => ({
+        label, tap: () => this.setState({ filter: i }), ...chipStyle(s.filter === i),
+      })),
+
+      results: [
+        { name: 'Venom Arctic Kiwi', sub: 'QFC · Harvard Ave · 2 left · rare', price: '$4.49', accent: '#5fe6b0', tap: this.go('variant') },
+        { name: 'Venom Arctic Kiwi', sub: 'Corner Market Deli · out of stock', price: '$4.29', accent: '#5fe6b0', tap: this.go('store') },
+        { name: 'Kiwi Havoc (discontinued)', sub: 'No sightings in 94 days', price: '—', accent: '#6b726b', tap: this.go('vault') },
+      ],
+      recents: ['void berry', 'cheapest zero sugar', 'Safeway Broadway', 'nitro cold brew'],
+
+      deck: PINS.slice(0, 3).map(p => ({
+        store: p.store, dist: p.dist, variant: p.variant, price: p.price, accent: p.accent,
+        stock: p.stock + ' left', tap: this.go('map', p.id),
+      })),
+
+      f: F,
+
+      nearby: PINS.map((p, i) => ({
+        store: p.store, dist: p.dist, price: p.price, variant: p.variant, accent: p.accent,
+        count: 4 + i, verified: 'verified ' + p.verified,
+        badge: p.rarity === 'Ultra' ? 'Ultra find' : p.rarity === 'Rare' ? 'Rare' : i === 2 ? 'Cheapest' : 'In stock',
+        badgeBd: p.rarity === 'Common' ? 'var(--color-neutral-700)' : ACC,
+        badgeFg: p.rarity === 'Common' ? MUTED : ACC,
+        tap: this.go('store', p.id),
+      })),
+
+      shelf: VARIANTS.slice(0, 6).map((x, i) => ({
+        name: 'Venom ' + x.name, accent: x.accent, price: x.low, rarity: x.rarity,
+        qty: [8, 12, 3, 6, 2, 1][i], priceFg: i === 1 ? ACC : 'var(--color-text)',
+        tap: () => this.setState({ screen: 'variant', variant: i }),
+      })),
+
+      history: [3.6, 3.5, 3.6, 3.7, 3.7, 3.5, 3.4, 3.5, 3.3, 3.29].map((p, i, a) => ({
+        m: ['D', 'J', 'F', 'M', 'A', 'M', 'J', 'J', 'A', 'S'][i],
+        h: Math.round((p - 3.1) * 105),
+        bg: i === a.length - 1 ? ACC : 'var(--color-accent-800)',
+      })),
+
+      vaultChips: ['All 34', 'Logged 17', 'Missing 17', 'Rare'].map((label, i) => ({
+        label, tap: () => this.setState({ vaultChip: i }), ...chipStyle(s.vaultChip === i),
+      })),
+
+      variants: VARIANTS.concat(VARIANTS.slice(0, 4)).map((x, i) => ({
+        name: x.name, accent: x.accent,
+        rarity: x.owned ? x.rarity : 'Not logged',
+        rarityFg: x.owned ? rarityFg(x.rarity) : 'color-mix(in srgb, var(--color-text) 30%, transparent)',
+        bg: x.owned ? 'var(--color-surface)' : 'transparent',
+        bd: x.owned ? '1px solid var(--color-neutral-800)' : '1px dashed var(--color-neutral-800)',
+        op: x.owned ? 1 : 0.5,
+        tap: () => this.setState({ screen: 'variant', variant: i % VARIANTS.length }),
+      })),
+
+      v: { ...v, rarityFg: rarityFg(v.rarity) },
+      vStats: [
+        { v: v.low, k: 'cheapest nearby', fg: ACC },
+        { v: v.caff, k: 'caffeine', fg: 'var(--color-text)' },
+        { v: v.sugar, k: 'sugar', fg: 'var(--color-text)' },
+      ],
+      goVariant: this.go('variant'),
+      variantStores: PINS.slice(1, 4).map(p => ({
+        store: p.store, dist: p.dist, price: p.price, qty: p.stock + ' on shelf', tap: this.go('store', p.id),
+      })),
+      toggleTrack: () => this.setState({ tracked: !s.tracked }),
+      trackLabel: s.tracked ? 'Tracking this variant' : 'Track this variant',
+      trackIcon: s.tracked ? 'ph-fill ph-bell-ringing' : 'ph ph-bell',
+      trackBg: s.tracked ? 'var(--color-accent-900)' : 'transparent',
+      trackBd: s.tracked ? ACC : 'var(--color-neutral-700)',
+      trackFg: s.tracked ? ACC : 'var(--color-text)',
+
+      pickers: VARIANTS.slice(0, 5).map((x, i) => ({
+        name: x.name, accent: x.accent, tap: () => this.setState({ picker: i }),
+        bg: s.picker === i ? 'var(--color-accent-900)' : 'var(--color-surface)',
+        bd: s.picker === i ? ACC : 'var(--color-neutral-800)',
+        fg: s.picker === i ? 'var(--color-text)' : MUTED,
+      })),
+      priceStr: '$' + (s.price / 100).toFixed(2),
+      inc: () => this.setState({ price: s.price + 10 }),
+      dec: () => this.setState({ price: Math.max(99, s.price - 10) }),
+      stockOpts: ['1–2', '3–8', '9–20', '20+'].map((label, i) => ({
+        label, tap: () => this.setState({ stock: i }),
+        bg: s.stock === i ? 'var(--color-accent-900)' : 'var(--color-surface)',
+        bd: s.stock === i ? ACC : 'var(--color-neutral-800)',
+        fg: s.stock === i ? ACC : 'color-mix(in srgb, var(--color-text) 70%, transparent)',
+      })),
+      submitReport: this.go('rewards'),
+
+      alerts: [
+        { tag: 'ULTRA', t: '4 min ago', title: 'Void Berry logged 640 m away', sub: 'Rite Aid · Denny Way · $5.29 · 1 can left', icon: 'ph-fill ph-sparkle', fg: ACC, tap: this.go('store', 4) },
+        { tag: 'DEAL', t: '18 min ago', title: 'Mango Riot dropped to $2.79', sub: 'Safeway · Broadway Market · was $3.49', icon: 'ph-fill ph-trend-down', fg: ACC, tap: this.go('store', 2) },
+        { tag: 'HUNT', t: '1 h ago', title: 'Arctic Kiwi restocked nearby', sub: 'QFC · Harvard Ave · reported by @nightaisle', icon: 'ph-fill ph-map-pin', fg: ACC, tap: this.go('store', 3) },
+        { tag: 'XP', t: 'Yesterday', title: 'Your streak hit 12 days', sub: '+150 XP · 4 sightings to Level 8', icon: 'ph-fill ph-flame', fg: MUTED, tap: this.go('rewards') },
+      ],
+
+      week: ['M', 'T', 'W', 'T', 'F', 'S', 'S'].map((d, i) => ({
+        d, bg: i < 5 ? 'var(--color-accent-900)' : 'transparent',
+        bd: i < 5 ? 'color-mix(in srgb, var(--color-accent) 40%, transparent)' : 'var(--color-neutral-800)',
+        icon: i < 5 ? 'ph-fill ph-check' : 'ph ph-minus',
+        fg: i < 5 ? ACC : 'color-mix(in srgb, var(--color-text) 28%, transparent)',
+      })),
+      quests: [
+        { icon: 'ph ph-camera', t: 'Log 3 shelf photos', sub: '1 of 3 · resets in 9 h', xp: '+45 XP' },
+        { icon: 'ph ph-sparkle', t: 'Verify a rare variant', sub: 'Arctic Kiwi is 520 m away', xp: '+120 XP' },
+        { icon: 'ph ph-tag', t: 'Correct one stale price', sub: '2 prices near you are 3 days old', xp: '+30 XP' },
+      ],
+      redeem: [
+        { t: 'One month of Pro', sub: 'Rare-drop radar + full history', cost: '2,000 pts' },
+        { t: 'Hunter sticker pack', sub: 'Posted anywhere in the US', cost: '900 pts' },
+      ],
+
+      trackedList: VARIANTS.slice(5, 8).map((x, i) => ({
+        name: 'Venom ' + x.name, accent: x.accent,
+        note: ['In stock at 2 shelves · alert on', 'Out of stock · alert on', 'Last seen 4 min ago'][i],
+        icon: i === 1 ? 'ph ph-bell-slash' : 'ph-fill ph-bell-ringing',
+        fg: i === 1 ? 'color-mix(in srgb, var(--color-text) 30%, transparent)' : ACC,
+        tap: () => this.setState({ screen: 'variant', variant: 5 + i }),
+      })),
+      savedStores: [
+        { store: '7-Eleven · Pike & Broadway', note: '80 m · 6 variants · updated 2 h ago', price: '$3.49', tap: this.go('store', 0) },
+        { store: 'Safeway · Broadway Market', note: '410 m · 9 variants · updated 1 h ago', price: '$3.29', tap: this.go('store', 2) },
+      ],
+
+      pStats: [
+        { v: '248', k: 'cans logged', fg: 'var(--color-text)' },
+        { v: '17', k: 'variants found', fg: ACC },
+        { v: '12d', k: 'streak', fg: 'var(--color-text)' },
+      ],
+      settings: [
+        { icon: 'ph ph-bookmark-simple', label: 'Saved shelves & variants', val: '5', tap: this.go('saved') },
+        { icon: 'ph ph-flame', label: 'Streak & points', val: '2,480', tap: this.go('rewards') },
+        { icon: 'ph ph-crosshair', label: 'Alert radius', val: '1.2 km', tap: () => {} },
+        { icon: 'ph ph-bell', label: 'Rare-drop push', val: 'On', tap: () => {} },
+        { icon: 'ph ph-ruler', label: 'Units', val: 'Metric', tap: () => {} },
+        { icon: 'ph ph-clock-counter-clockwise', label: 'Contribution history', val: '248 logs', tap: () => {} },
+        { icon: 'ph ph-receipt', label: 'Restore purchase', val: '', tap: () => {} },
+      ],
+
+      tabs: [
+        ['map', 'Map', 'map-trifold'], ['list', 'List', 'list-dashes'],
+        ['vault', 'Vault', 'grid-four'], ['alerts', 'Alerts', 'bell'], ['profile', 'Me', 'user'],
+      ].map(([id, label, icon]) => {
+        const on = s.screen === id;
+        return { label, tap: this.go(id), icon: (on ? 'ph-fill ph-' : 'ph ph-') + icon, fg: on ? ACC : 'color-mix(in srgb, var(--color-text) 38%, transparent)' };
+      }),
+    };
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+{
+  "expo": {
+    "name": "Energy Radar",
+    "slug": "prowl-energy-finder",
+    "version": "1.0.0",
+    "scheme": "prowl",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "dark",
+    "backgroundColor": "#0a0b0a",
+    "newArchEnabled": true,
+    "splash": {
+      "backgroundColor": "#0a0b0a",
+      "resizeMode": "contain",
+      "image": "./assets/splash-icon.png"
+    },
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.prowl.energyfinder",
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "Energy Radar sorts shelves by walking distance and finds what's near you.",
+        "ITSAppUsesNonExemptEncryption": false
+      }
+    },
+    "android": {
+      "package": "com.prowl.energyfinder",
+      "predictiveBackGestureEnabled": false,
+      "adaptiveIcon": {
+        "backgroundColor": "#0a0b0a",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      },
+      "permissions": [
+        "android.permission.ACCESS_COARSE_LOCATION",
+        "android.permission.ACCESS_FINE_LOCATION",
+        "android.permission.POST_NOTIFICATIONS"
+      ]
+    },
+    "plugins": [
+      "expo-router",
+      "@maplibre/maplibre-react-native",
+      [
+        "expo-location",
+        {
+          "locationWhenInUsePermission": "Energy Radar sorts shelves by walking distance and finds what's near you."
+        }
+      ],
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/android-icon-foreground.png",
+          "color": "#00ff41"
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "f39c785d-82f5-443f-b1a8-d16353eb4ca8"
+      }
+    },
+    "owner": "joshuazisel"
+  }
+}

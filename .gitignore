@@ -1,0 +1,21 @@
+# dependencies
+node_modules/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# the scraper's raw downloaded XML — regenerable, large, never committed
+israel-poc/dumps/
+israel-poc/*_cookies.txt
+israel-poc/logging.log
+
+# OS / editor noise
+.DS_Store
+Thumbs.db
+
+# secrets — never commit real credentials
+.env
+!*.env.example

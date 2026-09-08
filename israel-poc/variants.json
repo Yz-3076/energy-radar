@@ -1,0 +1,14 @@
+[
+  { "id": "original", "name": "Monster Energy Original", "barcode": "5061013942249" },
+  { "id": "ultra", "name": "Monster Ultra", "barcode": "5060639128051" },
+  { "id": "ultra-paradise", "name": "Monster Ultra Paradise", "barcode": "5060751219033" },
+  { "id": "ultra-fiesta", "name": "Monster Ultra Fiesta Mango", "barcode": "5060896625249" },
+  { "id": "mango-loco", "name": "Monster Mango Loco", "barcode": "5060639129102" },
+  { "id": "full-zero", "name": "Monster Full Zero", "barcode": "5061013948364" },
+  { "id": "ultra-violet", "name": "Monster Ultra Violet", "barcode": "5060639127078" },
+  { "id": "juice-khaotic", "name": "Monster Juice Khaotic", "barcode": "5060751219118" },
+  { "id": "pipeline-punch", "name": "Monster Pipeline Punch", "barcode": null },
+  { "id": "ultra-gold", "name": "Monster Ultra Gold", "barcode": null },
+  { "id": "nitro-super-dry", "name": "Monster Nitro Super Dry", "barcode": null },
+  { "id": "rehab-lemonade", "name": "Monster Rehab Lemonade", "barcode": null }
+]

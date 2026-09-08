@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Monster Finder</title>
+  <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css" />
+  <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/fill/style.css" />
+</head>
+<body>
+  <div id="stage">
+    <div id="phone" data-screen="map">
+      <div id="island"></div>
+
+      <div id="statusbar">
+        <span id="sb-time">9:41</span>
+        <span id="sb-icons">
+          <svg width="19" height="12" viewBox="0 0 19 12"><rect x="0" y="7.5" width="3.2" height="4.5" rx=".7"/><rect x="4.8" y="5" width="3.2" height="7" rx=".7"/><rect x="9.6" y="2.5" width="3.2" height="9.5" rx=".7"/><rect x="14.4" y="0" width="3.2" height="12" rx=".7"/></svg>
+          <svg width="17" height="12" viewBox="0 0 17 12"><path d="M8.5 3.2c2.3 0 4.4.9 5.9 2.4l1.1-1.1A9.7 9.7 0 0 0 8.5 1.5 9.7 9.7 0 0 0 1.5 4.5l1.1 1.1c1.5-1.5 3.6-2.4 5.9-2.4Z"/><path d="M8.5 6.8c1.4 0 2.6.5 3.5 1.4l1.1-1.1a6.6 6.6 0 0 0-4.6-2 6.6 6.6 0 0 0-4.6 2l1.1 1.1c.9-.9 2.1-1.4 3.5-1.4Z"/><circle cx="8.5" cy="10.5" r="1.5"/></svg>
+          <svg width="27" height="13" viewBox="0 0 27 13"><rect x=".5" y=".5" width="23" height="12" rx="3.5" fill="none" stroke="currentColor" stroke-opacity=".35"/><rect x="2" y="2" width="20" height="9" rx="2"/><path d="M25 4.5v4c.8-.3 1.5-1.3 1.5-2s-.7-1.7-1.5-2Z" opacity=".4"/></svg>
+        </span>
+      </div>
+
+      <!-- ───────────────────────── MAP SCREEN ───────────────────────── -->
+      <section class="screen" data-name="map">
+        <div id="map"></div>
+        <canvas id="can-overlay"></canvas>
+        <div class="map-scrim"></div>
+
+        <div id="top-chrome">
+          <div class="row-between">
+            <div>
+              <div class="eyebrow">Hunting near</div>
+              <div class="place" id="place-name">Tel Aviv</div>
+            </div>
+            <div class="avatar" data-goto="me">DK</div>
+          </div>
+
+          <div class="searchbar" data-goto="search">
+            <i class="ph ph-magnifying-glass"></i>
+            <span>Flavour, store or price…</span>
+          </div>
+
+          <div class="chips" id="chips"></div>
+        </div>
+
+        <div id="map-controls">
+          <button class="mapbtn active" id="btn-3d">3D</button>
+          <button class="mapbtn" id="btn-locate"><i class="ph ph-crosshair-simple"></i></button>
+          <button class="mapbtn" id="btn-layers"><i class="ph ph-stack-simple"></i></button>
+        </div>
+
+        <div id="deck"></div>
+
+        <div id="hero-glow"></div>
+        <div id="hero-can"></div>
+        <div id="backdrop"></div>
+        <div id="bubble">
+          <button class="bubble-close" aria-label="Close">✕</button>
+          <div class="bubble-body">
+            <div class="instock"><i class="ph-fill ph-check-circle"></i><span id="b-freshness-text"></span></div>
+            <div class="store-chain" id="b-chain"></div>
+            <h2 class="store-name" id="b-name"></h2>
+            <div class="store-address" id="b-address"></div>
+            <div class="hr"></div>
+            <div class="row-between">
+              <div>
+                <div class="mini-label">Shelf price from</div>
+                <div class="big-price" id="b-minprice"></div>
+              </div>
+              <div class="pricetag" id="b-count"></div>
+            </div>
+            <ul class="variant-list" id="b-list"></ul>
+            <div class="bubble-actions">
+              <button class="btn-dark"><i class="ph-fill ph-navigation-arrow"></i> Directions</button>
+              <button class="btn-outline" id="b-details">Details</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ───────────────────────── SEARCH SCREEN ───────────────────────── -->
+      <section class="screen scroll" data-name="search">
+        <div class="pad">
+          <div class="row-gap">
+            <div class="searchbar live">
+              <i class="ph ph-magnifying-glass accent"></i>
+              <input id="search-input" placeholder="Flavour, store or price…" />
+            </div>
+            <button class="linkbtn" data-goto="map">Cancel</button>
+          </div>
+
+          <div class="chips wrap" id="filters"></div>
+
+          <div class="section-label">Flavour matches</div>
+          <div class="listcard" id="search-results"></div>
+
+          <div class="section-label">Recent hunts</div>
+          <div class="recents" id="recents"></div>
+        </div>
+      </section>
+
+      <!-- ───────────────────────── NEARBY LIST SCREEN ───────────────────────── -->
+      <section class="screen scroll" data-name="list">
+        <div class="pad">
+          <div class="row-between end">
+            <h1 class="bigtitle">Nearby</h1>
+            <button class="linkbtn accent">Distance <i class="ph ph-caret-down"></i></button>
+          </div>
+          <div class="muted-sm" id="list-meta"></div>
+          <div class="stack" id="nearby-list"></div>
+        </div>
+      </section>
+
+      <!-- ───────────────────────── STORE DETAIL SCREEN ───────────────────────── -->
+      <section class="screen scroll" data-name="store">
+        <div class="store-hero">
+          <div class="store-hero-glow"></div>
+          <div class="shelf-note">[ shelf photo — hunter submitted ]</div>
+          <div class="shelf-cans"><span></span><span class="mid"></span><span></span></div>
+          <button class="circlebtn left" data-goto="map"><i class="ph ph-caret-left"></i></button>
+          <button class="circlebtn right"><i class="ph-fill ph-bookmark-simple"></i></button>
+        </div>
+        <div class="pad">
+          <div class="openrow"><i class="ph-fill ph-clock"></i><span>Open until 11 pm</span></div>
+          <h1 class="bigtitle sm" id="s-name"></h1>
+          <div class="muted-sm" id="s-address"></div>
+          <div class="row-gap mt">
+            <button class="btn-outline accent grow"><i class="ph-fill ph-navigation-arrow"></i> Directions</button>
+            <button class="btn-outline grow" data-goto="owner">Update stock</button>
+          </div>
+          <div class="section-label" id="s-shelf-label">On the shelf</div>
+          <div class="listcard" id="s-shelf"></div>
+          <div class="section-label">Price history · cheapest variant</div>
+          <div class="panel">
+            <div class="bars" id="s-history"></div>
+            <div class="row-gap baseline mt">
+              <span class="big-price accent" id="s-hist-price"></span>
+              <span class="muted-sm">−12% vs 90-day average</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ───────────────────────── ME SCREEN ───────────────────────── -->
+      <section class="screen scroll" data-name="me">
+        <div class="pad">
+          <div class="row-gap">
+            <div class="avatar big">DK</div>
+            <div>
+              <h1 class="bigtitle sm">@dmk_hunts</h1>
+              <div class="muted-sm">Hunting in Tel Aviv</div>
+            </div>
+          </div>
+          <div class="stats" id="me-stats"></div>
+          <div class="section-label">Own a store?</div>
+          <a class="promo" href="/owner.html">
+            <div class="promo-eyebrow">Featured listing</div>
+            <div class="promo-title">Get your shop on the map</div>
+            <div class="promo-sub">Verified shelf photo, then ₪35/month for a featured pin nearby hunters see first.</div>
+            <div class="promo-cta">List your store →</div>
+          </a>
+        </div>
+      </section>
+
+      <!-- ───────────────────────── PLACEHOLDER SCREENS ───────────────────────── -->
+      <section class="screen scroll" data-name="vault">
+        <div class="pad"><h1 class="bigtitle">Vault</h1><div class="muted-sm">Flavour collection — coming next.</div></div>
+      </section>
+      <section class="screen scroll" data-name="alerts">
+        <div class="pad"><h1 class="bigtitle">Alerts</h1><div class="muted-sm">Restock &amp; price-drop pings — coming next.</div></div>
+      </section>
+
+      <!-- ───────────────────────── TAB BAR ───────────────────────── -->
+      <nav id="tabbar">
+        <button class="tab active" data-goto="map"><i class="ph-fill ph-map-trifold"></i><span>Map</span></button>
+        <button class="tab" data-goto="list"><i class="ph ph-list-dashes"></i><span>List</span></button>
+        <button class="tab" data-goto="vault"><i class="ph ph-grid-four"></i><span>Vault</span></button>
+        <button class="tab" data-goto="alerts"><i class="ph ph-bell"></i><span>Alerts</span></button>
+        <button class="tab" data-goto="me"><i class="ph ph-user"></i><span>Me</span></button>
+        <a class="fab" href="/owner.html"><i class="ph ph-plus"></i></a>
+      </nav>
+
+      <div id="home-indicator"></div>
+    </div>
+
+    <div id="stage-note">
+      Monster Finder — iOS · resize below 440px wide to see it full-screen
+    </div>
+  </div>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
