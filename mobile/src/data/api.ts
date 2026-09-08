@@ -42,7 +42,7 @@ export const apiBase = (): string | null => {
  * curated multi-chain spread the bundled seed data shows. See
  * docs/staying-current.md for the honest state of this at any given time.
  */
-const LIVE_DATA_URL = "https://raw.githubusercontent.com/OWNER/REPO/main/data/latest.json";
+const LIVE_DATA_URL = "https://raw.githubusercontent.com/Yz-3076/energy-radar/main/data/latest.json";
 
 /**
  * variantId -> current promotions. Same "just a JSON file on GitHub" shape
@@ -52,7 +52,7 @@ const LIVE_DATA_URL = "https://raw.githubusercontent.com/OWNER/REPO/main/data/la
  * is configured, so an empty result here means "no live promos right now",
  * not "broken".
  */
-const PROMOTIONS_URL = "https://raw.githubusercontent.com/OWNER/REPO/main/data/promotions.json";
+const PROMOTIONS_URL = "https://raw.githubusercontent.com/Yz-3076/energy-radar/main/data/promotions.json";
 
 async function getAbsoluteJSON<T>(url: string, timeoutMs = 6000): Promise<T | null> {
   const ctrl = new AbortController();
