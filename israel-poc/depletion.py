@@ -20,7 +20,7 @@ on):
   likely_out        — was selling regularly, has gone completely quiet
 
 Fed by pipeline.py, which appends one observation per run to
-data/history.ndjson: {store_id, variant_id, last_sale, fetched_at}.
+data/history/YYYY-MM.ndjson: {store_id, variant_id, last_sale, fetched_at}.
 """
 
 from datetime import datetime, timezone

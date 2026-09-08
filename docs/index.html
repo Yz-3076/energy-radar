@@ -50,7 +50,7 @@
     Raw data:
     <a id="latest-link" href="#">latest.json</a> ·
     <a id="stats-link" href="#">stats.json</a> ·
-    <a id="history-link" href="#">history.ndjson</a>
+    <a id="history-link" href="#">history/ (one file per month)</a>
   </p>
 
 <script>
@@ -63,7 +63,8 @@ const RAW = `https://raw.githubusercontent.com/${REPO}/${BRANCH}/data`;
 
 document.getElementById("latest-link").href = `${RAW}/latest.json`;
 document.getElementById("stats-link").href = `${RAW}/stats.json`;
-document.getElementById("history-link").href = `${RAW}/history.ndjson`;
+// A folder has no raw-content URL — link to the browsable GitHub tree view.
+document.getElementById("history-link").href = `https://github.com/${REPO}/tree/${BRANCH}/data/history`;
 
 function bar(label, value, max, cls) {
   const pct = max > 0 ? Math.round((value / max) * 100) : 0;

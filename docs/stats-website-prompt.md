@@ -4,7 +4,7 @@ Saved for later, per the user's own instruction — **do not build this yet**.
 When it's time: hand the section below to a design pass first (Claude
 Design, or the `artifact-design` skill) for visuals, then build the actual
 site from that design. Two jobs, one static site, no backend — reads
-`data/latest.json`, `data/stats.json`, `data/history.ndjson`, and
+`data/latest.json`, `data/stats.json`, `data/history/*.ndjson`, and
 `data/promotions.json` straight from this repo on GitHub Pages, exactly like
 `docs/index.html` already does.
 
@@ -64,7 +64,8 @@ data volume — don't force all of them in):
 - **Cheapest chain right now** — small leaderboard, average price per
   chain, refreshed each pipeline run.
 - **Price-over-time chart** — pick a flavour, see its national average
-  price trend from `history.ndjson`.
+  price trend from `history/*.ndjson` (one file per month — fetch however
+  many months you want a trend line over).
 - **Flavour popularity** — which flavours show up on the most shelves
   nationwide (a proxy for how widely stocked each one is).
 - **Stock-health breakdown** — healthy / slowing / likely-out counts from
@@ -82,9 +83,8 @@ data volume — don't force all of them in):
 
 - Static site, GitHub Pages, same repo — no server, no build step beyond
   what `docs/index.html` already does.
-- Read `data/stats.json` for aggregates, `data/history.ndjson` for time
-  series (may need a small pre-aggregation step once that file gets large
-  — see the history-rotation note in `israel-poc/pipeline.py`'s docstring
-  if it's been implemented by then).
+- Read `data/stats.json` for aggregates, `data/history/*.ndjson` for time
+  series — already sharded one file per month (see `israel-poc/pipeline.py`),
+  so a long trend line means fetching several small files, never one huge one.
 - Every number on the page should be traceable to a real file in `data/` —
   no placeholder/fake stats, ever, even for a "coming soon" section.

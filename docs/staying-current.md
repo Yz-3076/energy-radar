@@ -34,8 +34,10 @@ every 3 hours:
   3. resolve    StoreID → branch name + address (from Stores)
   4. geocode    address + ZIP → lat/lng, via OpenStreetMap Nominatim
                 (cached forever in data/geocode-cache.json — addresses don't move)
-  5. append     one line per (store, variant) to data/history.ndjson — never
-                overwritten, this is the actual database
+  5. append     one line per (store, variant) to data/history/YYYY-MM.ndjson
+                — never overwritten, one file per month, this is the
+                actual database (load_history() reads every month back
+                as one combined list)
   6. assess     depletion per (store, variant) from that history — see below
   7. write      data/latest.json — the current snapshot, shaped exactly like
                 the app's Store[] type, committed straight into the repo

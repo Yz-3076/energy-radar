@@ -10,10 +10,15 @@ Writes, all under ../data/:
   latest.json        — current snapshot, shaped exactly like the mobile
                         app's Store[] (src/data/stores.ts) — the file the
                         app fetches directly.
-  history.ndjson      — append-only, one line per (store, variant) per run.
-                        The "database": every past price/sale observation,
-                        never overwritten. This is what stats and the
-                        depletion algorithm are built from.
+  history/YYYY-MM.ndjson — append-only, one line per (store, variant) per
+                        run, sharded into one file per calendar month (see
+                        _current_history_path). The "database": every past
+                        price/sale observation, never overwritten, never
+                        edited — this is what stats and the depletion
+                        algorithm are built from. load_history() reads
+                        every month's file back as one combined list, so
+                        every caller sees the full history regardless of
+                        how many months it now spans.
   geocode-cache.json  — address -> [lat, lng], built up once per address.
   stats.json          — small pre-aggregated summary for the GitHub Pages
                         dashboard, so that page doesn't need to parse the
@@ -171,23 +176,44 @@ def parse_monster_items(prices_dir: Path):
             }
 
 
+HISTORY_DIR = DATA_DIR / "history"
+
+
+def _current_history_path() -> Path:
+    """One file per calendar month (UTC) — data/history/2026-09.ndjson,
+    data/history/2026-10.ndjson, and so on. A single ever-growing file would
+    hit GitHub's 100MB-per-file push limit after roughly a month at this
+    project's real observed volume (~2,700 observations / 3-hour run
+    nationwide, confirmed 2026-09-08); sharding by month means no file ever
+    grows past about a month's worth, forever, with zero manual upkeep."""
+    month = datetime.now(timezone.utc).strftime("%Y-%m")
+    return HISTORY_DIR / f"{month}.ndjson"
+
+
 def load_history() -> list[dict]:
-    path = DATA_DIR / "history.ndjson"
-    if not path.exists():
-        return []
+    """Every observation ever recorded, across every monthly file — this is
+    the FULL accumulated history, not just the current month. Depletion
+    classification and any future stats/analysis work should always read
+    through this function rather than one file directly, so rotation stays
+    invisible to every caller."""
     rows = []
-    with path.open(encoding="utf-8") as f:
-        for line in f:
-            line = line.strip()
-            if line:
-                rows.append(json.loads(line))
+    if not HISTORY_DIR.exists():
+        return rows
+    for path in sorted(HISTORY_DIR.glob("*.ndjson")):
+        with path.open(encoding="utf-8") as f:
+            for line in f:
+                line = line.strip()
+                if line:
+                    rows.append(json.loads(line))
     return rows
 
 
 def append_history(new_rows: list[dict]) -> None:
-    DATA_DIR.mkdir(parents=True, exist_ok=True)
-    path = DATA_DIR / "history.ndjson"
-    with path.open("a", encoding="utf-8") as f:
+    """Appends only to the CURRENT month's file — never touches older
+    months, so a file that already exists on disk/in the repo never grows
+    again once its month has passed."""
+    HISTORY_DIR.mkdir(parents=True, exist_ok=True)
+    with _current_history_path().open("a", encoding="utf-8") as f:
         for row in new_rows:
             f.write(json.dumps(row, ensure_ascii=False) + "\n")
 

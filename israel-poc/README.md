@@ -1,7 +1,7 @@
 # Israel price pipeline
 
 `pipeline.py` is the real thing: fetch → filter → resolve → geocode →
-depletion-assess → write `../data/latest.json` + append `../data/history.ndjson`.
+depletion-assess → write `../data/latest.json` + append `../data/history/YYYY-MM.ndjson`.
 It runs on a 3-hour schedule via
 [`../.github/workflows/fetch-prices.yml`](../.github/workflows/fetch-prices.yml) —
 see [`../docs/staying-current.md`](../docs/staying-current.md) for the
