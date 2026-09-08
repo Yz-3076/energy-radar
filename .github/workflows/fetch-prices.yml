@@ -26,6 +26,13 @@ jobs:
 
       - name: Run the pipeline
         working-directory: israel-poc
+        env:
+          # Optional. Powers data/promotions.json — see promotions.py.
+          # Leave the repo secret unset and this step still runs fine,
+          # just without promo data. Set it in Settings -> Secrets and
+          # variables -> Actions once you have a token from
+          # openisraelisupermarkets.co.il.
+          OPEN_IL_SUPERMARKETS_TOKEN: ${{ secrets.OPEN_IL_SUPERMARKETS_TOKEN }}
         run: python pipeline.py
 
       - name: Commit updated data

@@ -44,6 +44,16 @@ export const apiBase = (): string | null => {
  */
 const LIVE_DATA_URL = "https://raw.githubusercontent.com/OWNER/REPO/main/data/latest.json";
 
+/**
+ * variantId -> current promotions. Same "just a JSON file on GitHub" shape
+ * as LIVE_DATA_URL, written by israel-poc/pipeline.py from the free Open
+ * Israeli Supermarkets API (see israel-poc/promotions.py) — nationwide per
+ * flavour, not per-store, and the file itself is `{}` whenever no API token
+ * is configured, so an empty result here means "no live promos right now",
+ * not "broken".
+ */
+const PROMOTIONS_URL = "https://raw.githubusercontent.com/OWNER/REPO/main/data/promotions.json";
+
 async function getAbsoluteJSON<T>(url: string, timeoutMs = 6000): Promise<T | null> {
   const ctrl = new AbortController();
   const timer = setTimeout(() => ctrl.abort(), timeoutMs);
@@ -66,6 +76,28 @@ async function getAbsoluteJSON<T>(url: string, timeoutMs = 6000): Promise<T | nu
 export async function fetchLiveStores(): Promise<Store[] | null> {
   const stores = await getAbsoluteJSON<Store[]>(LIVE_DATA_URL);
   return stores && stores.length > 0 ? stores : null;
+}
+
+/** One current deal on a flavour — see israel-poc/promotions.py for where
+ *  these fields come from. `discountRate`/quantities/dates are whatever the
+ *  source published; not every promo sets all of them. */
+export type Promo = {
+  description: string;
+  discountRate: number | null;
+  minQuantity: number | null;
+  maxQuantity: number | null;
+  startsAt: string | null;
+  endsAt: string | null;
+  terms: string | null;
+  clubOnly: boolean;
+};
+
+/** variantId -> its current promotions, or {} if the file hasn't loaded or
+ *  no promo data is configured. Never null — callers can treat a missing
+ *  key as "no live promo on this flavour" with no special-casing. */
+export async function fetchPromotions(): Promise<Record<string, Promo[]>> {
+  const promos = await getAbsoluteJSON<Record<string, Promo[]>>(PROMOTIONS_URL);
+  return promos ?? {};
 }
 
 type Listing = {

@@ -11,7 +11,7 @@ import React, {
 } from "react";
 
 import type { Alert, FlavourAlertKind } from "@/data/alerts";
-import { fetchFeaturedStores, fetchLiveStores } from "@/data/api";
+import { fetchFeaturedStores, fetchLiveStores, fetchPromotions, type Promo } from "@/data/api";
 import { STORES, type Store } from "@/data/stores";
 
 const MAX_RECENT_SEARCHES = 8;
@@ -82,6 +82,10 @@ type Ctx = {
   addRecentSearch: (query: string) => void;
   clearRecentSearches: () => void;
 
+  /** Current deals per flavour, nationwide — see israel-poc/promotions.py.
+   *  Empty array (not undefined) for a flavour with no live promo. */
+  promotionsFor: (variantId: string) => Promo[];
+
   alerts: Alert[];
   flavourAlertFor: (variantId: string) => Extract<Alert, { type: "flavour" }> | undefined;
   /** Creates the flavour's alert if it doesn't have one, removes it if it
@@ -100,6 +104,7 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
   const [ready, setReady] = useState(false);
   const [featured, setFeatured] = useState<Store[]>([]);
   const [liveStores, setLiveStores] = useState<Store[] | null>(null);
+  const [promotions, setPromotions] = useState<Record<string, Promo[]>>({});
   const [coord, setCoord] = useState(FALLBACK_COORD);
   const [hasFix, setHasFix] = useState(false);
   const [placeLabel, setPlaceLabel] = useState<string | null>(null);
@@ -145,6 +150,19 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
     let alive = true;
     fetchLiveStores()
       .then((s) => alive && setLiveStores(s))
+      .catch(() => {});
+    return () => {
+      alive = false;
+    };
+  }, []);
+
+  // Current deals, nationwide per flavour — additive on top of the prices
+  // above, never blocking: an empty {} (no token configured, offline, first
+  // run) just means no promo badges show anywhere, nothing else changes.
+  useEffect(() => {
+    let alive = true;
+    fetchPromotions()
+      .then((p) => alive && setPromotions(p))
       .catch(() => {});
     return () => {
       alive = false;
@@ -281,6 +299,8 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
       }));
     }, []),
     clearRecentSearches: useCallback(() => setState((p) => ({ ...p, recentSearches: [] })), []),
+
+    promotionsFor: useCallback((variantId: string) => promotions[variantId] ?? [], [promotions]),
 
     alerts: state.alerts,
     flavourAlertFor: useCallback(

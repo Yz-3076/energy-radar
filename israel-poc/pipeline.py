@@ -18,11 +18,13 @@ Writes, all under ../data/:
   stats.json          — small pre-aggregated summary for the GitHub Pages
                         dashboard, so that page doesn't need to parse the
                         whole (eventually large) history file client-side.
+  promotions.json     — variant_id -> current promotions/discounts, from
+                        the free Open Israeli Supermarkets API (see
+                        promotions.py). Optional and additive: an empty
+                        {} if OPEN_IL_SUPERMARKETS_TOKEN isn't set.
 
-Chains covered so far: Shufersal, Rami Levy — the two the app's seed data
-already leans on. Add more from docs/israel-pipeline.md's list
-(VICTORY, OSHER_AD, DOR_ALON, YELLOW, ...) by extending CHAINS below; each
-one Just Works through the same ScraperFactory path.
+Chains covered: see the CHAINS list and its comments below for current
+per-chain status.
 """
 
 import asyncio
@@ -39,6 +41,7 @@ from il_supermarket_scarper.utils.file_output import DiskFileOutput
 
 import depletion
 import geocode as geo
+import promotions as promo
 
 ROOT = Path(__file__).resolve().parent.parent
 DATA_DIR = ROOT / "data"
@@ -47,10 +50,25 @@ DUMPS_DIR = Path(__file__).resolve().parent / "dumps"
 # Every chain here is confirmed to actually run without crashing the
 # pipeline; whether it contributes any rows on a given run varies (see
 # fetch_files' try/except above — a broken chain just logs and yields
-# nothing, it never takes the run down). Debugged individually against live
-# endpoints on 2026-09-08:
+# nothing, it never takes the run down).
 #
 #  SHUFERSAL           — fully working: real branches, real prices, live.
+#  RAMI_LEVY           — shared host url.retail.publishedprices.co.il went
+#  OSHER_AD            — fully DNS-dead for about a week (~2026-09-01 to
+#  DOR_ALON            — 2026-09-08 — confirmed from multiple independent
+#                        networks, so it was a real outage on their end, not
+#                        ours), and came back on its own on 2026-09-08 —
+#                        re-confirmed working, real files downloading again,
+#                        no code change needed. Left as a reminder that this
+#                        shared host is known to have multi-day rough
+#                        patches; if one of these three goes quiet again,
+#                        check that host before assuming our code broke.
+#  YELLOW              — same host, still up, but Yellow (Paz) simply never
+#                        publishes STORE_FILE at all (confirmed: 591
+#                        price/promo files, 0 store files) — so it never
+#                        contributes rows here since we can't geocode a
+#                        branch without its address. Not a bug, just a gap
+#                        in what this one chain publishes.
 #  VICTORY_NEW_SOURCE  — connects fine (laibcatalog.co.il), 70 real branches
 #                        confirmed to exist, but /getfiles currently returns
 #                        an empty list for their chain code. Not an error —
@@ -58,17 +76,6 @@ DUMPS_DIR = Path(__file__).resolve().parent / "dumps"
 #                        this was checked. Left in: costs nothing to ask
 #                        again every 3 hours, and it'll start contributing
 #                        the moment their publishing schedule fills back in.
-#  RAMI_LEVY           — same root cause as the next two: its host
-#  YELLOW              — (Paz) and
-#  OSHER_AD            — and DOR_ALON all resolve to the SAME shared portal,
-#  DOR_ALON            — url.retail.publishedprices.co.il, which fails DNS
-#                        resolution right now — confirmed against Google's
-#                        own resolver (8.8.8.8) too, so this is that
-#                        domain's own outage, not anything on our end. All
-#                        four of these will very likely start working again
-#                        simultaneously, with no code change, the moment
-#                        that one host comes back — worth leaving in rather
-#                        than pulled out.
 CHAINS = ["SHUFERSAL", "VICTORY_NEW_SOURCE", "RAMI_LEVY", "YELLOW", "OSHER_AD", "DOR_ALON"]
 
 # For local smoke-testing only: PIPELINE_LIMIT=5 py pipeline.py fetches just a
@@ -190,6 +197,7 @@ async def run() -> None:
     geocode_cache = geo.load_cache()
     new_observations: list[dict] = []
     stores_by_key: dict[str, dict] = {}  # f"{chain}:{store_id}" -> Store shape
+    barcodes_seen: dict[str, str] = {}  # barcode -> variant_id, for promotions.py
 
     for chain in CHAINS:
         print(f"=== {chain} ===")
@@ -208,6 +216,7 @@ async def run() -> None:
             variant_id = BARCODE_TO_VARIANT.get(item["barcode"])
             if not variant_id:
                 continue  # a name-matched row we don't have a catalog id for yet
+            barcodes_seen[item["barcode"]] = variant_id
 
             coords = geo.geocode(info["address"], info["zip"], geocode_cache)
             if coords is None:
@@ -268,6 +277,17 @@ async def run() -> None:
         json.dumps(stores_out, ensure_ascii=False, indent=2), encoding="utf-8"
     )
     print(f"\nWrote data/latest.json — {len(stores_out)} store(s), {len(new_observations)} observation(s) this run")
+
+    # Bonus, non-authoritative layer on top of the prices above — see
+    # promotions.py's module docstring. Nationwide per flavour, not
+    # per-store, and entirely skipped (empty file) if no API token is
+    # configured. The app should treat this as "current deals worth
+    # mentioning", never as something a missing entry implies "no deal".
+    promo_by_variant = promo.promotions_by_variant(barcodes_seen)
+    (DATA_DIR / "promotions.json").write_text(
+        json.dumps(promo_by_variant, ensure_ascii=False, indent=2), encoding="utf-8"
+    )
+    print(f"Wrote data/promotions.json — {len(promo_by_variant)} flavour(s) with a live promo")
 
     # A small rollup for the GitHub Pages dashboard — cheap to compute here,
     # much cheaper than having the dashboard parse the whole history file.
