@@ -1,0 +1,664 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Energy Radar — price analysis</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Barlow:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script src="https://unpkg.com/d3@7.9.0/dist/d3.min.js" integrity="sha384-CjloA8y00+1SDAUkjs099PVfnY2KmDC2BZnws9kh8D/lX1s46w6EPhpXdqMfjK6i" crossorigin="anonymous"></script>
+<style>
+:root{
+  color-scheme: dark;
+  --bg:#060807; --ink:#eaf2ec; --dim:#7e8c82;
+  --grn:#39ff6a; --grn-dim:#1c7a3a;
+  --hot:#ff5a5a; --warn:#e0b23d;
+  --line:rgba(57,255,106,.18); --line-soft:rgba(234,242,236,.09);
+  --mono:'IBM Plex Mono',ui-monospace,monospace;
+  --cond:'Barlow Condensed',system-ui,sans-serif;
+  --body:'Barlow',system-ui,sans-serif;
+}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body)}
+body{background-image:linear-gradient(var(--line-soft) 1px,transparent 1px),linear-gradient(90deg,var(--line-soft) 1px,transparent 1px);background-size:64px 64px;background-position:center top}
+a{color:var(--grn);text-decoration:none;border-bottom:1px solid rgba(57,255,106,.35)}
+a:hover{color:#fff;border-bottom-color:#fff}
+:focus-visible{outline:2px solid var(--grn);outline-offset:3px}
+::selection{background:rgba(57,255,106,.28)}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+
+.bp{position:relative;border:1px solid var(--line);background:rgba(57,255,106,.02)}
+.bp>i.c{position:absolute;width:9px;height:9px;pointer-events:none;opacity:.85}
+.bp>i.c::before,.bp>i.c::after{content:"";position:absolute;background:var(--grn)}
+.bp>i.c::before{left:0;top:4px;width:9px;height:1px}
+.bp>i.c::after{top:0;left:4px;width:1px;height:9px}
+.bp>i.tl{left:-5px;top:-5px}.bp>i.tr{right:-5px;top:-5px}
+.bp>i.bl{left:-5px;bottom:-5px}.bp>i.br{right:-5px;bottom:-5px}
+
+header{border-bottom:1px solid var(--line);background:rgba(6,8,7,.92);backdrop-filter:blur(8px);position:sticky;top:0;z-index:20}
+.navrow{display:flex;align-items:center;gap:18px;height:62px}
+.brand{display:flex;align-items:center;gap:11px;font-family:var(--cond);font-weight:700;font-size:21px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink);border:0}
+.brand .pulse{width:11px;height:11px;border-radius:50%;background:var(--grn);box-shadow:0 0 0 0 rgba(57,255,106,.7);animation:pulse 2.4s infinite}
+@keyframes pulse{70%{box-shadow:0 0 0 11px rgba(57,255,106,0)}100%{box-shadow:0 0 0 0 rgba(57,255,106,0)}}
+.navspace{flex:1}
+nav.links{display:flex;gap:20px;align-items:center}
+nav.links a{font-family:var(--cond);font-size:15px;letter-spacing:.1em;text-transform:uppercase;color:var(--dim);border:0}
+nav.links a:hover,nav.links a.on{color:var(--grn)}
+.langtog{display:flex;border:1px solid var(--line)}
+.langtog button{background:none;border:0;color:var(--dim);font-family:var(--mono);font-size:11px;letter-spacing:.1em;padding:7px 11px;cursor:pointer}
+.langtog button[aria-pressed="true"]{background:var(--grn);color:#04120a;font-weight:600}
+
+.hero{padding:64px 0 26px}
+.eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:var(--grn-dim);margin-bottom:16px}
+h1{font-family:var(--cond);font-weight:700;font-size:clamp(42px,7vw,78px);line-height:.94;margin:0 0 18px;text-wrap:balance}
+h1 em{font-style:normal;color:var(--grn);text-shadow:0 0 34px rgba(57,255,106,.45)}
+.lede{font-size:17px;line-height:1.6;color:var(--dim);max-width:64ch;text-wrap:pretty;margin:0}
+
+.scope{display:flex;align-items:center;gap:0;margin-top:30px;flex-wrap:wrap}
+.scope button{background:none;border:1px solid var(--line);color:var(--dim);font-family:var(--mono);font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;padding:10px 18px;cursor:pointer;margin-inline-start:-1px}
+.scope button[aria-pressed="true"]{background:var(--grn);color:#04120a;font-weight:600;border-color:var(--grn)}
+.scope button:hover:not([aria-pressed="true"]){color:var(--grn)}
+.scopenote{font-family:var(--mono);font-size:11px;letter-spacing:.06em;color:var(--dim);margin-inline-start:16px}
+[dir="rtl"] .scope button,[dir="rtl"] .scopenote{letter-spacing:0}
+.callouts{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr));gap:14px;margin-top:34px}
+.callout{background:#fff;color:#08130c;padding:20px 22px;position:relative}
+.callout .k{font-family:var(--mono);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:#4e6357;margin-bottom:9px}
+.callout .v{font-family:var(--cond);font-weight:700;font-size:34px;line-height:1}
+.callout .s{font-size:13px;color:#41564a;margin-top:7px;line-height:1.4}
+.callout::after{content:"";position:absolute;inset:auto 0 0 0;height:3px;background:var(--grn)}
+
+section.blk{padding:62px 0 0}
+.shead{display:flex;align-items:baseline;gap:14px;margin-bottom:8px;flex-wrap:wrap}
+.snum{font-family:var(--mono);font-size:11px;color:var(--grn-dim);letter-spacing:.2em}
+h2{font-family:var(--cond);font-weight:700;font-size:30px;letter-spacing:.02em;text-transform:uppercase;margin:0}
+.snote{font-size:13.5px;color:var(--dim);margin:0 0 22px;max-width:74ch;line-height:1.6;text-wrap:pretty}
+.finding{border-inline-start:2px solid var(--grn);padding:2px 0 2px 14px;margin:0 0 22px;font-size:15.5px;line-height:1.6;color:var(--ink);max-width:74ch;text-wrap:pretty}
+[dir="rtl"] .finding{padding:2px 14px 2px 0}
+.finding b{color:var(--grn);font-weight:600}
+
+.pad{padding:20px 22px}
+svg{width:100%;height:auto;display:block;overflow:visible}
+.ax text{fill:#7e8c82;font-family:var(--mono);font-size:10px}
+.ax .domain,.ax line{stroke:rgba(234,242,236,.18)}
+
+.twoup{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:18px}
+.empty{padding:34px 22px;text-align:center;font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--dim);line-height:1.9}
+.empty .big{display:block;color:var(--grn-dim);font-size:13px;margin-bottom:6px}
+.empty .path{color:var(--ink);opacity:.55;text-transform:none;letter-spacing:.02em}
+
+table{width:100%;border-collapse:collapse;font-size:14px}
+th{font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--dim);text-align:start;font-weight:400;padding:0 12px 10px;border-bottom:1px solid var(--line)}
+td{padding:11px 12px;border-bottom:1px solid var(--line-soft);color:#c3cfc6}
+tr:last-child td{border-bottom:0}
+td.p{font-family:var(--mono);color:var(--grn);white-space:nowrap}
+td.p.hi{color:var(--hot)}
+td.nm{font-family:var(--cond);font-size:16px;letter-spacing:.03em;text-transform:uppercase;color:var(--ink)}
+td.sm{font-size:12.5px;color:var(--dim)}
+
+.matrix{overflow-x:auto}
+.mcell{font-family:var(--mono);font-size:12px;text-align:center;padding:10px 8px;color:#04120a;white-space:nowrap}
+.mcell.na{background:rgba(234,242,236,.03);color:#54615a}
+.mrow th{padding:10px 12px;border-bottom:1px solid var(--line-soft);color:var(--ink);font-family:var(--cond);font-size:15px;letter-spacing:.03em;white-space:nowrap}
+
+#tip{position:fixed;pointer-events:none;opacity:0;transition:opacity .1s;background:#fff;color:#08130c;padding:9px 12px;font-family:var(--mono);font-size:11.5px;line-height:1.55;z-index:60;max-width:250px}
+#tip b{font-size:14px}
+
+footer{margin-top:78px;border-top:1px solid var(--line);padding:34px 0 60px}
+.frow{display:flex;flex-wrap:wrap;gap:22px;align-items:baseline;justify-content:space-between}
+footer p{font-size:13px;color:var(--dim);line-height:1.65;margin:0;max-width:62ch;text-wrap:pretty}
+footer .fl{display:flex;gap:18px;font-family:var(--mono);font-size:11.5px;letter-spacing:.1em;text-transform:uppercase}
+
+[dir="rtl"] .eyebrow,[dir="rtl"] .empty,[dir="rtl"] .callout .k,[dir="rtl"] .snum,
+[dir="rtl"] nav.links a,[dir="rtl"] footer .fl,[dir="rtl"] th{letter-spacing:0}
+[dir="rtl"] h1,[dir="rtl"] h2,[dir="rtl"] .brand,[dir="rtl"] td.nm,[dir="rtl"] .mrow th{letter-spacing:0;font-family:var(--body);font-weight:600}
+[dir="rtl"] h1{font-size:clamp(34px,5.6vw,60px);line-height:1.08}
+[hidden]{display:none !important}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap navrow">
+    <a class="brand" href="index.html"><span class="pulse"></span><span data-i="brand">Energy Radar</span></a>
+    <div class="navspace"></div>
+    <nav class="links">
+      <a href="index.html" data-i="nav_stats">Stats</a>
+      <a href="analysis.html" class="on" data-i="nav_analysis">Analysis</a>
+      <a href="privacy.html" data-i="nav_privacy">Privacy</a>
+    </nav>
+    <div class="langtog">
+      <button id="btn-en" aria-pressed="true">EN</button>
+      <button id="btn-he" aria-pressed="false">עב</button>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <div class="hero">
+    <div class="eyebrow" data-i="eyebrow">Price analysis</div>
+    <h1><span data-i="h1a">The same can costs</span> <em data-i="h1b">wildly different money.</em></h1>
+    <p class="lede" data-i="lede">Everything below is computed in your browser, straight from the pipeline's own output files. Switch between the latest run and the full accumulated history — no averages were rounded to make a point.</p>
+    <div class="scope" id="scope" hidden>
+      <button id="sc-now" aria-pressed="true" data-i="sc_now">Right now</button>
+      <button id="sc-all" aria-pressed="false" data-i="sc_all">All time</button>
+      <span class="scopenote" id="scopenote"></span>
+    </div>
+    <div class="callouts" id="callouts"></div>
+  </div>
+
+  <section class="blk">
+    <div class="shead"><span class="snum">01</span><h2 data-i="h_dist">How prices are distributed</h2></div>
+    <p class="snote" data-i="n_dist">Every Monster listing in the country, bucketed by shelf price. A wide, lumpy spread means chains are pricing the same product very differently — a tight single peak would mean the market has settled.</p>
+    <p class="finding" id="f-dist"></p>
+    <div class="bp pad" id="dist"><i class="c tl"></i><i class="c tr"></i><i class="c bl"></i><i class="c br"></i></div>
+  </section>
+
+  <section class="blk">
+    <div class="shead"><span class="snum">02</span><h2 data-i="h_range">Price range per flavour</h2></div>
+    <p class="snote" data-i="n_range">For each flavour: the cheapest and priciest shelf in the country, with the middle 50% of listings as the solid bar and the median as the notch. The longer the line, the more it pays to shop around.</p>
+    <p class="finding" id="f-range"></p>
+    <div class="bp pad" id="range"><i class="c tl"></i><i class="c tr"></i><i class="c bl"></i><i class="c br"></i></div>
+  </section>
+
+  <section class="blk">
+    <div class="shead"><span class="snum">03</span><h2 data-i="h_matrix">Chain × flavour</h2></div>
+    <p class="snote" data-i="n_matrix">Median shelf price for every chain/flavour pair we can see. Reading down a column tells you which chain is cheapest for that flavour; reading across a row tells you whether a chain prices its range evenly.</p>
+    <p class="finding" id="f-matrix"></p>
+    <div class="bp pad matrix" id="matrix"><i class="c tl"></i><i class="c tr"></i><i class="c bl"></i><i class="c br"></i></div>
+  </section>
+
+  <section class="blk">
+    <div class="shead"><span class="snum">04</span><h2 data-i="h_geo">Does location change the price?</h2></div>
+    <p class="snote" data-i="n_geo">Listings grouped into latitude bands, using each store's real coordinates. These are bands of the map, not municipal or district boundaries — the chain price files carry no city name, only a numeric code.</p>
+    <p class="finding" id="f-geo"></p>
+    <div class="bp pad" id="geo"><i class="c tl"></i><i class="c tr"></i><i class="c bl"></i><i class="c br"></i></div>
+  </section>
+
+  <section class="blk">
+    <div class="twoup">
+      <div>
+        <div class="shead"><span class="snum">05</span><h2 data-i="h_cheap">Cheapest shelves</h2></div>
+        <p class="snote" data-i="n_cheap">The ten lowest individual listings in the country right now.</p>
+        <div class="bp pad" id="cheap"><i class="c tl"></i><i class="c tr"></i><i class="c bl"></i><i class="c br"></i></div>
+      </div>
+      <div>
+        <div class="shead"><span class="snum">06</span><h2 data-i="h_dear">Priciest shelves</h2></div>
+        <p class="snote" data-i="n_dear">The ten highest. Same product, same week.</p>
+        <div class="bp pad" id="dear"><i class="c tl"></i><i class="c tr"></i><i class="c bl"></i><i class="c br"></i></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="blk">
+    <div class="shead"><span class="snum">07</span><h2 data-i="h_acc">What the archive has collected</h2></div>
+    <p class="snote" data-i="n_acc">Every pipeline run appends to <b>history/</b> (one file per month) and never overwrites it, so this record only grows. Each bar is one run.</p>
+    <p class="finding" id="f-acc"></p>
+    <div class="bp pad" id="acc"><i class="c tl"></i><i class="c tr"></i><i class="c bl"></i><i class="c br"></i></div>
+  </section>
+
+  <section class="blk">
+    <div class="shead"><span class="snum">08</span><h2 data-i="h_cov">What this data can't tell you yet</h2></div>
+    <p class="snote" data-i="n_cov">Being straight about the limits is the whole point of publishing the method alongside the numbers.</p>
+    <div class="bp pad" id="cov"><i class="c tl"></i><i class="c tr"></i><i class="c bl"></i><i class="c br"></i></div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap frow">
+    <p data-i="foot">Energy Radar is an independent project and is not affiliated with, endorsed by, or connected to Monster Energy or any retail chain. Prices are what the chains themselves published and can lag the shelf.</p>
+    <div class="fl">
+      <a href="index.html" data-i="f_stats">Stats</a>
+      <a href="privacy.html" data-i="f_priv">Privacy</a>
+      <a href="https://github.com/Yz-3076/energy-radar/tree/main/data" data-i="f_raw">Raw data</a>
+    </div>
+  </div>
+</footer>
+
+<div id="tip"></div>
+
+<script>
+const REPO="Yz-3076/energy-radar",BRANCH="main";
+const RAW=`https://raw.githubusercontent.com/${REPO}/${BRANCH}/data`;
+const ILS=n=>"₪"+n.toFixed(2);
+const esc=s=>String(s).replace(/[&<>"]/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[m]));
+const CORNERS='<i class="c tl"></i><i class="c tr"></i><i class="c bl"></i><i class="c br"></i>';
+
+const VARIANTS=[
+ {id:"original",name:"Original",he:"אוריג'ינל"},{id:"ultra",name:"Ultra",he:"אולטרה"},
+ {id:"ultra-paradise",name:"Ultra Paradise",he:"אולטרה פרדייז"},{id:"ultra-fiesta",name:"Ultra Fiesta Mango",he:"אולטרה פיאסטה"},
+ {id:"mango-loco",name:"Mango Loco",he:"מנגו לוקו"},{id:"full-zero",name:"Full Zero",he:"פול זירו"},
+ {id:"ultra-violet",name:"Ultra Violet",he:"אולטרה ויולט"},{id:"juice-khaotic",name:"Juice Khaotic",he:"ג'וס קאוטיק"},
+ {id:"pipeline-punch",name:"Pipeline Punch",he:"פייפליין פאנץ'"},{id:"ultra-gold",name:"Ultra Gold",he:"אולטרה גולד"},
+ {id:"nitro-super-dry",name:"Nitro Super Dry",he:"ניטרו סופר דריי"},{id:"rehab-lemonade",name:"Rehab Lemonade",he:"ריהאב לימונדה"}];
+const VN=Object.fromEntries(VARIANTS.map(v=>[v.id,v]));
+const vname=id=>{const v=VN[id];return v?(LANG==="he"?v.he:v.name):id;};
+const chainName=c=>String(c).replace(/_/g," ").replace(/\b\w/g,m=>m.toUpperCase());
+
+const HE={
+ brand:"אנרג'י ראדאר",nav_stats:"נתונים",nav_analysis:"ניתוח",nav_privacy:"פרטיות",
+ eyebrow:"ניתוח מחירים",h1a:"אותה פחית עולה",h1b:"סכומים שונים לגמרי.",
+ lede:"כל מה שלמטה מחושב בדפדפן שלכם, ישירות מקבצי הפלט של הפייפליין. אפשר לעבור בין ההרצה האחרונה לבין כל ההיסטוריה שנצברה — שום ממוצע לא עוגל כדי לחזק טענה.",
+ h_dist:"איך המחירים מתפלגים",n_dist:"כל ליסטינג מונסטר בארץ, מחולק לפי מחיר מדף. פיזור רחב ומגובנן אומר שהרשתות מתמחרות את אותו מוצר בצורה שונה מאוד — שיא יחיד וצר היה אומר שהשוק התייצב.",
+ h_range:"טווח מחירים לפי טעם",n_range:"לכל טעם: המדף הזול והיקר בארץ, כשה-50% האמצעיים הם העמודה המלאה והחציון הוא החריץ. ככל שהקו ארוך יותר, כך משתלם יותר להשוות.",
+ h_matrix:"רשת × טעם",n_matrix:"מחיר המדף החציוני לכל צמד רשת/טעם שאנחנו רואים. קריאה לאורך עמודה מראה איזו רשת זולה לטעם הזה; קריאה לרוחב שורה מראה אם הרשת מתמחרת את כל הקו באופן אחיד.",
+ h_geo:"האם המיקום משנה את המחיר?",n_geo:"הליסטינגים מקובצים לרצועות קו רוחב, לפי הקואורדינטות האמיתיות של כל חנות. אלה רצועות על המפה, לא גבולות עירוניים או מחוזיים — קבצי המחירים של הרשתות לא כוללים שם עיר, רק קוד מספרי.",
+ h_cheap:"המדפים הזולים",n_cheap:"עשרת הליסטינגים הנמוכים ביותר בארץ כרגע.",
+ h_dear:"המדפים היקרים",n_dear:"עשרת הגבוהים ביותר. אותו מוצר, אותו שבוע.",
+ h_acc:"מה הארכיון אסף",n_acc:"כל הרצה של הפייפליין מוסיפה ל-<b>history/</b> (קובץ אחד לכל חודש) ולעולם לא דורסת אותו, כך שהרשומה רק גדלה. כל עמודה היא הרצה אחת.",
+ h_cov:"מה הנתונים עדיין לא יכולים להגיד",n_cov:"להיות ישרים לגבי המגבלות זה בדיוק העניין בפרסום השיטה לצד המספרים.",
+ foot:"Energy Radar הוא פרויקט עצמאי, ללא שיוך, חסות או קשר ל-Monster Energy או לרשת קמעונאית כלשהי. המחירים הם מה שהרשתות עצמן פרסמו ועשויים לפגר אחרי המדף.",
+ f_stats:"נתונים",f_priv:"פרטיות",f_raw:"נתונים גולמיים",
+ sc_now:"עכשיו",sc_all:"כל הזמן",
+ c_median:"מחיר חציוני ארצי",c_spread:"פער בין הזול ליקר",c_listings:"ליסטינגים שנותחו",c_save:"חיסכון אפשרי לפחית",
+ listings:"ליסטינגים",stores:"חנויות",cheapest:"הזול",priciest:"היקר",median:"חציון",flavour:"טעם",
+ chain:"רשת",store:"חנות",price:"מחיר",band:"רצועה",north:"צפון",center:"מרכז",south:"דרום",
+ count:"מספר",noData:"אין נתונים"
+};
+let LANG=localStorage.getItem("er-lang")||"en";
+const T=(k,en)=>LANG==="he"?(HE[k]??en):en;
+const btnEn=document.getElementById("btn-en"),btnHe=document.getElementById("btn-he");
+function applyLang(){
+  const he=LANG==="he";
+  document.documentElement.lang=he?"he":"en";
+  document.documentElement.dir=he?"rtl":"ltr";
+  document.querySelectorAll("[data-i]").forEach(el=>{
+    const k=el.dataset.i;
+    if(!el.dataset.en)el.dataset.en=el.textContent;
+    el.textContent=he?(HE[k]??el.dataset.en):el.dataset.en;
+  });
+  btnEn.setAttribute("aria-pressed",String(!he));
+  btnHe.setAttribute("aria-pressed",String(he));
+  localStorage.setItem("er-lang",LANG);
+  if(DATA.ready)renderAll();
+}
+btnEn.onclick=()=>{LANG="en";applyLang()};
+btnHe.onclick=()=>{LANG="he";applyLang()};
+
+const DATA={L:[],snap:[],all:[],runs:[],stats:null,ready:false,scope:"now"};
+const tip=document.getElementById("tip");
+function bindTip(host){
+  host.addEventListener("mousemove",e=>{
+    const t=e.target.getAttribute&&e.target.getAttribute("data-tip");
+    if(t){tip.innerHTML=t;tip.style.opacity=1;
+      tip.style.left=Math.min(e.clientX+14,innerWidth-264)+"px";
+      tip.style.top=(e.clientY+14)+"px";}
+    else tip.style.opacity=0;
+  });
+  host.addEventListener("mouseleave",()=>tip.style.opacity=0);
+}
+const emptyIn=(id,path)=>{document.getElementById(id).innerHTML=CORNERS+
+  `<div class="empty"><span class="big">${LANG==="he"?"ממתין לנתונים":"Awaiting data"}</span><span class="path">${path}</span></div>`;};
+
+// history is sharded one file per month (data/history/YYYY-MM.ndjson) so no
+// single file grows without bound. data/history/index.json (written by
+// pipeline.py each run) names which months exist; concatenate them all.
+async function getAllHistory(){
+  const getJSON=async u=>{const r=await fetch(u,{cache:"no-store"});if(!r.ok)throw 0;return r.json();};
+  const getText=async u=>{const r=await fetch(u,{cache:"no-store"});if(!r.ok)throw 0;return r.text();};
+  try{
+    const idx=await getJSON(`${RAW}/history/index.json`);
+    if(!Array.isArray(idx)||!idx.length)throw 0;
+    const texts=await Promise.all(idx.map(f=>getText(`${RAW}/history/${f}`)));
+    return texts.join("\n");
+  }catch{
+    const ym=new Date().toISOString().slice(0,7);
+    return getText(`${RAW}/history/${ym}.ndjson`);
+  }
+}
+
+(async function boot(){
+  applyLang();
+  const soft=p=>p.catch(()=>null);
+  const [stores,stats,hist]=await Promise.all([
+    soft(fetch(`${RAW}/latest.json`,{cache:"no-store"}).then(r=>r.ok?r.json():null)),
+    soft(fetch(`${RAW}/stats.json`,{cache:"no-store"}).then(r=>r.ok?r.json():null)),
+    soft(getAllHistory())
+  ]);
+  DATA.stats=stats;
+
+  // current snapshot
+  const meta=new Map();
+  if(Array.isArray(stores)){
+    for(const st of stores){
+      meta.set(st.id,st);
+      for(const r of (st.shelf||[]))
+        if(typeof r.price==="number")
+          DATA.snap.push({price:r.price,vid:r.variantId,chain:st.chain,store:st,lat:st.lat});
+    }
+  }
+
+  // full accumulated history, joined to store metadata for chain + coordinates
+  if(hist){
+    for(const line of hist.split("\n")){
+      if(!line)continue;
+      let r;try{r=JSON.parse(line)}catch{continue}
+      if(typeof r.price!=="number")continue;
+      const key=String(r.store_id||"").toLowerCase().replace(":","-");
+      const st=meta.get(key);
+      DATA.all.push({
+        price:r.price,vid:r.variant_id,
+        chain:st?st.chain:String(r.store_id||"").split(":")[0].replace(/_/g," ").replace(/\b\w/g,m=>m.toUpperCase()),
+        store:st||{id:key,name:"",lat:null},
+        lat:st?st.lat:null,
+        at:r.fetched_at
+      });
+    }
+    DATA.runs=[...new Set(DATA.all.map(d=>d.at))].sort();
+  }
+
+  DATA.L=DATA.snap.length?DATA.snap:DATA.all;
+  DATA.ready=true;
+  wireScope();
+  renderAll();
+})();
+
+function setScope(s){
+  DATA.scope=s;
+  DATA.L=s==="all"?DATA.all:DATA.snap;
+  document.getElementById("sc-now").setAttribute("aria-pressed",String(s==="now"));
+  document.getElementById("sc-all").setAttribute("aria-pressed",String(s==="all"));
+  renderAll();
+}
+function wireScope(){
+  if(DATA.all.length<=DATA.snap.length||DATA.runs.length<2)return; // nothing extra to show yet
+  const box=document.getElementById("scope");
+  box.hidden=false;
+  document.getElementById("sc-now").onclick=()=>setScope("now");
+  document.getElementById("sc-all").onclick=()=>setScope("all");
+}
+function scopeNote(){
+  const el=document.getElementById("scopenote");
+  if(!el)return;
+  const n=DATA.runs.length;
+  if(DATA.scope==="all"&&n){
+    const a=new Date(DATA.runs[0]).toISOString().slice(0,10),b=new Date(DATA.runs[n-1]).toISOString().slice(0,10);
+    el.textContent=LANG==="he"
+      ? `${DATA.all.length.toLocaleString()} תצפיות · ${n} הרצות · ${a} → ${b}`
+      : `${DATA.all.length.toLocaleString()} observations · ${n} runs · ${a} → ${b}`;
+  }else{
+    el.textContent=LANG==="he"
+      ? `${DATA.snap.length.toLocaleString()} ליסטינגים · ההרצה האחרונה בלבד`
+      : `${DATA.snap.length.toLocaleString()} listings · latest run only`;
+  }
+}
+function renderAll(){
+  scopeNote();
+  if(!DATA.L.length){
+    ["dist","range","matrix","geo","cheap","dear","cov"].forEach(id=>emptyIn(id,"data/latest.json"));
+    document.getElementById("callouts").innerHTML="";
+    return;
+  }
+  callouts();distribution();ranges();matrix();geo();extremes();accumulation();coverage();
+}
+
+function callouts(){
+  const p=DATA.L.map(d=>d.price).sort(d3.ascending);
+  const med=d3.median(p),lo=p[0],hi=p[p.length-1];
+  const cards=[
+    {k:T("c_median","National median price"),v:ILS(med),s:`${DATA.L.length.toLocaleString()} ${T("listings","listings")}`},
+    {k:T("c_spread","Cheapest to priciest"),v:ILS(hi-lo),s:`${ILS(lo)} → ${ILS(hi)}`},
+    {k:T("c_save","Saved per can by shopping"),v:ILS(med-lo),s:LANG==="he"?"חציון מול הזול בארץ":"median vs. national cheapest"},
+    {k:T("c_listings","Stores covered"),v:String(new Set(DATA.L.map(d=>d.store.id)).size),s:`${new Set(DATA.L.map(d=>d.chain)).size} ${T("chain","chains")}`}
+  ];
+  document.getElementById("callouts").innerHTML=cards.map(c=>
+    `<div class="callout"><div class="k">${esc(c.k)}</div><div class="v">${esc(c.v)}</div><div class="s">${esc(c.s)}</div></div>`).join("");
+}
+
+function distribution(){
+  const host=document.getElementById("dist");
+  const p=DATA.L.map(d=>d.price);
+  const W=1080,H=290,M={t:14,r:14,b:34,l:44};
+  const x=d3.scaleLinear().domain(d3.extent(p)).nice().range([M.l,W-M.r]);
+  const bins=d3.bin().domain(x.domain()).thresholds(34)(p);
+  const y=d3.scaleLinear().domain([0,d3.max(bins,b=>b.length)]).nice().range([H-M.b,M.t]);
+  const med=d3.median(p);
+  const svg=d3.create("svg").attr("viewBox",`0 0 ${W} ${H}`)
+    .attr("role","img").attr("aria-label",LANG==="he"?"התפלגות מחירי מונסטר":"Distribution of Monster shelf prices");
+  svg.append("g").attr("class","ax").attr("transform",`translate(0,${H-M.b})`)
+    .call(d3.axisBottom(x).ticks(9).tickFormat(v=>"₪"+v).tickSizeOuter(0));
+  svg.append("g").attr("class","ax").attr("transform",`translate(${M.l},0)`)
+    .call(d3.axisLeft(y).ticks(5).tickSizeOuter(0));
+  svg.append("g").selectAll("rect").data(bins).join("rect")
+    .attr("x",b=>x(b.x0)+1).attr("y",b=>y(b.length))
+    .attr("width",b=>Math.max(1,x(b.x1)-x(b.x0)-2))
+    .attr("height",b=>y(0)-y(b.length))
+    .attr("fill",b=>b.x1<=med?"#39ff6a":"#1c7a3a")
+    .attr("data-tip",b=>`<b>${b.length} ${T("listings","listings")}</b><br>${ILS(b.x0)} – ${ILS(b.x1)}`);
+  svg.append("line").attr("x1",x(med)).attr("x2",x(med)).attr("y1",M.t).attr("y2",H-M.b)
+    .attr("stroke","#fff").attr("stroke-width",1.4).attr("stroke-dasharray","4 3");
+  svg.append("text").attr("x",x(med)).attr("y",M.t-2).attr("fill","#fff")
+    .attr("font-family","'IBM Plex Mono',monospace").attr("font-size",10).attr("text-anchor","middle")
+    .text(`${T("median","median")} ${ILS(med)}`);
+  host.innerHTML=CORNERS;host.appendChild(svg.node());bindTip(host);
+
+  const sorted=[...p].sort(d3.ascending);
+  const q1=d3.quantile(sorted,.25),q3=d3.quantile(sorted,.75);
+  const inIQR=p.filter(v=>v>=q1&&v<=q3).length;
+  document.getElementById("f-dist").innerHTML=LANG==="he"
+    ? `החציון הארצי הוא <b>${ILS(med)}</b>, אבל מחצית מהליסטינגים נמצאים בטווח <b>${ILS(q1)}–${ILS(q3)}</b> — פער של <b>${ILS(q3-q1)}</b> על אותה פחית, בין חנויות שכולן פועלות באותו שבוע.`
+    : `The national median is <b>${ILS(med)}</b>, but half of all listings sit between <b>${ILS(q1)}</b> and <b>${ILS(q3)}</b> — a <b>${ILS(q3-q1)}</b> gap on the same can, across ${inIQR.toLocaleString()} shelves trading in the same week.`;
+}
+
+function stat(arr){
+  const s=arr.slice().sort(d3.ascending);
+  return {min:s[0],q1:d3.quantile(s,.25),med:d3.median(s),q3:d3.quantile(s,.75),max:s[s.length-1],n:s.length};
+}
+
+function ranges(){
+  const host=document.getElementById("range");
+  const rows=d3.groups(DATA.L,d=>d.vid).map(([vid,v])=>({vid,...stat(v.map(d=>d.price))}))
+    .sort((a,b)=>a.med-b.med);
+  const W=1080,rowH=42,M={t:12,r:20,b:34,l:170};
+  const H=M.t+rows.length*rowH+M.b;
+  const x=d3.scaleLinear().domain([d3.min(rows,r=>r.min),d3.max(rows,r=>r.max)]).nice().range([M.l,W-M.r]);
+  const svg=d3.create("svg").attr("viewBox",`0 0 ${W} ${H}`)
+    .attr("role","img").attr("aria-label",LANG==="he"?"טווחי מחיר לפי טעם":"Price range by flavour");
+  svg.append("g").attr("class","ax").attr("transform",`translate(0,${H-M.b})`)
+    .call(d3.axisBottom(x).ticks(9).tickFormat(v=>"₪"+v).tickSizeOuter(0));
+  const g=svg.append("g").selectAll("g").data(rows).join("g")
+    .attr("transform",(d,i)=>`translate(0,${M.t+i*rowH+rowH/2})`);
+  g.append("text").attr("x",M.l-14).attr("dy",".34em").attr("text-anchor","end")
+    .attr("fill","#eaf2ec").attr("font-family",LANG==="he"?"'Barlow',sans-serif":"'Barlow Condensed',sans-serif")
+    .attr("font-size",16).text(d=>vname(d.vid));
+  g.append("line").attr("x1",d=>x(d.min)).attr("x2",d=>x(d.max))
+    .attr("stroke","rgba(57,255,106,.32)").attr("stroke-width",1.5);
+  g.append("rect").attr("x",d=>x(d.q1)).attr("y",-9).attr("height",18)
+    .attr("width",d=>Math.max(2,x(d.q3)-x(d.q1))).attr("fill","rgba(57,255,106,.22)")
+    .attr("stroke","rgba(57,255,106,.5)")
+    .attr("data-tip",d=>`<b>${esc(vname(d.vid))}</b><br>${T("median","median")} ${ILS(d.med)}<br>${ILS(d.min)} – ${ILS(d.max)}<br>${d.n} ${T("listings","listings")}`);
+  g.append("line").attr("x1",d=>x(d.med)).attr("x2",d=>x(d.med)).attr("y1",-11).attr("y2",11)
+    .attr("stroke","#39ff6a").attr("stroke-width",2.5);
+  g.append("circle").attr("cx",d=>x(d.min)).attr("r",3).attr("fill","#39ff6a");
+  g.append("circle").attr("cx",d=>x(d.max)).attr("r",3).attr("fill","#ff5a5a");
+  host.innerHTML=CORNERS;host.appendChild(svg.node());bindTip(host);
+
+  const widest=rows.reduce((a,b)=>(b.max-b.min)>(a.max-a.min)?b:a);
+  const tightest=rows.reduce((a,b)=>(b.max-b.min)<(a.max-a.min)?b:a);
+  document.getElementById("f-range").innerHTML=LANG==="he"
+    ? `<b>${esc(vname(widest.vid))}</b> הוא ההימור הכי לא יציב: <b>${ILS(widest.max-widest.min)}</b> בין המדף הזול ליקר. <b>${esc(vname(tightest.vid))}</b> הוא היציב ביותר, עם פער של ${ILS(tightest.max-tightest.min)} בלבד.`
+    : `<b>${esc(vname(widest.vid))}</b> is the most volatile buy — <b>${ILS(widest.max-widest.min)}</b> between its cheapest and priciest shelf. <b>${esc(vname(tightest.vid))}</b> is the steadiest, varying by only ${ILS(tightest.max-tightest.min)}.`;
+}
+
+function matrix(){
+  const host=document.getElementById("matrix");
+  const chains=[...new Set(DATA.L.map(d=>d.chain))];
+  const vids=d3.groups(DATA.L,d=>d.vid).map(([v,a])=>({v,m:d3.median(a,d=>d.price)}))
+    .sort((a,b)=>a.m-b.m).map(d=>d.v);
+  const cell=new Map();
+  for(const [c,byC] of d3.groups(DATA.L,d=>d.chain))
+    for(const [v,arr] of d3.groups(byC,d=>d.vid))
+      cell.set(c+"|"+v,{m:d3.median(arr,d=>d.price),n:arr.length});
+  const vals=[...cell.values()].map(d=>d.m);
+  const lo=d3.min(vals),hi=d3.max(vals);
+  const ramp=d3.interpolateRgbBasis(["#39ff6a","#a8e04a","#e0b23d","#ff5a5a"]);
+  const sc=d3.scaleLinear().domain(lo===hi?[lo-1,hi+1]:[lo,hi]).range([0,1]).clamp(true);
+  const chainOrder=chains.map(c=>({c,m:d3.median(DATA.L.filter(d=>d.chain===c),d=>d.price)}))
+    .sort((a,b)=>a.m-b.m);
+  host.innerHTML=CORNERS+`<table><thead><tr><th>${esc(T("chain","Chain"))}</th>`+
+    vids.map(v=>`<th style="text-align:center">${esc(vname(v))}</th>`).join("")+
+    `<th style="text-align:center">${esc(T("median","Median"))}</th></tr></thead><tbody>`+
+    chainOrder.map(({c,m})=>`<tr class="mrow"><th>${esc(chainName(c))}</th>`+
+      vids.map(v=>{const d=cell.get(c+"|"+v);
+        return d?`<td class="mcell" style="background:${ramp(sc(d.m))}" data-tip="<b>${esc(ILS(d.m))}</b><br>${esc(chainName(c))} · ${esc(vname(v))}<br>${d.n} ${esc(T("listings","listings"))}">${ILS(d.m)}</td>`
+                :`<td class="mcell na">—</td>`;}).join("")+
+      `<td class="mcell" style="background:none;color:#39ff6a;font-weight:500">${ILS(m)}</td></tr>`).join("")+
+    `</tbody></table>`;
+  bindTip(host);
+
+  const best=chainOrder[0],worst=chainOrder[chainOrder.length-1];
+  document.getElementById("f-matrix").innerHTML=LANG==="he"
+    ? `<b>${esc(chainName(best.c))}</b> היא הרשת הזולה בסך הכל (חציון ${ILS(best.m)}), לעומת <b>${ILS(worst.m)}</b> ב-${esc(chainName(worst.c))} — הפרש של <b>${ILS(worst.m-best.m)}</b> לפחית רק בבחירת החנות.`
+    : `<b>${esc(chainName(best.c))}</b> is the cheapest chain overall at a ${ILS(best.m)} median, against <b>${ILS(worst.m)}</b> at ${esc(chainName(worst.c))} — <b>${ILS(worst.m-best.m)}</b> a can, decided purely by which door you walk through.`;
+}
+
+function geo(){
+  const host=document.getElementById("geo");
+  const bands=[
+    {k:"north",en:"North (≥32.5°N)",he:"צפון (32.5°N ומעלה)",t:d=>d.lat>=32.5},
+    {k:"center",en:"Center (31.7–32.5°N)",he:"מרכז (31.7–32.5°N)",t:d=>d.lat>=31.7&&d.lat<32.5},
+    {k:"south",en:"South (<31.7°N)",he:"דרום (מתחת ל-31.7°N)",t:d=>d.lat<31.7}
+  ];
+  const rows=bands.map(b=>{
+    const arr=DATA.L.filter(d=>typeof d.lat==="number"&&b.t(d));
+    return arr.length?{...b,...stat(arr.map(d=>d.price)),stores:new Set(arr.map(d=>d.store.id)).size}:null;
+  }).filter(Boolean);
+  if(!rows.length){emptyIn("geo","data/latest.json");return;}
+  const W=1080,rowH=54,M={t:12,r:20,b:34,l:200};
+  const H=M.t+rows.length*rowH+M.b;
+  const x=d3.scaleLinear().domain([d3.min(rows,r=>r.min),d3.max(rows,r=>r.max)]).nice().range([M.l,W-M.r]);
+  const svg=d3.create("svg").attr("viewBox",`0 0 ${W} ${H}`)
+    .attr("role","img").attr("aria-label",LANG==="he"?"מחיר לפי רצועת קו רוחב":"Price by latitude band");
+  svg.append("g").attr("class","ax").attr("transform",`translate(0,${H-M.b})`)
+    .call(d3.axisBottom(x).ticks(9).tickFormat(v=>"₪"+v).tickSizeOuter(0));
+  const g=svg.append("g").selectAll("g").data(rows).join("g")
+    .attr("transform",(d,i)=>`translate(0,${M.t+i*rowH+rowH/2})`);
+  g.append("text").attr("x",M.l-14).attr("dy","-.1em").attr("text-anchor","end")
+    .attr("fill","#eaf2ec").attr("font-family",LANG==="he"?"'Barlow',sans-serif":"'Barlow Condensed',sans-serif")
+    .attr("font-size",17).text(d=>LANG==="he"?d.he:d.en);
+  g.append("text").attr("x",M.l-14).attr("dy","1.25em").attr("text-anchor","end")
+    .attr("fill","#7e8c82").attr("font-family","'IBM Plex Mono',monospace").attr("font-size",10)
+    .text(d=>`${d.stores} ${T("stores","stores")} · ${d.n} ${T("listings","listings")}`);
+  g.append("line").attr("x1",d=>x(d.min)).attr("x2",d=>x(d.max))
+    .attr("stroke","rgba(57,255,106,.32)").attr("stroke-width",1.5);
+  g.append("rect").attr("x",d=>x(d.q1)).attr("y",-10).attr("height",20)
+    .attr("width",d=>Math.max(2,x(d.q3)-x(d.q1))).attr("fill","rgba(57,255,106,.22)")
+    .attr("stroke","rgba(57,255,106,.5)")
+    .attr("data-tip",d=>`<b>${T("median","median")} ${ILS(d.med)}</b><br>${ILS(d.min)} – ${ILS(d.max)}<br>${d.stores} ${T("stores","stores")}`);
+  g.append("line").attr("x1",d=>x(d.med)).attr("x2",d=>x(d.med)).attr("y1",-12).attr("y2",12)
+    .attr("stroke","#39ff6a").attr("stroke-width",2.5);
+  host.innerHTML=CORNERS;host.appendChild(svg.node());bindTip(host);
+
+  const cheapest=rows.reduce((a,b)=>b.med<a.med?b:a);
+  const dearest=rows.reduce((a,b)=>b.med>a.med?b:a);
+  const gap=dearest.med-cheapest.med;
+  const label=r=>LANG==="he"?r.he.split(" ")[0]:r.en.split(" ")[0];
+  document.getElementById("f-geo").innerHTML=gap<0.5
+    ? (LANG==="he"
+      ? `כמעט לא. חציוני הרצועות נופלים בתוך <b>${ILS(gap)}</b> זה מזה — הרשת שאתם נכנסים אליה משנה את המחיר הרבה יותר מהמקום בארץ.`
+      : `Barely. The band medians land within <b>${ILS(gap)}</b> of each other — which chain you walk into matters far more than where in the country you are.`)
+    : (LANG==="he"
+      ? `כן: <b>${esc(label(cheapest))}</b> חציון ${ILS(cheapest.med)} מול <b>${esc(label(dearest))}</b> ב-${ILS(dearest.med)} — פער של <b>${ILS(gap)}</b> לפחית.`
+      : `Yes — <b>${esc(label(cheapest))}</b> runs a ${ILS(cheapest.med)} median against <b>${esc(label(dearest))}</b> at ${ILS(dearest.med)}, a <b>${ILS(gap)}</b> difference per can.`);
+}
+
+function tbl(rows,hi){
+  return `<table><thead><tr>
+    <th>${esc(T("price","Price"))}</th><th>${esc(T("flavour","Flavour"))}</th><th>${esc(T("store","Store"))}</th>
+  </tr></thead><tbody>`+rows.map(d=>`<tr>
+    <td class="p${hi?" hi":""}">${ILS(d.price)}</td>
+    <td class="nm">${esc(vname(d.vid))}</td>
+    <td class="sm">${esc(chainName(d.chain))}${d.store.name?" · "+esc(d.store.name):""}</td>
+  </tr>`).join("")+`</tbody></table>`;
+}
+function extremes(){
+  const s=[...DATA.L].sort((a,b)=>a.price-b.price);
+  document.getElementById("cheap").innerHTML=CORNERS+tbl(s.slice(0,10),false);
+  document.getElementById("dear").innerHTML=CORNERS+tbl(s.slice(-10).reverse(),true);
+}
+
+function accumulation(){
+  const host=document.getElementById("acc"),f=document.getElementById("f-acc");
+  const runs=DATA.runs;
+  if(!DATA.all.length){emptyIn("acc","data/history/");f.textContent="";return;}
+  const byRun=d3.rollups(DATA.all,v=>({n:v.length,med:d3.median(v,d=>d.price)}),d=>d.at)
+    .map(([at,d])=>({at:new Date(at),...d})).sort((a,b)=>a.at-b.at);
+
+  if(byRun.length<2){
+    host.innerHTML=CORNERS+`<div class="empty">
+      <span class="big">${LANG==="he"?"הרצה אחת נרשמה עד כה":"One run recorded so far"}</span>
+      <span class="path">${DATA.all.length.toLocaleString()} ${LANG==="he"?"תצפיות ב-":"observations in "}history/</span></div>`;
+    f.innerHTML=LANG==="he"
+      ? `הארכיון מחזיק <b>${DATA.all.length.toLocaleString()}</b> תצפיות מהרצה אחת. מהרצה השנייה ואילך הדף הזה יוכל להראות שינויי מחיר אמיתיים — הקובץ נצבר, לא נדרס.`
+      : `The archive holds <b>${DATA.all.length.toLocaleString()}</b> observations from a single run. From the second run onward this page can show real price movement — the file accumulates rather than being replaced.`;
+    return;
+  }
+
+  const W=1080,H=280,M={t:16,r:52,b:34,l:48};
+  const x=d3.scaleBand().domain(byRun.map(d=>+d.at)).range([M.l,W-M.r]).padding(.22);
+  const y=d3.scaleLinear().domain([0,d3.max(byRun,d=>d.n)]).nice().range([H-M.b,M.t]);
+  const y2=d3.scaleLinear().domain(d3.extent(byRun,d=>d.med)).nice().range([H-M.b,M.t]);
+  const svg=d3.create("svg").attr("viewBox",`0 0 ${W} ${H}`)
+    .attr("role","img").attr("aria-label",LANG==="he"?"תצפיות שנאספו בכל הרצה":"Observations collected per run");
+  svg.append("g").attr("class","ax").attr("transform",`translate(0,${H-M.b})`)
+    .call(d3.axisBottom(d3.scaleTime().domain(d3.extent(byRun,d=>d.at)).range([M.l,W-M.r])).ticks(7).tickSizeOuter(0));
+  svg.append("g").attr("class","ax").attr("transform",`translate(${M.l},0)`)
+    .call(d3.axisLeft(y).ticks(5).tickSizeOuter(0));
+  svg.append("g").attr("class","ax").attr("transform",`translate(${W-M.r},0)`)
+    .call(d3.axisRight(y2).ticks(4).tickFormat(v=>"₪"+v.toFixed(1)).tickSizeOuter(0));
+  svg.append("g").selectAll("rect").data(byRun).join("rect")
+    .attr("x",d=>x(+d.at)).attr("y",d=>y(d.n))
+    .attr("width",x.bandwidth()).attr("height",d=>y(0)-y(d.n))
+    .attr("fill","rgba(57,255,106,.30)").attr("stroke","rgba(57,255,106,.55)")
+    .attr("data-tip",d=>`<b>${d.n.toLocaleString()} ${T("listings","listings")}</b><br>${T("median","median")} ${ILS(d.med)}<br>${d.at.toISOString().slice(0,16).replace("T"," ")} UTC`);
+  svg.append("path").datum(byRun).attr("fill","none").attr("stroke","#39ff6a").attr("stroke-width",2)
+    .attr("d",d3.line().x(d=>x(+d.at)+x.bandwidth()/2).y(d=>y2(d.med)).curve(d3.curveMonotoneX));
+  svg.selectAll("circle.m").data(byRun).join("circle").attr("class","m")
+    .attr("cx",d=>x(+d.at)+x.bandwidth()/2).attr("cy",d=>y2(d.med)).attr("r",3).attr("fill","#39ff6a");
+  host.innerHTML=CORNERS;host.appendChild(svg.node());bindTip(host);
+
+  const first=byRun[0],last=byRun[byRun.length-1];
+  const drift=last.med-first.med;
+  const days=Math.max(1,Math.round((last.at-first.at)/864e5));
+  f.innerHTML=LANG==="he"
+    ? `<b>${DATA.all.length.toLocaleString()}</b> תצפיות על פני <b>${byRun.length}</b> הרצות ב-${days} ימים. החציון הארצי ${drift===0?"לא זז בכלל":(drift>0?"עלה ב-":"ירד ב-")}<b>${drift===0?"":ILS(Math.abs(drift))}</b> מאז ההרצה הראשונה.`
+    : `<b>${DATA.all.length.toLocaleString()}</b> observations across <b>${byRun.length}</b> runs over ${days} day${days===1?"":"s"}. The national median has ${drift===0?"not moved at all":(drift>0?"risen by <b>"+ILS(drift)+"</b>":"fallen by <b>"+ILS(Math.abs(drift))+"</b>")} since the first run.`;
+}
+
+function coverage(){
+  const host=document.getElementById("cov");
+  const st=DATA.stats||{};
+  const dep=st.depletion_breakdown||{};
+  const runs=st.total_observations&&st.observations_this_run
+    ? Math.max(1,Math.round(st.total_observations/st.observations_this_run)) : 1;
+  const seen=new Set(DATA.L.map(d=>d.vid)).size;
+  const items=[];
+  const nRuns=DATA.runs.length;
+  if(nRuns<=1||dep.insufficient_data>(dep.healthy||0)*3){
+    items.push(LANG==="he"
+      ? ["מגמות לאורך זמן",`הארכיון מחזיק <b>${DATA.all.length.toLocaleString()}</b> תצפיות מ-<b>${nRuns||1}</b> הרצות, ורוב הליסטינגים עדיין מסומנים <b>insufficient_data</b>. הערכות התרוקנות ומגמות מחיר מתחדדות ככל שנצברות הרצות — הקובץ נוסף אליו, לא נדרס.`]
+      : ["Trends over time",`The archive holds <b>${DATA.all.length.toLocaleString()}</b> observations from <b>${nRuns||1}</b> run${nRuns===1?"":"s"}, and most listings still read <b>insufficient_data</b>. Depletion estimates and price trends sharpen as runs accumulate — the file is appended to, never replaced.`]);
+  }
+  items.push(LANG==="he"
+    ? ["גודל הארכיון",`הדף הזה מוריד את כל <b>history/</b> ומחשב הכל בדפדפן. הקובץ מחולק לחודשים (ראו <b>pipeline.py</b>) כדי שאף קובץ בודד לא יגדל ללא גבול — בקצב הנוכחי כ-3.4MB ליום מתחלקים לקובץ חודשי חדש בכל פעם.`]
+    : ["Archive size",`This page downloads all of <b>history/</b> and computes everything in the browser. It's sharded one file per month (see <b>pipeline.py</b>) so no single file grows without bound — at the current ~3.4MB/day rate, that just means a fresh file starts each month.`]);
+  items.push(LANG==="he"
+    ? ["שמות ערים",`קבצי הרשתות מספקים קוד עיר מספרי ולא שם, ולכן כל ניתוח גיאוגרפי כאן מבוסס על קואורדינטות שקודדו מכתובת הסניף — ולא על גבולות מוניציפליים.`]
+    : ["City names",`Chain files give a numeric city code, never a name, so every geographic cut here is built from coordinates geocoded off the branch address — not from municipal boundaries.`]);
+  items.push(LANG==="he"
+    ? ["כיסוי רשתות",`נצפו <b>${seen}</b> טעמים מתוך ${VARIANTS.length} במעקב, על פני <b>${new Set(DATA.L.map(d=>d.chain)).size}</b> רשתות. רשת שלא מפרסמת קובץ חנויות שמיש לא יכולה להופיע כאן כלל.`]
+    : ["Chain coverage",`<b>${seen}</b> of the ${VARIANTS.length} tracked flavours were seen, across <b>${new Set(DATA.L.map(d=>d.chain)).size}</b> chains. A chain that doesn't publish a usable store file can't appear here at all.`]);
+  items.push(LANG==="he"
+    ? ["מבצעים","המחירים כאן הם מחירי מדף רגילים. הנחות מועדון ומבצעי כמות מטופלים בנפרד ואינם מנוכים מהמספרים האלה."]
+    : ["Promotions","These are regular shelf prices. Club discounts and multi-buy deals are handled separately and are not deducted from any figure on this page."]);
+  host.innerHTML=CORNERS+`<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:22px">`+
+    items.map(([h,b])=>`<div>
+      <div style="font-family:var(--cond);font-size:18px;letter-spacing:${LANG==="he"?"0":".04em"};text-transform:${LANG==="he"?"none":"uppercase"};color:var(--grn);margin-bottom:8px;${LANG==="he"?"font-family:var(--body);font-weight:600":""}">${esc(h)}</div>
+      <p style="margin:0;font-size:14px;line-height:1.65;color:#c3cfc6;text-wrap:pretty">${b}</p>
+    </div>`).join("")+`</div>`;
+}
+</script>
+</body>
+</html>

@@ -216,6 +216,19 @@ def append_history(new_rows: list[dict]) -> None:
     with _current_history_path().open("a", encoding="utf-8") as f:
         for row in new_rows:
             f.write(json.dumps(row, ensure_ascii=False) + "\n")
+    write_history_index()
+
+
+def write_history_index() -> None:
+    """data/history/index.json — the sorted list of monthly filenames that
+    actually exist. A browser fetching raw.githubusercontent.com has no way
+    to list a directory, so anything client-side that wants the FULL
+    history (a stats/analysis website, say) reads this manifest first, then
+    fetches each file it names. Rewritten every run; trivially cheap."""
+    months = sorted(p.name for p in HISTORY_DIR.glob("*.ndjson"))
+    (HISTORY_DIR / "index.json").write_text(
+        json.dumps(months, indent=2), encoding="utf-8"
+    )
 
 
 async def run() -> None:

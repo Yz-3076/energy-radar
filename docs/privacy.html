@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Energy Radar — privacy policy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Barlow:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  color-scheme: dark;
+  --bg:#060807; --ink:#eaf2ec; --dim:#7e8c82;
+  --grn:#39ff6a; --grn-dim:#1c7a3a;
+  --line:rgba(57,255,106,.18); --line-soft:rgba(234,242,236,.09);
+  --mono:'IBM Plex Mono',ui-monospace,monospace;
+  --cond:'Barlow Condensed',system-ui,sans-serif;
+  --body:'Barlow',system-ui,sans-serif;
+}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body)}
+body{background-image:linear-gradient(var(--line-soft) 1px,transparent 1px),linear-gradient(90deg,var(--line-soft) 1px,transparent 1px);background-size:64px 64px;background-position:center top}
+a{color:var(--grn);text-decoration:none;border-bottom:1px solid rgba(57,255,106,.35)}
+a:hover{color:#fff;border-bottom-color:#fff}
+:focus-visible{outline:2px solid var(--grn);outline-offset:3px}
+::selection{background:rgba(57,255,106,.28)}
+@keyframes erpulse{70%{box-shadow:0 0 0 11px rgba(57,255,106,0)}100%{box-shadow:0 0 0 0 rgba(57,255,106,0)}}
+
+.wrap{max-width:860px;margin:0 auto;padding:0 20px}
+header{position:sticky;top:0;z-index:20;border-bottom:1px solid var(--line);background:rgba(6,8,7,.92);backdrop-filter:blur(8px)}
+.navrow{display:flex;align-items:center;gap:18px;height:62px}
+.brand{display:flex;align-items:center;gap:11px;font-family:var(--cond);font-weight:700;font-size:21px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink);border:0}
+.brand .pulse{width:11px;height:11px;border-radius:50%;background:var(--grn);box-shadow:0 0 0 0 rgba(57,255,106,.7);animation:erpulse 2.4s infinite}
+.navspace{flex:1}
+nav.links a{font-family:var(--cond);font-size:15px;letter-spacing:.1em;text-transform:uppercase;color:var(--dim);border:0}
+nav.links a:hover{color:var(--grn)}
+.langtog{display:flex;border:1px solid var(--line)}
+.langtog button{background:none;border:0;color:var(--dim);font-family:var(--mono);font-size:11px;letter-spacing:.1em;padding:7px 11px;cursor:pointer}
+.langtog button[aria-pressed="true"]{background:var(--grn);color:#04120a;font-weight:600}
+
+main{padding:0 0 90px}
+.hero{padding:66px 0 0}
+.eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--grn-dim);margin-bottom:16px}
+h1{font-family:var(--cond);font-weight:700;font-size:clamp(40px,7vw,68px);line-height:.96;letter-spacing:-.01em;margin:0 0 20px;text-wrap:balance}
+.intro{font-size:17px;line-height:1.65;color:var(--dim);max-width:62ch;margin:0;text-wrap:pretty}
+.updated{display:inline-flex;white-space:nowrap;gap:6px;align-items:baseline;margin-top:24px;padding:9px 15px;border:1px solid var(--line);font-family:var(--mono);font-size:11.5px;line-height:1.4;letter-spacing:.1em;text-transform:uppercase;color:var(--dim)}
+.updated b{color:var(--grn);font-weight:400}
+
+.short{position:relative;background:#fff;color:#08130c;padding:28px 30px;margin:44px 0 0}
+.short .lbl{font-family:var(--mono);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:#4e6357;margin-bottom:16px}
+.short ul{margin:0;padding-inline-start:20px;display:flex;flex-direction:column;gap:11px}
+.short li{font-size:16.5px;line-height:1.55;text-wrap:pretty}
+.short::after{content:"";position:absolute;inset:auto 0 0 0;height:3px;background:var(--grn)}
+
+section.sec{padding:52px 0 0}
+.sechead{display:flex;align-items:baseline;gap:14px;margin-bottom:14px;flex-wrap:wrap}
+.secnum{font-family:var(--mono);font-size:11px;color:var(--grn-dim);letter-spacing:.2em}
+h2{font-family:var(--cond);font-weight:700;font-size:27px;letter-spacing:.02em;text-transform:uppercase;margin:0}
+.secbody p{margin:0 0 14px;font-size:16px;line-height:1.72;color:#c3cfc6;max-width:70ch;text-wrap:pretty}
+.secbody p:last-child{margin-bottom:0}
+.secbody ul{margin:16px 0 0;padding-inline-start:20px;display:flex;flex-direction:column;gap:9px}
+.secbody li{font-size:16px;line-height:1.6;color:#c3cfc6;max-width:70ch;text-wrap:pretty}
+
+.contact{position:relative;border:1px solid var(--line);background:rgba(57,255,106,.02);padding:30px;margin-top:52px}
+.contact i{position:absolute;width:9px;height:9px}
+.contact i.tl{left:-5px;top:-5px}.contact i.tr{right:-5px;top:-5px}
+.contact i.bl{left:-5px;bottom:-5px}.contact i.br{right:-5px;bottom:-5px}
+.contact i::before,.contact i::after{content:"";position:absolute;background:var(--grn)}
+.contact i::before{left:0;top:4px;width:9px;height:1px}
+.contact i::after{top:0;left:4px;width:1px;height:9px}
+.contact .lbl{font-family:var(--mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--grn-dim);margin-bottom:12px}
+.contact p{margin:0 0 18px;font-size:16px;line-height:1.72;color:#c3cfc6;max-width:70ch;text-wrap:pretty}
+.cta{display:inline-flex;align-items:center;justify-content:center;background:var(--grn);color:#04120a;font-family:var(--cond);font-weight:700;font-size:16px;letter-spacing:.1em;text-transform:uppercase;line-height:1.25;padding:12px 22px;border:0}
+
+footer{border-top:1px solid var(--line);padding:32px 0 60px;margin-top:20px}
+.frow{display:flex;flex-wrap:wrap;gap:22px;align-items:baseline;justify-content:space-between}
+footer p{margin:0;font-size:13px;color:var(--dim);line-height:1.65;max-width:60ch;text-wrap:pretty}
+.fl{display:flex;gap:18px;font-family:var(--mono);font-size:11.5px;letter-spacing:.1em;text-transform:uppercase}
+
+[dir="rtl"] h1,[dir="rtl"] h2,[dir="rtl"] .brand,[dir="rtl"] nav.links a,[dir="rtl"] .cta{font-family:var(--body);letter-spacing:0;text-transform:none}
+[dir="rtl"] .eyebrow,[dir="rtl"] .updated,[dir="rtl"] .short .lbl,[dir="rtl"] .secnum,[dir="rtl"] .contact .lbl,[dir="rtl"] .fl{letter-spacing:0;text-transform:none}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap navrow">
+    <a class="brand" href="index.html"><span class="pulse"></span><span data-i="brand">Energy Radar</span></a>
+    <div class="navspace"></div>
+    <nav class="links"><a href="index.html" data-i="navStats">Stats</a></nav>
+    <div class="langtog">
+      <button id="btn-en" aria-pressed="true">EN</button>
+      <button id="btn-he" aria-pressed="false">עב</button>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="hero">
+    <div class="eyebrow" data-i="eyebrow">Energy Radar mobile app</div>
+    <h1 data-i="title">Privacy policy</h1>
+    <p class="intro" data-i="intro">Energy Radar does not have accounts, does not have a server that stores anything about you, and does not collect personal information. This page explains exactly what the app does with data, in plain terms.</p>
+    <div class="updated"><span data-i="updatedLabel">Last updated</span> <b dir="ltr">9 September 2026</b></div>
+  </div>
+
+  <div class="short">
+    <div class="lbl" data-i="shortLabel">The short version</div>
+    <ul id="summary"></ul>
+  </div>
+
+  <div id="sections"></div>
+
+  <section class="contact">
+    <i class="tl"></i><i class="tr"></i><i class="bl"></i><i class="br"></i>
+    <div class="lbl" data-i="contactNum">09</div>
+    <h2 data-i="contactH">Contact</h2>
+    <p data-i="contactP">Questions about this policy, or about anything the app does with data, are best raised as a public issue on the project's GitHub repository — that way the answer is visible to everyone.</p>
+    <a class="cta" href="https://github.com/Yz-3076/energy-radar/issues" data-i="contactCta">Open an issue on GitHub</a>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap frow">
+    <p data-i="disclaimer">Energy Radar is an independent project and is not affiliated with, endorsed by, or connected to Monster Energy or any retail chain.</p>
+    <div class="fl">
+      <a href="index.html" data-i="f_stats">Stats</a>
+      <a href="https://github.com/Yz-3076/energy-radar" data-i="srcLabel">Source</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+// hasAnalytics is hardcoded false — true today, matching israel-poc's actual
+// pipeline (no ads/tracking SDKs anywhere in the app). If that ever changes,
+// update the "no ads" section below (and its date) before shipping the change.
+const COPY = {
+  en: {
+    brand: "Energy Radar", navStats: "Stats", f_stats: "Stats", srcLabel: "Source",
+    eyebrow: "Energy Radar mobile app", title: "Privacy policy",
+    intro: "Energy Radar does not have accounts, does not have a server that stores anything about you, and does not collect personal information. This page explains exactly what the app does with data, in plain terms.",
+    updatedLabel: "Last updated", shortLabel: "The short version",
+    summary: [
+      "We collect no personal information at all — there is no sign-up and no account.",
+      "Your location is used on your device only, to sort nearby stores. It is never sent anywhere.",
+      "Your drink log, saved stores, alerts and searches live only in your phone's storage.",
+      "There are no ads, no tracking SDKs and no analytics in the app."
+    ],
+    sections: [
+      { num: "01", h: "Location", p: [
+        "If you allow it, the app reads your device location to sort the store list by distance and to place you on the map. That calculation happens entirely on your device.",
+        "Your location is never transmitted to us, never stored on any server, and never shared with anyone. If you decline the permission, the app still works — the store list is simply not sorted by distance."
+      ] },
+      { num: "02", h: "What is stored on your device", p: [
+        "The following are written to your phone's local storage and nowhere else. They are never uploaded, and nobody but you can see them:"
+      ], items: [
+        "Your drink log — what you drank and when.",
+        "Saved stores and favourites.",
+        "Price and stock alerts you have set up.",
+        "Recent searches and app preferences."
+      ] },
+      { num: "03", h: "Where the price data comes from", p: [
+        "Israel's price-transparency law requires retail chains to publish their full price and promotion files publicly. The app reads those official published files, and nothing else.",
+        "That data is about products on shelves — it is not personal data, it is not derived from anyone's shopping, and it is not collected from app users. Prices are what the chains themselves published and can lag what is actually on the shelf."
+      ] },
+      { num: "04", h: "Third parties", p: [
+        "For promotion and discount information the project optionally calls a free public API, Open Israeli Supermarkets (openisraelisupermarkets.co.il). That service receives a product barcode and nothing else — no location, no device identifier, no information about you.",
+        "We use no other third-party services. There is no backend of our own that receives data from the app."
+      ] },
+      { num: "05", h: "No ads, no tracking, no analytics", p: [
+        "The app contains no advertising, no advertising identifiers, no third-party tracking SDKs, and no analytics or crash-reporting service. Nothing about your use of the app is measured or reported.",
+        "This is true as of the date at the top of this page. If it ever changes, this section and that date will be updated before the change ships."
+      ] },
+      { num: "06", h: "Children's privacy", p: [
+        "The app is not directed at children under 13, and we do not knowingly collect information from them. Since the app collects no personal information from anyone, there is nothing about a child for us to hold, delete, or disclose."
+      ] },
+      { num: "07", h: "Your data and your rights", p: [
+        "Because nothing leaves your device, there is no account to delete and no data of yours for us to hand over or erase. Deleting the app removes everything it stored, permanently.",
+        "If your device offers a system-level way to revoke location access, using it takes effect immediately — the app has no separate copy."
+      ] },
+      { num: "08", h: "Changes to this policy", p: [
+        "If this policy changes, the revised version will be posted on this page and the last-updated date at the top will change with it. Material changes will also be noted in the app's release notes."
+      ] }
+    ],
+    contactNum: "09", contactH: "Contact",
+    contactP: "Questions about this policy, or about anything the app does with data, are best raised as a public issue on the project's GitHub repository — that way the answer is visible to everyone.",
+    contactCta: "Open an issue on GitHub",
+    disclaimer: "Energy Radar is an independent project and is not affiliated with, endorsed by, or connected to Monster Energy or any retail chain."
+  },
+  he: {
+    brand: "אנרג׳י ראדאר", navStats: "נתונים", f_stats: "נתונים", srcLabel: "קוד מקור",
+    eyebrow: "אפליקציית Energy Radar", title: "מדיניות פרטיות",
+    intro: "לאפליקציית Energy Radar אין חשבונות, אין שרת ששומר עליכם משהו, והיא לא אוספת מידע אישי. הדף הזה מסביר בדיוק מה האפליקציה עושה עם נתונים, בשפה פשוטה.",
+    updatedLabel: "עודכן לאחרונה", shortLabel: "בקצרה",
+    summary: [
+      "אנחנו לא אוספים שום מידע אישי — אין הרשמה ואין חשבון.",
+      "המיקום שלכם משמש על המכשיר בלבד, כדי למיין חנויות קרובות. הוא לא נשלח לשום מקום.",
+      "יומן השתייה, החנויות השמורות, ההתראות והחיפושים נשמרים רק באחסון של המכשיר שלכם.",
+      "אין באפליקציה פרסומות, ערכות מעקב או אנליטיקס."
+    ],
+    sections: [
+      { num: "01", h: "מיקום", p: [
+        "אם תאשרו, האפליקציה קוראת את מיקום המכשיר כדי למיין את רשימת החנויות לפי מרחק ולמקם אתכם על המפה. החישוב הזה מתבצע כולו על המכשיר שלכם.",
+        "המיקום שלכם לעולם לא נשלח אלינו, לא נשמר בשום שרת, ולא משותף עם אף אחד. אם תסרבו להרשאה, האפליקציה עדיין עובדת — הרשימה פשוט לא תמוין לפי מרחק."
+      ] },
+      { num: "02", h: "מה נשמר על המכשיר שלכם", p: [
+        "הפריטים הבאים נכתבים לאחסון המקומי של המכשיר ולשום מקום אחר. הם לעולם לא מועלים, ואף אחד מלבדכם לא רואה אותם:"
+      ], items: [
+        "יומן השתייה — מה שתיתם ומתי.",
+        "חנויות שמורות ומועדפים.",
+        "התראות מחיר ומלאי שהגדרתם.",
+        "חיפושים אחרונים והעדפות באפליקציה."
+      ] },
+      { num: "03", h: "מאיפה מגיעים נתוני המחירים", p: [
+        "חוק שקיפות המחירים בישראל מחייב את הרשתות הקמעונאיות לפרסם בפומבי את קבצי המחירים והמבצעים המלאים שלהן. האפליקציה קוראת את הקבצים הרשמיים האלה, ותו לא.",
+        "מדובר בנתונים על מוצרים על המדף — זה לא מידע אישי, זה לא נגזר מהקניות של אף אחד, וזה לא נאסף ממשתמשי האפליקציה. המחירים הם מה שהרשתות עצמן פרסמו ועשויים לפגר אחרי המדף בפועל."
+      ] },
+      { num: "04", h: "צדדים שלישיים", p: [
+        "עבור מידע על מבצעים והנחות הפרויקט פונה באופן אופציונלי ל-API ציבורי וחינמי, Open Israeli Supermarkets ‏(openisraelisupermarkets.co.il). השירות הזה מקבל ברקוד של מוצר ותו לא — לא מיקום, לא מזהה מכשיר, ולא שום מידע עליכם.",
+        "איננו משתמשים בשירותי צד שלישי אחרים. אין לנו שרת משלנו שמקבל נתונים מהאפליקציה."
+      ] },
+      { num: "05", h: "בלי פרסומות, בלי מעקב, בלי אנליטיקס", p: [
+        "באפליקציה אין פרסום, אין מזהי פרסום, אין ערכות מעקב של צד שלישי, ואין שירות אנליטיקס או דיווח קריסות. שום דבר בשימוש שלכם באפליקציה לא נמדד ולא מדווח.",
+        "הדברים נכונים לתאריך המופיע בראש הדף. אם זה ישתנה אי פעם, הסעיף הזה והתאריך יעודכנו לפני שהשינוי יגיע לגרסה פומבית."
+      ] },
+      { num: "06", h: "פרטיות ילדים", p: [
+        "האפליקציה אינה מיועדת לילדים מתחת לגיל 13, ואיננו אוספים מהם מידע ביודעין. מכיוון שהאפליקציה לא אוספת מידע אישי מאף אחד, אין בידינו מידע על ילד שנוכל להחזיק, למחוק או למסור."
+      ] },
+      { num: "07", h: "הנתונים שלכם והזכויות שלכם", p: [
+        "מכיוון ששום דבר לא יוצא מהמכשיר, אין חשבון למחוק ואין נתונים שלכם שנוכל למסור או למחוק. מחיקת האפליקציה מסירה לצמיתות את כל מה שהיא שמרה.",
+        "אם המכשיר שלכם מאפשר לבטל הרשאת מיקום ברמת המערכת, הביטול נכנס לתוקף מיידית — לאפליקציה אין עותק נפרד."
+      ] },
+      { num: "08", h: "שינויים במדיניות", p: [
+        "אם המדיניות תשתנה, הגרסה המעודכנת תפורסם בדף הזה ותאריך העדכון בראש הדף ישתנה בהתאם. שינויים מהותיים יצוינו גם בהערות הגרסה של האפליקציה."
+      ] }
+    ],
+    contactNum: "09", contactH: "יצירת קשר",
+    contactP: "שאלות על המדיניות הזו, או על כל דבר שהאפליקציה עושה עם נתונים, מומלץ להעלות כ-issue ציבורי במאגר ה-GitHub של הפרויקט — כך התשובה גלויה לכולם.",
+    contactCta: "פתיחת issue ב-GitHub",
+    disclaimer: "Energy Radar הוא פרויקט עצמאי, ללא שיוך, חסות או קשר ל-Monster Energy או לרשת קמעונאית כלשהי."
+  }
+};
+
+function renderSections(list){
+  const host = document.getElementById("sections");
+  host.innerHTML = list.map(s => `
+    <section class="sec">
+      <div class="sechead"><span class="secnum">${s.num}</span><h2>${s.h}</h2></div>
+      <div class="secbody">
+        ${s.p.map(p => `<p>${p}</p>`).join("")}
+        ${s.items ? `<ul>${s.items.map(it => `<li>${it}</li>`).join("")}</ul>` : ""}
+      </div>
+    </section>`).join("");
+}
+
+function applyLang(lang){
+  const c = COPY[lang];
+  document.documentElement.lang = lang;
+  document.documentElement.dir = lang === "he" ? "rtl" : "ltr";
+  document.querySelectorAll("[data-i]").forEach(el => {
+    const key = el.getAttribute("data-i");
+    if (c[key] != null) el.textContent = c[key];
+  });
+  document.getElementById("summary").innerHTML = c.summary.map(s => `<li>${s}</li>`).join("");
+  renderSections(c.sections);
+  document.getElementById("btn-en").setAttribute("aria-pressed", String(lang === "en"));
+  document.getElementById("btn-he").setAttribute("aria-pressed", String(lang === "he"));
+  try { localStorage.setItem("er-lang", lang); } catch (e) {}
+}
+
+document.getElementById("btn-en").addEventListener("click", () => applyLang("en"));
+document.getElementById("btn-he").addEventListener("click", () => applyLang("he"));
+
+let initial = "en";
+try {
+  const saved = localStorage.getItem("er-lang");
+  if (saved === "he" || saved === "en") initial = saved;
+} catch (e) {}
+applyLang(initial);
+</script>
+</body>
+</html>

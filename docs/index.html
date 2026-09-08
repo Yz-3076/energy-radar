@@ -1,119 +1,615 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Energy Radar — data stats</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Energy Radar — national Monster price data</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Barlow:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script src="https://unpkg.com/d3@7.9.0/dist/d3.min.js" integrity="sha384-CjloA8y00+1SDAUkjs099PVfnY2KmDC2BZnws9kh8D/lX1s46w6EPhpXdqMfjK6i" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/topojson-client@3.1.0/dist/topojson-client.min.js" integrity="sha384-Ukv1p/xTma6P4/2bY5KzWBw+ydSpXmhCMtyciIQVDJ1RmOxtCYNMF1uXT9T63H67" crossorigin="anonymous"></script>
 <style>
-  :root { color-scheme: dark; }
-  body {
-    margin: 0; background: #0a0b0a; color: #eaf0ea;
-    font-family: -apple-system, system-ui, sans-serif;
-    padding: 24px 16px 60px;
-  }
-  h1 { font-size: 22px; font-weight: 800; letter-spacing: -0.5px; margin: 0 0 4px; }
-  .sub { color: rgba(234,240,234,.5); font-size: 13px; margin-bottom: 28px; }
-  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 12px; margin-bottom: 32px; }
-  .card {
-    border: 1px solid rgba(255,255,255,.1); border-radius: 10px; padding: 14px;
-    background: rgba(255,255,255,.02);
-  }
-  .card .n { font-size: 28px; font-weight: 800; color: #00ff41; line-height: 1; }
-  .card .k { font-size: 10.5px; letter-spacing: .1em; text-transform: uppercase; color: rgba(234,240,234,.45); margin-top: 6px; }
-  h2 { font-size: 14px; letter-spacing: .08em; text-transform: uppercase; color: rgba(234,240,234,.6); margin: 32px 0 12px; }
-  .bar-row { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; font-size: 13px; }
-  .bar-label { width: 130px; flex: none; color: rgba(234,240,234,.8); text-align: right; }
-  .bar-track { flex: 1; height: 18px; background: rgba(255,255,255,.05); border-radius: 4px; overflow: hidden; }
-  .bar-fill { height: 100%; background: #00ff41; }
-  .bar-value { width: 36px; flex: none; color: rgba(234,240,234,.5); font-size: 11px; }
-  .depletion-healthy { background: #00ff41; }
-  .depletion-slowing { background: #e0b23d; }
-  .depletion-likely_out { background: #ff5a5a; }
-  .depletion-insufficient_data { background: rgba(255,255,255,.25); }
-  .empty { color: rgba(234,240,234,.4); font-size: 13px; padding: 20px 0; }
-  a { color: #00ff41; }
+:root{
+  color-scheme: dark;
+  --bg:#060807; --ink:#eaf2ec; --dim:#7e8c82;
+  --grn:#39ff6a; --grn-dim:#1c7a3a; --grn-deep:#0d3a1c;
+  --hot:#ff5a5a; --warn:#e0b23d;
+  --line:rgba(57,255,106,.18); --line-soft:rgba(234,242,236,.09);
+  --mono:'IBM Plex Mono',ui-monospace,monospace;
+  --cond:'Barlow Condensed',system-ui,sans-serif;
+  --body:'Barlow',system-ui,sans-serif;
+}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body)}
+body{
+  background-image:
+    linear-gradient(var(--line-soft) 1px,transparent 1px),
+    linear-gradient(90deg,var(--line-soft) 1px,transparent 1px);
+  background-size:64px 64px;
+  background-position:center top;
+}
+a{color:var(--grn);text-decoration:none;border-bottom:1px solid rgba(57,255,106,.35)}
+a:hover{color:#fff;border-bottom-color:#fff}
+:focus-visible{outline:2px solid var(--grn);outline-offset:3px}
+::selection{background:rgba(57,255,106,.28)}
+
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+
+/* ── blueprint frame ───────────────────────────────── */
+.bp{position:relative;border:1px solid var(--line);background:rgba(57,255,106,.02)}
+.bp>i.c{position:absolute;width:9px;height:9px;pointer-events:none;opacity:.85}
+.bp>i.c::before,.bp>i.c::after{content:"";position:absolute;background:var(--grn)}
+.bp>i.c::before{left:0;top:4px;width:9px;height:1px}
+.bp>i.c::after{top:0;left:4px;width:1px;height:9px}
+.bp>i.tl{left:-5px;top:-5px}.bp>i.tr{right:-5px;top:-5px}
+.bp>i.bl{left:-5px;bottom:-5px}.bp>i.br{right:-5px;bottom:-5px}
+
+/* ── header ────────────────────────────────────────── */
+header{border-bottom:1px solid var(--line);background:rgba(6,8,7,.92);backdrop-filter:blur(8px);position:sticky;top:0;z-index:20}
+.navrow{display:flex;align-items:center;gap:18px;height:62px}
+.brand{display:flex;align-items:center;gap:11px;font-family:var(--cond);font-weight:700;font-size:21px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink)}
+.brand .pulse{width:11px;height:11px;border-radius:50%;background:var(--grn);box-shadow:0 0 0 0 rgba(57,255,106,.7);animation:pulse 2.4s infinite}
+@keyframes pulse{70%{box-shadow:0 0 0 11px rgba(57,255,106,0)}100%{box-shadow:0 0 0 0 rgba(57,255,106,0)}}
+.navspace{flex:1}
+nav.links{display:flex;gap:20px;align-items:center}
+nav.links a{font-family:var(--cond);font-size:15px;letter-spacing:.1em;text-transform:uppercase;color:var(--dim);border:0}
+nav.links a:hover{color:var(--grn)}
+.langtog{display:flex;border:1px solid var(--line)}
+.langtog button{background:none;border:0;color:var(--dim);font-family:var(--mono);font-size:11px;letter-spacing:.1em;padding:7px 11px;cursor:pointer}
+.langtog button[aria-pressed="true"]{background:var(--grn);color:#04120a;font-weight:600}
+
+/* ── hero ──────────────────────────────────────────── */
+.hero{padding:64px 0 26px}
+.eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:var(--grn-dim);margin-bottom:16px}
+h1{font-family:var(--cond);font-weight:700;font-size:clamp(42px,7vw,82px);line-height:.94;letter-spacing:-.01em;margin:0 0 18px;text-wrap:balance}
+h1 em{font-style:normal;color:var(--grn);text-shadow:0 0 34px rgba(57,255,106,.45)}
+.lede{font-size:17px;line-height:1.6;color:var(--dim);max-width:60ch;text-wrap:pretty;margin:0}
+
+/* ── transparency strip ────────────────────────────── */
+.strip{display:flex;flex-wrap:wrap;gap:0;margin:34px 0 0;font-family:var(--mono);font-size:11.5px;letter-spacing:.08em;text-transform:uppercase}
+.strip .cell{padding:13px 20px;border:1px solid var(--line);margin:-1px 0 0 -1px;flex:1 1 auto;min-width:170px;color:var(--dim)}
+.strip .cell b{display:block;color:var(--grn);font-weight:500;font-size:15px;letter-spacing:.04em;margin-bottom:3px}
+.strip .cell.free b{color:#fff}
+
+/* ── sections ──────────────────────────────────────── */
+section.blk{padding:58px 0 0}
+.shead{display:flex;align-items:baseline;gap:14px;margin-bottom:8px;flex-wrap:wrap}
+.snum{font-family:var(--mono);font-size:11px;color:var(--grn-dim);letter-spacing:.2em}
+h2{font-family:var(--cond);font-weight:700;font-size:30px;letter-spacing:.02em;text-transform:uppercase;margin:0;color:var(--ink)}
+.snote{font-size:13.5px;color:var(--dim);margin:0 0 22px;max-width:70ch;line-height:1.55;text-wrap:pretty}
+
+/* ── callout (white) ───────────────────────────────── */
+.callouts{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,270px),1fr));gap:14px;margin-top:26px}
+.callout{background:#fff;color:#08130c;padding:20px 22px;position:relative}
+.callout .k{font-family:var(--mono);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:#4e6357;margin-bottom:9px}
+.callout .v{font-family:var(--cond);font-weight:700;font-size:34px;line-height:1;letter-spacing:-.01em}
+.callout .s{font-size:13px;color:#41564a;margin-top:7px;line-height:1.4}
+.callout::after{content:"";position:absolute;inset:auto 0 0 0;height:3px;background:var(--grn)}
+
+/* ── empty state ───────────────────────────────────── */
+.empty{padding:34px 22px;text-align:center;font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--dim);line-height:1.9}
+.empty .big{display:block;color:var(--grn-dim);font-size:13px;margin-bottom:6px}
+.empty .path{color:var(--ink);opacity:.55;text-transform:none;letter-spacing:.02em}
+
+/* ── map ───────────────────────────────────────────── */
+.mapgrid{display:grid;grid-template-columns:minmax(0,1fr) 262px;gap:18px;align-items:start}
+@media(max-width:820px){.mapgrid{grid-template-columns:1fr}}
+#map{min-height:520px;display:flex;align-items:center;justify-content:center;padding:14px}
+#map svg{width:100%;height:auto;display:block}
+.cellrect{transition:opacity .12s}
+.cellrect:hover{stroke:#fff;stroke-width:1.4}
+.legend{padding:20px}
+.legend h3{font-family:var(--cond);font-size:16px;letter-spacing:.1em;text-transform:uppercase;margin:0 0 14px;color:var(--ink)}
+.ramp{height:11px;background:linear-gradient(90deg,var(--grn),#a8e04a,var(--warn),var(--hot));margin-bottom:7px}
+.ramplab{display:flex;justify-content:space-between;font-family:var(--mono);font-size:10.5px;color:var(--dim);letter-spacing:.06em}
+.legend p{font-size:12.5px;line-height:1.6;color:var(--dim);margin:16px 0 0}
+#tip{position:fixed;pointer-events:none;opacity:0;transition:opacity .1s;background:#fff;color:#08130c;padding:9px 12px;font-family:var(--mono);font-size:11.5px;line-height:1.55;z-index:60;max-width:230px}
+#tip b{font-size:14px}
+
+/* ── bars / leaderboard ────────────────────────────── */
+.rows{padding:18px 20px}
+.row{display:grid;grid-template-columns:26px 1fr 74px;align-items:center;gap:13px;padding:9px 0;border-bottom:1px solid var(--line-soft)}
+.row:last-child{border-bottom:0}
+.row .rk{font-family:var(--mono);font-size:11px;color:var(--grn-dim)}
+.row .nm{font-family:var(--cond);font-size:17px;letter-spacing:.03em;text-transform:uppercase}
+.row .val{font-family:var(--mono);font-size:14px;color:var(--grn);text-align:end}
+.row.top .nm{color:var(--grn)}
+.track{height:16px;background:rgba(234,242,236,.05);position:relative;overflow:hidden}
+.fill{height:100%;background:var(--grn-dim)}
+.fill.hi{background:var(--grn)}
+.barrow{display:grid;grid-template-columns:minmax(94px,150px) 1fr 46px;align-items:center;gap:12px;padding:6px 0;font-size:13.5px}
+.barrow .lb{font-family:var(--cond);font-size:16px;letter-spacing:.03em;text-transform:uppercase;color:var(--ink);text-align:end;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.barrow .n{font-family:var(--mono);font-size:12px;color:var(--dim);text-align:end}
+.d-healthy{background:var(--grn)}.d-slowing{background:var(--warn)}
+.d-likely_out{background:var(--hot)}.d-insufficient_data{background:rgba(234,242,236,.2)}
+
+/* ── two-up ────────────────────────────────────────── */
+.twoup{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,330px),1fr));gap:18px}
+
+/* ── chart ─────────────────────────────────────────── */
+.chartbox{padding:18px 20px}
+#chart svg{width:100%;height:auto;display:block;overflow:visible}
+select.fl{background:#0b120d;color:var(--grn);border:1px solid var(--line);font-family:var(--mono);font-size:12px;padding:7px 10px;cursor:pointer}
+
+/* ── ticker ────────────────────────────────────────── */
+.deals{display:flex;gap:12px;overflow-x:auto;padding:4px 0 12px;scrollbar-width:thin}
+.deal{flex:0 0 268px;padding:16px 18px}
+.deal .fl2{font-family:var(--cond);font-size:19px;letter-spacing:.04em;text-transform:uppercase;color:var(--grn);margin-bottom:7px}
+.deal .ds{font-size:13px;color:var(--ink);line-height:1.5;margin-bottom:9px}
+.deal .dm{font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--dim)}
+.pill{display:inline-block;font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;border:1px solid var(--line);color:var(--grn-dim);padding:3px 7px;margin-inline-end:6px}
+
+/* ── footer ────────────────────────────────────────── */
+footer{margin-top:74px;border-top:1px solid var(--line);padding:34px 0 60px}
+.frow{display:flex;flex-wrap:wrap;gap:22px;align-items:baseline;justify-content:space-between}
+footer p{font-size:13px;color:var(--dim);line-height:1.65;margin:0;max-width:62ch;text-wrap:pretty}
+footer .fl{display:flex;gap:18px;font-family:var(--mono);font-size:11.5px;letter-spacing:.1em;text-transform:uppercase}
+
+[dir="rtl"] .row .val,[dir="rtl"] .barrow .n{text-align:start}
+[dir="rtl"] .strip,[dir="rtl"] .eyebrow,[dir="rtl"] .empty,[dir="rtl"] .callout .k,
+[dir="rtl"] .snum,[dir="rtl"] nav.links a,[dir="rtl"] footer .fl,[dir="rtl"] .dm,[dir="rtl"] .pill{letter-spacing:0}
+[dir="rtl"] h1,[dir="rtl"] h2,[dir="rtl"] .brand,[dir="rtl"] .row .nm,[dir="rtl"] .barrow .lb,
+[dir="rtl"] .deal .fl2,[dir="rtl"] .legend h3{letter-spacing:0;font-family:var(--body);font-weight:600}
+[dir="rtl"] h1{font-size:clamp(34px,5.6vw,64px);line-height:1.08}
+[hidden]{display:none !important}
 </style>
 </head>
 <body>
-  <h1>Energy Radar — price data</h1>
-  <div class="sub" id="subtitle">Loading…</div>
 
-  <div class="grid" id="stat-cards"></div>
+<header>
+  <div class="wrap navrow">
+    <div class="brand"><span class="pulse"></span><span data-i="brand">Energy Radar</span></div>
+    <div class="navspace"></div>
+    <nav class="links">
+      <a href="#map-sec" data-i="nav_map">Heatmap</a>
+      <a href="analysis.html" data-i="nav_analysis">Analysis</a>
+      <a href="privacy.html" data-i="nav_privacy">Privacy</a>
+    </nav>
+    <div class="langtog">
+      <button id="btn-en" aria-pressed="true">EN</button>
+      <button id="btn-he" aria-pressed="false">עב</button>
+    </div>
+  </div>
+</header>
 
-  <h2>Listings per flavour</h2>
-  <div id="per-variant"></div>
+<main class="wrap">
 
-  <h2>Stock status right now</h2>
-  <div id="depletion"></div>
+  <div class="hero">
+    <div class="eyebrow" data-i="eyebrow">Open price data · Israel</div>
+    <h1><span data-i="h1a">Every Monster in Israel,</span> <em data-i="h1b">priced.</em></h1>
+    <p class="lede" data-i="lede">A public read-out of the price feed behind the Energy Radar app. Built entirely from the files Israeli chains are required by law to publish — no scraping of people, no accounts, no ads.</p>
 
-  <p class="sub" style="margin-top:40px">
-    Raw data:
-    <a id="latest-link" href="#">latest.json</a> ·
-    <a id="stats-link" href="#">stats.json</a> ·
-    <a id="history-link" href="#">history/ (one file per month)</a>
-  </p>
+    <div class="strip" id="strip">
+      <div class="cell"><b id="s-updated">—</b><span data-i="st_updated">Last updated</span></div>
+      <div class="cell"><b id="s-chains">—</b><span data-i="st_chains">Chains covered</span></div>
+      <div class="cell"><b id="s-stores">—</b><span data-i="st_stores">Stores with Monster</span></div>
+      <div class="cell"><b id="s-obs">—</b><span data-i="st_obs">Price observations</span></div>
+      <div class="cell free"><b data-i="st_free_b">Free &amp; open</b><span data-i="st_free">Sourced from Israeli law</span></div>
+    </div>
+
+    <div class="callouts" id="callouts" hidden></div>
+  </div>
+
+  <section class="blk" id="map-sec">
+    <div class="shead"><span class="snum">01</span><h2 data-i="h_map">National price heatmap</h2></div>
+    <p class="snote" data-i="n_map">Israel divided into equal cells. Each cell takes the colour of the cheapest Monster observed inside it, so bright green is where the drink is cheapest. Cells with no covered store stay empty — this is coverage, not a claim about the whole country.</p>
+    <div class="mapgrid">
+      <div class="bp" id="map"><i class="c tl"></i><i class="c tr"></i><i class="c bl"></i><i class="c br"></i>
+        <div class="empty" id="map-empty"><span class="big" data-i="e_wait">Awaiting first pipeline run</span><span class="path">data/latest.json</span></div>
+      </div>
+      <div class="bp legend"><i class="c tl"></i><i class="c tr"></i><i class="c bl"></i><i class="c br"></i>
+        <h3 data-i="lg_title">Cheapest per cell</h3>
+        <div class="ramp"></div>
+        <div class="ramplab"><span id="lg-lo">—</span><span id="lg-hi">—</span></div>
+        <p data-i="lg_note">Coverage follows the chains that publish usable store files. An empty cell means no covered branch there yet, not that Monster is unavailable.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="blk" id="chains">
+    <div class="twoup">
+      <div>
+        <div class="shead"><span class="snum">02</span><h2 data-i="h_chain">Cheapest chain</h2></div>
+        <p class="snote" data-i="n_chain">Average shelf price across every Monster listing we can see per chain.</p>
+        <div class="bp rows" id="chainrows"><i class="c tl"></i><i class="c tr"></i><i class="c bl"></i><i class="c br"></i>
+          <div class="empty"><span class="big" data-i="e_wait2">Awaiting first pipeline run</span><span class="path">data/latest.json</span></div>
+        </div>
+      </div>
+      <div>
+        <div class="shead"><span class="snum">03</span><h2 data-i="h_stock">Stock health</h2></div>
+        <p class="snote" data-i="n_stock">The depletion model's read on every listing: healthy, slowing, or likely out.</p>
+        <div class="bp rows" id="stockrows"><i class="c tl"></i><i class="c tr"></i><i class="c bl"></i><i class="c br"></i>
+          <div class="empty"><span class="big" data-i="e_wait3">Awaiting first pipeline run</span><span class="path">data/stats.json</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="blk">
+    <div class="shead"><span class="snum">04</span><h2 data-i="h_pop">Flavour reach</h2></div>
+    <p class="snote" data-i="n_pop">How many shelves each flavour turns up on nationwide — a proxy for how widely it's stocked, not for how much it sells.</p>
+    <div class="bp rows" id="poprows"><i class="c tl"></i><i class="c tr"></i><i class="c bl"></i><i class="c br"></i>
+      <div class="empty"><span class="big" data-i="e_wait4">Awaiting first pipeline run</span><span class="path">data/stats.json</span></div>
+    </div>
+  </section>
+
+  <section class="blk">
+    <div class="shead">
+      <span class="snum">05</span><h2 data-i="h_time">Price over time</h2>
+      <select class="fl" id="flavsel" hidden></select>
+    </div>
+    <p class="snote" data-i="n_time">National average shelf price per day, rebuilt from every observation ever recorded.</p>
+    <div class="bp chartbox" id="chart"><i class="c tl"></i><i class="c tr"></i><i class="c bl"></i><i class="c br"></i>
+      <div class="empty" id="chart-empty"><span class="big" data-i="e_wait5">Awaiting first pipeline run</span><span class="path">data/history/</span></div>
+    </div>
+  </section>
+
+  <section class="blk" id="deals-sec">
+    <div class="shead"><span class="snum">06</span><h2 data-i="h_deals">Live deals</h2></div>
+    <p class="snote" data-i="n_deals">Current nationwide promotions, via the free Open Israeli Supermarkets API. Chain-wide, never store-specific — and a flavour missing here just means no promo was published, not that there's no deal.</p>
+    <div id="deals">
+      <div class="bp"><i class="c tl"></i><i class="c tr"></i><i class="c bl"></i><i class="c br"></i>
+        <div class="empty"><span class="big" data-i="e_deals">No promotions published right now</span><span class="path">data/promotions.json</span></div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap frow">
+    <p data-i="foot">Energy Radar is an independent project and is not affiliated with, endorsed by, or connected to Monster Energy or any retail chain. Prices are what the chains themselves published and can lag the shelf.</p>
+    <div class="fl">
+      <a href="privacy.html" data-i="f_priv">Privacy</a>
+      <a href="analysis.html" data-i="f_analysis">Analysis</a>
+      <a href="https://github.com/Yz-3076/energy-radar" data-i="f_src">Source</a>
+      <a href="https://github.com/Yz-3076/energy-radar/tree/main/data" data-i="f_raw">Raw data</a>
+    </div>
+  </div>
+</footer>
+
+<div id="tip"></div>
 
 <script>
-// Fill this in once the repo exists — data lives at repo root, not under
-// docs/, so this dashboard reads it via the raw-content URL rather than a
-// relative path (works the same regardless of how Pages is configured).
-const REPO = "Yz-3076/energy-radar";
-const BRANCH = "main";
-const RAW = `https://raw.githubusercontent.com/${REPO}/${BRANCH}/data`;
+/* ── config ─────────────────────────────────────────── */
+const REPO="Yz-3076/energy-radar", BRANCH="main";
+const RAW=`https://raw.githubusercontent.com/${REPO}/${BRANCH}/data`;
+const ILS=n=>"₪"+n.toFixed(2);
 
-document.getElementById("latest-link").href = `${RAW}/latest.json`;
-document.getElementById("stats-link").href = `${RAW}/stats.json`;
-// A folder has no raw-content URL — link to the browsable GitHub tree view.
-document.getElementById("history-link").href = `https://github.com/${REPO}/tree/${BRANCH}/data/history`;
+const VARIANTS=[
+ {id:"original",name:"Monster Energy Original",he:"מונסטר אוריג'ינל"},
+ {id:"ultra",name:"Monster Ultra",he:"מונסטר אולטרה"},
+ {id:"ultra-paradise",name:"Monster Ultra Paradise",he:"אולטרה פרדייז"},
+ {id:"ultra-fiesta",name:"Monster Ultra Fiesta Mango",he:"אולטרה פיאסטה מנגו"},
+ {id:"mango-loco",name:"Monster Mango Loco",he:"מנגו לוקו"},
+ {id:"full-zero",name:"Monster Full Zero",he:"פול זירו"},
+ {id:"ultra-violet",name:"Monster Ultra Violet",he:"אולטרה ויולט"},
+ {id:"juice-khaotic",name:"Monster Juice Khaotic",he:"ג'וס קאוטיק"},
+ {id:"pipeline-punch",name:"Monster Pipeline Punch",he:"פייפליין פאנץ'"},
+ {id:"ultra-gold",name:"Monster Ultra Gold",he:"אולטרה גולד"},
+ {id:"nitro-super-dry",name:"Monster Nitro Super Dry",he:"ניטרו סופר דריי"},
+ {id:"rehab-lemonade",name:"Monster Rehab Lemonade",he:"ריהאב לימונדה"}];
+const VN=Object.fromEntries(VARIANTS.map(v=>[v.id,v]));
+const vname=id=>{const v=VN[id];return v?(LANG==="he"?v.he:v.name.replace(/^Monster /,"")):id;};
 
-function bar(label, value, max, cls) {
-  const pct = max > 0 ? Math.round((value / max) * 100) : 0;
-  return `<div class="bar-row">
-    <div class="bar-label">${label}</div>
-    <div class="bar-track"><div class="bar-fill ${cls || ""}" style="width:${pct}%"></div></div>
-    <div class="bar-value">${value}</div>
-  </div>`;
+/* ── i18n ───────────────────────────────────────────── */
+const HE={
+ brand:"אנרג'י ראדאר",nav_map:"מפת חום",nav_analysis:"ניתוח",nav_privacy:"פרטיות",
+ eyebrow:"נתוני מחירים פתוחים · ישראל",h1a:"כל מונסטר בישראל,",h1b:"עם מחיר.",
+ lede:"תצוגה ציבורית של פיד המחירים שמאחורי אפליקציית Energy Radar. נבנה כולו מהקבצים שהרשתות בישראל מחויבות בחוק לפרסם — בלי מעקב אחרי אנשים, בלי חשבונות, בלי פרסומות.",
+ st_updated:"עודכן לאחרונה",st_chains:"רשתות מכוסות",st_stores:"חנויות עם מונסטר",st_obs:"תצפיות מחיר",
+ st_free_b:"חינם ופתוח",st_free:"מבוסס על חוק שקיפות המחירים",
+ h_map:"מפת חום ארצית",n_map:"ישראל מחולקת לתאים שווים. כל תא צבוע לפי המונסטר הזול ביותר שנצפה בתוכו, כך שירוק בהיר הוא המקום הזול. תאים ללא חנות מכוסה נשארים ריקים — זו תמונת כיסוי, לא טענה על כל המדינה.",
+ lg_title:"הזול ביותר בתא",lg_note:"הכיסוי נגזר מהרשתות שמפרסמות קבצי חנויות שמישים. תא ריק אומר שאין שם עדיין סניף מכוסה, לא שאין מונסטר.",
+ h_chain:"הרשת הזולה",n_chain:"מחיר מדף ממוצע על פני כל ליסטינג מונסטר שאנחנו רואים בכל רשת.",
+ h_stock:"מצב מלאי",n_stock:"קריאת מודל ההתרוקנות לכל ליסטינג: תקין, מאט, או כנראה אזל.",
+ h_pop:"פריסת טעמים",n_pop:"על כמה מדפים כל טעם מופיע ברחבי הארץ — מדד לפריסה, לא למכירות.",
+ h_time:"מחיר לאורך זמן",n_time:"מחיר מדף ממוצע ארצי ליום, מחושב מחדש מכל תצפית שנרשמה אי פעם.",
+ h_deals:"מבצעים חיים",n_deals:"מבצעים ארציים נוכחיים, דרך ה-API החינמי של Open Israeli Supermarkets. ברמת הרשת ולא ברמת הסניף — וטעם שחסר כאן פשוט לא פורסם לו מבצע.",
+ e_wait:"ממתין להרצה הראשונה",e_wait2:"ממתין להרצה הראשונה",e_wait3:"ממתין להרצה הראשונה",
+ e_wait4:"ממתין להרצה הראשונה",e_wait5:"ממתין להרצה הראשונה",e_deals:"אין מבצעים מפורסמים כרגע",
+ foot:"Energy Radar הוא פרויקט עצמאי, ללא שיוך, חסות או קשר ל-Monster Energy או לרשת קמעונאית כלשהי. המחירים הם מה שהרשתות עצמן פרסמו ועשויים לפגר אחרי המדף.",
+ f_priv:"פרטיות",f_analysis:"ניתוח",f_src:"קוד מקור",f_raw:"נתונים גולמיים",
+ c_cheap:"הזול בישראל כרגע",c_spread:"פער בין הזול ליקר",c_flav:"טעמים במעקב",c_cover:"ערים מכוסות",
+ lo:"זול",hi:"יקר",noloc:"אין נתוני מיקום",day:"יום",avg:"ממוצע"
+};
+let LANG=localStorage.getItem("er-lang")||"en";
+function applyLang(){
+  const he=LANG==="he";
+  document.documentElement.lang=he?"he":"en";
+  document.documentElement.dir=he?"rtl":"ltr";
+  document.querySelectorAll("[data-i]").forEach(el=>{
+    const k=el.dataset.i;
+    if(!el.dataset.en) el.dataset.en=el.textContent;
+    el.textContent=he?(HE[k]??el.dataset.en):el.dataset.en;
+  });
+  btnEn.setAttribute("aria-pressed",String(!he));
+  btnHe.setAttribute("aria-pressed",String(he));
+  localStorage.setItem("er-lang",LANG);
+  if(STATE.loaded) renderAll();
 }
+const btnEn=document.getElementById("btn-en"),btnHe=document.getElementById("btn-he");
+btnEn.onclick=()=>{LANG="en";applyLang()};
+btnHe.onclick=()=>{LANG="he";applyLang()};
+const T=(k,en)=>LANG==="he"?(HE[k]??en):en;
 
-async function load() {
-  try {
-    const stats = await fetch(`${RAW}/stats.json`, { cache: "no-store" }).then((r) => {
-      if (!r.ok) throw new Error("no stats.json yet");
-      return r.json();
-    });
+/* ── data ───────────────────────────────────────────── */
+const STATE={stats:null,stores:null,history:null,promos:null,israel:null,loaded:false};
 
-    document.getElementById("subtitle").textContent =
-      `Chains: ${stats.chains_covered.join(", ")} · generated ${new Date(stats.generated_at).toLocaleString()}`;
-
-    document.getElementById("stat-cards").innerHTML = `
-      <div class="card"><div class="n">${stats.store_count}</div><div class="k">Stores covered</div></div>
-      <div class="card"><div class="n">${stats.total_observations.toLocaleString()}</div><div class="k">Total observations</div></div>
-      <div class="card"><div class="n">${stats.observations_this_run}</div><div class="k">This run</div></div>
-    `;
-
-    const variantCounts = stats.listings_per_variant || {};
-    const maxV = Math.max(1, ...Object.values(variantCounts));
-    document.getElementById("per-variant").innerHTML =
-      Object.entries(variantCounts).sort((a, b) => b[1] - a[1])
-        .map(([id, n]) => bar(id, n, maxV)).join("") ||
-      `<div class="empty">No listings yet.</div>`;
-
-    const depletion = stats.depletion_breakdown || {};
-    const maxD = Math.max(1, ...Object.values(depletion));
-    const order = ["healthy", "slowing", "likely_out", "insufficient_data"];
-    document.getElementById("depletion").innerHTML =
-      order.filter((k) => depletion[k] != null)
-        .map((k) => bar(k.replace("_", " "), depletion[k], maxD, `depletion-${k}`)).join("") ||
-      `<div class="empty">No data yet.</div>`;
-  } catch (e) {
-    document.getElementById("subtitle").textContent =
-      "No data yet — this fills in after the first scheduled run (or a manual run from the Actions tab).";
-    document.getElementById("per-variant").innerHTML = `<div class="empty">—</div>`;
-    document.getElementById("depletion").innerHTML = `<div class="empty">—</div>`;
+async function getJSON(u){const r=await fetch(u,{cache:"no-store"});if(!r.ok)throw 0;return r.json();}
+async function getText(u){const r=await fetch(u,{cache:"no-store"});if(!r.ok)throw 0;return r.text();}
+const soft=p=>p.catch(()=>null);
+// history is sharded one file per month (data/history/YYYY-MM.ndjson) so no
+// single file grows without bound. A raw.githubusercontent.com fetch can't
+// list a directory, so data/history/index.json (written by pipeline.py each
+// run) names which months exist; concatenate them all for the full history.
+async function getAllHistory(){
+  try{
+    const idx=await getJSON(`${RAW}/history/index.json`);
+    if(!Array.isArray(idx)||!idx.length)throw 0;
+    const texts=await Promise.all(idx.map(f=>getText(`${RAW}/history/${f}`)));
+    return texts.join("\n");
+  }catch{
+    const ym=new Date().toISOString().slice(0,7);
+    return getText(`${RAW}/history/${ym}.ndjson`);
   }
 }
 
-load();
+(async function boot(){
+  applyLang();
+  const [stats,stores,hist,promos,world]=await Promise.all([
+    soft(getJSON(`${RAW}/stats.json`)),
+    soft(getJSON(`${RAW}/latest.json`)),
+    soft(getAllHistory()),
+    soft(getJSON(`${RAW}/promotions.json`)),
+    soft(getJSON("https://cdn.jsdelivr.net/npm/world-atlas@2.0.2/countries-110m.json"))
+  ]);
+  STATE.stats=stats;
+  STATE.stores=Array.isArray(stores)?stores:null;
+  STATE.promos=promos&&Object.keys(promos).length?promos:null;
+  STATE.history=hist?hist.split("\n").filter(Boolean).map(l=>{try{return JSON.parse(l)}catch{return null}}).filter(Boolean):null;
+  if(world){
+    const f=topojson.feature(world,world.objects.countries);
+    STATE.israel=f.features.find(d=>d.properties&&d.properties.name==="Israel")||null;
+  }
+  STATE.loaded=true;
+  renderAll();
+})();
+
+function renderAll(){strip();callouts();heatmap();chains();stock();popularity();chart();deals();}
+
+/* ── strip ──────────────────────────────────────────── */
+function ago(iso){
+  const ms=Date.now()-new Date(iso).getTime();
+  const h=Math.floor(ms/36e5);
+  if(h<1)return LANG==="he"?"לפני פחות משעה":"under 1h ago";
+  if(h<48)return LANG==="he"?`לפני ${h} שעות`:`${h}h ago`;
+  const d=Math.floor(h/24);
+  return LANG==="he"?`לפני ${d} ימים`:`${d}d ago`;
+}
+const chainName=c=>c.replace(/_/g," ").replace(/\b\w/g,m=>m.toUpperCase());
+function strip(){
+  const s=STATE.stats;
+  const set=(id,v)=>document.getElementById(id).textContent=v;
+  if(!s){["s-updated","s-chains","s-stores","s-obs"].forEach(i=>set(i,"—"));return;}
+  set("s-updated",ago(s.generated_at));
+  set("s-chains",String((s.chains_covered||[]).length));
+  set("s-stores",(s.store_count||0).toLocaleString());
+  set("s-obs",(s.total_observations||0).toLocaleString());
+}
+
+/* ── callouts ───────────────────────────────────────── */
+function allListings(){
+  if(!STATE.stores)return[];
+  const out=[];
+  for(const st of STATE.stores) for(const r of (st.shelf||[])) if(typeof r.price==="number") out.push({...r,store:st});
+  return out;
+}
+function callouts(){
+  const box=document.getElementById("callouts");
+  const L=allListings();
+  if(!L.length){box.hidden=true;box.innerHTML="";return;}
+  const cheapest=L.reduce((a,b)=>b.price<a.price?b:a);
+  const prices=L.map(l=>l.price).sort((a,b)=>a-b);
+  const spread=prices[prices.length-1]-prices[0];
+  const flavs=new Set(L.map(l=>l.variantId)).size;
+  const cards=[
+    {k:T("c_cheap","Cheapest Monster in Israel"),v:ILS(cheapest.price),
+     s:`${vname(cheapest.variantId)} · ${chainName(cheapest.store.chain)}${cheapest.store.name?" · "+cheapest.store.name:""}`},
+    {k:T("c_spread","Cheapest-to-priciest spread"),v:ILS(spread),
+     s:`${ILS(prices[0])} → ${ILS(prices[prices.length-1])}`},
+    {k:T("c_flav","Flavours on shelves"),v:String(flavs),
+     s:`${L.length.toLocaleString()} ${LANG==="he"?"ליסטינגים":"listings"}`}
+  ];
+  box.hidden=false;
+  box.innerHTML=cards.map(c=>
+    `<div class="callout"><div class="k">${esc(c.k)}</div><div class="v">${esc(c.v)}</div><div class="s">${esc(c.s)}</div></div>`).join("");
+}
+const esc=s=>String(s).replace(/[&<>"]/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[m]));
+
+/* ── heatmap ────────────────────────────────────────── */
+function heatmap(){
+  const host=document.getElementById("map");
+  const L=allListings().filter(l=>typeof l.store.lat==="number"&&typeof l.store.lng==="number");
+  if(!STATE.israel||!L.length){
+    host.innerHTML=`<i class="c tl"></i><i class="c tr"></i><i class="c bl"></i><i class="c br"></i>
+      <div class="empty"><span class="big">${esc(T("e_wait","Awaiting first pipeline run"))}</span><span class="path">data/latest.json</span></div>`;
+    document.getElementById("lg-lo").textContent="—";
+    document.getElementById("lg-hi").textContent="—";
+    return;
+  }
+  const W=620,H=760,STEP=0.10; // ~11km cells
+  const proj=d3.geoMercator().fitExtent([[14,14],[W-14,H-14]],STATE.israel);
+  const path=d3.geoPath(proj);
+
+  const buckets=new Map();
+  for(const l of L){
+    const key=`${Math.floor(l.store.lat/STEP)}|${Math.floor(l.store.lng/STEP)}`;
+    const b=buckets.get(key)||{min:Infinity,n:0,chain:"",flav:""};
+    if(l.price<b.min){b.min=l.price;b.chain=l.store.chain;b.flav=l.variantId;}
+    b.n++;buckets.set(key,b);
+  }
+  const mins=[...buckets.values()].map(b=>b.min);
+  const lo=d3.min(mins),hi=d3.max(mins);
+  const scale=d3.scaleLinear().domain(lo===hi?[lo-1,hi+1]:[lo,hi]).range([0,1]).clamp(true);
+  const ramp=d3.interpolateRgbBasis(["#39ff6a","#a8e04a","#e0b23d","#ff5a5a"]);
+
+  const svg=d3.create("svg").attr("viewBox",`0 0 ${W} ${H}`).attr("role","img")
+    .attr("aria-label",LANG==="he"?"מפת חום של מחירי מונסטר בישראל":"Heatmap of Monster prices across Israel");
+  const clip=svg.append("defs").append("clipPath").attr("id","il-clip");
+  clip.append("path").attr("d",path(STATE.israel));
+  svg.append("path").attr("d",path(STATE.israel)).attr("fill","rgba(57,255,106,.035)")
+     .attr("stroke","rgba(57,255,106,.45)").attr("stroke-width",1);
+  const g=svg.append("g").attr("clip-path","url(#il-clip)");
+
+  // full coverage grid over the country bbox
+  const [[x0,y0],[x1,y1]]=d3.geoBounds(STATE.israel);
+  for(let la=Math.floor(y0/STEP)*STEP;la<y1+STEP;la+=STEP){
+    for(let ln=Math.floor(x0/STEP)*STEP;ln<x1+STEP;ln+=STEP){
+      const a=proj([ln,la+STEP]),b=proj([ln+STEP,la]);
+      if(!a||!b)continue;
+      const key=`${Math.round(la/STEP)}|${Math.round(ln/STEP)}`;
+      const hit=buckets.get(key);
+      g.append("rect").attr("class","cellrect")
+        .attr("x",a[0]).attr("y",a[1])
+        .attr("width",Math.max(0,b[0]-a[0])).attr("height",Math.max(0,b[1]-a[1]))
+        .attr("fill",hit?ramp(scale(hit.min)):"rgba(234,242,236,.028)")
+        .attr("stroke",hit?"rgba(6,8,7,.55)":"rgba(234,242,236,.05)")
+        .attr("stroke-width",.6)
+        .attr("data-tip",hit?`<b>${esc(ILS(hit.min))}</b><br>${esc(vname(hit.flav))}<br>${esc(chainName(hit.chain))} · ${hit.n} ${LANG==="he"?"ליסטינגים":"listings"}`:"");
+    }
+  }
+  host.innerHTML=`<i class="c tl"></i><i class="c tr"></i><i class="c bl"></i><i class="c br"></i>`;
+  host.appendChild(svg.node());
+  document.getElementById("lg-lo").textContent=`${T("lo","Cheap")} ${ILS(lo)}`;
+  document.getElementById("lg-hi").textContent=`${ILS(hi)} ${T("hi","Pricey")}`;
+
+  const tip=document.getElementById("tip");
+  host.onmousemove=e=>{
+    const t=e.target.getAttribute&&e.target.getAttribute("data-tip");
+    if(t){tip.innerHTML=t;tip.style.opacity=1;
+      tip.style.left=Math.min(e.clientX+14,innerWidth-244)+"px";
+      tip.style.top=(e.clientY+14)+"px";}
+    else tip.style.opacity=0;
+  };
+  host.onmouseleave=()=>tip.style.opacity=0;
+}
+
+/* ── chains ─────────────────────────────────────────── */
+function emptyBox(key,en,path){
+  return `<i class="c tl"></i><i class="c tr"></i><i class="c bl"></i><i class="c br"></i>
+    <div class="empty"><span class="big">${esc(T(key,en))}</span><span class="path">${path}</span></div>`;
+}
+function chains(){
+  const host=document.getElementById("chainrows");
+  const L=allListings();
+  if(!L.length){host.innerHTML=emptyBox("e_wait","Awaiting first pipeline run","data/latest.json");return;}
+  const by=d3.rollups(L,v=>d3.mean(v,d=>d.price),d=>d.store.chain)
+    .map(([c,avg])=>({c,avg})).sort((a,b)=>a.avg-b.avg);
+  host.innerHTML=`<i class="c tl"></i><i class="c tr"></i><i class="c bl"></i><i class="c br"></i>`+
+    by.map((r,i)=>`<div class="row${i===0?" top":""}">
+      <div class="rk">${String(i+1).padStart(2,"0")}</div>
+      <div class="nm">${esc(chainName(r.c))}</div>
+      <div class="val">${esc(ILS(r.avg))}</div></div>`).join("");
+}
+
+/* ── stock ──────────────────────────────────────────── */
+function stock(){
+  const host=document.getElementById("stockrows");
+  const d=STATE.stats&&STATE.stats.depletion_breakdown;
+  if(!d||!Object.keys(d).length){host.innerHTML=emptyBox("e_wait","Awaiting first pipeline run","data/stats.json");return;}
+  const labels={healthy:["Healthy","תקין"],slowing:["Slowing","מאט"],likely_out:["Likely out","כנראה אזל"],insufficient_data:["Not enough data","אין מספיק נתונים"]};
+  const order=["healthy","slowing","likely_out","insufficient_data"].filter(k=>d[k]!=null);
+  const max=Math.max(1,...order.map(k=>d[k]));
+  host.innerHTML=`<i class="c tl"></i><i class="c tr"></i><i class="c bl"></i><i class="c br"></i>`+
+    order.map(k=>`<div class="barrow">
+      <div class="lb">${esc(labels[k][LANG==="he"?1:0])}</div>
+      <div class="track"><div class="fill d-${k}" style="width:${Math.round(d[k]/max*100)}%"></div></div>
+      <div class="n">${d[k]}</div></div>`).join("");
+}
+
+/* ── popularity ─────────────────────────────────────── */
+function popularity(){
+  const host=document.getElementById("poprows");
+  const v=STATE.stats&&STATE.stats.listings_per_variant;
+  if(!v||!Object.keys(v).length){host.innerHTML=emptyBox("e_wait","Awaiting first pipeline run","data/stats.json");return;}
+  const rows=Object.entries(v).sort((a,b)=>b[1]-a[1]);
+  const max=Math.max(1,...rows.map(r=>r[1]));
+  host.innerHTML=`<i class="c tl"></i><i class="c tr"></i><i class="c bl"></i><i class="c br"></i>`+
+    rows.map(([id,n],i)=>`<div class="barrow">
+      <div class="lb" title="${esc(vname(id))}">${esc(vname(id))}</div>
+      <div class="track"><div class="fill${i===0?" hi":""}" style="width:${Math.round(n/max*100)}%"></div></div>
+      <div class="n">${n}</div></div>`).join("");
+}
+
+/* ── chart ──────────────────────────────────────────── */
+function chart(){
+  const host=document.getElementById("chart"),sel=document.getElementById("flavsel");
+  const h=STATE.history;
+  if(!h||!h.length){host.innerHTML=emptyBox("e_wait","Awaiting first pipeline run","data/history/");sel.hidden=true;return;}
+  const ids=[...new Set(h.map(r=>r.variant_id))];
+  if(!ids.length){host.innerHTML=emptyBox("e_wait","Awaiting first pipeline run","data/history/");sel.hidden=true;return;}
+  sel.hidden=false;
+  const keep=sel.value&&ids.includes(sel.value)?sel.value:ids[0];
+  sel.innerHTML=ids.map(id=>`<option value="${esc(id)}"${id===keep?" selected":""}>${esc(vname(id))}</option>`).join("");
+  sel.onchange=chart;
+
+  const rows=h.filter(r=>r.variant_id===keep&&typeof r.price==="number");
+  const series=d3.rollups(rows,v=>d3.mean(v,d=>d.price),d=>String(d.fetched_at).slice(0,10))
+    .map(([d,v])=>({d:new Date(d+"T00:00:00Z"),v})).sort((a,b)=>a.d-b.d);
+
+  host.innerHTML=`<i class="c tl"></i><i class="c tr"></i><i class="c bl"></i><i class="c br"></i>`;
+  if(series.length<2){
+    const only=series[0];
+    host.insertAdjacentHTML("beforeend",
+      `<div class="empty"><span class="big">${LANG==="he"?"נקודת נתונים אחת בלבד עד כה":"Only one day of data so far"}</span>
+       <span class="path">${only?esc(ILS(only.v))+" · "+only.d.toISOString().slice(0,10):""}</span></div>`);
+    return;
+  }
+  const W=900,H=300,M={t:16,r:16,b:30,l:46};
+  const x=d3.scaleTime().domain(d3.extent(series,d=>d.d)).range([M.l,W-M.r]);
+  const ex=d3.extent(series,d=>d.v), pad=Math.max(.25,(ex[1]-ex[0])*.2);
+  const y=d3.scaleLinear().domain([ex[0]-pad,ex[1]+pad]).nice().range([H-M.b,M.t]);
+  const svg=d3.create("svg").attr("viewBox",`0 0 ${W} ${H}`);
+  svg.append("g").attr("transform",`translate(0,${H-M.b})`)
+    .call(d3.axisBottom(x).ticks(6).tickSizeOuter(0));
+  svg.append("g").attr("transform",`translate(${M.l},0)`)
+    .call(d3.axisLeft(y).ticks(5).tickFormat(v=>"₪"+v.toFixed(1)).tickSizeOuter(0));
+  svg.selectAll(".domain,.tick line").attr("stroke","rgba(234,242,236,.18)");
+  svg.selectAll(".tick text").attr("fill","#7e8c82").attr("font-family","'IBM Plex Mono',monospace").attr("font-size",10);
+  svg.append("path").datum(series).attr("fill","none").attr("stroke","#39ff6a").attr("stroke-width",2)
+    .attr("d",d3.line().x(d=>x(d.d)).y(d=>y(d.v)).curve(d3.curveMonotoneX));
+  svg.append("path").datum(series).attr("fill","rgba(57,255,106,.11)")
+    .attr("d",d3.area().x(d=>x(d.d)).y0(H-M.b).y1(d=>y(d.v)).curve(d3.curveMonotoneX));
+  svg.selectAll("circle").data(series).join("circle")
+    .attr("cx",d=>x(d.d)).attr("cy",d=>y(d.v)).attr("r",2.6).attr("fill","#39ff6a");
+  host.appendChild(svg.node());
+}
+
+/* ── deals ──────────────────────────────────────────── */
+function deals(){
+  const host=document.getElementById("deals");
+  const p=STATE.promos;
+  const items=[];
+  if(p)for(const [vid,list] of Object.entries(p))for(const d of (list||[]))items.push({vid,...d});
+  if(!items.length){
+    host.innerHTML=`<div class="bp">${emptyBox("e_deals","No promotions published right now","data/promotions.json")}</div>`;
+    return;
+  }
+  host.innerHTML=`<div class="deals">`+items.slice(0,24).map(d=>{
+    const bits=[];
+    if(d.discountRate)bits.push(`<span class="pill">-${esc(d.discountRate)}%</span>`);
+    if(d.minQuantity)bits.push(`<span class="pill">${LANG==="he"?"מ-":"min "}${esc(d.minQuantity)}</span>`);
+    if(d.clubOnly)bits.push(`<span class="pill">${LANG==="he"?"מועדון":"Club only"}</span>`);
+    const end=d.endsAt?`${LANG==="he"?"עד":"until"} ${esc(String(d.endsAt).slice(0,10))}`:"";
+    return `<div class="bp deal"><i class="c tl"></i><i class="c tr"></i><i class="c bl"></i><i class="c br"></i>
+      <div class="fl2">${esc(vname(d.vid))}</div>
+      <div class="ds">${esc(d.description||"")}</div>
+      <div>${bits.join("")}</div>
+      <div class="dm" style="margin-top:8px">${end}</div></div>`;
+  }).join("")+`</div>`;
+}
 </script>
 </body>
 </html>
