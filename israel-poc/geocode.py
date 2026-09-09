@@ -35,6 +35,11 @@ query can fully solve — worth knowing about rather than pretending it's
 airtight. A lookup that fails, is too vague, or fails the sanity check is
 recorded as `null` in the cache rather than retried every run (a bad
 address doesn't get better by asking again).
+
+For the handful of specific branches this has actually been confirmed on,
+see MANUAL_OVERRIDES below — hand-verified once (by re-querying with the
+real city name, which the automated pipeline can't do — see its own
+comment) rather than left wrong or silently dropped.
 """
 
 import json
@@ -79,13 +84,46 @@ def save_cache(cache: dict) -> None:
 
 
 def _cache_key(address: str, zip_code: str) -> str:
-    return f"{address.strip()}|{zip_code.strip()}"
+    # Collapse internal whitespace too (a real case had "צאלון   21" with
+    # three spaces, straight from the source XML) so a manual override or
+    # cache entry keyed on the clean form still matches.
+    return f"{' '.join(address.split())}|{zip_code.strip()}"
+
+
+# Manual corrections for specific branches confirmed, by hand, to have no
+# reliable free-geocoder answer (see the module docstring above). Found by
+# re-querying Nominatim with the real city name included — something the
+# pipeline itself can't do, since chain files never give a city name, only
+# a numeric code — which the automated street+zip query can't replicate.
+# `None` means "confirmed to be a real branch, but no trustworthy
+# coordinate exists" — excluded on purpose rather than guessed. Checked
+# before the cache, so it always wins over whatever's already cached.
+MANUAL_OVERRIDES: dict[str, list[float] | None] = {
+    # Shufersal Deal Modi'in Center. Automated query put this ~150km away
+    # near Tiberias; re-querying with "מודיעין" as the city resolved it
+    # ~1.5km from Modi'in's real centre (2026-09-10).
+    _cache_key("צאלון 21", "7171519"): [31.9073982, 35.0157619],
+    # Shufersal Express Modi'in. Automated query put this near Tel Aviv;
+    # with the real city included it lands on the same block as a real
+    # Super-Pharm and Pizza Hut at this address (2026-09-10).
+    _cache_key("26 חיים ויצמן", "7178943"): [31.9044678, 34.9867339],
+    # Shufersal Express HaTziporim Modi'in. Real branch, confirmed by web
+    # search to be in Modi'in's "Birds" neighbourhood (streets there are
+    # all named after birds) -- but HaChasida St isn't in OpenStreetMap's
+    # data at all, under any phrasing tried, so there is no free-geocoder
+    # path to a real coordinate. Excluded rather than guessed.
+    _cache_key("2 החסידה", "7169447"): None,
+}
 
 
 def geocode(address: str, zip_code: str, cache: dict) -> list | None:
     """Returns [lat, lng] or None (unresolved). Mutates `cache` in place;
     caller is responsible for save_cache() once done with a whole run."""
     key = _cache_key(address, zip_code)
+    if key in MANUAL_OVERRIDES:
+        cache[key] = MANUAL_OVERRIDES[key]
+        return MANUAL_OVERRIDES[key]
+
     if key in cache:
         return cache[key]
 
