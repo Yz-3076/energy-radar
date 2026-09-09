@@ -47,6 +47,7 @@ from il_supermarket_scarper.utils.file_output import DiskFileOutput
 import depletion
 import geocode as geo
 import promotions as promo
+import promotions_gov
 
 ROOT = Path(__file__).resolve().parent.parent
 DATA_DIR = ROOT / "data"
@@ -237,6 +238,7 @@ async def run() -> None:
     new_observations: list[dict] = []
     stores_by_key: dict[str, dict] = {}  # f"{chain}:{store_id}" -> Store shape
     barcodes_seen: dict[str, str] = {}  # barcode -> variant_id, for promotions.py
+    gov_promo_maps: list[dict] = []  # one per store — see promotions_gov.py
 
     for chain in CHAINS:
         print(f"=== {chain} ===")
@@ -273,6 +275,13 @@ async def run() -> None:
                     "lng": coords[1],
                     "shelf": [],
                 }
+                # First time we're keeping this store this run — piggyback
+                # a real promo-file fetch here rather than a separate pass,
+                # since "first time seen" already naturally dedupes per
+                # store. See promotions_gov.py for the filtering that keeps
+                # this from drowning in blanket meal-voucher noise.
+                promo_dir = await promotions_gov.fetch_store_promos(chain, item["store_id"])
+                gov_promo_maps.append(promotions_gov.parse_store_promos(promo_dir, BARCODE_TO_VARIANT))
 
             stores_by_key[store_key]["shelf"].append(
                 {
@@ -317,12 +326,18 @@ async def run() -> None:
     )
     print(f"\nWrote data/latest.json — {len(stores_out)} store(s), {len(new_observations)} observation(s) this run")
 
-    # Bonus, non-authoritative layer on top of the prices above — see
-    # promotions.py's module docstring. Nationwide per flavour, not
-    # per-store, and entirely skipped (empty file) if no API token is
-    # configured. The app should treat this as "current deals worth
-    # mentioning", never as something a missing entry implies "no deal".
-    promo_by_variant = promo.promotions_by_variant(barcodes_seen)
+    # Bonus, non-authoritative layer on top of the prices above. Two
+    # sources merged: real promos parsed straight from the government feed
+    # (promotions_gov.py — no token, no third party, on by default) and
+    # whatever the optional third-party API adds on top when its own auth
+    # is working (promotions.py — currently broken on their end, see its
+    # docstring; contributes nothing while that's true, which is fine,
+    # this was always meant as a bonus layer, never a dependency). The app
+    # should treat a missing entry as "no deal seen", never as proof there
+    # isn't one.
+    promo_by_variant = promotions_gov.merge_promo_maps(
+        *gov_promo_maps, promo.promotions_by_variant(barcodes_seen)
+    )
     (DATA_DIR / "promotions.json").write_text(
         json.dumps(promo_by_variant, ensure_ascii=False, indent=2), encoding="utf-8"
     )

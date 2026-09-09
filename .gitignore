@@ -11,6 +11,7 @@ venv/
 israel-poc/dumps/
 israel-poc/*_cookies.txt
 israel-poc/logging.log
+israel-poc/status/
 
 # OS / editor noise
 .DS_Store
