@@ -43,7 +43,7 @@
     "prebuild": "expo prebuild",
     "lint": "tsc --noEmit",
     "icons": "node scripts/build-icons.mjs",
-    "brand-assets": "node scripts/build-icon-assets.mjs"
+    "brand-assets": "node scripts/build-brand-assets.mjs"
   },
   "private": true,
   "expo": {
