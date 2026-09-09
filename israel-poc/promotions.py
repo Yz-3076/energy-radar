@@ -15,6 +15,17 @@ this contributes nothing and the pipeline runs exactly as it did before —
 promo info is a bonus on top of the prices we already scrape ourselves,
 never a dependency. See israel-poc/README.md for how this fits alongside
 the direct government-feed scrape.
+
+Known issue, confirmed 2026-09-09 the day a real token was first added: any
+request carrying an Authorization header against this API currently hangs
+until timeout, every time, regardless of client (urllib, requests) or
+headers sent -- isolated by confirming the exact same requests with NO
+auth header return instantly and correctly (200/401 as expected). Their
+own docs mention JWT verification via Supabase, so this looks like a bug
+or outage in their auth-validation call, not anything wrong with the token
+itself or this code. Kept the timeout short (rather than the usual ~10s)
+specifically so this doesn't add much dead time per barcode while their
+auth stays broken -- revisit once it's confirmed working again.
 """
 
 import os
@@ -25,7 +36,7 @@ API_BASE = "https://data.openisraelisupermarkets.co.il"
 TOKEN = os.environ.get("OPEN_IL_SUPERMARKETS_TOKEN")
 
 
-def _get(path, params=None, timeout=10):
+def _get(path, params=None, timeout=6):
     if not TOKEN:
         return None
     try:
