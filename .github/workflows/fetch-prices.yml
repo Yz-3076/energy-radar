@@ -40,5 +40,19 @@ jobs:
           git config user.name "energy-radar-bot"
           git config user.email "actions@users.noreply.github.com"
           git add data/
-          git diff --cached --quiet && echo "No data changes this run." || git commit -m "Update price data ($(date -u +'%Y-%m-%d %H:%M UTC'))"
-          git push
+          git diff --cached --quiet && { echo "No data changes this run."; exit 0; }
+          git commit -m "Update price data ($(date -u +'%Y-%m-%d %H:%M UTC'))"
+          # main can move (app-code commits, another run) in the ~15 minutes
+          # this job takes to scrape nationwide, so a bare `git push` here
+          # was a real, confirmed failure mode -- rebase onto whatever
+          # landed in the meantime and retry a few times rather than losing
+          # a full run's data to a stale, non-fast-forward push.
+          for attempt in 1 2 3 4 5; do
+            if git push; then
+              exit 0
+            fi
+            echo "push rejected (attempt $attempt/5), rebasing onto origin/main and retrying..."
+            git pull --rebase origin main
+          done
+          echo "::error::push still failing after 5 attempts"
+          exit 1
