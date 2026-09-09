@@ -9,11 +9,32 @@ address once (addresses don't move), a run only ever pays this cost for
 stores never seen before — most runs geocode nothing at all.
 
 Chain price files give a numeric city code, not a city name (see
-docs/israel-pipeline.md), so this geocodes on street address + ZIP + country
-only. That is enough for Nominatim to resolve correctly in the large
-majority of cases; a lookup that comes back empty is recorded as `null` in
-the cache rather than retried every run (a bad address doesn't get better by
-asking again).
+docs/israel-pipeline.md), so this geocodes on street address + ZIP + country.
+
+Confirmed 2026-09-09 (real case: a Modi'in branch listed only as "ישפרו
+סנטר" — a mall name, no street number): Nominatim doesn't fail on an
+address like this, it confidently returns a WRONG match up to ~150km away
+(a same-named place elsewhere in Israel). The old `if coords is None` check
+had no way to catch that — a wrong-but-non-null result was cached forever
+and the store silently showed up at the wrong location instead of just
+being missing. Three defenses now, in order:
+  1. An address with no digit at all (no street number — a mall/center
+     name, not a real street address) is treated as too vague to trust and
+     never even queried; see `_too_vague`.
+  2. A structured query (street/postalcode/country as separate fields
+     rather than one free-text string) tends to match this data shape
+     better than a smushed-together string.
+  3. Any result outside Israel's own bounding box is rejected as a sanity
+     backstop.
+None of this is a complete fix — a *properly formatted* street address can
+still resolve to the wrong city if Nominatim/OpenStreetMap's coverage for
+that specific street is thin (confirmed on a real case: "צאלון 21" in
+Modi'in resolved ~150km away despite being a normal street+number). That's
+a genuine data-quality gap in the free geocoder, not something a smarter
+query can fully solve — worth knowing about rather than pretending it's
+airtight. A lookup that fails, is too vague, or fails the sanity check is
+recorded as `null` in the cache rather than retried every run (a bad
+address doesn't get better by asking again).
 """
 
 import json
@@ -25,6 +46,25 @@ from pathlib import Path
 CACHE_PATH = Path(__file__).resolve().parent.parent / "data" / "geocode-cache.json"
 USER_AGENT = "energy-radar-price-pipeline/1.0 (github.com/joshuazisel/monster-tracker)"
 MIN_INTERVAL_S = 1.1  # Nominatim policy: max 1 req/sec; a little slack
+
+# Generous bounding box around Israel + the territories chain branches can
+# realistically be in (lat, lng). Not a precise border — just wide enough to
+# never reject a real branch, tight enough to catch a same-named place in a
+# totally different part of the country.
+ISRAEL_BOUNDS = (29.3, 33.5, 34.1, 36.0)  # (min_lat, max_lat, min_lng, max_lng)
+
+
+def _in_israel(lat: float, lng: float) -> bool:
+    min_lat, max_lat, min_lng, max_lng = ISRAEL_BOUNDS
+    return min_lat <= lat <= max_lat and min_lng <= lng <= max_lng
+
+
+def _too_vague(address: str) -> bool:
+    """No digit at all means no street number — a mall/center/branch name
+    ("ישפרו סנטר", "מודיעין") rather than an actual street address.
+    Confirmed these are exactly the addresses Nominatim confidently
+    mis-resolves rather than fails on, so they're worth skipping outright."""
+    return not any(ch.isdigit() for ch in address)
 
 
 def load_cache() -> dict:
@@ -49,8 +89,15 @@ def geocode(address: str, zip_code: str, cache: dict) -> list | None:
     if key in cache:
         return cache[key]
 
-    query = f"{address}, {zip_code}, Israel" if zip_code else f"{address}, Israel"
-    qs = urllib.parse.urlencode({"q": query, "format": "json", "limit": 1})
+    if _too_vague(address):
+        print(f"  geocode skipped for {address!r} ({zip_code}): no street number, too vague to trust")
+        cache[key] = None
+        return None
+
+    params = {"street": address, "country": "Israel", "format": "json", "limit": 1}
+    if zip_code:
+        params["postalcode"] = zip_code
+    qs = urllib.parse.urlencode(params)
     req = urllib.request.Request(
         f"https://nominatim.openstreetmap.org/search?{qs}",
         headers={"User-Agent": USER_AGENT},
@@ -60,9 +107,13 @@ def geocode(address: str, zip_code: str, cache: dict) -> list | None:
         with urllib.request.urlopen(req, timeout=10) as resp:
             hits = json.loads(resp.read().decode("utf-8"))
         if hits:
-            result = [float(hits[0]["lat"]), float(hits[0]["lon"])]
+            lat, lng = float(hits[0]["lat"]), float(hits[0]["lon"])
+            if _in_israel(lat, lng):
+                result = [lat, lng]
+            else:
+                print(f"  geocode rejected for {address!r} ({zip_code}): {lat},{lng} is outside Israel")
     except Exception as e:  # noqa: BLE001 — a failed lookup should not crash the run
-        print(f"  geocode failed for {query!r}: {e}")
+        print(f"  geocode failed for {address!r} ({zip_code}): {e}")
     finally:
         time.sleep(MIN_INTERVAL_S)
 
