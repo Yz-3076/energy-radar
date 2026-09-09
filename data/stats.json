@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-09T04:21:30.704033+00:00",
+  "generated_at": "2026-09-09T11:08:44.733562+00:00",
   "chains_covered": [
     "SHUFERSAL",
     "VICTORY_NEW_SOURCE",
@@ -8,20 +8,21 @@
     "OSHER_AD",
     "DOR_ALON"
   ],
-  "store_count": 319,
-  "total_observations": 4499,
-  "observations_this_run": 1804,
+  "store_count": 335,
+  "total_observations": 6771,
+  "observations_this_run": 2272,
   "listings_per_variant": {
-    "ultra": 341,
-    "mango-loco": 318,
-    "ultra-paradise": 298,
-    "ultra-fiesta": 296,
-    "full-zero": 253,
-    "original": 298
+    "ultra": 437,
+    "mango-loco": 375,
+    "ultra-paradise": 398,
+    "ultra-fiesta": 353,
+    "full-zero": 309,
+    "original": 400
   },
   "depletion_breakdown": {
-    "insufficient_data": 1618,
-    "healthy": 184,
-    "likely_out": 2
+    "insufficient_data": 1893,
+    "healthy": 198,
+    "likely_out": 142,
+    "slowing": 39
   }
 }
