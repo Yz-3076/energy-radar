@@ -1,11 +1,22 @@
 import { useLocalSearchParams, useRouter } from "expo-router";
-import React, { useMemo } from "react";
-import { ScrollView, StyleSheet, Text, View } from "react-native";
+import React, { useMemo, useState } from "react";
+import { Linking, Modal, ScrollView, StyleSheet, Text, TextInput, View } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 
 import { Can } from "@/components/Can";
 import { openDirections } from "@/components/StoreBubble";
-import { Bell, BellRinging, BookmarkSimple, CaretLeft, Clock, NavigationArrow } from "@/components/icons";
+import {
+  Bell,
+  BellRinging,
+  BookmarkSimple,
+  CaretLeft,
+  Clock,
+  Flame,
+  Info,
+  NavigationArrow,
+  X,
+} from "@/components/icons";
+import { PromoList } from "@/components/PromoList";
 import { Kicker, Tap, rowDivider, styles as ui } from "@/components/ui";
 import { NEARBY_METRES } from "@/data/alerts";
 import { getVariant } from "@/data/catalog";
@@ -14,12 +25,32 @@ import { cheapest, distanceM, ils, isolate, prettyDistance, relativeTime, walkMi
 import { useApp } from "@/state/AppState";
 import { color, muted, radius, space, textAlpha } from "@/theme";
 
+const REPORT_REPO = "Yz-3076/energy-radar";
+
+function openReportIssue(storeId: string, storeName: string, address: string, message: string) {
+  const title = `Store report: ${storeName}`;
+  const body = [
+    message.trim() || "(no details given)",
+    "",
+    "---",
+    `Store: ${storeName}`,
+    `Address: ${address}`,
+    `ID: ${storeId}`,
+  ].join("\n");
+  const url =
+    `https://github.com/${REPORT_REPO}/issues/new?` +
+    `title=${encodeURIComponent(title)}&body=${encodeURIComponent(body)}&labels=user-report`;
+  Linking.openURL(url).catch(() => {});
+}
+
 export default function StoreScreen() {
   const { id } = useLocalSearchParams<{ id: string }>();
   const router = useRouter();
   const insets = useSafeAreaInsets();
-  const { storeById, stores, coord, saved, toggleSaved, storeAlertFor, toggleStoreAlert } = useApp();
+  const { storeById, stores, coord, saved, toggleSaved, storeAlertFor, toggleStoreAlert, promotionsFor } = useApp();
   const now = useMemo(() => new Date(), []);
+  const [reportOpen, setReportOpen] = useState(false);
+  const [reportText, setReportText] = useState("");
 
   const store = storeById(String(id));
   if (!store) {
@@ -55,6 +86,26 @@ export default function StoreScreen() {
   }, [stores, best]);
 
   const cheaperCount = spread.rows.filter((x) => x.r.price < best.price).length;
+
+  /** Every live promo on anything this shelf carries, labelled with which
+   *  flavour it's for since a store can carry several. Nationwide per
+   *  flavour, not confirmed specific to this branch — see PromoList. */
+  const shelfPromos = useMemo(
+    () =>
+      shelf.flatMap((r) => {
+        const promos = promotionsFor(r.variantId);
+        if (promos.length === 0) return [];
+        const name = getVariant(r.variantId).name;
+        return promos.map((p) => ({ ...p, description: `${name} — ${p.description || "Promotion"}` }));
+      }),
+    [shelf, promotionsFor],
+  );
+
+  const submitReport = () => {
+    openReportIssue(store.id, store.name, store.address, reportText);
+    setReportOpen(false);
+    setReportText("");
+  };
 
   return (
     <ScrollView
@@ -92,6 +143,14 @@ export default function StoreScreen() {
           <Text style={styles.open}>
             {store.closesAt === "24h" ? "Open 24 hours" : `Open until ${store.closesAt}`}
           </Text>
+          {shelfPromos.length > 0 ? (
+            <View style={styles.dealPill}>
+              <Flame size={10} color="#ff5a2e" weight="fill" />
+              <Text style={styles.dealPillText}>
+                {shelfPromos.length} {shelfPromos.length === 1 ? "deal" : "deals"}
+              </Text>
+            </View>
+          ) : null}
         </View>
 
         <Text style={styles.name}>{store.name}</Text>
@@ -167,6 +226,13 @@ export default function StoreScreen() {
           })}
         </View>
 
+        {shelfPromos.length > 0 ? (
+          <>
+            <Kicker style={styles.kicker}>Current deals</Kicker>
+            <PromoList promos={shelfPromos} />
+          </>
+        ) : null}
+
         <Kicker style={styles.kicker}>Price spread · {bestVariant.name}</Kicker>
         <View style={[ui.card, styles.chart]}>
           <View style={styles.bars}>
@@ -203,7 +269,45 @@ export default function StoreScreen() {
           Stock status is a plain estimate — how the price was sourced and how long ago — not a live feed
           from the register. A listed can may already be off the shelf even when it reads "In stock".
         </Text>
+
+        <Tap style={styles.reportButton} onPress={() => setReportOpen(true)}>
+          <Info size={13} color={textAlpha(55)} />
+          <Text style={styles.reportLabel}>Report a problem with this store</Text>
+        </Tap>
       </View>
+
+      <Modal visible={reportOpen} transparent animationType="fade" onRequestClose={() => setReportOpen(false)}>
+        <View style={styles.modalScrim}>
+          <View style={styles.modalCard}>
+            <View style={styles.modalHead}>
+              <Text style={styles.modalTitle}>Report a problem</Text>
+              <Tap onPress={() => setReportOpen(false)} hitSlop={10}>
+                <X size={16} color={textAlpha(60)} />
+              </Tap>
+            </View>
+            <Text style={styles.modalSub}>
+              Wrong address, closed down, bad price — whatever it is, this opens a public GitHub issue with
+              your note and this store's details already filled in.
+            </Text>
+            <TextInput
+              multiline
+              autoFocus
+              value={reportText}
+              onChangeText={setReportText}
+              placeholder="What's wrong with this store?"
+              placeholderTextColor={textAlpha(38)}
+              style={styles.modalInput}
+            />
+            <Tap
+              haptic="medium"
+              style={[ui.ghostButton, styles.modalSubmit, !reportText.trim() && styles.modalSubmitOff]}
+              onPress={submitReport}
+            >
+              <Text style={ui.ghostLabel}>Open issue on GitHub</Text>
+            </Tap>
+          </View>
+        </View>
+      </Modal>
     </ScrollView>
   );
 }
@@ -296,4 +400,64 @@ const styles = StyleSheet.create({
   chartPrice: { fontSize: 18, fontWeight: "700", color: color.accent },
   chartMeta: { flex: 1, fontSize: 10.5, color: muted },
   footnote: { fontSize: 10.5, lineHeight: 16, color: textAlpha(38), marginTop: space[6] },
+  dealPill: {
+    flexDirection: "row",
+    alignItems: "center",
+    gap: 4,
+    marginLeft: space[3],
+    paddingHorizontal: 7,
+    paddingVertical: 2,
+    borderRadius: 999,
+    borderWidth: 1,
+    borderColor: "rgba(255,90,46,0.4)",
+    backgroundColor: "rgba(255,90,46,0.12)",
+  },
+  dealPillText: {
+    fontSize: 9,
+    fontWeight: "700",
+    letterSpacing: 0.4,
+    textTransform: "uppercase",
+    color: "#ff8a5f",
+  },
+  reportButton: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "center",
+    gap: space[2],
+    marginTop: space[6],
+    paddingVertical: space[3],
+  },
+  reportLabel: { fontSize: 11, color: textAlpha(55) },
+  modalScrim: {
+    flex: 1,
+    backgroundColor: "rgba(4,5,4,0.72)",
+    alignItems: "center",
+    justifyContent: "center",
+    padding: 24,
+  },
+  modalCard: {
+    width: "100%",
+    borderRadius: radius.lg,
+    borderWidth: 1,
+    borderColor: color.neutral800,
+    backgroundColor: color.surface,
+    padding: space[6],
+  },
+  modalHead: { flexDirection: "row", alignItems: "center", justifyContent: "space-between" },
+  modalTitle: { fontSize: 15, fontWeight: "700", color: color.text },
+  modalSub: { fontSize: 11.5, lineHeight: 16, color: textAlpha(55), marginTop: space[3] },
+  modalInput: {
+    minHeight: 90,
+    marginTop: space[4],
+    padding: space[3],
+    borderRadius: radius.md,
+    borderWidth: 1,
+    borderColor: color.neutral800,
+    backgroundColor: color.bg,
+    color: color.text,
+    fontSize: 13,
+    textAlignVertical: "top",
+  },
+  modalSubmit: { height: 44, marginTop: space[4] },
+  modalSubmitOff: { opacity: 0.5 },
 });

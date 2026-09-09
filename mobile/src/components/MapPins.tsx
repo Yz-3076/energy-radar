@@ -2,6 +2,8 @@ import React, { memo } from "react";
 import { StyleSheet, Text, View } from "react-native";
 
 import { Can } from "./Can";
+import { Crown } from "./Crown";
+import { Flame } from "./icons";
 import { PulseRing } from "./ui";
 import { getVariant } from "@/data/catalog";
 import { ils, originalRow, storeIsFresh, type Store } from "@/data/stores";
@@ -10,7 +12,10 @@ import { accentAlpha, color, radius } from "@/theme";
 /**
  * A store pin. The can shown is always Original (see `originalRow`) so every
  * pin reads the same at a glance; a pulsing ring means the shelf moved in the
- * last 36 h, and a gold outline marks a paid featured listing.
+ * last 36 h, a gold outline marks a paid featured listing, a crown marks the
+ * single cheapest shelf in the current view, and a flame marks a shelf
+ * carrying a flavour with a live promotion (see PromoList for the details —
+ * promotions are nationwide per flavour, not confirmed at this exact store).
  */
 function StorePinBase({
   store,
@@ -18,12 +23,16 @@ function StorePinBase({
   dimmed,
   showPrice,
   now,
+  cheapest,
+  hasPromo,
 }: {
   store: Store;
   focused: boolean;
   dimmed: boolean;
   showPrice: boolean;
   now: Date;
+  cheapest?: boolean;
+  hasPromo?: boolean;
 }) {
   const row = originalRow(store);
   const variant = getVariant(row.variantId);
@@ -41,6 +50,16 @@ function StorePinBase({
       <View style={styles.canWrap}>
         {fresh ? <PulseRing size={48} color={ring} /> : null}
         <Can variant={variant} size={focused ? 62 : 52} dim={!fresh} />
+        {cheapest ? (
+          <View style={styles.crownBadge}>
+            <Crown size={13} />
+          </View>
+        ) : null}
+        {hasPromo ? (
+          <View style={styles.fireBadge}>
+            <Flame size={11} color="#fff" weight="fill" />
+          </View>
+        ) : null}
       </View>
       <View style={styles.shadow} />
     </View>
@@ -87,6 +106,32 @@ const styles = StyleSheet.create({
   pin: { alignItems: "center", justifyContent: "flex-end" },
   dim: { opacity: 0.32 },
   canWrap: { alignItems: "center", justifyContent: "center" },
+  crownBadge: {
+    position: "absolute",
+    top: -8,
+    left: -4,
+    width: 22,
+    height: 22,
+    borderRadius: 11,
+    backgroundColor: "#0a0b0a",
+    borderWidth: 1.5,
+    borderColor: "#ffb020",
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  fireBadge: {
+    position: "absolute",
+    top: -8,
+    right: -4,
+    width: 20,
+    height: 20,
+    borderRadius: 10,
+    backgroundColor: "#ff5a2e",
+    borderWidth: 1.5,
+    borderColor: "#0a0b0a",
+    alignItems: "center",
+    justifyContent: "center",
+  },
   shadow: {
     width: 26,
     height: 8,

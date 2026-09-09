@@ -34,6 +34,7 @@ import { Chip, Tap } from "@/components/ui";
 import { getVariant } from "@/data/catalog";
 import { FILTERS, matchesFilter, type FilterId } from "@/data/filters";
 import {
+  cheapest as cheapestRow,
   distanceM,
   ils,
   originalRow,
@@ -63,7 +64,7 @@ export default function MapScreen() {
   const router = useRouter();
   const insets = useSafeAreaInsets();
   const { width: W, height: H } = useWindowDimensions();
-  const { stores, coord, hasFix, placeLabel, locationGranted } = useApp();
+  const { stores, coord, hasFix, placeLabel, locationGranted, promotionsFor } = useApp();
 
   const cameraRef = useRef<CameraRef>(null);
   const now = useMemo(() => new Date(), []);
@@ -122,6 +123,46 @@ export default function MapScreen() {
       )
       .slice(0, MAX_MARKERS);
   }, [cluster, view]);
+
+  /** Individual (non-cluster) pins actually on screen right now — the crown
+   *  and flame below are scoped to this, not the whole filtered dataset, so
+   *  "cheapest" always means cheapest in the city you're looking at, not a
+   *  nationwide comparison that could crown a pin nowhere near this view. */
+  const onScreenStores = useMemo(
+    () =>
+      features
+        .filter((f) => !f.properties.cluster)
+        .map((f) => storeIndex.get(f.properties.storeId as string))
+        .filter((s): s is Store => !!s),
+    [features, storeIndex],
+  );
+
+  /** The single cheapest shelf on screen, crowned so it's findable at a
+   *  glance rather than something you'd have to tap every pin to discover. */
+  const cheapestId = useMemo(() => {
+    let bestId: string | null = null;
+    let bestPrice = Infinity;
+    for (const s of onScreenStores) {
+      const price = cheapestRow(s).price;
+      if (price < bestPrice) {
+        bestPrice = price;
+        bestId = s.id;
+      }
+    }
+    return bestId;
+  }, [onScreenStores]);
+
+  /** On-screen stores carrying any flavour with a live nationwide promotion
+   *  (see PromoList / israel-poc/promotions.py) — flagged with a flame so a
+   *  deal is visible without opening every pin, even though the promo isn't
+   *  confirmed specific to this exact branch. */
+  const promoStoreIds = useMemo(() => {
+    const ids = new Set<string>();
+    for (const s of onScreenStores) {
+      if (s.shelf.some((r) => promotionsFor(r.variantId).length > 0)) ids.add(s.id);
+    }
+    return ids;
+  }, [onScreenStores, promotionsFor]);
 
   const onRegionDidChange = useCallback((e: NativeSyntheticEvent<ViewStateChangeEvent>) => {
     const { bounds, zoom, center } = e.nativeEvent;
@@ -284,6 +325,8 @@ export default function MapScreen() {
                 focused={focusId === store.id}
                 dimmed={focusId !== null && focusId !== store.id}
                 showPrice={(view?.zoom ?? 0) >= 14 && focusId === null}
+                cheapest={store.id === cheapestId}
+                hasPromo={promoStoreIds.has(store.id)}
               />
             </Marker>
           );

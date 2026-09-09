@@ -2,6 +2,7 @@ import React from "react";
 import { Linking, Platform, StyleSheet, Text, View } from "react-native";
 
 import { Can } from "./Can";
+import { Crown } from "./Crown";
 import { CheckCircle, NavigationArrow, X } from "./icons";
 import { Tap } from "./ui";
 import { getVariant } from "@/data/catalog";
@@ -64,6 +65,8 @@ export function StoreBubble({
   const variant = getVariant(row.variantId);
   const metres = distanceM(coord, store);
   const fresh = isFresh(row.seenAt, now);
+  const verdict = priceVerdict(row, stores);
+  const isCheapest = verdict === "Cheapest nearby";
 
   return (
     <View style={styles.card}>
@@ -95,7 +98,8 @@ export function StoreBubble({
           <Text style={styles.price}>{ils(row.price)}</Text>
         </View>
         <View style={styles.verdict}>
-          <Text style={styles.verdictText}>{priceVerdict(row, stores)}</Text>
+          {isCheapest ? <Crown size={11} color="#00691b" /> : null}
+          <Text style={styles.verdictText}>{verdict}</Text>
         </View>
       </View>
 
@@ -202,6 +206,9 @@ const styles = StyleSheet.create({
   },
   price: { fontSize: 29, fontWeight: "800", letterSpacing: -1, color: "#111411", marginTop: 5 },
   verdict: {
+    flexDirection: "row",
+    alignItems: "center",
+    gap: 4,
     paddingHorizontal: 8,
     paddingVertical: 4,
     borderRadius: radius.sm,
