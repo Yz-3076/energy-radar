@@ -12,6 +12,7 @@ import React, {
 
 import type { Alert, FlavourAlertKind } from "@/data/alerts";
 import { fetchFeaturedStores, fetchLiveStores, fetchPromotions, type Promo } from "@/data/api";
+import { SEED_PROMOTIONS } from "@/data/promotions-seed";
 import { STORES, type Store } from "@/data/stores";
 
 const MAX_RECENT_SEARCHES = 8;
@@ -300,7 +301,16 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
     }, []),
     clearRecentSearches: useCallback(() => setState((p) => ({ ...p, recentSearches: [] })), []),
 
-    promotionsFor: useCallback((variantId: string) => promotions[variantId] ?? [], [promotions]),
+    // Live data replaces the seed set outright the moment there's any of
+    // it, same as stores above — never mixed, so a real deal is never
+    // shown alongside a fictional one under the same flavour.
+    promotionsFor: useCallback(
+      (variantId: string) => {
+        const source = Object.keys(promotions).length > 0 ? promotions : SEED_PROMOTIONS;
+        return source[variantId] ?? [];
+      },
+      [promotions],
+    ),
 
     alerts: state.alerts,
     flavourAlertFor: useCallback(
