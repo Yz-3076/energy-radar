@@ -27,6 +27,7 @@ changing it is a bigger refactor than this pass needs. Worth revisiting if
 per-store precision ever earns its cost.
 """
 
+import asyncio
 import json
 import xml.etree.ElementTree as ET
 from datetime import datetime, timedelta, timezone
@@ -52,6 +53,29 @@ VOUCHER_PROVIDERS = ("סיבוס", "סודקסו", "תן ביס", "תן-ביס",
 # gitignored), keyed by chain:store_id, and only re-fetch once a cached
 # entry is stale.
 CACHE_TTL = timedelta(hours=20)
+
+# Measured 2026-09-10 against the real feeds: one store's promo file takes
+# 2-8s (avg ~4.4s). Sequentially that is ~23min for a nationwide ~315-store
+# run on top of the ~15min price scrape, which is exactly the 40-51min
+# runtimes that got two runs cancelled. Nothing was hung -- it was just
+# serial.
+#
+# 8 is measured, not guessed, and going higher actively hurts -- the same
+# 24-store batch, cold cache:
+#     concurrency 4  -> 72s  (2.99s/store)
+#     concurrency 8  -> 46s  (1.90s/store)
+#     concurrency 16 -> 319s (13.28s/store), plus 3 stores timing out
+# These are small public file servers that clearly throttle (or just fall
+# over) under load, so past a point more parallelism buys negative speed.
+# Re-measure before changing this; don't reason about it from first
+# principles.
+MAX_CONCURRENT_FETCHES = 8
+
+# No request in the scraper library carries a timeout of its own, so a
+# single unresponsive store could otherwise stall a whole run with no
+# error -- the same shape as the third-party auth hang documented in
+# promotions.py. Generous enough that a merely slow store still succeeds.
+FETCH_TIMEOUT_SECONDS = 90
 
 
 def load_cache() -> dict:
@@ -82,9 +106,15 @@ async def fetch_store_promos(chain_name: str, store_id: str) -> Path:
     if scraper_cls is None:
         return out_dir
     scraper = scraper_cls(file_output=DiskFileOutput(storage_path=str(out_dir)))
-    try:
+
+    async def _scrape() -> None:
         async for _ in scraper.scrape(limit=1, files_types=["PROMO_FULL_FILE"], store_id=int(store_id)):
             pass
+
+    try:
+        await asyncio.wait_for(_scrape(), timeout=FETCH_TIMEOUT_SECONDS)
+    except asyncio.TimeoutError:
+        print(f"  promo fetch timed out for {chain_name} store {store_id} after {FETCH_TIMEOUT_SECONDS}s")
     except Exception as e:  # noqa: BLE001 — one store's promo fetch failing must never crash the run
         print(f"  promo fetch failed for {chain_name} store {store_id}: {type(e).__name__}: {e}")
     return out_dir
@@ -175,6 +205,40 @@ async def get_store_promos(
     promos = parse_store_promos(promo_dir, barcode_to_variant)
     cache[key] = {"fetchedAt": datetime.now(timezone.utc).isoformat(), "promos": promos}
     return promos
+
+
+async def get_promos_for_stores(
+    stores: list[tuple[str, str]], barcode_to_variant: dict[str, str], cache: dict
+) -> list[dict[str, list[dict]]]:
+    """Every store's promos, fetched a bounded number at a time.
+
+    `stores` is (chain, store_id) pairs and must already be deduped —
+    pipeline.py collects them from its own per-store dedup point, so each
+    store is asked for exactly once and two tasks can't race on the same
+    cache key. One store failing, timing out, or raising never sinks the
+    batch: it just contributes nothing, same as before."""
+    if not stores:
+        return []
+
+    cached = sum(1 for c, s in stores if (e := cache.get(f"{c}:{s}")) is not None and _is_fresh(e))
+    print(f"  promos: {len(stores)} store(s) — {cached} cached, {len(stores) - cached} to fetch")
+
+    sem = asyncio.Semaphore(MAX_CONCURRENT_FETCHES)
+
+    async def one(chain: str, store_id: str) -> dict[str, list[dict]]:
+        async with sem:
+            return await get_store_promos(chain, store_id, barcode_to_variant, cache)
+
+    results = await asyncio.gather(
+        *(one(chain, store_id) for chain, store_id in stores), return_exceptions=True
+    )
+    out: list[dict[str, list[dict]]] = []
+    for (chain, store_id), result in zip(stores, results):
+        if isinstance(result, BaseException):
+            print(f"  promo fetch errored for {chain} store {store_id}: {type(result).__name__}: {result}")
+            continue
+        out.append(result)
+    return out
 
 
 def merge_promo_maps(*maps: dict[str, list[dict]]) -> dict[str, list[dict]]:

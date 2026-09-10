@@ -239,7 +239,7 @@ async def run() -> None:
     new_observations: list[dict] = []
     stores_by_key: dict[str, dict] = {}  # f"{chain}:{store_id}" -> Store shape
     barcodes_seen: dict[str, str] = {}  # barcode -> variant_id, for promotions.py
-    gov_promo_maps: list[dict] = []  # one per store — see promotions_gov.py
+    promo_stores: list[tuple[str, str]] = []  # (chain, store_id) — see promotions_gov.py
 
     for chain in CHAINS:
         print(f"=== {chain} ===")
@@ -276,18 +276,13 @@ async def run() -> None:
                     "lng": coords[1],
                     "shelf": [],
                 }
-                # First time we're keeping this store this run — piggyback
-                # a real promo-file fetch here rather than a separate pass,
-                # since "first time seen" already naturally dedupes per
-                # store. See promotions_gov.py for the filtering that keeps
-                # this from drowning in blanket meal-voucher noise, and its
-                # cache for why this doesn't re-download every store's
-                # multi-MB promo file on every single run.
-                gov_promo_maps.append(
-                    await promotions_gov.get_store_promos(
-                        chain, item["store_id"], BARCODE_TO_VARIANT, promo_cache
-                    )
-                )
+                # First time we're keeping this store this run, so this is
+                # the natural place to note that it needs promos — but only
+                # note it. Fetching inline here made the run serial, one
+                # multi-MB file at a time, which is what pushed nationwide
+                # runs past 40 minutes; they're fetched concurrently in one
+                # batch once every chain has been walked instead.
+                promo_stores.append((chain, item["store_id"]))
 
             new_row = {
                 "variantId": variant_id,
@@ -321,6 +316,10 @@ async def run() -> None:
                     "fetched_at": now,
                 }
             )
+
+    gov_promo_maps = await promotions_gov.get_promos_for_stores(
+        promo_stores, BARCODE_TO_VARIANT, promo_cache
+    )
 
     geo.save_cache(geocode_cache)
     promotions_gov.save_cache(promo_cache)
