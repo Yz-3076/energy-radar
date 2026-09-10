@@ -98,6 +98,13 @@ def _cache_key(address: str, zip_code: str) -> str:
 # `None` means "confirmed to be a real branch, but no trustworthy
 # coordinate exists" — excluded on purpose rather than guessed. Checked
 # before the cache, so it always wins over whatever's already cached.
+#
+# Keys are address+zip only, with no chain or city in them, so an entry
+# for a bare street+number could in principle hijack a different chain's
+# branch at the same-numbered address in another town. Verified
+# 2026-09-10 that every key here matches exactly one branch across all
+# 766 branches of all six chains; re-check that when adding one, since
+# several of these addresses carry no zip to disambiguate them.
 MANUAL_OVERRIDES: dict[str, list[float] | None] = {
     # Shufersal Deal Modi'in Center. Automated query put this ~150km away
     # near Tiberias; re-querying with "מודיעין" as the city resolved it
@@ -133,6 +140,14 @@ MANUAL_OVERRIDES: dict[str, list[float] | None] = {
     # confirmed by the street itself (החרט, מרכז עינב) landing 218m away --
     # two independent hits agreeing on the same block (2026-09-10).
     _cache_key("החרט 1 מרכז עינב ישפרו", ""): [31.8893287, 34.9635571],
+    # Victory Modi'in. "מנחם בגין" is one of the most-repeated street names
+    # in the country and this row carries no zip, so the automated query
+    # picks the famous Tel Aviv one and lands 29km away -- confidently
+    # wrong, the failure this table exists for. OpenStreetMap has the shop
+    # itself as "Victory, 21, מנחם בגין, מוריה, מודיעין-מכבים-רעות", tagged
+    # `supermarket`, matching the house number exactly and sitting 157m off
+    # the Modi'in stretch of that street (2026-09-10).
+    _cache_key("מנחם בגין 21", ""): [31.8813051, 35.0129965],
 }
 
 
