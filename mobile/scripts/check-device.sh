@@ -60,11 +60,17 @@ sleep 6
 
 # The dev-client shows a "this is the developer menu" sheet on launch and a
 # second Reload/Go-home sheet behind it. Both swallow taps meant for the
-# app, so clear them before doing anything else. BACK dismisses each without
-# needing to know where its close button rendered.
+# app, so clear them before doing anything else.
+#
+# Swiping the sheet down, rather than BACK or a backdrop tap. Both of
+# those misfire when no menu is actually open: BACK walks back out of the
+# app to the launcher, and there is no fixed "empty" coordinate to tap --
+# the one tried here hit the map's search field and toggled a filter. A
+# downward swipe is the sheet's own dismiss gesture, and costs at most a
+# little scrolling on whatever screen is underneath.
 say "dismissing dev-menu overlays"
 for _ in 1 2 3; do
-  "$ADB" -s "$SERIAL" shell input keyevent KEYCODE_BACK
+  "$ADB" -s "$SERIAL" shell input swipe 500 1500 500 2150 250
   sleep 1
 done
 
@@ -73,11 +79,8 @@ if [ -n "$ROUTE" ]; then
   "$ADB" -s "$SERIAL" shell am start -a android.intent.action.VIEW -d "prowl://$ROUTE" >/dev/null
   sleep 4
   # Bringing the activity forward pops the dev-menu sheet back up over
-  # whatever we just navigated to. Dismiss it by tapping the backdrop well
-  # above the sheet rather than with BACK: BACK is ambiguous here, since it
-  # closes the sheet if one is open but otherwise navigates off the very
-  # screen we came to look at.
-  "$ADB" -s "$SERIAL" shell input tap 500 300
+  # whatever we just navigated to, so dismiss it again the same way.
+  "$ADB" -s "$SERIAL" shell input swipe 500 1500 500 2150 250
   sleep 2
 fi
 
