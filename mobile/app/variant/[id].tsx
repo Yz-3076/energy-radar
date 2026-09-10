@@ -16,7 +16,7 @@ export default function VariantScreen() {
   const { id } = useLocalSearchParams<{ id: string }>();
   const router = useRouter();
   const insets = useSafeAreaInsets();
-  const { stores, coord, flavourAlertFor, toggleFlavourAlert, logDrink, promotionsFor } = useApp();
+  const { stores, coord, flavourAlertFor, toggleFlavourAlert, logDrink, promosForVariant } = useApp();
   const now = useMemo(() => new Date(), []);
 
   const [justLogged, setJustLogged] = useState(false);
@@ -37,7 +37,7 @@ export default function VariantScreen() {
   );
 
   const lowest = listings.length ? Math.min(...listings.map((l) => l.r.price)) : null;
-  const promos = promotionsFor(variant.id);
+  const promos = promosForVariant(variant.id);
   const alert = flavourAlertFor(variant.id);
   const onToggleAlert = () => {
     if (alert) {

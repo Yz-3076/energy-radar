@@ -14,18 +14,27 @@ function untilLabel(iso: string | null): string | null {
   return `until ${d.toLocaleDateString("en-GB", { day: "numeric", month: "short" })}`;
 }
 
+/** One deal to render. `storeCount` is how many branches run it, and is
+ *  only meaningful on the flavour screen, where the list is a roll-up
+ *  across stores. The store screen omits it: there, every deal shown is by
+ *  definition running at the one branch being looked at. */
+export type PromoEntry = { promo: Promo; storeCount?: number };
+
 /**
- * The "current deals" card list — shared by the variant screen (deals on
- * one flavour) and the store screen (deals on anything that store carries).
- * See israel-poc/promotions.py: these are nationwide per flavour, not
- * store-specific, which is why every caller's heading should say so rather
- * than imply "at this exact store."
+ * The "current deals" card list — shared by the variant screen (every
+ * branch running a deal on one flavour) and the store screen (deals at
+ * that one branch).
+ *
+ * See israel-poc/promotions_gov.py: promo data is store-scoped, so a
+ * store screen only ever lists deals that store actually runs. The
+ * flavour screen is the one place the answer spans branches, and it says
+ * how many rather than implying the deal is everywhere.
  */
-export function PromoList({ promos }: { promos: Promo[] }) {
+export function PromoList({ promos }: { promos: PromoEntry[] }) {
   if (promos.length === 0) return null;
   return (
     <View style={ui.group}>
-      {promos.map((p, i) => (
+      {promos.map(({ promo: p, storeCount }, i) => (
         <View key={i} style={[styles.promo, i < promos.length - 1 && rowDivider]}>
           <View style={styles.promoHead}>
             <Text style={styles.promoDesc} numberOfLines={2}>
@@ -36,7 +45,12 @@ export function PromoList({ promos }: { promos: Promo[] }) {
             ) : null}
           </View>
           <Text style={styles.promoSub}>
-            {[p.minQuantity ? `Buy ${p.minQuantity}+` : null, p.clubOnly ? "Loyalty club" : null, untilLabel(p.endsAt)]
+            {[
+              p.minQuantity ? `Buy ${p.minQuantity}+` : null,
+              p.clubOnly ? "Loyalty club" : null,
+              untilLabel(p.endsAt),
+              storeCount ? `at ${storeCount} ${storeCount === 1 ? "branch" : "branches"}` : null,
+            ]
               .filter(Boolean)
               .join(" · ") || "Terms vary by store"}
           </Text>

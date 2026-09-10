@@ -23,10 +23,15 @@ Writes, all under ../data/:
   stats.json          — small pre-aggregated summary for the GitHub Pages
                         dashboard, so that page doesn't need to parse the
                         whole (eventually large) history file client-side.
-  promotions.json     — variant_id -> current promotions/discounts, from
-                        the free Open Israeli Supermarkets API (see
-                        promotions.py). Optional and additive: an empty
-                        {} if OPEN_IL_SUPERMARKETS_TOKEN isn't set.
+  promotions.json     — store_id -> variant_id -> current promotions,
+                        parsed from the government PromoFull feeds (see
+                        promotions_gov.py). Only stores actually running a
+                        deal appear. Optional and additive: a missing store
+                        means no deal was seen there, not that prices are
+                        wrong.
+  promo-cache.json    — store_id -> last parsed promo result + timestamp,
+                        so a run doesn't re-download every branch's
+                        multi-MB promo file (see promotions_gov.CACHE_TTL).
 
 Chains covered: see the CHAINS list and its comments below for current
 per-chain status.
@@ -46,7 +51,6 @@ from il_supermarket_scarper.utils.file_output import DiskFileOutput
 
 import depletion
 import geocode as geo
-import promotions as promo
 import promotions_gov
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -238,7 +242,6 @@ async def run() -> None:
     promo_cache = promotions_gov.load_cache()
     new_observations: list[dict] = []
     stores_by_key: dict[str, dict] = {}  # f"{chain}:{store_id}" -> Store shape
-    barcodes_seen: dict[str, str] = {}  # barcode -> variant_id, for promotions.py
     promo_stores: list[tuple[str, str]] = []  # (chain, store_id) — see promotions_gov.py
 
     for chain in CHAINS:
@@ -258,7 +261,6 @@ async def run() -> None:
             variant_id = BARCODE_TO_VARIANT.get(item["barcode"])
             if not variant_id:
                 continue  # a name-matched row we don't have a catalog id for yet
-            barcodes_seen[item["barcode"]] = variant_id
 
             coords = geo.geocode(info["address"], info["zip"], geocode_cache)
             if coords is None:
@@ -346,22 +348,26 @@ async def run() -> None:
     )
     print(f"\nWrote data/latest.json — {len(stores_out)} store(s), {len(new_observations)} observation(s) this run")
 
-    # Bonus, non-authoritative layer on top of the prices above. Two
-    # sources merged: real promos parsed straight from the government feed
-    # (promotions_gov.py — no token, no third party, on by default) and
-    # whatever the optional third-party API adds on top when its own auth
-    # is working (promotions.py — currently broken on their end, see its
-    # docstring; contributes nothing while that's true, which is fine,
-    # this was always meant as a bonus layer, never a dependency). The app
-    # should treat a missing entry as "no deal seen", never as proof there
-    # isn't one.
-    promo_by_variant = promotions_gov.merge_promo_maps(
-        *gov_promo_maps, promo.promotions_by_variant(barcodes_seen)
-    )
+    # Bonus, non-authoritative layer on top of the prices above, written as
+    # store_id -> variant_id -> [promo]. Only stores that actually run a
+    # deal appear, so a missing store means "no deal seen at that branch",
+    # never proof there isn't one.
+    #
+    # promotions.py's third-party API is deliberately not merged in here:
+    # its schema attributes a promo to a barcode nationwide, with no store
+    # behind it, so folding it in would put back exactly the false
+    # store-level deals this shape exists to prevent. It stays available
+    # for a flavour-level view if their auth is ever fixed (it currently
+    # hangs on any request — see that module's docstring).
+    promo_by_store = gov_promo_maps
     (DATA_DIR / "promotions.json").write_text(
-        json.dumps(promo_by_variant, ensure_ascii=False, indent=2), encoding="utf-8"
+        json.dumps(promo_by_store, ensure_ascii=False, indent=2), encoding="utf-8"
     )
-    print(f"Wrote data/promotions.json — {len(promo_by_variant)} flavour(s) with a live promo")
+    distinct = {p["description"] for byv in promo_by_store.values() for ps in byv.values() for p in ps}
+    print(
+        f"Wrote data/promotions.json — {len(promo_by_store)} store(s) "
+        f"running {len(distinct)} distinct deal(s)"
+    )
 
     # A small rollup for the GitHub Pages dashboard — cheap to compute here,
     # much cheaper than having the dashboard parse the whole history file.

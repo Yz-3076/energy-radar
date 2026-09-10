@@ -113,6 +113,16 @@ MANUAL_OVERRIDES: dict[str, list[float] | None] = {
     # data at all, under any phrasing tried, so there is no free-geocoder
     # path to a real coordinate. Excluded rather than guessed.
     _cache_key("2 החסידה", "7169447"): None,
+    # Rami Levy "מודיעין חדש". Its address is an industrial-zone name with
+    # no house number, so _too_vague rejects it before a lookup is even
+    # attempted and the branch never reached the map at all -- the guard
+    # doing its job, but costing a real store. OpenStreetMap has the actual
+    # shop as a POI tagged `supermarket` ("רמי לוי, כרמל, כפר רות, מועצה
+    # אזורית חבל מודיעין"), returned identically by two independent
+    # queries, 2.9km from Modi'in's centre and 0.8km off the Shilat
+    # locality centroid -- i.e. a real building, not a settlement centroid
+    # standing in for one (2026-09-10).
+    _cache_key("א.ת שילת", ""): [31.9161055, 35.0242511],
 }
 
 

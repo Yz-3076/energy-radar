@@ -92,11 +92,18 @@ export type Promo = {
   clubOnly: boolean;
 };
 
-/** variantId -> its current promotions, or {} if the file hasn't loaded or
- *  no promo data is configured. Never null — callers can treat a missing
- *  key as "no live promo on this flavour" with no special-casing. */
-export async function fetchPromotions(): Promise<Record<string, Promo[]>> {
-  const promos = await getAbsoluteJSON<Record<string, Promo[]>>(PROMOTIONS_URL);
+/** storeId -> variantId -> the deals that branch is actually running, or
+ *  {} if the file hasn't loaded. Never null, and only stores running a
+ *  deal appear — so a missing store means "no deal seen there", which
+ *  callers can treat as no promo with no special-casing.
+ *
+ *  Keyed by store, not by flavour: a deal belongs to a branch, and the
+ *  flattened flavour-keyed version this replaced ended up showing one
+ *  chain's promotions on every other chain's shelves. */
+export type PromotionsByStore = Record<string, Record<string, Promo[]>>;
+
+export async function fetchPromotions(): Promise<PromotionsByStore> {
+  const promos = await getAbsoluteJSON<PromotionsByStore>(PROMOTIONS_URL);
   return promos ?? {};
 }
 

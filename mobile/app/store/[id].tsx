@@ -57,7 +57,7 @@ export default function StoreScreen() {
   const { id } = useLocalSearchParams<{ id: string }>();
   const router = useRouter();
   const insets = useSafeAreaInsets();
-  const { storeById, stores, coord, saved, toggleSaved, storeAlertFor, toggleStoreAlert, promotionsFor } = useApp();
+  const { storeById, stores, coord, saved, toggleSaved, storeAlertFor, toggleStoreAlert, promosAtStore } = useApp();
   const now = useMemo(() => new Date(), []);
   const [reportOpen, setReportOpen] = useState(false);
   const [reportText, setReportText] = useState("");
@@ -90,18 +90,19 @@ export default function StoreScreen() {
     return { rows, max, min };
   }, [stores, best]);
 
-  /** Every live promo on anything this shelf carries, labelled with which
-   *  flavour it's for since a store can carry several. Nationwide per
-   *  flavour, not confirmed specific to this branch — see PromoList. */
+  /** Deals this exact branch is running, labelled with the flavour since a
+   *  store can carry several. Branch-scoped: anything this store isn't
+   *  actually running simply doesn't appear, so the section is empty far
+   *  more often than not — which is the honest answer. */
   const shelfPromos = useMemo(
     () =>
       shelf.flatMap((r) => {
-        const promos = promotionsFor(r.variantId);
+        const promos = store ? promosAtStore(store.id, r.variantId) : [];
         if (promos.length === 0) return [];
         const name = getVariant(r.variantId).name;
         return promos.map((p) => ({ ...p, description: `${name} — ${p.description || "Promotion"}` }));
       }),
-    [shelf, promotionsFor],
+    [shelf, store, promosAtStore],
   );
 
   // Every hook has now run, so it is safe to bail out — see the note on
@@ -256,7 +257,7 @@ export default function StoreScreen() {
         {shelfPromos.length > 0 ? (
           <>
             <Kicker style={styles.kicker}>Current deals</Kicker>
-            <PromoList promos={shelfPromos} />
+            <PromoList promos={shelfPromos.map((promo) => ({ promo }))} />
           </>
         ) : null}
 

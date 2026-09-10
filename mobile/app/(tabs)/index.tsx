@@ -64,7 +64,7 @@ export default function MapScreen() {
   const router = useRouter();
   const insets = useSafeAreaInsets();
   const { width: W, height: H } = useWindowDimensions();
-  const { stores, coord, hasFix, placeLabel, locationGranted, promotionsFor } = useApp();
+  const { stores, coord, hasFix, placeLabel, locationGranted, storeHasPromo } = useApp();
 
   const cameraRef = useRef<CameraRef>(null);
   const now = useMemo(() => new Date(), []);
@@ -152,17 +152,19 @@ export default function MapScreen() {
     return bestId;
   }, [onScreenStores]);
 
-  /** On-screen stores carrying any flavour with a live nationwide promotion
-   *  (see PromoList / israel-poc/promotions.py) — flagged with a flame so a
-   *  deal is visible without opening every pin, even though the promo isn't
-   *  confirmed specific to this exact branch. */
+  /** On-screen stores confirmed to be running a deal at that branch —
+   *  flagged with a flame so it's visible without opening every pin.
+   *  Branch-specific on purpose: this used to ask whether the *flavour*
+   *  had a promo anywhere in the country, which lit the flame on
+   *  essentially every pin and pointed people at discounts their local
+   *  shop had never run. */
   const promoStoreIds = useMemo(() => {
     const ids = new Set<string>();
     for (const s of onScreenStores) {
-      if (s.shelf.some((r) => promotionsFor(r.variantId).length > 0)) ids.add(s.id);
+      if (storeHasPromo(s.id)) ids.add(s.id);
     }
     return ids;
-  }, [onScreenStores, promotionsFor]);
+  }, [onScreenStores, storeHasPromo]);
 
   const onRegionDidChange = useCallback((e: NativeSyntheticEvent<ViewStateChangeEvent>) => {
     const { bounds, zoom, center } = e.nativeEvent;

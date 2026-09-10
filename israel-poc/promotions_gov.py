@@ -17,14 +17,18 @@ targeted discounts from that noise:
   2. Known voucher-provider names in the description — a direct
      confirmation on top of (1), for the specific brands actually seen.
 
-Real promos are naturally store-specific (each PromoFull file belongs to
-one branch) — genuinely more precise than the third-party API's
-nationwide-per-barcode shape ever was. Output here still matches that same
-variant_id -> [promo, ...] shape (data/promotions.json) rather than
-plumbing store attribution through the whole app, though: every other
-place this project reads promotions from already expects that shape, and
-changing it is a bigger refactor than this pass needs. Worth revisiting if
-per-store precision ever earns its cost.
+Real promos are naturally store-specific — each PromoFull file belongs to
+one branch — and the output keeps that: data/promotions.json is
+store_id -> variant_id -> [promo, ...].
+
+It was briefly flattened to variant_id -> [promo, ...] to match what the
+app already read, on the assumption that per-store precision wasn't worth
+the refactor. That was wrong, and checking a single city showed why: all
+65 stores running a Monster deal were Dor Alon/AM:PM, so every Shufersal
+in the country advertised those deals, including three Modi'in branches
+that had none. The flattened shape didn't lose precision, it invented
+discounts. Store attribution is the whole point of parsing per-store
+files, so it stays.
 """
 
 import asyncio
@@ -221,8 +225,16 @@ async def get_store_promos(
 
 async def get_promos_for_stores(
     stores: list[tuple[str, str]], barcode_to_variant: dict[str, str], cache: dict
-) -> list[dict[str, list[dict]]]:
-    """Every store's promos, fetched a bounded number at a time.
+) -> dict[str, dict[str, list[dict]]]:
+    """Every store's promos, fetched a bounded number at a time, keyed by
+    the same store id the app uses (`chain-store_id`, lowercased).
+
+    Keyed by store rather than flattened by flavour because a promo is a
+    fact about one branch. Confirmed 2026-09-10: all 65 stores running a
+    Monster deal were Dor Alon/AM:PM, so a nationwide-per-flavour map
+    advertised those deals on every Shufersal in the country -- including
+    the Modi'in branches, which had none. A store screen that promises a
+    discount the shop has never heard of is worse than showing nothing.
 
     `stores` is (chain, store_id) pairs and must already be deduped —
     pipeline.py collects them from its own per-store dedup point, so each
@@ -230,7 +242,7 @@ async def get_promos_for_stores(
     cache key. One store failing, timing out, or raising never sinks the
     batch: it just contributes nothing, same as before."""
     if not stores:
-        return []
+        return {}
 
     cached = sum(1 for c, s in stores if (e := cache.get(f"{c}:{s}")) is not None and _is_fresh(e))
     print(f"  promos: {len(stores)} store(s) — {cached} cached, {len(stores) - cached} to fetch")
@@ -244,27 +256,11 @@ async def get_promos_for_stores(
     results = await asyncio.gather(
         *(one(chain, store_id) for chain, store_id in stores), return_exceptions=True
     )
-    out: list[dict[str, list[dict]]] = []
+    out: dict[str, dict[str, list[dict]]] = {}
     for (chain, store_id), result in zip(stores, results):
         if isinstance(result, BaseException):
             print(f"  promo fetch errored for {chain} store {store_id}: {type(result).__name__}: {result}")
             continue
-        out.append(result)
+        if result:  # skip the many stores with no Monster deal at all
+            out[f"{chain}:{store_id}".lower().replace(":", "-")] = result
     return out
-
-
-def merge_promo_maps(*maps: dict[str, list[dict]]) -> dict[str, list[dict]]:
-    """Union several variant_id -> [promo, ...] maps, deduping identical
-    promos (same variant + description + end date) so a chain-wide deal
-    doesn't show up once per branch that happens to carry it."""
-    merged: dict[str, list[dict]] = {}
-    seen: set[tuple] = set()
-    for m in maps:
-        for variant_id, promos in m.items():
-            for p in promos:
-                key = (variant_id, p.get("description"), p.get("endsAt"))
-                if key in seen:
-                    continue
-                seen.add(key)
-                merged.setdefault(variant_id, []).append(p)
-    return merged

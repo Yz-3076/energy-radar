@@ -11,7 +11,13 @@ import React, {
 } from "react";
 
 import type { Alert, FlavourAlertKind } from "@/data/alerts";
-import { fetchFeaturedStores, fetchLiveStores, fetchPromotions, type Promo } from "@/data/api";
+import {
+  fetchFeaturedStores,
+  fetchLiveStores,
+  fetchPromotions,
+  type Promo,
+  type PromotionsByStore,
+} from "@/data/api";
 import { SEED_PROMOTIONS } from "@/data/promotions-seed";
 import { STORES, type Store } from "@/data/stores";
 
@@ -83,9 +89,14 @@ type Ctx = {
   addRecentSearch: (query: string) => void;
   clearRecentSearches: () => void;
 
-  /** Current deals per flavour, nationwide — see israel-poc/promotions.py.
-   *  Empty array (not undefined) for a flavour with no live promo. */
-  promotionsFor: (variantId: string) => Promo[];
+  /** Deals confirmed at this specific branch — see
+   *  israel-poc/promotions_gov.py. Empty (not undefined) when that store
+   *  runs no deal on that flavour, which is the common case. */
+  promosAtStore: (storeId: string, variantId: string) => Promo[];
+  /** Whether this branch runs any Monster deal at all — the map's flame. */
+  storeHasPromo: (storeId: string) => boolean;
+  /** Every distinct deal on a flavour, with how many branches run it. */
+  promosForVariant: (variantId: string) => { promo: Promo; storeCount: number }[];
 
   alerts: Alert[];
   flavourAlertFor: (variantId: string) => Extract<Alert, { type: "flavour" }> | undefined;
@@ -105,7 +116,7 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
   const [ready, setReady] = useState(false);
   const [featured, setFeatured] = useState<Store[]>([]);
   const [liveStores, setLiveStores] = useState<Store[] | null>(null);
-  const [promotions, setPromotions] = useState<Record<string, Promo[]>>({});
+  const [promotions, setPromotions] = useState<PromotionsByStore>({});
   const [coord, setCoord] = useState(FALLBACK_COORD);
   const [hasFix, setHasFix] = useState(false);
   const [placeLabel, setPlaceLabel] = useState<string | null>(null);
@@ -157,9 +168,9 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
     };
   }, []);
 
-  // Current deals, nationwide per flavour — additive on top of the prices
-  // above, never blocking: an empty {} (no token configured, offline, first
-  // run) just means no promo badges show anywhere, nothing else changes.
+  // Current deals per branch — additive on top of the prices above, never
+  // blocking: an empty {} (offline, first run) just means no promo badges
+  // show anywhere, nothing else changes.
   useEffect(() => {
     let alive = true;
     fetchPromotions()
@@ -301,13 +312,37 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
     }, []),
     clearRecentSearches: useCallback(() => setState((p) => ({ ...p, recentSearches: [] })), []),
 
-    // Live data replaces the seed set outright the moment there's any of
-    // it, same as stores above — never mixed, so a real deal is never
-    // shown alongside a fictional one under the same flavour.
-    promotionsFor: useCallback(
+    promosAtStore: useCallback(
+      (storeId: string, variantId: string) => promotions[storeId]?.[variantId] ?? [],
+      [promotions],
+    ),
+
+    storeHasPromo: useCallback(
+      (storeId: string) => Object.keys(promotions[storeId] ?? {}).length > 0,
+      [promotions],
+    ),
+
+    /** The flavour view is the one place a nationwide answer is the honest
+     *  one — "who is running a deal on this can" — so it rolls the
+     *  per-store data up, deduped by deal, and reports how many branches
+     *  each is actually running at. Deliberately never used to decide what
+     *  a *store* screen shows: that's what invented the phantom Modi'in
+     *  deals this shape was changed to stop. */
+    promosForVariant: useCallback(
       (variantId: string) => {
-        const source = Object.keys(promotions).length > 0 ? promotions : SEED_PROMOTIONS;
-        return source[variantId] ?? [];
+        const byDeal = new Map<string, { promo: Promo; storeCount: number }>();
+        for (const byVariant of Object.values(promotions)) {
+          for (const promo of byVariant[variantId] ?? []) {
+            const key = `${promo.description}|${promo.endsAt}`;
+            const seen = byDeal.get(key);
+            if (seen) seen.storeCount += 1;
+            else byDeal.set(key, { promo, storeCount: 1 });
+          }
+        }
+        if (byDeal.size > 0) return [...byDeal.values()];
+        // Last resort only, and only here: a labelled demo entry, never on
+        // a store screen where it would read as a real local deal.
+        return (SEED_PROMOTIONS[variantId] ?? []).map((promo) => ({ promo, storeCount: 0 }));
       },
       [promotions],
     ),
