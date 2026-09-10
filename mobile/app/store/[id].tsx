@@ -21,7 +21,17 @@ import { Kicker, Tap, rowDivider, styles as ui } from "@/components/ui";
 import { NEARBY_METRES } from "@/data/alerts";
 import { getVariant } from "@/data/catalog";
 import { STOCK_LABEL, stockStatus } from "@/data/stock";
-import { cheapest, distanceM, ils, isolate, prettyDistance, relativeTime, walkMinutes } from "@/data/stores";
+import {
+  cheapest,
+  distanceM,
+  ils,
+  isolate,
+  prettyDistance,
+  relativeTime,
+  walkMinutes,
+  type ShelfRow,
+  type Store,
+} from "@/data/stores";
 import { useApp } from "@/state/AppState";
 import { color, muted, radius, space, textAlpha } from "@/theme";
 
@@ -52,30 +62,25 @@ export default function StoreScreen() {
   const [reportOpen, setReportOpen] = useState(false);
   const [reportText, setReportText] = useState("");
 
+  /**
+   * Undefined whenever the id isn't in the dataset *yet* — most often on a
+   * cold open straight to this screen (deep link, notification), where the
+   * live store list hasn't finished fetching and only the seeded set is
+   * loaded. It resolves to a real store a moment later, so every hook below
+   * has to run in both states: the early return for the missing case sits
+   * after all of them, because returning before a hook changed the hook
+   * count between those two renders and crashed the screen outright
+   * ("Rendered more hooks than during the previous render").
+   */
   const store = storeById(String(id));
-  if (!store) {
-    return (
-      <View style={styles.missing}>
-        <Text style={styles.missingText}>That shelf is no longer in the dataset.</Text>
-        <Tap style={ui.ghostButton} onPress={() => router.back()}>
-          <Text style={ui.ghostLabel}>Go back</Text>
-        </Tap>
-      </View>
-    );
-  }
 
-  const metres = distanceM(coord, store);
-  const isSaved = saved.has(store.id);
-  const best = cheapest(store);
-  const bestVariant = getVariant(best.variantId);
-  const storeAlert = storeAlertFor(store.id);
-  const isNear = metres <= NEARBY_METRES;
-
-  const shelf = [...store.shelf].sort((a, b) => a.price - b.price);
+  const shelf = store ? [...store.shelf].sort((a, b) => a.price - b.price) : [];
+  const best = store ? cheapest(store) : null;
 
   /** Same variant, every other shelf in the dataset — a real price comparison
    *  in place of a price history nobody is recording yet. */
   const spread = useMemo(() => {
+    if (!best) return { rows: [] as { s: Store; r: ShelfRow }[], max: 0, min: 0 };
     const rows = stores
       .flatMap((s) => s.shelf.filter((r) => r.variantId === best.variantId).map((r) => ({ s, r })))
       .sort((a, b) => a.r.price - b.r.price)
@@ -84,8 +89,6 @@ export default function StoreScreen() {
     const min = Math.min(...rows.map((x) => x.r.price), best.price);
     return { rows, max, min };
   }, [stores, best]);
-
-  const cheaperCount = spread.rows.filter((x) => x.r.price < best.price).length;
 
   /** Every live promo on anything this shelf carries, labelled with which
    *  flavour it's for since a store can carry several. Nationwide per
@@ -100,6 +103,26 @@ export default function StoreScreen() {
       }),
     [shelf, promotionsFor],
   );
+
+  // Every hook has now run, so it is safe to bail out — see the note on
+  // `store` above for why this can't move back up.
+  if (!store || !best) {
+    return (
+      <View style={styles.missing}>
+        <Text style={styles.missingText}>That shelf is no longer in the dataset.</Text>
+        <Tap style={ui.ghostButton} onPress={() => router.back()}>
+          <Text style={ui.ghostLabel}>Go back</Text>
+        </Tap>
+      </View>
+    );
+  }
+
+  const metres = distanceM(coord, store);
+  const isSaved = saved.has(store.id);
+  const bestVariant = getVariant(best.variantId);
+  const storeAlert = storeAlertFor(store.id);
+  const isNear = metres <= NEARBY_METRES;
+  const cheaperCount = spread.rows.filter((x) => x.r.price < best.price).length;
 
   const submitReport = () => {
     openReportIssue(store.id, store.name, store.address, reportText);

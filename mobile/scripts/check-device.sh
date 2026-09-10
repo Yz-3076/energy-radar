@@ -72,6 +72,13 @@ if [ -n "$ROUTE" ]; then
   say "deep-linking to $ROUTE"
   "$ADB" -s "$SERIAL" shell am start -a android.intent.action.VIEW -d "prowl://$ROUTE" >/dev/null
   sleep 4
+  # Bringing the activity forward pops the dev-menu sheet back up over
+  # whatever we just navigated to. Dismiss it by tapping the backdrop well
+  # above the sheet rather than with BACK: BACK is ambiguous here, since it
+  # closes the sheet if one is open but otherwise navigates off the very
+  # screen we came to look at.
+  "$ADB" -s "$SERIAL" shell input tap 500 300
+  sleep 2
 fi
 
 say "screenshot -> $OUT"
