@@ -3,7 +3,7 @@ import React, { useEffect, useMemo, useRef, useState } from "react";
 import { ScrollView, StyleSheet, Text, View } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 
-import { CanGL } from "@/components/CanGL";
+import { Can } from "@/components/Can";
 import { CaretLeft, Bell, BellRinging, Check } from "@/components/icons";
 import { PromoList } from "@/components/PromoList";
 import { Kicker, Tap, rowDivider, styles as ui } from "@/components/ui";
@@ -74,8 +74,7 @@ export default function VariantScreen() {
 
       <View style={styles.stage}>
         <View style={styles.glow} />
-        <CanGL variant={variant} style={styles.can} fallbackSize={240} />
-        <Text style={styles.hint}>Drag to spin the can</Text>
+        <Can variant={variant} size={268} hero />
       </View>
 
       <Text style={styles.rarity}>
@@ -194,16 +193,6 @@ const styles = StyleSheet.create({
     height: 240,
     borderRadius: 120,
     backgroundColor: "rgba(0,255,65,0.09)",
-  },
-  can: { width: 190, height: 268 },
-  hint: {
-    position: "absolute",
-    bottom: 0,
-    fontSize: 9,
-    fontWeight: "500",
-    letterSpacing: 1.5,
-    textTransform: "uppercase",
-    color: textAlpha(38),
   },
   rarity: { fontSize: 9.5, fontWeight: "500", letterSpacing: 1.7, textTransform: "uppercase", color: muted },
   name: {

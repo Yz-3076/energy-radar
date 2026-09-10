@@ -20,3 +20,6 @@ Thumbs.db
 # secrets — never commit real credentials
 .env
 !*.env.example
+
+# generated design-review sheet
+mobile/scripts/cans-preview.html

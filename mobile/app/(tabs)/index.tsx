@@ -25,7 +25,6 @@ import { useSafeAreaInsets } from "react-native-safe-area-context";
 import Supercluster from "supercluster";
 
 import { Can } from "@/components/Can";
-import { CanGL } from "@/components/CanGL";
 import { ClusterBadge, StorePin, UserPuck } from "@/components/MapPins";
 import { FadeInView, SlideInView } from "@/components/motion";
 import { StoreBubble } from "@/components/StoreBubble";
@@ -484,8 +483,7 @@ export default function MapScreen() {
             style={[styles.heroWrap, { top: H * 0.24 }]}
           >
             <View style={styles.heroGlow} />
-            <CanGL variant={focusVariant} style={styles.hero} fallbackSize={210} />
-            <Text style={styles.heroHint}>Drag to spin</Text>
+            <Can variant={focusVariant} size={262} hero />
           </FadeInView>
 
           <SlideInView
@@ -644,16 +642,6 @@ const styles = StyleSheet.create({
     height: 210,
     borderRadius: 105,
     backgroundColor: "rgba(0,255,65,0.10)",
-  },
-  hero: { width: 148, height: 262 },
-  heroHint: {
-    position: "absolute",
-    bottom: 2,
-    fontSize: 9,
-    fontWeight: "500",
-    letterSpacing: 1.5,
-    textTransform: "uppercase",
-    color: textAlpha(40),
   },
   bubble: { position: "absolute" },
 });

@@ -17,9 +17,25 @@ export type Rarity = "Common" | "Uncommon" | "Rare" | "Ultra";
  *  apart on a map pin than the accent colour does. */
 export type Body = "black" | "white";
 
-/** The mark across the label. Both can renderers read this, so a variant looks
- *  like itself whether it is 26 px of SVG in a list or the spun 3-D hero. */
-export type Artwork = "claw" | "burst" | "wave" | "split";
+/** The mark across the label, drawn by Can.tsx at every size.
+ *
+ *  Chosen per flavour to say something about the drink — citrus segments,
+ *  a berry cluster, a barrelling wave — rather than only tinting the same
+ *  shape a different colour.
+ *
+ *  "claw" is gone: three tapered slashes sat too close to the real
+ *  registered mark to keep on cans that appear in a store listing. */
+export type Artwork =
+  | "bolt"
+  | "burst"
+  | "wave"
+  | "split"
+  | "citrus"
+  | "berry"
+  | "peach"
+  | "surf"
+  | "crown"
+  | "ripple";
 
 export type Variant = {
   id: string;
@@ -57,7 +73,7 @@ export const VARIANTS: Variant[] = [
     accent: "#00ff41",
     secondary: "#0a8f2a",
     body: "black",
-    artwork: "claw",
+    artwork: "bolt",
     barcode: "5061013942249",
     rarity: "Common",
     sizeMl: 500,
@@ -74,7 +90,7 @@ export const VARIANTS: Variant[] = [
     accent: "#cbd0cb",
     secondary: "#8d968d",
     body: "white",
-    artwork: "claw",
+    artwork: "ripple",
     barcode: "5060639128051",
     rarity: "Common",
     sizeMl: 500,
@@ -159,7 +175,7 @@ export const VARIANTS: Variant[] = [
     accent: "#8f7ce0",
     secondary: "#5a49a8",
     body: "white",
-    artwork: "wave",
+    artwork: "berry",
     barcode: "5060639127078",
     rarity: "Rare",
     sizeMl: 500,
@@ -176,7 +192,7 @@ export const VARIANTS: Variant[] = [
     accent: "#ff5c8a",
     secondary: "#c92f5c",
     body: "black",
-    artwork: "burst",
+    artwork: "citrus",
     barcode: "5060751219118",
     rarity: "Rare",
     sizeMl: 500,
@@ -193,7 +209,7 @@ export const VARIANTS: Variant[] = [
     accent: "#ffd166",
     secondary: "#c99a2a",
     body: "black",
-    artwork: "wave",
+    artwork: "surf",
     barcode: null,
     rarity: "Rare",
     sizeMl: 500,
@@ -210,7 +226,7 @@ export const VARIANTS: Variant[] = [
     accent: "#d8b25a",
     secondary: "#9c7c2c",
     body: "white",
-    artwork: "split",
+    artwork: "citrus",
     barcode: null,
     rarity: "Ultra",
     sizeMl: 500,
@@ -227,7 +243,7 @@ export const VARIANTS: Variant[] = [
     accent: "#b08050",
     secondary: "#7a5734",
     body: "black",
-    artwork: "split",
+    artwork: "ripple",
     barcode: null,
     rarity: "Ultra",
     sizeMl: 500,
@@ -244,7 +260,7 @@ export const VARIANTS: Variant[] = [
     accent: "#f2e6a0",
     secondary: "#b8a45a",
     body: "black",
-    artwork: "wave",
+    artwork: "citrus",
     barcode: null,
     rarity: "Ultra",
     sizeMl: 458,
@@ -269,7 +285,7 @@ export const VARIANTS: Variant[] = [
     accent: "#ffb38a",
     secondary: "#e07a4f",
     body: "white",
-    artwork: "wave",
+    artwork: "peach",
     barcode: "5056784903865",
     rarity: "Rare",
     sizeMl: 500,
@@ -286,7 +302,7 @@ export const VARIANTS: Variant[] = [
     accent: "#7CFC5A",
     secondary: "#2f8f2a",
     body: "black",
-    artwork: "claw",
+    artwork: "bolt",
     barcode: "5061013942331",
     rarity: "Uncommon",
     sizeMl: 500,
@@ -303,7 +319,7 @@ export const VARIANTS: Variant[] = [
     accent: "#ff4d6d",
     secondary: "#a3122f",
     body: "black",
-    artwork: "burst",
+    artwork: "berry",
     barcode: "5056784900970",
     rarity: "Rare",
     sizeMl: 500,
@@ -319,7 +335,7 @@ export const VARIANTS: Variant[] = [
     accent: "#ffe066",
     secondary: "#c8a415",
     body: "black",
-    artwork: "wave",
+    artwork: "citrus",
     barcode: "5061013944991",
     rarity: "Rare",
     sizeMl: 500,
@@ -335,7 +351,7 @@ export const VARIANTS: Variant[] = [
     accent: "#f0a500",
     secondary: "#7a4b00",
     body: "black",
-    artwork: "split",
+    artwork: "crown",
     barcode: "5060947547100",
     rarity: "Rare",
     sizeMl: 500,
@@ -351,7 +367,7 @@ export const VARIANTS: Variant[] = [
     accent: "#e8536b",
     secondary: "#8c2033",
     body: "black",
-    artwork: "split",
+    artwork: "berry",
     barcode: "5060517886547",
     rarity: "Rare",
     sizeMl: 500,
