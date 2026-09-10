@@ -9179,54 +9179,6 @@
         "seenAt": "2026-09-09T18:38:08.000",
         "source": "official_feed",
         "depletion": "healthy"
-      },
-      {
-        "variantId": "ultra",
-        "price": 7.5,
-        "qty": null,
-        "seenAt": "2026-09-09T08:06:36.000",
-        "source": "official_feed",
-        "depletion": "healthy"
-      },
-      {
-        "variantId": "mango-loco",
-        "price": 7.9,
-        "qty": null,
-        "seenAt": "2026-09-09T11:33:13.000",
-        "source": "official_feed",
-        "depletion": "healthy"
-      },
-      {
-        "variantId": "original",
-        "price": 7.5,
-        "qty": null,
-        "seenAt": "2026-09-08T13:47:05.000",
-        "source": "official_feed",
-        "depletion": "slowing"
-      },
-      {
-        "variantId": "ultra-fiesta",
-        "price": 7.9,
-        "qty": null,
-        "seenAt": "2026-09-08T19:11:11.000",
-        "source": "official_feed",
-        "depletion": "slowing"
-      },
-      {
-        "variantId": "full-zero",
-        "price": 7.9,
-        "qty": null,
-        "seenAt": "2026-09-09T18:38:08.000",
-        "source": "official_feed",
-        "depletion": "healthy"
-      },
-      {
-        "variantId": "ultra-paradise",
-        "price": 7.5,
-        "qty": null,
-        "seenAt": "2026-09-09T07:40:35.000",
-        "source": "official_feed",
-        "depletion": "healthy"
       }
     ]
   },
@@ -9345,54 +9297,6 @@
         "seenAt": "2026-08-24T12:40:17.000",
         "source": "official_feed",
         "depletion": "insufficient_data"
-      },
-      {
-        "variantId": "full-zero",
-        "price": 7.9,
-        "qty": null,
-        "seenAt": "2026-09-01T19:51:29.000",
-        "source": "official_feed",
-        "depletion": "insufficient_data"
-      },
-      {
-        "variantId": "ultra-fiesta",
-        "price": 7.9,
-        "qty": null,
-        "seenAt": "2026-09-07T14:59:19.000",
-        "source": "official_feed",
-        "depletion": "insufficient_data"
-      },
-      {
-        "variantId": "original",
-        "price": 7.5,
-        "qty": null,
-        "seenAt": "2026-09-07T19:27:29.000",
-        "source": "official_feed",
-        "depletion": "insufficient_data"
-      },
-      {
-        "variantId": "ultra-paradise",
-        "price": 7.5,
-        "qty": null,
-        "seenAt": "2026-08-03T21:26:49.000",
-        "source": "official_feed",
-        "depletion": "insufficient_data"
-      },
-      {
-        "variantId": "ultra",
-        "price": 7.5,
-        "qty": null,
-        "seenAt": "2026-09-03T22:07:06.000",
-        "source": "official_feed",
-        "depletion": "insufficient_data"
-      },
-      {
-        "variantId": "mango-loco",
-        "price": 7.9,
-        "qty": null,
-        "seenAt": "2026-08-24T12:40:17.000",
-        "source": "official_feed",
-        "depletion": "insufficient_data"
       }
     ]
   },
@@ -9464,54 +9368,6 @@
     "lat": 32.819359,
     "lng": 34.9969345,
     "shelf": [
-      {
-        "variantId": "original",
-        "price": 6.5,
-        "qty": null,
-        "seenAt": "2026-09-09T21:36:55.000",
-        "source": "official_feed",
-        "depletion": "healthy"
-      },
-      {
-        "variantId": "full-zero",
-        "price": 6.8,
-        "qty": null,
-        "seenAt": "2026-09-09T19:20:38.000",
-        "source": "official_feed",
-        "depletion": "healthy"
-      },
-      {
-        "variantId": "ultra",
-        "price": 6.5,
-        "qty": null,
-        "seenAt": "2026-09-09T21:36:55.000",
-        "source": "official_feed",
-        "depletion": "healthy"
-      },
-      {
-        "variantId": "ultra-paradise",
-        "price": 6.5,
-        "qty": null,
-        "seenAt": "2026-09-07T10:57:17.000",
-        "source": "official_feed",
-        "depletion": "insufficient_data"
-      },
-      {
-        "variantId": "ultra-fiesta",
-        "price": 6.8,
-        "qty": null,
-        "seenAt": "2026-09-09T10:36:58.000",
-        "source": "official_feed",
-        "depletion": "healthy"
-      },
-      {
-        "variantId": "mango-loco",
-        "price": 6.8,
-        "qty": null,
-        "seenAt": "2026-09-09T14:52:35.000",
-        "source": "official_feed",
-        "depletion": "healthy"
-      },
       {
         "variantId": "original",
         "price": 6.5,

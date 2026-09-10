@@ -283,15 +283,29 @@ async def run() -> None:
                 promo_dir = await promotions_gov.fetch_store_promos(chain, item["store_id"])
                 gov_promo_maps.append(promotions_gov.parse_store_promos(promo_dir, BARCODE_TO_VARIANT))
 
-            stores_by_key[store_key]["shelf"].append(
-                {
-                    "variantId": variant_id,
-                    "price": item["price"],
-                    "qty": None,  # the official feed has no stock field at all
-                    "seenAt": item["last_sale"] or now,
-                    "source": "official_feed",
-                }
-            )
+            new_row = {
+                "variantId": variant_id,
+                "price": item["price"],
+                "qty": None,  # the official feed has no stock field at all
+                "seenAt": item["last_sale"] or now,
+                "source": "official_feed",
+            }
+            shelf = stores_by_key[store_key]["shelf"]
+            # Some chains' own price feeds list the same barcode twice for
+            # one store (confirmed 2026-09-10 on a handful of Rami Levy
+            # branches — byte-identical duplicate rows, upstream feed
+            # noise, not our scrape). Without this guard the duplicate
+            # variant_id survives into latest.json and React sees two
+            # list items with the same key on the store screen. Keep
+            # whichever row was seen most recently rather than assuming
+            # first-wins, in case a real same-run price update is what's
+            # actually happening.
+            existing = next((r for r in shelf if r["variantId"] == variant_id), None)
+            if existing is None:
+                shelf.append(new_row)
+            elif new_row["seenAt"] > existing["seenAt"]:
+                shelf.remove(existing)
+                shelf.append(new_row)
             new_observations.append(
                 {
                     "store_id": store_key,

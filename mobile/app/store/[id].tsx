@@ -139,10 +139,14 @@ export default function StoreScreen() {
 
       <View style={styles.body}>
         <View style={styles.openRow}>
-          <Clock size={12} color={color.accent} weight="fill" />
-          <Text style={styles.open}>
-            {store.closesAt === "24h" ? "Open 24 hours" : `Open until ${store.closesAt}`}
-          </Text>
+          {store.closesAt ? (
+            <>
+              <Clock size={12} color={color.accent} weight="fill" />
+              <Text style={styles.open}>
+                {store.closesAt === "24h" ? "Open 24 hours" : `Open until ${store.closesAt}`}
+              </Text>
+            </>
+          ) : null}
           {shelfPromos.length > 0 ? (
             <View style={styles.dealPill}>
               <Flame size={10} color="#ff5a2e" weight="fill" />
