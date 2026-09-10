@@ -410,12 +410,27 @@ export default function MapScreen() {
 
       {!focus && outOfCoverage ? (
         <FadeInView style={[styles.coverage, { bottom: insets.bottom + 92 }]}>
-          <Text style={styles.coverageTitle}>No shelves within 25 km</Text>
-          <Text style={styles.coverageBody}>
-            Energy Radar reads Israel's published price files, so that is where the shelves are today. The
-            nearest one it knows about is {prettyDistance(nearestMetres)} away — or log the shelf in
-            front of you and put it on the map yourself.
-          </Text>
+          {stores.length === 0 ? (
+            // Nothing loaded at all, rather than nothing nearby — usually
+            // no connection. Said plainly instead of quoting a distance to
+            // a dataset we don't have.
+            <>
+              <Text style={styles.coverageTitle}>Can't reach the price data</Text>
+              <Text style={styles.coverageBody}>
+                Energy Radar reads Israel's published price files over the network, and can't get to them
+                right now. Check your connection — the map fills back in on its own once it's through.
+              </Text>
+            </>
+          ) : (
+            <>
+              <Text style={styles.coverageTitle}>No shelves within 25 km</Text>
+              <Text style={styles.coverageBody}>
+                Energy Radar reads Israel's published price files, so that is where the shelves are today. The
+                nearest one it knows about is {prettyDistance(nearestMetres)} away — or log the shelf in
+                front of you and put it on the map yourself.
+              </Text>
+            </>
+          )}
         </FadeInView>
       ) : null}
 

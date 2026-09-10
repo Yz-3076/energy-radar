@@ -255,7 +255,13 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
     // israel-poc/pipeline.py) and grows chain by chain; until then, or
     // whenever the fetch hasn't succeeded, the curated seed set is what
     // keeps the app from looking empty.
-    const base = liveStores ?? STORES;
+    // Empty, not the bundled seed set, when live data hasn't loaded. The
+    // seed set is invented shops with invented prices and nothing on
+    // screen distinguishes them from real ones, so falling back to it
+    // meant a user with no signal was quietly shown fiction — and could
+    // be sent to a shop that doesn't exist. An empty map that says so is
+    // the honest failure. STORES stays for tests and local design work.
+    const base = liveStores ?? [];
     for (const s of base) byId.set(s.id, { ...s, shelf: [...s.shelf] });
     for (const s of featured) byId.set(s.id, s);
     return [...byId.values()];
