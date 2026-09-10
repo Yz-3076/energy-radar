@@ -79,13 +79,23 @@ DUMPS_DIR = Path(__file__).resolve().parent / "dumps"
 #                        contributes rows here since we can't geocode a
 #                        branch without its address. Not a bug, just a gap
 #                        in what this one chain publishes.
-#  VICTORY_NEW_SOURCE  — connects fine (laibcatalog.co.il), 70 real branches
-#                        confirmed to exist, but /getfiles currently returns
-#                        an empty list for their chain code. Not an error —
-#                        the API just has nothing published at the moment
-#                        this was checked. Left in: costs nothing to ask
-#                        again every 3 hours, and it'll start contributing
-#                        the moment their publishing schedule fills back in.
+#  VICTORY_NEW_SOURCE  — publishes fine, but only to some networks. From a
+#                        home connection in Israel on 2026-09-10 this
+#                        returned 70 branches, 70 price files and 836
+#                        Monster rows; the CI run 10 minutes later got a
+#                        connect timeout on every single call to
+#                        laibcatalog.co.il (30s, no response at all). A
+#                        connect-level timeout rather than a refusal or a
+#                        403 is what an IP-level firewall drop looks like,
+#                        so the working theory is that they block cloud or
+#                        non-Israeli addresses. This is NOT the same as the
+#                        earlier "their API returns an empty list" note,
+#                        which described a real outage on their side and is
+#                        no longer what's happening.
+#                        Consequence: no Victory branch can appear in data
+#                        produced by GitHub Actions, however healthy their
+#                        feed is. Getting them in needs the scrape to run
+#                        from a network they answer — see docs/staying-current.md.
 CHAINS = ["SHUFERSAL", "VICTORY_NEW_SOURCE", "RAMI_LEVY", "YELLOW", "OSHER_AD", "DOR_ALON"]
 
 # For local smoke-testing only: PIPELINE_LIMIT=5 py pipeline.py fetches just a
