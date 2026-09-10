@@ -115,6 +115,10 @@ sleep 4
 "$ADB" -s "$SERIAL" shell input keyevent KEYCODE_BACK
 sleep 2
 shot "05-search"         "-"                      3
+# Onboarding is deep-linked rather than triggered for real: showing it
+# properly would mean clearing seenOnboarding from app storage, which on a
+# real handset also wipes the owner's saved shelves, drinks and alerts.
+shot "06-onboarding"     "onboarding"             5
 shot "02-store-deals"    "store/dor_alon-401"     6
 shot "03-flavour"        "variant/ultra"          6
 shot "04-store-local"    "store/rami_levy-25"     6
