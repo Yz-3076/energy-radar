@@ -27,16 +27,50 @@ changing it is a bigger refactor than this pass needs. Worth revisiting if
 per-store precision ever earns its cost.
 """
 
+import json
 import xml.etree.ElementTree as ET
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 from il_supermarket_scarper.scrappers_factory import ScraperFactory
 from il_supermarket_scarper.utils.file_output import DiskFileOutput
 
 DUMPS_DIR = Path(__file__).resolve().parent / "dumps"
+CACHE_PATH = Path(__file__).resolve().parent.parent / "data" / "promo-cache.json"
 
 MAX_PROMO_ITEMS = 60  # a real per-product deal is never this broad
 VOUCHER_PROVIDERS = ("סיבוס", "סודקסו", "תן ביס", "תן-ביס", "10ביס")
+
+# Confirmed 2026-09-10: fetching every store's PromoFull file every run
+# (~315 stores nationwide) turned a ~15min pipeline run into 40+ minutes
+# and counting -- these files are several MB each and this step didn't
+# exist when that runtime was last measured. The feed itself only
+# publishes a few times a day, so re-downloading and re-parsing a store
+# we already have a recent result for buys nothing. Cache the *parsed*
+# result (tiny) rather than the raw XML (multi-MB, and never persisted
+# between runs anyway -- CI runners are ephemeral and dumps/ is
+# gitignored), keyed by chain:store_id, and only re-fetch once a cached
+# entry is stale.
+CACHE_TTL = timedelta(hours=20)
+
+
+def load_cache() -> dict:
+    if CACHE_PATH.exists():
+        return json.loads(CACHE_PATH.read_text(encoding="utf-8"))
+    return {}
+
+
+def save_cache(cache: dict) -> None:
+    CACHE_PATH.parent.mkdir(parents=True, exist_ok=True)
+    CACHE_PATH.write_text(json.dumps(cache, ensure_ascii=False, indent=2, sort_keys=True), encoding="utf-8")
+
+
+def _is_fresh(entry: dict) -> bool:
+    try:
+        fetched_at = datetime.fromisoformat(entry["fetchedAt"])
+    except (KeyError, ValueError):
+        return False
+    return datetime.now(timezone.utc) - fetched_at < CACHE_TTL
 
 
 async def fetch_store_promos(chain_name: str, store_id: str) -> Path:
@@ -123,6 +157,24 @@ def parse_store_promos(promo_dir: Path, barcode_to_variant: dict[str, str]) -> d
             for variant_id, item_el in variant_items.items():
                 out.setdefault(variant_id, []).append(_shape(promo_el, item_el))
     return out
+
+
+async def get_store_promos(
+    chain: str, store_id: str, barcode_to_variant: dict[str, str], cache: dict
+) -> dict[str, list[dict]]:
+    """Cache-aware entry point pipeline.py should call instead of
+    fetch_store_promos + parse_store_promos directly -- reuses a fresh
+    cached result instead of re-downloading and re-parsing this store's
+    PromoFull file every single run (see CACHE_TTL above)."""
+    key = f"{chain}:{store_id}"
+    entry = cache.get(key)
+    if entry is not None and _is_fresh(entry):
+        return entry["promos"]
+
+    promo_dir = await fetch_store_promos(chain, store_id)
+    promos = parse_store_promos(promo_dir, barcode_to_variant)
+    cache[key] = {"fetchedAt": datetime.now(timezone.utc).isoformat(), "promos": promos}
+    return promos
 
 
 def merge_promo_maps(*maps: dict[str, list[dict]]) -> dict[str, list[dict]]:

@@ -235,6 +235,7 @@ def write_history_index() -> None:
 async def run() -> None:
     now = datetime.now(timezone.utc).isoformat()
     geocode_cache = geo.load_cache()
+    promo_cache = promotions_gov.load_cache()
     new_observations: list[dict] = []
     stores_by_key: dict[str, dict] = {}  # f"{chain}:{store_id}" -> Store shape
     barcodes_seen: dict[str, str] = {}  # barcode -> variant_id, for promotions.py
@@ -279,9 +280,14 @@ async def run() -> None:
                 # a real promo-file fetch here rather than a separate pass,
                 # since "first time seen" already naturally dedupes per
                 # store. See promotions_gov.py for the filtering that keeps
-                # this from drowning in blanket meal-voucher noise.
-                promo_dir = await promotions_gov.fetch_store_promos(chain, item["store_id"])
-                gov_promo_maps.append(promotions_gov.parse_store_promos(promo_dir, BARCODE_TO_VARIANT))
+                # this from drowning in blanket meal-voucher noise, and its
+                # cache for why this doesn't re-download every store's
+                # multi-MB promo file on every single run.
+                gov_promo_maps.append(
+                    await promotions_gov.get_store_promos(
+                        chain, item["store_id"], BARCODE_TO_VARIANT, promo_cache
+                    )
+                )
 
             new_row = {
                 "variantId": variant_id,
@@ -317,6 +323,7 @@ async def run() -> None:
             )
 
     geo.save_cache(geocode_cache)
+    promotions_gov.save_cache(promo_cache)
     append_history(new_observations)
 
     # Depletion needs the FULL history including what we just appended.
