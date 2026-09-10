@@ -1,0 +1,41 @@
+# What NOT to upload to EAS Build.
+#
+# EAS resolves the project root to the git repo root and applies that
+# .gitignore, not mobile/.gitignore — so `/android`, which is ignored
+# locally, was still being packed into the build archive. That made the
+# upload 392 MB (1.4 GB of Gradle output) and cost ~3 minutes per build
+# for files EAS regenerates from scratch anyway.
+#
+# This file REPLACES .gitignore for archive purposes, so it has to
+# re-state the ordinary excludes too, not just the android one.
+
+# Generated native projects — EAS runs prebuild itself (see app.json;
+# there is no ios/ or android/ committed to the repo).
+/android
+/ios
+
+# Dependencies and build output — reinstalled from package-lock.json.
+node_modules/
+dist/
+web-build/
+.expo/
+.kotlin/
+.gradle/
+
+# Local tooling and scratch
+.claude/
+scripts/check-device.sh
+*.log
+.metro-health-check*
+*.tsbuildinfo
+
+# Credentials must never leave this machine
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+.env*.local
+
+# OS noise
+.DS_Store
