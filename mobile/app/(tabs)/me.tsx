@@ -157,20 +157,16 @@ export default function MeScreen() {
     return alerts.map((alert): AlertRow => {
       if (alert.type === "flavour") {
         const variant = getVariant(alert.variantId);
-        const hits = matchingStores(alert, stores);
+        const hits = matchingStores(alert, stores, coord);
         const on = hits.length > 0;
         return {
           id: alert.id,
           on,
-          badge: alert.kind === "restock" ? "RESTOCK" : "PRICE DROP",
+          badge: "NEARBY",
           title: variant.name,
           sub: on
-            ? alert.kind === "restock"
-              ? `Back in stock at ${isolate(hits[0].store.name)}`
-              : `Now ${ils(hits[0].price)} at ${isolate(hits[0].store.name)}`
-            : alert.kind === "restock"
-              ? "No stock nearby yet"
-              : `Watching for under ${ils(alert.maxPrice ?? 0)}`,
+            ? `${ils(hits[0].price)} at ${isolate(hits[0].store.name)} · ${prettyDistance(hits[0].metres)}`
+            : "Not on a shelf near you right now",
           can: variant,
           nav: { pathname: "/variant/[id]", params: { id: alert.variantId } },
           remove: () => removeAlert(alert.id),
@@ -346,7 +342,7 @@ export default function MeScreen() {
           </View>
           <Text style={styles.emptyTitle}>Radar is quiet</Text>
           <Text style={styles.emptyBody}>
-            Track a flavour for a restock or price drop, or a store to know when you're near it.
+            Track a flavour to know when it's on a shelf near you, or a store to know when you're near it.
           </Text>
         </View>
       ) : null}
@@ -370,7 +366,7 @@ export default function MeScreen() {
             }}
           >
             <Text style={styles.addOptionTitle}>Track a flavour</Text>
-            <Text style={styles.addOptionSub}>Notify on restock or a price drop</Text>
+            <Text style={styles.addOptionSub}>Notify when it's on a nearby shelf</Text>
           </Tap>
           <Tap style={styles.addOption} onPress={() => setAddMode("store")}>
             <Text style={styles.addOptionTitle}>Track a store</Text>

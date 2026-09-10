@@ -7,6 +7,7 @@ import { CanGL } from "@/components/CanGL";
 import { CaretLeft, Bell, BellRinging, Check } from "@/components/icons";
 import { PromoList } from "@/components/PromoList";
 import { Kicker, Tap, rowDivider, styles as ui } from "@/components/ui";
+import { FLAVOUR_NEARBY_METRES } from "@/data/alerts";
 import { getVariant } from "@/data/catalog";
 import { distanceM, ils, prettyDistance, relativeTime } from "@/data/stores";
 import { useApp } from "@/state/AppState";
@@ -39,15 +40,8 @@ export default function VariantScreen() {
   const lowest = listings.length ? Math.min(...listings.map((l) => l.r.price)) : null;
   const promos = promosForVariant(variant.id);
   const alert = flavourAlertFor(variant.id);
-  const onToggleAlert = () => {
-    if (alert) {
-      toggleFlavourAlert(variant.id, alert.kind, alert.maxPrice);
-      return;
-    }
-    // Nothing on shelf right now → a restock alert. Otherwise → tell me if
-    // it gets cheaper than it is at this exact moment, no number to enter.
-    toggleFlavourAlert(variant.id, lowest === null ? "restock" : "price_drop", lowest);
-  };
+  // Proximity, not price — nothing to configure, so this is a plain toggle.
+  const onToggleAlert = () => toggleFlavourAlert(variant.id);
 
   const onLogDrink = () => {
     logDrink(variant.id);
@@ -131,13 +125,11 @@ export default function VariantScreen() {
         )}
         <View style={styles.alertText}>
           <Text style={[styles.alertTitle, alert && { color: color.accent }]}>
-            {alert ? "Alert on" : listings.length === 0 ? "Notify me on restock" : "Notify me on a price drop"}
+            {alert ? "Alert on" : "Notify me when it's near me"}
           </Text>
           <Text style={styles.alertSub}>
             {alert
-              ? alert.kind === "restock"
-                ? "You'll see it here once a shelf lists it"
-                : `You'll see it here if it drops under ${ils(alert.maxPrice ?? 0)}`
+              ? `You'll see it on Me when a shelf within ${Math.round(FLAVOUR_NEARBY_METRES / 100) / 10} km has it`
               : "Checked in-app, not a push notification — see Me for all your alerts"}
           </Text>
         </View>

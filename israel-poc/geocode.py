@@ -123,6 +123,16 @@ MANUAL_OVERRIDES: dict[str, list[float] | None] = {
     # locality centroid -- i.e. a real building, not a settlement centroid
     # standing in for one (2026-09-10).
     _cache_key("א.ת שילת", ""): [31.9161055, 35.0242511],
+    # Rami Levy "מודעין ישפרו" (their own spelling), in the Yishpro centre
+    # in Modi'in. Unlike the Shilat branch this one has a house number, so
+    # it was queried normally -- but the address packs a street, a centre
+    # name and a mall name into one field ("החרט 1 מרכז עינב ישפרו"), which
+    # the structured street= query can't parse, and Nominatim returned
+    # nothing at all. Looked up by the mall instead: "ישפרו סנטר, המלאכות,
+    # מרכז עינב, מודיעין-מכבים-רעות", tagged `commercial`, and separately
+    # confirmed by the street itself (החרט, מרכז עינב) landing 218m away --
+    # two independent hits agreeing on the same block (2026-09-10).
+    _cache_key("החרט 1 מרכז עינב ישפרו", ""): [31.8893287, 34.9635571],
 }
 
 

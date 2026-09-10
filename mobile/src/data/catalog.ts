@@ -109,7 +109,7 @@ export const VARIANTS: Variant[] = [
     sugarG: 0,
     zeroSugar: true,
     blurb:
-      "Mango without the sugar load. Ships in waves — set a restock alert and it'll show up here the moment a shelf logs one.",
+      "Mango without the sugar load. Ships in waves — set an alert and it'll show up on Me the moment a shelf near you has one.",
   },
   {
     id: "mango-loco",

@@ -10,7 +10,7 @@ import React, {
   useState,
 } from "react";
 
-import type { Alert, FlavourAlertKind } from "@/data/alerts";
+import type { Alert } from "@/data/alerts";
 import {
   fetchFeaturedStores,
   fetchLiveStores,
@@ -102,7 +102,7 @@ type Ctx = {
   flavourAlertFor: (variantId: string) => Extract<Alert, { type: "flavour" }> | undefined;
   /** Creates the flavour's alert if it doesn't have one, removes it if it
    *  does — at most one per flavour, so there is nothing to configure. */
-  toggleFlavourAlert: (variantId: string, kind: FlavourAlertKind, maxPrice: number | null) => void;
+  toggleFlavourAlert: (variantId: string) => void;
   storeAlertFor: (storeId: string) => Extract<Alert, { type: "store" }> | undefined;
   /** Same toggle idea, for "tell me when I'm near this store". */
   toggleStoreAlert: (storeId: string) => void;
@@ -355,7 +355,7 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
         ),
       [state.alerts],
     ),
-    toggleFlavourAlert: useCallback((variantId: string, kind: FlavourAlertKind, maxPrice: number | null) => {
+    toggleFlavourAlert: useCallback((variantId: string) => {
       setState((p) => {
         const exists = p.alerts.some((a) => a.type === "flavour" && a.variantId === variantId);
         if (exists) {
@@ -365,8 +365,6 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
           id: `alert-${Date.now()}`,
           type: "flavour",
           variantId,
-          kind,
-          maxPrice,
           createdAt: new Date().toISOString(),
         };
         return { ...p, alerts: [alert, ...p.alerts] };

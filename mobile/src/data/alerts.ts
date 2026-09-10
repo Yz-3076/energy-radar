@@ -1,22 +1,23 @@
 import { distanceM, type Store } from "./stores";
 
-export type FlavourAlertKind = "restock" | "price_drop";
-
 /**
  * Two different things worth being told about, kept as one list because
- * they show up together on Me: "this flavour is back" and "I'm near a shelf
- * I saved" are both just — the radar found something. Discriminated on
- * `type` rather than splitting into two lists, so the Me screen can render
- * one feed instead of two.
+ * they show up together on Me: "this flavour is on a shelf near me" and
+ * "I'm near a shelf I saved" are both just — the radar found something.
+ * Discriminated on `type` rather than splitting into two lists, so the Me
+ * screen can render one feed instead of two.
+ *
+ * A flavour alert is about *proximity*, not price. It used to watch for a
+ * restock or a price drop, which quietly made it a different product: a
+ * shelf listing Ultra 90km away satisfied it, so the answer was never
+ * something you could act on. The whole app is "what can I actually walk
+ * to", and this is that question asked about one can.
  */
 export type Alert =
   | {
       id: string;
       type: "flavour";
       variantId: string;
-      kind: FlavourAlertKind;
-      /** Only meaningful for "price_drop" — notify once a shelf lists it under this. */
-      maxPrice: number | null;
       createdAt: string;
     }
   | {
@@ -33,25 +34,29 @@ export type Alert =
  *  not "your phone buzzes when you arrive." */
 export const NEARBY_METRES = 350;
 
+/** A flavour alert answers "is this can somewhere I could reasonably go
+ *  right now", which is a looser question than a store alert's "have I
+ *  arrived" — so it uses a walk-to radius rather than NEARBY_METRES. */
+export const FLAVOUR_NEARBY_METRES = 1500;
+
 /**
- * Stores currently satisfying one flavour alert, cheapest first — see the
- * module doc above for why this is a plain check against loaded data, not a
- * live push.
+ * Shelves near you carrying the flavour, closest first — see the module doc
+ * above for why this is a plain check against loaded data, not a live push,
+ * and why it is filtered by distance rather than by price.
  */
 export function matchingStores(
   alert: Extract<Alert, { type: "flavour" }>,
   stores: Store[],
-): { store: Store; price: number }[] {
-  const hits: { store: Store; price: number }[] = [];
+  coord: { lat: number; lng: number },
+): { store: Store; price: number; metres: number }[] {
+  const hits: { store: Store; price: number; metres: number }[] = [];
   for (const store of stores) {
     const row = store.shelf.find((r) => r.variantId === alert.variantId);
     if (!row) continue;
-    if (alert.kind === "restock") hits.push({ store, price: row.price });
-    else if (alert.maxPrice != null && row.price < alert.maxPrice) {
-      hits.push({ store, price: row.price });
-    }
+    const metres = distanceM(coord, store);
+    if (metres <= FLAVOUR_NEARBY_METRES) hits.push({ store, price: row.price, metres });
   }
-  return hits.sort((a, b) => a.price - b.price);
+  return hits.sort((a, b) => a.metres - b.metres);
 }
 
 /** How far a store alert's target is right now, and whether that counts as
