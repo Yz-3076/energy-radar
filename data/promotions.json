@@ -1,1 +1,152 @@
-{}
+{
+  "ultra": [
+    {
+      "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+      "discountRate": 21.57,
+      "minQuantity": 2,
+      "maxQuantity": null,
+      "startsAt": "2026-08-19T00:00:00.000",
+      "endsAt": "2026-10-04T23:59:00.000",
+      "terms": null,
+      "clubOnly": false
+    },
+    {
+      "description": "משקה מונסטר 500מ ל 2 ב 21.90",
+      "discountRate": null,
+      "minQuantity": 2,
+      "maxQuantity": null,
+      "startsAt": "2026-09-01T00:00:00.000",
+      "endsAt": "2026-10-04T23:59:00.000",
+      "terms": null,
+      "clubOnly": false
+    },
+    {
+      "description": "משקה אנרגיה מונסטר 500מ ל  2 ב 18",
+      "discountRate": 11.76,
+      "minQuantity": 2,
+      "maxQuantity": null,
+      "startsAt": "2026-08-19T00:00:00.000",
+      "endsAt": "2026-10-04T23:59:00.000",
+      "terms": null,
+      "clubOnly": false
+    }
+  ],
+  "mango-loco": [
+    {
+      "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+      "discountRate": 21.57,
+      "minQuantity": 2,
+      "maxQuantity": null,
+      "startsAt": "2026-08-19T00:00:00.000",
+      "endsAt": "2026-10-04T23:59:00.000",
+      "terms": null,
+      "clubOnly": false
+    },
+    {
+      "description": "משקה מונסטר 500מ ל 2 ב 21.90",
+      "discountRate": null,
+      "minQuantity": 2,
+      "maxQuantity": null,
+      "startsAt": "2026-09-01T00:00:00.000",
+      "endsAt": "2026-10-04T23:59:00.000",
+      "terms": null,
+      "clubOnly": false
+    },
+    {
+      "description": "משקה אנרגיה מונסטר 500מ ל  2 ב 18",
+      "discountRate": 11.76,
+      "minQuantity": 2,
+      "maxQuantity": null,
+      "startsAt": "2026-08-19T00:00:00.000",
+      "endsAt": "2026-10-04T23:59:00.000",
+      "terms": null,
+      "clubOnly": false
+    }
+  ],
+  "ultra-paradise": [
+    {
+      "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+      "discountRate": 21.57,
+      "minQuantity": 2,
+      "maxQuantity": null,
+      "startsAt": "2026-08-19T00:00:00.000",
+      "endsAt": "2026-10-04T23:59:00.000",
+      "terms": null,
+      "clubOnly": false
+    },
+    {
+      "description": "משקה מונסטר 500מ ל 2 ב 21.90",
+      "discountRate": null,
+      "minQuantity": 2,
+      "maxQuantity": null,
+      "startsAt": "2026-09-01T00:00:00.000",
+      "endsAt": "2026-10-04T23:59:00.000",
+      "terms": null,
+      "clubOnly": false
+    },
+    {
+      "description": "משקה אנרגיה מונסטר 500מ ל  2 ב 18",
+      "discountRate": 11.76,
+      "minQuantity": 2,
+      "maxQuantity": null,
+      "startsAt": "2026-08-19T00:00:00.000",
+      "endsAt": "2026-10-04T23:59:00.000",
+      "terms": null,
+      "clubOnly": false
+    }
+  ],
+  "ultra-fiesta": [
+    {
+      "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+      "discountRate": 21.57,
+      "minQuantity": 2,
+      "maxQuantity": null,
+      "startsAt": "2026-08-19T00:00:00.000",
+      "endsAt": "2026-10-04T23:59:00.000",
+      "terms": null,
+      "clubOnly": false
+    },
+    {
+      "description": "משקה מונסטר 500מ ל 2 ב 21.90",
+      "discountRate": null,
+      "minQuantity": 2,
+      "maxQuantity": null,
+      "startsAt": "2026-09-01T00:00:00.000",
+      "endsAt": "2026-10-04T23:59:00.000",
+      "terms": null,
+      "clubOnly": false
+    },
+    {
+      "description": "משקה אנרגיה מונסטר 500מ ל  2 ב 18",
+      "discountRate": 11.76,
+      "minQuantity": 2,
+      "maxQuantity": null,
+      "startsAt": "2026-08-19T00:00:00.000",
+      "endsAt": "2026-10-04T23:59:00.000",
+      "terms": null,
+      "clubOnly": false
+    }
+  ],
+  "original": [
+    {
+      "description": "משקה מונסטר 500מ ל 2 ב 21.90",
+      "discountRate": null,
+      "minQuantity": 2,
+      "maxQuantity": null,
+      "startsAt": "2026-09-01T00:00:00.000",
+      "endsAt": "2026-10-04T23:59:00.000",
+      "terms": null,
+      "clubOnly": false
+    },
+    {
+      "description": "משקה אנרגיה מונסטר 500מ ל  2 ב 18",
+      "discountRate": 11.76,
+      "minQuantity": 2,
+      "maxQuantity": null,
+      "startsAt": "2026-08-19T00:00:00.000",
+      "endsAt": "2026-10-04T23:59:00.000",
+      "terms": null,
+      "clubOnly": false
+    }
+  ]
+}

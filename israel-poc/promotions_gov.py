@@ -97,14 +97,20 @@ def _is_fresh(entry: dict) -> bool:
     return datetime.now(timezone.utc) - fetched_at < CACHE_TTL
 
 
-async def fetch_store_promos(chain_name: str, store_id: str) -> Path:
+async def fetch_store_promos(chain_name: str, store_id: str) -> tuple[Path, bool]:
     """Fetch one store's PromoFull file. Same fail-soft style as
     pipeline.py's fetch_files — a chain with no promo feed, or a momentary
-    failure, must never take the run down."""
+    failure, must never take the run down.
+
+    Returns (dir, ok). `ok` is False when the fetch itself failed or timed
+    out, which the caller needs in order to tell "this store genuinely has
+    no Monster promos" apart from "we never managed to look" — they both
+    parse to {} otherwise, and caching the second as if it were the first
+    would suppress a store's real deals until the entry expired."""
     out_dir = DUMPS_DIR / chain_name / "promos" / store_id
     scraper_cls = ScraperFactory.get(chain_name)
     if scraper_cls is None:
-        return out_dir
+        return out_dir, False
     scraper = scraper_cls(file_output=DiskFileOutput(storage_path=str(out_dir)))
 
     async def _scrape() -> None:
@@ -115,9 +121,11 @@ async def fetch_store_promos(chain_name: str, store_id: str) -> Path:
         await asyncio.wait_for(_scrape(), timeout=FETCH_TIMEOUT_SECONDS)
     except asyncio.TimeoutError:
         print(f"  promo fetch timed out for {chain_name} store {store_id} after {FETCH_TIMEOUT_SECONDS}s")
+        return out_dir, False
     except Exception as e:  # noqa: BLE001 — one store's promo fetch failing must never crash the run
         print(f"  promo fetch failed for {chain_name} store {store_id}: {type(e).__name__}: {e}")
-    return out_dir
+        return out_dir, False
+    return out_dir, True
 
 
 def _is_real_discount(promo_el) -> bool:
@@ -201,9 +209,13 @@ async def get_store_promos(
     if entry is not None and _is_fresh(entry):
         return entry["promos"]
 
-    promo_dir = await fetch_store_promos(chain, store_id)
+    promo_dir, ok = await fetch_store_promos(chain, store_id)
     promos = parse_store_promos(promo_dir, barcode_to_variant)
-    cache[key] = {"fetchedAt": datetime.now(timezone.utc).isoformat(), "promos": promos}
+    # Only a fetch that actually succeeded is worth remembering. Caching a
+    # timeout would record "no promos here" for the full TTL and stop us
+    # retrying, quietly hiding that store's real deals.
+    if ok:
+        cache[key] = {"fetchedAt": datetime.now(timezone.utc).isoformat(), "promos": promos}
     return promos
 
 
