@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-10T16:41:28.225306+00:00",
+  "generated_at": "2026-09-10T20:45:00.567748+00:00",
   "chains_covered": [
     "SHUFERSAL",
     "VICTORY_NEW_SOURCE",
@@ -9,8 +9,8 @@
     "DOR_ALON"
   ],
   "store_count": 334,
-  "total_observations": 28180,
-  "observations_this_run": 3920,
+  "total_observations": 32108,
+  "observations_this_run": 3928,
   "listings_per_variant": {
     "ultra": 310,
     "mango-loco": 281,
@@ -27,9 +27,9 @@
     "aussie-lemonade": 3
   },
   "depletion_breakdown": {
-    "insufficient_data": 1183,
-    "likely_out": 207,
-    "slowing": 519,
-    "healthy": 209
+    "insufficient_data": 1111,
+    "likely_out": 205,
+    "slowing": 514,
+    "healthy": 288
   }
 }
