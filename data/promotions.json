@@ -1,255 +1,5 @@
 {
-  "dor_alon-401": {
-    "mango-loco": [
-      {
-        "clubOnly": false,
-        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
-        "discountRate": 21.57,
-        "endsAt": "2026-10-04T23:59:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-08-19T00:00:00.000",
-        "terms": null
-      }
-    ],
-    "ultra": [
-      {
-        "clubOnly": false,
-        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
-        "discountRate": 21.57,
-        "endsAt": "2026-10-04T23:59:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-08-19T00:00:00.000",
-        "terms": null
-      }
-    ],
-    "ultra-fiesta": [
-      {
-        "clubOnly": false,
-        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
-        "discountRate": 21.57,
-        "endsAt": "2026-10-04T23:59:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-08-19T00:00:00.000",
-        "terms": null
-      }
-    ],
-    "ultra-paradise": [
-      {
-        "clubOnly": false,
-        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
-        "discountRate": 21.57,
-        "endsAt": "2026-10-04T23:59:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-08-19T00:00:00.000",
-        "terms": null
-      }
-    ]
-  },
-  "dor_alon-402": {
-    "mango-loco": [
-      {
-        "clubOnly": false,
-        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
-        "discountRate": 21.57,
-        "endsAt": "2026-10-04T23:59:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-08-19T00:00:00.000",
-        "terms": null
-      }
-    ],
-    "ultra": [
-      {
-        "clubOnly": false,
-        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
-        "discountRate": 21.57,
-        "endsAt": "2026-10-04T23:59:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-08-19T00:00:00.000",
-        "terms": null
-      }
-    ],
-    "ultra-fiesta": [
-      {
-        "clubOnly": false,
-        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
-        "discountRate": 21.57,
-        "endsAt": "2026-10-04T23:59:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-08-19T00:00:00.000",
-        "terms": null
-      }
-    ],
-    "ultra-paradise": [
-      {
-        "clubOnly": false,
-        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
-        "discountRate": 21.57,
-        "endsAt": "2026-10-04T23:59:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-08-19T00:00:00.000",
-        "terms": null
-      }
-    ]
-  },
-  "dor_alon-403": {
-    "mango-loco": [
-      {
-        "clubOnly": false,
-        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
-        "discountRate": 21.57,
-        "endsAt": "2026-10-04T23:59:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-08-19T00:00:00.000",
-        "terms": null
-      }
-    ],
-    "ultra": [
-      {
-        "clubOnly": false,
-        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
-        "discountRate": 21.57,
-        "endsAt": "2026-10-04T23:59:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-08-19T00:00:00.000",
-        "terms": null
-      }
-    ],
-    "ultra-fiesta": [
-      {
-        "clubOnly": false,
-        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
-        "discountRate": 21.57,
-        "endsAt": "2026-10-04T23:59:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-08-19T00:00:00.000",
-        "terms": null
-      }
-    ],
-    "ultra-paradise": [
-      {
-        "clubOnly": false,
-        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
-        "discountRate": 21.57,
-        "endsAt": "2026-10-04T23:59:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-08-19T00:00:00.000",
-        "terms": null
-      }
-    ]
-  },
-  "dor_alon-404": {
-    "mango-loco": [
-      {
-        "clubOnly": false,
-        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
-        "discountRate": 21.57,
-        "endsAt": "2026-10-04T23:59:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-08-19T00:00:00.000",
-        "terms": null
-      }
-    ],
-    "ultra": [
-      {
-        "clubOnly": false,
-        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
-        "discountRate": 21.57,
-        "endsAt": "2026-10-04T23:59:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-08-19T00:00:00.000",
-        "terms": null
-      }
-    ],
-    "ultra-fiesta": [
-      {
-        "clubOnly": false,
-        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
-        "discountRate": 21.57,
-        "endsAt": "2026-10-04T23:59:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-08-19T00:00:00.000",
-        "terms": null
-      }
-    ],
-    "ultra-paradise": [
-      {
-        "clubOnly": false,
-        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
-        "discountRate": 21.57,
-        "endsAt": "2026-10-04T23:59:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-08-19T00:00:00.000",
-        "terms": null
-      }
-    ]
-  },
-  "dor_alon-415": {
-    "mango-loco": [
-      {
-        "clubOnly": false,
-        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
-        "discountRate": 21.57,
-        "endsAt": "2026-10-04T23:59:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-08-19T00:00:00.000",
-        "terms": null
-      }
-    ],
-    "ultra": [
-      {
-        "clubOnly": false,
-        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
-        "discountRate": 21.57,
-        "endsAt": "2026-10-04T23:59:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-08-19T00:00:00.000",
-        "terms": null
-      }
-    ],
-    "ultra-fiesta": [
-      {
-        "clubOnly": false,
-        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
-        "discountRate": 21.57,
-        "endsAt": "2026-10-04T23:59:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-08-19T00:00:00.000",
-        "terms": null
-      }
-    ],
-    "ultra-paradise": [
-      {
-        "clubOnly": false,
-        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
-        "discountRate": 21.57,
-        "endsAt": "2026-10-04T23:59:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-08-19T00:00:00.000",
-        "terms": null
-      }
-    ]
-  },
-  "dor_alon-501": {
+  "dor_alon-591": {
     "mango-loco": [
       {
         "clubOnly": false,
@@ -349,1602 +99,126 @@
       }
     ]
   },
-  "dor_alon-504": {
+  "dor_alon-958": {
     "mango-loco": [
       {
         "clubOnly": false,
-        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
-        "discountRate": 21.57,
+        "description": "משקה מונסטר 500מ ל 2 ב 21.90",
+        "discountRate": null,
         "endsAt": "2026-10-04T23:59:00.000",
         "maxQuantity": null,
         "minQuantity": 2,
-        "startsAt": "2026-08-19T00:00:00.000",
+        "startsAt": "2026-09-01T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "original": [
+      {
+        "clubOnly": false,
+        "description": "משקה מונסטר 500מ ל 2 ב 21.90",
+        "discountRate": null,
+        "endsAt": "2026-10-04T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-09-01T00:00:00.000",
         "terms": null
       }
     ],
     "ultra": [
       {
         "clubOnly": false,
-        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
-        "discountRate": 21.57,
+        "description": "משקה מונסטר 500מ ל 2 ב 21.90",
+        "discountRate": null,
         "endsAt": "2026-10-04T23:59:00.000",
         "maxQuantity": null,
         "minQuantity": 2,
-        "startsAt": "2026-08-19T00:00:00.000",
+        "startsAt": "2026-09-01T00:00:00.000",
         "terms": null
       }
     ],
     "ultra-fiesta": [
       {
         "clubOnly": false,
-        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
-        "discountRate": 21.57,
+        "description": "משקה מונסטר 500מ ל 2 ב 21.90",
+        "discountRate": null,
         "endsAt": "2026-10-04T23:59:00.000",
         "maxQuantity": null,
         "minQuantity": 2,
-        "startsAt": "2026-08-19T00:00:00.000",
+        "startsAt": "2026-09-01T00:00:00.000",
         "terms": null
       }
     ],
     "ultra-paradise": [
       {
         "clubOnly": false,
-        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
-        "discountRate": 21.57,
+        "description": "משקה מונסטר 500מ ל 2 ב 21.90",
+        "discountRate": null,
         "endsAt": "2026-10-04T23:59:00.000",
         "maxQuantity": null,
         "minQuantity": 2,
-        "startsAt": "2026-08-19T00:00:00.000",
+        "startsAt": "2026-09-01T00:00:00.000",
         "terms": null
       }
     ]
   },
-  "dor_alon-505": {
+  "dor_alon-927": {
     "mango-loco": [
       {
         "clubOnly": false,
-        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
-        "discountRate": 21.57,
+        "description": "משקה מונסטר 500מ ל 2 ב 21.90",
+        "discountRate": null,
         "endsAt": "2026-10-04T23:59:00.000",
         "maxQuantity": null,
         "minQuantity": 2,
-        "startsAt": "2026-08-19T00:00:00.000",
+        "startsAt": "2026-09-01T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "original": [
+      {
+        "clubOnly": false,
+        "description": "משקה מונסטר 500מ ל 2 ב 21.90",
+        "discountRate": null,
+        "endsAt": "2026-10-04T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-09-01T00:00:00.000",
         "terms": null
       }
     ],
     "ultra": [
       {
         "clubOnly": false,
-        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
-        "discountRate": 21.57,
+        "description": "משקה מונסטר 500מ ל 2 ב 21.90",
+        "discountRate": null,
         "endsAt": "2026-10-04T23:59:00.000",
         "maxQuantity": null,
         "minQuantity": 2,
-        "startsAt": "2026-08-19T00:00:00.000",
+        "startsAt": "2026-09-01T00:00:00.000",
         "terms": null
       }
     ],
     "ultra-fiesta": [
       {
         "clubOnly": false,
-        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
-        "discountRate": 21.57,
+        "description": "משקה מונסטר 500מ ל 2 ב 21.90",
+        "discountRate": null,
         "endsAt": "2026-10-04T23:59:00.000",
         "maxQuantity": null,
         "minQuantity": 2,
-        "startsAt": "2026-08-19T00:00:00.000",
+        "startsAt": "2026-09-01T00:00:00.000",
         "terms": null
       }
     ],
     "ultra-paradise": [
       {
         "clubOnly": false,
-        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
-        "discountRate": 21.57,
+        "description": "משקה מונסטר 500מ ל 2 ב 21.90",
+        "discountRate": null,
         "endsAt": "2026-10-04T23:59:00.000",
         "maxQuantity": null,
         "minQuantity": 2,
-        "startsAt": "2026-08-19T00:00:00.000",
-        "terms": null
-      }
-    ]
-  },
-  "dor_alon-507": {
-    "mango-loco": [
-      {
-        "clubOnly": false,
-        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
-        "discountRate": 21.57,
-        "endsAt": "2026-10-04T23:59:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-08-19T00:00:00.000",
-        "terms": null
-      }
-    ],
-    "ultra": [
-      {
-        "clubOnly": false,
-        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
-        "discountRate": 21.57,
-        "endsAt": "2026-10-04T23:59:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-08-19T00:00:00.000",
-        "terms": null
-      }
-    ],
-    "ultra-fiesta": [
-      {
-        "clubOnly": false,
-        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
-        "discountRate": 21.57,
-        "endsAt": "2026-10-04T23:59:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-08-19T00:00:00.000",
-        "terms": null
-      }
-    ],
-    "ultra-paradise": [
-      {
-        "clubOnly": false,
-        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
-        "discountRate": 21.57,
-        "endsAt": "2026-10-04T23:59:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-08-19T00:00:00.000",
-        "terms": null
-      }
-    ]
-  },
-  "dor_alon-508": {
-    "mango-loco": [
-      {
-        "clubOnly": false,
-        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
-        "discountRate": 21.57,
-        "endsAt": "2026-10-04T23:59:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-08-19T00:00:00.000",
-        "terms": null
-      }
-    ],
-    "ultra": [
-      {
-        "clubOnly": false,
-        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
-        "discountRate": 21.57,
-        "endsAt": "2026-10-04T23:59:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-08-19T00:00:00.000",
-        "terms": null
-      }
-    ],
-    "ultra-fiesta": [
-      {
-        "clubOnly": false,
-        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
-        "discountRate": 21.57,
-        "endsAt": "2026-10-04T23:59:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-08-19T00:00:00.000",
-        "terms": null
-      }
-    ],
-    "ultra-paradise": [
-      {
-        "clubOnly": false,
-        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
-        "discountRate": 21.57,
-        "endsAt": "2026-10-04T23:59:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-08-19T00:00:00.000",
-        "terms": null
-      }
-    ]
-  },
-  "dor_alon-510": {
-    "mango-loco": [
-      {
-        "clubOnly": false,
-        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
-        "discountRate": 21.57,
-        "endsAt": "2026-10-04T23:59:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-08-19T00:00:00.000",
-        "terms": null
-      }
-    ],
-    "ultra": [
-      {
-        "clubOnly": false,
-        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
-        "discountRate": 21.57,
-        "endsAt": "2026-10-04T23:59:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-08-19T00:00:00.000",
-        "terms": null
-      }
-    ],
-    "ultra-fiesta": [
-      {
-        "clubOnly": false,
-        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
-        "discountRate": 21.57,
-        "endsAt": "2026-10-04T23:59:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-08-19T00:00:00.000",
-        "terms": null
-      }
-    ],
-    "ultra-paradise": [
-      {
-        "clubOnly": false,
-        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
-        "discountRate": 21.57,
-        "endsAt": "2026-10-04T23:59:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-08-19T00:00:00.000",
-        "terms": null
-      }
-    ]
-  },
-  "dor_alon-512": {
-    "mango-loco": [
-      {
-        "clubOnly": false,
-        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
-        "discountRate": 21.57,
-        "endsAt": "2026-10-04T23:59:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-08-19T00:00:00.000",
-        "terms": null
-      }
-    ],
-    "ultra": [
-      {
-        "clubOnly": false,
-        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
-        "discountRate": 21.57,
-        "endsAt": "2026-10-04T23:59:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-08-19T00:00:00.000",
-        "terms": null
-      }
-    ],
-    "ultra-fiesta": [
-      {
-        "clubOnly": false,
-        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
-        "discountRate": 21.57,
-        "endsAt": "2026-10-04T23:59:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-08-19T00:00:00.000",
-        "terms": null
-      }
-    ],
-    "ultra-paradise": [
-      {
-        "clubOnly": false,
-        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
-        "discountRate": 21.57,
-        "endsAt": "2026-10-04T23:59:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-08-19T00:00:00.000",
-        "terms": null
-      }
-    ]
-  },
-  "dor_alon-513": {
-    "mango-loco": [
-      {
-        "clubOnly": false,
-        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
-        "discountRate": 21.57,
-        "endsAt": "2026-10-04T23:59:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-08-19T00:00:00.000",
-        "terms": null
-      }
-    ],
-    "ultra": [
-      {
-        "clubOnly": false,
-        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
-        "discountRate": 21.57,
-        "endsAt": "2026-10-04T23:59:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-08-19T00:00:00.000",
-        "terms": null
-      }
-    ],
-    "ultra-fiesta": [
-      {
-        "clubOnly": false,
-        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
-        "discountRate": 21.57,
-        "endsAt": "2026-10-04T23:59:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-08-19T00:00:00.000",
-        "terms": null
-      }
-    ],
-    "ultra-paradise": [
-      {
-        "clubOnly": false,
-        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
-        "discountRate": 21.57,
-        "endsAt": "2026-10-04T23:59:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-08-19T00:00:00.000",
-        "terms": null
-      }
-    ]
-  },
-  "dor_alon-514": {
-    "mango-loco": [
-      {
-        "clubOnly": false,
-        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
-        "discountRate": 21.57,
-        "endsAt": "2026-10-04T23:59:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-08-19T00:00:00.000",
-        "terms": null
-      }
-    ],
-    "ultra": [
-      {
-        "clubOnly": false,
-        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
-        "discountRate": 21.57,
-        "endsAt": "2026-10-04T23:59:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-08-19T00:00:00.000",
-        "terms": null
-      }
-    ],
-    "ultra-fiesta": [
-      {
-        "clubOnly": false,
-        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
-        "discountRate": 21.57,
-        "endsAt": "2026-10-04T23:59:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-08-19T00:00:00.000",
-        "terms": null
-      }
-    ],
-    "ultra-paradise": [
-      {
-        "clubOnly": false,
-        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
-        "discountRate": 21.57,
-        "endsAt": "2026-10-04T23:59:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-08-19T00:00:00.000",
-        "terms": null
-      }
-    ]
-  },
-  "dor_alon-517": {
-    "mango-loco": [
-      {
-        "clubOnly": false,
-        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
-        "discountRate": 21.57,
-        "endsAt": "2026-10-04T23:59:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-08-19T00:00:00.000",
-        "terms": null
-      }
-    ],
-    "ultra": [
-      {
-        "clubOnly": false,
-        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
-        "discountRate": 21.57,
-        "endsAt": "2026-10-04T23:59:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-08-19T00:00:00.000",
-        "terms": null
-      }
-    ],
-    "ultra-fiesta": [
-      {
-        "clubOnly": false,
-        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
-        "discountRate": 21.57,
-        "endsAt": "2026-10-04T23:59:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-08-19T00:00:00.000",
-        "terms": null
-      }
-    ],
-    "ultra-paradise": [
-      {
-        "clubOnly": false,
-        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
-        "discountRate": 21.57,
-        "endsAt": "2026-10-04T23:59:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-08-19T00:00:00.000",
-        "terms": null
-      }
-    ]
-  },
-  "dor_alon-518": {
-    "mango-loco": [
-      {
-        "clubOnly": false,
-        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
-        "discountRate": 21.57,
-        "endsAt": "2026-10-04T23:59:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-08-19T00:00:00.000",
-        "terms": null
-      }
-    ],
-    "ultra": [
-      {
-        "clubOnly": false,
-        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
-        "discountRate": 21.57,
-        "endsAt": "2026-10-04T23:59:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-08-19T00:00:00.000",
-        "terms": null
-      }
-    ],
-    "ultra-fiesta": [
-      {
-        "clubOnly": false,
-        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
-        "discountRate": 21.57,
-        "endsAt": "2026-10-04T23:59:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-08-19T00:00:00.000",
-        "terms": null
-      }
-    ],
-    "ultra-paradise": [
-      {
-        "clubOnly": false,
-        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
-        "discountRate": 21.57,
-        "endsAt": "2026-10-04T23:59:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-08-19T00:00:00.000",
-        "terms": null
-      }
-    ]
-  },
-  "dor_alon-519": {
-    "mango-loco": [
-      {
-        "clubOnly": false,
-        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
-        "discountRate": 21.57,
-        "endsAt": "2026-10-04T23:59:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-08-19T00:00:00.000",
-        "terms": null
-      }
-    ],
-    "ultra": [
-      {
-        "clubOnly": false,
-        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
-        "discountRate": 21.57,
-        "endsAt": "2026-10-04T23:59:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-08-19T00:00:00.000",
-        "terms": null
-      }
-    ],
-    "ultra-fiesta": [
-      {
-        "clubOnly": false,
-        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
-        "discountRate": 21.57,
-        "endsAt": "2026-10-04T23:59:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-08-19T00:00:00.000",
-        "terms": null
-      }
-    ],
-    "ultra-paradise": [
-      {
-        "clubOnly": false,
-        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
-        "discountRate": 21.57,
-        "endsAt": "2026-10-04T23:59:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-08-19T00:00:00.000",
-        "terms": null
-      }
-    ]
-  },
-  "dor_alon-524": {
-    "mango-loco": [
-      {
-        "clubOnly": false,
-        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
-        "discountRate": 21.57,
-        "endsAt": "2026-10-04T23:59:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-08-19T00:00:00.000",
-        "terms": null
-      }
-    ],
-    "ultra": [
-      {
-        "clubOnly": false,
-        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
-        "discountRate": 21.57,
-        "endsAt": "2026-10-04T23:59:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-08-19T00:00:00.000",
-        "terms": null
-      }
-    ],
-    "ultra-fiesta": [
-      {
-        "clubOnly": false,
-        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
-        "discountRate": 21.57,
-        "endsAt": "2026-10-04T23:59:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-08-19T00:00:00.000",
-        "terms": null
-      }
-    ],
-    "ultra-paradise": [
-      {
-        "clubOnly": false,
-        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
-        "discountRate": 21.57,
-        "endsAt": "2026-10-04T23:59:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-08-19T00:00:00.000",
-        "terms": null
-      }
-    ]
-  },
-  "dor_alon-529": {
-    "mango-loco": [
-      {
-        "clubOnly": false,
-        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
-        "discountRate": 21.57,
-        "endsAt": "2026-10-04T23:59:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-08-19T00:00:00.000",
-        "terms": null
-      }
-    ],
-    "ultra": [
-      {
-        "clubOnly": false,
-        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
-        "discountRate": 21.57,
-        "endsAt": "2026-10-04T23:59:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-08-19T00:00:00.000",
-        "terms": null
-      }
-    ],
-    "ultra-fiesta": [
-      {
-        "clubOnly": false,
-        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
-        "discountRate": 21.57,
-        "endsAt": "2026-10-04T23:59:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-08-19T00:00:00.000",
-        "terms": null
-      }
-    ],
-    "ultra-paradise": [
-      {
-        "clubOnly": false,
-        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
-        "discountRate": 21.57,
-        "endsAt": "2026-10-04T23:59:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-08-19T00:00:00.000",
-        "terms": null
-      }
-    ]
-  },
-  "dor_alon-531": {
-    "mango-loco": [
-      {
-        "clubOnly": false,
-        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
-        "discountRate": 21.57,
-        "endsAt": "2026-10-04T23:59:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-08-19T00:00:00.000",
-        "terms": null
-      }
-    ],
-    "ultra": [
-      {
-        "clubOnly": false,
-        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
-        "discountRate": 21.57,
-        "endsAt": "2026-10-04T23:59:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-08-19T00:00:00.000",
-        "terms": null
-      }
-    ],
-    "ultra-fiesta": [
-      {
-        "clubOnly": false,
-        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
-        "discountRate": 21.57,
-        "endsAt": "2026-10-04T23:59:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-08-19T00:00:00.000",
-        "terms": null
-      }
-    ],
-    "ultra-paradise": [
-      {
-        "clubOnly": false,
-        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
-        "discountRate": 21.57,
-        "endsAt": "2026-10-04T23:59:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-08-19T00:00:00.000",
-        "terms": null
-      }
-    ]
-  },
-  "dor_alon-533": {
-    "mango-loco": [
-      {
-        "clubOnly": false,
-        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
-        "discountRate": 21.57,
-        "endsAt": "2026-10-04T23:59:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-08-19T00:00:00.000",
-        "terms": null
-      }
-    ],
-    "ultra": [
-      {
-        "clubOnly": false,
-        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
-        "discountRate": 21.57,
-        "endsAt": "2026-10-04T23:59:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-08-19T00:00:00.000",
-        "terms": null
-      }
-    ],
-    "ultra-fiesta": [
-      {
-        "clubOnly": false,
-        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
-        "discountRate": 21.57,
-        "endsAt": "2026-10-04T23:59:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-08-19T00:00:00.000",
-        "terms": null
-      }
-    ],
-    "ultra-paradise": [
-      {
-        "clubOnly": false,
-        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
-        "discountRate": 21.57,
-        "endsAt": "2026-10-04T23:59:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-08-19T00:00:00.000",
-        "terms": null
-      }
-    ]
-  },
-  "dor_alon-534": {
-    "mango-loco": [
-      {
-        "clubOnly": false,
-        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
-        "discountRate": 21.57,
-        "endsAt": "2026-10-04T23:59:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-08-19T00:00:00.000",
-        "terms": null
-      }
-    ],
-    "ultra": [
-      {
-        "clubOnly": false,
-        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
-        "discountRate": 21.57,
-        "endsAt": "2026-10-04T23:59:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-08-19T00:00:00.000",
-        "terms": null
-      }
-    ],
-    "ultra-fiesta": [
-      {
-        "clubOnly": false,
-        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
-        "discountRate": 21.57,
-        "endsAt": "2026-10-04T23:59:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-08-19T00:00:00.000",
-        "terms": null
-      }
-    ],
-    "ultra-paradise": [
-      {
-        "clubOnly": false,
-        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
-        "discountRate": 21.57,
-        "endsAt": "2026-10-04T23:59:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-08-19T00:00:00.000",
-        "terms": null
-      }
-    ]
-  },
-  "dor_alon-535": {
-    "mango-loco": [
-      {
-        "clubOnly": false,
-        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
-        "discountRate": 21.57,
-        "endsAt": "2026-10-04T23:59:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-08-19T00:00:00.000",
-        "terms": null
-      }
-    ],
-    "ultra": [
-      {
-        "clubOnly": false,
-        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
-        "discountRate": 21.57,
-        "endsAt": "2026-10-04T23:59:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-08-19T00:00:00.000",
-        "terms": null
-      }
-    ],
-    "ultra-fiesta": [
-      {
-        "clubOnly": false,
-        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
-        "discountRate": 21.57,
-        "endsAt": "2026-10-04T23:59:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-08-19T00:00:00.000",
-        "terms": null
-      }
-    ],
-    "ultra-paradise": [
-      {
-        "clubOnly": false,
-        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
-        "discountRate": 21.57,
-        "endsAt": "2026-10-04T23:59:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-08-19T00:00:00.000",
-        "terms": null
-      }
-    ]
-  },
-  "dor_alon-536": {
-    "mango-loco": [
-      {
-        "clubOnly": false,
-        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
-        "discountRate": 21.57,
-        "endsAt": "2026-10-04T23:59:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-08-19T00:00:00.000",
-        "terms": null
-      }
-    ],
-    "ultra": [
-      {
-        "clubOnly": false,
-        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
-        "discountRate": 21.57,
-        "endsAt": "2026-10-04T23:59:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-08-19T00:00:00.000",
-        "terms": null
-      }
-    ],
-    "ultra-fiesta": [
-      {
-        "clubOnly": false,
-        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
-        "discountRate": 21.57,
-        "endsAt": "2026-10-04T23:59:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-08-19T00:00:00.000",
-        "terms": null
-      }
-    ],
-    "ultra-paradise": [
-      {
-        "clubOnly": false,
-        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
-        "discountRate": 21.57,
-        "endsAt": "2026-10-04T23:59:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-08-19T00:00:00.000",
-        "terms": null
-      }
-    ]
-  },
-  "dor_alon-537": {
-    "mango-loco": [
-      {
-        "clubOnly": false,
-        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
-        "discountRate": 21.57,
-        "endsAt": "2026-10-04T23:59:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-08-19T00:00:00.000",
-        "terms": null
-      }
-    ],
-    "ultra": [
-      {
-        "clubOnly": false,
-        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
-        "discountRate": 21.57,
-        "endsAt": "2026-10-04T23:59:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-08-19T00:00:00.000",
-        "terms": null
-      }
-    ],
-    "ultra-fiesta": [
-      {
-        "clubOnly": false,
-        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
-        "discountRate": 21.57,
-        "endsAt": "2026-10-04T23:59:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-08-19T00:00:00.000",
-        "terms": null
-      }
-    ],
-    "ultra-paradise": [
-      {
-        "clubOnly": false,
-        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
-        "discountRate": 21.57,
-        "endsAt": "2026-10-04T23:59:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-08-19T00:00:00.000",
-        "terms": null
-      }
-    ]
-  },
-  "dor_alon-540": {
-    "mango-loco": [
-      {
-        "clubOnly": false,
-        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
-        "discountRate": 21.57,
-        "endsAt": "2026-10-04T23:59:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-08-19T00:00:00.000",
-        "terms": null
-      }
-    ],
-    "ultra": [
-      {
-        "clubOnly": false,
-        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
-        "discountRate": 21.57,
-        "endsAt": "2026-10-04T23:59:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-08-19T00:00:00.000",
-        "terms": null
-      }
-    ],
-    "ultra-fiesta": [
-      {
-        "clubOnly": false,
-        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
-        "discountRate": 21.57,
-        "endsAt": "2026-10-04T23:59:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-08-19T00:00:00.000",
-        "terms": null
-      }
-    ],
-    "ultra-paradise": [
-      {
-        "clubOnly": false,
-        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
-        "discountRate": 21.57,
-        "endsAt": "2026-10-04T23:59:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-08-19T00:00:00.000",
-        "terms": null
-      }
-    ]
-  },
-  "dor_alon-544": {
-    "mango-loco": [
-      {
-        "clubOnly": false,
-        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
-        "discountRate": 21.57,
-        "endsAt": "2026-10-04T23:59:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-08-19T00:00:00.000",
-        "terms": null
-      }
-    ],
-    "ultra": [
-      {
-        "clubOnly": false,
-        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
-        "discountRate": 21.57,
-        "endsAt": "2026-10-04T23:59:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-08-19T00:00:00.000",
-        "terms": null
-      }
-    ],
-    "ultra-fiesta": [
-      {
-        "clubOnly": false,
-        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
-        "discountRate": 21.57,
-        "endsAt": "2026-10-04T23:59:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-08-19T00:00:00.000",
-        "terms": null
-      }
-    ],
-    "ultra-paradise": [
-      {
-        "clubOnly": false,
-        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
-        "discountRate": 21.57,
-        "endsAt": "2026-10-04T23:59:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-08-19T00:00:00.000",
-        "terms": null
-      }
-    ]
-  },
-  "dor_alon-548": {
-    "mango-loco": [
-      {
-        "clubOnly": false,
-        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
-        "discountRate": 21.57,
-        "endsAt": "2026-10-04T23:59:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-08-19T00:00:00.000",
-        "terms": null
-      }
-    ],
-    "ultra": [
-      {
-        "clubOnly": false,
-        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
-        "discountRate": 21.57,
-        "endsAt": "2026-10-04T23:59:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-08-19T00:00:00.000",
-        "terms": null
-      }
-    ],
-    "ultra-fiesta": [
-      {
-        "clubOnly": false,
-        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
-        "discountRate": 21.57,
-        "endsAt": "2026-10-04T23:59:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-08-19T00:00:00.000",
-        "terms": null
-      }
-    ],
-    "ultra-paradise": [
-      {
-        "clubOnly": false,
-        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
-        "discountRate": 21.57,
-        "endsAt": "2026-10-04T23:59:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-08-19T00:00:00.000",
-        "terms": null
-      }
-    ]
-  },
-  "dor_alon-549": {
-    "mango-loco": [
-      {
-        "clubOnly": false,
-        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
-        "discountRate": 21.57,
-        "endsAt": "2026-10-04T23:59:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-08-19T00:00:00.000",
-        "terms": null
-      }
-    ],
-    "ultra": [
-      {
-        "clubOnly": false,
-        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
-        "discountRate": 21.57,
-        "endsAt": "2026-10-04T23:59:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-08-19T00:00:00.000",
-        "terms": null
-      }
-    ],
-    "ultra-fiesta": [
-      {
-        "clubOnly": false,
-        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
-        "discountRate": 21.57,
-        "endsAt": "2026-10-04T23:59:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-08-19T00:00:00.000",
-        "terms": null
-      }
-    ],
-    "ultra-paradise": [
-      {
-        "clubOnly": false,
-        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
-        "discountRate": 21.57,
-        "endsAt": "2026-10-04T23:59:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-08-19T00:00:00.000",
-        "terms": null
-      }
-    ]
-  },
-  "dor_alon-551": {
-    "mango-loco": [
-      {
-        "clubOnly": false,
-        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
-        "discountRate": 21.57,
-        "endsAt": "2026-10-04T23:59:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-08-19T00:00:00.000",
-        "terms": null
-      }
-    ],
-    "ultra": [
-      {
-        "clubOnly": false,
-        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
-        "discountRate": 21.57,
-        "endsAt": "2026-10-04T23:59:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-08-19T00:00:00.000",
-        "terms": null
-      }
-    ],
-    "ultra-fiesta": [
-      {
-        "clubOnly": false,
-        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
-        "discountRate": 21.57,
-        "endsAt": "2026-10-04T23:59:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-08-19T00:00:00.000",
-        "terms": null
-      }
-    ],
-    "ultra-paradise": [
-      {
-        "clubOnly": false,
-        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
-        "discountRate": 21.57,
-        "endsAt": "2026-10-04T23:59:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-08-19T00:00:00.000",
-        "terms": null
-      }
-    ]
-  },
-  "dor_alon-556": {
-    "mango-loco": [
-      {
-        "clubOnly": false,
-        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
-        "discountRate": 21.57,
-        "endsAt": "2026-10-04T23:59:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-08-19T00:00:00.000",
-        "terms": null
-      }
-    ],
-    "ultra": [
-      {
-        "clubOnly": false,
-        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
-        "discountRate": 21.57,
-        "endsAt": "2026-10-04T23:59:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-08-19T00:00:00.000",
-        "terms": null
-      }
-    ],
-    "ultra-fiesta": [
-      {
-        "clubOnly": false,
-        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
-        "discountRate": 21.57,
-        "endsAt": "2026-10-04T23:59:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-08-19T00:00:00.000",
-        "terms": null
-      }
-    ],
-    "ultra-paradise": [
-      {
-        "clubOnly": false,
-        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
-        "discountRate": 21.57,
-        "endsAt": "2026-10-04T23:59:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-08-19T00:00:00.000",
-        "terms": null
-      }
-    ]
-  },
-  "dor_alon-560": {
-    "mango-loco": [
-      {
-        "clubOnly": false,
-        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
-        "discountRate": 21.57,
-        "endsAt": "2026-10-04T23:59:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-08-19T00:00:00.000",
-        "terms": null
-      }
-    ],
-    "ultra": [
-      {
-        "clubOnly": false,
-        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
-        "discountRate": 21.57,
-        "endsAt": "2026-10-04T23:59:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-08-19T00:00:00.000",
-        "terms": null
-      }
-    ],
-    "ultra-fiesta": [
-      {
-        "clubOnly": false,
-        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
-        "discountRate": 21.57,
-        "endsAt": "2026-10-04T23:59:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-08-19T00:00:00.000",
-        "terms": null
-      }
-    ],
-    "ultra-paradise": [
-      {
-        "clubOnly": false,
-        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
-        "discountRate": 21.57,
-        "endsAt": "2026-10-04T23:59:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-08-19T00:00:00.000",
-        "terms": null
-      }
-    ]
-  },
-  "dor_alon-563": {
-    "mango-loco": [
-      {
-        "clubOnly": false,
-        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
-        "discountRate": 21.57,
-        "endsAt": "2026-10-04T23:59:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-08-19T00:00:00.000",
-        "terms": null
-      }
-    ],
-    "ultra": [
-      {
-        "clubOnly": false,
-        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
-        "discountRate": 21.57,
-        "endsAt": "2026-10-04T23:59:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-08-19T00:00:00.000",
-        "terms": null
-      }
-    ],
-    "ultra-fiesta": [
-      {
-        "clubOnly": false,
-        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
-        "discountRate": 21.57,
-        "endsAt": "2026-10-04T23:59:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-08-19T00:00:00.000",
-        "terms": null
-      }
-    ],
-    "ultra-paradise": [
-      {
-        "clubOnly": false,
-        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
-        "discountRate": 21.57,
-        "endsAt": "2026-10-04T23:59:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-08-19T00:00:00.000",
-        "terms": null
-      }
-    ]
-  },
-  "dor_alon-564": {
-    "mango-loco": [
-      {
-        "clubOnly": false,
-        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
-        "discountRate": 21.57,
-        "endsAt": "2026-10-04T23:59:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-08-19T00:00:00.000",
-        "terms": null
-      }
-    ],
-    "ultra": [
-      {
-        "clubOnly": false,
-        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
-        "discountRate": 21.57,
-        "endsAt": "2026-10-04T23:59:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-08-19T00:00:00.000",
-        "terms": null
-      }
-    ],
-    "ultra-fiesta": [
-      {
-        "clubOnly": false,
-        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
-        "discountRate": 21.57,
-        "endsAt": "2026-10-04T23:59:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-08-19T00:00:00.000",
-        "terms": null
-      }
-    ],
-    "ultra-paradise": [
-      {
-        "clubOnly": false,
-        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
-        "discountRate": 21.57,
-        "endsAt": "2026-10-04T23:59:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-08-19T00:00:00.000",
-        "terms": null
-      }
-    ]
-  },
-  "dor_alon-566": {
-    "mango-loco": [
-      {
-        "clubOnly": false,
-        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
-        "discountRate": 21.57,
-        "endsAt": "2026-10-04T23:59:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-08-19T00:00:00.000",
-        "terms": null
-      }
-    ],
-    "ultra": [
-      {
-        "clubOnly": false,
-        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
-        "discountRate": 21.57,
-        "endsAt": "2026-10-04T23:59:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-08-19T00:00:00.000",
-        "terms": null
-      }
-    ],
-    "ultra-fiesta": [
-      {
-        "clubOnly": false,
-        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
-        "discountRate": 21.57,
-        "endsAt": "2026-10-04T23:59:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-08-19T00:00:00.000",
-        "terms": null
-      }
-    ],
-    "ultra-paradise": [
-      {
-        "clubOnly": false,
-        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
-        "discountRate": 21.57,
-        "endsAt": "2026-10-04T23:59:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-08-19T00:00:00.000",
-        "terms": null
-      }
-    ]
-  },
-  "dor_alon-568": {
-    "mango-loco": [
-      {
-        "clubOnly": false,
-        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
-        "discountRate": 21.57,
-        "endsAt": "2026-10-04T23:59:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-08-19T00:00:00.000",
-        "terms": null
-      }
-    ],
-    "ultra": [
-      {
-        "clubOnly": false,
-        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
-        "discountRate": 21.57,
-        "endsAt": "2026-10-04T23:59:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-08-19T00:00:00.000",
-        "terms": null
-      }
-    ],
-    "ultra-fiesta": [
-      {
-        "clubOnly": false,
-        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
-        "discountRate": 21.57,
-        "endsAt": "2026-10-04T23:59:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-08-19T00:00:00.000",
-        "terms": null
-      }
-    ],
-    "ultra-paradise": [
-      {
-        "clubOnly": false,
-        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
-        "discountRate": 21.57,
-        "endsAt": "2026-10-04T23:59:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-08-19T00:00:00.000",
-        "terms": null
-      }
-    ]
-  },
-  "dor_alon-570": {
-    "mango-loco": [
-      {
-        "clubOnly": false,
-        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
-        "discountRate": 21.57,
-        "endsAt": "2026-10-04T23:59:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-08-19T00:00:00.000",
-        "terms": null
-      }
-    ],
-    "ultra": [
-      {
-        "clubOnly": false,
-        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
-        "discountRate": 21.57,
-        "endsAt": "2026-10-04T23:59:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-08-19T00:00:00.000",
-        "terms": null
-      }
-    ],
-    "ultra-fiesta": [
-      {
-        "clubOnly": false,
-        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
-        "discountRate": 21.57,
-        "endsAt": "2026-10-04T23:59:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-08-19T00:00:00.000",
-        "terms": null
-      }
-    ],
-    "ultra-paradise": [
-      {
-        "clubOnly": false,
-        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
-        "discountRate": 21.57,
-        "endsAt": "2026-10-04T23:59:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-08-19T00:00:00.000",
-        "terms": null
-      }
-    ]
-  },
-  "dor_alon-571": {
-    "mango-loco": [
-      {
-        "clubOnly": false,
-        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
-        "discountRate": 21.57,
-        "endsAt": "2026-10-04T23:59:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-08-19T00:00:00.000",
-        "terms": null
-      }
-    ],
-    "ultra": [
-      {
-        "clubOnly": false,
-        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
-        "discountRate": 21.57,
-        "endsAt": "2026-10-04T23:59:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-08-19T00:00:00.000",
-        "terms": null
-      }
-    ],
-    "ultra-fiesta": [
-      {
-        "clubOnly": false,
-        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
-        "discountRate": 21.57,
-        "endsAt": "2026-10-04T23:59:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-08-19T00:00:00.000",
-        "terms": null
-      }
-    ],
-    "ultra-paradise": [
-      {
-        "clubOnly": false,
-        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
-        "discountRate": 21.57,
-        "endsAt": "2026-10-04T23:59:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-08-19T00:00:00.000",
+        "startsAt": "2026-09-01T00:00:00.000",
         "terms": null
       }
     ]
@@ -1999,7 +273,181 @@
       }
     ]
   },
-  "dor_alon-577": {
+  "dor_alon-504": {
+    "mango-loco": [
+      {
+        "clubOnly": false,
+        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+        "discountRate": 21.57,
+        "endsAt": "2026-10-04T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-08-19T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "ultra": [
+      {
+        "clubOnly": false,
+        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+        "discountRate": 21.57,
+        "endsAt": "2026-10-04T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-08-19T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "ultra-fiesta": [
+      {
+        "clubOnly": false,
+        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+        "discountRate": 21.57,
+        "endsAt": "2026-10-04T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-08-19T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "ultra-paradise": [
+      {
+        "clubOnly": false,
+        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+        "discountRate": 21.57,
+        "endsAt": "2026-10-04T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-08-19T00:00:00.000",
+        "terms": null
+      }
+    ]
+  },
+  "dor_alon-904": {
+    "mango-loco": [
+      {
+        "clubOnly": false,
+        "description": "משקה מונסטר 500מ ל 2 ב 21.90",
+        "discountRate": null,
+        "endsAt": "2026-10-04T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-09-01T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "original": [
+      {
+        "clubOnly": false,
+        "description": "משקה מונסטר 500מ ל 2 ב 21.90",
+        "discountRate": null,
+        "endsAt": "2026-10-04T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-09-01T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "ultra": [
+      {
+        "clubOnly": false,
+        "description": "משקה מונסטר 500מ ל 2 ב 21.90",
+        "discountRate": null,
+        "endsAt": "2026-10-04T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-09-01T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "ultra-fiesta": [
+      {
+        "clubOnly": false,
+        "description": "משקה מונסטר 500מ ל 2 ב 21.90",
+        "discountRate": null,
+        "endsAt": "2026-10-04T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-09-01T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "ultra-paradise": [
+      {
+        "clubOnly": false,
+        "description": "משקה מונסטר 500מ ל 2 ב 21.90",
+        "discountRate": null,
+        "endsAt": "2026-10-04T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-09-01T00:00:00.000",
+        "terms": null
+      }
+    ]
+  },
+  "dor_alon-711": {
+    "mango-loco": [
+      {
+        "clubOnly": false,
+        "description": "משקה אנרגיה מונסטר 500מ ל  2 ב 18",
+        "discountRate": 11.76,
+        "endsAt": "2026-10-04T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-08-19T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "original": [
+      {
+        "clubOnly": false,
+        "description": "משקה אנרגיה מונסטר 500מ ל  2 ב 18",
+        "discountRate": 11.76,
+        "endsAt": "2026-10-04T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-08-19T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "ultra": [
+      {
+        "clubOnly": false,
+        "description": "משקה אנרגיה מונסטר 500מ ל  2 ב 18",
+        "discountRate": 11.76,
+        "endsAt": "2026-10-04T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-08-19T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "ultra-fiesta": [
+      {
+        "clubOnly": false,
+        "description": "משקה אנרגיה מונסטר 500מ ל  2 ב 18",
+        "discountRate": 11.76,
+        "endsAt": "2026-10-04T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-08-19T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "ultra-paradise": [
+      {
+        "clubOnly": false,
+        "description": "משקה אנרגיה מונסטר 500מ ל  2 ב 18",
+        "discountRate": 11.76,
+        "endsAt": "2026-10-04T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-08-19T00:00:00.000",
+        "terms": null
+      }
+    ]
+  },
+  "dor_alon-563": {
     "mango-loco": [
       {
         "clubOnly": false,
@@ -2099,7 +547,7 @@
       }
     ]
   },
-  "dor_alon-579": {
+  "dor_alon-577": {
     "mango-loco": [
       {
         "clubOnly": false,
@@ -2149,7 +597,57 @@
       }
     ]
   },
-  "dor_alon-580": {
+  "dor_alon-595": {
+    "mango-loco": [
+      {
+        "clubOnly": false,
+        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+        "discountRate": 21.57,
+        "endsAt": "2026-10-04T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-08-19T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "ultra": [
+      {
+        "clubOnly": false,
+        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+        "discountRate": 21.57,
+        "endsAt": "2026-10-04T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-08-19T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "ultra-fiesta": [
+      {
+        "clubOnly": false,
+        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+        "discountRate": 21.57,
+        "endsAt": "2026-10-04T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-08-19T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "ultra-paradise": [
+      {
+        "clubOnly": false,
+        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+        "discountRate": 21.57,
+        "endsAt": "2026-10-04T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-08-19T00:00:00.000",
+        "terms": null
+      }
+    ]
+  },
+  "dor_alon-404": {
     "mango-loco": [
       {
         "clubOnly": false,
@@ -2200,6 +698,168 @@
     ]
   },
   "dor_alon-581": {
+    "mango-loco": [
+      {
+        "clubOnly": false,
+        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+        "discountRate": 21.57,
+        "endsAt": "2026-10-04T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-08-19T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "ultra": [
+      {
+        "clubOnly": false,
+        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+        "discountRate": 21.57,
+        "endsAt": "2026-10-04T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-08-19T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "ultra-fiesta": [
+      {
+        "clubOnly": false,
+        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+        "discountRate": 21.57,
+        "endsAt": "2026-10-04T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-08-19T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "ultra-paradise": [
+      {
+        "clubOnly": false,
+        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+        "discountRate": 21.57,
+        "endsAt": "2026-10-04T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-08-19T00:00:00.000",
+        "terms": null
+      }
+    ]
+  },
+  "dor_alon-734": {
+    "mango-loco": [
+      {
+        "clubOnly": false,
+        "description": "משקה אנרגיה מונסטר 500מ ל  2 ב 18",
+        "discountRate": 11.76,
+        "endsAt": "2026-10-04T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-08-19T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "original": [
+      {
+        "clubOnly": false,
+        "description": "משקה אנרגיה מונסטר 500מ ל  2 ב 18",
+        "discountRate": 11.76,
+        "endsAt": "2026-10-04T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-08-19T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "ultra": [
+      {
+        "clubOnly": false,
+        "description": "משקה אנרגיה מונסטר 500מ ל  2 ב 18",
+        "discountRate": 11.76,
+        "endsAt": "2026-10-04T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-08-19T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "ultra-fiesta": [
+      {
+        "clubOnly": false,
+        "description": "משקה אנרגיה מונסטר 500מ ל  2 ב 18",
+        "discountRate": 11.76,
+        "endsAt": "2026-10-04T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-08-19T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "ultra-paradise": [
+      {
+        "clubOnly": false,
+        "description": "משקה אנרגיה מונסטר 500מ ל  2 ב 18",
+        "discountRate": 11.76,
+        "endsAt": "2026-10-04T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-08-19T00:00:00.000",
+        "terms": null
+      }
+    ]
+  },
+  "dor_alon-556": {
+    "mango-loco": [
+      {
+        "clubOnly": false,
+        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+        "discountRate": 21.57,
+        "endsAt": "2026-10-04T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-08-19T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "ultra": [
+      {
+        "clubOnly": false,
+        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+        "discountRate": 21.57,
+        "endsAt": "2026-10-04T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-08-19T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "ultra-fiesta": [
+      {
+        "clubOnly": false,
+        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+        "discountRate": 21.57,
+        "endsAt": "2026-10-04T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-08-19T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "ultra-paradise": [
+      {
+        "clubOnly": false,
+        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+        "discountRate": 21.57,
+        "endsAt": "2026-10-04T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-08-19T00:00:00.000",
+        "terms": null
+      }
+    ]
+  },
+  "dor_alon-549": {
     "mango-loco": [
       {
         "clubOnly": false,
@@ -2349,7 +1009,69 @@
       }
     ]
   },
-  "dor_alon-591": {
+  "dor_alon-976": {
+    "mango-loco": [
+      {
+        "clubOnly": false,
+        "description": "משקה מונסטר 500מ ל 2 ב 21.90",
+        "discountRate": null,
+        "endsAt": "2026-10-04T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-09-01T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "original": [
+      {
+        "clubOnly": false,
+        "description": "משקה מונסטר 500מ ל 2 ב 21.90",
+        "discountRate": null,
+        "endsAt": "2026-10-04T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-09-01T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "ultra": [
+      {
+        "clubOnly": false,
+        "description": "משקה מונסטר 500מ ל 2 ב 21.90",
+        "discountRate": null,
+        "endsAt": "2026-10-04T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-09-01T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "ultra-fiesta": [
+      {
+        "clubOnly": false,
+        "description": "משקה מונסטר 500מ ל 2 ב 21.90",
+        "discountRate": null,
+        "endsAt": "2026-10-04T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-09-01T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "ultra-paradise": [
+      {
+        "clubOnly": false,
+        "description": "משקה מונסטר 500מ ל 2 ב 21.90",
+        "discountRate": null,
+        "endsAt": "2026-10-04T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-09-01T00:00:00.000",
+        "terms": null
+      }
+    ]
+  },
+  "dor_alon-518": {
     "mango-loco": [
       {
         "clubOnly": false,
@@ -2399,7 +1121,7 @@
       }
     ]
   },
-  "dor_alon-594": {
+  "dor_alon-540": {
     "mango-loco": [
       {
         "clubOnly": false,
@@ -2449,7 +1171,69 @@
       }
     ]
   },
-  "dor_alon-595": {
+  "dor_alon-730": {
+    "mango-loco": [
+      {
+        "clubOnly": false,
+        "description": "משקה אנרגיה מונסטר 500מ ל  2 ב 18",
+        "discountRate": 11.76,
+        "endsAt": "2026-10-04T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-08-19T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "original": [
+      {
+        "clubOnly": false,
+        "description": "משקה אנרגיה מונסטר 500מ ל  2 ב 18",
+        "discountRate": 11.76,
+        "endsAt": "2026-10-04T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-08-19T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "ultra": [
+      {
+        "clubOnly": false,
+        "description": "משקה אנרגיה מונסטר 500מ ל  2 ב 18",
+        "discountRate": 11.76,
+        "endsAt": "2026-10-04T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-08-19T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "ultra-fiesta": [
+      {
+        "clubOnly": false,
+        "description": "משקה אנרגיה מונסטר 500מ ל  2 ב 18",
+        "discountRate": 11.76,
+        "endsAt": "2026-10-04T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-08-19T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "ultra-paradise": [
+      {
+        "clubOnly": false,
+        "description": "משקה אנרגיה מונסטר 500מ ל  2 ב 18",
+        "discountRate": 11.76,
+        "endsAt": "2026-10-04T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-08-19T00:00:00.000",
+        "terms": null
+      }
+    ]
+  },
+  "dor_alon-505": {
     "mango-loco": [
       {
         "clubOnly": false,
@@ -2499,7 +1283,7 @@
       }
     ]
   },
-  "dor_alon-596": {
+  "dor_alon-514": {
     "mango-loco": [
       {
         "clubOnly": false,
@@ -2549,7 +1333,7 @@
       }
     ]
   },
-  "dor_alon-597": {
+  "dor_alon-508": {
     "mango-loco": [
       {
         "clubOnly": false,
@@ -2599,7 +1383,69 @@
       }
     ]
   },
-  "dor_alon-599": {
+  "dor_alon-823": {
+    "mango-loco": [
+      {
+        "clubOnly": false,
+        "description": "משקה מונסטר 500מ ל 2 ב 21.90",
+        "discountRate": null,
+        "endsAt": "2026-10-04T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-09-01T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "original": [
+      {
+        "clubOnly": false,
+        "description": "משקה מונסטר 500מ ל 2 ב 21.90",
+        "discountRate": null,
+        "endsAt": "2026-10-04T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-09-01T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "ultra": [
+      {
+        "clubOnly": false,
+        "description": "משקה מונסטר 500מ ל 2 ב 21.90",
+        "discountRate": null,
+        "endsAt": "2026-10-04T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-09-01T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "ultra-fiesta": [
+      {
+        "clubOnly": false,
+        "description": "משקה מונסטר 500מ ל 2 ב 21.90",
+        "discountRate": null,
+        "endsAt": "2026-10-04T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-09-01T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "ultra-paradise": [
+      {
+        "clubOnly": false,
+        "description": "משקה מונסטר 500מ ל 2 ב 21.90",
+        "discountRate": null,
+        "endsAt": "2026-10-04T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-09-01T00:00:00.000",
+        "terms": null
+      }
+    ]
+  },
+  "dor_alon-513": {
     "mango-loco": [
       {
         "clubOnly": false,
@@ -2711,24 +1557,12 @@
       }
     ]
   },
-  "dor_alon-711": {
+  "dor_alon-401": {
     "mango-loco": [
       {
         "clubOnly": false,
-        "description": "משקה אנרגיה מונסטר 500מ ל  2 ב 18",
-        "discountRate": 11.76,
-        "endsAt": "2026-10-04T23:59:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-08-19T00:00:00.000",
-        "terms": null
-      }
-    ],
-    "original": [
-      {
-        "clubOnly": false,
-        "description": "משקה אנרגיה מונסטר 500מ ל  2 ב 18",
-        "discountRate": 11.76,
+        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+        "discountRate": 21.57,
         "endsAt": "2026-10-04T23:59:00.000",
         "maxQuantity": null,
         "minQuantity": 2,
@@ -2739,8 +1573,8 @@
     "ultra": [
       {
         "clubOnly": false,
-        "description": "משקה אנרגיה מונסטר 500מ ל  2 ב 18",
-        "discountRate": 11.76,
+        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+        "discountRate": 21.57,
         "endsAt": "2026-10-04T23:59:00.000",
         "maxQuantity": null,
         "minQuantity": 2,
@@ -2751,8 +1585,8 @@
     "ultra-fiesta": [
       {
         "clubOnly": false,
-        "description": "משקה אנרגיה מונסטר 500מ ל  2 ב 18",
-        "discountRate": 11.76,
+        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+        "discountRate": 21.57,
         "endsAt": "2026-10-04T23:59:00.000",
         "maxQuantity": null,
         "minQuantity": 2,
@@ -2763,8 +1597,8 @@
     "ultra-paradise": [
       {
         "clubOnly": false,
-        "description": "משקה אנרגיה מונסטר 500מ ל  2 ב 18",
-        "discountRate": 11.76,
+        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+        "discountRate": 21.57,
         "endsAt": "2026-10-04T23:59:00.000",
         "maxQuantity": null,
         "minQuantity": 2,
@@ -2773,24 +1607,12 @@
       }
     ]
   },
-  "dor_alon-730": {
+  "dor_alon-551": {
     "mango-loco": [
       {
         "clubOnly": false,
-        "description": "משקה אנרגיה מונסטר 500מ ל  2 ב 18",
-        "discountRate": 11.76,
-        "endsAt": "2026-10-04T23:59:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-08-19T00:00:00.000",
-        "terms": null
-      }
-    ],
-    "original": [
-      {
-        "clubOnly": false,
-        "description": "משקה אנרגיה מונסטר 500מ ל  2 ב 18",
-        "discountRate": 11.76,
+        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+        "discountRate": 21.57,
         "endsAt": "2026-10-04T23:59:00.000",
         "maxQuantity": null,
         "minQuantity": 2,
@@ -2801,8 +1623,8 @@
     "ultra": [
       {
         "clubOnly": false,
-        "description": "משקה אנרגיה מונסטר 500מ ל  2 ב 18",
-        "discountRate": 11.76,
+        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+        "discountRate": 21.57,
         "endsAt": "2026-10-04T23:59:00.000",
         "maxQuantity": null,
         "minQuantity": 2,
@@ -2813,8 +1635,8 @@
     "ultra-fiesta": [
       {
         "clubOnly": false,
-        "description": "משקה אנרגיה מונסטר 500מ ל  2 ב 18",
-        "discountRate": 11.76,
+        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+        "discountRate": 21.57,
         "endsAt": "2026-10-04T23:59:00.000",
         "maxQuantity": null,
         "minQuantity": 2,
@@ -2825,8 +1647,8 @@
     "ultra-paradise": [
       {
         "clubOnly": false,
-        "description": "משקה אנרגיה מונסטר 500מ ל  2 ב 18",
-        "discountRate": 11.76,
+        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+        "discountRate": 21.57,
         "endsAt": "2026-10-04T23:59:00.000",
         "maxQuantity": null,
         "minQuantity": 2,
@@ -2835,24 +1657,12 @@
       }
     ]
   },
-  "dor_alon-734": {
+  "dor_alon-533": {
     "mango-loco": [
       {
         "clubOnly": false,
-        "description": "משקה אנרגיה מונסטר 500מ ל  2 ב 18",
-        "discountRate": 11.76,
-        "endsAt": "2026-10-04T23:59:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-08-19T00:00:00.000",
-        "terms": null
-      }
-    ],
-    "original": [
-      {
-        "clubOnly": false,
-        "description": "משקה אנרגיה מונסטר 500מ ל  2 ב 18",
-        "discountRate": 11.76,
+        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+        "discountRate": 21.57,
         "endsAt": "2026-10-04T23:59:00.000",
         "maxQuantity": null,
         "minQuantity": 2,
@@ -2863,8 +1673,8 @@
     "ultra": [
       {
         "clubOnly": false,
-        "description": "משקה אנרגיה מונסטר 500מ ל  2 ב 18",
-        "discountRate": 11.76,
+        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+        "discountRate": 21.57,
         "endsAt": "2026-10-04T23:59:00.000",
         "maxQuantity": null,
         "minQuantity": 2,
@@ -2875,8 +1685,8 @@
     "ultra-fiesta": [
       {
         "clubOnly": false,
-        "description": "משקה אנרגיה מונסטר 500מ ל  2 ב 18",
-        "discountRate": 11.76,
+        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+        "discountRate": 21.57,
         "endsAt": "2026-10-04T23:59:00.000",
         "maxQuantity": null,
         "minQuantity": 2,
@@ -2887,8 +1697,1382 @@
     "ultra-paradise": [
       {
         "clubOnly": false,
-        "description": "משקה אנרגיה מונסטר 500מ ל  2 ב 18",
-        "discountRate": 11.76,
+        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+        "discountRate": 21.57,
+        "endsAt": "2026-10-04T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-08-19T00:00:00.000",
+        "terms": null
+      }
+    ]
+  },
+  "dor_alon-519": {
+    "mango-loco": [
+      {
+        "clubOnly": false,
+        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+        "discountRate": 21.57,
+        "endsAt": "2026-10-04T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-08-19T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "ultra": [
+      {
+        "clubOnly": false,
+        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+        "discountRate": 21.57,
+        "endsAt": "2026-10-04T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-08-19T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "ultra-fiesta": [
+      {
+        "clubOnly": false,
+        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+        "discountRate": 21.57,
+        "endsAt": "2026-10-04T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-08-19T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "ultra-paradise": [
+      {
+        "clubOnly": false,
+        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+        "discountRate": 21.57,
+        "endsAt": "2026-10-04T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-08-19T00:00:00.000",
+        "terms": null
+      }
+    ]
+  },
+  "dor_alon-548": {
+    "mango-loco": [
+      {
+        "clubOnly": false,
+        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+        "discountRate": 21.57,
+        "endsAt": "2026-10-04T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-08-19T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "ultra": [
+      {
+        "clubOnly": false,
+        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+        "discountRate": 21.57,
+        "endsAt": "2026-10-04T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-08-19T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "ultra-fiesta": [
+      {
+        "clubOnly": false,
+        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+        "discountRate": 21.57,
+        "endsAt": "2026-10-04T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-08-19T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "ultra-paradise": [
+      {
+        "clubOnly": false,
+        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+        "discountRate": 21.57,
+        "endsAt": "2026-10-04T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-08-19T00:00:00.000",
+        "terms": null
+      }
+    ]
+  },
+  "dor_alon-531": {
+    "mango-loco": [
+      {
+        "clubOnly": false,
+        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+        "discountRate": 21.57,
+        "endsAt": "2026-10-04T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-08-19T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "ultra": [
+      {
+        "clubOnly": false,
+        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+        "discountRate": 21.57,
+        "endsAt": "2026-10-04T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-08-19T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "ultra-fiesta": [
+      {
+        "clubOnly": false,
+        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+        "discountRate": 21.57,
+        "endsAt": "2026-10-04T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-08-19T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "ultra-paradise": [
+      {
+        "clubOnly": false,
+        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+        "discountRate": 21.57,
+        "endsAt": "2026-10-04T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-08-19T00:00:00.000",
+        "terms": null
+      }
+    ]
+  },
+  "dor_alon-510": {
+    "mango-loco": [
+      {
+        "clubOnly": false,
+        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+        "discountRate": 21.57,
+        "endsAt": "2026-10-04T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-08-19T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "ultra": [
+      {
+        "clubOnly": false,
+        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+        "discountRate": 21.57,
+        "endsAt": "2026-10-04T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-08-19T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "ultra-fiesta": [
+      {
+        "clubOnly": false,
+        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+        "discountRate": 21.57,
+        "endsAt": "2026-10-04T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-08-19T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "ultra-paradise": [
+      {
+        "clubOnly": false,
+        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+        "discountRate": 21.57,
+        "endsAt": "2026-10-04T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-08-19T00:00:00.000",
+        "terms": null
+      }
+    ]
+  },
+  "dor_alon-568": {
+    "mango-loco": [
+      {
+        "clubOnly": false,
+        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+        "discountRate": 21.57,
+        "endsAt": "2026-10-04T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-08-19T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "ultra": [
+      {
+        "clubOnly": false,
+        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+        "discountRate": 21.57,
+        "endsAt": "2026-10-04T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-08-19T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "ultra-fiesta": [
+      {
+        "clubOnly": false,
+        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+        "discountRate": 21.57,
+        "endsAt": "2026-10-04T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-08-19T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "ultra-paradise": [
+      {
+        "clubOnly": false,
+        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+        "discountRate": 21.57,
+        "endsAt": "2026-10-04T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-08-19T00:00:00.000",
+        "terms": null
+      }
+    ]
+  },
+  "dor_alon-535": {
+    "mango-loco": [
+      {
+        "clubOnly": false,
+        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+        "discountRate": 21.57,
+        "endsAt": "2026-10-04T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-08-19T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "ultra": [
+      {
+        "clubOnly": false,
+        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+        "discountRate": 21.57,
+        "endsAt": "2026-10-04T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-08-19T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "ultra-fiesta": [
+      {
+        "clubOnly": false,
+        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+        "discountRate": 21.57,
+        "endsAt": "2026-10-04T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-08-19T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "ultra-paradise": [
+      {
+        "clubOnly": false,
+        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+        "discountRate": 21.57,
+        "endsAt": "2026-10-04T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-08-19T00:00:00.000",
+        "terms": null
+      }
+    ]
+  },
+  "dor_alon-596": {
+    "mango-loco": [
+      {
+        "clubOnly": false,
+        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+        "discountRate": 21.57,
+        "endsAt": "2026-10-04T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-08-19T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "ultra": [
+      {
+        "clubOnly": false,
+        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+        "discountRate": 21.57,
+        "endsAt": "2026-10-04T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-08-19T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "ultra-fiesta": [
+      {
+        "clubOnly": false,
+        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+        "discountRate": 21.57,
+        "endsAt": "2026-10-04T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-08-19T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "ultra-paradise": [
+      {
+        "clubOnly": false,
+        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+        "discountRate": 21.57,
+        "endsAt": "2026-10-04T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-08-19T00:00:00.000",
+        "terms": null
+      }
+    ]
+  },
+  "dor_alon-534": {
+    "mango-loco": [
+      {
+        "clubOnly": false,
+        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+        "discountRate": 21.57,
+        "endsAt": "2026-10-04T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-08-19T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "ultra": [
+      {
+        "clubOnly": false,
+        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+        "discountRate": 21.57,
+        "endsAt": "2026-10-04T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-08-19T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "ultra-fiesta": [
+      {
+        "clubOnly": false,
+        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+        "discountRate": 21.57,
+        "endsAt": "2026-10-04T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-08-19T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "ultra-paradise": [
+      {
+        "clubOnly": false,
+        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+        "discountRate": 21.57,
+        "endsAt": "2026-10-04T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-08-19T00:00:00.000",
+        "terms": null
+      }
+    ]
+  },
+  "dor_alon-501": {
+    "mango-loco": [
+      {
+        "clubOnly": false,
+        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+        "discountRate": 21.57,
+        "endsAt": "2026-10-04T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-08-19T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "ultra": [
+      {
+        "clubOnly": false,
+        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+        "discountRate": 21.57,
+        "endsAt": "2026-10-04T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-08-19T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "ultra-fiesta": [
+      {
+        "clubOnly": false,
+        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+        "discountRate": 21.57,
+        "endsAt": "2026-10-04T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-08-19T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "ultra-paradise": [
+      {
+        "clubOnly": false,
+        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+        "discountRate": 21.57,
+        "endsAt": "2026-10-04T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-08-19T00:00:00.000",
+        "terms": null
+      }
+    ]
+  },
+  "dor_alon-564": {
+    "mango-loco": [
+      {
+        "clubOnly": false,
+        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+        "discountRate": 21.57,
+        "endsAt": "2026-10-04T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-08-19T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "ultra": [
+      {
+        "clubOnly": false,
+        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+        "discountRate": 21.57,
+        "endsAt": "2026-10-04T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-08-19T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "ultra-fiesta": [
+      {
+        "clubOnly": false,
+        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+        "discountRate": 21.57,
+        "endsAt": "2026-10-04T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-08-19T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "ultra-paradise": [
+      {
+        "clubOnly": false,
+        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+        "discountRate": 21.57,
+        "endsAt": "2026-10-04T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-08-19T00:00:00.000",
+        "terms": null
+      }
+    ]
+  },
+  "dor_alon-536": {
+    "mango-loco": [
+      {
+        "clubOnly": false,
+        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+        "discountRate": 21.57,
+        "endsAt": "2026-10-04T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-08-19T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "ultra": [
+      {
+        "clubOnly": false,
+        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+        "discountRate": 21.57,
+        "endsAt": "2026-10-04T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-08-19T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "ultra-fiesta": [
+      {
+        "clubOnly": false,
+        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+        "discountRate": 21.57,
+        "endsAt": "2026-10-04T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-08-19T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "ultra-paradise": [
+      {
+        "clubOnly": false,
+        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+        "discountRate": 21.57,
+        "endsAt": "2026-10-04T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-08-19T00:00:00.000",
+        "terms": null
+      }
+    ]
+  },
+  "dor_alon-571": {
+    "mango-loco": [
+      {
+        "clubOnly": false,
+        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+        "discountRate": 21.57,
+        "endsAt": "2026-10-04T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-08-19T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "ultra": [
+      {
+        "clubOnly": false,
+        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+        "discountRate": 21.57,
+        "endsAt": "2026-10-04T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-08-19T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "ultra-fiesta": [
+      {
+        "clubOnly": false,
+        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+        "discountRate": 21.57,
+        "endsAt": "2026-10-04T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-08-19T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "ultra-paradise": [
+      {
+        "clubOnly": false,
+        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+        "discountRate": 21.57,
+        "endsAt": "2026-10-04T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-08-19T00:00:00.000",
+        "terms": null
+      }
+    ]
+  },
+  "dor_alon-566": {
+    "mango-loco": [
+      {
+        "clubOnly": false,
+        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+        "discountRate": 21.57,
+        "endsAt": "2026-10-04T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-08-19T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "ultra": [
+      {
+        "clubOnly": false,
+        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+        "discountRate": 21.57,
+        "endsAt": "2026-10-04T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-08-19T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "ultra-fiesta": [
+      {
+        "clubOnly": false,
+        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+        "discountRate": 21.57,
+        "endsAt": "2026-10-04T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-08-19T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "ultra-paradise": [
+      {
+        "clubOnly": false,
+        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+        "discountRate": 21.57,
+        "endsAt": "2026-10-04T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-08-19T00:00:00.000",
+        "terms": null
+      }
+    ]
+  },
+  "dor_alon-870": {
+    "mango-loco": [
+      {
+        "clubOnly": false,
+        "description": "משקה מונסטר 500מ ל 2 ב 21.90",
+        "discountRate": null,
+        "endsAt": "2026-10-04T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-09-01T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "original": [
+      {
+        "clubOnly": false,
+        "description": "משקה מונסטר 500מ ל 2 ב 21.90",
+        "discountRate": null,
+        "endsAt": "2026-10-04T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-09-01T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "ultra": [
+      {
+        "clubOnly": false,
+        "description": "משקה מונסטר 500מ ל 2 ב 21.90",
+        "discountRate": null,
+        "endsAt": "2026-10-04T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-09-01T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "ultra-fiesta": [
+      {
+        "clubOnly": false,
+        "description": "משקה מונסטר 500מ ל 2 ב 21.90",
+        "discountRate": null,
+        "endsAt": "2026-10-04T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-09-01T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "ultra-paradise": [
+      {
+        "clubOnly": false,
+        "description": "משקה מונסטר 500מ ל 2 ב 21.90",
+        "discountRate": null,
+        "endsAt": "2026-10-04T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-09-01T00:00:00.000",
+        "terms": null
+      }
+    ]
+  },
+  "dor_alon-570": {
+    "mango-loco": [
+      {
+        "clubOnly": false,
+        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+        "discountRate": 21.57,
+        "endsAt": "2026-10-04T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-08-19T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "ultra": [
+      {
+        "clubOnly": false,
+        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+        "discountRate": 21.57,
+        "endsAt": "2026-10-04T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-08-19T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "ultra-fiesta": [
+      {
+        "clubOnly": false,
+        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+        "discountRate": 21.57,
+        "endsAt": "2026-10-04T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-08-19T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "ultra-paradise": [
+      {
+        "clubOnly": false,
+        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+        "discountRate": 21.57,
+        "endsAt": "2026-10-04T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-08-19T00:00:00.000",
+        "terms": null
+      }
+    ]
+  },
+  "dor_alon-579": {
+    "mango-loco": [
+      {
+        "clubOnly": false,
+        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+        "discountRate": 21.57,
+        "endsAt": "2026-10-04T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-08-19T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "ultra": [
+      {
+        "clubOnly": false,
+        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+        "discountRate": 21.57,
+        "endsAt": "2026-10-04T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-08-19T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "ultra-fiesta": [
+      {
+        "clubOnly": false,
+        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+        "discountRate": 21.57,
+        "endsAt": "2026-10-04T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-08-19T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "ultra-paradise": [
+      {
+        "clubOnly": false,
+        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+        "discountRate": 21.57,
+        "endsAt": "2026-10-04T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-08-19T00:00:00.000",
+        "terms": null
+      }
+    ]
+  },
+  "dor_alon-403": {
+    "mango-loco": [
+      {
+        "clubOnly": false,
+        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+        "discountRate": 21.57,
+        "endsAt": "2026-10-04T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-08-19T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "ultra": [
+      {
+        "clubOnly": false,
+        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+        "discountRate": 21.57,
+        "endsAt": "2026-10-04T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-08-19T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "ultra-fiesta": [
+      {
+        "clubOnly": false,
+        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+        "discountRate": 21.57,
+        "endsAt": "2026-10-04T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-08-19T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "ultra-paradise": [
+      {
+        "clubOnly": false,
+        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+        "discountRate": 21.57,
+        "endsAt": "2026-10-04T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-08-19T00:00:00.000",
+        "terms": null
+      }
+    ]
+  },
+  "dor_alon-517": {
+    "mango-loco": [
+      {
+        "clubOnly": false,
+        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+        "discountRate": 21.57,
+        "endsAt": "2026-10-04T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-08-19T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "ultra": [
+      {
+        "clubOnly": false,
+        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+        "discountRate": 21.57,
+        "endsAt": "2026-10-04T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-08-19T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "ultra-fiesta": [
+      {
+        "clubOnly": false,
+        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+        "discountRate": 21.57,
+        "endsAt": "2026-10-04T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-08-19T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "ultra-paradise": [
+      {
+        "clubOnly": false,
+        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+        "discountRate": 21.57,
+        "endsAt": "2026-10-04T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-08-19T00:00:00.000",
+        "terms": null
+      }
+    ]
+  },
+  "dor_alon-597": {
+    "mango-loco": [
+      {
+        "clubOnly": false,
+        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+        "discountRate": 21.57,
+        "endsAt": "2026-10-04T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-08-19T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "ultra": [
+      {
+        "clubOnly": false,
+        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+        "discountRate": 21.57,
+        "endsAt": "2026-10-04T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-08-19T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "ultra-fiesta": [
+      {
+        "clubOnly": false,
+        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+        "discountRate": 21.57,
+        "endsAt": "2026-10-04T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-08-19T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "ultra-paradise": [
+      {
+        "clubOnly": false,
+        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+        "discountRate": 21.57,
+        "endsAt": "2026-10-04T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-08-19T00:00:00.000",
+        "terms": null
+      }
+    ]
+  },
+  "dor_alon-560": {
+    "mango-loco": [
+      {
+        "clubOnly": false,
+        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+        "discountRate": 21.57,
+        "endsAt": "2026-10-04T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-08-19T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "ultra": [
+      {
+        "clubOnly": false,
+        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+        "discountRate": 21.57,
+        "endsAt": "2026-10-04T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-08-19T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "ultra-fiesta": [
+      {
+        "clubOnly": false,
+        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+        "discountRate": 21.57,
+        "endsAt": "2026-10-04T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-08-19T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "ultra-paradise": [
+      {
+        "clubOnly": false,
+        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+        "discountRate": 21.57,
+        "endsAt": "2026-10-04T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-08-19T00:00:00.000",
+        "terms": null
+      }
+    ]
+  },
+  "dor_alon-537": {
+    "mango-loco": [
+      {
+        "clubOnly": false,
+        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+        "discountRate": 21.57,
+        "endsAt": "2026-10-04T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-08-19T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "ultra": [
+      {
+        "clubOnly": false,
+        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+        "discountRate": 21.57,
+        "endsAt": "2026-10-04T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-08-19T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "ultra-fiesta": [
+      {
+        "clubOnly": false,
+        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+        "discountRate": 21.57,
+        "endsAt": "2026-10-04T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-08-19T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "ultra-paradise": [
+      {
+        "clubOnly": false,
+        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+        "discountRate": 21.57,
+        "endsAt": "2026-10-04T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-08-19T00:00:00.000",
+        "terms": null
+      }
+    ]
+  },
+  "dor_alon-594": {
+    "mango-loco": [
+      {
+        "clubOnly": false,
+        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+        "discountRate": 21.57,
+        "endsAt": "2026-10-04T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-08-19T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "ultra": [
+      {
+        "clubOnly": false,
+        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+        "discountRate": 21.57,
+        "endsAt": "2026-10-04T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-08-19T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "ultra-fiesta": [
+      {
+        "clubOnly": false,
+        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+        "discountRate": 21.57,
+        "endsAt": "2026-10-04T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-08-19T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "ultra-paradise": [
+      {
+        "clubOnly": false,
+        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+        "discountRate": 21.57,
+        "endsAt": "2026-10-04T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-08-19T00:00:00.000",
+        "terms": null
+      }
+    ]
+  },
+  "dor_alon-850": {
+    "mango-loco": [
+      {
+        "clubOnly": false,
+        "description": "משקה מונסטר 500מ ל 2 ב 21.90",
+        "discountRate": null,
+        "endsAt": "2026-10-04T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-09-01T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "original": [
+      {
+        "clubOnly": false,
+        "description": "משקה מונסטר 500מ ל 2 ב 21.90",
+        "discountRate": null,
+        "endsAt": "2026-10-04T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-09-01T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "ultra": [
+      {
+        "clubOnly": false,
+        "description": "משקה מונסטר 500מ ל 2 ב 21.90",
+        "discountRate": null,
+        "endsAt": "2026-10-04T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-09-01T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "ultra-fiesta": [
+      {
+        "clubOnly": false,
+        "description": "משקה מונסטר 500מ ל 2 ב 21.90",
+        "discountRate": null,
+        "endsAt": "2026-10-04T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-09-01T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "ultra-paradise": [
+      {
+        "clubOnly": false,
+        "description": "משקה מונסטר 500מ ל 2 ב 21.90",
+        "discountRate": null,
+        "endsAt": "2026-10-04T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-09-01T00:00:00.000",
+        "terms": null
+      }
+    ]
+  },
+  "dor_alon-599": {
+    "mango-loco": [
+      {
+        "clubOnly": false,
+        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+        "discountRate": 21.57,
+        "endsAt": "2026-10-04T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-08-19T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "ultra": [
+      {
+        "clubOnly": false,
+        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+        "discountRate": 21.57,
+        "endsAt": "2026-10-04T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-08-19T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "ultra-fiesta": [
+      {
+        "clubOnly": false,
+        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+        "discountRate": 21.57,
+        "endsAt": "2026-10-04T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-08-19T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "ultra-paradise": [
+      {
+        "clubOnly": false,
+        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+        "discountRate": 21.57,
+        "endsAt": "2026-10-04T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-08-19T00:00:00.000",
+        "terms": null
+      }
+    ]
+  },
+  "dor_alon-512": {
+    "mango-loco": [
+      {
+        "clubOnly": false,
+        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+        "discountRate": 21.57,
+        "endsAt": "2026-10-04T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-08-19T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "ultra": [
+      {
+        "clubOnly": false,
+        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+        "discountRate": 21.57,
+        "endsAt": "2026-10-04T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-08-19T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "ultra-fiesta": [
+      {
+        "clubOnly": false,
+        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+        "discountRate": 21.57,
+        "endsAt": "2026-10-04T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-08-19T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "ultra-paradise": [
+      {
+        "clubOnly": false,
+        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+        "discountRate": 21.57,
+        "endsAt": "2026-10-04T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-08-19T00:00:00.000",
+        "terms": null
+      }
+    ]
+  },
+  "dor_alon-415": {
+    "mango-loco": [
+      {
+        "clubOnly": false,
+        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+        "discountRate": 21.57,
+        "endsAt": "2026-10-04T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-08-19T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "ultra": [
+      {
+        "clubOnly": false,
+        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+        "discountRate": 21.57,
+        "endsAt": "2026-10-04T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-08-19T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "ultra-fiesta": [
+      {
+        "clubOnly": false,
+        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+        "discountRate": 21.57,
+        "endsAt": "2026-10-04T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-08-19T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "ultra-paradise": [
+      {
+        "clubOnly": false,
+        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+        "discountRate": 21.57,
+        "endsAt": "2026-10-04T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-08-19T00:00:00.000",
+        "terms": null
+      }
+    ]
+  },
+  "dor_alon-580": {
+    "mango-loco": [
+      {
+        "clubOnly": false,
+        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+        "discountRate": 21.57,
+        "endsAt": "2026-10-04T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-08-19T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "ultra": [
+      {
+        "clubOnly": false,
+        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+        "discountRate": 21.57,
+        "endsAt": "2026-10-04T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-08-19T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "ultra-fiesta": [
+      {
+        "clubOnly": false,
+        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+        "discountRate": 21.57,
+        "endsAt": "2026-10-04T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-08-19T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "ultra-paradise": [
+      {
+        "clubOnly": false,
+        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+        "discountRate": 21.57,
         "endsAt": "2026-10-04T23:59:00.000",
         "maxQuantity": null,
         "minQuantity": 2,
@@ -2959,436 +3143,252 @@
       }
     ]
   },
-  "dor_alon-823": {
+  "dor_alon-402": {
     "mango-loco": [
       {
         "clubOnly": false,
-        "description": "משקה מונסטר 500מ ל 2 ב 21.90",
-        "discountRate": null,
+        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+        "discountRate": 21.57,
         "endsAt": "2026-10-04T23:59:00.000",
         "maxQuantity": null,
         "minQuantity": 2,
-        "startsAt": "2026-09-01T00:00:00.000",
-        "terms": null
-      }
-    ],
-    "original": [
-      {
-        "clubOnly": false,
-        "description": "משקה מונסטר 500מ ל 2 ב 21.90",
-        "discountRate": null,
-        "endsAt": "2026-10-04T23:59:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-09-01T00:00:00.000",
+        "startsAt": "2026-08-19T00:00:00.000",
         "terms": null
       }
     ],
     "ultra": [
       {
         "clubOnly": false,
-        "description": "משקה מונסטר 500מ ל 2 ב 21.90",
-        "discountRate": null,
+        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+        "discountRate": 21.57,
         "endsAt": "2026-10-04T23:59:00.000",
         "maxQuantity": null,
         "minQuantity": 2,
-        "startsAt": "2026-09-01T00:00:00.000",
+        "startsAt": "2026-08-19T00:00:00.000",
         "terms": null
       }
     ],
     "ultra-fiesta": [
       {
         "clubOnly": false,
-        "description": "משקה מונסטר 500מ ל 2 ב 21.90",
-        "discountRate": null,
+        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+        "discountRate": 21.57,
         "endsAt": "2026-10-04T23:59:00.000",
         "maxQuantity": null,
         "minQuantity": 2,
-        "startsAt": "2026-09-01T00:00:00.000",
+        "startsAt": "2026-08-19T00:00:00.000",
         "terms": null
       }
     ],
     "ultra-paradise": [
       {
         "clubOnly": false,
-        "description": "משקה מונסטר 500מ ל 2 ב 21.90",
-        "discountRate": null,
+        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+        "discountRate": 21.57,
         "endsAt": "2026-10-04T23:59:00.000",
         "maxQuantity": null,
         "minQuantity": 2,
-        "startsAt": "2026-09-01T00:00:00.000",
+        "startsAt": "2026-08-19T00:00:00.000",
         "terms": null
       }
     ]
   },
-  "dor_alon-850": {
+  "dor_alon-507": {
     "mango-loco": [
       {
         "clubOnly": false,
-        "description": "משקה מונסטר 500מ ל 2 ב 21.90",
-        "discountRate": null,
+        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+        "discountRate": 21.57,
         "endsAt": "2026-10-04T23:59:00.000",
         "maxQuantity": null,
         "minQuantity": 2,
-        "startsAt": "2026-09-01T00:00:00.000",
-        "terms": null
-      }
-    ],
-    "original": [
-      {
-        "clubOnly": false,
-        "description": "משקה מונסטר 500מ ל 2 ב 21.90",
-        "discountRate": null,
-        "endsAt": "2026-10-04T23:59:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-09-01T00:00:00.000",
+        "startsAt": "2026-08-19T00:00:00.000",
         "terms": null
       }
     ],
     "ultra": [
       {
         "clubOnly": false,
-        "description": "משקה מונסטר 500מ ל 2 ב 21.90",
-        "discountRate": null,
+        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+        "discountRate": 21.57,
         "endsAt": "2026-10-04T23:59:00.000",
         "maxQuantity": null,
         "minQuantity": 2,
-        "startsAt": "2026-09-01T00:00:00.000",
+        "startsAt": "2026-08-19T00:00:00.000",
         "terms": null
       }
     ],
     "ultra-fiesta": [
       {
         "clubOnly": false,
-        "description": "משקה מונסטר 500מ ל 2 ב 21.90",
-        "discountRate": null,
+        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+        "discountRate": 21.57,
         "endsAt": "2026-10-04T23:59:00.000",
         "maxQuantity": null,
         "minQuantity": 2,
-        "startsAt": "2026-09-01T00:00:00.000",
+        "startsAt": "2026-08-19T00:00:00.000",
         "terms": null
       }
     ],
     "ultra-paradise": [
       {
         "clubOnly": false,
-        "description": "משקה מונסטר 500מ ל 2 ב 21.90",
-        "discountRate": null,
+        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+        "discountRate": 21.57,
         "endsAt": "2026-10-04T23:59:00.000",
         "maxQuantity": null,
         "minQuantity": 2,
-        "startsAt": "2026-09-01T00:00:00.000",
+        "startsAt": "2026-08-19T00:00:00.000",
         "terms": null
       }
     ]
   },
-  "dor_alon-870": {
+  "dor_alon-529": {
     "mango-loco": [
       {
         "clubOnly": false,
-        "description": "משקה מונסטר 500מ ל 2 ב 21.90",
-        "discountRate": null,
+        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+        "discountRate": 21.57,
         "endsAt": "2026-10-04T23:59:00.000",
         "maxQuantity": null,
         "minQuantity": 2,
-        "startsAt": "2026-09-01T00:00:00.000",
-        "terms": null
-      }
-    ],
-    "original": [
-      {
-        "clubOnly": false,
-        "description": "משקה מונסטר 500מ ל 2 ב 21.90",
-        "discountRate": null,
-        "endsAt": "2026-10-04T23:59:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-09-01T00:00:00.000",
+        "startsAt": "2026-08-19T00:00:00.000",
         "terms": null
       }
     ],
     "ultra": [
       {
         "clubOnly": false,
-        "description": "משקה מונסטר 500מ ל 2 ב 21.90",
-        "discountRate": null,
+        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+        "discountRate": 21.57,
         "endsAt": "2026-10-04T23:59:00.000",
         "maxQuantity": null,
         "minQuantity": 2,
-        "startsAt": "2026-09-01T00:00:00.000",
+        "startsAt": "2026-08-19T00:00:00.000",
         "terms": null
       }
     ],
     "ultra-fiesta": [
       {
         "clubOnly": false,
-        "description": "משקה מונסטר 500מ ל 2 ב 21.90",
-        "discountRate": null,
+        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+        "discountRate": 21.57,
         "endsAt": "2026-10-04T23:59:00.000",
         "maxQuantity": null,
         "minQuantity": 2,
-        "startsAt": "2026-09-01T00:00:00.000",
+        "startsAt": "2026-08-19T00:00:00.000",
         "terms": null
       }
     ],
     "ultra-paradise": [
       {
         "clubOnly": false,
-        "description": "משקה מונסטר 500מ ל 2 ב 21.90",
-        "discountRate": null,
+        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+        "discountRate": 21.57,
         "endsAt": "2026-10-04T23:59:00.000",
         "maxQuantity": null,
         "minQuantity": 2,
-        "startsAt": "2026-09-01T00:00:00.000",
+        "startsAt": "2026-08-19T00:00:00.000",
         "terms": null
       }
     ]
   },
-  "dor_alon-904": {
+  "dor_alon-544": {
     "mango-loco": [
       {
         "clubOnly": false,
-        "description": "משקה מונסטר 500מ ל 2 ב 21.90",
-        "discountRate": null,
+        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+        "discountRate": 21.57,
         "endsAt": "2026-10-04T23:59:00.000",
         "maxQuantity": null,
         "minQuantity": 2,
-        "startsAt": "2026-09-01T00:00:00.000",
-        "terms": null
-      }
-    ],
-    "original": [
-      {
-        "clubOnly": false,
-        "description": "משקה מונסטר 500מ ל 2 ב 21.90",
-        "discountRate": null,
-        "endsAt": "2026-10-04T23:59:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-09-01T00:00:00.000",
+        "startsAt": "2026-08-19T00:00:00.000",
         "terms": null
       }
     ],
     "ultra": [
       {
         "clubOnly": false,
-        "description": "משקה מונסטר 500מ ל 2 ב 21.90",
-        "discountRate": null,
+        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+        "discountRate": 21.57,
         "endsAt": "2026-10-04T23:59:00.000",
         "maxQuantity": null,
         "minQuantity": 2,
-        "startsAt": "2026-09-01T00:00:00.000",
+        "startsAt": "2026-08-19T00:00:00.000",
         "terms": null
       }
     ],
     "ultra-fiesta": [
       {
         "clubOnly": false,
-        "description": "משקה מונסטר 500מ ל 2 ב 21.90",
-        "discountRate": null,
+        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+        "discountRate": 21.57,
         "endsAt": "2026-10-04T23:59:00.000",
         "maxQuantity": null,
         "minQuantity": 2,
-        "startsAt": "2026-09-01T00:00:00.000",
+        "startsAt": "2026-08-19T00:00:00.000",
         "terms": null
       }
     ],
     "ultra-paradise": [
       {
         "clubOnly": false,
-        "description": "משקה מונסטר 500מ ל 2 ב 21.90",
-        "discountRate": null,
+        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+        "discountRate": 21.57,
         "endsAt": "2026-10-04T23:59:00.000",
         "maxQuantity": null,
         "minQuantity": 2,
-        "startsAt": "2026-09-01T00:00:00.000",
+        "startsAt": "2026-08-19T00:00:00.000",
         "terms": null
       }
     ]
   },
-  "dor_alon-927": {
+  "dor_alon-524": {
     "mango-loco": [
       {
         "clubOnly": false,
-        "description": "משקה מונסטר 500מ ל 2 ב 21.90",
-        "discountRate": null,
+        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+        "discountRate": 21.57,
         "endsAt": "2026-10-04T23:59:00.000",
         "maxQuantity": null,
         "minQuantity": 2,
-        "startsAt": "2026-09-01T00:00:00.000",
-        "terms": null
-      }
-    ],
-    "original": [
-      {
-        "clubOnly": false,
-        "description": "משקה מונסטר 500מ ל 2 ב 21.90",
-        "discountRate": null,
-        "endsAt": "2026-10-04T23:59:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-09-01T00:00:00.000",
+        "startsAt": "2026-08-19T00:00:00.000",
         "terms": null
       }
     ],
     "ultra": [
       {
         "clubOnly": false,
-        "description": "משקה מונסטר 500מ ל 2 ב 21.90",
-        "discountRate": null,
+        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+        "discountRate": 21.57,
         "endsAt": "2026-10-04T23:59:00.000",
         "maxQuantity": null,
         "minQuantity": 2,
-        "startsAt": "2026-09-01T00:00:00.000",
+        "startsAt": "2026-08-19T00:00:00.000",
         "terms": null
       }
     ],
     "ultra-fiesta": [
       {
         "clubOnly": false,
-        "description": "משקה מונסטר 500מ ל 2 ב 21.90",
-        "discountRate": null,
+        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+        "discountRate": 21.57,
         "endsAt": "2026-10-04T23:59:00.000",
         "maxQuantity": null,
         "minQuantity": 2,
-        "startsAt": "2026-09-01T00:00:00.000",
+        "startsAt": "2026-08-19T00:00:00.000",
         "terms": null
       }
     ],
     "ultra-paradise": [
       {
         "clubOnly": false,
-        "description": "משקה מונסטר 500מ ל 2 ב 21.90",
-        "discountRate": null,
+        "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+        "discountRate": 21.57,
         "endsAt": "2026-10-04T23:59:00.000",
         "maxQuantity": null,
         "minQuantity": 2,
-        "startsAt": "2026-09-01T00:00:00.000",
-        "terms": null
-      }
-    ]
-  },
-  "dor_alon-958": {
-    "mango-loco": [
-      {
-        "clubOnly": false,
-        "description": "משקה מונסטר 500מ ל 2 ב 21.90",
-        "discountRate": null,
-        "endsAt": "2026-10-04T23:59:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-09-01T00:00:00.000",
-        "terms": null
-      }
-    ],
-    "original": [
-      {
-        "clubOnly": false,
-        "description": "משקה מונסטר 500מ ל 2 ב 21.90",
-        "discountRate": null,
-        "endsAt": "2026-10-04T23:59:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-09-01T00:00:00.000",
-        "terms": null
-      }
-    ],
-    "ultra": [
-      {
-        "clubOnly": false,
-        "description": "משקה מונסטר 500מ ל 2 ב 21.90",
-        "discountRate": null,
-        "endsAt": "2026-10-04T23:59:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-09-01T00:00:00.000",
-        "terms": null
-      }
-    ],
-    "ultra-fiesta": [
-      {
-        "clubOnly": false,
-        "description": "משקה מונסטר 500מ ל 2 ב 21.90",
-        "discountRate": null,
-        "endsAt": "2026-10-04T23:59:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-09-01T00:00:00.000",
-        "terms": null
-      }
-    ],
-    "ultra-paradise": [
-      {
-        "clubOnly": false,
-        "description": "משקה מונסטר 500מ ל 2 ב 21.90",
-        "discountRate": null,
-        "endsAt": "2026-10-04T23:59:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-09-01T00:00:00.000",
-        "terms": null
-      }
-    ]
-  },
-  "dor_alon-976": {
-    "mango-loco": [
-      {
-        "clubOnly": false,
-        "description": "משקה מונסטר 500מ ל 2 ב 21.90",
-        "discountRate": null,
-        "endsAt": "2026-10-04T23:59:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-09-01T00:00:00.000",
-        "terms": null
-      }
-    ],
-    "original": [
-      {
-        "clubOnly": false,
-        "description": "משקה מונסטר 500מ ל 2 ב 21.90",
-        "discountRate": null,
-        "endsAt": "2026-10-04T23:59:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-09-01T00:00:00.000",
-        "terms": null
-      }
-    ],
-    "ultra": [
-      {
-        "clubOnly": false,
-        "description": "משקה מונסטר 500מ ל 2 ב 21.90",
-        "discountRate": null,
-        "endsAt": "2026-10-04T23:59:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-09-01T00:00:00.000",
-        "terms": null
-      }
-    ],
-    "ultra-fiesta": [
-      {
-        "clubOnly": false,
-        "description": "משקה מונסטר 500מ ל 2 ב 21.90",
-        "discountRate": null,
-        "endsAt": "2026-10-04T23:59:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-09-01T00:00:00.000",
-        "terms": null
-      }
-    ],
-    "ultra-paradise": [
-      {
-        "clubOnly": false,
-        "description": "משקה מונסטר 500מ ל 2 ב 21.90",
-        "discountRate": null,
-        "endsAt": "2026-10-04T23:59:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-09-01T00:00:00.000",
+        "startsAt": "2026-08-19T00:00:00.000",
         "terms": null
       }
     ]
