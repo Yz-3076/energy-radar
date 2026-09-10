@@ -164,7 +164,8 @@ const COPY = {
         "That data is about products on shelves — it is not personal data, it is not derived from anyone's shopping, and it is not collected from app users. Prices are what the chains themselves published and can lag what is actually on the shelf."
       ] },
       { num: "04", h: "Third parties", p: [
-        "For promotion and discount information the project optionally calls a free public API, Open Israeli Supermarkets (openisraelisupermarkets.co.il). That service receives a product barcode and nothing else — no location, no device identifier, no information about you.",
+        "The app fetches two files from GitHub: the price data and the current deals. GitHub therefore sees the request the way any website sees a visitor. Nothing identifying you is attached — no account, no device identifier, no location.",
+        "Map tiles are loaded from a map provider, which likewise sees only a request for tiles.",
         "We use no other third-party services. There is no backend of our own that receives data from the app."
       ] },
       { num: "05", h: "No ads, no tracking, no analytics", p: [
@@ -216,7 +217,8 @@ const COPY = {
         "מדובר בנתונים על מוצרים על המדף — זה לא מידע אישי, זה לא נגזר מהקניות של אף אחד, וזה לא נאסף ממשתמשי האפליקציה. המחירים הם מה שהרשתות עצמן פרסמו ועשויים לפגר אחרי המדף בפועל."
       ] },
       { num: "04", h: "צדדים שלישיים", p: [
-        "עבור מידע על מבצעים והנחות הפרויקט פונה באופן אופציונלי ל-API ציבורי וחינמי, Open Israeli Supermarkets ‏(openisraelisupermarkets.co.il). השירות הזה מקבל ברקוד של מוצר ותו לא — לא מיקום, לא מזהה מכשיר, ולא שום מידע עליכם.",
+        "האפליקציה מורידה שני קבצים מ-GitHub: נתוני המחירים והמבצעים הנוכחיים. כלומר GitHub רואה את הבקשה כפי שכל אתר רואה גולש. שום דבר שמזהה אתכם לא נשלח — בלי חשבון, בלי מזהה מכשיר, בלי מיקום.",
+        "אריחי המפה נטענים מספק מפות, שגם הוא רואה רק בקשה לאריחים.",
         "איננו משתמשים בשירותי צד שלישי אחרים. אין לנו שרת משלנו שמקבל נתונים מהאפליקציה."
       ] },
       { num: "05", h: "בלי פרסומות, בלי מעקב, בלי אנליטיקס", p: [
