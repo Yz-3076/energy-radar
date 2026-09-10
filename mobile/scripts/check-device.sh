@@ -25,8 +25,18 @@ set -euo pipefail
 ADB="${ADB:-$(command -v adb || echo "/c/Android/sdk/platform-tools/adb.exe")}"
 [ -x "$ADB" ] || { echo "adb not found — set ADB=/path/to/adb" >&2; exit 1; }
 
-SERIAL="${SERIAL:-$("$ADB" devices | awk 'NR>1 && $2=="device" {print $1; exit}')}"
-[ -n "$SERIAL" ] || { echo "no device attached" >&2; exit 1; }
+# Prefer a real handset over a running emulator. Picking whichever device
+# happened to be listed first silently ran a check against an idle
+# emulator once, and the screenshot looked like a broken app rather than
+# the wrong target -- which is a slow and confusing thing to debug.
+if [ -z "${SERIAL:-}" ]; then
+  SERIAL=$("$ADB" devices | awk 'NR>1 && $2=="device" && $1 !~ /^emulator-/ {print $1; exit}')
+  [ -n "$SERIAL" ] || SERIAL=$("$ADB" devices | awk 'NR>1 && $2=="device" {print $1; exit}')
+fi
+[ -n "$SERIAL" ] || { echo "no device attached — plug the phone in, or start an emulator" >&2; exit 1; }
+case "$SERIAL" in
+  emulator-*) echo "note: no physical device found, using emulator $SERIAL" >&2 ;;
+esac
 
 OUT="${OUT:-./device-check.png}"
 ROUTE="${1:-}"

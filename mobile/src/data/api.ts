@@ -45,16 +45,23 @@ export const apiBase = (): string | null => {
 const LIVE_DATA_URL = "https://raw.githubusercontent.com/Yz-3076/energy-radar/main/data/latest.json";
 
 /**
- * variantId -> current promotions. Same "just a JSON file on GitHub" shape
- * as LIVE_DATA_URL, written by israel-poc/pipeline.py from the free Open
- * Israeli Supermarkets API (see israel-poc/promotions.py) — nationwide per
- * flavour, not per-store, and the file itself is `{}` whenever no API token
- * is configured, so an empty result here means "no live promos right now",
- * not "broken".
+ * Current deals, keyed by store. Same "just a JSON file on GitHub" shape as
+ * LIVE_DATA_URL, written by israel-poc/pipeline.py from the government
+ * PromoFull feeds (see israel-poc/promotions_gov.py). Only branches
+ * actually running a deal appear, so a missing store means "no deal seen
+ * there" rather than "broken".
  */
 const PROMOTIONS_URL = "https://raw.githubusercontent.com/Yz-3076/energy-radar/main/data/promotions.json";
 
-async function getAbsoluteJSON<T>(url: string, timeoutMs = 6000): Promise<T | null> {
+/**
+ * 6s is tight for latest.json (~400KB) on a slow mobile link, and this
+ * timeout fails closed in an unusually bad way: aborting drops the app to
+ * the bundled seed set, which is invented demo shops presented exactly
+ * like real ones. Waiting longer costs nothing — the screen has already
+ * rendered by the time this lands — so the timeout should only be
+ * catching a genuinely dead network, not a merely slow one.
+ */
+async function getAbsoluteJSON<T>(url: string, timeoutMs = 25000): Promise<T | null> {
   const ctrl = new AbortController();
   const timer = setTimeout(() => ctrl.abort(), timeoutMs);
   try {
@@ -78,9 +85,9 @@ export async function fetchLiveStores(): Promise<Store[] | null> {
   return stores && stores.length > 0 ? stores : null;
 }
 
-/** One current deal on a flavour — see israel-poc/promotions.py for where
- *  these fields come from. `discountRate`/quantities/dates are whatever the
- *  source published; not every promo sets all of them. */
+/** One current deal — see israel-poc/promotions_gov.py for where these
+ *  fields come from. `discountRate`/quantities/dates are whatever the feed
+ *  published; not every promo sets all of them. */
 export type Promo = {
   description: string;
   discountRate: number | null;
