@@ -58,5 +58,40 @@
     "id": "rehab-lemonade",
     "name": "Monster Rehab Lemonade",
     "barcode": null
+  },
+  {
+    "id": "ultra-peachy-keen",
+    "name": "Monster Ultra Peachy Keen",
+    "barcode": "5056784903865"
+  },
+  {
+    "id": "green-zero",
+    "name": "Monster Energy Zero Sugar",
+    "barcode": "5061013942331"
+  },
+  {
+    "id": "strawberry",
+    "name": "Monster Strawberry",
+    "barcode": "5056784900970"
+  },
+  {
+    "id": "aussie-lemonade",
+    "name": "Monster Aussie Lemonade",
+    "barcode": "5061013944991"
+  },
+  {
+    "id": "monarch",
+    "name": "Monster Monarch",
+    "barcode": "5060947547100"
+  },
+  {
+    "id": "rossi",
+    "name": "Monster Rossi",
+    "barcode": "5060517886547"
+  },
+  {
+    "id": "original",
+    "name": "Monster Energy Original (alt EAN)",
+    "barcode": "5060517886486"
   }
 ]

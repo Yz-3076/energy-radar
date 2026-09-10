@@ -36,8 +36,15 @@ export type Variant = {
   barcode: string | null;
   rarity: Rarity;
   sizeMl: number;
-  caffeineMg: number;
-  sugarG: number;
+  /** Published per-500 ml figures, or null where we genuinely don't have
+   *  them. Null rather than a plausible-looking number: these are real
+   *  nutrition facts people may be choosing on, and a guessed 150 mg is
+   *  indistinguishable on screen from a sourced one. The UI shows "—". */
+  caffeineMg: number | null;
+  sugarG: number | null;
+  /** Only true where the product is sugar-free beyond doubt — the Ultra
+   *  line, or a name that says zero. Unknown counts as false, so an
+   *  unverified can can never surface under the Zero sugar filter. */
   zeroSugar: boolean;
   blurb: string;
 };
@@ -246,6 +253,112 @@ export const VARIANTS: Variant[] = [
     zeroSugar: false,
     blurb:
       "Iced tea, lemonade and electrolytes in the short 458 ml can. Effectively a grey-import find in this market.",
+  },
+
+  // Everything below was found on Israeli shelves once Victory's feed came
+  // back online (2026-09-10) — together they were 56% of that chain's
+  // Monster rows, all previously discarded for having no catalogue entry.
+  // Names come from the retailer's own product text, which is the only
+  // description the feed carries; caffeine and sugar are left null because
+  // nothing in the price feed publishes them and a guess would look
+  // exactly like a sourced figure on screen.
+  {
+    id: "ultra-peachy-keen",
+    name: "Ultra Peachy Keen",
+    fullName: "Monster Ultra Peachy Keen",
+    accent: "#ffb38a",
+    secondary: "#e07a4f",
+    body: "white",
+    artwork: "wave",
+    barcode: "5056784903865",
+    rarity: "Rare",
+    sizeMl: 500,
+    caffeineMg: null,
+    sugarG: 0,
+    // Ultra is Monster's sugar-free line, so this one is safe to assert.
+    zeroSugar: true,
+    blurb: "White-can peach, from the sugar-free Ultra line. New to Israeli shelves and not yet widely stocked.",
+  },
+  {
+    id: "green-zero",
+    name: "Green Zero",
+    fullName: "Monster Energy Zero Sugar",
+    accent: "#7CFC5A",
+    secondary: "#2f8f2a",
+    body: "black",
+    artwork: "claw",
+    barcode: "5061013942331",
+    rarity: "Uncommon",
+    sizeMl: 500,
+    caffeineMg: null,
+    sugarG: 0,
+    // Sold as "גרין זירו" — the name itself is the claim.
+    zeroSugar: true,
+    blurb: "The original green, without the sugar. Same claw, same profile, sweetened instead of sugared.",
+  },
+  {
+    id: "strawberry",
+    name: "Strawberry",
+    fullName: "Monster Strawberry",
+    accent: "#ff4d6d",
+    secondary: "#a3122f",
+    body: "black",
+    artwork: "burst",
+    barcode: "5056784900970",
+    rarity: "Rare",
+    sizeMl: 500,
+    caffeineMg: null,
+    sugarG: null,
+    zeroSugar: false,
+    blurb: "Listed simply as Strawberry on Israeli shelves. Details still thin — we show the price, not a spec sheet we don't have.",
+  },
+  {
+    id: "aussie-lemonade",
+    name: "Aussie Lemonade",
+    fullName: "Monster Aussie Lemonade",
+    accent: "#ffe066",
+    secondary: "#c8a415",
+    body: "black",
+    artwork: "wave",
+    barcode: "5061013944991",
+    rarity: "Rare",
+    sizeMl: 500,
+    caffeineMg: null,
+    sugarG: null,
+    zeroSugar: false,
+    blurb: "Cloudy lemonade rather than citrus soda. Turns up in scattered branches rather than as a standing line.",
+  },
+  {
+    id: "monarch",
+    name: "Monarch",
+    fullName: "Monster Monarch",
+    accent: "#f0a500",
+    secondary: "#7a4b00",
+    body: "black",
+    artwork: "split",
+    barcode: "5060947547100",
+    rarity: "Rare",
+    sizeMl: 500,
+    caffeineMg: null,
+    sugarG: null,
+    zeroSugar: false,
+    blurb: "Sold here as Monarch. One of the rarer cans in the feed, so worth logging when you actually see one.",
+  },
+  {
+    id: "rossi",
+    name: "Rossi",
+    fullName: "Monster Rossi",
+    accent: "#e8536b",
+    secondary: "#8c2033",
+    body: "black",
+    artwork: "split",
+    barcode: "5060517886547",
+    rarity: "Rare",
+    sizeMl: 500,
+    caffeineMg: null,
+    sugarG: null,
+    zeroSugar: false,
+    blurb: "Shelf-listed as רוזי — an uncommon can that shows up in a handful of branches at a time.",
   },
 ];
 

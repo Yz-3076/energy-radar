@@ -50,10 +50,16 @@ export default function VariantScreen() {
     loggedTimer.current = setTimeout(() => setJustLogged(false), 1800);
   };
 
+  // "—" for a figure we don't have, rather than a plausible-looking
+  // number — see the Variant type on why these can be null.
   const stats = [
     { v: lowest !== null ? ils(lowest) : "—", k: "cheapest nearby", accent: true },
-    { v: `${variant.caffeineMg} mg`, k: "caffeine", accent: false },
-    { v: variant.zeroSugar ? "0 g" : `${variant.sugarG} g`, k: "sugar", accent: false },
+    { v: variant.caffeineMg !== null ? `${variant.caffeineMg} mg` : "—", k: "caffeine", accent: false },
+    {
+      v: variant.zeroSugar ? "0 g" : variant.sugarG !== null ? `${variant.sugarG} g` : "—",
+      k: "sugar",
+      accent: false,
+    },
   ];
 
   return (
