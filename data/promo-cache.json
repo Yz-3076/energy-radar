@@ -1,4 +1,40 @@
 {
+  "BAREKET:10": {
+    "fetchedAt": "2026-09-13T23:33:51.499096+00:00",
+    "promos": {}
+  },
+  "BAREKET:2": {
+    "fetchedAt": "2026-09-13T23:33:54.142043+00:00",
+    "promos": {}
+  },
+  "BAREKET:5": {
+    "fetchedAt": "2026-09-13T23:33:52.818944+00:00",
+    "promos": {}
+  },
+  "BAREKET:6": {
+    "fetchedAt": "2026-09-13T23:33:54.269638+00:00",
+    "promos": {}
+  },
+  "BAREKET:60": {
+    "fetchedAt": "2026-09-13T23:33:54.315347+00:00",
+    "promos": {}
+  },
+  "BAREKET:61": {
+    "fetchedAt": "2026-09-13T23:33:52.429586+00:00",
+    "promos": {}
+  },
+  "BAREKET:62": {
+    "fetchedAt": "2026-09-13T23:33:51.668888+00:00",
+    "promos": {}
+  },
+  "BAREKET:63": {
+    "fetchedAt": "2026-09-13T23:33:55.015998+00:00",
+    "promos": {}
+  },
+  "BAREKET:7": {
+    "fetchedAt": "2026-09-13T23:33:51.739183+00:00",
+    "promos": {}
+  },
   "DOR_ALON:401": {
     "fetchedAt": "2026-09-13T21:01:24.351856+00:00",
     "promos": {
@@ -7872,6 +7908,222 @@
       ]
     }
   },
+  "FRESH_MARKET_AND_SUPER_DOSH:11": {
+    "fetchedAt": "2026-09-13T23:33:17.651202+00:00",
+    "promos": {}
+  },
+  "FRESH_MARKET_AND_SUPER_DOSH:14": {
+    "fetchedAt": "2026-09-13T23:33:22.698712+00:00",
+    "promos": {}
+  },
+  "FRESH_MARKET_AND_SUPER_DOSH:17": {
+    "fetchedAt": "2026-09-13T23:33:16.586905+00:00",
+    "promos": {}
+  },
+  "FRESH_MARKET_AND_SUPER_DOSH:2": {
+    "fetchedAt": "2026-09-13T23:33:17.053336+00:00",
+    "promos": {}
+  },
+  "FRESH_MARKET_AND_SUPER_DOSH:23": {
+    "fetchedAt": "2026-09-13T23:33:26.656406+00:00",
+    "promos": {}
+  },
+  "FRESH_MARKET_AND_SUPER_DOSH:25": {
+    "fetchedAt": "2026-09-13T23:33:17.466813+00:00",
+    "promos": {}
+  },
+  "FRESH_MARKET_AND_SUPER_DOSH:26": {
+    "fetchedAt": "2026-09-13T23:33:19.105605+00:00",
+    "promos": {}
+  },
+  "FRESH_MARKET_AND_SUPER_DOSH:27": {
+    "fetchedAt": "2026-09-13T23:33:17.210956+00:00",
+    "promos": {}
+  },
+  "FRESH_MARKET_AND_SUPER_DOSH:28": {
+    "fetchedAt": "2026-09-13T23:33:22.105325+00:00",
+    "promos": {}
+  },
+  "FRESH_MARKET_AND_SUPER_DOSH:31": {
+    "fetchedAt": "2026-09-13T23:33:21.992363+00:00",
+    "promos": {}
+  },
+  "FRESH_MARKET_AND_SUPER_DOSH:32": {
+    "fetchedAt": "2026-09-13T23:33:26.371915+00:00",
+    "promos": {}
+  },
+  "FRESH_MARKET_AND_SUPER_DOSH:35": {
+    "fetchedAt": "2026-09-13T23:33:22.290928+00:00",
+    "promos": {}
+  },
+  "FRESH_MARKET_AND_SUPER_DOSH:37": {
+    "fetchedAt": "2026-09-13T23:33:27.297153+00:00",
+    "promos": {}
+  },
+  "FRESH_MARKET_AND_SUPER_DOSH:4": {
+    "fetchedAt": "2026-09-13T23:33:22.483200+00:00",
+    "promos": {}
+  },
+  "FRESH_MARKET_AND_SUPER_DOSH:40": {
+    "fetchedAt": "2026-09-13T23:33:27.570857+00:00",
+    "promos": {}
+  },
+  "FRESH_MARKET_AND_SUPER_DOSH:41": {
+    "fetchedAt": "2026-09-13T23:33:21.607776+00:00",
+    "promos": {}
+  },
+  "FRESH_MARKET_AND_SUPER_DOSH:43": {
+    "fetchedAt": "2026-09-13T23:33:27.150340+00:00",
+    "promos": {}
+  },
+  "FRESH_MARKET_AND_SUPER_DOSH:45": {
+    "fetchedAt": "2026-09-13T23:33:21.754488+00:00",
+    "promos": {}
+  },
+  "FRESH_MARKET_AND_SUPER_DOSH:46": {
+    "fetchedAt": "2026-09-13T23:33:12.124000+00:00",
+    "promos": {}
+  },
+  "FRESH_MARKET_AND_SUPER_DOSH:47": {
+    "fetchedAt": "2026-09-13T23:33:27.721598+00:00",
+    "promos": {}
+  },
+  "FRESH_MARKET_AND_SUPER_DOSH:49": {
+    "fetchedAt": "2026-09-13T23:33:13.939377+00:00",
+    "promos": {}
+  },
+  "FRESH_MARKET_AND_SUPER_DOSH:5": {
+    "fetchedAt": "2026-09-13T23:33:24.305133+00:00",
+    "promos": {}
+  },
+  "FRESH_MARKET_AND_SUPER_DOSH:50": {
+    "fetchedAt": "2026-09-13T23:33:27.452312+00:00",
+    "promos": {}
+  },
+  "FRESH_MARKET_AND_SUPER_DOSH:51": {
+    "fetchedAt": "2026-09-13T23:33:16.936951+00:00",
+    "promos": {}
+  },
+  "FRESH_MARKET_AND_SUPER_DOSH:54": {
+    "fetchedAt": "2026-09-13T23:33:17.370092+00:00",
+    "promos": {}
+  },
+  "KESHET:14": {
+    "fetchedAt": "2026-09-13T23:33:40.055496+00:00",
+    "promos": {}
+  },
+  "KESHET:21": {
+    "fetchedAt": "2026-09-13T23:33:39.814071+00:00",
+    "promos": {}
+  },
+  "KING_STORE:14": {
+    "fetchedAt": "2026-09-13T23:33:34.181020+00:00",
+    "promos": {}
+  },
+  "KING_STORE:15": {
+    "fetchedAt": "2026-09-13T23:33:36.152675+00:00",
+    "promos": {}
+  },
+  "KING_STORE:16": {
+    "fetchedAt": "2026-09-13T23:33:35.068231+00:00",
+    "promos": {}
+  },
+  "KING_STORE:18": {
+    "fetchedAt": "2026-09-13T23:33:34.481936+00:00",
+    "promos": {}
+  },
+  "KING_STORE:27": {
+    "fetchedAt": "2026-09-13T23:33:36.385365+00:00",
+    "promos": {}
+  },
+  "KING_STORE:334": {
+    "fetchedAt": "2026-09-13T23:33:34.436787+00:00",
+    "promos": {}
+  },
+  "KING_STORE:338": {
+    "fetchedAt": "2026-09-13T23:33:34.524103+00:00",
+    "promos": {}
+  },
+  "KING_STORE:339": {
+    "fetchedAt": "2026-09-13T23:33:34.536507+00:00",
+    "promos": {}
+  },
+  "MAAYAN_2000:1": {
+    "fetchedAt": "2026-09-13T23:33:32.230557+00:00",
+    "promos": {}
+  },
+  "MAAYAN_2000:13": {
+    "fetchedAt": "2026-09-13T23:33:26.740667+00:00",
+    "promos": {}
+  },
+  "MAAYAN_2000:16": {
+    "fetchedAt": "2026-09-13T23:33:29.001799+00:00",
+    "promos": {}
+  },
+  "MAAYAN_2000:17": {
+    "fetchedAt": "2026-09-13T23:33:29.771814+00:00",
+    "promos": {}
+  },
+  "MAAYAN_2000:2": {
+    "fetchedAt": "2026-09-13T23:33:32.559757+00:00",
+    "promos": {}
+  },
+  "MAAYAN_2000:20": {
+    "fetchedAt": "2026-09-13T23:33:31.542741+00:00",
+    "promos": {}
+  },
+  "MAAYAN_2000:27": {
+    "fetchedAt": "2026-09-13T23:33:32.153834+00:00",
+    "promos": {}
+  },
+  "MAAYAN_2000:28": {
+    "fetchedAt": "2026-09-13T23:33:33.586179+00:00",
+    "promos": {}
+  },
+  "MAAYAN_2000:29": {
+    "fetchedAt": "2026-09-13T23:33:29.611381+00:00",
+    "promos": {}
+  },
+  "MAAYAN_2000:3": {
+    "fetchedAt": "2026-09-13T23:33:31.775492+00:00",
+    "promos": {}
+  },
+  "MAAYAN_2000:35": {
+    "fetchedAt": "2026-09-13T23:33:30.201134+00:00",
+    "promos": {}
+  },
+  "MAAYAN_2000:39": {
+    "fetchedAt": "2026-09-13T23:33:33.888610+00:00",
+    "promos": {}
+  },
+  "MAAYAN_2000:4": {
+    "fetchedAt": "2026-09-13T23:33:29.155183+00:00",
+    "promos": {}
+  },
+  "MAAYAN_2000:40": {
+    "fetchedAt": "2026-09-13T23:33:31.995441+00:00",
+    "promos": {}
+  },
+  "MAAYAN_2000:44": {
+    "fetchedAt": "2026-09-13T23:33:29.900378+00:00",
+    "promos": {}
+  },
+  "MAAYAN_2000:5": {
+    "fetchedAt": "2026-09-13T23:33:29.301086+00:00",
+    "promos": {}
+  },
+  "MAAYAN_2000:6": {
+    "fetchedAt": "2026-09-13T23:33:32.325103+00:00",
+    "promos": {}
+  },
+  "MAAYAN_2000:60": {
+    "fetchedAt": "2026-09-13T23:33:31.208587+00:00",
+    "promos": {}
+  },
+  "MAAYAN_2000:8": {
+    "fetchedAt": "2026-09-13T23:33:29.980967+00:00",
+    "promos": {}
+  },
   "OSHER_AD:1": {
     "fetchedAt": "2026-09-13T11:53:47.818970+00:00",
     "promos": {}
@@ -8218,6 +8470,10 @@
   },
   "RAMI_LEVY:9": {
     "fetchedAt": "2026-09-13T04:48:37.840631+00:00",
+    "promos": {}
+  },
+  "SALACH_DABACH:13": {
+    "fetchedAt": "2026-09-13T23:34:02.717224+00:00",
     "promos": {}
   },
   "SHUFERSAL:1": {
@@ -8950,6 +9206,334 @@
   },
   "SHUFERSAL:98": {
     "fetchedAt": "2026-09-13T04:46:45.477292+00:00",
+    "promos": {}
+  },
+  "STOP_MARKET:10": {
+    "fetchedAt": "2026-09-13T23:33:58.486069+00:00",
+    "promos": {}
+  },
+  "STOP_MARKET:8": {
+    "fetchedAt": "2026-09-13T23:33:57.963305+00:00",
+    "promos": {}
+  },
+  "SUPER_SAPIR:13": {
+    "fetchedAt": "2026-09-13T23:32:56.016509+00:00",
+    "promos": {}
+  },
+  "SUPER_SAPIR:17": {
+    "fetchedAt": "2026-09-13T23:32:58.323371+00:00",
+    "promos": {}
+  },
+  "SUPER_SAPIR:192": {
+    "fetchedAt": "2026-09-13T23:32:56.247634+00:00",
+    "promos": {}
+  },
+  "SUPER_SAPIR:20": {
+    "fetchedAt": "2026-09-13T23:32:58.559844+00:00",
+    "promos": {}
+  },
+  "SUPER_SAPIR:21": {
+    "fetchedAt": "2026-09-13T23:32:56.073563+00:00",
+    "promos": {}
+  },
+  "SUPER_SAPIR:26": {
+    "fetchedAt": "2026-09-13T23:33:01.197536+00:00",
+    "promos": {}
+  },
+  "SUPER_SAPIR:260": {
+    "fetchedAt": "2026-09-13T23:33:00.744333+00:00",
+    "promos": {}
+  },
+  "SUPER_SAPIR:261": {
+    "fetchedAt": "2026-09-13T23:33:01.041208+00:00",
+    "promos": {}
+  },
+  "SUPER_SAPIR:264": {
+    "fetchedAt": "2026-09-13T23:32:58.801016+00:00",
+    "promos": {}
+  },
+  "SUPER_SAPIR:27": {
+    "fetchedAt": "2026-09-13T23:32:55.853183+00:00",
+    "promos": {}
+  },
+  "SUPER_SAPIR:29": {
+    "fetchedAt": "2026-09-13T23:32:55.966545+00:00",
+    "promos": {}
+  },
+  "SUPER_SAPIR:396": {
+    "fetchedAt": "2026-09-13T23:33:00.855970+00:00",
+    "promos": {}
+  },
+  "SUPER_SAPIR:40": {
+    "fetchedAt": "2026-09-13T23:32:58.503938+00:00",
+    "promos": {}
+  },
+  "SUPER_SAPIR:43": {
+    "fetchedAt": "2026-09-13T23:32:58.630718+00:00",
+    "promos": {}
+  },
+  "SUPER_SAPIR:44": {
+    "fetchedAt": "2026-09-13T23:32:55.818918+00:00",
+    "promos": {}
+  },
+  "SUPER_SAPIR:46": {
+    "fetchedAt": "2026-09-13T23:32:58.696305+00:00",
+    "promos": {}
+  },
+  "SUPER_SAPIR:47": {
+    "fetchedAt": "2026-09-13T23:32:55.916375+00:00",
+    "promos": {}
+  },
+  "SUPER_SAPIR:48": {
+    "fetchedAt": "2026-09-13T23:33:01.136541+00:00",
+    "promos": {}
+  },
+  "SUPER_SAPIR:53": {
+    "fetchedAt": "2026-09-13T23:32:56.170997+00:00",
+    "promos": {}
+  },
+  "SUPER_SAPIR:6": {
+    "fetchedAt": "2026-09-13T23:32:58.751751+00:00",
+    "promos": {}
+  },
+  "SUPER_SAPIR:66": {
+    "fetchedAt": "2026-09-13T23:32:58.482499+00:00",
+    "promos": {}
+  },
+  "SUPER_YUDA:201": {
+    "fetchedAt": "2026-09-13T23:33:44.709281+00:00",
+    "promos": {}
+  },
+  "SUPER_YUDA:202": {
+    "fetchedAt": "2026-09-13T23:33:44.517272+00:00",
+    "promos": {}
+  },
+  "SUPER_YUDA:203": {
+    "fetchedAt": "2026-09-13T23:33:49.799874+00:00",
+    "promos": {}
+  },
+  "SUPER_YUDA:204": {
+    "fetchedAt": "2026-09-13T23:33:45.315011+00:00",
+    "promos": {}
+  },
+  "SUPER_YUDA:205": {
+    "fetchedAt": "2026-09-13T23:33:41.202295+00:00",
+    "promos": {}
+  },
+  "SUPER_YUDA:206": {
+    "fetchedAt": "2026-09-13T23:33:40.832650+00:00",
+    "promos": {}
+  },
+  "SUPER_YUDA:207": {
+    "fetchedAt": "2026-09-13T23:33:53.241346+00:00",
+    "promos": {}
+  },
+  "SUPER_YUDA:208": {
+    "fetchedAt": "2026-09-13T23:33:48.864010+00:00",
+    "promos": {}
+  },
+  "SUPER_YUDA:209": {
+    "fetchedAt": "2026-09-13T23:33:50.236671+00:00",
+    "promos": {}
+  },
+  "SUPER_YUDA:211": {
+    "fetchedAt": "2026-09-13T23:33:38.860735+00:00",
+    "promos": {}
+  },
+  "SUPER_YUDA:212": {
+    "fetchedAt": "2026-09-13T23:33:44.080387+00:00",
+    "promos": {}
+  },
+  "SUPER_YUDA:213": {
+    "fetchedAt": "2026-09-13T23:33:48.610539+00:00",
+    "promos": {}
+  },
+  "SUPER_YUDA:214": {
+    "fetchedAt": "2026-09-13T23:33:44.447417+00:00",
+    "promos": {}
+  },
+  "SUPER_YUDA:215": {
+    "fetchedAt": "2026-09-13T23:33:39.475144+00:00",
+    "promos": {}
+  },
+  "SUPER_YUDA:216": {
+    "fetchedAt": "2026-09-13T23:33:39.372756+00:00",
+    "promos": {}
+  },
+  "SUPER_YUDA:217": {
+    "fetchedAt": "2026-09-13T23:33:49.046682+00:00",
+    "promos": {}
+  },
+  "SUPER_YUDA:230": {
+    "fetchedAt": "2026-09-13T23:33:48.217403+00:00",
+    "promos": {}
+  },
+  "SUPER_YUDA:231": {
+    "fetchedAt": "2026-09-13T23:33:39.536663+00:00",
+    "promos": {}
+  },
+  "SUPER_YUDA:232": {
+    "fetchedAt": "2026-09-13T23:33:49.148053+00:00",
+    "promos": {}
+  },
+  "SUPER_YUDA:233": {
+    "fetchedAt": "2026-09-13T23:33:45.642866+00:00",
+    "promos": {}
+  },
+  "SUPER_YUDA:235": {
+    "fetchedAt": "2026-09-13T23:33:44.263781+00:00",
+    "promos": {}
+  },
+  "SUPER_YUDA:236": {
+    "fetchedAt": "2026-09-13T23:33:52.742299+00:00",
+    "promos": {}
+  },
+  "SUPER_YUDA:237": {
+    "fetchedAt": "2026-09-13T23:33:53.132129+00:00",
+    "promos": {}
+  },
+  "SUPER_YUDA:238": {
+    "fetchedAt": "2026-09-13T23:33:48.789160+00:00",
+    "promos": {}
+  },
+  "SUPER_YUDA:241": {
+    "fetchedAt": "2026-09-13T23:33:43.583554+00:00",
+    "promos": {}
+  },
+  "TIV_TAAM:156": {
+    "fetchedAt": "2026-09-13T23:33:03.192904+00:00",
+    "promos": {}
+  },
+  "TIV_TAAM:19": {
+    "fetchedAt": "2026-09-13T23:33:02.647262+00:00",
+    "promos": {}
+  },
+  "TIV_TAAM:2": {
+    "fetchedAt": "2026-09-13T23:33:02.641572+00:00",
+    "promos": {}
+  },
+  "TIV_TAAM:20": {
+    "fetchedAt": "2026-09-13T23:33:02.645981+00:00",
+    "promos": {}
+  },
+  "TIV_TAAM:21": {
+    "fetchedAt": "2026-09-13T23:33:03.188114+00:00",
+    "promos": {}
+  },
+  "TIV_TAAM:23": {
+    "fetchedAt": "2026-09-13T23:33:02.751055+00:00",
+    "promos": {}
+  },
+  "TIV_TAAM:56": {
+    "fetchedAt": "2026-09-13T23:33:06.915413+00:00",
+    "promos": {}
+  },
+  "TIV_TAAM:57": {
+    "fetchedAt": "2026-09-13T23:33:00.749261+00:00",
+    "promos": {}
+  },
+  "TIV_TAAM:59": {
+    "fetchedAt": "2026-09-13T23:33:04.779172+00:00",
+    "promos": {}
+  },
+  "TIV_TAAM:6": {
+    "fetchedAt": "2026-09-13T23:33:06.919635+00:00",
+    "promos": {}
+  },
+  "TIV_TAAM:61": {
+    "fetchedAt": "2026-09-13T23:33:06.928419+00:00",
+    "promos": {}
+  },
+  "TIV_TAAM:63": {
+    "fetchedAt": "2026-09-13T23:33:07.152402+00:00",
+    "promos": {}
+  },
+  "TIV_TAAM:68": {
+    "fetchedAt": "2026-09-13T23:33:04.796888+00:00",
+    "promos": {}
+  },
+  "TIV_TAAM:7": {
+    "fetchedAt": "2026-09-13T23:33:03.197550+00:00",
+    "promos": {}
+  },
+  "TIV_TAAM:70": {
+    "fetchedAt": "2026-09-13T23:33:02.633251+00:00",
+    "promos": {}
+  },
+  "TIV_TAAM:71": {
+    "fetchedAt": "2026-09-13T23:33:00.754544+00:00",
+    "promos": {}
+  },
+  "TIV_TAAM:73": {
+    "fetchedAt": "2026-09-13T23:33:04.774063+00:00",
+    "promos": {}
+  },
+  "TIV_TAAM:74": {
+    "fetchedAt": "2026-09-13T23:33:07.147711+00:00",
+    "promos": {}
+  },
+  "TIV_TAAM:79": {
+    "fetchedAt": "2026-09-13T23:33:04.789963+00:00",
+    "promos": {}
+  },
+  "TIV_TAAM:80": {
+    "fetchedAt": "2026-09-13T23:33:05.095868+00:00",
+    "promos": {}
+  },
+  "TIV_TAAM:82": {
+    "fetchedAt": "2026-09-13T23:33:06.924366+00:00",
+    "promos": {}
+  },
+  "TIV_TAAM:83": {
+    "fetchedAt": "2026-09-13T23:33:06.909298+00:00",
+    "promos": {}
+  },
+  "TIV_TAAM:84": {
+    "fetchedAt": "2026-09-13T23:33:07.154868+00:00",
+    "promos": {}
+  },
+  "TIV_TAAM:85": {
+    "fetchedAt": "2026-09-13T23:33:05.068329+00:00",
+    "promos": {}
+  },
+  "TIV_TAAM:91": {
+    "fetchedAt": "2026-09-13T23:33:05.073999+00:00",
+    "promos": {}
+  },
+  "TIV_TAAM:92": {
+    "fetchedAt": "2026-09-13T23:33:08.803911+00:00",
+    "promos": {}
+  },
+  "TIV_TAAM:93": {
+    "fetchedAt": "2026-09-13T23:33:00.750316+00:00",
+    "promos": {}
+  },
+  "TIV_TAAM:94": {
+    "fetchedAt": "2026-09-13T23:33:04.795101+00:00",
+    "promos": {}
+  },
+  "YOHANANOF:27": {
+    "fetchedAt": "2026-09-13T23:33:12.236733+00:00",
+    "promos": {}
+  },
+  "YOHANANOF:28": {
+    "fetchedAt": "2026-09-13T23:33:12.357215+00:00",
+    "promos": {}
+  },
+  "YOHANANOF:37": {
+    "fetchedAt": "2026-09-13T23:33:11.776871+00:00",
+    "promos": {}
+  },
+  "YOHANANOF:38": {
+    "fetchedAt": "2026-09-13T23:33:11.667177+00:00",
+    "promos": {}
+  },
+  "YOHANANOF:39": {
+    "fetchedAt": "2026-09-13T23:33:11.905414+00:00",
+    "promos": {}
+  },
+  "YOHANANOF:7": {
+    "fetchedAt": "2026-09-13T23:33:12.024378+00:00",
     "promos": {}
   }
 }
