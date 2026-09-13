@@ -93,8 +93,16 @@ If Play insists on a Location declaration: *approximate and precise location, us
 
 ## Still needed
 
-- **Feature graphic, 1024×500** — required by Play, does not exist yet
 - **App icon 512×512** — `mobile/assets/icon.png` exists; check it exports at 512
+
+## Feature graphic
+
+`store-assets/feature-graphic.png` — 1024×500, RGB, no alpha. Generated
+externally, then cropped to Play's exact 2.048 ratio before scaling
+rather than stretching a 2.055 source into the box. Title and tagline sit
+inside the middle 60%, so neither is lost when Google crops the banner
+differently across its surfaces; the price pins near the edges are
+decorative and safe to lose.
 
 ## Open risk on this listing
 
