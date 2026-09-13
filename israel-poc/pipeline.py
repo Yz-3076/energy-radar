@@ -96,7 +96,29 @@ DUMPS_DIR = Path(__file__).resolve().parent / "dumps"
 #                        produced by GitHub Actions, however healthy their
 #                        feed is. Getting them in needs the scrape to run
 #                        from a network they answer — see docs/staying-current.md.
-CHAINS = ["SHUFERSAL", "VICTORY_NEW_SOURCE", "RAMI_LEVY", "YELLOW", "OSHER_AD", "DOR_ALON"]
+#
+# The 15 below were added 2026-09-14 after probing all 41 chains the
+# scraper library supports (israel-poc/chain_probe.py). Each one was
+# confirmed to publish a store file (without it a branch can't be
+# geocoded, so it can never reach the map) AND to carry Monster rows in a
+# sampled price file. The ones left out fail for concrete reasons rather
+# than being untried: 8 raise on construction (MEGA, COFIX, QUIK, VICTORY
+# — the old source, superseded by VICTORY_NEW_SOURCE — HET_COHEN,
+# MAHSANI_ASHUK, CITY_MARKET_GIVATAYIM, CITY_MARKET_KIRYATONO), 6 publish
+# no store file at all, and 6 publish one but stock no Monster.
+#
+# WOLT is deliberately excluded despite being usable: its locations are
+# delivery fulfilment sites, not shops you can walk into, and this app's
+# entire promise is walking distance.
+CHAINS = [
+    # original six
+    "SHUFERSAL", "VICTORY_NEW_SOURCE", "RAMI_LEVY", "YELLOW", "OSHER_AD", "DOR_ALON",
+    # added after the 2026-09-14 probe
+    "SUPER_PHARM", "YAYNO_BITAN_AND_CARREFOUR", "NETIV_HASED", "SUPER_SAPIR",
+    "TIV_TAAM", "YOHANANOF", "FRESH_MARKET_AND_SUPER_DOSH", "MAAYAN_2000",
+    "KING_STORE", "KESHET", "SUPER_YUDA", "BAREKET", "HAZI_HINAM",
+    "SALACH_DABACH", "STOP_MARKET",
+]
 
 # For local smoke-testing only: PIPELINE_LIMIT=5 py pipeline.py fetches just a
 # handful of branches per chain instead of the whole country. Unset (the
@@ -383,10 +405,35 @@ async def run() -> None:
     # much cheaper than having the dashboard parse the whole history file.
     per_variant_counts = defaultdict(int)
     depletion_counts = defaultdict(int)
+    prices_by_chain: dict[str, list[float]] = defaultdict(list)
+    prices_by_variant: dict[str, list[float]] = defaultdict(list)
+    stores_per_chain = defaultdict(int)
+    cheapest_now = None
     for store in stores_out:
+        stores_per_chain[store["chain"]] += 1
         for row in store["shelf"]:
             per_variant_counts[row["variantId"]] += 1
             depletion_counts[row["depletion"]] += 1
+            prices_by_chain[store["chain"]].append(row["price"])
+            prices_by_variant[row["variantId"]].append(row["price"])
+            if cheapest_now is None or row["price"] < cheapest_now["price"]:
+                cheapest_now = {
+                    "price": row["price"],
+                    "variantId": row["variantId"],
+                    "storeId": store["id"],
+                    "storeName": store["name"],
+                    "chain": store["chain"],
+                }
+
+    def _spread(values: list[float]) -> dict:
+        """min / median / max / n for a price list. Median rather than mean:
+        one mispriced outlier in a published file shouldn't move the number
+        everyone reads."""
+        s = sorted(values)
+        n = len(s)
+        mid = s[n // 2] if n % 2 else (s[n // 2 - 1] + s[n // 2]) / 2
+        return {"min": s[0], "median": round(mid, 2), "max": s[-1], "listings": n}
+
     stats = {
         "generated_at": now,
         "chains_covered": CHAINS,
@@ -395,6 +442,18 @@ async def run() -> None:
         "observations_this_run": len(new_observations),
         "listings_per_variant": dict(per_variant_counts),
         "depletion_breakdown": dict(depletion_counts),
+        # --- the counter: how much Monster is on Israeli shelves right now
+        "live_listings": sum(per_variant_counts.values()),
+        "flavours_on_shelves": len(per_variant_counts),
+        "stores_per_chain": dict(sorted(stores_per_chain.items(), key=lambda kv: -kv[1])),
+        # --- price analysis, for "who is actually cheapest"
+        "price_by_chain": {
+            chain: _spread(v) for chain, v in sorted(prices_by_chain.items())
+        },
+        "price_by_variant": {
+            variant: _spread(v) for variant, v in sorted(prices_by_variant.items())
+        },
+        "cheapest_listing": cheapest_now,
     }
     (DATA_DIR / "stats.json").write_text(json.dumps(stats, ensure_ascii=False, indent=2), encoding="utf-8")
     print("Wrote data/stats.json")
