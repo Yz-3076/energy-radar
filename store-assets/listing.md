@@ -91,9 +91,10 @@ If Play insists on a Location declaration: *approximate and precise location, us
 5. `04-store-local.png` — a local branch
 6. `06-onboarding.png` — the radar intro
 
-## Still needed
+## App icon
 
-- **App icon 512×512** — `mobile/assets/icon.png` exists; check it exports at 512
+`store-assets/icon-512.png` — 512×512, RGB. Downscaled from the 1024px
+master and flattened, since Play rejects an alpha channel on the icon.
 
 ## Feature graphic
 
@@ -109,6 +110,8 @@ decorative and safe to lose.
 The short and full descriptions both name Monster Energy. That is
 nominative use — the app reports published prices for a product and has
 to say which product — and the disclaimer above is deliberately explicit
-about non-affiliation. It is still the app's biggest remaining legal
-exposure alongside the 3D can textures, and worth a deliberate decision
-rather than a default.
+about non-affiliation. It is now the app's main remaining trademark
+exposure, together with the icon. The photographic 3-D can textures that
+used to sit alongside it are gone — the cans are drawn in-house — and the
+icon was a deliberate decision on 2026-09-14 to ship as-is and change it
+later if anyone objects.
