@@ -110,6 +110,24 @@ DUMPS_DIR = Path(__file__).resolve().parent / "dumps"
 # WOLT is deliberately excluded despite being usable: its locations are
 # delivery fulfilment sites, not shops you can walk into, and this app's
 # entire promise is walking distance.
+#
+# What actually happened on the first full run (2026-09-13, 49min, 334 ->
+# 461 stores). The three largest additions contributed nothing, for three
+# different reasons, none of them a bug here — worth writing down so the
+# next person doesn't re-diagnose them:
+#
+#   SUPER_PHARM (307 branches) — intermittent. Returned 307 branches to a
+#     probe, then 0 files an hour later both in CI *and* from a home
+#     connection in Israel. Their publishing is simply unreliable; left in
+#     because it costs ~30s a run and contributes whenever it works.
+#   NETIV_HASED (91), HAZI_HINAM (13) — 0 files in CI, but 91 and 13
+#     branches from a home connection in Israel, minutes apart. Same shape
+#     as VICTORY_NEW_SOURCE: reachable from Israel, not from GitHub's
+#     runners. Nothing to fix from here.
+#   YAYNO_BITAN_AND_CARREFOUR (147) — fetches fine, and its price files do
+#     contain Monster, but only 2 of 147 branches' price files come back
+#     per run and neither resolved to a store. Worth a look if their
+#     coverage matters; not obviously broken, just thin.
 CHAINS = [
     # original six
     "SHUFERSAL", "VICTORY_NEW_SOURCE", "RAMI_LEVY", "YELLOW", "OSHER_AD", "DOR_ALON",
