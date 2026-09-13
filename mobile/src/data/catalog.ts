@@ -87,8 +87,12 @@ export const VARIANTS: Variant[] = [
     id: "ultra",
     name: "Ultra",
     fullName: "Monster Ultra (Zero Sugar)",
-    accent: "#cbd0cb",
-    secondary: "#8d968d",
+    // Graphite rather than the near-white silver it had: at luminance 206
+    // against a 224 shell the mark was invisible on a white can, and this
+    // is the most-listed flavour in the dataset, so it was the can users
+    // saw most and could read least. Still reads as the plain silver one.
+    accent: "#8f978f",
+    secondary: "#4e554e",
     body: "white",
     artwork: "ripple",
     barcode: "5060639128051",
