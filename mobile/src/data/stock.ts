@@ -1,10 +1,11 @@
 import { hoursSince, type ShelfRow } from "./stores";
 
-export type StockStatus = "in_stock" | "fading" | "unconfirmed";
+export type StockStatus = "in_stock" | "fading" | "likely_out" | "unconfirmed";
 
 export const STOCK_LABEL: Record<StockStatus, string> = {
   in_stock: "In stock",
   fading: "Might be out",
+  likely_out: "Likely sold out",
   unconfirmed: "Unconfirmed",
 };
 
@@ -23,7 +24,9 @@ export const STOCK_LABEL: Record<StockStatus, string> = {
  * price file still listing the SKU implies it's an active line at that
  * store, even if the specific can on the shelf that day is long gone.
  */
-export function stockStatus(row: ShelfRow, now: Date = new Date()): StockStatus {
+/** How much to trust the row on age alone — "how stale is our copy of this
+ *  price", which is a different question from whether the can is there. */
+function freshness(row: ShelfRow, now: Date): StockStatus {
   const hours = hoursSince(row.seenAt, now);
 
   if (row.source === "featured") return "in_stock"; // the store itself keeps this listing current
@@ -36,4 +39,30 @@ export function stockStatus(row: ShelfRow, now: Date = new Date()): StockStatus 
   if (hours <= 12) return "in_stock";
   if (hours <= 48) return "fading";
   return "unconfirmed";
+}
+
+export function stockStatus(row: ShelfRow, now: Date = new Date()): StockStatus {
+  const fresh = freshness(row, now);
+
+  // Where we have it, sales activity outranks freshness, because it is
+  // evidence about the shelf rather than about when we last looked. The
+  // pipeline has computed this on every row for a while (depletion.py);
+  // it simply was not being read here, so the app was showing how recent
+  // the price was and calling it stock.
+  switch (row.depletion) {
+    case "likely_out":
+      // Sold regularly for days, then went completely silent. For a
+      // grab-and-go product that is usually an empty shelf rather than a
+      // collapse in demand — worth saying even if the price is fresh.
+      return "likely_out";
+    case "healthy":
+      // Rang up in the last ~12h, so the line is live at this branch even
+      // if our copy of the price has aged past the 24h mark.
+      return fresh === "unconfirmed" ? "fading" : "in_stock";
+    case "slowing":
+      return fresh === "in_stock" ? "fading" : fresh;
+    default:
+      // insufficient_data, or a hunter row that has none — age is all we have.
+      return fresh;
+  }
 }

@@ -21,6 +21,15 @@ export type ShelfRow = {
   source: Source;
   /** Handle of the hunter who logged it, when it was a hunter. */
   by?: string;
+  /**
+   * Whether the register is still ringing this flavour up at this store —
+   * computed by israel-poc/depletion.py from how LastSaleDateTime moves
+   * between fetches, and a genuinely different question from `seenAt`,
+   * which only says how fresh our copy of the price is.
+   *
+   * Absent on hunter rows and on anything without ~18h of history.
+   */
+  depletion?: "insufficient_data" | "healthy" | "slowing" | "likely_out";
 };
 
 export type Store = {

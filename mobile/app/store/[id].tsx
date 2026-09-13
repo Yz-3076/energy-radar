@@ -222,7 +222,9 @@ export default function StoreScreen() {
                 style={[ui.row, i < shelf.length - 1 && rowDivider]}
                 onPress={() => router.push({ pathname: "/variant/[id]", params: { id: v.id } })}
               >
-                <Can variant={v} size={45} dim={status === "unconfirmed"} />
+                {/* Dim anything we would not count on finding — an unconfirmed
+                    row, or one the till says has gone quiet. */}
+                <Can variant={v} size={45} dim={status === "unconfirmed" || status === "likely_out"} />
                 <View style={styles.rowText}>
                   <Text style={styles.rowTitle}>{v.fullName}</Text>
                   {v.barcode ? <Text style={styles.barcode}>{v.barcode}</Text> : null}
@@ -232,15 +234,22 @@ export default function StoreScreen() {
                         styles.stockDot,
                         status === "in_stock" && styles.stockDotOn,
                         status === "fading" && styles.stockDotFading,
+                        status === "likely_out" && styles.stockDotOut,
                       ]}
                     />
                     <Text style={styles.rowSub}>
                       {STOCK_LABEL[status]} ·{" "}
-                      {row.source === "official_feed"
-                        ? `official feed, sold ${relativeTime(row.seenAt, now)}`
-                        : row.source === "featured"
-                          ? "listed by the store"
-                          : `hunter photo, ${relativeTime(row.seenAt, now)}`}
+                      {/* Say which signal produced the verdict. "Likely sold
+                          out" on a price published this morning reads as a
+                          contradiction unless it explains that it comes from
+                          the till going quiet, not from the price ageing. */}
+                      {status === "likely_out"
+                        ? "sold regularly here, then stopped"
+                        : row.source === "official_feed"
+                          ? `official feed, sold ${relativeTime(row.seenAt, now)}`
+                          : row.source === "featured"
+                            ? "listed by the store"
+                            : `hunter photo, ${relativeTime(row.seenAt, now)}`}
                     </Text>
                   </View>
                 </View>
@@ -294,8 +303,9 @@ export default function StoreScreen() {
         </View>
 
         <Text style={styles.footnote}>
-          Stock status is a plain estimate — how the price was sourced and how long ago — not a live feed
-          from the register. A listed can may already be off the shelf even when it reads "In stock".
+          Stock status is an estimate from two things: how fresh this price is, and whether the chain's own
+          files show this flavour still being rung up at this branch. Neither is a live look at the shelf —
+          a can may already be gone even when it reads "In stock".
         </Text>
 
         <Tap style={styles.reportButton} onPress={() => setReportOpen(true)}>
@@ -417,6 +427,9 @@ const styles = StyleSheet.create({
   stockDot: { width: 5, height: 5, borderRadius: 3, borderWidth: 1, borderColor: textAlpha(35) },
   stockDotOn: { backgroundColor: color.accent, borderColor: color.accent },
   stockDotFading: { backgroundColor: "#e0b23d", borderColor: "#e0b23d" },
+  // Red, not another amber: "likely sold out" is a stronger claim than
+  // "might be out" and should not look like the same thing.
+  stockDotOut: { backgroundColor: "#e0553d", borderColor: "#e0553d" },
   rowSub: { fontSize: 10, color: muted },
   rowPrice: { fontSize: 14, fontWeight: "700", color: color.text },
   chart: { padding: space[6] },
