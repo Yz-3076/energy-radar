@@ -10,9 +10,28 @@ on:
 permissions:
   contents: write # the job commits data/ back to the repo
 
+# Only one scrape at a time. Observed 2026-09-13, right after the chain
+# list went from 6 to 21: a scheduled run started while the previous one
+# was still going, so two jobs were scraping and both were heading for the
+# same `git push` on main. The push step already rebases and retries, but
+# that is recovery from a collision rather than avoiding one, and the
+# collision gets likelier as the run gets longer.
+#
+# cancel-in-progress is false on purpose: killing a run halfway through
+# throws away everything it has scraped and leaves the promo cache
+# half-written. A queued run simply waits, and GitHub keeps only the
+# newest pending one, which is exactly the wanted behaviour — a backed-up
+# schedule should skip to current, not replay every missed slot.
+concurrency:
+  group: fetch-prices
+  cancel-in-progress: false
+
 jobs:
   fetch:
     runs-on: ubuntu-latest
+    # A scrape that has not finished in two hours is stuck, not slow —
+    # without this the default is six hours of a wedged runner.
+    timeout-minutes: 120
     steps:
       - uses: actions/checkout@v4
 
