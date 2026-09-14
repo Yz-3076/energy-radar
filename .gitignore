@@ -23,3 +23,7 @@ Thumbs.db
 
 # generated design-review sheet
 mobile/scripts/cans-preview.html
+
+# Staged-geocoder cache. Per-machine working state; the results that matter
+# are exported into data/geocode-cache.json, which IS committed.
+data/geocode-stages.sqlite
