@@ -33,3 +33,6 @@ data/locations.txt
 
 # Built app bundles. Downloaded from EAS on demand; too large to track.
 build/
+
+# Regenerated on demand by israel-poc/dump_solvable.py.
+data/unresolved.txt
