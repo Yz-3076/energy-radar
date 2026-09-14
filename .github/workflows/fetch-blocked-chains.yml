@@ -21,20 +21,17 @@ name: Fetch chains that refuse cloud IPs
 # stores rather than wiping them. The cloud run does the same in reverse.
 # Whichever ran last, latest.json ends up complete.
 
+# NOT SCHEDULED. This workflow is dormant on purpose — there is no
+# self-hosted runner registered, so a cron here would queue runs that can
+# never start. It exists so the capability is ready the day the data is
+# worth keeping fresh automatically; see docs/self-hosted-runner.md for
+# what enabling it involves.
+#
+# To turn it on: register a self-hosted runner on a machine with an
+# Israeli connection, then add back:
+#     schedule:
+#       - cron: "15 5,13,21 * * *"
 on:
-  schedule:
-    # Three times a day. The machine this runs on is left on, and each run
-    # now costs ~10-20 minutes and frees its own disk, so the old
-    # once-a-day caution is unnecessary. Three is still well short of the
-    # cloud run's eight — energy-drink prices do not move hourly, and every
-    # extra run is load on someone's home connection and on the chains'
-    # servers.
-    #
-    # :15 past the hour, deliberately offset from the cloud run's :00
-    # slots, so the two rarely try to push at the same moment. They
-    # reconcile correctly if they do (see merge_data.py), but not
-    # colliding is cheaper than recovering.
-    - cron: "15 5,13,21 * * *"
   workflow_dispatch: {}
 
 permissions:
