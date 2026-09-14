@@ -9120,6 +9120,10 @@
     "fetchedAt": "2026-09-13T11:53:41.713852+00:00",
     "promos": {}
   },
+  "POLIZER:4": {
+    "fetchedAt": "2026-09-14T04:35:04.308083+00:00",
+    "promos": {}
+  },
   "RAMI_LEVY:1": {
     "fetchedAt": "2026-09-13T21:00:23.276592+00:00",
     "promos": {}
@@ -10228,6 +10232,26 @@
     "fetchedAt": "2026-09-14T01:34:37.384560+00:00",
     "promos": {}
   },
+  "SHUK_AHIR:11": {
+    "fetchedAt": "2026-09-14T04:35:02.482838+00:00",
+    "promos": {}
+  },
+  "SHUK_AHIR:14": {
+    "fetchedAt": "2026-09-14T04:35:02.158495+00:00",
+    "promos": {}
+  },
+  "SHUK_AHIR:18": {
+    "fetchedAt": "2026-09-14T04:35:01.805481+00:00",
+    "promos": {}
+  },
+  "SHUK_AHIR:21": {
+    "fetchedAt": "2026-09-14T04:35:01.756033+00:00",
+    "promos": {}
+  },
+  "SHUK_AHIR:9": {
+    "fetchedAt": "2026-09-14T04:35:02.423263+00:00",
+    "promos": {}
+  },
   "STOP_MARKET:10": {
     "fetchedAt": "2026-09-13T23:33:58.486069+00:00",
     "promos": {}
@@ -10566,6 +10590,38 @@
   },
   "TIV_TAAM:94": {
     "fetchedAt": "2026-09-13T23:33:04.795101+00:00",
+    "promos": {}
+  },
+  "YAYNO_BITAN_AND_CARREFOUR:10": {
+    "fetchedAt": "2026-09-14T04:05:02.806084+00:00",
+    "promos": {}
+  },
+  "YAYNO_BITAN_AND_CARREFOUR:124": {
+    "fetchedAt": "2026-09-14T04:05:04.155242+00:00",
+    "promos": {}
+  },
+  "YAYNO_BITAN_AND_CARREFOUR:132": {
+    "fetchedAt": "2026-09-14T04:05:03.201746+00:00",
+    "promos": {}
+  },
+  "YAYNO_BITAN_AND_CARREFOUR:183": {
+    "fetchedAt": "2026-09-14T04:05:03.407713+00:00",
+    "promos": {}
+  },
+  "YAYNO_BITAN_AND_CARREFOUR:353": {
+    "fetchedAt": "2026-09-14T04:05:03.948379+00:00",
+    "promos": {}
+  },
+  "YAYNO_BITAN_AND_CARREFOUR:44": {
+    "fetchedAt": "2026-09-14T04:05:02.542446+00:00",
+    "promos": {}
+  },
+  "YAYNO_BITAN_AND_CARREFOUR:515": {
+    "fetchedAt": "2026-09-14T04:05:03.751961+00:00",
+    "promos": {}
+  },
+  "YAYNO_BITAN_AND_CARREFOUR:80": {
+    "fetchedAt": "2026-09-14T04:05:03.002755+00:00",
     "promos": {}
   },
   "YOHANANOF:27": {
