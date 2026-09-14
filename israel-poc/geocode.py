@@ -43,6 +43,7 @@ comment) rather than left wrong or silently dropped.
 """
 
 import json
+import re
 import time
 import urllib.parse
 import urllib.request
@@ -57,6 +58,98 @@ MIN_INTERVAL_S = 1.1  # Nominatim policy: max 1 req/sec; a little slack
 # never reject a real branch, tight enough to catch a same-named place in a
 # totally different part of the country.
 ISRAEL_BOUNDS = (29.3, 33.5, 34.1, 36.0)  # (min_lat, max_lat, min_lng, max_lng)
+
+# How far a city-hint result may sit from another branch already resolved
+# in the same municipality before it is treated as the wrong town.
+#
+# 25km, not the 40 first tried. The anchor is one arbitrary branch, so this
+# has to tolerate two real branches at opposite ends of a large city — but
+# 40 let a hint of the *street* name resolve inside the window while the
+# correct town ("נתניה", 42km from its own anchor) was rejected just
+# outside it. This app sends people walking; a pin in roughly the right
+# region is not good enough, and a store that never appears is a smaller
+# failure than one that appears somewhere wrong.
+CITY_CLUSTER_MAX_KM = 25.0
+
+# Chain brand words that sit in front of the town in a store name
+# ("שלי חיפה- אורן", "סופר יודה בוגרשוב"). Stripped before the first
+# remaining token is treated as a town.
+_BRAND_WORDS = {
+    "שלי", "דיל", "אקספרס", "יש", "חסד", "סופר", "יודה", "מרקט", "סניף",
+    "ביג", "סיטי", "מגה", "בעיר", "am-pm", "ampm", "כהן", "טוב", "רמי", "לוי",
+}
+
+
+def street_only(address: str) -> str:
+    """Strip an address down to just "street number".
+
+    Nominatim's `street` field wants exactly that, but these files rarely
+    give it cleanly: "רח.אורן 25 רוממה" carries a street abbreviation and a
+    trailing neighbourhood, "בזק 1 פינת ברקן" names a corner. Both fail as
+    written and resolve once trimmed.
+
+    This turned out to matter far more than the city hint it supports:
+    hints alone rescued 1 of 20 failed addresses, hints plus this trimming
+    rescued 10 of 15 (measured 2026-09-14 on real Shufersal branches).
+    """
+    a = re.sub(r"^(רח'|רח\.|רחוב|שד'|שד\.|שדרות|דרך)\s*", "", address.strip())
+    m = re.match(r"^(.+?\s+\d+)\b", a)  # "street 25 neighbourhood" -> "street 25"
+    if m:
+        return m.group(1)
+    m = re.match(r"^(\d+\s+\S+)", a)  # "25 street"
+    if m:
+        return m.group(1)
+    return a
+
+
+def _haversine_km(a: tuple[float, float], b: tuple[float, float]) -> float:
+    import math
+
+    (la1, lo1), (la2, lo2) = a, b
+    p = math.pi / 180
+    h = (
+        0.5
+        - math.cos((la2 - la1) * p) / 2
+        + math.cos(la1 * p) * math.cos(la2 * p) * (1 - math.cos((lo2 - lo1) * p)) / 2
+    )
+    return 2 * 6371 * math.asin(math.sqrt(h))
+
+
+def city_hints(store_name: str) -> list[str]:
+    """Candidate towns pulled out of a store's own name, best guess first.
+
+    Chain files only carry a numeric city code, but the name very often
+    spells the town out — "שלי חיפה- אורן", "אום אלפחם", "שלי באר יעקב".
+    Nominatim resolves street+city far better than street alone on Israeli
+    data (measured: 3 of 4 previously-unresolvable Shufersal branches came
+    back correct once the town was supplied).
+
+    Several candidates rather than one, because a store name is not a
+    structured field and a single guess is wrong often: the first token can
+    be the town ("אום אלפחם"), the brand ("תיב טעם נתניה"), or a street
+    ("סופר יודה בוגרשוב"). Two-word towns are common too ("באר יעקב"), so
+    the pair is offered as well. Wrong guesses are cheap — Nominatim
+    usually returns nothing for them, and anything it does return still has
+    to survive the caller's distance check against other branches in the
+    same municipality.
+    """
+    if not store_name:
+        return []
+    cleaned = store_name.replace("-", " ").replace(".", " ").replace(",", " ")
+    tokens = [t for t in cleaned.split() if t]
+    tokens = [t for t in tokens if t.lower() not in _BRAND_WORDS and not any(c.isdigit() for c in t)]
+    if not tokens:
+        return []
+
+    out: list[str] = []
+    if len(tokens) >= 2:
+        out.append(" ".join(tokens[:2]))  # "באר יעקב"
+    out.append(tokens[0])  # "חיפה", "אום"
+    if len(tokens) >= 2:
+        out.append(tokens[1])  # brand-first names: "תיב טעם נתניה" -> "טעם"...
+        out.append(tokens[-1])  # ...and the trailing town: "נתניה"
+    # preserve order, drop repeats
+    return list(dict.fromkeys(out))
 
 
 def _in_israel(lat: float, lng: float) -> bool:
@@ -151,9 +244,47 @@ MANUAL_OVERRIDES: dict[str, list[float] | None] = {
 }
 
 
-def geocode(address: str, zip_code: str, cache: dict) -> list | None:
+def _ask(params: dict) -> list | None:
+    """One Nominatim call, rate-limited, Israel-bounds-checked. None on
+    anything that fails or lands outside the country."""
+    qs = urllib.parse.urlencode({**params, "country": "Israel", "format": "json", "limit": 1})
+    req = urllib.request.Request(
+        f"https://nominatim.openstreetmap.org/search?{qs}",
+        headers={"User-Agent": USER_AGENT},
+    )
+    try:
+        with urllib.request.urlopen(req, timeout=10) as resp:
+            hits = json.loads(resp.read().decode("utf-8"))
+        if hits:
+            lat, lng = float(hits[0]["lat"]), float(hits[0]["lon"])
+            if _in_israel(lat, lng):
+                return [lat, lng]
+            print(f"  geocode rejected {params}: {lat},{lng} outside Israel")
+    except Exception as e:  # noqa: BLE001 — a failed lookup should not crash the run
+        print(f"  geocode failed {params}: {e}")
+    finally:
+        time.sleep(MIN_INTERVAL_S)
+    return None
+
+
+def geocode(
+    address: str,
+    zip_code: str,
+    cache: dict,
+    store_name: str = "",
+    city_code: str = "",
+    city_anchors: dict | None = None,
+) -> list | None:
     """Returns [lat, lng] or None (unresolved). Mutates `cache` in place;
-    caller is responsible for save_cache() once done with a whole run."""
+    caller is responsible for save_cache() once done with a whole run.
+
+    `store_name` and `city_code` are optional and only used for the
+    city-hint retry described in `city_hint` — without them this behaves
+    exactly as it always did. `city_anchors` maps a city code to a
+    coordinate already resolved for that code, and is what keeps the retry
+    honest: a hint pulled out of a store name is a guess, and a guess that
+    lands 150km from every other branch in the same municipality is wrong.
+    """
     key = _cache_key(address, zip_code)
     if key in MANUAL_OVERRIDES:
         cache[key] = MANUAL_OVERRIDES[key]
@@ -167,28 +298,37 @@ def geocode(address: str, zip_code: str, cache: dict) -> list | None:
         cache[key] = None
         return None
 
-    params = {"street": address, "country": "Israel", "format": "json", "limit": 1}
+    primary = {"street": address}
     if zip_code:
-        params["postalcode"] = zip_code
-    qs = urllib.parse.urlencode(params)
-    req = urllib.request.Request(
-        f"https://nominatim.openstreetmap.org/search?{qs}",
-        headers={"User-Agent": USER_AGENT},
-    )
-    result = None
-    try:
-        with urllib.request.urlopen(req, timeout=10) as resp:
-            hits = json.loads(resp.read().decode("utf-8"))
-        if hits:
-            lat, lng = float(hits[0]["lat"]), float(hits[0]["lon"])
-            if _in_israel(lat, lng):
-                result = [lat, lng]
-            else:
-                print(f"  geocode rejected for {address!r} ({zip_code}): {lat},{lng} is outside Israel")
-    except Exception as e:  # noqa: BLE001 — a failed lookup should not crash the run
-        print(f"  geocode failed for {address!r} ({zip_code}): {e}")
-    finally:
-        time.sleep(MIN_INTERVAL_S)
+        primary["postalcode"] = zip_code
+    result = _ask(primary)
+
+    # Street+ZIP alone leaves ~39% of these addresses unresolved, because
+    # OpenStreetMap's Israeli street coverage is patchy and the files carry
+    # no city name. The town is usually sitting in the store's own name, and
+    # supplying it as a structured field resolves a good share of them.
+    if result is None:
+        anchor = (city_anchors or {}).get(city_code)
+        trimmed = street_only(address)
+        for hint in city_hints(store_name):
+            candidate = _ask({"street": trimmed, "city": hint})
+            if candidate is None:
+                continue
+            if anchor:
+                km = _haversine_km(tuple(anchor), tuple(candidate))
+                if km > CITY_CLUSTER_MAX_KM:
+                    # The hint is a guess scraped out of a name; this check
+                    # is what stops a plausible-looking wrong town being
+                    # cached forever, which is exactly how branches ended up
+                    # 150km out before.
+                    print(
+                        f"  geocode rejected hint {hint!r} for {address!r}: "
+                        f"{km:.0f}km from other branches in city code {city_code}"
+                    )
+                    continue
+            print(f"  geocode resolved {address!r} via city hint {hint!r}")
+            result = candidate
+            break
 
     cache[key] = result
     return result

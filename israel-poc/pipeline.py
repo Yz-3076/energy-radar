@@ -193,6 +193,10 @@ def parse_stores(stores_dir: Path) -> dict[str, dict]:
                 "name": (store.findtext("StoreName") or "").strip(),
                 "address": (store.findtext("Address") or "").strip(),
                 "zip": (store.findtext("ZIPCode") or "").strip(),
+                # A numeric municipality code, not a name. Useless for
+                # geocoding directly, but it groups branches by town, which
+                # is what validates a city guessed from a store name.
+                "cityCode": (store.findtext("City") or "").strip(),
             }
     return stores
 
@@ -293,6 +297,9 @@ async def run() -> None:
     new_observations: list[dict] = []
     stores_by_key: dict[str, dict] = {}  # f"{chain}:{store_id}" -> Store shape
     promo_stores: list[tuple[str, str]] = []  # (chain, store_id) — see promotions_gov.py
+    # city code -> a coordinate already resolved for that town, used to
+    # sanity-check addresses rescued by a city hint (see geocode.city_hint)
+    city_anchors: dict[str, list[float]] = {}
 
     for chain in CHAINS:
         print(f"=== {chain} ===")
@@ -312,7 +319,16 @@ async def run() -> None:
             if not variant_id:
                 continue  # a name-matched row we don't have a catalog id for yet
 
-            coords = geo.geocode(info["address"], info["zip"], geocode_cache)
+            coords = geo.geocode(
+                info["address"],
+                info["zip"],
+                geocode_cache,
+                store_name=info.get("name", ""),
+                city_code=info.get("cityCode", ""),
+                city_anchors=city_anchors,
+            )
+            if coords and info.get("cityCode"):
+                city_anchors.setdefault(info["cityCode"], coords)
             if coords is None:
                 continue  # can't place a pin without coordinates
 
