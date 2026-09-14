@@ -128,6 +128,25 @@ DUMPS_DIR = Path(__file__).resolve().parent / "dumps"
 #     contain Monster, but only 2 of 147 branches' price files come back
 #     per run and neither resolved to a store. Worth a look if their
 #     coverage matters; not obviously broken, just thin.
+#
+# That first probe sampled 3 files per chain, which was too few and cleared
+# two usable chains by mistake. Re-probed at 30-40 files on 2026-09-14:
+#   SHUK_AHIR  — 26 branches, 177 Monster rows (0 at 3 files). Added.
+#   POLIZER    — 8 branches, 13 Monster rows; its store file did not even
+#                appear until ~30 files in. Added.
+# Re-probing also confirmed the rest of the exclusions are real at depth:
+# GOOD_PHARM (82 branches), SHEFA_BARCART_ASHEM, MESHMAT_YOSEF_1/2,
+# ZOL_VEBEGADOL, HET_COHEN_NEW_SOURCE, MAHSANI_ASHUK_NEW_SOURCE and
+# CITY_MARKET_KIRYATGAT all carry zero Monster at 40 files.
+#
+# CITY_MARKET_SHOPS is the one genuinely painful exclusion: 112 Monster
+# rows, and no store file at any depth. Same shape as YELLOW — real prices
+# with no address to put them at, and nothing this end can do about it.
+# The 8 "failing" chains are not broken either: ScraperFactory raises
+# "class_names X not found" for MEGA, COFIX, QUIK, VICTORY, HET_COHEN,
+# MAHSANI_ASHUK and both CITY_MARKET variants because they are retired
+# enum entries with no implementation behind them, several already
+# superseded by the _NEW_SOURCE versions in use above.
 CHAINS = [
     # original six
     "SHUFERSAL", "VICTORY_NEW_SOURCE", "RAMI_LEVY", "YELLOW", "OSHER_AD", "DOR_ALON",
@@ -136,6 +155,9 @@ CHAINS = [
     "TIV_TAAM", "YOHANANOF", "FRESH_MARKET_AND_SUPER_DOSH", "MAAYAN_2000",
     "KING_STORE", "KESHET", "SUPER_YUDA", "BAREKET", "HAZI_HINAM",
     "SALACH_DABACH", "STOP_MARKET",
+    # Found on a re-probe (see below) — the first pass sampled too few files
+    # and wrongly cleared both.
+    "SHUK_AHIR", "POLIZER",
 ]
 
 # For local smoke-testing only: PIPELINE_LIMIT=5 py pipeline.py fetches just a
