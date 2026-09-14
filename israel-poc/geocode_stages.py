@@ -393,8 +393,17 @@ class Anchor:
         """
         if town in self.coords:
             return self.coords[town]
+        # NOT constrained with country=Israel, deliberately. OSM does not tag
+        # West Bank localities as Israel, so that filter did not merely miss
+        # them, it substituted something else: "אפרת" with country=Israel
+        # returned a point in the GALILEE, 130km from the real Efrat, while
+        # מעלה אדומים, ביתר עילית, מודיעין עילית and קרית ארבע returned nothing
+        # at all (measured 2026-09-14). Israel's chains serve those towns and
+        # publish CBS codes for them. ISRAEL_BOUNDS is the honest filter here:
+        # it is a box on the map rather than a claim about sovereignty, and it
+        # is what every result is checked against anyway.
         payload, reachable = self.http.get(
-            NOMINATIM, {"city": town, "country": "Israel", "format": "json", "limit": 1}
+            NOMINATIM, {"city": town, "format": "json", "limit": 1}
         )
         if not reachable:
             return None  # unknown, not "nowhere" — don't cache, don't judge against it
@@ -601,7 +610,7 @@ class StreetStage:
         if not (official or raw):
             return None
         payload, reachable = self.http.get(
-            NOMINATIM, {"street": query, "city": town, "country": "Israel", "format": "json", "limit": 1}
+            NOMINATIM, {"street": query, "city": town, "format": "json", "limit": 1}
         )
         if not reachable or not payload:
             return None

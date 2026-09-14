@@ -444,7 +444,16 @@ def _ask(params: dict) -> tuple[list | None, bool]:
     if _GIVE_UPS >= GIVE_UP_LIMIT:
         return None, False  # circuit open — see the counter's comment
 
-    qs = urllib.parse.urlencode({**params, "country": "Israel", "format": "json", "limit": 1})
+        # NOT constrained with country=Israel, deliberately. OSM does not tag
+    # West Bank localities as Israel, so that filter did not merely miss
+    # them, it substituted something else: "אפרת" with country=Israel
+    # returned a point in the GALILEE, 130km from the real Efrat, while
+    # מעלה אדומים, ביתר עילית, מודיעין עילית and קרית ארבע returned nothing
+    # at all (measured 2026-09-14). Israel's chains serve those towns and
+    # publish CBS codes for them. ISRAEL_BOUNDS is the honest filter here:
+    # it is a box on the map rather than a claim about sovereignty, and it
+    # is what every result is checked against anyway.
+    qs = urllib.parse.urlencode({**params, "format": "json", "limit": 1})
     req = urllib.request.Request(
         f"https://nominatim.openstreetmap.org/search?{qs}",
         headers={"User-Agent": USER_AGENT},
