@@ -494,6 +494,84 @@ def _ask(params: dict) -> tuple[list | None, bool]:
     return None, False
 
 
+# A named place is only believed if it lands this close to the town centre.
+# Much tighter than TOWN_MAX_KM, because a free-text name carries no street
+# to corroborate it: all we really know is "somewhere in this town", and a
+# town is about this wide.
+PLACE_MAX_KM = 12.0
+
+
+# Words that describe a KIND of place rather than name one. An address made
+# only of these says "a commercial centre, somewhere" and matches whichever
+# one the geocoder happens to rank first.
+_GENERIC_PLACE_WORDS = {
+    "מרכז", "מסחרי", "מתחם", "קניון", "סנטר", "אזור", "תעשיה", "תעשייה",
+    "המסחרי", "פארק", "שכונת", "שכונה", "כיכר", "ככר", "צומת", "מרכז_מסחרי",
+    "ליד", "פינת", "ראשי", "עירוני", "הישן", "החדש", "רחוב", "דרך",
+}
+
+
+def _names_a_place(text: str) -> bool:
+    """Does this text identify a particular place, or just a kind of place?
+
+    "ישפרו סנטר" and "קניון גני הדרים" name one. Bare "מרכז מסחרי" does not,
+    and looking it up returns whichever commercial centre ranks first —
+    measured: it put a Tel Aviv branch 6km from the centre and a Modi'in one
+    1.7km out, both confidently and both wrong.
+    """
+    words = [w for w in re.split(r"[\s,./\-]+", text or "") if w]
+    return any(w not in _GENERIC_PLACE_WORDS and not w.isdigit() for w in words)
+
+
+def place_in_town(place: str, town: str) -> list | None:
+    """Coordinates for a named place — a mall, a market, a commercial centre
+    — searched inside one town. None if it cannot be found or lands too far.
+
+    This is for the addresses that are not addresses: "ישפרו סנטר",
+    "קניון גני הדרים", "מתחם ביג". A street geocoder cannot place them, but
+    OpenStreetMap usually knows them by name, and the answer is exact.
+
+    Free-text rather than the structured query used everywhere else, because
+    `street` expects a street and these are buildings. Nominatim rejects a
+    free-text `q` combined with structured fields, so the town is written
+    into the query string instead of passed as `city`.
+
+    The town still has to come from the CBS code — this searches INSIDE an
+    anchor, it never establishes one. Matching a place name to pick a town
+    would be the same mistake documented at the top of this module.
+    """
+    if not place or not town or not _names_a_place(place):
+        return None
+    centre = town_coord(town)
+    if centre is None:
+        return None
+    qs = urllib.parse.urlencode(
+        {"q": f"{place}, {town}, ישראל", "format": "json", "limit": 1}
+    )
+    req = urllib.request.Request(
+        f"https://nominatim.openstreetmap.org/search?{qs}", headers={"User-Agent": USER_AGENT}
+    )
+    try:
+        with urllib.request.urlopen(req, timeout=15) as resp:
+            hits = json.loads(resp.read().decode("utf-8"))
+    except Exception as e:  # noqa: BLE001 — a failed lookup just means no answer
+        print(f"  place lookup failed {place!r}: {e}")
+        return None
+    finally:
+        time.sleep(MIN_INTERVAL_S)
+
+    if not hits:
+        return None
+    lat, lng = float(hits[0]["lat"]), float(hits[0]["lon"])
+    if not _in_israel(lat, lng):
+        return None
+    km = _haversine_km(tuple(centre), (lat, lng))
+    if km > PLACE_MAX_KM:
+        print(f"  place rejected {place!r}: {km:.0f}km from {town}")
+        return None
+    return [lat, lng]
+
+
 def geocode(
     address: str,
     zip_code: str,
@@ -532,7 +610,14 @@ def geocode(
         if cached is None:
             return None
         centre = town_coord(town) if town else None
-        if centre is None or _haversine_km(tuple(centre), tuple(cached)) <= TOWN_MAX_KM:
+        vague = _too_vague(address) and not is_rural(city_code)
+        limit = PLACE_MAX_KM if vague else TOWN_MAX_KM
+        # A pin from an address with no street number gets the tighter
+        # limit. All we ever knew about it was "somewhere in this town", so
+        # a cached one sitting 15km from the centre — "חבל מודיעין" landed
+        # near Rosh Ha'ayin — was never credible, yet it cleared the 25km
+        # town check comfortably.
+        if centre is None or _haversine_km(tuple(centre), tuple(cached)) <= limit:
             return cached
         # A cached coordinate that is not in the store's own town. Almost
         # all of these were resolved street-only, before the city code was
@@ -561,6 +646,16 @@ def geocode(
                 print(f"  geocode resolved {address!r} via name hint {hint!r}")
                 town = hint
                 break
+
+    if result is None and town and _too_vague(address):
+        # Not a street, so ask whether it is a PLACE — a mall, a market, a
+        # commercial centre. "ישפרו סנטר" is a real building in Modi'in's
+        # industrial zone and OSM knows exactly where; the old cached pin
+        # for it sat 4.6km away near the city centre, close enough to look
+        # right and wrong enough to send someone to the wrong end of town.
+        result = place_in_town(address, town)
+        if result is not None:
+            print(f"  geocode resolved {address!r} as a place in {town}")
 
     if result is None:
         if _too_vague(address):

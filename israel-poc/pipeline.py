@@ -174,6 +174,7 @@ CHAINS = [
 # guard matters: an empty PIPELINE_CHAINS must mean "all", never "none" —
 # filtering on an empty set silently emptied CHAINS and the run scraped
 # nothing at all.
+_ALL_CHAINS = list(CHAINS)  # before any filtering, for carry_forward
 if _WANTED:
     _missing = _WANTED - set(CHAINS)
     if _missing:
@@ -501,7 +502,12 @@ async def run() -> None:
     stores_by_key: dict[str, dict] = {}  # f"{chain}:{store_id}" -> Store shape
     promo_stores: list[tuple[str, str]] = []  # (chain, store_id) — see promotions_gov.py
     store_city_code: dict[str, str] = {}  # store_key -> CBS code, for verify_pins
-    silent_chains: set[str] = set()  # chains that returned no files at all
+    # Chains this run will not contribute to. Seeded with the ones
+    # PIPELINE_CHAINS excluded, because those are never attempted and so
+    # never reach the "returned nothing" branch below — carry_forward would
+    # find nothing to carry and latest.json would shrink to just the chains
+    # that ran. Confirmed: a SHUFERSAL-only run wrote 220 stores over 1,019.
+    silent_chains: set[str] = set(_ALL_CHAINS) - set(CHAINS)
 
     for chain in CHAINS:
         print(f"=== {chain} ===")

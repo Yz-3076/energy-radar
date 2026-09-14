@@ -186,6 +186,15 @@ export default function StoreScreen() {
 
       <View style={styles.body}>
         <View style={styles.openRow}>
+          {/* Which chain this is. Branch names alone do not say it — three
+              different chains in Modi'in are all called "מודיעין ישפרו"
+              after the centre they sit in, and nothing on this screen told
+              you whether you were looking at Tiv Taam or Rami Levy. */}
+          <View style={styles.chainPill}>
+            <Text style={styles.chainPillText} numberOfLines={1}>
+              {store.chain}
+            </Text>
+          </View>
           {store.closesAt ? (
             <>
               <Clock size={12} color={color.accent} weight="fill" />
@@ -479,11 +488,27 @@ const styles = StyleSheet.create({
   chartPrice: { fontSize: 18, fontWeight: "700", color: color.accent },
   chartMeta: { flex: 1, fontSize: 10.5, color: muted },
   footnote: { fontSize: 10.5, lineHeight: 16, color: textAlpha(38), marginTop: space[6] },
+  chainPill: {
+    maxWidth: 190,
+    paddingHorizontal: 8,
+    paddingVertical: 2,
+    borderRadius: 999,
+    borderWidth: 1,
+    borderColor: textAlpha(16),
+    backgroundColor: textAlpha(7),
+  },
+  chainPillText: {
+    fontSize: 10.5,
+    letterSpacing: 0.6,
+    textTransform: "uppercase",
+    color: textAlpha(62),
+    fontWeight: "600",
+  },
   dealPill: {
     flexDirection: "row",
     alignItems: "center",
     gap: 4,
-    marginLeft: space[3],
+    marginLeft: space[2],
     paddingHorizontal: 7,
     paddingVertical: 2,
     borderRadius: 999,

@@ -1256,42 +1256,6 @@
     ]
   },
   {
-    "id": "shufersal-72",
-    "chain": "Shufersal",
-    "name": "שלי רעות",
-    "address": "חבל מודיעין",
-    "city": "מודיעין-מכבים-רעות",
-    "lat": 32.0379128,
-    "lng": 34.9512073,
-    "approximate": false,
-    "shelf": [
-      {
-        "variantId": "ultra",
-        "price": 9.9,
-        "qty": null,
-        "seenAt": "2026-09-10T07:53:57",
-        "source": "official_feed",
-        "depletion": "slowing"
-      },
-      {
-        "variantId": "mango-loco",
-        "price": 9.9,
-        "qty": null,
-        "seenAt": "2026-09-08T16:43:24",
-        "source": "official_feed",
-        "depletion": "slowing"
-      },
-      {
-        "variantId": "full-zero",
-        "price": 9.9,
-        "qty": null,
-        "seenAt": "2026-09-02T08:52:45",
-        "source": "official_feed",
-        "depletion": "insufficient_data"
-      }
-    ]
-  },
-  {
     "id": "shufersal-80",
     "chain": "Shufersal",
     "name": "שלי ראשל\"צ- נווה הדרים",
@@ -5084,66 +5048,6 @@
     ]
   },
   {
-    "id": "shufersal-177",
-    "chain": "Shufersal",
-    "name": "דיל מצפה רמון- בן גוריון",
-    "address": "מרכז מסחרי",
-    "city": "מצפה רמון",
-    "lat": 30.613338,
-    "lng": 34.8029806,
-    "approximate": false,
-    "shelf": [
-      {
-        "variantId": "ultra",
-        "price": 8.9,
-        "qty": null,
-        "seenAt": "2026-09-06T12:01:54",
-        "source": "official_feed",
-        "depletion": "insufficient_data"
-      },
-      {
-        "variantId": "mango-loco",
-        "price": 8.9,
-        "qty": null,
-        "seenAt": "2026-09-10T09:46:26",
-        "source": "official_feed",
-        "depletion": "slowing"
-      },
-      {
-        "variantId": "ultra-paradise",
-        "price": 8.9,
-        "qty": null,
-        "seenAt": "2026-09-09T14:42:29",
-        "source": "official_feed",
-        "depletion": "slowing"
-      },
-      {
-        "variantId": "ultra-fiesta",
-        "price": 8.9,
-        "qty": null,
-        "seenAt": "2026-09-10T13:32:28",
-        "source": "official_feed",
-        "depletion": "slowing"
-      },
-      {
-        "variantId": "original",
-        "price": 8.9,
-        "qty": null,
-        "seenAt": "2026-09-09T14:42:29",
-        "source": "official_feed",
-        "depletion": "slowing"
-      },
-      {
-        "variantId": "full-zero",
-        "price": 8.9,
-        "qty": null,
-        "seenAt": "2026-09-04T13:42:11",
-        "source": "official_feed",
-        "depletion": "insufficient_data"
-      }
-    ]
-  },
-  {
     "id": "shufersal-180",
     "chain": "Shufersal",
     "name": "דיל ק.מוצקין- בן גוריון",
@@ -8087,7 +7991,7 @@
         "qty": null,
         "seenAt": "2026-09-13T21:55:08",
         "source": "official_feed",
-        "depletion": "healthy"
+        "depletion": "slowing"
       },
       {
         "variantId": "full-zero",
@@ -8355,7 +8259,7 @@
         "qty": null,
         "seenAt": "2026-09-13T20:05:19",
         "source": "official_feed",
-        "depletion": "healthy"
+        "depletion": "slowing"
       },
       {
         "variantId": "mango-loco",
@@ -8423,7 +8327,7 @@
         "qty": null,
         "seenAt": "2026-09-13T21:13:34",
         "source": "official_feed",
-        "depletion": "healthy"
+        "depletion": "slowing"
       }
     ]
   },
@@ -8443,7 +8347,7 @@
         "qty": null,
         "seenAt": "2026-09-13T21:20:00",
         "source": "official_feed",
-        "depletion": "healthy"
+        "depletion": "slowing"
       },
       {
         "variantId": "mango-loco",
@@ -9467,7 +9371,7 @@
         "qty": null,
         "seenAt": "2026-09-13T20:42:03",
         "source": "official_feed",
-        "depletion": "healthy"
+        "depletion": "slowing"
       },
       {
         "variantId": "full-zero",
@@ -9807,7 +9711,7 @@
         "qty": null,
         "seenAt": "2026-09-13T21:04:46",
         "source": "official_feed",
-        "depletion": "insufficient_data"
+        "depletion": "likely_out"
       },
       {
         "variantId": "mango-loco",
@@ -10753,8 +10657,8 @@
     "name": "יוניברס מודיעין- ישפרו סנטר",
     "address": "ישפרו סנטר",
     "city": "מודיעין-מכבים-רעות",
-    "lat": 31.9073886,
-    "lng": 34.9978754,
+    "lat": 31.8893287,
+    "lng": 34.9635571,
     "approximate": false,
     "shelf": [
       {
@@ -10763,7 +10667,7 @@
         "qty": null,
         "seenAt": "2026-09-11T11:55:32",
         "source": "official_feed",
-        "depletion": "insufficient_data"
+        "depletion": "healthy"
       },
       {
         "variantId": "ultra-paradise",
@@ -10771,7 +10675,7 @@
         "qty": null,
         "seenAt": "2026-09-11T12:55:38",
         "source": "official_feed",
-        "depletion": "insufficient_data"
+        "depletion": "healthy"
       },
       {
         "variantId": "ultra-fiesta",
@@ -10779,7 +10683,7 @@
         "qty": null,
         "seenAt": "2026-09-11T13:55:38",
         "source": "official_feed",
-        "depletion": "insufficient_data"
+        "depletion": "healthy"
       },
       {
         "variantId": "original",
@@ -10787,7 +10691,7 @@
         "qty": null,
         "seenAt": "2026-09-11T09:00:15",
         "source": "official_feed",
-        "depletion": "insufficient_data"
+        "depletion": "healthy"
       },
       {
         "variantId": "full-zero",
@@ -10795,7 +10699,7 @@
         "qty": null,
         "seenAt": "2026-09-11T12:55:38",
         "source": "official_feed",
-        "depletion": "insufficient_data"
+        "depletion": "healthy"
       }
     ]
   },

@@ -30,8 +30,13 @@ def check(label: str, got, want) -> None:
         print(f"  FAIL  {label}\n        got {got!r}\n        want {want!r}")
 
 
-def stub(fn) -> None:
+def stub(fn, place=None) -> None:
+    """Replace every network path. place_in_town makes its own request rather
+    than going through _ask, so stubbing only _ask would let these tests hit
+    Nominatim for real — which they did, and a live answer for "מרכז מסחרי"
+    turned a passing test into a confusing failure."""
     geo._ask = fn
+    geo.place_in_town = place or (lambda *_: None)
     geo._GIVE_UPS = 0
 
 
@@ -87,6 +92,21 @@ check("village address -> village centre", geo.geocode("קיבוץ עינת", ""
 geo._TOWN_COORDS = {"תל אביב - יפו": TEL_AVIV}
 cache = {}
 check("vague city address stays dropped", geo.geocode("מרכז מסחרי", "", cache, city_code="5000"), None)
+
+# A named place inside an anchored town IS resolvable, unlike a bare
+# description of one. This is the Ishpro Center case: the old cached pin sat
+# 4.6km away, close enough to the centre to pass every distance check.
+MALL = [31.8893287, 34.9635571]
+stub(lambda p: (None, True), place=lambda pl, t: MALL if pl == "ישפרו סנטר" else None)
+geo._TOWN_COORDS = {"מודיעין-מכבים-רעות": [31.9085744, 35.0069297]}
+cache = {}
+check("a NAMED place in a town resolves",
+      geo.geocode("ישפרו סנטר", "", cache, city_code="1200"), MALL)
+
+print("\nnaming a place vs describing one:")
+check("a named mall is a place", geo._names_a_place("ישפרו סנטר"), True)
+check("bare 'commercial centre' is not", geo._names_a_place("מרכז מסחרי"), False)
+check("bare 'industrial zone' is not", geo._names_a_place("אזור תעשיה"), False)
 
 print("\nname hints (only consulted when a store has no city code):")
 check("a street name is not accepted as a town", geo.city_hints("סופר יודה אלנבי"), [])
