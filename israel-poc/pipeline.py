@@ -42,7 +42,7 @@ import glob
 import json
 import os
 import xml.etree.ElementTree as ET
-from collections import defaultdict
+from collections import Counter, defaultdict
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -363,6 +363,50 @@ def verify_pins(stores_by_key: dict[str, dict], store_city_code: dict[str, str])
           f"{unknown} unverifiable (no usable city code)")
 
 
+def carry_forward(stores_out: list[dict], silent_chains: set[str]) -> list[dict]:
+    """Keep the previous run's stores for chains that returned nothing today.
+
+    Several chains answer a home connection in Israel and not GitHub's
+    runners — Super Pharm (307 branches), Netiv Hased (91) and Victory (70)
+    were all confirmed reachable from a home connection on 2026-09-14 and
+    all returned zero files in CI the same day. Without this, a scrape run
+    from Israel would add them and the very next scheduled CI run would
+    silently delete them again, because latest.json is rebuilt from scratch
+    every time and a chain that fetched nothing contributes nothing.
+
+    Only chains that fetched NOTHING AT ALL are carried. A chain that came
+    back with real files is authoritative for its own branches, so a branch
+    it no longer lists has genuinely stopped stocking Monster and must
+    disappear. This is the difference between "we could not look" and "we
+    looked and it is gone", and only the first is worth preserving.
+
+    Prices on a carried store are as old as the run that fetched them. The
+    app already dates every shelf row from `seenAt` and fades stale ones, so
+    a carried store reads as old rather than as current.
+    """
+    if not silent_chains:
+        return []
+    path = DATA_DIR / "latest.json"
+    if not path.exists():
+        return []
+    try:
+        previous = json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError) as e:  # noqa: BLE001
+        print(f"  carry-forward skipped: could not read previous latest.json ({e})")
+        return []
+
+    have = {s["id"] for s in stores_out}
+    carried = [
+        s for s in previous
+        if s.get("chain", "").upper().replace(" ", "_") in silent_chains and s["id"] not in have
+    ]
+    if carried:
+        by_chain = Counter(s["chain"] for s in carried)
+        print(f"  carried {len(carried)} store(s) from chain(s) that returned nothing "
+              f"this run: {dict(by_chain)}")
+    return carried
+
+
 async def run() -> None:
     now = datetime.now(timezone.utc).isoformat()
     geocode_cache = geo.load_cache()
@@ -371,6 +415,7 @@ async def run() -> None:
     stores_by_key: dict[str, dict] = {}  # f"{chain}:{store_id}" -> Store shape
     promo_stores: list[tuple[str, str]] = []  # (chain, store_id) — see promotions_gov.py
     store_city_code: dict[str, str] = {}  # store_key -> CBS code, for verify_pins
+    silent_chains: set[str] = set()  # chains that returned no files at all
 
     for chain in CHAINS:
         print(f"=== {chain} ===")
@@ -379,6 +424,11 @@ async def run() -> None:
 
         store_info = parse_stores(stores_dir)
         items = list(parse_monster_items(prices_dir))
+        if not store_info and not items:
+            # Nothing at all came back — could not look, as opposed to
+            # looked and found none. carry_forward() treats the two
+            # differently.
+            silent_chains.add(chain)
         print(f"  {len(items)} Monster row(s) across {len(store_info)} branch(es)")
 
         for item in items:
@@ -487,6 +537,8 @@ async def run() -> None:
             history_rows = by_pair.get((store_key, row["variantId"]), [])
             row["depletion"] = depletion.assess(history_rows)
         stores_out.append(store)
+
+    stores_out += carry_forward(stores_out, silent_chains)
 
     DATA_DIR.mkdir(parents=True, exist_ok=True)
     (DATA_DIR / "latest.json").write_text(
