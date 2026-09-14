@@ -44,6 +44,11 @@ export type Store = {
   /** Local closing time. Chain-level opening hours, not per-branch truth. */
   closesAt?: string;
   featured?: boolean;
+  /** The pin is the village's centre, not the shop's own address — the
+   * chain filed it as "קיבוץ עינת" with no street, which rural branches
+   * often are. Accurate to the size of the village, which is small, but
+   * don't present it as a doorstep. */
+  approximate?: boolean;
 };
 
 type Town = {

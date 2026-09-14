@@ -37,6 +37,16 @@ import { color, muted, radius, space, textAlpha } from "@/theme";
 
 const REPORT_REPO = "Yz-3076/energy-radar";
 
+/** A town name short enough to sit under a chart bar.
+ *
+ * Official names carry qualifiers the reader doesn't need here — "תל אביב
+ * - יפו", "מודיעין-מכבים-רעות" — and cutting those to a fixed width lands
+ * mid-word ("מודי"). Dropping everything from the first hyphen keeps a
+ * whole, recognisable name in the same space. */
+function shortCity(city: string) {
+  return (city.split("-")[0] ?? "").trim().slice(0, 8);
+}
+
 function openReportIssue(storeId: string, storeName: string, address: string, message: string) {
   const title = `Store report: ${storeName}`;
   const body = [
@@ -185,6 +195,14 @@ export default function StoreScreen() {
         <Text style={styles.address}>
           {isolate(store.address)} · {walkMinutes(metres)} min walk · {prettyDistance(metres)}
         </Text>
+        {store.approximate ? (
+          // The chain gave no street for this branch, so the pin is the
+          // village centre. Saying so costs one line and stops the walk
+          // time above from reading as a promise it can't keep.
+          <Text style={styles.approxNote}>
+            Approximate — this branch is listed only as {isolate(store.city)}, with no street address.
+          </Text>
+        ) : null}
 
         <Tap haptic="medium" style={[ui.ghostButton, styles.action]} onPress={() => openDirections(store)}>
           <NavigationArrow size={14} color={color.accent} weight="fill" />
@@ -286,7 +304,7 @@ export default function StoreScreen() {
                     ]}
                   />
                   <Text style={[styles.barLabel, here && { color: color.accent }]} numberOfLines={1}>
-                    {here ? "here" : s.city.slice(0, 4)}
+                    {here ? "here" : shortCity(s.city)}
                   </Text>
                 </View>
               );
@@ -396,6 +414,13 @@ const styles = StyleSheet.create({
     lineHeight: 17,
     color: textAlpha(50),
     marginTop: 5,
+    writingDirection: "ltr",
+  },
+  approxNote: {
+    fontSize: 11,
+    lineHeight: 16,
+    color: textAlpha(38),
+    marginTop: 4,
     writingDirection: "ltr",
   },
   action: { height: 44, marginTop: space[6] },
