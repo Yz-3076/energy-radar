@@ -251,4 +251,18 @@ export const ils = (n: number) => `₪${n.toFixed(2)}`;
 export const isolate = (s: string) => `⁨${s}⁩`;
 
 /** Rough walking time at 80 m/min. */
+/** A chain name short enough to sit in a pill beside a branch name.
+ *
+ * The scraper names a chain after the company that files the data, which is
+ * sometimes two merged companies: "Yayno Bitan And Carrefour" rendered as
+ * "YAYNO BITAN AND…", cut mid-name and telling the reader nothing. These
+ * map to the brand actually written above the shop door. */
+const CHAIN_LABELS: Record<string, string> = {
+  "Yayno Bitan And Carrefour": "Carrefour",
+  "Fresh Market And Super Dosh": "Fresh Market",
+  "Victory New Source": "Victory",
+};
+
+export const chainLabel = (chain: string) => CHAIN_LABELS[chain] ?? chain;
+
 export const walkMinutes = (m: number) => Math.max(1, Math.round(m / 80));

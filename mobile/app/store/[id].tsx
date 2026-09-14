@@ -21,7 +21,7 @@ import { Kicker, Tap, rowDivider, styles as ui } from "@/components/ui";
 import { NEARBY_METRES } from "@/data/alerts";
 import { getVariant } from "@/data/catalog";
 import { STOCK_LABEL, stockStatus } from "@/data/stock";
-import {
+import { chainLabel,
   cheapest,
   distanceM,
   ils,
@@ -192,7 +192,7 @@ export default function StoreScreen() {
               you whether you were looking at Tiv Taam or Rami Levy. */}
           <View style={styles.chainPill}>
             <Text style={styles.chainPillText} numberOfLines={1}>
-              {store.chain}
+              {chainLabel(store.chain)}
             </Text>
           </View>
           {store.closesAt ? (

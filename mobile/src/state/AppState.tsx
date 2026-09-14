@@ -18,7 +18,6 @@ import {
   type Promo,
   type PromotionsByStore,
 } from "@/data/api";
-import { SEED_PROMOTIONS } from "@/data/promotions-seed";
 import { STORES, type Store } from "@/data/stores";
 
 const MAX_RECENT_SEARCHES = 8;
@@ -351,10 +350,13 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
             else byDeal.set(key, { promo, storeCount: 1 });
           }
         }
-        if (byDeal.size > 0) return [...byDeal.values()];
-        // Last resort only, and only here: a labelled demo entry, never on
-        // a store screen where it would read as a real local deal.
-        return (SEED_PROMOTIONS[variantId] ?? []).map((promo) => ({ promo, storeCount: 0 }));
+        // No fallback. A fictional "Buy 2, save ₪4 (demo — not real data)"
+        // used to render here whenever a flavour had no live deal, which
+        // was every flavour until the promo feed produced anything. It does
+        // now — 190 stores — so the placeholder has outlived its purpose,
+        // and shipping an app that tells users about a deal that does not
+        // exist is worse than showing nothing.
+        return [...byDeal.values()];
       },
       [promotions],
     ),

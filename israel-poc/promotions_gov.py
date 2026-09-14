@@ -147,6 +147,20 @@ def _to_int(s):
         return None
 
 
+def _clean_terms(raw: str | None) -> str | None:
+    """Promo terms, or None when the field holds no words.
+
+    Chains put junk in AdditionalRestrictions: 21 live entries carried the
+    literal "0.00", which the app then rendered under the deal as a line
+    reading "0.00". A terms line has to say something, and a bare number
+    says nothing.
+    """
+    text = (raw or "").strip()
+    if not text or not any(ch.isalpha() for ch in text):
+        return None
+    return text
+
+
 def _shape(promo_el, item_el) -> dict:
     """Shape one promo for one matched item. minQuantity/maxQuantity/
     discountRate come from the PromotionItem, not the Promotion — confirmed
@@ -162,7 +176,7 @@ def _shape(promo_el, item_el) -> dict:
         "maxQuantity": _to_int(item_el.findtext("MaxQty")),
         "startsAt": promo_el.findtext("PromotionStartDateTime"),
         "endsAt": promo_el.findtext("PromotionEndDateTime"),
-        "terms": (promo_el.findtext("AdditionalRestrictions") or "").strip() or None,
+        "terms": _clean_terms(promo_el.findtext("AdditionalRestrictions")),
         "clubOnly": not club_id.startswith("0"),
     }
 

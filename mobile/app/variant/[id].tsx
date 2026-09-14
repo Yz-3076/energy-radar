@@ -9,7 +9,7 @@ import { PromoList } from "@/components/PromoList";
 import { Kicker, Tap, rowDivider, styles as ui } from "@/components/ui";
 import { FLAVOUR_NEARBY_METRES } from "@/data/alerts";
 import { getVariant } from "@/data/catalog";
-import { walkMinutes, distanceM, ils, prettyDistance, relativeTime } from "@/data/stores";
+import { chainLabel, walkMinutes, distanceM, ils, prettyDistance, relativeTime } from "@/data/stores";
 import { useApp } from "@/state/AppState";
 import { color, muted, radius, space, textAlpha } from "@/theme";
 
@@ -168,9 +168,19 @@ export default function VariantScreen() {
             onPress={() => router.push({ pathname: "/store/[id]", params: { id: s.id } })}
           >
             <View style={styles.rowText}>
-              <Text style={styles.rowTitle} numberOfLines={1}>
-                {s.name}
-              </Text>
+              {/* Chain beside the branch name. Branch names repeat across
+                  chains — three different companies run a "מודיעין ישפרו" —
+                  so the name alone does not say whose shelf this is. */}
+              <View style={styles.rowTitleLine}>
+                <Text style={styles.rowTitle} numberOfLines={1}>
+                  {s.name}
+                </Text>
+                <View style={styles.rowChain}>
+                  <Text style={styles.rowChainText} numberOfLines={1}>
+                    {chainLabel(s.chain)}
+                  </Text>
+                </View>
+              </View>
               <Text style={styles.rowSub}>
                 {prettyDistance(metres)} ·{" "}
                 {r.source === "official_feed"
@@ -292,7 +302,25 @@ const styles = StyleSheet.create({
   kicker: { marginTop: space[8], marginBottom: space[4] },
   kickerTight: { marginTop: space[6], marginBottom: space[4] },
   rowText: { flex: 1, minWidth: 0 },
-  rowTitle: { fontSize: 12.5, fontWeight: "600", color: color.text },
+  rowTitleLine: { flexDirection: "row", alignItems: "center", gap: 6, minWidth: 0 },
+  rowTitle: { fontSize: 12.5, fontWeight: "600", color: color.text, flexShrink: 1 },
+  rowChain: {
+    flexShrink: 0,
+    maxWidth: 104,
+    paddingHorizontal: 6,
+    paddingVertical: 1.5,
+    borderRadius: 999,
+    borderWidth: 1,
+    borderColor: textAlpha(14),
+    backgroundColor: textAlpha(6),
+  },
+  rowChainText: {
+    fontSize: 8.5,
+    letterSpacing: 0.5,
+    textTransform: "uppercase",
+    fontWeight: "700",
+    color: textAlpha(55),
+  },
   rowSub: { fontSize: 10, color: muted, marginTop: 3 },
   rowPrice: { fontSize: 13.5, fontWeight: "700", color: color.accent },
   emptyRow: { padding: space[6] },
