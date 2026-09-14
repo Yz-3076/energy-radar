@@ -1,0 +1,70 @@
+# What NOT to upload to EAS Build.
+#
+# This file lives at the REPO ROOT on purpose. EAS runs from mobile/ (where
+# eas.json is) but builds the archive from the root of the git repository,
+# so an .easignore inside mobile/ is not where the archive is assembled and
+# does not prune it. Confirmed 2026-09-14: with only mobile/.easignore in
+# place, a production build still uploaded 399 MB and spent ~3 minutes on
+# it. Only ~30 MB of this repo is tracked by git, so the rest was untracked
+# weight — mobile/node_modules alone is 7.6 GB raw.
+#
+# An .easignore REPLACES .gitignore for archive purposes, so everything
+# .gitignore excludes has to be re-stated here, not just the extras.
+
+# --- dependencies and build output (EAS reinstalls from package-lock) ---
+node_modules/
+/mobile/android/
+/mobile/ios/
+/mobile/.expo/
+/mobile/.kotlin/
+/mobile/.gradle/
+dist/
+web-build/
+
+# --- nothing outside mobile/ is part of the app ---
+# The Android app is built entirely from mobile/. Everything below is the
+# data pipeline, the stats website and design scratch — none of it is
+# compiled into the bundle, and the app reads its data over the network at
+# runtime rather than embedding it.
+#
+# Every one of these is anchored with a leading slash, which matters more
+# than it looks: an unanchored "app/" or "data/" matches a directory of
+# that name at ANY depth, so it would also have excluded mobile/app/ (every
+# expo-router screen) and mobile/src/data/. That would not fail the upload,
+# it would build a broken app.
+/israel-poc/
+/server/
+/app/
+/design-import/
+/docs/
+/store-assets/
+/data/
+/scripts/
+/.github/
+
+# --- Python ---
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# --- credentials must never leave this machine ---
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+.env
+.env*.local
+
+# --- local tooling and scratch ---
+.claude/
+mobile/.claude/
+mobile/scripts/check-device.sh
+*.log
+*.tsbuildinfo
+.metro-health-check*
+
+# --- OS noise ---
+.DS_Store
+Thumbs.db

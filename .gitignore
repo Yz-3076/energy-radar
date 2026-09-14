@@ -30,3 +30,6 @@ data/geocode-stages.sqlite
 
 # Regenerated on demand by israel-poc/dump_locations.py.
 data/locations.txt
+
+# Built app bundles. Downloaded from EAS on demand; too large to track.
+build/
