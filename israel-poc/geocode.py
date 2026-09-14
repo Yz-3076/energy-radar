@@ -75,6 +75,19 @@ MIN_INTERVAL_S = 1.1  # Nominatim policy: max 1 req/sec; a little slack
 MAX_RETRIES = 4
 BACKOFF_BASE_S = 5.0
 
+# Stop geocoding entirely once this many addresses in a row exhaust their
+# retries, and let the run finish on cached coordinates alone.
+#
+# Without this the worst case is unbounded: full backoff is ~75s per
+# address, so a few hundred throttled addresses would run past the
+# workflow's 120-minute timeout and lose the ENTIRE scrape — prices,
+# promos and all — to a geocoder being slow. Geocoding is incremental and
+# permanently cached, so stopping early just defers those addresses to the
+# next run, while finishing the run keeps everything else. Any success
+# resets the counter, so a couple of isolated failures never trip it.
+GIVE_UP_LIMIT = 5
+_GIVE_UPS = 0
+
 # Generous bounding box around Israel + the territories chain branches can
 # realistically be in (lat, lng). Not a precise border — just wide enough to
 # never reject a real branch, tight enough to catch a same-named place in a
@@ -377,6 +390,10 @@ def _ask(params: dict) -> tuple[list | None, bool]:
     address was written into the cache as permanently unresolvable and
     never asked about again.
     """
+    global _GIVE_UPS
+    if _GIVE_UPS >= GIVE_UP_LIMIT:
+        return None, False  # circuit open — see the counter's comment
+
     qs = urllib.parse.urlencode({**params, "country": "Israel", "format": "json", "limit": 1})
     req = urllib.request.Request(
         f"https://nominatim.openstreetmap.org/search?{qs}",
@@ -386,6 +403,7 @@ def _ask(params: dict) -> tuple[list | None, bool]:
         try:
             with urllib.request.urlopen(req, timeout=15) as resp:
                 hits = json.loads(resp.read().decode("utf-8"))
+            _GIVE_UPS = 0  # a success means the throttle has passed
             time.sleep(MIN_INTERVAL_S)
             if not hits:
                 return None, True  # a real answer: no such place
@@ -409,7 +427,11 @@ def _ask(params: dict) -> tuple[list | None, bool]:
             print(f"  geocode failed {params}: {e}")
             time.sleep(MIN_INTERVAL_S)
             return None, False
+    _GIVE_UPS += 1
     print(f"  geocode gave up on {params}: still rate-limited after {MAX_RETRIES} attempts")
+    if _GIVE_UPS >= GIVE_UP_LIMIT:
+        print(f"  geocoding disabled for the rest of this run after {_GIVE_UPS} "
+              f"rate-limited addresses in a row — they will be retried next run")
     return None, False
 
 
