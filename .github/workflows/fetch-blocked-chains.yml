@@ -23,12 +23,18 @@ name: Fetch chains that refuse cloud IPs
 
 on:
   schedule:
-    # Once a day, not every three hours. This runs on someone's actual
-    # computer, and energy-drink prices do not move fast enough to justify
-    # waking it eight times a day. 04:15 UTC is after the chains' early
-    # morning publish and outside the cloud run's :00 slots, so the two
-    # rarely collide on a push.
-    - cron: "15 4 * * *"
+    # Three times a day. The machine this runs on is left on, and each run
+    # now costs ~10-20 minutes and frees its own disk, so the old
+    # once-a-day caution is unnecessary. Three is still well short of the
+    # cloud run's eight — energy-drink prices do not move hourly, and every
+    # extra run is load on someone's home connection and on the chains'
+    # servers.
+    #
+    # :15 past the hour, deliberately offset from the cloud run's :00
+    # slots, so the two rarely try to push at the same moment. They
+    # reconcile correctly if they do (see merge_data.py), but not
+    # colliding is cheaper than recovering.
+    - cron: "15 5,13,21 * * *"
   workflow_dispatch: {}
 
 permissions:
