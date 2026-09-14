@@ -186,7 +186,13 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
   const nameCoord = useCallback(async (lat: number, lng: number) => {
     try {
       const [place] = await Location.reverseGeocodeAsync({ latitude: lat, longitude: lng });
-      const label = place?.district ?? place?.subregion ?? place?.city ?? place?.region ?? null;
+      // City first. `district` and `subregion` are administrative areas, not
+      // where anyone thinks they are: standing in Modi'in on 2026-09-14 the
+      // header read "HUNTING NEAR RAMLA", because Modi'in sits in the Ramla
+      // sub-district (נפת רמלה). Correct on paper, wrong to a person holding
+      // the phone, and it made every nearby price look like it belonged to
+      // another town.
+      const label = place?.city ?? place?.subregion ?? place?.district ?? place?.region ?? null;
       if (label) setPlaceLabel(label);
     } catch {
       // no geocoder on this device, or offline
