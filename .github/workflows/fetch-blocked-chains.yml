@@ -1,0 +1,98 @@
+name: Fetch chains that refuse cloud IPs
+
+# Three chains answer a home connection in Israel and return nothing at all
+# to GitHub's hosted runners. Measured 2026-09-14, same code minutes apart:
+#
+#   Super Pharm   0 files from GitHub  ->  307 branches, 284 with Monster
+#   Netiv Hased   0 files from GitHub  ->   91 branches,  58 with Monster
+#   Victory       connect timeout      ->   70 branches,  69 with Monster
+#
+# A connect-level timeout rather than a 403 is what an IP-level firewall
+# drop looks like, and three unrelated companies on three unrelated hosts
+# all behave this way toward cloud addresses. No code change can fix it —
+# the request has to come from an IP they will answer.
+#
+# So this workflow runs on a SELF-HOSTED runner (a machine on an Israeli
+# connection) and scrapes only those three. The scheduled cloud run in
+# fetch-prices.yml keeps owning the other twenty.
+#
+# The two runs do not fight: PIPELINE_CHAINS restricts this one, every
+# other chain is then "silent" for it, and carry_forward() keeps their
+# stores rather than wiping them. The cloud run does the same in reverse.
+# Whichever ran last, latest.json ends up complete.
+
+on:
+  schedule:
+    # Once a day, not every three hours. This runs on someone's actual
+    # computer, and energy-drink prices do not move fast enough to justify
+    # waking it eight times a day. 04:15 UTC is after the chains' early
+    # morning publish and outside the cloud run's :00 slots, so the two
+    # rarely collide on a push.
+    - cron: "15 4 * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+# Never two of these at once. Unlike the cloud workflow this shares a
+# machine with whatever else is on it, and a second copy would fight the
+# first over the dumps directory.
+concurrency:
+  group: fetch-blocked-chains
+  cancel-in-progress: false
+
+jobs:
+  fetch:
+    runs-on: self-hosted
+    # Generous, because a home connection is slower and less predictable
+    # than a datacentre one — but bounded, so a hung scrape does not sit on
+    # the machine forever.
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install scraper dependencies
+        working-directory: israel-poc
+        run: pip install -r requirements.txt
+
+      - name: Scrape the three cloud-blocked chains
+        working-directory: israel-poc
+        env:
+          PIPELINE_CHAINS: SUPER_PHARM,NETIV_HASED,VICTORY_NEW_SOURCE
+          OPEN_IL_SUPERMARKETS_TOKEN: ${{ secrets.OPEN_IL_SUPERMARKETS_TOKEN }}
+        run: python pipeline.py
+
+      - name: Commit updated data
+        run: |
+          git config user.name "energy-radar-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/
+          git diff --cached --quiet && { echo "No data changes this run."; exit 0; }
+          git commit -m "Update blocked-chain data ($(date -u +'%Y-%m-%d %H:%M UTC'))"
+          # Same reconciliation as the cloud workflow: these files are
+          # machine-generated JSON and do not three-way merge, so rather
+          # than rebasing into conflict markers, keep this run's output
+          # aside, reset onto origin/main and let merge_data.py combine
+          # them per file.
+          OURS="$(mktemp -d)"
+          cp -r data/. "$OURS/"
+          for attempt in 1 2 3 4 5; do
+            if git push; then
+              echo "pushed on attempt $attempt"
+              exit 0
+            fi
+            echo "push rejected (attempt $attempt/5), reconciling with origin/main..."
+            git rebase --abort 2>/dev/null || true
+            git fetch origin main
+            git reset --hard origin/main
+            python israel-poc/merge_data.py "$OURS"
+            git add data/
+            git diff --cached --quiet && { echo "nothing left to commit after merge."; exit 0; }
+            git commit -m "Update blocked-chain data ($(date -u +'%Y-%m-%d %H:%M UTC'))"
+          done
+          echo "::error::push still failing after 5 attempts"
+          exit 1

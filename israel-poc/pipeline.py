@@ -41,6 +41,7 @@ import asyncio
 import glob
 import json
 import os
+import shutil
 import xml.etree.ElementTree as ET
 from collections import Counter, defaultdict
 from datetime import datetime, timezone
@@ -147,6 +148,9 @@ DUMPS_DIR = Path(__file__).resolve().parent / "dumps"
 # MAHSANI_ASHUK and both CITY_MARKET variants because they are retired
 # enum entries with no implementation behind them, several already
 # superseded by the _NEW_SOURCE versions in use above.
+_CHAINS_ENV = os.environ.get("PIPELINE_CHAINS", "").strip()
+_WANTED = {c.strip().upper() for c in _CHAINS_ENV.split(",") if c.strip()}
+
 CHAINS = [
     # original six
     "SHUFERSAL", "VICTORY_NEW_SOURCE", "RAMI_LEVY", "YELLOW", "OSHER_AD", "DOR_ALON",
@@ -160,11 +164,28 @@ CHAINS = [
     "SHUK_AHIR", "POLIZER",
 ]
 
+# PIPELINE_CHAINS=SUPER_PHARM,NETIV_HASED runs only those chains and leaves
+# every other chain "silent", so carry_forward() keeps the existing stores
+# for the rest rather than wiping them. That is what lets a scrape from an
+# Israeli connection top up the three chains that refuse cloud IPs without
+# clobbering the twenty the scheduled cloud run owns.
+#
+# Unset (the default, and what the cloud run uses) means every chain. The
+# guard matters: an empty PIPELINE_CHAINS must mean "all", never "none" —
+# filtering on an empty set silently emptied CHAINS and the run scraped
+# nothing at all.
+if _WANTED:
+    _missing = _WANTED - set(CHAINS)
+    if _missing:
+        raise SystemExit(f"PIPELINE_CHAINS names unknown chain(s): {sorted(_missing)}")
+    CHAINS = [c for c in CHAINS if c in _WANTED]
+
 # For local smoke-testing only: PIPELINE_LIMIT=5 py pipeline.py fetches just a
 # handful of branches per chain instead of the whole country. Unset (the
 # default, and what CI uses) means every branch.
 _LIMIT_ENV = os.environ.get("PIPELINE_LIMIT")
 FILE_LIMIT = int(_LIMIT_ENV) if _LIMIT_ENV else None
+
 
 VARIANTS = json.loads((Path(__file__).parent / "variants.json").read_text(encoding="utf-8"))
 BARCODE_TO_VARIANT = {v["barcode"]: v["id"] for v in VARIANTS if v.get("barcode")}
@@ -190,6 +211,24 @@ async def fetch_files(chain_name: str, file_type: str, out_subdir: str) -> Path:
         print(f"  {chain_name}: not enabled / not found, skipping")
         return DUMPS_DIR / chain_name / out_subdir
     out_dir = DUMPS_DIR / chain_name / out_subdir
+
+    # Start each chain from an empty directory.
+    #
+    # Nothing ever deleted these and they are not small: 21.7 GB across
+    # 4,508 files by 2026-09-14, with King Store alone at 4.5 GB. On
+    # GitHub's runners that is invisible because every run gets a fresh VM,
+    # but this also runs on a real machine (see the self-hosted workflow for
+    # the chains that refuse cloud IPs), where it would grow until the disk
+    # filled.
+    #
+    # It also fixes a quieter bug. parse_monster_items() reads the whole
+    # directory, so a chain whose fetch failed would still contribute
+    # yesterday's files and present them as today's prices. Clearing first
+    # means a failed fetch yields nothing, which carry_forward() handles
+    # honestly instead.
+    if out_dir.exists():
+        shutil.rmtree(out_dir, ignore_errors=True)
+
     scraper = scraper_cls(file_output=DiskFileOutput(storage_path=str(out_dir)))
 
     # Ask for each store's LATEST file, not every file the chain still hosts.
