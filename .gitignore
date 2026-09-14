@@ -27,3 +27,6 @@ mobile/scripts/cans-preview.html
 # Staged-geocoder cache. Per-machine working state; the results that matter
 # are exported into data/geocode-cache.json, which IS committed.
 data/geocode-stages.sqlite
+
+# Regenerated on demand by israel-poc/dump_locations.py.
+data/locations.txt
