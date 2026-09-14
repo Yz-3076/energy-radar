@@ -9,7 +9,7 @@ import { PromoList } from "@/components/PromoList";
 import { Kicker, Tap, rowDivider, styles as ui } from "@/components/ui";
 import { FLAVOUR_NEARBY_METRES } from "@/data/alerts";
 import { getVariant } from "@/data/catalog";
-import { distanceM, ils, prettyDistance, relativeTime } from "@/data/stores";
+import { walkMinutes, distanceM, ils, prettyDistance, relativeTime } from "@/data/stores";
 import { useApp } from "@/state/AppState";
 import { color, muted, radius, space, textAlpha } from "@/theme";
 
@@ -122,23 +122,42 @@ export default function VariantScreen() {
         </Text>
       </Tap>
 
-      <Tap style={[ui.card, styles.alert, alert && styles.alertOn]} onPress={onToggleAlert}>
-        {alert ? (
-          <BellRinging size={16} color={color.accent} weight="fill" />
-        ) : (
-          <Bell size={16} color={textAlpha(60)} />
-        )}
-        <View style={styles.alertText}>
-          <Text style={[styles.alertTitle, alert && { color: color.accent }]}>
-            {alert ? "Alert on" : "Notify me when it's near me"}
-          </Text>
-          <Text style={styles.alertSub}>
-            {alert
-              ? `You'll see it on Me when a shelf within ${Math.round(FLAVOUR_NEARBY_METRES / 100) / 10} km has it`
-              : "Checked in-app, not a push notification — see Me for all your alerts"}
-          </Text>
+      {/* The alert is the one thing on this screen worth doing, so it
+          looks like it. It used to be a 12px row of text with a 10px
+          caption under it, indistinguishable from the list rows below and
+          easy to scroll past without noticing it was tappable. */}
+      <View style={[styles.alertCard, alert && styles.alertCardOn]}>
+        <View style={styles.alertHead}>
+          <View style={[styles.alertIcon, alert && styles.alertIconOn]}>
+            {alert ? (
+              <BellRinging size={19} color={color.bg} weight="fill" />
+            ) : (
+              <Bell size={19} color={color.accent} weight="fill" />
+            )}
+          </View>
+          <View style={styles.alertText}>
+            <Text style={styles.alertTitle}>
+              {alert ? "Watching for this can" : "Tell me when it's close"}
+            </Text>
+            <Text style={styles.alertSub}>
+              {alert
+                ? `On while the app is open. Any shelf within a ${walkMinutes(FLAVOUR_NEARBY_METRES)} minute walk carrying ${variant.name} shows up on Me.`
+                : `Get told when ${variant.name} is on a shelf within a ${walkMinutes(FLAVOUR_NEARBY_METRES)} minute walk of you.`}
+            </Text>
+          </View>
         </View>
-      </Tap>
+
+        <Tap
+          haptic="medium"
+          style={[styles.alertButton, alert && styles.alertButtonOn]}
+          onPress={onToggleAlert}
+          accessibilityLabel={alert ? "Turn off this alert" : "Turn on this alert"}
+        >
+          <Text style={[styles.alertButtonLabel, alert && styles.alertButtonLabelOn]}>
+            {alert ? "Turn off alert" : "Alert me"}
+          </Text>
+        </Tap>
+      </View>
 
       <Kicker style={styles.kicker}>Closest shelves</Kicker>
       <View style={ui.group}>
@@ -223,16 +242,53 @@ const styles = StyleSheet.create({
   drinkButtonOn: { backgroundColor: color.accent },
   drinkLabel: { fontSize: 13, fontWeight: "700", color: color.accent },
   drinkLabelOn: { color: color.bg },
-  alert: {
+  alertCard: {
     marginTop: space[6],
-    flexDirection: "row",
-    alignItems: "center",
-    gap: space[3],
+    padding: space[6],
+    borderRadius: radius.lg,
+    borderWidth: 1,
+    borderColor: textAlpha(12),
+    backgroundColor: textAlpha(5),
   },
-  alertOn: { borderColor: color.accent },
+  alertCardOn: {
+    borderColor: color.accent,
+    backgroundColor: "rgba(0,255,102,0.07)",
+  },
+  alertHead: { flexDirection: "row", alignItems: "flex-start", gap: space[4] },
+  alertIcon: {
+    width: 40,
+    height: 40,
+    borderRadius: 999,
+    alignItems: "center",
+    justifyContent: "center",
+    borderWidth: 1,
+    borderColor: "rgba(0,255,102,0.35)",
+    backgroundColor: "rgba(0,255,102,0.10)",
+  },
+  alertIconOn: { backgroundColor: color.accent, borderColor: color.accent },
   alertText: { flex: 1, minWidth: 0 },
-  alertTitle: { fontSize: 12.5, fontWeight: "700", color: color.text },
-  alertSub: { fontSize: 10, lineHeight: 14, color: textAlpha(45), marginTop: 2 },
+  alertTitle: { fontSize: 15.5, fontWeight: "800", color: color.text, letterSpacing: -0.2 },
+  alertSub: { fontSize: 11.5, lineHeight: 17, color: textAlpha(58), marginTop: 4 },
+  alertButton: {
+    marginTop: space[4],
+    height: 46,
+    borderRadius: radius.md,
+    alignItems: "center",
+    justifyContent: "center",
+    backgroundColor: color.accent,
+  },
+  alertButtonOn: {
+    backgroundColor: "transparent",
+    borderWidth: 1,
+    borderColor: textAlpha(22),
+  },
+  alertButtonLabel: {
+    fontSize: 13.5,
+    fontWeight: "800",
+    letterSpacing: 0.3,
+    color: color.bg,
+  },
+  alertButtonLabelOn: { color: textAlpha(70) },
   kicker: { marginTop: space[8], marginBottom: space[4] },
   kickerTight: { marginTop: space[6], marginBottom: space[4] },
   rowText: { flex: 1, minWidth: 0 },

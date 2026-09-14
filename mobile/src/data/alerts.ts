@@ -36,8 +36,14 @@ export const NEARBY_METRES = 350;
 
 /** A flavour alert answers "is this can somewhere I could reasonably go
  *  right now", which is a looser question than a store alert's "have I
- *  arrived" — so it uses a walk-to radius rather than NEARBY_METRES. */
-export const FLAVOUR_NEARBY_METRES = 1500;
+ *  arrived" — so it uses a walk-to radius rather than NEARBY_METRES.
+ *
+ *  400m, about a five minute walk at walkMinutes' 80 m/min. It was 1500m,
+ *  which is a nineteen minute walk each way — far enough that "it's near
+ *  you" stopped being true and the alert stopped being worth acting on.
+ *  Both radii are now the same order of thing: somewhere you would actually
+ *  detour to. */
+export const FLAVOUR_NEARBY_METRES = 400;
 
 /**
  * Shelves near you carrying the flavour, closest first — see the module doc

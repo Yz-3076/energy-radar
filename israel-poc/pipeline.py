@@ -450,6 +450,36 @@ def verify_pins(stores_by_key: dict[str, dict], store_city_code: dict[str, str])
           f"{unknown} unverifiable (no usable city code)")
 
 
+def carry_forward_promos(fresh: dict, stores_by_key: dict[str, dict]) -> dict:
+    """Keep promos for stores this run did not look at.
+
+    promotions.json is rewritten whole every run, the same as latest.json,
+    and nothing protected it. A SHUFERSAL-only run therefore replaced all
+    190 stores' deals with Shufersal's — which are none — and the empty
+    file was pushed before anyone noticed. carry_forward() had covered
+    exactly this for latest.json and stopped one file short.
+
+    A store the run DID fetch is authoritative: if its promo is gone today,
+    the deal ended and must disappear. Only stores absent from this run's
+    output are carried, which is the same "could not look" versus "looked
+    and it is gone" distinction carry_forward() draws.
+    """
+    path = DATA_DIR / "promotions.json"
+    if not path.exists():
+        return fresh
+    try:
+        previous = json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError) as e:  # noqa: BLE001
+        print(f"  promo carry-forward skipped: {e}")
+        return fresh
+
+    looked_at = {s["id"] for s in stores_by_key.values()}
+    carried = {k: v for k, v in previous.items() if k not in looked_at and k not in fresh}
+    if carried:
+        print(f"  carried promos for {len(carried)} store(s) this run did not fetch")
+    return {**carried, **fresh}
+
+
 def carry_forward(stores_out: list[dict], silent_chains: set[str]) -> list[dict]:
     """Keep the previous run's stores for chains that returned nothing today.
 
@@ -659,7 +689,7 @@ async def run() -> None:
     # store-level deals this shape exists to prevent. It stays available
     # for a flavour-level view if their auth is ever fixed (it currently
     # hangs on any request — see that module's docstring).
-    promo_by_store = gov_promo_maps
+    promo_by_store = carry_forward_promos(gov_promo_maps, stores_by_key)
     (DATA_DIR / "promotions.json").write_text(
         json.dumps(promo_by_store, ensure_ascii=False, indent=2), encoding="utf-8"
     )
