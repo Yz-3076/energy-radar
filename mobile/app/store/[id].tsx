@@ -91,14 +91,27 @@ export default function StoreScreen() {
    *  in place of a price history nobody is recording yet. */
   const spread = useMemo(() => {
     if (!best) return { rows: [] as { s: Store; r: ShelfRow }[], max: 0, min: 0 };
-    const rows = stores
-      .flatMap((s) => s.shelf.filter((r) => r.variantId === best.variantId).map((r) => ({ s, r })))
+    const all = stores.flatMap((s) =>
+      s.shelf.filter((r) => r.variantId === best.variantId).map((r) => ({ s, r })),
+    );
+    // Always keep THIS store in its own price spread.
+    //
+    // Taking the ten cheapest shelves dropped the store being viewed
+    // whenever it was not among them — which is precisely when the
+    // comparison matters. On the Yellow branch in Modi'in at 13.00, the
+    // chart showed ten other shops, highlighted none of them as "here",
+    // and drew ten near-identical bars, because the cheapest ten sat
+    // within 20 agorot of each other on a scale stretched to 13.00.
+    const mine = all.filter((x) => x.s.id === store?.id);
+    const others = all
+      .filter((x) => x.s.id !== store?.id)
       .sort((a, b) => a.r.price - b.r.price)
-      .slice(0, 10);
+      .slice(0, Math.max(0, 10 - mine.length));
+    const rows = [...others, ...mine].sort((a, b) => a.r.price - b.r.price);
     const max = Math.max(...rows.map((x) => x.r.price), best.price);
     const min = Math.min(...rows.map((x) => x.r.price), best.price);
     return { rows, max, min };
-  }, [stores, best]);
+  }, [stores, best, store?.id]);
 
   /** Deals this exact branch is running, labelled with the flavour since a
    *  store can carry several. Branch-scoped: anything this store isn't
