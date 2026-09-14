@@ -198,6 +198,23 @@ KNOWN_NAME_HINT = "מונסטר"  # catches SKUs not yet in variants.json by bar
 NAME_HINT_EXCLUDES = ("מונסטרל", "monastrell")
 
 
+def _discard_dumps(chain_name: str) -> None:
+    """Delete a chain's downloaded XML once it has been parsed.
+
+    Keeps the working set to whichever chain is in flight instead of a
+    whole run's worth. Best-effort on purpose: a file still held open by
+    the scraper, or a permissions hiccup, must not take down a scrape that
+    has already got what it needed.
+    """
+    target = DUMPS_DIR / chain_name
+    if not target.exists():
+        return
+    freed = sum(f.stat().st_size for f in target.rglob("*") if f.is_file())
+    shutil.rmtree(target, ignore_errors=True)
+    if freed > 50_000_000:  # only worth a line when it is actually large
+        print(f"  freed {freed / 1e6:.0f} MB of {chain_name} downloads")
+
+
 async def _scrape(scraper, file_type: str, when_date=None) -> int:
     count = 0
     async for _ in scraper.scrape(limit=FILE_LIMIT, files_types=[file_type], when_date=when_date):
@@ -499,6 +516,16 @@ async def run() -> None:
             # differently.
             silent_chains.add(chain)
         print(f"  {len(items)} Monster row(s) across {len(store_info)} branch(es)")
+
+        # Both dicts are fully in memory now, so the XML has no further use.
+        # Deleting it here rather than at the start of the next run is the
+        # difference between a peak of one chain's files and a whole run's:
+        # the old behaviour left every chain's download sitting on disk
+        # until that same chain was fetched again, which is how 22.7 GB
+        # accumulated. This matters because the scrape now also runs on a
+        # real machine (see fetch-blocked-chains.yml), not only on a
+        # throwaway cloud VM.
+        _discard_dumps(chain)
 
         for item in items:
             info = store_info.get(item["store_id"])
