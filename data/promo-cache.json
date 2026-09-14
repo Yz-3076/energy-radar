@@ -31,6 +31,10 @@
     "fetchedAt": "2026-09-13T23:33:55.015998+00:00",
     "promos": {}
   },
+  "BAREKET:65": {
+    "fetchedAt": "2026-09-14T17:35:37.629719+00:00",
+    "promos": {}
+  },
   "BAREKET:7": {
     "fetchedAt": "2026-09-13T23:33:51.739183+00:00",
     "promos": {}
@@ -1392,6 +1396,131 @@
   },
   "DOR_ALON:510": {
     "fetchedAt": "2026-09-13T21:01:04.288186+00:00",
+    "promos": {
+      "green-zero": [
+        {
+          "clubOnly": false,
+          "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+          "discountRate": 21.57,
+          "endsAt": "2026-10-04T23:59:00.000",
+          "maxQuantity": null,
+          "minQuantity": 2,
+          "startsAt": "2026-08-19T00:00:00.000",
+          "terms": null
+        }
+      ],
+      "mango-loco": [
+        {
+          "clubOnly": false,
+          "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+          "discountRate": 21.57,
+          "endsAt": "2026-10-04T23:59:00.000",
+          "maxQuantity": null,
+          "minQuantity": 2,
+          "startsAt": "2026-08-19T00:00:00.000",
+          "terms": null
+        }
+      ],
+      "monarch": [
+        {
+          "clubOnly": false,
+          "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+          "discountRate": 21.57,
+          "endsAt": "2026-10-04T23:59:00.000",
+          "maxQuantity": null,
+          "minQuantity": 2,
+          "startsAt": "2026-08-19T00:00:00.000",
+          "terms": null
+        }
+      ],
+      "original": [
+        {
+          "clubOnly": false,
+          "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+          "discountRate": 21.57,
+          "endsAt": "2026-10-04T23:59:00.000",
+          "maxQuantity": null,
+          "minQuantity": 2,
+          "startsAt": "2026-08-19T00:00:00.000",
+          "terms": null
+        }
+      ],
+      "pipeline-punch": [
+        {
+          "clubOnly": false,
+          "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+          "discountRate": 21.57,
+          "endsAt": "2026-10-04T23:59:00.000",
+          "maxQuantity": null,
+          "minQuantity": 2,
+          "startsAt": "2026-08-19T00:00:00.000",
+          "terms": null
+        }
+      ],
+      "strawberry": [
+        {
+          "clubOnly": false,
+          "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+          "discountRate": 21.57,
+          "endsAt": "2026-10-04T23:59:00.000",
+          "maxQuantity": null,
+          "minQuantity": 2,
+          "startsAt": "2026-08-19T00:00:00.000",
+          "terms": null
+        }
+      ],
+      "ultra": [
+        {
+          "clubOnly": false,
+          "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+          "discountRate": 21.57,
+          "endsAt": "2026-10-04T23:59:00.000",
+          "maxQuantity": null,
+          "minQuantity": 2,
+          "startsAt": "2026-08-19T00:00:00.000",
+          "terms": null
+        }
+      ],
+      "ultra-fiesta": [
+        {
+          "clubOnly": false,
+          "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+          "discountRate": 21.57,
+          "endsAt": "2026-10-04T23:59:00.000",
+          "maxQuantity": null,
+          "minQuantity": 2,
+          "startsAt": "2026-08-19T00:00:00.000",
+          "terms": null
+        }
+      ],
+      "ultra-paradise": [
+        {
+          "clubOnly": false,
+          "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+          "discountRate": 21.57,
+          "endsAt": "2026-10-04T23:59:00.000",
+          "maxQuantity": null,
+          "minQuantity": 2,
+          "startsAt": "2026-08-19T00:00:00.000",
+          "terms": null
+        }
+      ],
+      "ultra-peachy-keen": [
+        {
+          "clubOnly": false,
+          "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+          "discountRate": 21.57,
+          "endsAt": "2026-10-04T23:59:00.000",
+          "maxQuantity": null,
+          "minQuantity": 2,
+          "startsAt": "2026-08-19T00:00:00.000",
+          "terms": null
+        }
+      ]
+    }
+  },
+  "DOR_ALON:511": {
+    "fetchedAt": "2026-09-14T16:43:58.462985+00:00",
     "promos": {
       "green-zero": [
         {
@@ -3866,6 +3995,131 @@
       ]
     }
   },
+  "DOR_ALON:554": {
+    "fetchedAt": "2026-09-14T16:44:43.668642+00:00",
+    "promos": {
+      "green-zero": [
+        {
+          "clubOnly": false,
+          "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+          "discountRate": 21.57,
+          "endsAt": "2026-10-04T23:59:00.000",
+          "maxQuantity": null,
+          "minQuantity": 2,
+          "startsAt": "2026-08-19T00:00:00.000",
+          "terms": null
+        }
+      ],
+      "mango-loco": [
+        {
+          "clubOnly": false,
+          "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+          "discountRate": 21.57,
+          "endsAt": "2026-10-04T23:59:00.000",
+          "maxQuantity": null,
+          "minQuantity": 2,
+          "startsAt": "2026-08-19T00:00:00.000",
+          "terms": null
+        }
+      ],
+      "monarch": [
+        {
+          "clubOnly": false,
+          "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+          "discountRate": 21.57,
+          "endsAt": "2026-10-04T23:59:00.000",
+          "maxQuantity": null,
+          "minQuantity": 2,
+          "startsAt": "2026-08-19T00:00:00.000",
+          "terms": null
+        }
+      ],
+      "original": [
+        {
+          "clubOnly": false,
+          "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+          "discountRate": 21.57,
+          "endsAt": "2026-10-04T23:59:00.000",
+          "maxQuantity": null,
+          "minQuantity": 2,
+          "startsAt": "2026-08-19T00:00:00.000",
+          "terms": null
+        }
+      ],
+      "pipeline-punch": [
+        {
+          "clubOnly": false,
+          "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+          "discountRate": 21.57,
+          "endsAt": "2026-10-04T23:59:00.000",
+          "maxQuantity": null,
+          "minQuantity": 2,
+          "startsAt": "2026-08-19T00:00:00.000",
+          "terms": null
+        }
+      ],
+      "strawberry": [
+        {
+          "clubOnly": false,
+          "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+          "discountRate": 21.57,
+          "endsAt": "2026-10-04T23:59:00.000",
+          "maxQuantity": null,
+          "minQuantity": 2,
+          "startsAt": "2026-08-19T00:00:00.000",
+          "terms": null
+        }
+      ],
+      "ultra": [
+        {
+          "clubOnly": false,
+          "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+          "discountRate": 21.57,
+          "endsAt": "2026-10-04T23:59:00.000",
+          "maxQuantity": null,
+          "minQuantity": 2,
+          "startsAt": "2026-08-19T00:00:00.000",
+          "terms": null
+        }
+      ],
+      "ultra-fiesta": [
+        {
+          "clubOnly": false,
+          "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+          "discountRate": 21.57,
+          "endsAt": "2026-10-04T23:59:00.000",
+          "maxQuantity": null,
+          "minQuantity": 2,
+          "startsAt": "2026-08-19T00:00:00.000",
+          "terms": null
+        }
+      ],
+      "ultra-paradise": [
+        {
+          "clubOnly": false,
+          "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+          "discountRate": 21.57,
+          "endsAt": "2026-10-04T23:59:00.000",
+          "maxQuantity": null,
+          "minQuantity": 2,
+          "startsAt": "2026-08-19T00:00:00.000",
+          "terms": null
+        }
+      ],
+      "ultra-peachy-keen": [
+        {
+          "clubOnly": false,
+          "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+          "discountRate": 21.57,
+          "endsAt": "2026-10-04T23:59:00.000",
+          "maxQuantity": null,
+          "minQuantity": 2,
+          "startsAt": "2026-08-19T00:00:00.000",
+          "terms": null
+        }
+      ]
+    }
+  },
   "DOR_ALON:556": {
     "fetchedAt": "2026-09-13T21:01:18.834823+00:00",
     "promos": {
@@ -3882,6 +4136,131 @@
         }
       ],
       "mango-loco": [
+        {
+          "clubOnly": false,
+          "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+          "discountRate": 21.57,
+          "endsAt": "2026-10-04T23:59:00.000",
+          "maxQuantity": null,
+          "minQuantity": 2,
+          "startsAt": "2026-08-19T00:00:00.000",
+          "terms": null
+        }
+      ],
+      "original": [
+        {
+          "clubOnly": false,
+          "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+          "discountRate": 21.57,
+          "endsAt": "2026-10-04T23:59:00.000",
+          "maxQuantity": null,
+          "minQuantity": 2,
+          "startsAt": "2026-08-19T00:00:00.000",
+          "terms": null
+        }
+      ],
+      "pipeline-punch": [
+        {
+          "clubOnly": false,
+          "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+          "discountRate": 21.57,
+          "endsAt": "2026-10-04T23:59:00.000",
+          "maxQuantity": null,
+          "minQuantity": 2,
+          "startsAt": "2026-08-19T00:00:00.000",
+          "terms": null
+        }
+      ],
+      "strawberry": [
+        {
+          "clubOnly": false,
+          "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+          "discountRate": 21.57,
+          "endsAt": "2026-10-04T23:59:00.000",
+          "maxQuantity": null,
+          "minQuantity": 2,
+          "startsAt": "2026-08-19T00:00:00.000",
+          "terms": null
+        }
+      ],
+      "ultra": [
+        {
+          "clubOnly": false,
+          "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+          "discountRate": 21.57,
+          "endsAt": "2026-10-04T23:59:00.000",
+          "maxQuantity": null,
+          "minQuantity": 2,
+          "startsAt": "2026-08-19T00:00:00.000",
+          "terms": null
+        }
+      ],
+      "ultra-fiesta": [
+        {
+          "clubOnly": false,
+          "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+          "discountRate": 21.57,
+          "endsAt": "2026-10-04T23:59:00.000",
+          "maxQuantity": null,
+          "minQuantity": 2,
+          "startsAt": "2026-08-19T00:00:00.000",
+          "terms": null
+        }
+      ],
+      "ultra-paradise": [
+        {
+          "clubOnly": false,
+          "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+          "discountRate": 21.57,
+          "endsAt": "2026-10-04T23:59:00.000",
+          "maxQuantity": null,
+          "minQuantity": 2,
+          "startsAt": "2026-08-19T00:00:00.000",
+          "terms": null
+        }
+      ],
+      "ultra-peachy-keen": [
+        {
+          "clubOnly": false,
+          "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+          "discountRate": 21.57,
+          "endsAt": "2026-10-04T23:59:00.000",
+          "maxQuantity": null,
+          "minQuantity": 2,
+          "startsAt": "2026-08-19T00:00:00.000",
+          "terms": null
+        }
+      ]
+    }
+  },
+  "DOR_ALON:558": {
+    "fetchedAt": "2026-09-14T16:43:58.726960+00:00",
+    "promos": {
+      "green-zero": [
+        {
+          "clubOnly": false,
+          "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+          "discountRate": 21.57,
+          "endsAt": "2026-10-04T23:59:00.000",
+          "maxQuantity": null,
+          "minQuantity": 2,
+          "startsAt": "2026-08-19T00:00:00.000",
+          "terms": null
+        }
+      ],
+      "mango-loco": [
+        {
+          "clubOnly": false,
+          "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
+          "discountRate": 21.57,
+          "endsAt": "2026-10-04T23:59:00.000",
+          "maxQuantity": null,
+          "minQuantity": 2,
+          "startsAt": "2026-08-19T00:00:00.000",
+          "terms": null
+        }
+      ],
+      "monarch": [
         {
           "clubOnly": false,
           "description": "מבצע סל משקה אנרגיה מונסטר 2 ב 16 שח",
@@ -7347,6 +7726,232 @@
       ]
     }
   },
+  "DOR_ALON:808": {
+    "fetchedAt": "2026-09-14T16:43:59.179494+00:00",
+    "promos": {
+      "green-zero": [
+        {
+          "clubOnly": false,
+          "description": "משקה מונסטר 500מ ל 2 ב 21.90",
+          "discountRate": null,
+          "endsAt": "2026-10-04T23:59:00.000",
+          "maxQuantity": null,
+          "minQuantity": 2,
+          "startsAt": "2026-09-01T00:00:00.000",
+          "terms": null
+        }
+      ],
+      "mango-loco": [
+        {
+          "clubOnly": false,
+          "description": "משקה מונסטר 500מ ל 2 ב 21.90",
+          "discountRate": null,
+          "endsAt": "2026-10-04T23:59:00.000",
+          "maxQuantity": null,
+          "minQuantity": 2,
+          "startsAt": "2026-09-01T00:00:00.000",
+          "terms": null
+        }
+      ],
+      "monarch": [
+        {
+          "clubOnly": false,
+          "description": "משקה מונסטר 500מ ל 2 ב 21.90",
+          "discountRate": null,
+          "endsAt": "2026-10-04T23:59:00.000",
+          "maxQuantity": null,
+          "minQuantity": 2,
+          "startsAt": "2026-09-01T00:00:00.000",
+          "terms": null
+        }
+      ],
+      "original": [
+        {
+          "clubOnly": false,
+          "description": "משקה מונסטר 500מ ל 2 ב 21.90",
+          "discountRate": null,
+          "endsAt": "2026-10-04T23:59:00.000",
+          "maxQuantity": null,
+          "minQuantity": 2,
+          "startsAt": "2026-09-01T00:00:00.000",
+          "terms": null
+        }
+      ],
+      "strawberry": [
+        {
+          "clubOnly": false,
+          "description": "משקה מונסטר 500מ ל 2 ב 21.90",
+          "discountRate": null,
+          "endsAt": "2026-10-04T23:59:00.000",
+          "maxQuantity": null,
+          "minQuantity": 2,
+          "startsAt": "2026-09-01T00:00:00.000",
+          "terms": null
+        }
+      ],
+      "ultra": [
+        {
+          "clubOnly": false,
+          "description": "משקה מונסטר 500מ ל 2 ב 21.90",
+          "discountRate": null,
+          "endsAt": "2026-10-04T23:59:00.000",
+          "maxQuantity": null,
+          "minQuantity": 2,
+          "startsAt": "2026-09-01T00:00:00.000",
+          "terms": null
+        }
+      ],
+      "ultra-fiesta": [
+        {
+          "clubOnly": false,
+          "description": "משקה מונסטר 500מ ל 2 ב 21.90",
+          "discountRate": null,
+          "endsAt": "2026-10-04T23:59:00.000",
+          "maxQuantity": null,
+          "minQuantity": 2,
+          "startsAt": "2026-09-01T00:00:00.000",
+          "terms": null
+        }
+      ],
+      "ultra-paradise": [
+        {
+          "clubOnly": false,
+          "description": "משקה מונסטר 500מ ל 2 ב 21.90",
+          "discountRate": null,
+          "endsAt": "2026-10-04T23:59:00.000",
+          "maxQuantity": null,
+          "minQuantity": 2,
+          "startsAt": "2026-09-01T00:00:00.000",
+          "terms": null
+        }
+      ],
+      "ultra-peachy-keen": [
+        {
+          "clubOnly": false,
+          "description": "משקה מונסטר 500מ ל 2 ב 21.90",
+          "discountRate": null,
+          "endsAt": "2026-10-04T23:59:00.000",
+          "maxQuantity": null,
+          "minQuantity": 2,
+          "startsAt": "2026-09-01T00:00:00.000",
+          "terms": null
+        }
+      ]
+    }
+  },
+  "DOR_ALON:814": {
+    "fetchedAt": "2026-09-14T16:44:00.188489+00:00",
+    "promos": {
+      "green-zero": [
+        {
+          "clubOnly": false,
+          "description": "משקה מונסטר 500מ ל 2 ב 21.90",
+          "discountRate": null,
+          "endsAt": "2026-10-04T23:59:00.000",
+          "maxQuantity": null,
+          "minQuantity": 2,
+          "startsAt": "2026-09-01T00:00:00.000",
+          "terms": null
+        }
+      ],
+      "mango-loco": [
+        {
+          "clubOnly": false,
+          "description": "משקה מונסטר 500מ ל 2 ב 21.90",
+          "discountRate": null,
+          "endsAt": "2026-10-04T23:59:00.000",
+          "maxQuantity": null,
+          "minQuantity": 2,
+          "startsAt": "2026-09-01T00:00:00.000",
+          "terms": null
+        }
+      ],
+      "monarch": [
+        {
+          "clubOnly": false,
+          "description": "משקה מונסטר 500מ ל 2 ב 21.90",
+          "discountRate": null,
+          "endsAt": "2026-10-04T23:59:00.000",
+          "maxQuantity": null,
+          "minQuantity": 2,
+          "startsAt": "2026-09-01T00:00:00.000",
+          "terms": null
+        }
+      ],
+      "original": [
+        {
+          "clubOnly": false,
+          "description": "משקה מונסטר 500מ ל 2 ב 21.90",
+          "discountRate": null,
+          "endsAt": "2026-10-04T23:59:00.000",
+          "maxQuantity": null,
+          "minQuantity": 2,
+          "startsAt": "2026-09-01T00:00:00.000",
+          "terms": null
+        }
+      ],
+      "strawberry": [
+        {
+          "clubOnly": false,
+          "description": "משקה מונסטר 500מ ל 2 ב 21.90",
+          "discountRate": null,
+          "endsAt": "2026-10-04T23:59:00.000",
+          "maxQuantity": null,
+          "minQuantity": 2,
+          "startsAt": "2026-09-01T00:00:00.000",
+          "terms": null
+        }
+      ],
+      "ultra": [
+        {
+          "clubOnly": false,
+          "description": "משקה מונסטר 500מ ל 2 ב 21.90",
+          "discountRate": null,
+          "endsAt": "2026-10-04T23:59:00.000",
+          "maxQuantity": null,
+          "minQuantity": 2,
+          "startsAt": "2026-09-01T00:00:00.000",
+          "terms": null
+        }
+      ],
+      "ultra-fiesta": [
+        {
+          "clubOnly": false,
+          "description": "משקה מונסטר 500מ ל 2 ב 21.90",
+          "discountRate": null,
+          "endsAt": "2026-10-04T23:59:00.000",
+          "maxQuantity": null,
+          "minQuantity": 2,
+          "startsAt": "2026-09-01T00:00:00.000",
+          "terms": null
+        }
+      ],
+      "ultra-paradise": [
+        {
+          "clubOnly": false,
+          "description": "משקה מונסטר 500מ ל 2 ב 21.90",
+          "discountRate": null,
+          "endsAt": "2026-10-04T23:59:00.000",
+          "maxQuantity": null,
+          "minQuantity": 2,
+          "startsAt": "2026-09-01T00:00:00.000",
+          "terms": null
+        }
+      ],
+      "ultra-peachy-keen": [
+        {
+          "clubOnly": false,
+          "description": "משקה מונסטר 500מ ל 2 ב 21.90",
+          "discountRate": null,
+          "endsAt": "2026-10-04T23:59:00.000",
+          "maxQuantity": null,
+          "minQuantity": 2,
+          "startsAt": "2026-09-01T00:00:00.000",
+          "terms": null
+        }
+      ]
+    }
+  },
   "DOR_ALON:823": {
     "fetchedAt": "2026-09-13T21:01:22.583352+00:00",
     "promos": {
@@ -7462,6 +8067,119 @@
   },
   "DOR_ALON:850": {
     "fetchedAt": "2026-09-13T21:00:46.357461+00:00",
+    "promos": {
+      "green-zero": [
+        {
+          "clubOnly": false,
+          "description": "משקה מונסטר 500מ ל 2 ב 21.90",
+          "discountRate": null,
+          "endsAt": "2026-10-04T23:59:00.000",
+          "maxQuantity": null,
+          "minQuantity": 2,
+          "startsAt": "2026-09-01T00:00:00.000",
+          "terms": null
+        }
+      ],
+      "mango-loco": [
+        {
+          "clubOnly": false,
+          "description": "משקה מונסטר 500מ ל 2 ב 21.90",
+          "discountRate": null,
+          "endsAt": "2026-10-04T23:59:00.000",
+          "maxQuantity": null,
+          "minQuantity": 2,
+          "startsAt": "2026-09-01T00:00:00.000",
+          "terms": null
+        }
+      ],
+      "monarch": [
+        {
+          "clubOnly": false,
+          "description": "משקה מונסטר 500מ ל 2 ב 21.90",
+          "discountRate": null,
+          "endsAt": "2026-10-04T23:59:00.000",
+          "maxQuantity": null,
+          "minQuantity": 2,
+          "startsAt": "2026-09-01T00:00:00.000",
+          "terms": null
+        }
+      ],
+      "original": [
+        {
+          "clubOnly": false,
+          "description": "משקה מונסטר 500מ ל 2 ב 21.90",
+          "discountRate": null,
+          "endsAt": "2026-10-04T23:59:00.000",
+          "maxQuantity": null,
+          "minQuantity": 2,
+          "startsAt": "2026-09-01T00:00:00.000",
+          "terms": null
+        }
+      ],
+      "strawberry": [
+        {
+          "clubOnly": false,
+          "description": "משקה מונסטר 500מ ל 2 ב 21.90",
+          "discountRate": null,
+          "endsAt": "2026-10-04T23:59:00.000",
+          "maxQuantity": null,
+          "minQuantity": 2,
+          "startsAt": "2026-09-01T00:00:00.000",
+          "terms": null
+        }
+      ],
+      "ultra": [
+        {
+          "clubOnly": false,
+          "description": "משקה מונסטר 500מ ל 2 ב 21.90",
+          "discountRate": null,
+          "endsAt": "2026-10-04T23:59:00.000",
+          "maxQuantity": null,
+          "minQuantity": 2,
+          "startsAt": "2026-09-01T00:00:00.000",
+          "terms": null
+        }
+      ],
+      "ultra-fiesta": [
+        {
+          "clubOnly": false,
+          "description": "משקה מונסטר 500מ ל 2 ב 21.90",
+          "discountRate": null,
+          "endsAt": "2026-10-04T23:59:00.000",
+          "maxQuantity": null,
+          "minQuantity": 2,
+          "startsAt": "2026-09-01T00:00:00.000",
+          "terms": null
+        }
+      ],
+      "ultra-paradise": [
+        {
+          "clubOnly": false,
+          "description": "משקה מונסטר 500מ ל 2 ב 21.90",
+          "discountRate": null,
+          "endsAt": "2026-10-04T23:59:00.000",
+          "maxQuantity": null,
+          "minQuantity": 2,
+          "startsAt": "2026-09-01T00:00:00.000",
+          "terms": null
+        }
+      ],
+      "ultra-peachy-keen": [
+        {
+          "clubOnly": false,
+          "description": "משקה מונסטר 500מ ל 2 ב 21.90",
+          "discountRate": null,
+          "endsAt": "2026-10-04T23:59:00.000",
+          "maxQuantity": null,
+          "minQuantity": 2,
+          "startsAt": "2026-09-01T00:00:00.000",
+          "terms": null
+        }
+      ]
+    }
+  },
+  "DOR_ALON:853": {
+    "fetchedAt": "2026-09-14T16:43:59.572638+00:00",
     "promos": {
       "green-zero": [
         {
@@ -8025,6 +8743,119 @@
       ]
     }
   },
+  "DOR_ALON:913": {
+    "fetchedAt": "2026-09-14T16:44:01.925269+00:00",
+    "promos": {
+      "green-zero": [
+        {
+          "clubOnly": false,
+          "description": "משקה מונסטר 500מ ל 2 ב 21.90",
+          "discountRate": null,
+          "endsAt": "2026-10-04T23:59:00.000",
+          "maxQuantity": null,
+          "minQuantity": 2,
+          "startsAt": "2026-09-01T00:00:00.000",
+          "terms": null
+        }
+      ],
+      "mango-loco": [
+        {
+          "clubOnly": false,
+          "description": "משקה מונסטר 500מ ל 2 ב 21.90",
+          "discountRate": null,
+          "endsAt": "2026-10-04T23:59:00.000",
+          "maxQuantity": null,
+          "minQuantity": 2,
+          "startsAt": "2026-09-01T00:00:00.000",
+          "terms": null
+        }
+      ],
+      "monarch": [
+        {
+          "clubOnly": false,
+          "description": "משקה מונסטר 500מ ל 2 ב 21.90",
+          "discountRate": null,
+          "endsAt": "2026-10-04T23:59:00.000",
+          "maxQuantity": null,
+          "minQuantity": 2,
+          "startsAt": "2026-09-01T00:00:00.000",
+          "terms": null
+        }
+      ],
+      "original": [
+        {
+          "clubOnly": false,
+          "description": "משקה מונסטר 500מ ל 2 ב 21.90",
+          "discountRate": null,
+          "endsAt": "2026-10-04T23:59:00.000",
+          "maxQuantity": null,
+          "minQuantity": 2,
+          "startsAt": "2026-09-01T00:00:00.000",
+          "terms": null
+        }
+      ],
+      "strawberry": [
+        {
+          "clubOnly": false,
+          "description": "משקה מונסטר 500מ ל 2 ב 21.90",
+          "discountRate": null,
+          "endsAt": "2026-10-04T23:59:00.000",
+          "maxQuantity": null,
+          "minQuantity": 2,
+          "startsAt": "2026-09-01T00:00:00.000",
+          "terms": null
+        }
+      ],
+      "ultra": [
+        {
+          "clubOnly": false,
+          "description": "משקה מונסטר 500מ ל 2 ב 21.90",
+          "discountRate": null,
+          "endsAt": "2026-10-04T23:59:00.000",
+          "maxQuantity": null,
+          "minQuantity": 2,
+          "startsAt": "2026-09-01T00:00:00.000",
+          "terms": null
+        }
+      ],
+      "ultra-fiesta": [
+        {
+          "clubOnly": false,
+          "description": "משקה מונסטר 500מ ל 2 ב 21.90",
+          "discountRate": null,
+          "endsAt": "2026-10-04T23:59:00.000",
+          "maxQuantity": null,
+          "minQuantity": 2,
+          "startsAt": "2026-09-01T00:00:00.000",
+          "terms": null
+        }
+      ],
+      "ultra-paradise": [
+        {
+          "clubOnly": false,
+          "description": "משקה מונסטר 500מ ל 2 ב 21.90",
+          "discountRate": null,
+          "endsAt": "2026-10-04T23:59:00.000",
+          "maxQuantity": null,
+          "minQuantity": 2,
+          "startsAt": "2026-09-01T00:00:00.000",
+          "terms": null
+        }
+      ],
+      "ultra-peachy-keen": [
+        {
+          "clubOnly": false,
+          "description": "משקה מונסטר 500מ ל 2 ב 21.90",
+          "discountRate": null,
+          "endsAt": "2026-10-04T23:59:00.000",
+          "maxQuantity": null,
+          "minQuantity": 2,
+          "startsAt": "2026-09-01T00:00:00.000",
+          "terms": null
+        }
+      ]
+    }
+  },
   "DOR_ALON:927": {
     "fetchedAt": "2026-09-13T21:01:05.131622+00:00",
     "promos": {
@@ -8364,6 +9195,119 @@
       ]
     }
   },
+  "DOR_ALON:949": {
+    "fetchedAt": "2026-09-14T16:44:01.247456+00:00",
+    "promos": {
+      "green-zero": [
+        {
+          "clubOnly": false,
+          "description": "משקה מונסטר 500מ ל 2 ב 21.90",
+          "discountRate": null,
+          "endsAt": "2026-10-04T23:59:00.000",
+          "maxQuantity": null,
+          "minQuantity": 2,
+          "startsAt": "2026-09-01T00:00:00.000",
+          "terms": null
+        }
+      ],
+      "mango-loco": [
+        {
+          "clubOnly": false,
+          "description": "משקה מונסטר 500מ ל 2 ב 21.90",
+          "discountRate": null,
+          "endsAt": "2026-10-04T23:59:00.000",
+          "maxQuantity": null,
+          "minQuantity": 2,
+          "startsAt": "2026-09-01T00:00:00.000",
+          "terms": null
+        }
+      ],
+      "monarch": [
+        {
+          "clubOnly": false,
+          "description": "משקה מונסטר 500מ ל 2 ב 21.90",
+          "discountRate": null,
+          "endsAt": "2026-10-04T23:59:00.000",
+          "maxQuantity": null,
+          "minQuantity": 2,
+          "startsAt": "2026-09-01T00:00:00.000",
+          "terms": null
+        }
+      ],
+      "original": [
+        {
+          "clubOnly": false,
+          "description": "משקה מונסטר 500מ ל 2 ב 21.90",
+          "discountRate": null,
+          "endsAt": "2026-10-04T23:59:00.000",
+          "maxQuantity": null,
+          "minQuantity": 2,
+          "startsAt": "2026-09-01T00:00:00.000",
+          "terms": null
+        }
+      ],
+      "strawberry": [
+        {
+          "clubOnly": false,
+          "description": "משקה מונסטר 500מ ל 2 ב 21.90",
+          "discountRate": null,
+          "endsAt": "2026-10-04T23:59:00.000",
+          "maxQuantity": null,
+          "minQuantity": 2,
+          "startsAt": "2026-09-01T00:00:00.000",
+          "terms": null
+        }
+      ],
+      "ultra": [
+        {
+          "clubOnly": false,
+          "description": "משקה מונסטר 500מ ל 2 ב 21.90",
+          "discountRate": null,
+          "endsAt": "2026-10-04T23:59:00.000",
+          "maxQuantity": null,
+          "minQuantity": 2,
+          "startsAt": "2026-09-01T00:00:00.000",
+          "terms": null
+        }
+      ],
+      "ultra-fiesta": [
+        {
+          "clubOnly": false,
+          "description": "משקה מונסטר 500מ ל 2 ב 21.90",
+          "discountRate": null,
+          "endsAt": "2026-10-04T23:59:00.000",
+          "maxQuantity": null,
+          "minQuantity": 2,
+          "startsAt": "2026-09-01T00:00:00.000",
+          "terms": null
+        }
+      ],
+      "ultra-paradise": [
+        {
+          "clubOnly": false,
+          "description": "משקה מונסטר 500מ ל 2 ב 21.90",
+          "discountRate": null,
+          "endsAt": "2026-10-04T23:59:00.000",
+          "maxQuantity": null,
+          "minQuantity": 2,
+          "startsAt": "2026-09-01T00:00:00.000",
+          "terms": null
+        }
+      ],
+      "ultra-peachy-keen": [
+        {
+          "clubOnly": false,
+          "description": "משקה מונסטר 500מ ל 2 ב 21.90",
+          "discountRate": null,
+          "endsAt": "2026-10-04T23:59:00.000",
+          "maxQuantity": null,
+          "minQuantity": 2,
+          "startsAt": "2026-09-01T00:00:00.000",
+          "terms": null
+        }
+      ]
+    }
+  },
   "DOR_ALON:958": {
     "fetchedAt": "2026-09-13T21:00:41.763018+00:00",
     "promos": {
@@ -8479,6 +9423,119 @@
   },
   "DOR_ALON:961": {
     "fetchedAt": "2026-09-14T01:37:24.859282+00:00",
+    "promos": {
+      "green-zero": [
+        {
+          "clubOnly": false,
+          "description": "משקה מונסטר 500מ ל 2 ב 21.90",
+          "discountRate": null,
+          "endsAt": "2026-10-04T23:59:00.000",
+          "maxQuantity": null,
+          "minQuantity": 2,
+          "startsAt": "2026-09-01T00:00:00.000",
+          "terms": null
+        }
+      ],
+      "mango-loco": [
+        {
+          "clubOnly": false,
+          "description": "משקה מונסטר 500מ ל 2 ב 21.90",
+          "discountRate": null,
+          "endsAt": "2026-10-04T23:59:00.000",
+          "maxQuantity": null,
+          "minQuantity": 2,
+          "startsAt": "2026-09-01T00:00:00.000",
+          "terms": null
+        }
+      ],
+      "monarch": [
+        {
+          "clubOnly": false,
+          "description": "משקה מונסטר 500מ ל 2 ב 21.90",
+          "discountRate": null,
+          "endsAt": "2026-10-04T23:59:00.000",
+          "maxQuantity": null,
+          "minQuantity": 2,
+          "startsAt": "2026-09-01T00:00:00.000",
+          "terms": null
+        }
+      ],
+      "original": [
+        {
+          "clubOnly": false,
+          "description": "משקה מונסטר 500מ ל 2 ב 21.90",
+          "discountRate": null,
+          "endsAt": "2026-10-04T23:59:00.000",
+          "maxQuantity": null,
+          "minQuantity": 2,
+          "startsAt": "2026-09-01T00:00:00.000",
+          "terms": null
+        }
+      ],
+      "strawberry": [
+        {
+          "clubOnly": false,
+          "description": "משקה מונסטר 500מ ל 2 ב 21.90",
+          "discountRate": null,
+          "endsAt": "2026-10-04T23:59:00.000",
+          "maxQuantity": null,
+          "minQuantity": 2,
+          "startsAt": "2026-09-01T00:00:00.000",
+          "terms": null
+        }
+      ],
+      "ultra": [
+        {
+          "clubOnly": false,
+          "description": "משקה מונסטר 500מ ל 2 ב 21.90",
+          "discountRate": null,
+          "endsAt": "2026-10-04T23:59:00.000",
+          "maxQuantity": null,
+          "minQuantity": 2,
+          "startsAt": "2026-09-01T00:00:00.000",
+          "terms": null
+        }
+      ],
+      "ultra-fiesta": [
+        {
+          "clubOnly": false,
+          "description": "משקה מונסטר 500מ ל 2 ב 21.90",
+          "discountRate": null,
+          "endsAt": "2026-10-04T23:59:00.000",
+          "maxQuantity": null,
+          "minQuantity": 2,
+          "startsAt": "2026-09-01T00:00:00.000",
+          "terms": null
+        }
+      ],
+      "ultra-paradise": [
+        {
+          "clubOnly": false,
+          "description": "משקה מונסטר 500מ ל 2 ב 21.90",
+          "discountRate": null,
+          "endsAt": "2026-10-04T23:59:00.000",
+          "maxQuantity": null,
+          "minQuantity": 2,
+          "startsAt": "2026-09-01T00:00:00.000",
+          "terms": null
+        }
+      ],
+      "ultra-peachy-keen": [
+        {
+          "clubOnly": false,
+          "description": "משקה מונסטר 500מ ל 2 ב 21.90",
+          "discountRate": null,
+          "endsAt": "2026-10-04T23:59:00.000",
+          "maxQuantity": null,
+          "minQuantity": 2,
+          "startsAt": "2026-09-01T00:00:00.000",
+          "terms": null
+        }
+      ]
+    }
+  },
+  "DOR_ALON:968": {
+    "fetchedAt": "2026-09-14T16:44:12.323143+00:00",
     "promos": {
       "green-zero": [
         {
@@ -8836,8 +9893,24 @@
     "fetchedAt": "2026-09-13T23:33:17.053336+00:00",
     "promos": {}
   },
+  "FRESH_MARKET_AND_SUPER_DOSH:20": {
+    "fetchedAt": "2026-09-14T17:35:24.830858+00:00",
+    "promos": {}
+  },
+  "FRESH_MARKET_AND_SUPER_DOSH:21": {
+    "fetchedAt": "2026-09-14T17:35:23.561671+00:00",
+    "promos": {}
+  },
+  "FRESH_MARKET_AND_SUPER_DOSH:22": {
+    "fetchedAt": "2026-09-14T17:35:24.209604+00:00",
+    "promos": {}
+  },
   "FRESH_MARKET_AND_SUPER_DOSH:23": {
     "fetchedAt": "2026-09-13T23:33:26.656406+00:00",
+    "promos": {}
+  },
+  "FRESH_MARKET_AND_SUPER_DOSH:24": {
+    "fetchedAt": "2026-09-14T17:35:23.862115+00:00",
     "promos": {}
   },
   "FRESH_MARKET_AND_SUPER_DOSH:25": {
@@ -8854,6 +9927,14 @@
   },
   "FRESH_MARKET_AND_SUPER_DOSH:28": {
     "fetchedAt": "2026-09-13T23:33:22.105325+00:00",
+    "promos": {}
+  },
+  "FRESH_MARKET_AND_SUPER_DOSH:29": {
+    "fetchedAt": "2026-09-14T17:35:25.279972+00:00",
+    "promos": {}
+  },
+  "FRESH_MARKET_AND_SUPER_DOSH:3": {
+    "fetchedAt": "2026-09-14T17:35:23.044955+00:00",
     "promos": {}
   },
   "FRESH_MARKET_AND_SUPER_DOSH:31": {
@@ -8888,6 +9969,10 @@
     "fetchedAt": "2026-09-13T23:33:27.150340+00:00",
     "promos": {}
   },
+  "FRESH_MARKET_AND_SUPER_DOSH:44": {
+    "fetchedAt": "2026-09-14T17:35:25.567663+00:00",
+    "promos": {}
+  },
   "FRESH_MARKET_AND_SUPER_DOSH:45": {
     "fetchedAt": "2026-09-13T23:33:21.754488+00:00",
     "promos": {}
@@ -8898,6 +9983,10 @@
   },
   "FRESH_MARKET_AND_SUPER_DOSH:47": {
     "fetchedAt": "2026-09-13T23:33:27.721598+00:00",
+    "promos": {}
+  },
+  "FRESH_MARKET_AND_SUPER_DOSH:48": {
+    "fetchedAt": "2026-09-14T17:35:26.169363+00:00",
     "promos": {}
   },
   "FRESH_MARKET_AND_SUPER_DOSH:49": {
@@ -8924,6 +10013,38 @@
     "fetchedAt": "2026-09-14T01:37:37.346038+00:00",
     "promos": {}
   },
+  "FRESH_MARKET_AND_SUPER_DOSH:9": {
+    "fetchedAt": "2026-09-14T17:35:23.321400+00:00",
+    "promos": {}
+  },
+  "HAZI_HINAM:201": {
+    "fetchedAt": "2026-09-14T17:35:37.973568+00:00",
+    "promos": {}
+  },
+  "HAZI_HINAM:202": {
+    "fetchedAt": "2026-09-14T17:35:38.318813+00:00",
+    "promos": {}
+  },
+  "HAZI_HINAM:203": {
+    "fetchedAt": "2026-09-14T17:35:38.841217+00:00",
+    "promos": {}
+  },
+  "HAZI_HINAM:204": {
+    "fetchedAt": "2026-09-14T17:35:39.162445+00:00",
+    "promos": {}
+  },
+  "HAZI_HINAM:206": {
+    "fetchedAt": "2026-09-14T17:35:38.615530+00:00",
+    "promos": {}
+  },
+  "HAZI_HINAM:208": {
+    "fetchedAt": "2026-09-14T17:35:39.647288+00:00",
+    "promos": {}
+  },
+  "HAZI_HINAM:209": {
+    "fetchedAt": "2026-09-14T17:35:43.367640+00:00",
+    "promos": {}
+  },
   "KESHET:14": {
     "fetchedAt": "2026-09-13T23:33:40.055496+00:00",
     "promos": {}
@@ -8948,8 +10069,16 @@
     "fetchedAt": "2026-09-13T23:33:34.481936+00:00",
     "promos": {}
   },
+  "KING_STORE:200": {
+    "fetchedAt": "2026-09-14T17:35:33.621433+00:00",
+    "promos": {}
+  },
   "KING_STORE:27": {
     "fetchedAt": "2026-09-13T23:33:36.385365+00:00",
+    "promos": {}
+  },
+  "KING_STORE:3": {
+    "fetchedAt": "2026-09-14T17:35:27.207992+00:00",
     "promos": {}
   },
   "KING_STORE:31": {
@@ -9016,6 +10145,10 @@
     "fetchedAt": "2026-09-13T23:33:30.201134+00:00",
     "promos": {}
   },
+  "MAAYAN_2000:38": {
+    "fetchedAt": "2026-09-14T17:35:27.003920+00:00",
+    "promos": {}
+  },
   "MAAYAN_2000:39": {
     "fetchedAt": "2026-09-13T23:33:33.888610+00:00",
     "promos": {}
@@ -9060,12 +10193,204 @@
     "fetchedAt": "2026-09-14T01:37:35.947141+00:00",
     "promos": {}
   },
+  "NETIV_HASED:17": {
+    "fetchedAt": "2026-09-14T17:34:48.753976+00:00",
+    "promos": {}
+  },
+  "NETIV_HASED:19": {
+    "fetchedAt": "2026-09-14T17:34:48.306471+00:00",
+    "promos": {}
+  },
+  "NETIV_HASED:216": {
+    "fetchedAt": "2026-09-14T17:35:08.562880+00:00",
+    "promos": {}
+  },
+  "NETIV_HASED:218": {
+    "fetchedAt": "2026-09-14T17:34:28.801173+00:00",
+    "promos": {}
+  },
+  "NETIV_HASED:219": {
+    "fetchedAt": "2026-09-14T17:34:29.999224+00:00",
+    "promos": {}
+  },
+  "NETIV_HASED:225": {
+    "fetchedAt": "2026-09-14T17:34:29.680644+00:00",
+    "promos": {}
+  },
+  "NETIV_HASED:228": {
+    "fetchedAt": "2026-09-14T17:34:30.521841+00:00",
+    "promos": {}
+  },
+  "NETIV_HASED:230": {
+    "fetchedAt": "2026-09-14T17:34:30.356861+00:00",
+    "promos": {}
+  },
+  "NETIV_HASED:233": {
+    "fetchedAt": "2026-09-14T17:34:29.328410+00:00",
+    "promos": {}
+  },
+  "NETIV_HASED:234": {
+    "fetchedAt": "2026-09-14T17:35:17.066768+00:00",
+    "promos": {}
+  },
+  "NETIV_HASED:235": {
+    "fetchedAt": "2026-09-14T17:34:30.899850+00:00",
+    "promos": {}
+  },
+  "NETIV_HASED:237": {
+    "fetchedAt": "2026-09-14T17:34:29.024055+00:00",
+    "promos": {}
+  },
+  "NETIV_HASED:243": {
+    "fetchedAt": "2026-09-14T17:34:37.854683+00:00",
+    "promos": {}
+  },
+  "NETIV_HASED:244": {
+    "fetchedAt": "2026-09-14T17:34:37.668159+00:00",
+    "promos": {}
+  },
+  "NETIV_HASED:246": {
+    "fetchedAt": "2026-09-14T17:35:10.030506+00:00",
+    "promos": {}
+  },
+  "NETIV_HASED:248": {
+    "fetchedAt": "2026-09-14T17:34:38.328412+00:00",
+    "promos": {}
+  },
+  "NETIV_HASED:250": {
+    "fetchedAt": "2026-09-14T17:35:09.554384+00:00",
+    "promos": {}
+  },
+  "NETIV_HASED:251": {
+    "fetchedAt": "2026-09-14T17:34:37.388308+00:00",
+    "promos": {}
+  },
+  "NETIV_HASED:261": {
+    "fetchedAt": "2026-09-14T17:34:37.241220+00:00",
+    "promos": {}
+  },
+  "NETIV_HASED:262": {
+    "fetchedAt": "2026-09-14T17:35:10.386484+00:00",
+    "promos": {}
+  },
+  "NETIV_HASED:266": {
+    "fetchedAt": "2026-09-14T17:34:38.046896+00:00",
+    "promos": {}
+  },
+  "NETIV_HASED:27": {
+    "fetchedAt": "2026-09-14T17:34:48.471316+00:00",
+    "promos": {}
+  },
+  "NETIV_HASED:274": {
+    "fetchedAt": "2026-09-14T17:34:39.333277+00:00",
+    "promos": {}
+  },
+  "NETIV_HASED:275": {
+    "fetchedAt": "2026-09-14T17:34:37.079278+00:00",
+    "promos": {}
+  },
+  "NETIV_HASED:276": {
+    "fetchedAt": "2026-09-14T17:34:47.683998+00:00",
+    "promos": {}
+  },
+  "NETIV_HASED:300": {
+    "fetchedAt": "2026-09-14T17:35:16.862394+00:00",
+    "promos": {}
+  },
+  "NETIV_HASED:303": {
+    "fetchedAt": "2026-09-14T17:35:17.275341+00:00",
+    "promos": {}
+  },
+  "NETIV_HASED:304": {
+    "fetchedAt": "2026-09-14T17:35:17.916186+00:00",
+    "promos": {}
+  },
+  "NETIV_HASED:305": {
+    "fetchedAt": "2026-09-14T17:35:18.139356+00:00",
+    "promos": {}
+  },
+  "NETIV_HASED:307": {
+    "fetchedAt": "2026-09-14T17:35:17.708206+00:00",
+    "promos": {}
+  },
+  "NETIV_HASED:31": {
+    "fetchedAt": "2026-09-14T17:34:49.825000+00:00",
+    "promos": {}
+  },
+  "NETIV_HASED:32": {
+    "fetchedAt": "2026-09-14T17:34:50.582696+00:00",
+    "promos": {}
+  },
+  "NETIV_HASED:33": {
+    "fetchedAt": "2026-09-14T17:34:57.852650+00:00",
+    "promos": {}
+  },
+  "NETIV_HASED:38": {
+    "fetchedAt": "2026-09-14T17:34:58.510037+00:00",
+    "promos": {}
+  },
+  "NETIV_HASED:4": {
+    "fetchedAt": "2026-09-14T17:34:48.138963+00:00",
+    "promos": {}
+  },
+  "NETIV_HASED:41": {
+    "fetchedAt": "2026-09-14T17:35:15.928891+00:00",
+    "promos": {}
+  },
+  "NETIV_HASED:43": {
+    "fetchedAt": "2026-09-14T17:34:58.709209+00:00",
+    "promos": {}
+  },
+  "NETIV_HASED:46": {
+    "fetchedAt": "2026-09-14T17:34:58.311462+00:00",
+    "promos": {}
+  },
+  "NETIV_HASED:50": {
+    "fetchedAt": "2026-09-14T17:34:58.123787+00:00",
+    "promos": {}
+  },
+  "NETIV_HASED:52": {
+    "fetchedAt": "2026-09-14T17:34:59.255623+00:00",
+    "promos": {}
+  },
+  "NETIV_HASED:53": {
+    "fetchedAt": "2026-09-14T17:35:00.209420+00:00",
+    "promos": {}
+  },
+  "NETIV_HASED:54": {
+    "fetchedAt": "2026-09-14T17:34:59.050901+00:00",
+    "promos": {}
+  },
+  "NETIV_HASED:55": {
+    "fetchedAt": "2026-09-14T17:35:07.318095+00:00",
+    "promos": {}
+  },
+  "NETIV_HASED:56": {
+    "fetchedAt": "2026-09-14T17:35:07.504374+00:00",
+    "promos": {}
+  },
+  "NETIV_HASED:58": {
+    "fetchedAt": "2026-09-14T17:35:08.207057+00:00",
+    "promos": {}
+  },
+  "NETIV_HASED:60": {
+    "fetchedAt": "2026-09-14T17:35:07.131420+00:00",
+    "promos": {}
+  },
+  "NETIV_HASED:9": {
+    "fetchedAt": "2026-09-14T17:34:47.882141+00:00",
+    "promos": {}
+  },
   "OSHER_AD:1": {
-    "fetchedAt": "2026-09-13T11:53:47.818970+00:00",
+    "fetchedAt": "2026-09-14T16:43:56.697879+00:00",
     "promos": {}
   },
   "OSHER_AD:10": {
     "fetchedAt": "2026-09-14T13:51:34.396796+00:00",
+    "promos": {}
+  },
+  "OSHER_AD:13": {
+    "fetchedAt": "2026-09-14T16:43:56.970297+00:00",
     "promos": {}
   },
   "OSHER_AD:14": {
@@ -9073,7 +10398,7 @@
     "promos": {}
   },
   "OSHER_AD:16": {
-    "fetchedAt": "2026-09-13T11:53:33.667818+00:00",
+    "fetchedAt": "2026-09-14T16:43:57.499232+00:00",
     "promos": {}
   },
   "OSHER_AD:19": {
@@ -9101,7 +10426,7 @@
     "promos": {}
   },
   "OSHER_AD:29": {
-    "fetchedAt": "2026-09-13T11:53:41.369766+00:00",
+    "fetchedAt": "2026-09-14T16:43:57.635733+00:00",
     "promos": {}
   },
   "OSHER_AD:3": {
@@ -9133,7 +10458,7 @@
     "promos": {}
   },
   "OSHER_AD:9": {
-    "fetchedAt": "2026-09-13T11:53:41.713852+00:00",
+    "fetchedAt": "2026-09-14T16:43:56.827262+00:00",
     "promos": {}
   },
   "POLIZER:4": {
@@ -9178,6 +10503,10 @@
   },
   "RAMI_LEVY:2": {
     "fetchedAt": "2026-09-13T21:00:23.637803+00:00",
+    "promos": {}
+  },
+  "RAMI_LEVY:20": {
+    "fetchedAt": "2026-09-14T16:43:57.295653+00:00",
     "promos": {}
   },
   "RAMI_LEVY:203": {
@@ -9236,6 +10565,10 @@
     "fetchedAt": "2026-09-14T01:36:54.727686+00:00",
     "promos": {}
   },
+  "RAMI_LEVY:43": {
+    "fetchedAt": "2026-09-14T16:43:56.427200+00:00",
+    "promos": {}
+  },
   "RAMI_LEVY:44": {
     "fetchedAt": "2026-09-14T01:37:08.680706+00:00",
     "promos": {}
@@ -9246,6 +10579,10 @@
   },
   "RAMI_LEVY:46": {
     "fetchedAt": "2026-09-13T21:00:00.631577+00:00",
+    "promos": {}
+  },
+  "RAMI_LEVY:48": {
+    "fetchedAt": "2026-09-14T16:43:55.676590+00:00",
     "promos": {}
   },
   "RAMI_LEVY:49": {
@@ -9320,8 +10657,16 @@
     "fetchedAt": "2026-09-13T21:00:24.589536+00:00",
     "promos": {}
   },
+  "RAMI_LEVY:70": {
+    "fetchedAt": "2026-09-14T16:43:56.159973+00:00",
+    "promos": {}
+  },
   "RAMI_LEVY:700": {
     "fetchedAt": "2026-09-14T01:37:16.229681+00:00",
+    "promos": {}
+  },
+  "RAMI_LEVY:704": {
+    "fetchedAt": "2026-09-14T16:43:55.328938+00:00",
     "promos": {}
   },
   "RAMI_LEVY:705": {
@@ -9480,6 +10825,10 @@
     "fetchedAt": "2026-09-14T01:34:23.886206+00:00",
     "promos": {}
   },
+  "SHUFERSAL:11": {
+    "fetchedAt": "2026-09-14T16:35:33.610061+00:00",
+    "promos": {}
+  },
   "SHUFERSAL:110": {
     "fetchedAt": "2026-09-13T20:58:56.915009+00:00",
     "promos": {}
@@ -9500,8 +10849,16 @@
     "fetchedAt": "2026-09-14T01:28:33.278172+00:00",
     "promos": {}
   },
+  "SHUFERSAL:118": {
+    "fetchedAt": "2026-09-14T16:36:24.352040+00:00",
+    "promos": {}
+  },
   "SHUFERSAL:119": {
     "fetchedAt": "2026-09-13T20:58:55.768815+00:00",
+    "promos": {}
+  },
+  "SHUFERSAL:121": {
+    "fetchedAt": "2026-09-14T16:36:29.290389+00:00",
     "promos": {}
   },
   "SHUFERSAL:122": {
@@ -9524,12 +10881,20 @@
     "fetchedAt": "2026-09-14T01:32:28.073401+00:00",
     "promos": {}
   },
+  "SHUFERSAL:129": {
+    "fetchedAt": "2026-09-14T16:36:26.658520+00:00",
+    "promos": {}
+  },
   "SHUFERSAL:13": {
     "fetchedAt": "2026-09-14T01:29:54.128221+00:00",
     "promos": {}
   },
   "SHUFERSAL:130": {
     "fetchedAt": "2026-09-14T01:35:57.370372+00:00",
+    "promos": {}
+  },
+  "SHUFERSAL:134": {
+    "fetchedAt": "2026-09-14T16:37:58.211507+00:00",
     "promos": {}
   },
   "SHUFERSAL:139": {
@@ -9588,6 +10953,10 @@
     "fetchedAt": "2026-09-14T01:34:03.870795+00:00",
     "promos": {}
   },
+  "SHUFERSAL:166": {
+    "fetchedAt": "2026-09-14T16:36:33.002152+00:00",
+    "promos": {}
+  },
   "SHUFERSAL:169": {
     "fetchedAt": "2026-09-14T01:29:31.903251+00:00",
     "promos": {}
@@ -9612,6 +10981,14 @@
     "fetchedAt": "2026-09-14T01:31:31.411379+00:00",
     "promos": {}
   },
+  "SHUFERSAL:179": {
+    "fetchedAt": "2026-09-14T16:37:09.805711+00:00",
+    "promos": {}
+  },
+  "SHUFERSAL:18": {
+    "fetchedAt": "2026-09-14T16:36:18.309260+00:00",
+    "promos": {}
+  },
   "SHUFERSAL:180": {
     "fetchedAt": "2026-09-14T01:28:06.362203+00:00",
     "promos": {}
@@ -9632,8 +11009,16 @@
     "fetchedAt": "2026-09-14T01:35:13.376611+00:00",
     "promos": {}
   },
+  "SHUFERSAL:187": {
+    "fetchedAt": "2026-09-14T16:36:26.229090+00:00",
+    "promos": {}
+  },
   "SHUFERSAL:189": {
     "fetchedAt": "2026-09-14T01:36:55.524773+00:00",
+    "promos": {}
+  },
+  "SHUFERSAL:190": {
+    "fetchedAt": "2026-09-14T16:37:06.484186+00:00",
     "promos": {}
   },
   "SHUFERSAL:195": {
@@ -9672,6 +11057,10 @@
     "fetchedAt": "2026-09-13T20:58:22.812164+00:00",
     "promos": {}
   },
+  "SHUFERSAL:212": {
+    "fetchedAt": "2026-09-14T16:35:40.663159+00:00",
+    "promos": {}
+  },
   "SHUFERSAL:214": {
     "fetchedAt": "2026-09-14T01:29:31.080168+00:00",
     "promos": {}
@@ -9684,12 +11073,20 @@
     "fetchedAt": "2026-09-13T20:57:00.634686+00:00",
     "promos": {}
   },
+  "SHUFERSAL:218": {
+    "fetchedAt": "2026-09-14T16:37:06.921286+00:00",
+    "promos": {}
+  },
   "SHUFERSAL:22": {
     "fetchedAt": "2026-09-14T01:29:06.569642+00:00",
     "promos": {}
   },
   "SHUFERSAL:222": {
     "fetchedAt": "2026-09-14T01:35:18.122103+00:00",
+    "promos": {}
+  },
+  "SHUFERSAL:224": {
+    "fetchedAt": "2026-09-14T16:37:15.166368+00:00",
     "promos": {}
   },
   "SHUFERSAL:226": {
@@ -9710,6 +11107,10 @@
   },
   "SHUFERSAL:230": {
     "fetchedAt": "2026-09-14T01:30:00.903666+00:00",
+    "promos": {}
+  },
+  "SHUFERSAL:231": {
+    "fetchedAt": "2026-09-14T16:37:18.826043+00:00",
     "promos": {}
   },
   "SHUFERSAL:232": {
@@ -9772,12 +11173,20 @@
     "fetchedAt": "2026-09-14T01:28:51.879936+00:00",
     "promos": {}
   },
+  "SHUFERSAL:263": {
+    "fetchedAt": "2026-09-14T16:37:25.529024+00:00",
+    "promos": {}
+  },
   "SHUFERSAL:265": {
     "fetchedAt": "2026-09-14T01:28:33.512909+00:00",
     "promos": {}
   },
   "SHUFERSAL:267": {
     "fetchedAt": "2026-09-13T20:58:59.513124+00:00",
+    "promos": {}
+  },
+  "SHUFERSAL:269": {
+    "fetchedAt": "2026-09-14T16:38:10.604925+00:00",
     "promos": {}
   },
   "SHUFERSAL:271": {
@@ -9798,6 +11207,14 @@
   },
   "SHUFERSAL:278": {
     "fetchedAt": "2026-09-13T20:57:38.631746+00:00",
+    "promos": {}
+  },
+  "SHUFERSAL:279": {
+    "fetchedAt": "2026-09-14T16:37:57.848068+00:00",
+    "promos": {}
+  },
+  "SHUFERSAL:28": {
+    "fetchedAt": "2026-09-14T16:35:35.932244+00:00",
     "promos": {}
   },
   "SHUFERSAL:282": {
@@ -9844,6 +11261,10 @@
     "fetchedAt": "2026-09-14T01:31:21.935746+00:00",
     "promos": {}
   },
+  "SHUFERSAL:305": {
+    "fetchedAt": "2026-09-14T16:37:57.619493+00:00",
+    "promos": {}
+  },
   "SHUFERSAL:308": {
     "fetchedAt": "2026-09-14T01:30:18.661789+00:00",
     "promos": {}
@@ -9854,6 +11275,10 @@
   },
   "SHUFERSAL:312": {
     "fetchedAt": "2026-09-13T20:57:42.868084+00:00",
+    "promos": {}
+  },
+  "SHUFERSAL:313": {
+    "fetchedAt": "2026-09-14T16:35:38.012241+00:00",
     "promos": {}
   },
   "SHUFERSAL:315": {
@@ -9892,12 +11317,20 @@
     "fetchedAt": "2026-09-13T20:56:58.931816+00:00",
     "promos": {}
   },
+  "SHUFERSAL:333": {
+    "fetchedAt": "2026-09-14T16:35:37.537970+00:00",
+    "promos": {}
+  },
   "SHUFERSAL:334": {
     "fetchedAt": "2026-09-14T01:35:21.737556+00:00",
     "promos": {}
   },
   "SHUFERSAL:335": {
     "fetchedAt": "2026-09-14T01:33:52.211080+00:00",
+    "promos": {}
+  },
+  "SHUFERSAL:336": {
+    "fetchedAt": "2026-09-14T16:36:17.746202+00:00",
     "promos": {}
   },
   "SHUFERSAL:339": {
@@ -9924,6 +11357,10 @@
     "fetchedAt": "2026-09-14T01:29:09.900664+00:00",
     "promos": {}
   },
+  "SHUFERSAL:344": {
+    "fetchedAt": "2026-09-14T16:37:10.192960+00:00",
+    "promos": {}
+  },
   "SHUFERSAL:347": {
     "fetchedAt": "2026-09-14T01:30:20.796688+00:00",
     "promos": {}
@@ -9934,6 +11371,10 @@
   },
   "SHUFERSAL:35": {
     "fetchedAt": "2026-09-14T01:30:21.587756+00:00",
+    "promos": {}
+  },
+  "SHUFERSAL:350": {
+    "fetchedAt": "2026-09-14T16:37:14.481066+00:00",
     "promos": {}
   },
   "SHUFERSAL:354": {
@@ -10040,6 +11481,10 @@
     "fetchedAt": "2026-09-14T01:32:04.301725+00:00",
     "promos": {}
   },
+  "SHUFERSAL:4": {
+    "fetchedAt": "2026-09-14T16:35:37.245854+00:00",
+    "promos": {}
+  },
   "SHUFERSAL:42": {
     "fetchedAt": "2026-09-14T01:28:13.952413+00:00",
     "promos": {}
@@ -10070,6 +11515,10 @@
   },
   "SHUFERSAL:49": {
     "fetchedAt": "2026-09-14T01:29:37.299526+00:00",
+    "promos": {}
+  },
+  "SHUFERSAL:5": {
+    "fetchedAt": "2026-09-14T16:35:32.691201+00:00",
     "promos": {}
   },
   "SHUFERSAL:50": {
@@ -10112,6 +11561,10 @@
     "fetchedAt": "2026-09-13T20:56:56.842342+00:00",
     "promos": {}
   },
+  "SHUFERSAL:7": {
+    "fetchedAt": "2026-09-14T16:35:35.025904+00:00",
+    "promos": {}
+  },
   "SHUFERSAL:70": {
     "fetchedAt": "2026-09-14T01:29:15.013735+00:00",
     "promos": {}
@@ -10150,6 +11603,10 @@
   },
   "SHUFERSAL:757": {
     "fetchedAt": "2026-09-14T01:32:42.431342+00:00",
+    "promos": {}
+  },
+  "SHUFERSAL:76": {
+    "fetchedAt": "2026-09-14T16:36:18.818995+00:00",
     "promos": {}
   },
   "SHUFERSAL:77": {
@@ -10252,8 +11709,20 @@
     "fetchedAt": "2026-09-14T04:35:02.482838+00:00",
     "promos": {}
   },
+  "SHUK_AHIR:12": {
+    "fetchedAt": "2026-09-14T17:35:43.498956+00:00",
+    "promos": {}
+  },
+  "SHUK_AHIR:13": {
+    "fetchedAt": "2026-09-14T17:35:43.839313+00:00",
+    "promos": {}
+  },
   "SHUK_AHIR:14": {
     "fetchedAt": "2026-09-14T04:35:02.158495+00:00",
+    "promos": {}
+  },
+  "SHUK_AHIR:17": {
+    "fetchedAt": "2026-09-14T17:35:43.651604+00:00",
     "promos": {}
   },
   "SHUK_AHIR:18": {
@@ -10264,6 +11733,10 @@
     "fetchedAt": "2026-09-14T04:35:01.756033+00:00",
     "promos": {}
   },
+  "SHUK_AHIR:6": {
+    "fetchedAt": "2026-09-14T17:35:43.154802+00:00",
+    "promos": {}
+  },
   "SHUK_AHIR:9": {
     "fetchedAt": "2026-09-14T04:35:02.423263+00:00",
     "promos": {}
@@ -10272,12 +11745,810 @@
     "fetchedAt": "2026-09-13T23:33:58.486069+00:00",
     "promos": {}
   },
+  "STOP_MARKET:11": {
+    "fetchedAt": "2026-09-14T17:35:42.794077+00:00",
+    "promos": {}
+  },
+  "STOP_MARKET:5": {
+    "fetchedAt": "2026-09-14T17:35:41.068573+00:00",
+    "promos": {}
+  },
   "STOP_MARKET:6": {
     "fetchedAt": "2026-09-14T01:37:42.663292+00:00",
     "promos": {}
   },
+  "STOP_MARKET:7": {
+    "fetchedAt": "2026-09-14T17:35:41.875837+00:00",
+    "promos": {}
+  },
   "STOP_MARKET:8": {
     "fetchedAt": "2026-09-13T23:33:57.963305+00:00",
+    "promos": {}
+  },
+  "SUPER_PHARM:10": {
+    "fetchedAt": "2026-09-14T16:44:25.095312+00:00",
+    "promos": {}
+  },
+  "SUPER_PHARM:100": {
+    "fetchedAt": "2026-09-14T16:46:58.862573+00:00",
+    "promos": {}
+  },
+  "SUPER_PHARM:101": {
+    "fetchedAt": "2026-09-14T16:47:08.088138+00:00",
+    "promos": {}
+  },
+  "SUPER_PHARM:103": {
+    "fetchedAt": "2026-09-14T16:47:12.142032+00:00",
+    "promos": {}
+  },
+  "SUPER_PHARM:106": {
+    "fetchedAt": "2026-09-14T16:47:22.233514+00:00",
+    "promos": {}
+  },
+  "SUPER_PHARM:107": {
+    "fetchedAt": "2026-09-14T16:47:20.843277+00:00",
+    "promos": {}
+  },
+  "SUPER_PHARM:109": {
+    "fetchedAt": "2026-09-14T16:47:23.592147+00:00",
+    "promos": {}
+  },
+  "SUPER_PHARM:110": {
+    "fetchedAt": "2026-09-14T16:47:22.465233+00:00",
+    "promos": {}
+  },
+  "SUPER_PHARM:112": {
+    "fetchedAt": "2026-09-14T16:47:35.741616+00:00",
+    "promos": {}
+  },
+  "SUPER_PHARM:113": {
+    "fetchedAt": "2026-09-14T16:47:41.418135+00:00",
+    "promos": {}
+  },
+  "SUPER_PHARM:114": {
+    "fetchedAt": "2026-09-14T16:47:46.902970+00:00",
+    "promos": {
+      "aussie-lemonade": [
+        {
+          "clubOnly": false,
+          "description": "MONSTER ENERGY משקה אנרגיה מוגז 2 ב-16 ₪",
+          "discountRate": null,
+          "endsAt": "2026-09-23T23:59:59.000",
+          "maxQuantity": null,
+          "minQuantity": 2,
+          "startsAt": "2026-09-02T00:00:00.000",
+          "terms": "0.00"
+        }
+      ],
+      "original": [
+        {
+          "clubOnly": false,
+          "description": "MONSTER ENERGY משקה אנרגיה מוגז 2 ב-16 ₪",
+          "discountRate": null,
+          "endsAt": "2026-09-23T23:59:59.000",
+          "maxQuantity": null,
+          "minQuantity": 2,
+          "startsAt": "2026-09-02T00:00:00.000",
+          "terms": "0.00"
+        }
+      ],
+      "rossi": [
+        {
+          "clubOnly": false,
+          "description": "MONSTER ENERGY משקה אנרגיה מוגז 2 ב-16 ₪",
+          "discountRate": null,
+          "endsAt": "2026-09-23T23:59:59.000",
+          "maxQuantity": null,
+          "minQuantity": 2,
+          "startsAt": "2026-09-02T00:00:00.000",
+          "terms": "0.00"
+        }
+      ],
+      "ultra": [
+        {
+          "clubOnly": false,
+          "description": "MONSTER ENERGY משקה אנרגיה מוגז 2 ב-16 ₪",
+          "discountRate": null,
+          "endsAt": "2026-09-23T23:59:59.000",
+          "maxQuantity": null,
+          "minQuantity": 2,
+          "startsAt": "2026-09-02T00:00:00.000",
+          "terms": "0.00"
+        }
+      ],
+      "ultra-paradise": [
+        {
+          "clubOnly": false,
+          "description": "MONSTER ENERGY משקה אנרגיה מוגז 2 ב-16 ₪",
+          "discountRate": null,
+          "endsAt": "2026-09-23T23:59:59.000",
+          "maxQuantity": null,
+          "minQuantity": 2,
+          "startsAt": "2026-09-02T00:00:00.000",
+          "terms": "0.00"
+        }
+      ]
+    }
+  },
+  "SUPER_PHARM:118": {
+    "fetchedAt": "2026-09-14T16:47:48.952328+00:00",
+    "promos": {}
+  },
+  "SUPER_PHARM:12": {
+    "fetchedAt": "2026-09-14T16:44:25.414011+00:00",
+    "promos": {}
+  },
+  "SUPER_PHARM:127": {
+    "fetchedAt": "2026-09-14T16:47:56.673445+00:00",
+    "promos": {}
+  },
+  "SUPER_PHARM:128": {
+    "fetchedAt": "2026-09-14T16:47:48.355993+00:00",
+    "promos": {}
+  },
+  "SUPER_PHARM:13": {
+    "fetchedAt": "2026-09-14T16:44:42.196991+00:00",
+    "promos": {}
+  },
+  "SUPER_PHARM:132": {
+    "fetchedAt": "2026-09-14T16:47:53.577210+00:00",
+    "promos": {}
+  },
+  "SUPER_PHARM:136": {
+    "fetchedAt": "2026-09-14T16:47:59.345008+00:00",
+    "promos": {}
+  },
+  "SUPER_PHARM:14": {
+    "fetchedAt": "2026-09-14T16:44:50.950835+00:00",
+    "promos": {}
+  },
+  "SUPER_PHARM:141": {
+    "fetchedAt": "2026-09-14T16:48:12.529771+00:00",
+    "promos": {}
+  },
+  "SUPER_PHARM:148": {
+    "fetchedAt": "2026-09-14T16:48:13.932371+00:00",
+    "promos": {}
+  },
+  "SUPER_PHARM:150": {
+    "fetchedAt": "2026-09-14T16:48:20.603575+00:00",
+    "promos": {}
+  },
+  "SUPER_PHARM:151": {
+    "fetchedAt": "2026-09-14T16:48:24.792321+00:00",
+    "promos": {}
+  },
+  "SUPER_PHARM:157": {
+    "fetchedAt": "2026-09-14T16:48:34.347622+00:00",
+    "promos": {}
+  },
+  "SUPER_PHARM:158": {
+    "fetchedAt": "2026-09-14T16:48:27.338519+00:00",
+    "promos": {}
+  },
+  "SUPER_PHARM:159": {
+    "fetchedAt": "2026-09-14T16:48:31.709720+00:00",
+    "promos": {}
+  },
+  "SUPER_PHARM:16": {
+    "fetchedAt": "2026-09-14T16:45:00.670801+00:00",
+    "promos": {}
+  },
+  "SUPER_PHARM:161": {
+    "fetchedAt": "2026-09-14T16:48:36.461898+00:00",
+    "promos": {
+      "aussie-lemonade": [
+        {
+          "clubOnly": false,
+          "description": "MONSTER ENERGY  משקה אנרגיה מוגז   500 מ\"ל 7.90 ₪",
+          "discountRate": 20.2,
+          "endsAt": "2026-09-23T23:59:59.000",
+          "maxQuantity": null,
+          "minQuantity": 1,
+          "startsAt": "2026-09-03T00:00:00.000",
+          "terms": "0.00"
+        }
+      ],
+      "original": [
+        {
+          "clubOnly": false,
+          "description": "MONSTER ENERGY  משקה אנרגיה מוגז   500 מ\"ל 7.90 ₪",
+          "discountRate": 27.52,
+          "endsAt": "2026-09-23T23:59:59.000",
+          "maxQuantity": null,
+          "minQuantity": 1,
+          "startsAt": "2026-09-03T00:00:00.000",
+          "terms": "0.00"
+        }
+      ]
+    }
+  },
+  "SUPER_PHARM:163": {
+    "fetchedAt": "2026-09-14T16:48:47.156301+00:00",
+    "promos": {}
+  },
+  "SUPER_PHARM:164": {
+    "fetchedAt": "2026-09-14T16:48:49.773612+00:00",
+    "promos": {}
+  },
+  "SUPER_PHARM:167": {
+    "fetchedAt": "2026-09-14T16:48:55.894793+00:00",
+    "promos": {}
+  },
+  "SUPER_PHARM:168": {
+    "fetchedAt": "2026-09-14T16:49:00.886708+00:00",
+    "promos": {}
+  },
+  "SUPER_PHARM:169": {
+    "fetchedAt": "2026-09-14T16:49:16.334626+00:00",
+    "promos": {}
+  },
+  "SUPER_PHARM:172": {
+    "fetchedAt": "2026-09-14T16:49:27.990957+00:00",
+    "promos": {}
+  },
+  "SUPER_PHARM:174": {
+    "fetchedAt": "2026-09-14T16:49:21.805983+00:00",
+    "promos": {}
+  },
+  "SUPER_PHARM:175": {
+    "fetchedAt": "2026-09-14T16:49:24.540054+00:00",
+    "promos": {}
+  },
+  "SUPER_PHARM:176": {
+    "fetchedAt": "2026-09-14T16:49:34.300392+00:00",
+    "promos": {}
+  },
+  "SUPER_PHARM:178": {
+    "fetchedAt": "2026-09-14T16:49:36.744979+00:00",
+    "promos": {}
+  },
+  "SUPER_PHARM:18": {
+    "fetchedAt": "2026-09-14T16:44:59.896477+00:00",
+    "promos": {}
+  },
+  "SUPER_PHARM:182": {
+    "fetchedAt": "2026-09-14T16:49:43.528949+00:00",
+    "promos": {}
+  },
+  "SUPER_PHARM:183": {
+    "fetchedAt": "2026-09-14T16:49:48.836266+00:00",
+    "promos": {}
+  },
+  "SUPER_PHARM:185": {
+    "fetchedAt": "2026-09-14T16:49:51.258611+00:00",
+    "promos": {
+      "aussie-lemonade": [
+        {
+          "clubOnly": false,
+          "description": "מונסטר אנרגי משקה אנרגיה 500 מ\"ל 2 ב-16 ₪",
+          "discountRate": null,
+          "endsAt": "2026-09-23T23:59:59.000",
+          "maxQuantity": null,
+          "minQuantity": 2,
+          "startsAt": "2026-09-02T00:00:00.000",
+          "terms": "0.00"
+        }
+      ],
+      "original": [
+        {
+          "clubOnly": false,
+          "description": "מונסטר אנרגי משקה אנרגיה 500 מ\"ל 2 ב-16 ₪",
+          "discountRate": null,
+          "endsAt": "2026-09-23T23:59:59.000",
+          "maxQuantity": null,
+          "minQuantity": 2,
+          "startsAt": "2026-09-02T00:00:00.000",
+          "terms": "0.00"
+        }
+      ],
+      "rossi": [
+        {
+          "clubOnly": false,
+          "description": "מונסטר אנרגי משקה אנרגיה 500 מ\"ל 2 ב-16 ₪",
+          "discountRate": null,
+          "endsAt": "2026-09-23T23:59:59.000",
+          "maxQuantity": null,
+          "minQuantity": 2,
+          "startsAt": "2026-09-02T00:00:00.000",
+          "terms": "0.00"
+        }
+      ],
+      "ultra": [
+        {
+          "clubOnly": false,
+          "description": "מונסטר אנרגי משקה אנרגיה 500 מ\"ל 2 ב-16 ₪",
+          "discountRate": null,
+          "endsAt": "2026-09-23T23:59:59.000",
+          "maxQuantity": null,
+          "minQuantity": 2,
+          "startsAt": "2026-09-02T00:00:00.000",
+          "terms": "0.00"
+        }
+      ]
+    }
+  },
+  "SUPER_PHARM:186": {
+    "fetchedAt": "2026-09-14T16:49:56.250480+00:00",
+    "promos": {}
+  },
+  "SUPER_PHARM:190": {
+    "fetchedAt": "2026-09-14T16:49:58.888913+00:00",
+    "promos": {}
+  },
+  "SUPER_PHARM:193": {
+    "fetchedAt": "2026-09-14T16:50:03.584020+00:00",
+    "promos": {}
+  },
+  "SUPER_PHARM:194": {
+    "fetchedAt": "2026-09-14T16:50:19.125203+00:00",
+    "promos": {}
+  },
+  "SUPER_PHARM:195": {
+    "fetchedAt": "2026-09-14T16:50:23.213256+00:00",
+    "promos": {}
+  },
+  "SUPER_PHARM:196": {
+    "fetchedAt": "2026-09-14T16:50:33.633032+00:00",
+    "promos": {}
+  },
+  "SUPER_PHARM:200": {
+    "fetchedAt": "2026-09-14T16:50:26.969061+00:00",
+    "promos": {}
+  },
+  "SUPER_PHARM:201": {
+    "fetchedAt": "2026-09-14T16:50:29.556887+00:00",
+    "promos": {}
+  },
+  "SUPER_PHARM:204": {
+    "fetchedAt": "2026-09-14T16:50:36.972396+00:00",
+    "promos": {}
+  },
+  "SUPER_PHARM:206": {
+    "fetchedAt": "2026-09-14T16:50:40.484164+00:00",
+    "promos": {}
+  },
+  "SUPER_PHARM:207": {
+    "fetchedAt": "2026-09-14T16:50:44.658652+00:00",
+    "promos": {}
+  },
+  "SUPER_PHARM:208": {
+    "fetchedAt": "2026-09-14T16:50:54.509784+00:00",
+    "promos": {}
+  },
+  "SUPER_PHARM:209": {
+    "fetchedAt": "2026-09-14T16:51:01.283044+00:00",
+    "promos": {}
+  },
+  "SUPER_PHARM:216": {
+    "fetchedAt": "2026-09-14T16:51:04.513570+00:00",
+    "promos": {}
+  },
+  "SUPER_PHARM:219": {
+    "fetchedAt": "2026-09-14T16:51:07.730209+00:00",
+    "promos": {}
+  },
+  "SUPER_PHARM:222": {
+    "fetchedAt": "2026-09-14T16:51:12.760548+00:00",
+    "promos": {}
+  },
+  "SUPER_PHARM:224": {
+    "fetchedAt": "2026-09-14T16:51:13.941827+00:00",
+    "promos": {}
+  },
+  "SUPER_PHARM:227": {
+    "fetchedAt": "2026-09-14T16:51:18.484185+00:00",
+    "promos": {}
+  },
+  "SUPER_PHARM:236": {
+    "fetchedAt": "2026-09-14T16:51:20.029442+00:00",
+    "promos": {}
+  },
+  "SUPER_PHARM:237": {
+    "fetchedAt": "2026-09-14T16:51:31.142844+00:00",
+    "promos": {}
+  },
+  "SUPER_PHARM:238": {
+    "fetchedAt": "2026-09-14T16:51:41.258880+00:00",
+    "promos": {}
+  },
+  "SUPER_PHARM:239": {
+    "fetchedAt": "2026-09-14T16:51:38.952798+00:00",
+    "promos": {}
+  },
+  "SUPER_PHARM:245": {
+    "fetchedAt": "2026-09-14T16:51:44.171891+00:00",
+    "promos": {}
+  },
+  "SUPER_PHARM:247": {
+    "fetchedAt": "2026-09-14T16:52:00.535767+00:00",
+    "promos": {}
+  },
+  "SUPER_PHARM:249": {
+    "fetchedAt": "2026-09-14T16:51:49.005398+00:00",
+    "promos": {}
+  },
+  "SUPER_PHARM:25": {
+    "fetchedAt": "2026-09-14T16:44:52.050813+00:00",
+    "promos": {}
+  },
+  "SUPER_PHARM:252": {
+    "fetchedAt": "2026-09-14T16:51:53.342830+00:00",
+    "promos": {}
+  },
+  "SUPER_PHARM:253": {
+    "fetchedAt": "2026-09-14T16:51:57.359965+00:00",
+    "promos": {}
+  },
+  "SUPER_PHARM:256": {
+    "fetchedAt": "2026-09-14T16:52:09.829316+00:00",
+    "promos": {}
+  },
+  "SUPER_PHARM:258": {
+    "fetchedAt": "2026-09-14T16:52:27.955775+00:00",
+    "promos": {}
+  },
+  "SUPER_PHARM:268": {
+    "fetchedAt": "2026-09-14T16:52:16.264465+00:00",
+    "promos": {}
+  },
+  "SUPER_PHARM:270": {
+    "fetchedAt": "2026-09-14T16:52:32.372505+00:00",
+    "promos": {}
+  },
+  "SUPER_PHARM:271": {
+    "fetchedAt": "2026-09-14T16:52:25.783227+00:00",
+    "promos": {}
+  },
+  "SUPER_PHARM:277": {
+    "fetchedAt": "2026-09-14T16:52:45.377131+00:00",
+    "promos": {}
+  },
+  "SUPER_PHARM:278": {
+    "fetchedAt": "2026-09-14T16:52:34.630462+00:00",
+    "promos": {}
+  },
+  "SUPER_PHARM:279": {
+    "fetchedAt": "2026-09-14T16:52:37.960640+00:00",
+    "promos": {}
+  },
+  "SUPER_PHARM:28": {
+    "fetchedAt": "2026-09-14T16:44:50.725948+00:00",
+    "promos": {}
+  },
+  "SUPER_PHARM:280": {
+    "fetchedAt": "2026-09-14T16:52:50.219049+00:00",
+    "promos": {}
+  },
+  "SUPER_PHARM:282": {
+    "fetchedAt": "2026-09-14T16:52:54.068432+00:00",
+    "promos": {
+      "original": [
+        {
+          "clubOnly": false,
+          "description": "קוקה קולה/ספרייט/פיוז טי/פאנטה/פריגת/מונסטר שתייה קלה 500 מל 8.90 ₪",
+          "discountRate": 18.35,
+          "endsAt": "2026-09-23T23:59:59.000",
+          "maxQuantity": null,
+          "minQuantity": 1,
+          "startsAt": "2026-09-02T00:00:00.000",
+          "terms": "0.00"
+        }
+      ],
+      "ultra": [
+        {
+          "clubOnly": false,
+          "description": "קוקה קולה/ספרייט/פיוז טי/פאנטה/פריגת/מונסטר שתייה קלה 500 מל 8.90 ₪",
+          "discountRate": 18.35,
+          "endsAt": "2026-09-23T23:59:59.000",
+          "maxQuantity": null,
+          "minQuantity": 1,
+          "startsAt": "2026-09-02T00:00:00.000",
+          "terms": "0.00"
+        }
+      ]
+    }
+  },
+  "SUPER_PHARM:29": {
+    "fetchedAt": "2026-09-14T16:44:56.384436+00:00",
+    "promos": {}
+  },
+  "SUPER_PHARM:291": {
+    "fetchedAt": "2026-09-14T16:53:04.680441+00:00",
+    "promos": {}
+  },
+  "SUPER_PHARM:295": {
+    "fetchedAt": "2026-09-14T16:53:17.656768+00:00",
+    "promos": {}
+  },
+  "SUPER_PHARM:297": {
+    "fetchedAt": "2026-09-14T16:53:10.379666+00:00",
+    "promos": {}
+  },
+  "SUPER_PHARM:298": {
+    "fetchedAt": "2026-09-14T16:53:21.999132+00:00",
+    "promos": {}
+  },
+  "SUPER_PHARM:299": {
+    "fetchedAt": "2026-09-14T16:53:14.447868+00:00",
+    "promos": {}
+  },
+  "SUPER_PHARM:301": {
+    "fetchedAt": "2026-09-14T16:53:23.954471+00:00",
+    "promos": {}
+  },
+  "SUPER_PHARM:306": {
+    "fetchedAt": "2026-09-14T16:53:36.219604+00:00",
+    "promos": {}
+  },
+  "SUPER_PHARM:308": {
+    "fetchedAt": "2026-09-14T16:53:29.201354+00:00",
+    "promos": {}
+  },
+  "SUPER_PHARM:311": {
+    "fetchedAt": "2026-09-14T16:53:42.178875+00:00",
+    "promos": {}
+  },
+  "SUPER_PHARM:312": {
+    "fetchedAt": "2026-09-14T16:53:46.509525+00:00",
+    "promos": {}
+  },
+  "SUPER_PHARM:313": {
+    "fetchedAt": "2026-09-14T16:53:48.970773+00:00",
+    "promos": {}
+  },
+  "SUPER_PHARM:314": {
+    "fetchedAt": "2026-09-14T16:54:05.307256+00:00",
+    "promos": {}
+  },
+  "SUPER_PHARM:317": {
+    "fetchedAt": "2026-09-14T16:53:58.083380+00:00",
+    "promos": {}
+  },
+  "SUPER_PHARM:319": {
+    "fetchedAt": "2026-09-14T16:54:02.692658+00:00",
+    "promos": {}
+  },
+  "SUPER_PHARM:32": {
+    "fetchedAt": "2026-09-14T16:45:23.185016+00:00",
+    "promos": {}
+  },
+  "SUPER_PHARM:321": {
+    "fetchedAt": "2026-09-14T16:54:15.979729+00:00",
+    "promos": {}
+  },
+  "SUPER_PHARM:323": {
+    "fetchedAt": "2026-09-14T16:54:27.807396+00:00",
+    "promos": {}
+  },
+  "SUPER_PHARM:325": {
+    "fetchedAt": "2026-09-14T16:54:32.418690+00:00",
+    "promos": {}
+  },
+  "SUPER_PHARM:326": {
+    "fetchedAt": "2026-09-14T16:54:23.046145+00:00",
+    "promos": {}
+  },
+  "SUPER_PHARM:327": {
+    "fetchedAt": "2026-09-14T16:54:37.236311+00:00",
+    "promos": {}
+  },
+  "SUPER_PHARM:329": {
+    "fetchedAt": "2026-09-14T16:54:40.301711+00:00",
+    "promos": {}
+  },
+  "SUPER_PHARM:334": {
+    "fetchedAt": "2026-09-14T16:55:39.842840+00:00",
+    "promos": {}
+  },
+  "SUPER_PHARM:40": {
+    "fetchedAt": "2026-09-14T16:45:24.690761+00:00",
+    "promos": {}
+  },
+  "SUPER_PHARM:42": {
+    "fetchedAt": "2026-09-14T16:45:20.825614+00:00",
+    "promos": {}
+  },
+  "SUPER_PHARM:44": {
+    "fetchedAt": "2026-09-14T16:45:20.639463+00:00",
+    "promos": {}
+  },
+  "SUPER_PHARM:45": {
+    "fetchedAt": "2026-09-14T16:45:21.525589+00:00",
+    "promos": {}
+  },
+  "SUPER_PHARM:47": {
+    "fetchedAt": "2026-09-14T16:45:25.005622+00:00",
+    "promos": {}
+  },
+  "SUPER_PHARM:48": {
+    "fetchedAt": "2026-09-14T16:45:29.529379+00:00",
+    "promos": {}
+  },
+  "SUPER_PHARM:5": {
+    "fetchedAt": "2026-09-14T16:44:19.496460+00:00",
+    "promos": {}
+  },
+  "SUPER_PHARM:51": {
+    "fetchedAt": "2026-09-14T16:45:31.912207+00:00",
+    "promos": {}
+  },
+  "SUPER_PHARM:56": {
+    "fetchedAt": "2026-09-14T16:46:01.436309+00:00",
+    "promos": {}
+  },
+  "SUPER_PHARM:57": {
+    "fetchedAt": "2026-09-14T16:45:48.452525+00:00",
+    "promos": {}
+  },
+  "SUPER_PHARM:59": {
+    "fetchedAt": "2026-09-14T16:46:03.876029+00:00",
+    "promos": {}
+  },
+  "SUPER_PHARM:6": {
+    "fetchedAt": "2026-09-14T16:44:29.123522+00:00",
+    "promos": {}
+  },
+  "SUPER_PHARM:61": {
+    "fetchedAt": "2026-09-14T16:45:56.417022+00:00",
+    "promos": {}
+  },
+  "SUPER_PHARM:64": {
+    "fetchedAt": "2026-09-14T16:45:55.228420+00:00",
+    "promos": {}
+  },
+  "SUPER_PHARM:65": {
+    "fetchedAt": "2026-09-14T16:45:56.870081+00:00",
+    "promos": {}
+  },
+  "SUPER_PHARM:67": {
+    "fetchedAt": "2026-09-14T16:45:58.071931+00:00",
+    "promos": {}
+  },
+  "SUPER_PHARM:7": {
+    "fetchedAt": "2026-09-14T16:44:24.197939+00:00",
+    "promos": {
+      "aussie-lemonade": [
+        {
+          "clubOnly": false,
+          "description": "שתייה מגוון בקבוקי שתייה 2 ב-14 ₪",
+          "discountRate": null,
+          "endsAt": "2026-09-23T23:59:59.000",
+          "maxQuantity": null,
+          "minQuantity": 2,
+          "startsAt": "2026-08-23T00:00:00.000",
+          "terms": "0.00"
+        }
+      ],
+      "original": [
+        {
+          "clubOnly": false,
+          "description": "שתייה מגוון בקבוקי שתייה 2 ב-14 ₪",
+          "discountRate": null,
+          "endsAt": "2026-09-23T23:59:59.000",
+          "maxQuantity": null,
+          "minQuantity": 2,
+          "startsAt": "2026-08-23T00:00:00.000",
+          "terms": "0.00"
+        }
+      ],
+      "ultra": [
+        {
+          "clubOnly": false,
+          "description": "שתייה מגוון בקבוקי שתייה 2 ב-14 ₪",
+          "discountRate": null,
+          "endsAt": "2026-09-23T23:59:59.000",
+          "maxQuantity": null,
+          "minQuantity": 2,
+          "startsAt": "2026-08-23T00:00:00.000",
+          "terms": "0.00"
+        }
+      ],
+      "ultra-paradise": [
+        {
+          "clubOnly": false,
+          "description": "שתייה מגוון בקבוקי שתייה 2 ב-14 ₪",
+          "discountRate": null,
+          "endsAt": "2026-09-23T23:59:59.000",
+          "maxQuantity": null,
+          "minQuantity": 2,
+          "startsAt": "2026-08-23T00:00:00.000",
+          "terms": "0.00"
+        }
+      ]
+    }
+  },
+  "SUPER_PHARM:72": {
+    "fetchedAt": "2026-09-14T16:46:15.121225+00:00",
+    "promos": {}
+  },
+  "SUPER_PHARM:79": {
+    "fetchedAt": "2026-09-14T16:46:29.348193+00:00",
+    "promos": {
+      "aussie-lemonade": [
+        {
+          "clubOnly": false,
+          "description": "שתיה 8.9 ש\"ח 8.90 ₪",
+          "discountRate": 10.1,
+          "endsAt": "2026-09-22T23:59:59.000",
+          "maxQuantity": null,
+          "minQuantity": 1,
+          "startsAt": "2026-08-30T00:00:00.000",
+          "terms": "0.00"
+        }
+      ],
+      "original": [
+        {
+          "clubOnly": false,
+          "description": "שתיה 8.9 ש\"ח 8.90 ₪",
+          "discountRate": 10.1,
+          "endsAt": "2026-09-22T23:59:59.000",
+          "maxQuantity": null,
+          "minQuantity": 1,
+          "startsAt": "2026-08-30T00:00:00.000",
+          "terms": "0.00"
+        }
+      ],
+      "ultra": [
+        {
+          "clubOnly": false,
+          "description": "שתיה 8.9 ש\"ח 8.90 ₪",
+          "discountRate": 10.1,
+          "endsAt": "2026-09-22T23:59:59.000",
+          "maxQuantity": null,
+          "minQuantity": 1,
+          "startsAt": "2026-08-30T00:00:00.000",
+          "terms": "0.00"
+        }
+      ],
+      "ultra-paradise": [
+        {
+          "clubOnly": false,
+          "description": "שתיה 8.9 ש\"ח 8.90 ₪",
+          "discountRate": 10.1,
+          "endsAt": "2026-09-22T23:59:59.000",
+          "maxQuantity": null,
+          "minQuantity": 1,
+          "startsAt": "2026-08-30T00:00:00.000",
+          "terms": "0.00"
+        }
+      ]
+    }
+  },
+  "SUPER_PHARM:8": {
+    "fetchedAt": "2026-09-14T16:44:23.560583+00:00",
+    "promos": {}
+  },
+  "SUPER_PHARM:82": {
+    "fetchedAt": "2026-09-14T16:46:36.380993+00:00",
+    "promos": {}
+  },
+  "SUPER_PHARM:85": {
+    "fetchedAt": "2026-09-14T16:46:23.067714+00:00",
+    "promos": {}
+  },
+  "SUPER_PHARM:87": {
+    "fetchedAt": "2026-09-14T16:46:41.947051+00:00",
+    "promos": {}
+  },
+  "SUPER_PHARM:90": {
+    "fetchedAt": "2026-09-14T16:46:26.940796+00:00",
+    "promos": {}
+  },
+  "SUPER_PHARM:91": {
+    "fetchedAt": "2026-09-14T16:46:42.393013+00:00",
+    "promos": {}
+  },
+  "SUPER_PHARM:94": {
+    "fetchedAt": "2026-09-14T16:46:43.030724+00:00",
+    "promos": {}
+  },
+  "SUPER_PHARM:97": {
+    "fetchedAt": "2026-09-14T16:46:53.558003+00:00",
+    "promos": {}
+  },
+  "SUPER_PHARM:98": {
+    "fetchedAt": "2026-09-14T16:47:02.070304+00:00",
     "promos": {}
   },
   "SUPER_SAPIR:13": {
@@ -10328,8 +12599,16 @@
     "fetchedAt": "2026-09-13T23:33:00.855970+00:00",
     "promos": {}
   },
+  "SUPER_SAPIR:399": {
+    "fetchedAt": "2026-09-14T17:35:19.702521+00:00",
+    "promos": {}
+  },
   "SUPER_SAPIR:40": {
     "fetchedAt": "2026-09-13T23:32:58.503938+00:00",
+    "promos": {}
+  },
+  "SUPER_SAPIR:42": {
+    "fetchedAt": "2026-09-14T17:35:17.475927+00:00",
     "promos": {}
   },
   "SUPER_SAPIR:43": {
@@ -10400,6 +12679,10 @@
     "fetchedAt": "2026-09-13T23:33:50.236671+00:00",
     "promos": {}
   },
+  "SUPER_YUDA:210": {
+    "fetchedAt": "2026-09-14T17:35:27.660342+00:00",
+    "promos": {}
+  },
   "SUPER_YUDA:211": {
     "fetchedAt": "2026-09-13T23:33:38.860735+00:00",
     "promos": {}
@@ -10468,6 +12751,10 @@
     "fetchedAt": "2026-09-14T01:37:30.689113+00:00",
     "promos": {}
   },
+  "TIV_TAAM:12": {
+    "fetchedAt": "2026-09-14T17:35:19.562270+00:00",
+    "promos": {}
+  },
   "TIV_TAAM:14": {
     "fetchedAt": "2026-09-14T01:37:31.434289+00:00",
     "promos": {}
@@ -10482,6 +12769,10 @@
   },
   "TIV_TAAM:17": {
     "fetchedAt": "2026-09-14T01:37:29.557249+00:00",
+    "promos": {}
+  },
+  "TIV_TAAM:18": {
+    "fetchedAt": "2026-09-14T17:35:21.923666+00:00",
     "promos": {}
   },
   "TIV_TAAM:19": {
@@ -10500,6 +12791,10 @@
     "fetchedAt": "2026-09-13T23:33:03.188114+00:00",
     "promos": {}
   },
+  "TIV_TAAM:22": {
+    "fetchedAt": "2026-09-14T17:35:20.213431+00:00",
+    "promos": {}
+  },
   "TIV_TAAM:23": {
     "fetchedAt": "2026-09-13T23:33:02.751055+00:00",
     "promos": {}
@@ -10516,12 +12811,20 @@
     "fetchedAt": "2026-09-14T01:37:27.914829+00:00",
     "promos": {}
   },
+  "TIV_TAAM:52": {
+    "fetchedAt": "2026-09-14T17:35:21.499053+00:00",
+    "promos": {}
+  },
   "TIV_TAAM:56": {
     "fetchedAt": "2026-09-13T23:33:06.915413+00:00",
     "promos": {}
   },
   "TIV_TAAM:57": {
     "fetchedAt": "2026-09-13T23:33:00.749261+00:00",
+    "promos": {}
+  },
+  "TIV_TAAM:58": {
+    "fetchedAt": "2026-09-14T17:35:20.566622+00:00",
     "promos": {}
   },
   "TIV_TAAM:59": {
@@ -10564,6 +12867,10 @@
     "fetchedAt": "2026-09-13T23:33:07.147711+00:00",
     "promos": {}
   },
+  "TIV_TAAM:75": {
+    "fetchedAt": "2026-09-14T17:35:21.052650+00:00",
+    "promos": {}
+  },
   "TIV_TAAM:79": {
     "fetchedAt": "2026-09-13T23:33:04.789963+00:00",
     "promos": {}
@@ -10588,6 +12895,10 @@
     "fetchedAt": "2026-09-13T23:33:05.068329+00:00",
     "promos": {}
   },
+  "TIV_TAAM:87": {
+    "fetchedAt": "2026-09-14T17:35:22.581150+00:00",
+    "promos": {}
+  },
   "TIV_TAAM:88": {
     "fetchedAt": "2026-09-14T01:37:33.007613+00:00",
     "promos": {}
@@ -10608,6 +12919,1227 @@
     "fetchedAt": "2026-09-13T23:33:04.795101+00:00",
     "promos": {}
   },
+  "VICTORY_NEW_SOURCE:1": {
+    "fetchedAt": "2026-09-14T16:37:18.585874+00:00",
+    "promos": {}
+  },
+  "VICTORY_NEW_SOURCE:10": {
+    "fetchedAt": "2026-09-14T16:37:41.289418+00:00",
+    "promos": {}
+  },
+  "VICTORY_NEW_SOURCE:14": {
+    "fetchedAt": "2026-09-14T16:37:41.869483+00:00",
+    "promos": {}
+  },
+  "VICTORY_NEW_SOURCE:16": {
+    "fetchedAt": "2026-09-14T16:37:42.674067+00:00",
+    "promos": {
+      "aussie-lemonade": [
+        {
+          "clubOnly": false,
+          "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
+          "discountRate": 4.92,
+          "endsAt": "2026-10-03T00:00:00.000",
+          "maxQuantity": null,
+          "minQuantity": 2,
+          "startsAt": "2026-08-02T00:00:00.000",
+          "terms": "הרשת רשאית להפסיק את המבצע בכל עת ללא הודעה מוקדמת"
+        }
+      ],
+      "full-zero": [
+        {
+          "clubOnly": false,
+          "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
+          "discountRate": 4.92,
+          "endsAt": "2026-10-03T00:00:00.000",
+          "maxQuantity": null,
+          "minQuantity": 2,
+          "startsAt": "2026-08-02T00:00:00.000",
+          "terms": "הרשת רשאית להפסיק את המבצע בכל עת ללא הודעה מוקדמת"
+        }
+      ],
+      "green-zero": [
+        {
+          "clubOnly": false,
+          "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
+          "discountRate": 4.92,
+          "endsAt": "2026-10-03T00:00:00.000",
+          "maxQuantity": null,
+          "minQuantity": 2,
+          "startsAt": "2026-08-02T00:00:00.000",
+          "terms": "הרשת רשאית להפסיק את המבצע בכל עת ללא הודעה מוקדמת"
+        }
+      ],
+      "mango-loco": [
+        {
+          "clubOnly": false,
+          "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
+          "discountRate": 4.92,
+          "endsAt": "2026-10-03T00:00:00.000",
+          "maxQuantity": null,
+          "minQuantity": 2,
+          "startsAt": "2026-08-02T00:00:00.000",
+          "terms": "הרשת רשאית להפסיק את המבצע בכל עת ללא הודעה מוקדמת"
+        }
+      ],
+      "monarch": [
+        {
+          "clubOnly": false,
+          "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
+          "discountRate": 4.92,
+          "endsAt": "2026-10-03T00:00:00.000",
+          "maxQuantity": null,
+          "minQuantity": 2,
+          "startsAt": "2026-08-02T00:00:00.000",
+          "terms": "הרשת רשאית להפסיק את המבצע בכל עת ללא הודעה מוקדמת"
+        }
+      ],
+      "original": [
+        {
+          "clubOnly": false,
+          "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
+          "discountRate": 4.92,
+          "endsAt": "2026-10-03T00:00:00.000",
+          "maxQuantity": null,
+          "minQuantity": 2,
+          "startsAt": "2026-08-02T00:00:00.000",
+          "terms": "הרשת רשאית להפסיק את המבצע בכל עת ללא הודעה מוקדמת"
+        },
+        {
+          "clubOnly": false,
+          "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
+          "discountRate": 4.92,
+          "endsAt": "2026-10-03T00:00:00.000",
+          "maxQuantity": null,
+          "minQuantity": 2,
+          "startsAt": "2026-08-02T00:00:00.000",
+          "terms": "הרשת רשאית להפסיק את המבצע בכל עת ללא הודעה מוקדמת"
+        }
+      ],
+      "pipeline-punch": [
+        {
+          "clubOnly": false,
+          "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
+          "discountRate": 4.92,
+          "endsAt": "2026-10-03T00:00:00.000",
+          "maxQuantity": null,
+          "minQuantity": 2,
+          "startsAt": "2026-08-02T00:00:00.000",
+          "terms": "הרשת רשאית להפסיק את המבצע בכל עת ללא הודעה מוקדמת"
+        }
+      ],
+      "rossi": [
+        {
+          "clubOnly": false,
+          "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
+          "discountRate": 4.92,
+          "endsAt": "2026-10-03T00:00:00.000",
+          "maxQuantity": null,
+          "minQuantity": 2,
+          "startsAt": "2026-08-02T00:00:00.000",
+          "terms": "הרשת רשאית להפסיק את המבצע בכל עת ללא הודעה מוקדמת"
+        }
+      ],
+      "strawberry": [
+        {
+          "clubOnly": false,
+          "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
+          "discountRate": 4.92,
+          "endsAt": "2026-10-03T00:00:00.000",
+          "maxQuantity": null,
+          "minQuantity": 2,
+          "startsAt": "2026-08-02T00:00:00.000",
+          "terms": "הרשת רשאית להפסיק את המבצע בכל עת ללא הודעה מוקדמת"
+        }
+      ],
+      "ultra": [
+        {
+          "clubOnly": false,
+          "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
+          "discountRate": 4.92,
+          "endsAt": "2026-10-03T00:00:00.000",
+          "maxQuantity": null,
+          "minQuantity": 2,
+          "startsAt": "2026-08-02T00:00:00.000",
+          "terms": "הרשת רשאית להפסיק את המבצע בכל עת ללא הודעה מוקדמת"
+        }
+      ],
+      "ultra-fiesta": [
+        {
+          "clubOnly": false,
+          "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
+          "discountRate": 4.92,
+          "endsAt": "2026-10-03T00:00:00.000",
+          "maxQuantity": null,
+          "minQuantity": 2,
+          "startsAt": "2026-08-02T00:00:00.000",
+          "terms": "הרשת רשאית להפסיק את המבצע בכל עת ללא הודעה מוקדמת"
+        }
+      ],
+      "ultra-paradise": [
+        {
+          "clubOnly": false,
+          "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
+          "discountRate": 4.92,
+          "endsAt": "2026-10-03T00:00:00.000",
+          "maxQuantity": null,
+          "minQuantity": 2,
+          "startsAt": "2026-08-02T00:00:00.000",
+          "terms": "הרשת רשאית להפסיק את המבצע בכל עת ללא הודעה מוקדמת"
+        }
+      ]
+    }
+  },
+  "VICTORY_NEW_SOURCE:2": {
+    "fetchedAt": "2026-09-14T16:37:20.153722+00:00",
+    "promos": {}
+  },
+  "VICTORY_NEW_SOURCE:21": {
+    "fetchedAt": "2026-09-14T16:37:42.981131+00:00",
+    "promos": {}
+  },
+  "VICTORY_NEW_SOURCE:22": {
+    "fetchedAt": "2026-09-14T16:37:56.622280+00:00",
+    "promos": {}
+  },
+  "VICTORY_NEW_SOURCE:23": {
+    "fetchedAt": "2026-09-14T16:37:57.031491+00:00",
+    "promos": {}
+  },
+  "VICTORY_NEW_SOURCE:24": {
+    "fetchedAt": "2026-09-14T16:37:59.280940+00:00",
+    "promos": {}
+  },
+  "VICTORY_NEW_SOURCE:25": {
+    "fetchedAt": "2026-09-14T16:37:59.604658+00:00",
+    "promos": {}
+  },
+  "VICTORY_NEW_SOURCE:26": {
+    "fetchedAt": "2026-09-14T16:38:29.465534+00:00",
+    "promos": {}
+  },
+  "VICTORY_NEW_SOURCE:27": {
+    "fetchedAt": "2026-09-14T16:38:34.371768+00:00",
+    "promos": {}
+  },
+  "VICTORY_NEW_SOURCE:28": {
+    "fetchedAt": "2026-09-14T16:38:34.734094+00:00",
+    "promos": {}
+  },
+  "VICTORY_NEW_SOURCE:29": {
+    "fetchedAt": "2026-09-14T16:38:36.678595+00:00",
+    "promos": {}
+  },
+  "VICTORY_NEW_SOURCE:3": {
+    "fetchedAt": "2026-09-14T16:37:28.224448+00:00",
+    "promos": {}
+  },
+  "VICTORY_NEW_SOURCE:30": {
+    "fetchedAt": "2026-09-14T16:38:36.329439+00:00",
+    "promos": {}
+  },
+  "VICTORY_NEW_SOURCE:31": {
+    "fetchedAt": "2026-09-14T16:38:36.010974+00:00",
+    "promos": {
+      "aussie-lemonade": [
+        {
+          "clubOnly": false,
+          "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
+          "discountRate": 4.92,
+          "endsAt": "2026-10-03T00:00:00.000",
+          "maxQuantity": null,
+          "minQuantity": 2,
+          "startsAt": "2026-08-02T00:00:00.000",
+          "terms": "הרשת רשאית להפסיק את המבצע בכל עת ללא הודעה מוקדמת"
+        }
+      ],
+      "full-zero": [
+        {
+          "clubOnly": false,
+          "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
+          "discountRate": 4.92,
+          "endsAt": "2026-10-03T00:00:00.000",
+          "maxQuantity": null,
+          "minQuantity": 2,
+          "startsAt": "2026-08-02T00:00:00.000",
+          "terms": "הרשת רשאית להפסיק את המבצע בכל עת ללא הודעה מוקדמת"
+        }
+      ],
+      "green-zero": [
+        {
+          "clubOnly": false,
+          "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
+          "discountRate": 4.92,
+          "endsAt": "2026-10-03T00:00:00.000",
+          "maxQuantity": null,
+          "minQuantity": 2,
+          "startsAt": "2026-08-02T00:00:00.000",
+          "terms": "הרשת רשאית להפסיק את המבצע בכל עת ללא הודעה מוקדמת"
+        }
+      ],
+      "mango-loco": [
+        {
+          "clubOnly": false,
+          "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
+          "discountRate": 4.92,
+          "endsAt": "2026-10-03T00:00:00.000",
+          "maxQuantity": null,
+          "minQuantity": 2,
+          "startsAt": "2026-08-02T00:00:00.000",
+          "terms": "הרשת רשאית להפסיק את המבצע בכל עת ללא הודעה מוקדמת"
+        }
+      ],
+      "monarch": [
+        {
+          "clubOnly": false,
+          "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
+          "discountRate": 4.92,
+          "endsAt": "2026-10-03T00:00:00.000",
+          "maxQuantity": null,
+          "minQuantity": 2,
+          "startsAt": "2026-08-02T00:00:00.000",
+          "terms": "הרשת רשאית להפסיק את המבצע בכל עת ללא הודעה מוקדמת"
+        }
+      ],
+      "original": [
+        {
+          "clubOnly": false,
+          "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
+          "discountRate": 4.92,
+          "endsAt": "2026-10-03T00:00:00.000",
+          "maxQuantity": null,
+          "minQuantity": 2,
+          "startsAt": "2026-08-02T00:00:00.000",
+          "terms": "הרשת רשאית להפסיק את המבצע בכל עת ללא הודעה מוקדמת"
+        },
+        {
+          "clubOnly": false,
+          "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
+          "discountRate": 4.92,
+          "endsAt": "2026-10-03T00:00:00.000",
+          "maxQuantity": null,
+          "minQuantity": 2,
+          "startsAt": "2026-08-02T00:00:00.000",
+          "terms": "הרשת רשאית להפסיק את המבצע בכל עת ללא הודעה מוקדמת"
+        }
+      ],
+      "pipeline-punch": [
+        {
+          "clubOnly": false,
+          "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
+          "discountRate": 4.92,
+          "endsAt": "2026-10-03T00:00:00.000",
+          "maxQuantity": null,
+          "minQuantity": 2,
+          "startsAt": "2026-08-02T00:00:00.000",
+          "terms": "הרשת רשאית להפסיק את המבצע בכל עת ללא הודעה מוקדמת"
+        }
+      ],
+      "rossi": [
+        {
+          "clubOnly": false,
+          "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
+          "discountRate": 4.92,
+          "endsAt": "2026-10-03T00:00:00.000",
+          "maxQuantity": null,
+          "minQuantity": 2,
+          "startsAt": "2026-08-02T00:00:00.000",
+          "terms": "הרשת רשאית להפסיק את המבצע בכל עת ללא הודעה מוקדמת"
+        }
+      ],
+      "strawberry": [
+        {
+          "clubOnly": false,
+          "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
+          "discountRate": 4.92,
+          "endsAt": "2026-10-03T00:00:00.000",
+          "maxQuantity": null,
+          "minQuantity": 2,
+          "startsAt": "2026-08-02T00:00:00.000",
+          "terms": "הרשת רשאית להפסיק את המבצע בכל עת ללא הודעה מוקדמת"
+        }
+      ],
+      "ultra": [
+        {
+          "clubOnly": false,
+          "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
+          "discountRate": 4.92,
+          "endsAt": "2026-10-03T00:00:00.000",
+          "maxQuantity": null,
+          "minQuantity": 2,
+          "startsAt": "2026-08-02T00:00:00.000",
+          "terms": "הרשת רשאית להפסיק את המבצע בכל עת ללא הודעה מוקדמת"
+        }
+      ],
+      "ultra-fiesta": [
+        {
+          "clubOnly": false,
+          "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
+          "discountRate": 4.92,
+          "endsAt": "2026-10-03T00:00:00.000",
+          "maxQuantity": null,
+          "minQuantity": 2,
+          "startsAt": "2026-08-02T00:00:00.000",
+          "terms": "הרשת רשאית להפסיק את המבצע בכל עת ללא הודעה מוקדמת"
+        }
+      ],
+      "ultra-paradise": [
+        {
+          "clubOnly": false,
+          "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
+          "discountRate": 4.92,
+          "endsAt": "2026-10-03T00:00:00.000",
+          "maxQuantity": null,
+          "minQuantity": 2,
+          "startsAt": "2026-08-02T00:00:00.000",
+          "terms": "הרשת רשאית להפסיק את המבצע בכל עת ללא הודעה מוקדמת"
+        }
+      ],
+      "ultra-peachy-keen": [
+        {
+          "clubOnly": false,
+          "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
+          "discountRate": 4.92,
+          "endsAt": "2026-10-03T00:00:00.000",
+          "maxQuantity": null,
+          "minQuantity": 2,
+          "startsAt": "2026-08-02T00:00:00.000",
+          "terms": "הרשת רשאית להפסיק את המבצע בכל עת ללא הודעה מוקדמת"
+        }
+      ]
+    }
+  },
+  "VICTORY_NEW_SOURCE:34": {
+    "fetchedAt": "2026-09-14T16:38:37.078885+00:00",
+    "promos": {}
+  },
+  "VICTORY_NEW_SOURCE:35": {
+    "fetchedAt": "2026-09-14T16:38:46.610768+00:00",
+    "promos": {
+      "aussie-lemonade": [
+        {
+          "clubOnly": false,
+          "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
+          "discountRate": 4.92,
+          "endsAt": "2026-10-03T00:00:00.000",
+          "maxQuantity": null,
+          "minQuantity": 2,
+          "startsAt": "2026-08-02T00:00:00.000",
+          "terms": null
+        }
+      ],
+      "full-zero": [
+        {
+          "clubOnly": false,
+          "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
+          "discountRate": 4.92,
+          "endsAt": "2026-10-03T00:00:00.000",
+          "maxQuantity": null,
+          "minQuantity": 2,
+          "startsAt": "2026-08-02T00:00:00.000",
+          "terms": null
+        }
+      ],
+      "mango-loco": [
+        {
+          "clubOnly": false,
+          "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
+          "discountRate": 4.92,
+          "endsAt": "2026-10-03T00:00:00.000",
+          "maxQuantity": null,
+          "minQuantity": 2,
+          "startsAt": "2026-08-02T00:00:00.000",
+          "terms": null
+        }
+      ],
+      "monarch": [
+        {
+          "clubOnly": false,
+          "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
+          "discountRate": 4.92,
+          "endsAt": "2026-10-03T00:00:00.000",
+          "maxQuantity": null,
+          "minQuantity": 2,
+          "startsAt": "2026-08-02T00:00:00.000",
+          "terms": null
+        }
+      ],
+      "original": [
+        {
+          "clubOnly": false,
+          "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
+          "discountRate": 4.92,
+          "endsAt": "2026-10-03T00:00:00.000",
+          "maxQuantity": null,
+          "minQuantity": 2,
+          "startsAt": "2026-08-02T00:00:00.000",
+          "terms": null
+        },
+        {
+          "clubOnly": false,
+          "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
+          "discountRate": 4.92,
+          "endsAt": "2026-10-03T00:00:00.000",
+          "maxQuantity": null,
+          "minQuantity": 2,
+          "startsAt": "2026-08-02T00:00:00.000",
+          "terms": null
+        }
+      ],
+      "pipeline-punch": [
+        {
+          "clubOnly": false,
+          "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
+          "discountRate": 4.92,
+          "endsAt": "2026-10-03T00:00:00.000",
+          "maxQuantity": null,
+          "minQuantity": 2,
+          "startsAt": "2026-08-02T00:00:00.000",
+          "terms": null
+        }
+      ],
+      "ultra": [
+        {
+          "clubOnly": false,
+          "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
+          "discountRate": 4.92,
+          "endsAt": "2026-10-03T00:00:00.000",
+          "maxQuantity": null,
+          "minQuantity": 2,
+          "startsAt": "2026-08-02T00:00:00.000",
+          "terms": null
+        }
+      ],
+      "ultra-fiesta": [
+        {
+          "clubOnly": false,
+          "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
+          "discountRate": 4.92,
+          "endsAt": "2026-10-03T00:00:00.000",
+          "maxQuantity": null,
+          "minQuantity": 2,
+          "startsAt": "2026-08-02T00:00:00.000",
+          "terms": null
+        }
+      ],
+      "ultra-peachy-keen": [
+        {
+          "clubOnly": false,
+          "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
+          "discountRate": 4.92,
+          "endsAt": "2026-10-03T00:00:00.000",
+          "maxQuantity": null,
+          "minQuantity": 2,
+          "startsAt": "2026-08-02T00:00:00.000",
+          "terms": null
+        }
+      ]
+    }
+  },
+  "VICTORY_NEW_SOURCE:37": {
+    "fetchedAt": "2026-09-14T16:39:14.378970+00:00",
+    "promos": {}
+  },
+  "VICTORY_NEW_SOURCE:38": {
+    "fetchedAt": "2026-09-14T16:39:20.300312+00:00",
+    "promos": {}
+  },
+  "VICTORY_NEW_SOURCE:39": {
+    "fetchedAt": "2026-09-14T16:39:20.674605+00:00",
+    "promos": {}
+  },
+  "VICTORY_NEW_SOURCE:45": {
+    "fetchedAt": "2026-09-14T16:39:21.872826+00:00",
+    "promos": {}
+  },
+  "VICTORY_NEW_SOURCE:46": {
+    "fetchedAt": "2026-09-14T16:39:22.252200+00:00",
+    "promos": {}
+  },
+  "VICTORY_NEW_SOURCE:47": {
+    "fetchedAt": "2026-09-14T16:39:23.038216+00:00",
+    "promos": {}
+  },
+  "VICTORY_NEW_SOURCE:48": {
+    "fetchedAt": "2026-09-14T16:39:22.649269+00:00",
+    "promos": {}
+  },
+  "VICTORY_NEW_SOURCE:49": {
+    "fetchedAt": "2026-09-14T16:39:36.849012+00:00",
+    "promos": {}
+  },
+  "VICTORY_NEW_SOURCE:5": {
+    "fetchedAt": "2026-09-14T16:37:28.823688+00:00",
+    "promos": {}
+  },
+  "VICTORY_NEW_SOURCE:50": {
+    "fetchedAt": "2026-09-14T16:40:09.032974+00:00",
+    "promos": {}
+  },
+  "VICTORY_NEW_SOURCE:51": {
+    "fetchedAt": "2026-09-14T16:40:16.091791+00:00",
+    "promos": {}
+  },
+  "VICTORY_NEW_SOURCE:52": {
+    "fetchedAt": "2026-09-14T16:40:16.531582+00:00",
+    "promos": {}
+  },
+  "VICTORY_NEW_SOURCE:54": {
+    "fetchedAt": "2026-09-14T16:40:18.678076+00:00",
+    "promos": {}
+  },
+  "VICTORY_NEW_SOURCE:55": {
+    "fetchedAt": "2026-09-14T16:40:19.594828+00:00",
+    "promos": {}
+  },
+  "VICTORY_NEW_SOURCE:56": {
+    "fetchedAt": "2026-09-14T16:40:19.154521+00:00",
+    "promos": {}
+  },
+  "VICTORY_NEW_SOURCE:57": {
+    "fetchedAt": "2026-09-14T16:40:18.279825+00:00",
+    "promos": {
+      "full-zero": [
+        {
+          "clubOnly": false,
+          "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
+          "discountRate": 4.92,
+          "endsAt": "2026-10-03T00:00:00.000",
+          "maxQuantity": null,
+          "minQuantity": 2,
+          "startsAt": "2026-08-02T00:00:00.000",
+          "terms": "הרשת רשאית להפסיק את המבצע בכל עת ללא הודעה מוקדמת"
+        }
+      ],
+      "monarch": [
+        {
+          "clubOnly": false,
+          "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
+          "discountRate": 4.92,
+          "endsAt": "2026-10-03T00:00:00.000",
+          "maxQuantity": null,
+          "minQuantity": 2,
+          "startsAt": "2026-08-02T00:00:00.000",
+          "terms": "הרשת רשאית להפסיק את המבצע בכל עת ללא הודעה מוקדמת"
+        }
+      ],
+      "original": [
+        {
+          "clubOnly": false,
+          "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
+          "discountRate": 4.92,
+          "endsAt": "2026-10-03T00:00:00.000",
+          "maxQuantity": null,
+          "minQuantity": 2,
+          "startsAt": "2026-08-02T00:00:00.000",
+          "terms": "הרשת רשאית להפסיק את המבצע בכל עת ללא הודעה מוקדמת"
+        },
+        {
+          "clubOnly": false,
+          "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
+          "discountRate": 4.92,
+          "endsAt": "2026-10-03T00:00:00.000",
+          "maxQuantity": null,
+          "minQuantity": 2,
+          "startsAt": "2026-08-02T00:00:00.000",
+          "terms": "הרשת רשאית להפסיק את המבצע בכל עת ללא הודעה מוקדמת"
+        }
+      ],
+      "pipeline-punch": [
+        {
+          "clubOnly": false,
+          "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
+          "discountRate": 4.92,
+          "endsAt": "2026-10-03T00:00:00.000",
+          "maxQuantity": null,
+          "minQuantity": 2,
+          "startsAt": "2026-08-02T00:00:00.000",
+          "terms": "הרשת רשאית להפסיק את המבצע בכל עת ללא הודעה מוקדמת"
+        }
+      ],
+      "rossi": [
+        {
+          "clubOnly": false,
+          "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
+          "discountRate": 4.92,
+          "endsAt": "2026-10-03T00:00:00.000",
+          "maxQuantity": null,
+          "minQuantity": 2,
+          "startsAt": "2026-08-02T00:00:00.000",
+          "terms": "הרשת רשאית להפסיק את המבצע בכל עת ללא הודעה מוקדמת"
+        }
+      ],
+      "strawberry": [
+        {
+          "clubOnly": false,
+          "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
+          "discountRate": 4.92,
+          "endsAt": "2026-10-03T00:00:00.000",
+          "maxQuantity": null,
+          "minQuantity": 2,
+          "startsAt": "2026-08-02T00:00:00.000",
+          "terms": "הרשת רשאית להפסיק את המבצע בכל עת ללא הודעה מוקדמת"
+        }
+      ],
+      "ultra": [
+        {
+          "clubOnly": false,
+          "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
+          "discountRate": 4.92,
+          "endsAt": "2026-10-03T00:00:00.000",
+          "maxQuantity": null,
+          "minQuantity": 2,
+          "startsAt": "2026-08-02T00:00:00.000",
+          "terms": "הרשת רשאית להפסיק את המבצע בכל עת ללא הודעה מוקדמת"
+        }
+      ],
+      "ultra-fiesta": [
+        {
+          "clubOnly": false,
+          "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
+          "discountRate": 4.92,
+          "endsAt": "2026-10-03T00:00:00.000",
+          "maxQuantity": null,
+          "minQuantity": 2,
+          "startsAt": "2026-08-02T00:00:00.000",
+          "terms": "הרשת רשאית להפסיק את המבצע בכל עת ללא הודעה מוקדמת"
+        }
+      ],
+      "ultra-paradise": [
+        {
+          "clubOnly": false,
+          "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
+          "discountRate": 4.92,
+          "endsAt": "2026-10-03T00:00:00.000",
+          "maxQuantity": null,
+          "minQuantity": 2,
+          "startsAt": "2026-08-02T00:00:00.000",
+          "terms": "הרשת רשאית להפסיק את המבצע בכל עת ללא הודעה מוקדמת"
+        }
+      ],
+      "ultra-peachy-keen": [
+        {
+          "clubOnly": false,
+          "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
+          "discountRate": 4.92,
+          "endsAt": "2026-10-03T00:00:00.000",
+          "maxQuantity": null,
+          "minQuantity": 2,
+          "startsAt": "2026-08-02T00:00:00.000",
+          "terms": "הרשת רשאית להפסיק את המבצע בכל עת ללא הודעה מוקדמת"
+        }
+      ]
+    }
+  },
+  "VICTORY_NEW_SOURCE:58": {
+    "fetchedAt": "2026-09-14T16:40:29.126697+00:00",
+    "promos": {}
+  },
+  "VICTORY_NEW_SOURCE:59": {
+    "fetchedAt": "2026-09-14T16:41:15.719929+00:00",
+    "promos": {}
+  },
+  "VICTORY_NEW_SOURCE:60": {
+    "fetchedAt": "2026-09-14T16:41:19.109983+00:00",
+    "promos": {}
+  },
+  "VICTORY_NEW_SOURCE:65": {
+    "fetchedAt": "2026-09-14T16:41:19.874047+00:00",
+    "promos": {}
+  },
+  "VICTORY_NEW_SOURCE:67": {
+    "fetchedAt": "2026-09-14T16:41:19.446518+00:00",
+    "promos": {
+      "aussie-lemonade": [
+        {
+          "clubOnly": false,
+          "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
+          "discountRate": 4.92,
+          "endsAt": "2026-10-03T00:00:00.000",
+          "maxQuantity": null,
+          "minQuantity": 2,
+          "startsAt": "2026-08-02T00:00:00.000",
+          "terms": "הרשת רשאית להפסיק את המבצע בכל עת ללא הודעה מוקדמת"
+        }
+      ],
+      "full-zero": [
+        {
+          "clubOnly": false,
+          "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
+          "discountRate": 4.92,
+          "endsAt": "2026-10-03T00:00:00.000",
+          "maxQuantity": null,
+          "minQuantity": 2,
+          "startsAt": "2026-08-02T00:00:00.000",
+          "terms": "הרשת רשאית להפסיק את המבצע בכל עת ללא הודעה מוקדמת"
+        }
+      ],
+      "green-zero": [
+        {
+          "clubOnly": false,
+          "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
+          "discountRate": 4.92,
+          "endsAt": "2026-10-03T00:00:00.000",
+          "maxQuantity": null,
+          "minQuantity": 2,
+          "startsAt": "2026-08-02T00:00:00.000",
+          "terms": "הרשת רשאית להפסיק את המבצע בכל עת ללא הודעה מוקדמת"
+        }
+      ],
+      "original": [
+        {
+          "clubOnly": false,
+          "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
+          "discountRate": 4.92,
+          "endsAt": "2026-10-03T00:00:00.000",
+          "maxQuantity": null,
+          "minQuantity": 2,
+          "startsAt": "2026-08-02T00:00:00.000",
+          "terms": "הרשת רשאית להפסיק את המבצע בכל עת ללא הודעה מוקדמת"
+        },
+        {
+          "clubOnly": false,
+          "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
+          "discountRate": 4.92,
+          "endsAt": "2026-10-03T00:00:00.000",
+          "maxQuantity": null,
+          "minQuantity": 2,
+          "startsAt": "2026-08-02T00:00:00.000",
+          "terms": "הרשת רשאית להפסיק את המבצע בכל עת ללא הודעה מוקדמת"
+        }
+      ],
+      "pipeline-punch": [
+        {
+          "clubOnly": false,
+          "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
+          "discountRate": 4.92,
+          "endsAt": "2026-10-03T00:00:00.000",
+          "maxQuantity": null,
+          "minQuantity": 2,
+          "startsAt": "2026-08-02T00:00:00.000",
+          "terms": "הרשת רשאית להפסיק את המבצע בכל עת ללא הודעה מוקדמת"
+        }
+      ],
+      "rossi": [
+        {
+          "clubOnly": false,
+          "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
+          "discountRate": 4.92,
+          "endsAt": "2026-10-03T00:00:00.000",
+          "maxQuantity": null,
+          "minQuantity": 2,
+          "startsAt": "2026-08-02T00:00:00.000",
+          "terms": "הרשת רשאית להפסיק את המבצע בכל עת ללא הודעה מוקדמת"
+        }
+      ],
+      "strawberry": [
+        {
+          "clubOnly": false,
+          "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
+          "discountRate": 4.92,
+          "endsAt": "2026-10-03T00:00:00.000",
+          "maxQuantity": null,
+          "minQuantity": 2,
+          "startsAt": "2026-08-02T00:00:00.000",
+          "terms": "הרשת רשאית להפסיק את המבצע בכל עת ללא הודעה מוקדמת"
+        }
+      ],
+      "ultra": [
+        {
+          "clubOnly": false,
+          "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
+          "discountRate": 4.92,
+          "endsAt": "2026-10-03T00:00:00.000",
+          "maxQuantity": null,
+          "minQuantity": 2,
+          "startsAt": "2026-08-02T00:00:00.000",
+          "terms": "הרשת רשאית להפסיק את המבצע בכל עת ללא הודעה מוקדמת"
+        }
+      ],
+      "ultra-fiesta": [
+        {
+          "clubOnly": false,
+          "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
+          "discountRate": 4.92,
+          "endsAt": "2026-10-03T00:00:00.000",
+          "maxQuantity": null,
+          "minQuantity": 2,
+          "startsAt": "2026-08-02T00:00:00.000",
+          "terms": "הרשת רשאית להפסיק את המבצע בכל עת ללא הודעה מוקדמת"
+        }
+      ],
+      "ultra-peachy-keen": [
+        {
+          "clubOnly": false,
+          "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
+          "discountRate": 4.92,
+          "endsAt": "2026-10-03T00:00:00.000",
+          "maxQuantity": null,
+          "minQuantity": 2,
+          "startsAt": "2026-08-02T00:00:00.000",
+          "terms": "הרשת רשאית להפסיק את המבצע בכל עת ללא הודעה מוקדמת"
+        }
+      ]
+    }
+  },
+  "VICTORY_NEW_SOURCE:68": {
+    "fetchedAt": "2026-09-14T16:41:20.341714+00:00",
+    "promos": {}
+  },
+  "VICTORY_NEW_SOURCE:69": {
+    "fetchedAt": "2026-09-14T16:41:23.916670+00:00",
+    "promos": {}
+  },
+  "VICTORY_NEW_SOURCE:70": {
+    "fetchedAt": "2026-09-14T16:41:20.813436+00:00",
+    "promos": {}
+  },
+  "VICTORY_NEW_SOURCE:71": {
+    "fetchedAt": "2026-09-14T16:41:25.792769+00:00",
+    "promos": {}
+  },
+  "VICTORY_NEW_SOURCE:73": {
+    "fetchedAt": "2026-09-14T16:42:30.140094+00:00",
+    "promos": {}
+  },
+  "VICTORY_NEW_SOURCE:75": {
+    "fetchedAt": "2026-09-14T16:42:32.163443+00:00",
+    "promos": {
+      "aussie-lemonade": [
+        {
+          "clubOnly": false,
+          "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
+          "discountRate": 4.92,
+          "endsAt": "2026-10-03T00:00:00.000",
+          "maxQuantity": null,
+          "minQuantity": 2,
+          "startsAt": "2026-08-02T00:00:00.000",
+          "terms": "הרשת רשאית להפסיק את המבצע בכל עת ללא הודעה מוקדמת"
+        }
+      ],
+      "full-zero": [
+        {
+          "clubOnly": false,
+          "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
+          "discountRate": 4.92,
+          "endsAt": "2026-10-03T00:00:00.000",
+          "maxQuantity": null,
+          "minQuantity": 2,
+          "startsAt": "2026-08-02T00:00:00.000",
+          "terms": "הרשת רשאית להפסיק את המבצע בכל עת ללא הודעה מוקדמת"
+        }
+      ],
+      "green-zero": [
+        {
+          "clubOnly": false,
+          "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
+          "discountRate": 4.92,
+          "endsAt": "2026-10-03T00:00:00.000",
+          "maxQuantity": null,
+          "minQuantity": 2,
+          "startsAt": "2026-08-02T00:00:00.000",
+          "terms": "הרשת רשאית להפסיק את המבצע בכל עת ללא הודעה מוקדמת"
+        }
+      ],
+      "mango-loco": [
+        {
+          "clubOnly": false,
+          "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
+          "discountRate": 4.92,
+          "endsAt": "2026-10-03T00:00:00.000",
+          "maxQuantity": null,
+          "minQuantity": 2,
+          "startsAt": "2026-08-02T00:00:00.000",
+          "terms": "הרשת רשאית להפסיק את המבצע בכל עת ללא הודעה מוקדמת"
+        }
+      ],
+      "monarch": [
+        {
+          "clubOnly": false,
+          "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
+          "discountRate": 4.92,
+          "endsAt": "2026-10-03T00:00:00.000",
+          "maxQuantity": null,
+          "minQuantity": 2,
+          "startsAt": "2026-08-02T00:00:00.000",
+          "terms": "הרשת רשאית להפסיק את המבצע בכל עת ללא הודעה מוקדמת"
+        }
+      ],
+      "original": [
+        {
+          "clubOnly": false,
+          "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
+          "discountRate": 4.92,
+          "endsAt": "2026-10-03T00:00:00.000",
+          "maxQuantity": null,
+          "minQuantity": 2,
+          "startsAt": "2026-08-02T00:00:00.000",
+          "terms": "הרשת רשאית להפסיק את המבצע בכל עת ללא הודעה מוקדמת"
+        },
+        {
+          "clubOnly": false,
+          "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
+          "discountRate": 4.92,
+          "endsAt": "2026-10-03T00:00:00.000",
+          "maxQuantity": null,
+          "minQuantity": 2,
+          "startsAt": "2026-08-02T00:00:00.000",
+          "terms": "הרשת רשאית להפסיק את המבצע בכל עת ללא הודעה מוקדמת"
+        }
+      ],
+      "pipeline-punch": [
+        {
+          "clubOnly": false,
+          "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
+          "discountRate": 4.92,
+          "endsAt": "2026-10-03T00:00:00.000",
+          "maxQuantity": null,
+          "minQuantity": 2,
+          "startsAt": "2026-08-02T00:00:00.000",
+          "terms": "הרשת רשאית להפסיק את המבצע בכל עת ללא הודעה מוקדמת"
+        }
+      ],
+      "strawberry": [
+        {
+          "clubOnly": false,
+          "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
+          "discountRate": 4.92,
+          "endsAt": "2026-10-03T00:00:00.000",
+          "maxQuantity": null,
+          "minQuantity": 2,
+          "startsAt": "2026-08-02T00:00:00.000",
+          "terms": "הרשת רשאית להפסיק את המבצע בכל עת ללא הודעה מוקדמת"
+        }
+      ],
+      "ultra": [
+        {
+          "clubOnly": false,
+          "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
+          "discountRate": 4.92,
+          "endsAt": "2026-10-03T00:00:00.000",
+          "maxQuantity": null,
+          "minQuantity": 2,
+          "startsAt": "2026-08-02T00:00:00.000",
+          "terms": "הרשת רשאית להפסיק את המבצע בכל עת ללא הודעה מוקדמת"
+        }
+      ],
+      "ultra-fiesta": [
+        {
+          "clubOnly": false,
+          "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
+          "discountRate": 4.92,
+          "endsAt": "2026-10-03T00:00:00.000",
+          "maxQuantity": null,
+          "minQuantity": 2,
+          "startsAt": "2026-08-02T00:00:00.000",
+          "terms": "הרשת רשאית להפסיק את המבצע בכל עת ללא הודעה מוקדמת"
+        }
+      ],
+      "ultra-paradise": [
+        {
+          "clubOnly": false,
+          "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
+          "discountRate": 4.92,
+          "endsAt": "2026-10-03T00:00:00.000",
+          "maxQuantity": null,
+          "minQuantity": 2,
+          "startsAt": "2026-08-02T00:00:00.000",
+          "terms": "הרשת רשאית להפסיק את המבצע בכל עת ללא הודעה מוקדמת"
+        }
+      ]
+    }
+  },
+  "VICTORY_NEW_SOURCE:76": {
+    "fetchedAt": "2026-09-14T16:42:33.513510+00:00",
+    "promos": {}
+  },
+  "VICTORY_NEW_SOURCE:77": {
+    "fetchedAt": "2026-09-14T16:42:31.063876+00:00",
+    "promos": {}
+  },
+  "VICTORY_NEW_SOURCE:79": {
+    "fetchedAt": "2026-09-14T16:42:34.030095+00:00",
+    "promos": {}
+  },
+  "VICTORY_NEW_SOURCE:80": {
+    "fetchedAt": "2026-09-14T16:42:32.556324+00:00",
+    "promos": {
+      "aussie-lemonade": [
+        {
+          "clubOnly": false,
+          "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
+          "discountRate": 4.92,
+          "endsAt": "2026-10-03T00:00:00.000",
+          "maxQuantity": null,
+          "minQuantity": 2,
+          "startsAt": "2026-08-02T00:00:00.000",
+          "terms": "הרשת רשאית להפסיק את המבצע בכל עת ללא הודעה מוקדמת"
+        }
+      ],
+      "full-zero": [
+        {
+          "clubOnly": false,
+          "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
+          "discountRate": 4.92,
+          "endsAt": "2026-10-03T00:00:00.000",
+          "maxQuantity": null,
+          "minQuantity": 2,
+          "startsAt": "2026-08-02T00:00:00.000",
+          "terms": "הרשת רשאית להפסיק את המבצע בכל עת ללא הודעה מוקדמת"
+        }
+      ],
+      "green-zero": [
+        {
+          "clubOnly": false,
+          "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
+          "discountRate": 4.92,
+          "endsAt": "2026-10-03T00:00:00.000",
+          "maxQuantity": null,
+          "minQuantity": 2,
+          "startsAt": "2026-08-02T00:00:00.000",
+          "terms": "הרשת רשאית להפסיק את המבצע בכל עת ללא הודעה מוקדמת"
+        }
+      ],
+      "mango-loco": [
+        {
+          "clubOnly": false,
+          "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
+          "discountRate": 4.92,
+          "endsAt": "2026-10-03T00:00:00.000",
+          "maxQuantity": null,
+          "minQuantity": 2,
+          "startsAt": "2026-08-02T00:00:00.000",
+          "terms": "הרשת רשאית להפסיק את המבצע בכל עת ללא הודעה מוקדמת"
+        }
+      ],
+      "original": [
+        {
+          "clubOnly": false,
+          "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
+          "discountRate": 4.92,
+          "endsAt": "2026-10-03T00:00:00.000",
+          "maxQuantity": null,
+          "minQuantity": 2,
+          "startsAt": "2026-08-02T00:00:00.000",
+          "terms": "הרשת רשאית להפסיק את המבצע בכל עת ללא הודעה מוקדמת"
+        },
+        {
+          "clubOnly": false,
+          "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
+          "discountRate": 4.92,
+          "endsAt": "2026-10-03T00:00:00.000",
+          "maxQuantity": null,
+          "minQuantity": 2,
+          "startsAt": "2026-08-02T00:00:00.000",
+          "terms": "הרשת רשאית להפסיק את המבצע בכל עת ללא הודעה מוקדמת"
+        }
+      ],
+      "pipeline-punch": [
+        {
+          "clubOnly": false,
+          "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
+          "discountRate": 4.92,
+          "endsAt": "2026-10-03T00:00:00.000",
+          "maxQuantity": null,
+          "minQuantity": 2,
+          "startsAt": "2026-08-02T00:00:00.000",
+          "terms": "הרשת רשאית להפסיק את המבצע בכל עת ללא הודעה מוקדמת"
+        }
+      ],
+      "rossi": [
+        {
+          "clubOnly": false,
+          "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
+          "discountRate": 4.92,
+          "endsAt": "2026-10-03T00:00:00.000",
+          "maxQuantity": null,
+          "minQuantity": 2,
+          "startsAt": "2026-08-02T00:00:00.000",
+          "terms": "הרשת רשאית להפסיק את המבצע בכל עת ללא הודעה מוקדמת"
+        }
+      ],
+      "ultra": [
+        {
+          "clubOnly": false,
+          "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
+          "discountRate": 4.92,
+          "endsAt": "2026-10-03T00:00:00.000",
+          "maxQuantity": null,
+          "minQuantity": 2,
+          "startsAt": "2026-08-02T00:00:00.000",
+          "terms": "הרשת רשאית להפסיק את המבצע בכל עת ללא הודעה מוקדמת"
+        }
+      ],
+      "ultra-paradise": [
+        {
+          "clubOnly": false,
+          "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
+          "discountRate": 4.92,
+          "endsAt": "2026-10-03T00:00:00.000",
+          "maxQuantity": null,
+          "minQuantity": 2,
+          "startsAt": "2026-08-02T00:00:00.000",
+          "terms": "הרשת רשאית להפסיק את המבצע בכל עת ללא הודעה מוקדמת"
+        }
+      ],
+      "ultra-peachy-keen": [
+        {
+          "clubOnly": false,
+          "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
+          "discountRate": 4.92,
+          "endsAt": "2026-10-03T00:00:00.000",
+          "maxQuantity": null,
+          "minQuantity": 2,
+          "startsAt": "2026-08-02T00:00:00.000",
+          "terms": "הרשת רשאית להפסיק את המבצע בכל עת ללא הודעה מוקדמת"
+        }
+      ]
+    }
+  },
+  "VICTORY_NEW_SOURCE:82": {
+    "fetchedAt": "2026-09-14T16:42:32.982656+00:00",
+    "promos": {}
+  },
+  "VICTORY_NEW_SOURCE:83": {
+    "fetchedAt": "2026-09-14T16:42:36.734282+00:00",
+    "promos": {}
+  },
+  "VICTORY_NEW_SOURCE:84": {
+    "fetchedAt": "2026-09-14T16:43:49.770162+00:00",
+    "promos": {}
+  },
+  "VICTORY_NEW_SOURCE:86": {
+    "fetchedAt": "2026-09-14T16:43:50.280133+00:00",
+    "promos": {}
+  },
+  "VICTORY_NEW_SOURCE:9": {
+    "fetchedAt": "2026-09-14T16:37:29.852005+00:00",
+    "promos": {}
+  },
+  "VICTORY_NEW_SOURCE:91": {
+    "fetchedAt": "2026-09-14T16:43:51.910823+00:00",
+    "promos": {}
+  },
+  "VICTORY_NEW_SOURCE:92": {
+    "fetchedAt": "2026-09-14T16:43:52.466240+00:00",
+    "promos": {}
+  },
+  "VICTORY_NEW_SOURCE:93": {
+    "fetchedAt": "2026-09-14T16:43:50.792789+00:00",
+    "promos": {}
+  },
+  "VICTORY_NEW_SOURCE:94": {
+    "fetchedAt": "2026-09-14T16:43:53.069403+00:00",
+    "promos": {}
+  },
+  "VICTORY_NEW_SOURCE:95": {
+    "fetchedAt": "2026-09-14T16:43:51.345896+00:00",
+    "promos": {}
+  },
+  "VICTORY_NEW_SOURCE:96": {
+    "fetchedAt": "2026-09-14T16:43:53.609156+00:00",
+    "promos": {}
+  },
   "YAYNO_BITAN_AND_CARREFOUR:10": {
     "fetchedAt": "2026-09-14T04:05:02.806084+00:00",
     "promos": {}
@@ -10626,6 +14158,10 @@
   },
   "YAYNO_BITAN_AND_CARREFOUR:183": {
     "fetchedAt": "2026-09-14T04:05:03.407713+00:00",
+    "promos": {}
+  },
+  "YAYNO_BITAN_AND_CARREFOUR:2": {
+    "fetchedAt": "2026-09-14T16:55:41.262516+00:00",
     "promos": {}
   },
   "YAYNO_BITAN_AND_CARREFOUR:213": {
