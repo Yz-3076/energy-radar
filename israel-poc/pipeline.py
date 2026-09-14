@@ -177,6 +177,13 @@ KNOWN_NAME_HINT = "מונסטר"  # catches SKUs not yet in variants.json by bar
 NAME_HINT_EXCLUDES = ("מונסטרל", "monastrell")
 
 
+async def _scrape(scraper, file_type: str, when_date=None) -> int:
+    count = 0
+    async for _ in scraper.scrape(limit=FILE_LIMIT, files_types=[file_type], when_date=when_date):
+        count += 1
+    return count
+
+
 async def fetch_files(chain_name: str, file_type: str, out_subdir: str) -> Path:
     scraper_cls = ScraperFactory.get(chain_name)
     if scraper_cls is None:
@@ -184,10 +191,33 @@ async def fetch_files(chain_name: str, file_type: str, out_subdir: str) -> Path:
         return DUMPS_DIR / chain_name / out_subdir
     out_dir = DUMPS_DIR / chain_name / out_subdir
     scraper = scraper_cls(file_output=DiskFileOutput(storage_path=str(out_dir)))
-    count = 0
+
+    # Ask for each store's LATEST file, not every file the chain still hosts.
+    #
+    # Measured on the 98-minute run of 2026-09-14: King Store published 43
+    # distinct file dates going back to 29 July and we downloaded all 2,086
+    # of them — for 29 branches — every single run. Super Sapir and Maayan
+    # 2000 were the same shape. Those three chains alone were ~34 of the 98
+    # minutes, spent re-downloading prices from weeks ago that the pipeline
+    # parses and discards, since only the current price matters.
+    #
+    # It must be a datetime.datetime. The library's own error text says
+    # "datetime or 'latest'", but the string is not handled anywhere —
+    # apply_limit does `isinstance(when_date, datetime.datetime)` and raises
+    # on everything else, so both a date object and the literal "latest"
+    # blow up. The filter itself is a substring match on "-YYYYMMDD" in the
+    # file name (see Engine.get_by_date), so the time of day is irrelevant.
+    #
+    # The fallback is what makes this safe. Several chains publish around
+    # 05:00, and a run at 03:00 would legitimately find nothing dated today;
+    # without the retry, a timing quirk would look like an outage and the
+    # chain would silently drop out of the map for that run.
     try:
-        async for _ in scraper.scrape(limit=FILE_LIMIT, files_types=[file_type]):
-            count += 1
+        count = await _scrape(scraper, file_type, when_date=datetime.now(timezone.utc))
+        if count == 0:
+            count = await _scrape(scraper, file_type)
+            if count:
+                print(f"  {chain_name} {file_type}: nothing published today; fell back to all dates")
     except Exception as e:  # noqa: BLE001 — one flaky chain must never take the whole run down
         print(f"  {chain_name} {file_type}: FAILED ({type(e).__name__}: {e})")
         return out_dir
