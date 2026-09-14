@@ -159,7 +159,7 @@ def _known_towns() -> set:
     """
     global _KNOWN_TOWNS
     if _KNOWN_TOWNS is None:
-        city_name("")  # force the table to load
+        _load_codes()
         names = set((_CITY_CODES or {}).values())
         _KNOWN_TOWNS = names | {n.replace("-", " ") for n in names}
     return _KNOWN_TOWNS
@@ -187,6 +187,18 @@ def city_hints(store_name: str) -> list[str]:
     structured field: the first token can be the town ("אום אלפחם"), the
     brand ("תיב טעם נתניה"), or a street ("סופר יודה בוגרשוב"). Two-word
     towns are common too ("באר יעקב"), so the pair is offered as well.
+
+    Deliberately limited to those few token positions in the NAME. Scanning
+    the name and address freely for any locality in the CBS list was tried
+    and rejected 2026-09-14: it found a town for 115 of the 188 branches
+    that have no city code, but the matches included "אזור תעשייה"
+    (industrial *zone*) read as the town Azor, the street "נתיבות המשפט"
+    read as the town Netivot 60km away, and the street "חפץ חיים" read as
+    the kibbutz of that name. Israeli streets are named after places often
+    enough that free text cannot be mined this way — the same failure that
+    made a store-name town check unusable, in a new disguise. With no city
+    code there is nothing to validate the guess against, so those branches
+    are better left unplaced than placed wrongly.
     """
     if not store_name:
         return []
@@ -224,6 +236,37 @@ def city_hints(store_name: str) -> list[str]:
 
 
 _CITY_CODES: dict | None = None
+_RURAL_CODES: set | None = None
+
+
+def _load_codes() -> None:
+    global _CITY_CODES, _RURAL_CODES
+    if _CITY_CODES is not None:
+        return
+    raw = (
+        json.loads(CITY_CODES_PATH.read_text(encoding="utf-8"))
+        if CITY_CODES_PATH.exists()
+        else {}
+    )
+    _CITY_CODES = raw.get("names", {})
+    _RURAL_CODES = set(raw.get("rural", []))
+    if not _CITY_CODES:
+        print("  WARNING: data/city-codes.json missing — geocoding without town names")
+
+
+def is_rural(city_code: str) -> bool:
+    """Is this locality a kibbutz/moshav rather than a town?
+
+    True when the CBS table files it under a regional council. Those places
+    are a few hundred metres across, which is what makes the town's own
+    coordinate an acceptable pin for a store there with no street address.
+    """
+    _load_codes()
+    return (_normalise_code(city_code) in (_RURAL_CODES or set()))
+
+
+def _normalise_code(city_code: str) -> str:
+    return (city_code or "").strip().lstrip("0") or "0"
 
 
 def city_name(city_code: str) -> str:
@@ -235,17 +278,8 @@ def city_name(city_code: str) -> str:
     Central Bureau of Statistics locality list published on data.gov.il —
     see tools/fetch_city_codes.py for how data/city-codes.json is built.
     """
-    global _CITY_CODES
-    if _CITY_CODES is None:
-        _CITY_CODES = (
-            json.loads(CITY_CODES_PATH.read_text(encoding="utf-8"))
-            if CITY_CODES_PATH.exists()
-            else {}
-        )
-        if not _CITY_CODES:
-            print("  WARNING: data/city-codes.json missing — geocoding without town names")
-    code = (city_code or "").strip().lstrip("0") or "0"
-    return _CITY_CODES.get(code, "")
+    _load_codes()
+    return (_CITY_CODES or {}).get(_normalise_code(city_code), "")
 
 
 def load_town_cache() -> dict:
@@ -289,6 +323,22 @@ def town_coord(town: str) -> list | None:
 def _in_israel(lat: float, lng: float) -> bool:
     min_lat, max_lat, min_lng, max_lng = ISRAEL_BOUNDS
     return min_lat <= lat <= max_lat and min_lng <= lng <= max_lng
+
+
+def is_approximate(address: str, city_code: str) -> bool:
+    """Will this store be pinned at its village's centre rather than its own
+    address?
+
+    True only for an address with no street number in a locality small
+    enough that the distinction barely matters (see is_rural). Callers
+    should surface it — a pin the app presents as exact when it is really
+    "somewhere in this kibbutz" is the kind of small dishonesty that makes
+    a walking app untrustworthy.
+
+    Pure function of its inputs, so the pipeline can ask about a store
+    without re-running the lookup.
+    """
+    return _too_vague(address) and bool(city_name(city_code)) and is_rural(city_code)
 
 
 def _too_vague(address: str) -> bool:
@@ -505,6 +555,19 @@ def geocode(
 
     if result is None:
         if _too_vague(address):
+            if is_approximate(address, city_code):
+                # A petrol station or shop in a kibbutz, addressed as
+                # "קיבוץ עינת" or "בכניסה לקיבוץ מזרע" — no street, because
+                # the village has no streets to speak of. Dor Alon files
+                # hundreds of these. The village's own coordinate is a
+                # genuinely good pin at that scale, so the store appears
+                # instead of being dropped; callers can tell these apart
+                # via is_approximate() and say so in the UI.
+                centre = town_coord(town)
+                if centre is not None:
+                    print(f"  geocode placed {address!r} at the centre of {town} (village, no street address)")
+                    cache[key] = centre
+                    return centre
             print(f"  geocode skipped for {address!r} ({zip_code}): no street number, too vague to trust")
         else:
             # Last resort. Weaker than street+town, so the check below has

@@ -57,19 +57,31 @@ def fetch() -> dict:
 
 def main() -> None:
     data = fetch()
-    table = {}
+    names, rural = {}, []
     for rec in data["records"]:
         code = str(rec["סמל_ישוב"]).strip().lstrip("0") or "0"
         name = clean(str(rec["שם_ישוב"]))
         if not name or name in PLACEHOLDER_NAMES:
             continue
-        table[code] = name
+        names[code] = name
+        # Belonging to a regional council (מועצה אזורית) is the official
+        # marker of a small rural locality — a kibbutz or moshav — as
+        # opposed to a city or local council. Verified against the data:
+        # every kibbutz checked has one and every city has none. The
+        # pipeline uses it to decide when a village's own coordinate is a
+        # good enough pin for an address that names no street.
+        if int(rec["סמל_מועצה_איזורית"] or 0):
+            rural.append(code)
 
     OUT.parent.mkdir(parents=True, exist_ok=True)
-    OUT.write_text(json.dumps(table, ensure_ascii=False, indent=1, sort_keys=True), encoding="utf-8")
-    print(f"wrote {OUT} — {len(table)} localities from {data['total']} rows")
+    OUT.write_text(
+        json.dumps({"names": names, "rural": sorted(rural, key=int)},
+                   ensure_ascii=False, indent=1, sort_keys=True),
+        encoding="utf-8",
+    )
+    print(f"wrote {OUT} — {len(names)} localities ({len(rural)} rural) from {data['total']} rows")
     for code in ("3000", "4000", "5000", "7900", "1200"):
-        print(f"  {code:>5} = {table.get(code, '(missing)')}")
+        print(f"  {code:>5} = {names.get(code, '(missing)')}")
 
 
 if __name__ == "__main__":

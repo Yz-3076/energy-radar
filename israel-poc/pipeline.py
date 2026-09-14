@@ -407,9 +407,18 @@ async def run() -> None:
                     "chain": chain.replace("_", " ").title(),
                     "name": info["name"],
                     "address": info["address"],
-                    "city": "",  # chain files give a numeric city code, not a name — see geocode.py
+                    # Chain files carry a numeric CBS code, not a name;
+                    # verify_pins fills this in from the code table.
+                    "city": "",
                     "lat": coords[0],
                     "lng": coords[1],
+                    # True when the pin is the village's centre rather than
+                    # the store's own address — see geocode.is_approximate.
+                    # Worth shipping so the app can say "somewhere in this
+                    # kibbutz" instead of implying a precise location.
+                    "approximate": geo.is_approximate(
+                        info["address"], info.get("cityCode", "")
+                    ),
                     "shelf": [],
                 }
                 store_city_code[store_key] = info.get("cityCode", "")
