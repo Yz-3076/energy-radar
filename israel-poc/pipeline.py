@@ -170,6 +170,12 @@ VARIANTS = json.loads((Path(__file__).parent / "variants.json").read_text(encodi
 BARCODE_TO_VARIANT = {v["barcode"]: v["id"] for v in VARIANTS if v.get("barcode")}
 KNOWN_NAME_HINT = "מונסטר"  # catches SKUs not yet in variants.json by barcode
 
+# Words that contain the hint as a substring but are a different product.
+# "מונסטרל" is the Monastrell wine grape, and "יין אל גרינגו - מונסטרל" was
+# being picked up as an energy drink; it only stayed out of the data because
+# its barcode happens not to be mapped, which is luck rather than a filter.
+NAME_HINT_EXCLUDES = ("מונסטרל", "monastrell")
+
 
 async def fetch_files(chain_name: str, file_type: str, out_subdir: str) -> Path:
     scraper_cls = ScraperFactory.get(chain_name)
@@ -238,7 +244,11 @@ def parse_monster_items(prices_dir: Path):
             code = item.findtext("ItemCode")
             name = item.findtext("ItemName") or ""
             is_known = code in BARCODE_TO_VARIANT
-            is_named_monster = KNOWN_NAME_HINT in name or "MONSTER" in name.upper()
+            lowered = name.lower()
+            is_named_monster = (
+                (KNOWN_NAME_HINT in name or "MONSTER" in name.upper())
+                and not any(x in lowered for x in NAME_HINT_EXCLUDES)
+            )
             if not is_known and not is_named_monster:
                 continue
             price_text = item.findtext("ItemPrice")
@@ -312,6 +322,47 @@ def write_history_index() -> None:
     )
 
 
+def verify_pins(stores_by_key: dict[str, dict], store_city_code: dict[str, str]) -> None:
+    """Label every store with its real town, and drop pins that aren't in it.
+
+    Two gaps this closes that the check inside geocode() cannot. That check
+    only runs when an address is looked up, so a pin cached by an earlier
+    run — including every pin cached before the check existed — is never
+    re-examined; and a cached pin is exactly where a bad coordinate hides,
+    because it is stored permanently and never questioned again. Running
+    over the finished set catches both.
+
+    It also fills in `city`, which was empty on all 461 stores: chain price
+    files carry a numeric CBS code and no name, so until the code table
+    existed there was no town name to put there and the app had none to show.
+
+    Modifies stores_by_key in place.
+    """
+    print("\n=== verifying pins ===")
+    dropped, labelled, unknown = 0, 0, 0
+    for key in list(stores_by_key):
+        store = stores_by_key[key]
+        town = geo.city_name(store_city_code.get(key, ""))
+        if not town:
+            unknown += 1
+            continue
+        centre = geo.town_coord(town)
+        if centre is None:
+            unknown += 1
+            continue
+        km = geo._haversine_km(tuple(centre), (store["lat"], store["lng"]))
+        if km > geo.TOWN_MAX_KM:
+            dropped += 1
+            print(f"  dropped {store['chain']} {store['name']!r} ({store['address']!r}): "
+                  f"{km:.0f}km from {town}")
+            del stores_by_key[key]
+            continue
+        store["city"] = town
+        labelled += 1
+    print(f"  {labelled} store(s) labelled with a town, {dropped} misplaced pin(s) dropped, "
+          f"{unknown} unverifiable (no usable city code)")
+
+
 async def run() -> None:
     now = datetime.now(timezone.utc).isoformat()
     geocode_cache = geo.load_cache()
@@ -319,9 +370,7 @@ async def run() -> None:
     new_observations: list[dict] = []
     stores_by_key: dict[str, dict] = {}  # f"{chain}:{store_id}" -> Store shape
     promo_stores: list[tuple[str, str]] = []  # (chain, store_id) — see promotions_gov.py
-    # city code -> a coordinate already resolved for that town, used to
-    # sanity-check addresses rescued by a city hint (see geocode.city_hint)
-    city_anchors: dict[str, list[float]] = {}
+    store_city_code: dict[str, str] = {}  # store_key -> CBS code, for verify_pins
 
     for chain in CHAINS:
         print(f"=== {chain} ===")
@@ -347,10 +396,7 @@ async def run() -> None:
                 geocode_cache,
                 store_name=info.get("name", ""),
                 city_code=info.get("cityCode", ""),
-                city_anchors=city_anchors,
             )
-            if coords and info.get("cityCode"):
-                city_anchors.setdefault(info["cityCode"], coords)
             if coords is None:
                 continue  # can't place a pin without coordinates
 
@@ -366,6 +412,7 @@ async def run() -> None:
                     "lng": coords[1],
                     "shelf": [],
                 }
+                store_city_code[store_key] = info.get("cityCode", "")
                 # First time we're keeping this store this run, so this is
                 # the natural place to note that it needs promos — but only
                 # note it. Fetching inline here made the run serial, one
@@ -410,6 +457,8 @@ async def run() -> None:
     gov_promo_maps = await promotions_gov.get_promos_for_stores(
         promo_stores, BARCODE_TO_VARIANT, promo_cache
     )
+
+    verify_pins(stores_by_key, store_city_code)
 
     geo.save_cache(geocode_cache)
     promotions_gov.save_cache(promo_cache)

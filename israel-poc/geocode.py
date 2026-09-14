@@ -1,57 +1,79 @@
 """
-Address -> (lat, lng), cached forever in data/geocode-cache.json.
+Address -> (lat, lng), cached in data/geocode-cache.json.
 
 Uses OpenStreetMap's Nominatim — free, keyless, but rate- and usage-policy-
 limited (nominatim.org/release-docs/latest/api/Usage_Policy/): max 1
 request/second, and it wants a real identifying User-Agent, not a browser
-UA. Since we cache every result permanently and only ever geocode a NEW
-address once (addresses don't move), a run only ever pays this cost for
-stores never seen before — most runs geocode nothing at all.
+UA. Results are cached, so a run only pays for addresses never seen before
+— most runs geocode nothing at all.
 
-Chain price files give a numeric city code, not a city name (see
-docs/israel-pipeline.md), so this geocodes on street address + ZIP + country.
+THE CENTRAL PROBLEM: chain price files give a store's town as a numeric CBS
+code and never as a name (confirmed across every chain sampled — 0 of 602
+branches carried a name). Geocoding street-only is therefore the obvious
+thing to do, and it is badly wrong: Israeli street names repeat in every
+city, so Nominatim does not fail on an ambiguous address, it confidently
+returns a WRONG match. Measured on live data, five Haifa branches were
+pinned 67-116km away, in the Tel Aviv area, and a Mitzpe Ramon branch sat
+in Petah Tikva. Nothing about those results looks like an error — they are
+real coordinates for a real street of that name, in the wrong city.
 
-Confirmed 2026-09-09 (real case: a Modi'in branch listed only as "ישפרו
-סנטר" — a mall name, no street number): Nominatim doesn't fail on an
-address like this, it confidently returns a WRONG match up to ~150km away
-(a same-named place elsewhere in Israel). The old `if coords is None` check
-had no way to catch that — a wrong-but-non-null result was cached forever
-and the store silently showed up at the wrong location instead of just
-being missing. Three defenses now, in order:
-  1. An address with no digit at all (no street number — a mall/center
-     name, not a real street address) is treated as too vague to trust and
-     never even queried; see `_too_vague`.
-  2. A structured query (street/postalcode/country as separate fields
-     rather than one free-text string) tends to match this data shape
-     better than a smushed-together string.
-  3. Any result outside Israel's own bounding box is rejected as a sanity
-     backstop.
-None of this is a complete fix — a *properly formatted* street address can
-still resolve to the wrong city if Nominatim/OpenStreetMap's coverage for
-that specific street is thin (confirmed on a real case: "צאלון 21" in
-Modi'in resolved ~150km away despite being a normal street+number). That's
-a genuine data-quality gap in the free geocoder, not something a smarter
-query can fully solve — worth knowing about rather than pretending it's
-airtight. A lookup that fails, is too vague, or fails the sanity check is
-recorded as `null` in the cache rather than retried every run (a bad
-address doesn't get better by asking again).
+THE FIX: data/city-codes.json maps the CBS code to the official town name
+(see fetch_city_codes.py), so addresses are geocoded as street + town. That
+turned the branches above from 116km, 82km and 41km out into 3.2km, 2.1km
+and 0.2km — corrected, not merely discarded. The same table then gives a
+free second job: every result is checked against the town's own coordinate
+and rejected if it lands more than TOWN_MAX_KM away.
 
-For the handful of specific branches this has actually been confirmed on,
-see MANUAL_OVERRIDES below — hand-verified once (by re-querying with the
-real city name, which the automated pipeline can't do — see its own
-comment) rather than left wrong or silently dropped.
+Two earlier attempts at that check are worth knowing about, because both
+failed in instructive ways and both looked reasonable first:
+  - Checking against a town parsed out of the STORE NAME rejected 188 of
+    461 live pins, nearly all of them correct. Israeli store names are
+    routinely just their own street name, and streets like אלנבי and הילל
+    resolve as settlements, so the check could not tell "the Allenby
+    branch" from "a branch in a place called Allenby".
+  - Checking against the median of other branches sharing a city code
+    failed the opposite way: for city code 4000 the majority of pins were
+    themselves wrong, so the median sat outside Haifa and the five
+    genuinely-correct Haifa branches were the ones rejected.
+A town's published coordinate has neither weakness — it is right even when
+every branch pinned around it is wrong.
+
+Remaining defences, unchanged:
+  - An address with no digit at all (a mall name, not a street address) is
+    too vague to trust and is never queried; see `_too_vague`.
+  - Any result outside Israel's bounding box is rejected.
+  - MANUAL_OVERRIDES holds hand-verified coordinates for specific branches.
+
+Caching rule: an address is cached once it has an ANSWER — a coordinate, or
+a confirmed "no such place". A lookup that never completed (throttled,
+timed out) is NOT cached, because writing it in as null would retire a
+perfectly good address permanently on the strength of a transient 429.
+A cached coordinate that fails the town check is re-resolved rather than
+trusted, which is what lets pins cached before this table existed heal
+themselves.
 """
 
 import json
 import re
 import time
+import urllib.error
 import urllib.parse
 import urllib.request
 from pathlib import Path
 
 CACHE_PATH = Path(__file__).resolve().parent.parent / "data" / "geocode-cache.json"
+# CBS locality code -> town name, and town name -> coordinate. Both are
+# separate files from the address cache: different key spaces, and both are
+# small, stable reference data rather than per-store results.
+CITY_CODES_PATH = Path(__file__).resolve().parent.parent / "data" / "city-codes.json"
+TOWN_CACHE_PATH = Path(__file__).resolve().parent.parent / "data" / "town-coords.json"
 USER_AGENT = "energy-radar-price-pipeline/1.0 (github.com/joshuazisel/monster-tracker)"
 MIN_INTERVAL_S = 1.1  # Nominatim policy: max 1 req/sec; a little slack
+# A 429 is not a "no". Retry it, backing off 5s, 10s, 20s — long enough to
+# actually clear a throttle, and bounded so one hostile response can't stall
+# a run indefinitely.
+MAX_RETRIES = 4
+BACKOFF_BASE_S = 5.0
 
 # Generous bounding box around Israel + the territories chain branches can
 # realistically be in (lat, lng). Not a precise border — just wide enough to
@@ -59,17 +81,14 @@ MIN_INTERVAL_S = 1.1  # Nominatim policy: max 1 req/sec; a little slack
 # totally different part of the country.
 ISRAEL_BOUNDS = (29.3, 33.5, 34.1, 36.0)  # (min_lat, max_lat, min_lng, max_lng)
 
-# How far a city-hint result may sit from another branch already resolved
-# in the same municipality before it is treated as the wrong town.
+# How far a pin may sit from the centre of the town it is filed under.
 #
-# 25km, not the 40 first tried. The anchor is one arbitrary branch, so this
-# has to tolerate two real branches at opposite ends of a large city — but
-# 40 let a hint of the *street* name resolve inside the window while the
-# correct town ("נתניה", 42km from its own anchor) was rejected just
-# outside it. This app sends people walking; a pin in roughly the right
-# region is not good enough, and a store that never appears is a smaller
-# failure than one that appears somewhere wrong.
-CITY_CLUSTER_MAX_KM = 25.0
+# Measured against the town centre, not against other branches, so this only
+# has to cover a municipality's own radius. Jerusalem, the largest, is about
+# 10km from centre to edge, and regional councils sprawl further, so 25km
+# leaves real room while still catching the errors actually seen in this
+# data — which were 50km, 113km and 163km out, not 26km.
+TOWN_MAX_KM = 25.0
 
 # Chain brand words that sit in front of the town in a store name
 # ("שלי חיפה- אורן", "סופר יודה בוגרשוב"). Stripped before the first
@@ -115,6 +134,24 @@ def _haversine_km(a: tuple[float, float], b: tuple[float, float]) -> float:
     return 2 * 6371 * math.asin(math.sqrt(h))
 
 
+_KNOWN_TOWNS: set | None = None
+
+
+def _known_towns() -> set:
+    """Every town name in the CBS list, plus a hyphen-free spelling of each.
+
+    The table writes "אום אל-פחם" and "מודיעין-מכבים-רעות"; store names
+    write them without the hyphens. Matching both spellings costs nothing
+    and is the difference between recognising those towns and not.
+    """
+    global _KNOWN_TOWNS
+    if _KNOWN_TOWNS is None:
+        city_name("")  # force the table to load
+        names = set((_CITY_CODES or {}).values())
+        _KNOWN_TOWNS = names | {n.replace("-", " ") for n in names}
+    return _KNOWN_TOWNS
+
+
 def city_hints(store_name: str) -> list[str]:
     """Candidate towns pulled out of a store's own name, best guess first.
 
@@ -124,14 +161,19 @@ def city_hints(store_name: str) -> list[str]:
     data (measured: 3 of 4 previously-unresolvable Shufersal branches came
     back correct once the town was supplied).
 
+    Only used when the store's city code is missing or not in the CBS table
+    (real case: several branches filed under code "0"). Every candidate is
+    checked against the official locality list before use, which is what
+    makes this safe now — a guess only counts if Israel actually has a town
+    by that name. That single filter removes the failure that made an
+    earlier version of this unusable: "אלנבי", "הילל" and "יפת" are street
+    names that Nominatim happily resolves as places, but none of them is a
+    locality, so none of them survives.
+
     Several candidates rather than one, because a store name is not a
-    structured field and a single guess is wrong often: the first token can
-    be the town ("אום אלפחם"), the brand ("תיב טעם נתניה"), or a street
-    ("סופר יודה בוגרשוב"). Two-word towns are common too ("באר יעקב"), so
-    the pair is offered as well. Wrong guesses are cheap — Nominatim
-    usually returns nothing for them, and anything it does return still has
-    to survive the caller's distance check against other branches in the
-    same municipality.
+    structured field: the first token can be the town ("אום אלפחם"), the
+    brand ("תיב טעם נתניה"), or a street ("סופר יודה בוגרשוב"). Two-word
+    towns are common too ("באר יעקב"), so the pair is offered as well.
     """
     if not store_name:
         return []
@@ -148,8 +190,87 @@ def city_hints(store_name: str) -> list[str]:
     if len(tokens) >= 2:
         out.append(tokens[1])  # brand-first names: "תיב טעם נתניה" -> "טעם"...
         out.append(tokens[-1])  # ...and the trailing town: "נתניה"
-    # preserve order, drop repeats
-    return list(dict.fromkeys(out))
+    known = _known_towns()
+    return [c for c in dict.fromkeys(out) if c in known]  # ordered, deduped, real
+
+
+# How far a branch may sit from the town its own name claims it is in.
+# Generous — it only has to catch the failure this exists for, which is a
+# branch named for a Negev town landing near Tel Aviv, 150-200km out.
+
+# city name -> [lat, lng] | None, resolved once per run. Towns are few and
+# repeat constantly across branches, so this keeps the extra lookups to
+# roughly one per town rather than one per address.
+
+
+# Nominatim `type` values that are actually a settlement. A street is
+# class=highway and must never be treated as a town: half these store names
+# are named after their own street ("סופר יודה אלנבי", "מעיין 2000 הילל"),
+# and Israeli street names double as place names often enough that accepting
+# any result at all made this check reject 41% of perfectly good pins.
+
+
+_CITY_CODES: dict | None = None
+
+
+def city_name(city_code: str) -> str:
+    """Official town name for a CBS locality code, or "" if unknown.
+
+    Chain price files give this numeric code and no name at all (confirmed
+    across every chain sampled: 0 of 602 branches carried a name), which is
+    why addresses were geocoded street-only for so long. The table is the
+    Central Bureau of Statistics locality list published on data.gov.il —
+    see tools/fetch_city_codes.py for how data/city-codes.json is built.
+    """
+    global _CITY_CODES
+    if _CITY_CODES is None:
+        _CITY_CODES = (
+            json.loads(CITY_CODES_PATH.read_text(encoding="utf-8"))
+            if CITY_CODES_PATH.exists()
+            else {}
+        )
+        if not _CITY_CODES:
+            print("  WARNING: data/city-codes.json missing — geocoding without town names")
+    code = (city_code or "").strip().lstrip("0") or "0"
+    return _CITY_CODES.get(code, "")
+
+
+def load_town_cache() -> dict:
+    if TOWN_CACHE_PATH.exists():
+        return json.loads(TOWN_CACHE_PATH.read_text(encoding="utf-8"))
+    return {}
+
+
+def save_town_cache(cache: dict) -> None:
+    TOWN_CACHE_PATH.parent.mkdir(parents=True, exist_ok=True)
+    TOWN_CACHE_PATH.write_text(
+        json.dumps(cache, ensure_ascii=False, indent=1, sort_keys=True), encoding="utf-8"
+    )
+
+
+_TOWN_COORDS: dict | None = None
+
+
+def town_coord(town: str) -> list | None:
+    """Where a town is. One lookup per town ever, cached on disk.
+
+    Safe to trust in a way the old name-guessing was not: `town` here comes
+    from the CBS table, so it really is a locality, and asking Nominatim
+    for a locality by name is the one query shape it handles reliably.
+    There are ~1,270 towns in Israel and a few hundred in the data, so this
+    costs a handful of lookups on the first run and nothing after that.
+    """
+    global _TOWN_COORDS
+    if _TOWN_COORDS is None:
+        _TOWN_COORDS = load_town_cache()
+    if town in _TOWN_COORDS:
+        return _TOWN_COORDS[town]
+    coords, reachable = _ask({"city": town})
+    if coords is None and not reachable:
+        return None  # unknown, not "nowhere" — don't cache, don't check against it
+    _TOWN_COORDS[town] = coords
+    save_town_cache(_TOWN_COORDS)  # cheap, and survives a run that dies midway
+    return coords
 
 
 def _in_israel(lat: float, lng: float) -> bool:
@@ -244,27 +365,52 @@ MANUAL_OVERRIDES: dict[str, list[float] | None] = {
 }
 
 
-def _ask(params: dict) -> list | None:
-    """One Nominatim call, rate-limited, Israel-bounds-checked. None on
-    anything that fails or lands outside the country."""
+def _ask(params: dict) -> tuple[list | None, bool]:
+    """One Nominatim call, rate-limited and Israel-bounds-checked.
+
+    Returns (coords, reachable). The second value is the important one:
+    False means the question never got answered — throttled, timed out,
+    connection died — as opposed to answered with "no such place". The
+    caller must not cache a False as a result. Confirmed the hard way:
+    Nominatim starts returning 429 well before its documented 1/sec limit
+    bites, and because every failure used to look alike, a throttled
+    address was written into the cache as permanently unresolvable and
+    never asked about again.
+    """
     qs = urllib.parse.urlencode({**params, "country": "Israel", "format": "json", "limit": 1})
     req = urllib.request.Request(
         f"https://nominatim.openstreetmap.org/search?{qs}",
         headers={"User-Agent": USER_AGENT},
     )
-    try:
-        with urllib.request.urlopen(req, timeout=10) as resp:
-            hits = json.loads(resp.read().decode("utf-8"))
-        if hits:
+    for attempt in range(MAX_RETRIES):
+        try:
+            with urllib.request.urlopen(req, timeout=15) as resp:
+                hits = json.loads(resp.read().decode("utf-8"))
+            time.sleep(MIN_INTERVAL_S)
+            if not hits:
+                return None, True  # a real answer: no such place
             lat, lng = float(hits[0]["lat"]), float(hits[0]["lon"])
             if _in_israel(lat, lng):
-                return [lat, lng]
+                return [lat, lng], True
             print(f"  geocode rejected {params}: {lat},{lng} outside Israel")
-    except Exception as e:  # noqa: BLE001 — a failed lookup should not crash the run
-        print(f"  geocode failed {params}: {e}")
-    finally:
-        time.sleep(MIN_INTERVAL_S)
-    return None
+            return None, True
+        except urllib.error.HTTPError as e:
+            if e.code != 429:
+                print(f"  geocode failed {params}: {e}")
+                time.sleep(MIN_INTERVAL_S)
+                return None, False
+            # Backing off further each time rather than retrying at the
+            # same pace, because a 429 means the server wants less traffic,
+            # not the same traffic again.
+            wait = BACKOFF_BASE_S * (2**attempt)
+            print(f"  rate-limited, waiting {wait:.0f}s (attempt {attempt + 1}/{MAX_RETRIES})")
+            time.sleep(wait)
+        except Exception as e:  # noqa: BLE001 — a failed lookup should not crash the run
+            print(f"  geocode failed {params}: {e}")
+            time.sleep(MIN_INTERVAL_S)
+            return None, False
+    print(f"  geocode gave up on {params}: still rate-limited after {MAX_RETRIES} attempts")
+    return None, False
 
 
 def geocode(
@@ -273,62 +419,109 @@ def geocode(
     cache: dict,
     store_name: str = "",
     city_code: str = "",
-    city_anchors: dict | None = None,
 ) -> list | None:
     """Returns [lat, lng] or None (unresolved). Mutates `cache` in place;
     caller is responsible for save_cache() once done with a whole run.
 
-    `store_name` and `city_code` are optional and only used for the
-    city-hint retry described in `city_hint` — without them this behaves
-    exactly as it always did. `city_anchors` maps a city code to a
-    coordinate already resolved for that code, and is what keeps the retry
-    honest: a hint pulled out of a store name is a guess, and a guess that
-    lands 150km from every other branch in the same municipality is wrong.
+    An address only enters the cache once it has an ANSWER — a coordinate,
+    or a confirmed "no such place". If the geocoder could not be reached
+    (throttled, timed out), nothing is written and the address is simply
+    retried on the next run, which is the difference between a slow run and
+    a permanently missing store.
+
+    The town comes from `city_code` via the official CBS table (see
+    city_name); `store_name` is only a fallback for the rows whose code is
+    missing or unlisted. The town's own coordinate is what a result is
+    checked against, rather than other branches in the same town — it stays
+    right even when every branch around it is wrong, which is exactly the
+    case that defeated the previous approach.
     """
     key = _cache_key(address, zip_code)
     if key in MANUAL_OVERRIDES:
         cache[key] = MANUAL_OVERRIDES[key]
         return MANUAL_OVERRIDES[key]
 
+    town = city_name(city_code)
+    trimmed = street_only(address)
+
     if key in cache:
-        return cache[key]
+        cached = cache[key]
+        # A cached None is a settled answer — re-asking a bad address every
+        # run just burns the rate limit for the same "no".
+        if cached is None:
+            return None
+        centre = town_coord(town) if town else None
+        if centre is None or _haversine_km(tuple(centre), tuple(cached)) <= TOWN_MAX_KM:
+            return cached
+        # A cached coordinate that is not in the store's own town. Almost
+        # all of these were resolved street-only, before the city code was
+        # available, and street-only is precisely what puts a Haifa branch
+        # in Tel Aviv. Fall through and re-resolve it properly rather than
+        # trusting it forever — otherwise every pin cached before the code
+        # table existed keeps its old wrong answer, since a cache hit
+        # normally returns before any lookup happens.
+        print(f"  geocode re-resolving {address!r}: cached pin is not in {town}")
 
-    if _too_vague(address):
-        print(f"  geocode skipped for {address!r} ({zip_code}): no street number, too vague to trust")
-        cache[key] = None
-        return None
+    # Street + town, the authoritative pairing. Worth doing FIRST rather
+    # than as a retry: street-alone is what produced the confidently-wrong
+    # pins this module exists to prevent (a Haifa branch in the Tel Aviv
+    # area, a Mitzpe Ramon branch in Petah Tikva), because Israeli street
+    # names repeat in every city and Nominatim simply picks one.
+    result, reachable = _ask({"street": trimmed, "city": town}) if town else (None, True)
 
-    primary = {"street": address}
-    if zip_code:
-        primary["postalcode"] = zip_code
-    result = _ask(primary)
-
-    # Street+ZIP alone leaves ~39% of these addresses unresolved, because
-    # OpenStreetMap's Israeli street coverage is patchy and the files carry
-    # no city name. The town is usually sitting in the store's own name, and
-    # supplying it as a structured field resolves a good share of them.
-    if result is None:
-        anchor = (city_anchors or {}).get(city_code)
-        trimmed = street_only(address)
+    if result is None and not town:
+        # No usable city code. Fall back to a town guessed from the store
+        # name — safe only because city_hints now rejects anything that is
+        # not an actual locality.
         for hint in city_hints(store_name):
-            candidate = _ask({"street": trimmed, "city": hint})
-            if candidate is None:
-                continue
-            if anchor:
-                km = _haversine_km(tuple(anchor), tuple(candidate))
-                if km > CITY_CLUSTER_MAX_KM:
-                    # The hint is a guess scraped out of a name; this check
-                    # is what stops a plausible-looking wrong town being
-                    # cached forever, which is exactly how branches ended up
-                    # 150km out before.
-                    print(
-                        f"  geocode rejected hint {hint!r} for {address!r}: "
-                        f"{km:.0f}km from other branches in city code {city_code}"
-                    )
-                    continue
-            print(f"  geocode resolved {address!r} via city hint {hint!r}")
-            result = candidate
-            break
+            result, ok = _ask({"street": trimmed, "city": hint})
+            reachable = reachable and ok
+            if result is not None:
+                print(f"  geocode resolved {address!r} via name hint {hint!r}")
+                town = hint
+                break
+
+    if result is None:
+        if _too_vague(address):
+            print(f"  geocode skipped for {address!r} ({zip_code}): no street number, too vague to trust")
+        else:
+            # Last resort. Weaker than street+town, so the check below has
+            # to carry the weight.
+            primary = {"street": address}
+            if zip_code:
+                primary["postalcode"] = zip_code
+            result, ok = _ask(primary)
+            reachable = reachable and ok
+
+    # Does the pin actually land in the town the chain filed it under?
+    #
+    # This replaces two earlier attempts, both of which failed for the same
+    # underlying reason — they had no trustworthy idea of what town the
+    # store was in. Checking against a town parsed out of the STORE NAME
+    # rejected 188 of 461 live pins, nearly all correct, because Israeli
+    # store names are routinely their own street name and streets like
+    # אלנבי and הילל resolve as settlements. Checking against the median of
+    # other branches sharing the city code then failed the opposite way:
+    # for city code 4000 the majority of pins were themselves wrong, so the
+    # median sat outside Haifa and the five genuinely-correct Haifa
+    # branches were the ones rejected.
+    #
+    # The CBS table settles it. The code is the chain's own field, the name
+    # is the government's, and the town's coordinate does not move when the
+    # branch pins around it are wrong.
+    if result is not None and town:
+        centre = town_coord(town)
+        if centre:
+            km = _haversine_km(tuple(centre), tuple(result))
+            if km > TOWN_MAX_KM:
+                print(f"  geocode rejected {address!r}: {km:.0f}km from {town}")
+                result = None
+
+    if result is None and not reachable:
+        # Never reached the geocoder, so we know nothing about this address.
+        # Leaving it out of the cache costs one retry next run; writing it in
+        # would cost the store forever.
+        return None
 
     cache[key] = result
     return result
