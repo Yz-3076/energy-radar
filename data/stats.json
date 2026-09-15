@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-15T14:16:49.061566+00:00",
+  "generated_at": "2026-09-15T16:47:09.715574+00:00",
   "chains_covered": [
     "SHUFERSAL",
     "VICTORY_NEW_SOURCE",
@@ -26,8 +26,8 @@
     "POLIZER"
   ],
   "store_count": 1014,
-  "total_observations": 111671,
-  "observations_this_run": 7497,
+  "total_observations": 119654,
+  "observations_this_run": 7983,
   "listings_per_variant": {
     "ultra": 902,
     "mango-loco": 696,
@@ -44,10 +44,10 @@
     "aussie-lemonade": 399
   },
   "depletion_breakdown": {
-    "slowing": 521,
-    "insufficient_data": 4495,
-    "healthy": 1915,
-    "likely_out": 73
+    "slowing": 586,
+    "insufficient_data": 4340,
+    "healthy": 1950,
+    "likely_out": 128
   },
   "live_listings": 7004,
   "flavours_on_shelves": 13,
