@@ -1,2 +1,10 @@
-il-supermarket-scraper
+# Pinned, not floating. 1.0.13 moved il_supermarket_scarper.utils.file_output
+# and every scheduled run failed on the import in 19 seconds -- three runs
+# lost before the failure email arrived. Nothing in this repo changed; the
+# dependency did, and an unpinned dependency means their release schedule
+# decides when our pipeline breaks.
+#
+# Upgrading is fine, deliberately: bump this, run the pipeline locally, and
+# only then push.
+il-supermarket-scraper==1.0.12
 requests
