@@ -14193,7 +14193,7 @@
     "promos": {}
   },
   "YAYNO_BITAN_AND_CARREFOUR:119": {
-    "fetchedAt": "2026-09-16T05:03:42.764637+00:00",
+    "fetchedAt": "2026-09-17T05:03:14.105325+00:00",
     "promos": {}
   },
   "YAYNO_BITAN_AND_CARREFOUR:124": {
@@ -14204,16 +14204,20 @@
     "fetchedAt": "2026-09-16T05:03:42.560263+00:00",
     "promos": {}
   },
+  "YAYNO_BITAN_AND_CARREFOUR:129": {
+    "fetchedAt": "2026-09-17T05:04:33.453021+00:00",
+    "promos": {}
+  },
   "YAYNO_BITAN_AND_CARREFOUR:132": {
     "fetchedAt": "2026-09-14T04:05:03.201746+00:00",
     "promos": {}
   },
   "YAYNO_BITAN_AND_CARREFOUR:183": {
-    "fetchedAt": "2026-09-14T04:05:03.407713+00:00",
+    "fetchedAt": "2026-09-17T05:03:14.802448+00:00",
     "promos": {}
   },
   "YAYNO_BITAN_AND_CARREFOUR:2": {
-    "fetchedAt": "2026-09-14T16:55:41.262516+00:00",
+    "fetchedAt": "2026-09-17T05:04:32.866511+00:00",
     "promos": {}
   },
   "YAYNO_BITAN_AND_CARREFOUR:213": {
@@ -14221,7 +14225,11 @@
     "promos": {}
   },
   "YAYNO_BITAN_AND_CARREFOUR:256": {
-    "fetchedAt": "2026-09-14T05:29:18.228969+00:00",
+    "fetchedAt": "2026-09-17T05:03:14.370618+00:00",
+    "promos": {}
+  },
+  "YAYNO_BITAN_AND_CARREFOUR:26": {
+    "fetchedAt": "2026-09-17T05:03:14.598025+00:00",
     "promos": {}
   },
   "YAYNO_BITAN_AND_CARREFOUR:353": {
@@ -14245,7 +14253,7 @@
     "promos": {}
   },
   "YAYNO_BITAN_AND_CARREFOUR:442": {
-    "fetchedAt": "2026-09-14T05:29:18.483252+00:00",
+    "fetchedAt": "2026-09-17T05:04:32.155505+00:00",
     "promos": {}
   },
   "YAYNO_BITAN_AND_CARREFOUR:464": {
@@ -14256,8 +14264,16 @@
     "fetchedAt": "2026-09-14T04:05:03.751961+00:00",
     "promos": {}
   },
+  "YAYNO_BITAN_AND_CARREFOUR:523": {
+    "fetchedAt": "2026-09-17T05:04:32.450158+00:00",
+    "promos": {}
+  },
   "YAYNO_BITAN_AND_CARREFOUR:63": {
     "fetchedAt": "2026-09-14T05:29:18.697297+00:00",
+    "promos": {}
+  },
+  "YAYNO_BITAN_AND_CARREFOUR:64": {
+    "fetchedAt": "2026-09-17T05:04:33.155753+00:00",
     "promos": {}
   },
   "YAYNO_BITAN_AND_CARREFOUR:80": {
@@ -14274,6 +14290,10 @@
   },
   "YAYNO_BITAN_AND_CARREFOUR:850": {
     "fetchedAt": "2026-09-16T05:03:42.364091+00:00",
+    "promos": {}
+  },
+  "YAYNO_BITAN_AND_CARREFOUR:91": {
+    "fetchedAt": "2026-09-17T05:03:13.894711+00:00",
     "promos": {}
   },
   "YELLOW:100": {
@@ -30417,7 +30437,7 @@
     }
   },
   "YELLOW:326": {
-    "fetchedAt": "2026-09-16T05:03:43.364027+00:00",
+    "fetchedAt": "2026-09-17T05:04:30.766517+00:00",
     "promos": {
       "aussie-lemonade": [
         {
