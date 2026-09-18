@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-18T16:15:38.911681+00:00",
+  "generated_at": "2026-09-18T20:47:13.099024+00:00",
   "chains_covered": [
     "SHUFERSAL",
     "VICTORY_NEW_SOURCE",
@@ -25,31 +25,31 @@
     "SHUK_AHIR",
     "POLIZER"
   ],
-  "store_count": 1020,
-  "total_observations": 208047,
-  "observations_this_run": 8074,
+  "store_count": 1019,
+  "total_observations": 215525,
+  "observations_this_run": 7478,
   "listings_per_variant": {
-    "ultra": 908,
-    "full-zero": 436,
-    "mango-loco": 696,
-    "original": 908,
-    "ultra-paradise": 816,
-    "ultra-fiesta": 527,
-    "ultra-peachy-keen": 435,
-    "rossi": 198,
+    "ultra": 907,
+    "full-zero": 435,
+    "mango-loco": 695,
+    "original": 907,
+    "ultra-paradise": 815,
+    "ultra-fiesta": 526,
+    "ultra-peachy-keen": 434,
+    "rossi": 197,
     "monarch": 344,
-    "pipeline-punch": 481,
-    "strawberry": 445,
-    "green-zero": 424,
-    "aussie-lemonade": 400
+    "pipeline-punch": 480,
+    "strawberry": 444,
+    "green-zero": 423,
+    "aussie-lemonade": 399
   },
   "depletion_breakdown": {
-    "slowing": 1361,
-    "healthy": 2479,
-    "insufficient_data": 2922,
-    "likely_out": 256
+    "slowing": 1716,
+    "healthy": 1929,
+    "insufficient_data": 2919,
+    "likely_out": 442
   },
-  "live_listings": 7018,
+  "live_listings": 7006,
   "flavours_on_shelves": 13,
   "stores_per_chain": {
     "Shufersal": 220,
@@ -73,8 +73,7 @@
     "Hazi Hinam": 7,
     "Stop Market": 6,
     "Keshet": 2,
-    "Salach Dabach": 1,
-    "Polizer": 1
+    "Salach Dabach": 1
   },
   "price_by_chain": {
     "Bareket": {
@@ -130,12 +129,6 @@
       "median": 7.5,
       "max": 7.5,
       "listings": 65
-    },
-    "Polizer": {
-      "min": 8.5,
-      "median": 8.5,
-      "max": 8.5,
-      "listings": 12
     },
     "Rami Levy": {
       "min": 6.5,
@@ -221,25 +214,25 @@
       "min": 7.5,
       "median": 9.9,
       "max": 13.0,
-      "listings": 400
+      "listings": 399
     },
     "full-zero": {
       "min": 6.8,
       "median": 8.9,
       "max": 9.9,
-      "listings": 436
+      "listings": 435
     },
     "green-zero": {
       "min": 6.8,
       "median": 9.4,
       "max": 13.0,
-      "listings": 424
+      "listings": 423
     },
     "mango-loco": {
       "min": 6.8,
       "median": 9.9,
       "max": 13.0,
-      "listings": 696
+      "listings": 695
     },
     "monarch": {
       "min": 6.8,
@@ -251,49 +244,49 @@
       "min": 4.9,
       "median": 9.9,
       "max": 13.0,
-      "listings": 908
+      "listings": 907
     },
     "pipeline-punch": {
       "min": 6.8,
       "median": 9.4,
       "max": 13.0,
-      "listings": 481
+      "listings": 480
     },
     "rossi": {
       "min": 7.0,
       "median": 9.4,
       "max": 13.0,
-      "listings": 198
+      "listings": 197
     },
     "strawberry": {
       "min": 6.8,
       "median": 9.5,
       "max": 13.0,
-      "listings": 445
+      "listings": 444
     },
     "ultra": {
       "min": 6.5,
       "median": 9.9,
       "max": 13.0,
-      "listings": 908
+      "listings": 907
     },
     "ultra-fiesta": {
       "min": 6.8,
       "median": 8.9,
       "max": 13.0,
-      "listings": 527
+      "listings": 526
     },
     "ultra-paradise": {
       "min": 4.9,
       "median": 9.9,
       "max": 13.0,
-      "listings": 816
+      "listings": 815
     },
     "ultra-peachy-keen": {
       "min": 6.8,
       "median": 9.9,
       "max": 13.0,
-      "listings": 435
+      "listings": 434
     }
   },
   "cheapest_listing": {
