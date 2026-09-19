@@ -695,7 +695,7 @@
         "qty": null,
         "seenAt": "2026-09-17T12:32:50",
         "source": "official_feed",
-        "depletion": "likely_out"
+        "depletion": "slowing"
       },
       {
         "variantId": "ultra-paradise",
@@ -1803,7 +1803,7 @@
         "qty": null,
         "seenAt": "2026-09-17T07:54:15",
         "source": "official_feed",
-        "depletion": "likely_out"
+        "depletion": "slowing"
       },
       {
         "variantId": "original",
@@ -2167,7 +2167,7 @@
         "qty": null,
         "seenAt": "2026-09-17T14:42:59",
         "source": "official_feed",
-        "depletion": "likely_out"
+        "depletion": "slowing"
       },
       {
         "variantId": "ultra-fiesta",
@@ -2647,7 +2647,7 @@
         "qty": null,
         "seenAt": "2026-09-17T14:08:40",
         "source": "official_feed",
-        "depletion": "likely_out"
+        "depletion": "slowing"
       },
       {
         "variantId": "mango-loco",
@@ -5895,7 +5895,7 @@
         "qty": null,
         "seenAt": "2026-09-17T20:26:14",
         "source": "official_feed",
-        "depletion": "likely_out"
+        "depletion": "slowing"
       },
       {
         "variantId": "ultra-fiesta",
@@ -7691,7 +7691,7 @@
         "qty": null,
         "seenAt": "2026-09-17T13:56:03",
         "source": "official_feed",
-        "depletion": "likely_out"
+        "depletion": "slowing"
       },
       {
         "variantId": "ultra-fiesta",
@@ -8167,7 +8167,7 @@
         "qty": null,
         "seenAt": "2026-09-17T07:56:14",
         "source": "official_feed",
-        "depletion": "likely_out"
+        "depletion": "slowing"
       },
       {
         "variantId": "full-zero",
@@ -10936,6 +10936,106 @@
     ]
   },
   {
+    "id": "rami_levy-713",
+    "chain": "Rami Levy",
+    "name": "בן גוריון גבעתיים",
+    "address": "בן גוריון 182",
+    "city": "גבעתיים",
+    "lat": 32.0749867,
+    "lng": 34.8184649,
+    "approximate": false,
+    "shelf": [
+      {
+        "variantId": "strawberry",
+        "price": 9.2,
+        "qty": null,
+        "seenAt": "2026-08-13T20:14:36.000",
+        "source": "official_feed",
+        "depletion": "insufficient_data"
+      },
+      {
+        "variantId": "original",
+        "price": 8.9,
+        "qty": null,
+        "seenAt": "2026-09-18T14:30:57.000",
+        "source": "official_feed",
+        "depletion": "healthy"
+      },
+      {
+        "variantId": "ultra",
+        "price": 8.6,
+        "qty": null,
+        "seenAt": "2026-09-18T16:14:17.000",
+        "source": "official_feed",
+        "depletion": "likely_out"
+      },
+      {
+        "variantId": "mango-loco",
+        "price": 8.9,
+        "qty": null,
+        "seenAt": "2026-07-02T15:23:00.000",
+        "source": "official_feed",
+        "depletion": "insufficient_data"
+      },
+      {
+        "variantId": "pipeline-punch",
+        "price": 8.9,
+        "qty": null,
+        "seenAt": "2026-09-02T13:36:24.000",
+        "source": "official_feed",
+        "depletion": "insufficient_data"
+      },
+      {
+        "variantId": "ultra-paradise",
+        "price": 8.6,
+        "qty": null,
+        "seenAt": "2026-09-16T14:50:12.000",
+        "source": "official_feed",
+        "depletion": "slowing"
+      },
+      {
+        "variantId": "ultra-fiesta",
+        "price": 8.9,
+        "qty": null,
+        "seenAt": "2026-09-16T18:02:47.000",
+        "source": "official_feed",
+        "depletion": "slowing"
+      },
+      {
+        "variantId": "monarch",
+        "price": 8.9,
+        "qty": null,
+        "seenAt": "2026-09-18T08:40:43.000",
+        "source": "official_feed",
+        "depletion": "slowing"
+      },
+      {
+        "variantId": "green-zero",
+        "price": 8.9,
+        "qty": null,
+        "seenAt": "2026-09-18T11:49:39.000",
+        "source": "official_feed",
+        "depletion": "slowing"
+      },
+      {
+        "variantId": "full-zero",
+        "price": 9.2,
+        "qty": null,
+        "seenAt": "2026-09-17T15:21:39.000",
+        "source": "official_feed",
+        "depletion": "slowing"
+      },
+      {
+        "variantId": "ultra-peachy-keen",
+        "price": 9.2,
+        "qty": null,
+        "seenAt": "2026-09-18T10:17:09.000",
+        "source": "official_feed",
+        "depletion": "slowing"
+      }
+    ]
+  },
+  {
     "id": "rami_levy-62",
     "chain": "Rami Levy",
     "name": "צק פוסט",
@@ -11059,7 +11159,7 @@
         "qty": null,
         "seenAt": "2026-09-18T12:08:19.000",
         "source": "official_feed",
-        "depletion": "healthy"
+        "depletion": "slowing"
       },
       {
         "variantId": "original",
@@ -11083,7 +11183,7 @@
         "qty": null,
         "seenAt": "2026-09-18T07:58:01.000",
         "source": "official_feed",
-        "depletion": "healthy"
+        "depletion": "slowing"
       },
       {
         "variantId": "ultra-peachy-keen",
@@ -11107,7 +11207,7 @@
         "qty": null,
         "seenAt": "2026-09-18T10:47:22.000",
         "source": "official_feed",
-        "depletion": "healthy"
+        "depletion": "likely_out"
       },
       {
         "variantId": "monarch",
@@ -11115,7 +11215,7 @@
         "qty": null,
         "seenAt": "2026-09-18T12:02:40.000",
         "source": "official_feed",
-        "depletion": "healthy"
+        "depletion": "slowing"
       },
       {
         "variantId": "mango-loco",
@@ -11123,7 +11223,7 @@
         "qty": null,
         "seenAt": "2026-09-18T12:02:40.000",
         "source": "official_feed",
-        "depletion": "healthy"
+        "depletion": "slowing"
       },
       {
         "variantId": "green-zero",
@@ -11651,7 +11751,7 @@
         "qty": null,
         "seenAt": "2026-09-18T13:53:41.000",
         "source": "official_feed",
-        "depletion": "healthy"
+        "depletion": "slowing"
       },
       {
         "variantId": "original",
@@ -11699,7 +11799,7 @@
         "qty": null,
         "seenAt": "2026-09-18T14:08:42.000",
         "source": "official_feed",
-        "depletion": "healthy"
+        "depletion": "slowing"
       },
       {
         "variantId": "strawberry",
@@ -11715,7 +11815,7 @@
         "qty": null,
         "seenAt": "2026-09-18T12:11:28.000",
         "source": "official_feed",
-        "depletion": "healthy"
+        "depletion": "slowing"
       }
     ]
   },
@@ -11871,7 +11971,7 @@
         "qty": null,
         "seenAt": "2026-09-18T13:52:35.000",
         "source": "official_feed",
-        "depletion": "likely_out"
+        "depletion": "slowing"
       },
       {
         "variantId": "monarch",
@@ -11895,7 +11995,7 @@
         "qty": null,
         "seenAt": "2026-09-18T14:31:30.000",
         "source": "official_feed",
-        "depletion": "likely_out"
+        "depletion": "slowing"
       },
       {
         "variantId": "ultra-peachy-keen",
@@ -11942,6 +12042,106 @@
         "price": 7.9,
         "qty": null,
         "seenAt": "2026-09-16T16:25:29.000",
+        "source": "official_feed",
+        "depletion": "slowing"
+      }
+    ]
+  },
+  {
+    "id": "rami_levy-27",
+    "chain": "Rami Levy",
+    "name": "באר שבע",
+    "address": "הע\"ל 7 עמק שרה",
+    "city": "באר שבע",
+    "lat": 31.2350905,
+    "lng": 34.7941013,
+    "approximate": false,
+    "shelf": [
+      {
+        "variantId": "original",
+        "price": 7.5,
+        "qty": null,
+        "seenAt": "2026-09-17T19:46:05.000",
+        "source": "official_feed",
+        "depletion": "healthy"
+      },
+      {
+        "variantId": "ultra-peachy-keen",
+        "price": 7.9,
+        "qty": null,
+        "seenAt": "2026-08-25T21:56:43.000",
+        "source": "official_feed",
+        "depletion": "insufficient_data"
+      },
+      {
+        "variantId": "pipeline-punch",
+        "price": 7.9,
+        "qty": null,
+        "seenAt": "2026-09-18T10:03:18.000",
+        "source": "official_feed",
+        "depletion": "slowing"
+      },
+      {
+        "variantId": "ultra-paradise",
+        "price": 7.5,
+        "qty": null,
+        "seenAt": "2026-09-18T12:49:13.000",
+        "source": "official_feed",
+        "depletion": "slowing"
+      },
+      {
+        "variantId": "mango-loco",
+        "price": 7.9,
+        "qty": null,
+        "seenAt": "2026-09-18T10:39:18.000",
+        "source": "official_feed",
+        "depletion": "slowing"
+      },
+      {
+        "variantId": "ultra",
+        "price": 7.5,
+        "qty": null,
+        "seenAt": "2026-09-17T20:16:17.000",
+        "source": "official_feed",
+        "depletion": "likely_out"
+      },
+      {
+        "variantId": "green-zero",
+        "price": 7.9,
+        "qty": null,
+        "seenAt": "2026-09-17T22:33:32.000",
+        "source": "official_feed",
+        "depletion": "slowing"
+      },
+      {
+        "variantId": "strawberry",
+        "price": 7.9,
+        "qty": null,
+        "seenAt": "2026-09-18T12:50:19.000",
+        "source": "official_feed",
+        "depletion": "likely_out"
+      },
+      {
+        "variantId": "ultra-fiesta",
+        "price": 7.9,
+        "qty": null,
+        "seenAt": "2026-09-17T14:36:34.000",
+        "source": "official_feed",
+        "depletion": "slowing"
+      },
+      {
+        "variantId": "monarch",
+        "price": 7.9,
+        "qty": null,
+        "seenAt": "2026-09-17T19:06:45.000",
+        "source": "official_feed",
+        "depletion": "slowing"
+      },
+      {
+        "variantId": "full-zero",
+        "price": 7.9,
+        "qty": null,
+        "seenAt": "2026-09-17T09:16:10.000",
         "source": "official_feed",
         "depletion": "slowing"
       }
@@ -12148,6 +12348,106 @@
     ]
   },
   {
+    "id": "rami_levy-203",
+    "chain": "Rami Levy",
+    "name": "אילת",
+    "address": "הזגג 11",
+    "city": "אילת",
+    "lat": 29.5691553,
+    "lng": 34.9615791,
+    "approximate": false,
+    "shelf": [
+      {
+        "variantId": "ultra-fiesta",
+        "price": 6.8,
+        "qty": null,
+        "seenAt": "2026-09-18T11:56:39.000",
+        "source": "official_feed",
+        "depletion": "slowing"
+      },
+      {
+        "variantId": "green-zero",
+        "price": 6.8,
+        "qty": null,
+        "seenAt": "2026-09-18T14:06:30.000",
+        "source": "official_feed",
+        "depletion": "slowing"
+      },
+      {
+        "variantId": "full-zero",
+        "price": 6.8,
+        "qty": null,
+        "seenAt": "2026-09-14T10:47:56.000",
+        "source": "official_feed",
+        "depletion": "slowing"
+      },
+      {
+        "variantId": "original",
+        "price": 6.8,
+        "qty": null,
+        "seenAt": "2026-09-18T14:27:08.000",
+        "source": "official_feed",
+        "depletion": "healthy"
+      },
+      {
+        "variantId": "monarch",
+        "price": 6.8,
+        "qty": null,
+        "seenAt": "2026-09-18T13:48:58.000",
+        "source": "official_feed",
+        "depletion": "slowing"
+      },
+      {
+        "variantId": "ultra",
+        "price": 6.5,
+        "qty": null,
+        "seenAt": "2026-09-18T14:06:30.000",
+        "source": "official_feed",
+        "depletion": "slowing"
+      },
+      {
+        "variantId": "strawberry",
+        "price": 6.8,
+        "qty": null,
+        "seenAt": "2026-09-17T20:12:54.000",
+        "source": "official_feed",
+        "depletion": "slowing"
+      },
+      {
+        "variantId": "ultra-peachy-keen",
+        "price": 6.8,
+        "qty": null,
+        "seenAt": "2026-09-17T20:17:36.000",
+        "source": "official_feed",
+        "depletion": "slowing"
+      },
+      {
+        "variantId": "mango-loco",
+        "price": 6.8,
+        "qty": null,
+        "seenAt": "2026-09-18T14:09:32.000",
+        "source": "official_feed",
+        "depletion": "slowing"
+      },
+      {
+        "variantId": "pipeline-punch",
+        "price": 6.8,
+        "qty": null,
+        "seenAt": "2026-09-16T16:29:35.000",
+        "source": "official_feed",
+        "depletion": "slowing"
+      },
+      {
+        "variantId": "ultra-paradise",
+        "price": 6.5,
+        "qty": null,
+        "seenAt": "2026-09-18T11:56:39.000",
+        "source": "official_feed",
+        "depletion": "slowing"
+      }
+    ]
+  },
+  {
     "id": "rami_levy-731",
     "chain": "Rami Levy",
     "name": "ביאליק רמת גן",
@@ -12348,6 +12648,90 @@
     ]
   },
   {
+    "id": "rami_levy-720",
+    "chain": "Rami Levy",
+    "name": "הרטום נתניה",
+    "address": "הרטום 40",
+    "city": "נתניה",
+    "lat": 32.3088805,
+    "lng": 34.8780564,
+    "approximate": false,
+    "shelf": [
+      {
+        "variantId": "strawberry",
+        "price": 9.2,
+        "qty": null,
+        "seenAt": "2026-09-18T10:32:58.000",
+        "source": "official_feed",
+        "depletion": "slowing"
+      },
+      {
+        "variantId": "ultra",
+        "price": 8.6,
+        "qty": null,
+        "seenAt": "2026-09-17T16:56:39.000",
+        "source": "official_feed",
+        "depletion": "slowing"
+      },
+      {
+        "variantId": "mango-loco",
+        "price": 8.9,
+        "qty": null,
+        "seenAt": "2026-09-17T16:30:26.000",
+        "source": "official_feed",
+        "depletion": "slowing"
+      },
+      {
+        "variantId": "ultra-paradise",
+        "price": 8.6,
+        "qty": null,
+        "seenAt": "2026-08-19T17:33:16.000",
+        "source": "official_feed",
+        "depletion": "insufficient_data"
+      },
+      {
+        "variantId": "ultra-fiesta",
+        "price": 8.9,
+        "qty": null,
+        "seenAt": "2026-08-11T11:14:50.000",
+        "source": "official_feed",
+        "depletion": "insufficient_data"
+      },
+      {
+        "variantId": "monarch",
+        "price": 8.9,
+        "qty": null,
+        "seenAt": "2026-08-06T17:08:24.000",
+        "source": "official_feed",
+        "depletion": "insufficient_data"
+      },
+      {
+        "variantId": "original",
+        "price": 8.6,
+        "qty": null,
+        "seenAt": "2026-09-16T15:29:16.000",
+        "source": "official_feed",
+        "depletion": "slowing"
+      },
+      {
+        "variantId": "full-zero",
+        "price": 9.2,
+        "qty": null,
+        "seenAt": "2026-08-13T21:11:19.000",
+        "source": "official_feed",
+        "depletion": "insufficient_data"
+      },
+      {
+        "variantId": "ultra-peachy-keen",
+        "price": 9.2,
+        "qty": null,
+        "seenAt": "2026-09-18T10:32:58.000",
+        "source": "official_feed",
+        "depletion": "slowing"
+      }
+    ]
+  },
+  {
     "id": "rami_levy-44",
     "chain": "Rami Levy",
     "name": "חדרה",
@@ -12444,106 +12828,6 @@
         "seenAt": "2026-08-24T09:13:02.000",
         "source": "official_feed",
         "depletion": "insufficient_data"
-      }
-    ]
-  },
-  {
-    "id": "rami_levy-713",
-    "chain": "Rami Levy",
-    "name": "בן גוריון גבעתיים",
-    "address": "בן גוריון 182",
-    "city": "גבעתיים",
-    "lat": 32.0749867,
-    "lng": 34.8184649,
-    "approximate": false,
-    "shelf": [
-      {
-        "variantId": "strawberry",
-        "price": 9.2,
-        "qty": null,
-        "seenAt": "2026-08-13T20:14:36.000",
-        "source": "official_feed",
-        "depletion": "insufficient_data"
-      },
-      {
-        "variantId": "original",
-        "price": 8.9,
-        "qty": null,
-        "seenAt": "2026-09-18T14:30:57.000",
-        "source": "official_feed",
-        "depletion": "healthy"
-      },
-      {
-        "variantId": "ultra",
-        "price": 8.6,
-        "qty": null,
-        "seenAt": "2026-09-18T16:14:17.000",
-        "source": "official_feed",
-        "depletion": "likely_out"
-      },
-      {
-        "variantId": "mango-loco",
-        "price": 8.9,
-        "qty": null,
-        "seenAt": "2026-07-02T15:23:00.000",
-        "source": "official_feed",
-        "depletion": "insufficient_data"
-      },
-      {
-        "variantId": "pipeline-punch",
-        "price": 8.9,
-        "qty": null,
-        "seenAt": "2026-09-02T13:36:24.000",
-        "source": "official_feed",
-        "depletion": "insufficient_data"
-      },
-      {
-        "variantId": "ultra-paradise",
-        "price": 8.6,
-        "qty": null,
-        "seenAt": "2026-09-16T14:50:12.000",
-        "source": "official_feed",
-        "depletion": "slowing"
-      },
-      {
-        "variantId": "ultra-fiesta",
-        "price": 8.9,
-        "qty": null,
-        "seenAt": "2026-09-16T18:02:47.000",
-        "source": "official_feed",
-        "depletion": "slowing"
-      },
-      {
-        "variantId": "monarch",
-        "price": 8.9,
-        "qty": null,
-        "seenAt": "2026-09-18T08:40:43.000",
-        "source": "official_feed",
-        "depletion": "likely_out"
-      },
-      {
-        "variantId": "green-zero",
-        "price": 8.9,
-        "qty": null,
-        "seenAt": "2026-09-18T11:49:39.000",
-        "source": "official_feed",
-        "depletion": "slowing"
-      },
-      {
-        "variantId": "full-zero",
-        "price": 9.2,
-        "qty": null,
-        "seenAt": "2026-09-17T15:21:39.000",
-        "source": "official_feed",
-        "depletion": "slowing"
-      },
-      {
-        "variantId": "ultra-peachy-keen",
-        "price": 9.2,
-        "qty": null,
-        "seenAt": "2026-09-18T10:17:09.000",
-        "source": "official_feed",
-        "depletion": "slowing"
       }
     ]
   },
@@ -12732,106 +13016,6 @@
     ]
   },
   {
-    "id": "rami_levy-27",
-    "chain": "Rami Levy",
-    "name": "באר שבע",
-    "address": "הע\"ל 7 עמק שרה",
-    "city": "באר שבע",
-    "lat": 31.2350905,
-    "lng": 34.7941013,
-    "approximate": false,
-    "shelf": [
-      {
-        "variantId": "ultra-fiesta",
-        "price": 7.9,
-        "qty": null,
-        "seenAt": "2026-09-17T14:36:34.000",
-        "source": "official_feed",
-        "depletion": "slowing"
-      },
-      {
-        "variantId": "monarch",
-        "price": 7.9,
-        "qty": null,
-        "seenAt": "2026-09-17T19:06:45.000",
-        "source": "official_feed",
-        "depletion": "slowing"
-      },
-      {
-        "variantId": "full-zero",
-        "price": 7.9,
-        "qty": null,
-        "seenAt": "2026-09-17T09:16:10.000",
-        "source": "official_feed",
-        "depletion": "slowing"
-      },
-      {
-        "variantId": "green-zero",
-        "price": 7.9,
-        "qty": null,
-        "seenAt": "2026-09-17T22:33:32.000",
-        "source": "official_feed",
-        "depletion": "slowing"
-      },
-      {
-        "variantId": "strawberry",
-        "price": 7.9,
-        "qty": null,
-        "seenAt": "2026-09-18T12:50:19.000",
-        "source": "official_feed",
-        "depletion": "likely_out"
-      },
-      {
-        "variantId": "original",
-        "price": 7.5,
-        "qty": null,
-        "seenAt": "2026-09-17T19:46:05.000",
-        "source": "official_feed",
-        "depletion": "healthy"
-      },
-      {
-        "variantId": "ultra-peachy-keen",
-        "price": 7.9,
-        "qty": null,
-        "seenAt": "2026-08-25T21:56:43.000",
-        "source": "official_feed",
-        "depletion": "insufficient_data"
-      },
-      {
-        "variantId": "pipeline-punch",
-        "price": 7.9,
-        "qty": null,
-        "seenAt": "2026-09-18T10:03:18.000",
-        "source": "official_feed",
-        "depletion": "slowing"
-      },
-      {
-        "variantId": "ultra-paradise",
-        "price": 7.5,
-        "qty": null,
-        "seenAt": "2026-09-18T12:49:13.000",
-        "source": "official_feed",
-        "depletion": "slowing"
-      },
-      {
-        "variantId": "mango-loco",
-        "price": 7.9,
-        "qty": null,
-        "seenAt": "2026-09-18T10:39:18.000",
-        "source": "official_feed",
-        "depletion": "slowing"
-      },
-      {
-        "variantId": "ultra",
-        "price": 7.5,
-        "qty": null,
-        "seenAt": "2026-09-17T20:16:17.000",
-        "source": "official_feed",
-        "depletion": "likely_out"
-      }
-    ]
-  },
-  {
     "id": "rami_levy-45",
     "chain": "Rami Levy",
     "name": "בת ים",
@@ -12887,7 +13071,7 @@
         "qty": null,
         "seenAt": "2026-09-18T12:48:51.000",
         "source": "official_feed",
-        "depletion": "likely_out"
+        "depletion": "slowing"
       },
       {
         "variantId": "pipeline-punch",
@@ -12947,7 +13131,7 @@
         "qty": null,
         "seenAt": "2026-09-18T14:13:34.000",
         "source": "official_feed",
-        "depletion": "healthy"
+        "depletion": "slowing"
       },
       {
         "variantId": "full-zero",
@@ -12955,7 +13139,7 @@
         "qty": null,
         "seenAt": "2026-09-18T13:04:27.000",
         "source": "official_feed",
-        "depletion": "healthy"
+        "depletion": "slowing"
       },
       {
         "variantId": "monarch",
@@ -12963,7 +13147,7 @@
         "qty": null,
         "seenAt": "2026-09-18T14:13:34.000",
         "source": "official_feed",
-        "depletion": "healthy"
+        "depletion": "slowing"
       },
       {
         "variantId": "ultra-fiesta",
@@ -12979,7 +13163,7 @@
         "qty": null,
         "seenAt": "2026-09-18T14:13:34.000",
         "source": "official_feed",
-        "depletion": "healthy"
+        "depletion": "slowing"
       },
       {
         "variantId": "mango-loco",
@@ -12995,7 +13179,7 @@
         "qty": null,
         "seenAt": "2026-09-18T13:04:27.000",
         "source": "official_feed",
-        "depletion": "healthy"
+        "depletion": "slowing"
       },
       {
         "variantId": "original",
@@ -13031,7 +13215,7 @@
         "qty": null,
         "seenAt": "2026-09-18T11:17:09.000",
         "source": "official_feed",
-        "depletion": "healthy"
+        "depletion": "slowing"
       },
       {
         "variantId": "original",
@@ -13055,7 +13239,7 @@
         "qty": null,
         "seenAt": "2026-09-18T14:26:39.000",
         "source": "official_feed",
-        "depletion": "healthy"
+        "depletion": "slowing"
       },
       {
         "variantId": "ultra-fiesta",
@@ -13071,7 +13255,7 @@
         "qty": null,
         "seenAt": "2026-09-18T09:26:30.000",
         "source": "official_feed",
-        "depletion": "healthy"
+        "depletion": "slowing"
       },
       {
         "variantId": "pipeline-punch",
@@ -13087,7 +13271,7 @@
         "qty": null,
         "seenAt": "2026-09-18T11:17:09.000",
         "source": "official_feed",
-        "depletion": "healthy"
+        "depletion": "slowing"
       },
       {
         "variantId": "green-zero",
@@ -13103,7 +13287,7 @@
         "qty": null,
         "seenAt": "2026-09-18T10:35:57.000",
         "source": "official_feed",
-        "depletion": "healthy"
+        "depletion": "slowing"
       }
     ]
   },
@@ -13123,7 +13307,7 @@
         "qty": null,
         "seenAt": "2026-09-18T12:11:16.000",
         "source": "official_feed",
-        "depletion": "healthy"
+        "depletion": "slowing"
       },
       {
         "variantId": "original",
@@ -13139,7 +13323,7 @@
         "qty": null,
         "seenAt": "2026-09-18T13:15:10.000",
         "source": "official_feed",
-        "depletion": "healthy"
+        "depletion": "slowing"
       },
       {
         "variantId": "mango-loco",
@@ -13171,7 +13355,7 @@
         "qty": null,
         "seenAt": "2026-09-18T13:39:09.000",
         "source": "official_feed",
-        "depletion": "healthy"
+        "depletion": "slowing"
       },
       {
         "variantId": "monarch",
@@ -13203,7 +13387,7 @@
         "qty": null,
         "seenAt": "2026-09-18T11:08:24.000",
         "source": "official_feed",
-        "depletion": "healthy"
+        "depletion": "slowing"
       }
     ]
   },
@@ -13347,7 +13531,7 @@
         "qty": null,
         "seenAt": "2026-09-18T11:13:27.000",
         "source": "official_feed",
-        "depletion": "healthy"
+        "depletion": "likely_out"
       },
       {
         "variantId": "ultra-paradise",
@@ -13355,7 +13539,7 @@
         "qty": null,
         "seenAt": "2026-09-18T15:28:07.000",
         "source": "official_feed",
-        "depletion": "healthy"
+        "depletion": "likely_out"
       },
       {
         "variantId": "ultra",
@@ -13379,7 +13563,7 @@
         "qty": null,
         "seenAt": "2026-09-18T15:28:07.000",
         "source": "official_feed",
-        "depletion": "healthy"
+        "depletion": "slowing"
       },
       {
         "variantId": "original",
@@ -13395,7 +13579,7 @@
         "qty": null,
         "seenAt": "2026-09-18T15:34:21.000",
         "source": "official_feed",
-        "depletion": "healthy"
+        "depletion": "slowing"
       },
       {
         "variantId": "green-zero",
@@ -13567,7 +13751,7 @@
         "qty": null,
         "seenAt": "2026-09-18T10:56:08.000",
         "source": "official_feed",
-        "depletion": "healthy"
+        "depletion": "slowing"
       },
       {
         "variantId": "ultra-fiesta",
@@ -13607,7 +13791,7 @@
         "qty": null,
         "seenAt": "2026-09-18T11:06:03.000",
         "source": "official_feed",
-        "depletion": "healthy"
+        "depletion": "slowing"
       },
       {
         "variantId": "pipeline-punch",
@@ -13623,7 +13807,7 @@
         "qty": null,
         "seenAt": "2026-09-18T13:04:41.000",
         "source": "official_feed",
-        "depletion": "healthy"
+        "depletion": "likely_out"
       },
       {
         "variantId": "ultra-paradise",
@@ -13631,7 +13815,7 @@
         "qty": null,
         "seenAt": "2026-09-18T09:00:43.000",
         "source": "official_feed",
-        "depletion": "healthy"
+        "depletion": "slowing"
       },
       {
         "variantId": "green-zero",
@@ -13639,7 +13823,7 @@
         "qty": null,
         "seenAt": "2026-09-18T11:06:03.000",
         "source": "official_feed",
-        "depletion": "healthy"
+        "depletion": "slowing"
       },
       {
         "variantId": "full-zero",
@@ -13875,7 +14059,7 @@
         "qty": null,
         "seenAt": "2026-09-18T14:13:45.000",
         "source": "official_feed",
-        "depletion": "healthy"
+        "depletion": "likely_out"
       },
       {
         "variantId": "mango-loco",
@@ -13891,7 +14075,7 @@
         "qty": null,
         "seenAt": "2026-09-18T12:20:16.000",
         "source": "official_feed",
-        "depletion": "healthy"
+        "depletion": "slowing"
       },
       {
         "variantId": "ultra-paradise",
@@ -13915,7 +14099,7 @@
         "qty": null,
         "seenAt": "2026-09-18T15:15:17.000",
         "source": "official_feed",
-        "depletion": "healthy"
+        "depletion": "slowing"
       },
       {
         "variantId": "green-zero",
@@ -13923,7 +14107,7 @@
         "qty": null,
         "seenAt": "2026-09-18T15:02:52.000",
         "source": "official_feed",
-        "depletion": "healthy"
+        "depletion": "likely_out"
       }
     ]
   },
@@ -14151,7 +14335,7 @@
         "qty": null,
         "seenAt": "2026-09-18T12:34:09.000",
         "source": "official_feed",
-        "depletion": "healthy"
+        "depletion": "slowing"
       },
       {
         "variantId": "pipeline-punch",
@@ -14159,7 +14343,7 @@
         "qty": null,
         "seenAt": "2026-09-18T13:39:10.000",
         "source": "official_feed",
-        "depletion": "healthy"
+        "depletion": "slowing"
       },
       {
         "variantId": "ultra-peachy-keen",
@@ -14172,100 +14356,100 @@
     ]
   },
   {
-    "id": "rami_levy-203",
+    "id": "rami_levy-37",
     "chain": "Rami Levy",
-    "name": "אילת",
-    "address": "הזגג 11",
-    "city": "אילת",
-    "lat": 29.5691553,
-    "lng": 34.9615791,
+    "name": "נתניה צפון (אורזים)",
+    "address": "האורזים 8",
+    "city": "נתניה",
+    "lat": 32.3169587,
+    "lng": 34.8717317,
     "approximate": false,
     "shelf": [
       {
-        "variantId": "full-zero",
-        "price": 6.8,
-        "qty": null,
-        "seenAt": "2026-09-14T10:47:56.000",
-        "source": "official_feed",
-        "depletion": "slowing"
-      },
-      {
-        "variantId": "original",
-        "price": 6.8,
-        "qty": null,
-        "seenAt": "2026-09-18T14:27:08.000",
-        "source": "official_feed",
-        "depletion": "healthy"
-      },
-      {
-        "variantId": "monarch",
-        "price": 6.8,
-        "qty": null,
-        "seenAt": "2026-09-18T13:48:58.000",
-        "source": "official_feed",
-        "depletion": "slowing"
-      },
-      {
-        "variantId": "ultra",
-        "price": 6.5,
-        "qty": null,
-        "seenAt": "2026-09-18T14:06:30.000",
-        "source": "official_feed",
-        "depletion": "slowing"
-      },
-      {
-        "variantId": "strawberry",
-        "price": 6.8,
-        "qty": null,
-        "seenAt": "2026-09-17T20:12:54.000",
-        "source": "official_feed",
-        "depletion": "slowing"
-      },
-      {
-        "variantId": "ultra-peachy-keen",
-        "price": 6.8,
-        "qty": null,
-        "seenAt": "2026-09-17T20:17:36.000",
-        "source": "official_feed",
-        "depletion": "slowing"
-      },
-      {
         "variantId": "pipeline-punch",
-        "price": 6.8,
+        "price": 7.9,
         "qty": null,
-        "seenAt": "2026-09-16T16:29:35.000",
+        "seenAt": "2026-09-16T16:30:20.000",
         "source": "official_feed",
         "depletion": "slowing"
       },
       {
         "variantId": "ultra-paradise",
-        "price": 6.5,
+        "price": 7.5,
         "qty": null,
-        "seenAt": "2026-09-18T11:56:39.000",
+        "seenAt": "2026-09-18T14:34:53.000",
+        "source": "official_feed",
+        "depletion": "slowing"
+      },
+      {
+        "variantId": "full-zero",
+        "price": 7.9,
+        "qty": null,
+        "seenAt": "2026-09-18T12:46:44.000",
+        "source": "official_feed",
+        "depletion": "slowing"
+      },
+      {
+        "variantId": "monarch",
+        "price": 7.9,
+        "qty": null,
+        "seenAt": "2026-09-09T11:18:53.000",
+        "source": "official_feed",
+        "depletion": "insufficient_data"
+      },
+      {
+        "variantId": "green-zero",
+        "price": 7.9,
+        "qty": null,
+        "seenAt": "2026-09-17T17:18:51.000",
         "source": "official_feed",
         "depletion": "slowing"
       },
       {
         "variantId": "ultra-fiesta",
-        "price": 6.8,
+        "price": 7.9,
         "qty": null,
-        "seenAt": "2026-09-18T11:56:39.000",
-        "source": "official_feed",
-        "depletion": "slowing"
-      },
-      {
-        "variantId": "green-zero",
-        "price": 6.8,
-        "qty": null,
-        "seenAt": "2026-09-18T14:06:30.000",
+        "seenAt": "2026-09-16T15:52:36.000",
         "source": "official_feed",
         "depletion": "slowing"
       },
       {
         "variantId": "mango-loco",
-        "price": 6.8,
+        "price": 7.9,
         "qty": null,
-        "seenAt": "2026-09-18T14:09:32.000",
+        "seenAt": "2026-09-09T17:24:52.000",
+        "source": "official_feed",
+        "depletion": "slowing"
+      },
+      {
+        "variantId": "original",
+        "price": 7.9,
+        "qty": null,
+        "seenAt": "2026-09-18T13:33:46.000",
+        "source": "official_feed",
+        "depletion": "healthy"
+      },
+      {
+        "variantId": "ultra",
+        "price": 7.5,
+        "qty": null,
+        "seenAt": "2026-09-18T14:55:13.000",
+        "source": "official_feed",
+        "depletion": "likely_out"
+      },
+      {
+        "variantId": "ultra-peachy-keen",
+        "price": 7.9,
+        "qty": null,
+        "seenAt": "2026-09-03T14:28:01.000",
+        "source": "official_feed",
+        "depletion": "insufficient_data"
+      },
+      {
+        "variantId": "strawberry",
+        "price": 7.9,
+        "qty": null,
+        "seenAt": "2026-09-17T08:49:11.000",
         "source": "official_feed",
         "depletion": "slowing"
       }
@@ -14542,6 +14726,106 @@
         "price": 7.9,
         "qty": null,
         "seenAt": "2026-09-15T20:46:42.000",
+        "source": "official_feed",
+        "depletion": "slowing"
+      }
+    ]
+  },
+  {
+    "id": "rami_levy-9",
+    "chain": "Rami Levy",
+    "name": "קסיטנה",
+    "address": "א.ת באר טוביה",
+    "city": "קרית מלאכי",
+    "lat": 31.773937,
+    "lng": 34.666846,
+    "approximate": false,
+    "shelf": [
+      {
+        "variantId": "full-zero",
+        "price": 7.9,
+        "qty": null,
+        "seenAt": "2026-09-16T07:58:56.000",
+        "source": "official_feed",
+        "depletion": "slowing"
+      },
+      {
+        "variantId": "monarch",
+        "price": 7.9,
+        "qty": null,
+        "seenAt": "2026-09-18T10:49:03.000",
+        "source": "official_feed",
+        "depletion": "slowing"
+      },
+      {
+        "variantId": "strawberry",
+        "price": 7.9,
+        "qty": null,
+        "seenAt": "2026-08-30T10:58:42.000",
+        "source": "official_feed",
+        "depletion": "insufficient_data"
+      },
+      {
+        "variantId": "ultra-fiesta",
+        "price": 7.9,
+        "qty": null,
+        "seenAt": "2026-09-09T09:01:17.000",
+        "source": "official_feed",
+        "depletion": "slowing"
+      },
+      {
+        "variantId": "pipeline-punch",
+        "price": 7.9,
+        "qty": null,
+        "seenAt": "2026-09-18T15:06:27.000",
+        "source": "official_feed",
+        "depletion": "slowing"
+      },
+      {
+        "variantId": "ultra-paradise",
+        "price": 7.5,
+        "qty": null,
+        "seenAt": "2026-09-10T09:08:07.000",
+        "source": "official_feed",
+        "depletion": "slowing"
+      },
+      {
+        "variantId": "ultra-peachy-keen",
+        "price": 7.9,
+        "qty": null,
+        "seenAt": "2026-09-15T12:33:24.000",
+        "source": "official_feed",
+        "depletion": "slowing"
+      },
+      {
+        "variantId": "original",
+        "price": 7.9,
+        "qty": null,
+        "seenAt": "2026-09-18T15:06:27.000",
+        "source": "official_feed",
+        "depletion": "healthy"
+      },
+      {
+        "variantId": "mango-loco",
+        "price": 7.9,
+        "qty": null,
+        "seenAt": "2026-09-18T15:06:27.000",
+        "source": "official_feed",
+        "depletion": "slowing"
+      },
+      {
+        "variantId": "ultra",
+        "price": 7.5,
+        "qty": null,
+        "seenAt": "2026-09-18T15:06:27.000",
+        "source": "official_feed",
+        "depletion": "slowing"
+      },
+      {
+        "variantId": "green-zero",
+        "price": 7.9,
+        "qty": null,
+        "seenAt": "2026-09-11T14:48:51.000",
         "source": "official_feed",
         "depletion": "slowing"
       }
@@ -14959,7 +15243,7 @@
         "qty": null,
         "seenAt": "2026-09-18T13:43:39.000",
         "source": "official_feed",
-        "depletion": "healthy"
+        "depletion": "slowing"
       },
       {
         "variantId": "original",
@@ -14991,7 +15275,7 @@
         "qty": null,
         "seenAt": "2026-09-18T12:32:54.000",
         "source": "official_feed",
-        "depletion": "healthy"
+        "depletion": "likely_out"
       },
       {
         "variantId": "green-zero",
@@ -14999,7 +15283,7 @@
         "qty": null,
         "seenAt": "2026-09-18T14:06:58.000",
         "source": "official_feed",
-        "depletion": "healthy"
+        "depletion": "slowing"
       },
       {
         "variantId": "pipeline-punch",
@@ -15151,7 +15435,7 @@
         "qty": null,
         "seenAt": "2026-09-18T14:55:46.000",
         "source": "official_feed",
-        "depletion": "healthy"
+        "depletion": "likely_out"
       },
       {
         "variantId": "original",
@@ -15167,7 +15451,7 @@
         "qty": null,
         "seenAt": "2026-09-18T10:37:11.000",
         "source": "official_feed",
-        "depletion": "healthy"
+        "depletion": "likely_out"
       },
       {
         "variantId": "mango-loco",
@@ -15199,7 +15483,7 @@
         "qty": null,
         "seenAt": "2026-09-18T15:10:20.000",
         "source": "official_feed",
-        "depletion": "healthy"
+        "depletion": "likely_out"
       },
       {
         "variantId": "monarch",
@@ -15236,6 +15520,50 @@
     ]
   },
   {
+    "id": "rami_levy-715",
+    "chain": "Rami Levy",
+    "name": "סוקולוב הרצליה",
+    "address": "סוקולוב 56",
+    "city": "הרצליה",
+    "lat": 32.1669662,
+    "lng": 34.8463788,
+    "approximate": false,
+    "shelf": [
+      {
+        "variantId": "strawberry",
+        "price": 9.2,
+        "qty": null,
+        "seenAt": "2026-07-30T19:06:29.000",
+        "source": "official_feed",
+        "depletion": "insufficient_data"
+      },
+      {
+        "variantId": "original",
+        "price": 8.9,
+        "qty": null,
+        "seenAt": "2026-07-30T11:55:52.000",
+        "source": "official_feed",
+        "depletion": "insufficient_data"
+      },
+      {
+        "variantId": "ultra",
+        "price": 8.6,
+        "qty": null,
+        "seenAt": "2026-09-14T16:40:12.000",
+        "source": "official_feed",
+        "depletion": "slowing"
+      },
+      {
+        "variantId": "mango-loco",
+        "price": 8.9,
+        "qty": null,
+        "seenAt": "2026-08-13T12:46:48.000",
+        "source": "official_feed",
+        "depletion": "insufficient_data"
+      }
+    ]
+  },
+  {
     "id": "rami_levy-54",
     "chain": "Rami Levy",
     "name": "קרית גת",
@@ -15259,7 +15587,7 @@
         "qty": null,
         "seenAt": "2026-09-18T11:43:55.000",
         "source": "official_feed",
-        "depletion": "healthy"
+        "depletion": "slowing"
       },
       {
         "variantId": "monarch",
@@ -15307,7 +15635,7 @@
         "qty": null,
         "seenAt": "2026-09-18T11:23:46.000",
         "source": "official_feed",
-        "depletion": "healthy"
+        "depletion": "slowing"
       },
       {
         "variantId": "green-zero",
@@ -15496,6 +15824,58 @@
     ]
   },
   {
+    "id": "rami_levy-734",
+    "chain": "Rami Levy",
+    "name": "אסתר המלכה תל אביב",
+    "address": "אסתר המלכה 4",
+    "city": "תל אביב - יפו",
+    "lat": 32.07898,
+    "lng": 34.774362,
+    "approximate": false,
+    "shelf": [
+      {
+        "variantId": "pipeline-punch",
+        "price": 8.9,
+        "qty": null,
+        "seenAt": "2026-09-07T21:24:57.000",
+        "source": "official_feed",
+        "depletion": "insufficient_data"
+      },
+      {
+        "variantId": "ultra-paradise",
+        "price": 8.6,
+        "qty": null,
+        "seenAt": "2026-09-17T16:33:31.000",
+        "source": "official_feed",
+        "depletion": "slowing"
+      },
+      {
+        "variantId": "ultra-fiesta",
+        "price": 8.9,
+        "qty": null,
+        "seenAt": "2026-09-17T16:33:31.000",
+        "source": "official_feed",
+        "depletion": "slowing"
+      },
+      {
+        "variantId": "original",
+        "price": 8.6,
+        "qty": null,
+        "seenAt": "2026-08-30T08:55:06.000",
+        "source": "official_feed",
+        "depletion": "healthy"
+      },
+      {
+        "variantId": "green-zero",
+        "price": 8.9,
+        "qty": null,
+        "seenAt": "2026-09-17T08:53:58.000",
+        "source": "official_feed",
+        "depletion": "slowing"
+      }
+    ]
+  },
+  {
     "id": "rami_levy-22",
     "chain": "Rami Levy",
     "name": "כנפי נשרים",
@@ -15567,7 +15947,7 @@
         "qty": null,
         "seenAt": "2026-09-18T12:38:03.000",
         "source": "official_feed",
-        "depletion": "likely_out"
+        "depletion": "slowing"
       },
       {
         "variantId": "ultra-fiesta",
@@ -15815,7 +16195,7 @@
         "qty": null,
         "seenAt": "2026-09-18T14:48:40.000",
         "source": "official_feed",
-        "depletion": "healthy"
+        "depletion": "slowing"
       },
       {
         "variantId": "ultra-fiesta",
@@ -15823,7 +16203,7 @@
         "qty": null,
         "seenAt": "2026-09-18T12:44:13.000",
         "source": "official_feed",
-        "depletion": "healthy"
+        "depletion": "likely_out"
       },
       {
         "variantId": "full-zero",
@@ -15839,7 +16219,7 @@
         "qty": null,
         "seenAt": "2026-09-18T12:45:39.000",
         "source": "official_feed",
-        "depletion": "healthy"
+        "depletion": "likely_out"
       },
       {
         "variantId": "strawberry",
@@ -15879,7 +16259,7 @@
         "qty": null,
         "seenAt": "2026-09-18T15:38:33.000",
         "source": "official_feed",
-        "depletion": "healthy"
+        "depletion": "slowing"
       },
       {
         "variantId": "green-zero",
@@ -15999,7 +16379,7 @@
         "qty": null,
         "seenAt": "2026-09-18T11:25:15.000",
         "source": "official_feed",
-        "depletion": "healthy"
+        "depletion": "slowing"
       },
       {
         "variantId": "ultra",
@@ -16007,7 +16387,7 @@
         "qty": null,
         "seenAt": "2026-09-18T14:08:12.000",
         "source": "official_feed",
-        "depletion": "healthy"
+        "depletion": "slowing"
       },
       {
         "variantId": "mango-loco",
@@ -16031,7 +16411,7 @@
         "qty": null,
         "seenAt": "2026-09-18T11:25:15.000",
         "source": "official_feed",
-        "depletion": "healthy"
+        "depletion": "slowing"
       },
       {
         "variantId": "ultra-fiesta",
@@ -16039,7 +16419,7 @@
         "qty": null,
         "seenAt": "2026-09-18T11:25:15.000",
         "source": "official_feed",
-        "depletion": "healthy"
+        "depletion": "slowing"
       },
       {
         "variantId": "monarch",
@@ -16063,7 +16443,7 @@
         "qty": null,
         "seenAt": "2026-09-18T11:25:15.000",
         "source": "official_feed",
-        "depletion": "healthy"
+        "depletion": "slowing"
       },
       {
         "variantId": "full-zero",
@@ -16071,7 +16451,7 @@
         "qty": null,
         "seenAt": "2026-09-18T11:25:15.000",
         "source": "official_feed",
-        "depletion": "healthy"
+        "depletion": "slowing"
       },
       {
         "variantId": "ultra-peachy-keen",
@@ -16079,7 +16459,7 @@
         "qty": null,
         "seenAt": "2026-09-18T12:14:46.000",
         "source": "official_feed",
-        "depletion": "healthy"
+        "depletion": "slowing"
       }
     ]
   },
@@ -16115,7 +16495,7 @@
         "qty": null,
         "seenAt": "2026-09-16T14:49:52.000",
         "source": "official_feed",
-        "depletion": "likely_out"
+        "depletion": "slowing"
       },
       {
         "variantId": "strawberry",
@@ -16131,7 +16511,7 @@
         "qty": null,
         "seenAt": "2026-09-18T09:52:08.000",
         "source": "official_feed",
-        "depletion": "likely_out"
+        "depletion": "slowing"
       },
       {
         "variantId": "monarch",
@@ -16239,7 +16619,7 @@
         "qty": null,
         "seenAt": "2026-09-18T13:15:17.000",
         "source": "official_feed",
-        "depletion": "healthy"
+        "depletion": "slowing"
       },
       {
         "variantId": "ultra-paradise",
@@ -16247,7 +16627,7 @@
         "qty": null,
         "seenAt": "2026-09-18T12:35:15.000",
         "source": "official_feed",
-        "depletion": "healthy"
+        "depletion": "slowing"
       },
       {
         "variantId": "ultra-fiesta",
@@ -16255,7 +16635,7 @@
         "qty": null,
         "seenAt": "2026-09-16T14:09:36.000",
         "source": "official_feed",
-        "depletion": "likely_out"
+        "depletion": "slowing"
       },
       {
         "variantId": "monarch",
@@ -16263,7 +16643,7 @@
         "qty": null,
         "seenAt": "2026-09-18T10:32:39.000",
         "source": "official_feed",
-        "depletion": "healthy"
+        "depletion": "slowing"
       },
       {
         "variantId": "green-zero",
@@ -16371,7 +16751,7 @@
         "qty": null,
         "seenAt": "2026-09-18T11:03:48.000",
         "source": "official_feed",
-        "depletion": "healthy"
+        "depletion": "slowing"
       },
       {
         "variantId": "mango-loco",
@@ -16387,169 +16767,25 @@
         "qty": null,
         "seenAt": "2026-09-18T14:32:41.000",
         "source": "official_feed",
-        "depletion": "healthy"
+        "depletion": "slowing"
       }
     ]
   },
   {
-    "id": "rami_levy-720",
+    "id": "rami_levy-26",
     "chain": "Rami Levy",
-    "name": "הרטום נתניה",
-    "address": "הרטום 40",
-    "city": "נתניה",
-    "lat": 32.3088805,
-    "lng": 34.8780564,
+    "name": "אשדוד",
+    "address": "היהלומים 8",
+    "city": "אשדוד",
+    "lat": 31.8137992,
+    "lng": 34.6602816,
     "approximate": false,
     "shelf": [
-      {
-        "variantId": "strawberry",
-        "price": 9.2,
-        "qty": null,
-        "seenAt": "2026-09-18T10:32:58.000",
-        "source": "official_feed",
-        "depletion": "slowing"
-      },
-      {
-        "variantId": "ultra",
-        "price": 8.6,
-        "qty": null,
-        "seenAt": "2026-09-17T16:56:39.000",
-        "source": "official_feed",
-        "depletion": "slowing"
-      },
-      {
-        "variantId": "mango-loco",
-        "price": 8.9,
-        "qty": null,
-        "seenAt": "2026-09-17T16:30:26.000",
-        "source": "official_feed",
-        "depletion": "slowing"
-      },
-      {
-        "variantId": "ultra-paradise",
-        "price": 8.6,
-        "qty": null,
-        "seenAt": "2026-08-19T17:33:16.000",
-        "source": "official_feed",
-        "depletion": "insufficient_data"
-      },
-      {
-        "variantId": "ultra-fiesta",
-        "price": 8.9,
-        "qty": null,
-        "seenAt": "2026-08-11T11:14:50.000",
-        "source": "official_feed",
-        "depletion": "insufficient_data"
-      },
-      {
-        "variantId": "monarch",
-        "price": 8.9,
-        "qty": null,
-        "seenAt": "2026-08-06T17:08:24.000",
-        "source": "official_feed",
-        "depletion": "insufficient_data"
-      },
-      {
-        "variantId": "original",
-        "price": 8.6,
-        "qty": null,
-        "seenAt": "2026-09-16T15:29:16.000",
-        "source": "official_feed",
-        "depletion": "slowing"
-      },
-      {
-        "variantId": "full-zero",
-        "price": 9.2,
-        "qty": null,
-        "seenAt": "2026-08-13T21:11:19.000",
-        "source": "official_feed",
-        "depletion": "insufficient_data"
-      },
       {
         "variantId": "ultra-peachy-keen",
-        "price": 9.2,
-        "qty": null,
-        "seenAt": "2026-09-18T10:32:58.000",
-        "source": "official_feed",
-        "depletion": "slowing"
-      }
-    ]
-  },
-  {
-    "id": "rami_levy-734",
-    "chain": "Rami Levy",
-    "name": "אסתר המלכה תל אביב",
-    "address": "אסתר המלכה 4",
-    "city": "תל אביב - יפו",
-    "lat": 32.07898,
-    "lng": 34.774362,
-    "approximate": false,
-    "shelf": [
-      {
-        "variantId": "pipeline-punch",
-        "price": 8.9,
-        "qty": null,
-        "seenAt": "2026-09-07T21:24:57.000",
-        "source": "official_feed",
-        "depletion": "insufficient_data"
-      },
-      {
-        "variantId": "ultra-paradise",
-        "price": 8.6,
-        "qty": null,
-        "seenAt": "2026-09-17T16:33:31.000",
-        "source": "official_feed",
-        "depletion": "slowing"
-      },
-      {
-        "variantId": "ultra-fiesta",
-        "price": 8.9,
-        "qty": null,
-        "seenAt": "2026-09-17T16:33:31.000",
-        "source": "official_feed",
-        "depletion": "slowing"
-      },
-      {
-        "variantId": "original",
-        "price": 8.6,
-        "qty": null,
-        "seenAt": "2026-08-30T08:55:06.000",
-        "source": "official_feed",
-        "depletion": "healthy"
-      },
-      {
-        "variantId": "green-zero",
-        "price": 8.9,
-        "qty": null,
-        "seenAt": "2026-09-17T08:53:58.000",
-        "source": "official_feed",
-        "depletion": "slowing"
-      }
-    ]
-  },
-  {
-    "id": "rami_levy-37",
-    "chain": "Rami Levy",
-    "name": "נתניה צפון (אורזים)",
-    "address": "האורזים 8",
-    "city": "נתניה",
-    "lat": 32.3169587,
-    "lng": 34.8717317,
-    "approximate": false,
-    "shelf": [
-      {
-        "variantId": "full-zero",
         "price": 7.9,
         "qty": null,
-        "seenAt": "2026-09-18T12:46:44.000",
-        "source": "official_feed",
-        "depletion": "slowing"
-      },
-      {
-        "variantId": "monarch",
-        "price": 7.9,
-        "qty": null,
-        "seenAt": "2026-09-09T11:18:53.000",
+        "seenAt": "2026-07-30T12:05:28.000",
         "source": "official_feed",
         "depletion": "insufficient_data"
       },
@@ -16557,55 +16793,71 @@
         "variantId": "green-zero",
         "price": 7.9,
         "qty": null,
-        "seenAt": "2026-09-17T17:18:51.000",
+        "seenAt": "2026-09-18T14:33:34.000",
         "source": "official_feed",
         "depletion": "slowing"
-      },
-      {
-        "variantId": "ultra-fiesta",
-        "price": 7.9,
-        "qty": null,
-        "seenAt": "2026-09-16T15:52:36.000",
-        "source": "official_feed",
-        "depletion": "slowing"
-      },
-      {
-        "variantId": "original",
-        "price": 7.9,
-        "qty": null,
-        "seenAt": "2026-09-18T13:33:46.000",
-        "source": "official_feed",
-        "depletion": "healthy"
       },
       {
         "variantId": "ultra",
         "price": 7.5,
         "qty": null,
-        "seenAt": "2026-09-18T14:55:13.000",
+        "seenAt": "2026-09-17T20:12:05.000",
+        "source": "official_feed",
+        "depletion": "slowing"
+      },
+      {
+        "variantId": "monarch",
+        "price": 7.9,
+        "qty": null,
+        "seenAt": "2026-09-18T10:37:21.000",
         "source": "official_feed",
         "depletion": "likely_out"
       },
       {
-        "variantId": "ultra-peachy-keen",
+        "variantId": "strawberry",
         "price": 7.9,
         "qty": null,
-        "seenAt": "2026-09-03T14:28:01.000",
+        "seenAt": "2026-09-18T11:38:18.000",
+        "source": "official_feed",
+        "depletion": "likely_out"
+      },
+      {
+        "variantId": "full-zero",
+        "price": 7.9,
+        "qty": null,
+        "seenAt": "2026-08-15T22:37:49.000",
         "source": "official_feed",
         "depletion": "insufficient_data"
       },
       {
-        "variantId": "strawberry",
+        "variantId": "mango-loco",
         "price": 7.9,
         "qty": null,
-        "seenAt": "2026-09-17T08:49:11.000",
+        "seenAt": "2026-09-16T13:03:54.000",
         "source": "official_feed",
         "depletion": "slowing"
+      },
+      {
+        "variantId": "original",
+        "price": 7.9,
+        "qty": null,
+        "seenAt": "2026-09-18T10:37:21.000",
+        "source": "official_feed",
+        "depletion": "healthy"
+      },
+      {
+        "variantId": "ultra-fiesta",
+        "price": 7.9,
+        "qty": null,
+        "seenAt": "2026-09-18T11:07:45.000",
+        "source": "official_feed",
+        "depletion": "likely_out"
       },
       {
         "variantId": "pipeline-punch",
         "price": 7.9,
         "qty": null,
-        "seenAt": "2026-09-16T16:30:20.000",
+        "seenAt": "2026-09-18T11:07:45.000",
         "source": "official_feed",
         "depletion": "slowing"
       },
@@ -16613,15 +16865,7 @@
         "variantId": "ultra-paradise",
         "price": 7.5,
         "qty": null,
-        "seenAt": "2026-09-18T14:34:53.000",
-        "source": "official_feed",
-        "depletion": "slowing"
-      },
-      {
-        "variantId": "mango-loco",
-        "price": 7.9,
-        "qty": null,
-        "seenAt": "2026-09-09T17:24:52.000",
+        "seenAt": "2026-09-18T10:47:07.000",
         "source": "official_feed",
         "depletion": "slowing"
       }
@@ -16692,106 +16936,6 @@
         "seenAt": "2026-08-05T12:50:28.000",
         "source": "official_feed",
         "depletion": "insufficient_data"
-      }
-    ]
-  },
-  {
-    "id": "rami_levy-26",
-    "chain": "Rami Levy",
-    "name": "אשדוד",
-    "address": "היהלומים 8",
-    "city": "אשדוד",
-    "lat": 31.8137992,
-    "lng": 34.6602816,
-    "approximate": false,
-    "shelf": [
-      {
-        "variantId": "monarch",
-        "price": 7.9,
-        "qty": null,
-        "seenAt": "2026-09-18T10:37:21.000",
-        "source": "official_feed",
-        "depletion": "likely_out"
-      },
-      {
-        "variantId": "strawberry",
-        "price": 7.9,
-        "qty": null,
-        "seenAt": "2026-09-18T11:38:18.000",
-        "source": "official_feed",
-        "depletion": "likely_out"
-      },
-      {
-        "variantId": "full-zero",
-        "price": 7.9,
-        "qty": null,
-        "seenAt": "2026-08-15T22:37:49.000",
-        "source": "official_feed",
-        "depletion": "insufficient_data"
-      },
-      {
-        "variantId": "original",
-        "price": 7.9,
-        "qty": null,
-        "seenAt": "2026-09-18T10:37:21.000",
-        "source": "official_feed",
-        "depletion": "healthy"
-      },
-      {
-        "variantId": "ultra-fiesta",
-        "price": 7.9,
-        "qty": null,
-        "seenAt": "2026-09-18T11:07:45.000",
-        "source": "official_feed",
-        "depletion": "likely_out"
-      },
-      {
-        "variantId": "ultra-peachy-keen",
-        "price": 7.9,
-        "qty": null,
-        "seenAt": "2026-07-30T12:05:28.000",
-        "source": "official_feed",
-        "depletion": "insufficient_data"
-      },
-      {
-        "variantId": "green-zero",
-        "price": 7.9,
-        "qty": null,
-        "seenAt": "2026-09-18T14:33:34.000",
-        "source": "official_feed",
-        "depletion": "slowing"
-      },
-      {
-        "variantId": "ultra",
-        "price": 7.5,
-        "qty": null,
-        "seenAt": "2026-09-17T20:12:05.000",
-        "source": "official_feed",
-        "depletion": "slowing"
-      },
-      {
-        "variantId": "mango-loco",
-        "price": 7.9,
-        "qty": null,
-        "seenAt": "2026-09-16T13:03:54.000",
-        "source": "official_feed",
-        "depletion": "slowing"
-      },
-      {
-        "variantId": "pipeline-punch",
-        "price": 7.9,
-        "qty": null,
-        "seenAt": "2026-09-18T11:07:45.000",
-        "source": "official_feed",
-        "depletion": "slowing"
-      },
-      {
-        "variantId": "ultra-paradise",
-        "price": 7.5,
-        "qty": null,
-        "seenAt": "2026-09-18T10:47:07.000",
-        "source": "official_feed",
-        "depletion": "slowing"
       }
     ]
   },
@@ -16911,7 +17055,7 @@
         "qty": null,
         "seenAt": "2026-09-18T14:58:14.000",
         "source": "official_feed",
-        "depletion": "healthy"
+        "depletion": "slowing"
       },
       {
         "variantId": "full-zero",
@@ -16927,7 +17071,7 @@
         "qty": null,
         "seenAt": "2026-09-18T13:42:23.000",
         "source": "official_feed",
-        "depletion": "healthy"
+        "depletion": "likely_out"
       },
       {
         "variantId": "original",
@@ -16951,7 +17095,7 @@
         "qty": null,
         "seenAt": "2026-09-18T12:14:56.000",
         "source": "official_feed",
-        "depletion": "healthy"
+        "depletion": "likely_out"
       },
       {
         "variantId": "pipeline-punch",
@@ -16967,7 +17111,7 @@
         "qty": null,
         "seenAt": "2026-09-18T12:14:56.000",
         "source": "official_feed",
-        "depletion": "healthy"
+        "depletion": "slowing"
       },
       {
         "variantId": "ultra",
@@ -16975,7 +17119,7 @@
         "qty": null,
         "seenAt": "2026-09-18T12:00:02.000",
         "source": "official_feed",
-        "depletion": "healthy"
+        "depletion": "likely_out"
       },
       {
         "variantId": "green-zero",
@@ -16991,7 +17135,7 @@
         "qty": null,
         "seenAt": "2026-09-18T14:54:22.000",
         "source": "official_feed",
-        "depletion": "healthy"
+        "depletion": "slowing"
       }
     ]
   },
@@ -17027,7 +17171,7 @@
         "qty": null,
         "seenAt": "2026-09-18T09:14:36.000",
         "source": "official_feed",
-        "depletion": "healthy"
+        "depletion": "slowing"
       },
       {
         "variantId": "pipeline-punch",
@@ -17067,7 +17211,7 @@
         "qty": null,
         "seenAt": "2026-09-18T11:22:58.000",
         "source": "official_feed",
-        "depletion": "healthy"
+        "depletion": "slowing"
       },
       {
         "variantId": "full-zero",
@@ -17075,7 +17219,7 @@
         "qty": null,
         "seenAt": "2026-09-18T09:48:54.000",
         "source": "official_feed",
-        "depletion": "healthy"
+        "depletion": "slowing"
       },
       {
         "variantId": "green-zero",
@@ -17183,7 +17327,7 @@
         "qty": null,
         "seenAt": "2026-09-17T17:32:23.000",
         "source": "official_feed",
-        "depletion": "likely_out"
+        "depletion": "slowing"
       },
       {
         "variantId": "mango-loco",
@@ -17191,7 +17335,7 @@
         "qty": null,
         "seenAt": "2026-09-18T13:44:08.000",
         "source": "official_feed",
-        "depletion": "healthy"
+        "depletion": "slowing"
       }
     ]
   },
@@ -17275,7 +17419,7 @@
         "qty": null,
         "seenAt": "2026-09-18T14:19:41.000",
         "source": "official_feed",
-        "depletion": "healthy"
+        "depletion": "slowing"
       },
       {
         "variantId": "full-zero",
@@ -17311,7 +17455,7 @@
         "qty": null,
         "seenAt": "2026-09-18T14:02:38.000",
         "source": "official_feed",
-        "depletion": "healthy"
+        "depletion": "slowing"
       },
       {
         "variantId": "full-zero",
@@ -17327,7 +17471,7 @@
         "qty": null,
         "seenAt": "2026-09-18T12:14:29.000",
         "source": "official_feed",
-        "depletion": "healthy"
+        "depletion": "slowing"
       },
       {
         "variantId": "mango-loco",
@@ -17335,7 +17479,7 @@
         "qty": null,
         "seenAt": "2026-09-18T15:17:31.000",
         "source": "official_feed",
-        "depletion": "healthy"
+        "depletion": "slowing"
       },
       {
         "variantId": "pipeline-punch",
@@ -17343,7 +17487,7 @@
         "qty": null,
         "seenAt": "2026-09-18T15:17:31.000",
         "source": "official_feed",
-        "depletion": "healthy"
+        "depletion": "slowing"
       },
       {
         "variantId": "ultra-paradise",
@@ -17351,7 +17495,7 @@
         "qty": null,
         "seenAt": "2026-09-18T15:17:31.000",
         "source": "official_feed",
-        "depletion": "healthy"
+        "depletion": "slowing"
       },
       {
         "variantId": "ultra-fiesta",
@@ -17367,7 +17511,7 @@
         "qty": null,
         "seenAt": "2026-09-18T08:31:24.000",
         "source": "official_feed",
-        "depletion": "healthy"
+        "depletion": "slowing"
       },
       {
         "variantId": "ultra-peachy-keen",
@@ -17383,7 +17527,7 @@
         "qty": null,
         "seenAt": "2026-09-18T09:24:29.000",
         "source": "official_feed",
-        "depletion": "healthy"
+        "depletion": "slowing"
       },
       {
         "variantId": "original",
@@ -17392,186 +17536,6 @@
         "seenAt": "2026-09-18T12:14:29.000",
         "source": "official_feed",
         "depletion": "healthy"
-      }
-    ]
-  },
-  {
-    "id": "rami_levy-715",
-    "chain": "Rami Levy",
-    "name": "סוקולוב הרצליה",
-    "address": "סוקולוב 56",
-    "city": "הרצליה",
-    "lat": 32.1669662,
-    "lng": 34.8463788,
-    "approximate": false,
-    "shelf": [
-      {
-        "variantId": "strawberry",
-        "price": 9.2,
-        "qty": null,
-        "seenAt": "2026-07-30T19:06:29.000",
-        "source": "official_feed",
-        "depletion": "insufficient_data"
-      },
-      {
-        "variantId": "original",
-        "price": 8.9,
-        "qty": null,
-        "seenAt": "2026-07-30T11:55:52.000",
-        "source": "official_feed",
-        "depletion": "insufficient_data"
-      },
-      {
-        "variantId": "ultra",
-        "price": 8.6,
-        "qty": null,
-        "seenAt": "2026-09-14T16:40:12.000",
-        "source": "official_feed",
-        "depletion": "slowing"
-      },
-      {
-        "variantId": "mango-loco",
-        "price": 8.9,
-        "qty": null,
-        "seenAt": "2026-08-13T12:46:48.000",
-        "source": "official_feed",
-        "depletion": "insufficient_data"
-      }
-    ]
-  },
-  {
-    "id": "rami_levy-41",
-    "chain": "Rami Levy",
-    "name": "רחובות",
-    "address": "מוטי קינד 1",
-    "city": "רחובות",
-    "lat": 31.8949033,
-    "lng": 34.7890169,
-    "approximate": false,
-    "shelf": [
-      {
-        "variantId": "full-zero",
-        "price": 7.9,
-        "qty": null,
-        "seenAt": "2026-09-04T08:37:47.000",
-        "source": "official_feed",
-        "depletion": "insufficient_data"
-      },
-      {
-        "variantId": "ultra-fiesta",
-        "price": 7.9,
-        "qty": null,
-        "seenAt": "2026-09-15T13:55:01.000",
-        "source": "official_feed",
-        "depletion": "slowing"
-      },
-      {
-        "variantId": "strawberry",
-        "price": 7.9,
-        "qty": null,
-        "seenAt": "2026-09-17T21:58:24.000",
-        "source": "official_feed",
-        "depletion": "slowing"
-      },
-      {
-        "variantId": "monarch",
-        "price": 7.9,
-        "qty": null,
-        "seenAt": "2026-09-18T11:13:02.000",
-        "source": "official_feed",
-        "depletion": "healthy"
-      },
-      {
-        "variantId": "original",
-        "price": 7.9,
-        "qty": null,
-        "seenAt": "2026-09-10T17:37:26.000",
-        "source": "official_feed",
-        "depletion": "healthy"
-      },
-      {
-        "variantId": "ultra-peachy-keen",
-        "price": 7.9,
-        "qty": null,
-        "seenAt": "2026-07-15T20:56:49.000",
-        "source": "official_feed",
-        "depletion": "insufficient_data"
-      },
-      {
-        "variantId": "pipeline-punch",
-        "price": 7.9,
-        "qty": null,
-        "seenAt": "2026-09-18T11:13:02.000",
-        "source": "official_feed",
-        "depletion": "healthy"
-      },
-      {
-        "variantId": "ultra-paradise",
-        "price": 7.5,
-        "qty": null,
-        "seenAt": "2026-09-17T21:58:24.000",
-        "source": "official_feed",
-        "depletion": "slowing"
-      },
-      {
-        "variantId": "green-zero",
-        "price": 7.9,
-        "qty": null,
-        "seenAt": "2026-09-18T13:41:23.000",
-        "source": "official_feed",
-        "depletion": "healthy"
-      },
-      {
-        "variantId": "ultra",
-        "price": 7.5,
-        "qty": null,
-        "seenAt": "2026-09-18T12:36:09.000",
-        "source": "official_feed",
-        "depletion": "healthy"
-      },
-      {
-        "variantId": "mango-loco",
-        "price": 7.9,
-        "qty": null,
-        "seenAt": "2026-09-18T11:43:32.000",
-        "source": "official_feed",
-        "depletion": "healthy"
-      }
-    ]
-  },
-  {
-    "id": "rami_levy-58",
-    "chain": "Rami Levy",
-    "name": "חדרה ויוה",
-    "address": "תרנ\"א 20",
-    "city": "חדרה",
-    "lat": 32.4336338,
-    "lng": 34.924936,
-    "approximate": false,
-    "shelf": [
-      {
-        "variantId": "ultra-peachy-keen",
-        "price": 7.9,
-        "qty": null,
-        "seenAt": "2026-08-20T12:01:04.000",
-        "source": "official_feed",
-        "depletion": "insufficient_data"
-      },
-      {
-        "variantId": "original",
-        "price": 7.9,
-        "qty": null,
-        "seenAt": "2026-09-18T14:48:26.000",
-        "source": "official_feed",
-        "depletion": "healthy"
-      },
-      {
-        "variantId": "ultra",
-        "price": 7.5,
-        "qty": null,
-        "seenAt": "2026-07-07T12:45:34.000",
-        "source": "official_feed",
-        "depletion": "insufficient_data"
       }
     ]
   },
@@ -17585,30 +17549,6 @@
     "lng": 35.2741896,
     "approximate": false,
     "shelf": [
-      {
-        "variantId": "full-zero",
-        "price": 7.9,
-        "qty": null,
-        "seenAt": "2026-08-14T11:50:50.000",
-        "source": "official_feed",
-        "depletion": "insufficient_data"
-      },
-      {
-        "variantId": "ultra-peachy-keen",
-        "price": 7.9,
-        "qty": null,
-        "seenAt": "2026-08-25T16:06:54.000",
-        "source": "official_feed",
-        "depletion": "insufficient_data"
-      },
-      {
-        "variantId": "strawberry",
-        "price": 7.9,
-        "qty": null,
-        "seenAt": "2026-09-18T13:53:28.000",
-        "source": "official_feed",
-        "depletion": "likely_out"
-      },
       {
         "variantId": "ultra",
         "price": 7.5,
@@ -17624,6 +17564,14 @@
         "seenAt": "2026-09-18T12:05:13.000",
         "source": "official_feed",
         "depletion": "slowing"
+      },
+      {
+        "variantId": "full-zero",
+        "price": 7.9,
+        "qty": null,
+        "seenAt": "2026-08-14T11:50:50.000",
+        "source": "official_feed",
+        "depletion": "insufficient_data"
       },
       {
         "variantId": "pipeline-punch",
@@ -17672,48 +17620,40 @@
         "seenAt": "2026-09-18T14:33:33.000",
         "source": "official_feed",
         "depletion": "slowing"
-      }
-    ]
-  },
-  {
-    "id": "rami_levy-9",
-    "chain": "Rami Levy",
-    "name": "קסיטנה",
-    "address": "א.ת באר טוביה",
-    "city": "קרית מלאכי",
-    "lat": 31.773937,
-    "lng": 34.666846,
-    "approximate": false,
-    "shelf": [
-      {
-        "variantId": "green-zero",
-        "price": 7.9,
-        "qty": null,
-        "seenAt": "2026-09-11T14:48:51.000",
-        "source": "official_feed",
-        "depletion": "slowing"
       },
       {
-        "variantId": "full-zero",
+        "variantId": "ultra-peachy-keen",
         "price": 7.9,
         "qty": null,
-        "seenAt": "2026-09-16T07:58:56.000",
+        "seenAt": "2026-08-25T16:06:54.000",
         "source": "official_feed",
-        "depletion": "slowing"
-      },
-      {
-        "variantId": "monarch",
-        "price": 7.9,
-        "qty": null,
-        "seenAt": "2026-09-18T10:49:03.000",
-        "source": "official_feed",
-        "depletion": "slowing"
+        "depletion": "insufficient_data"
       },
       {
         "variantId": "strawberry",
         "price": 7.9,
         "qty": null,
-        "seenAt": "2026-08-30T10:58:42.000",
+        "seenAt": "2026-09-18T13:53:28.000",
+        "source": "official_feed",
+        "depletion": "likely_out"
+      }
+    ]
+  },
+  {
+    "id": "rami_levy-41",
+    "chain": "Rami Levy",
+    "name": "רחובות",
+    "address": "מוטי קינד 1",
+    "city": "רחובות",
+    "lat": 31.8949033,
+    "lng": 34.7890169,
+    "approximate": false,
+    "shelf": [
+      {
+        "variantId": "full-zero",
+        "price": 7.9,
+        "qty": null,
+        "seenAt": "2026-09-04T08:37:47.000",
         "source": "official_feed",
         "depletion": "insufficient_data"
       },
@@ -17721,31 +17661,23 @@
         "variantId": "ultra-fiesta",
         "price": 7.9,
         "qty": null,
-        "seenAt": "2026-09-09T09:01:17.000",
+        "seenAt": "2026-09-15T13:55:01.000",
         "source": "official_feed",
         "depletion": "slowing"
       },
       {
-        "variantId": "pipeline-punch",
+        "variantId": "strawberry",
         "price": 7.9,
         "qty": null,
-        "seenAt": "2026-09-18T15:06:27.000",
+        "seenAt": "2026-09-17T21:58:24.000",
         "source": "official_feed",
         "depletion": "slowing"
       },
       {
-        "variantId": "ultra-paradise",
-        "price": 7.5,
-        "qty": null,
-        "seenAt": "2026-09-10T09:08:07.000",
-        "source": "official_feed",
-        "depletion": "slowing"
-      },
-      {
-        "variantId": "ultra-peachy-keen",
+        "variantId": "monarch",
         "price": 7.9,
         "qty": null,
-        "seenAt": "2026-09-15T12:33:24.000",
+        "seenAt": "2026-09-18T11:13:02.000",
         "source": "official_feed",
         "depletion": "slowing"
       },
@@ -17753,25 +17685,93 @@
         "variantId": "original",
         "price": 7.9,
         "qty": null,
-        "seenAt": "2026-09-18T15:06:27.000",
+        "seenAt": "2026-09-10T17:37:26.000",
         "source": "official_feed",
         "depletion": "healthy"
+      },
+      {
+        "variantId": "ultra-peachy-keen",
+        "price": 7.9,
+        "qty": null,
+        "seenAt": "2026-07-15T20:56:49.000",
+        "source": "official_feed",
+        "depletion": "insufficient_data"
+      },
+      {
+        "variantId": "pipeline-punch",
+        "price": 7.9,
+        "qty": null,
+        "seenAt": "2026-09-18T11:13:02.000",
+        "source": "official_feed",
+        "depletion": "slowing"
+      },
+      {
+        "variantId": "ultra-paradise",
+        "price": 7.5,
+        "qty": null,
+        "seenAt": "2026-09-17T21:58:24.000",
+        "source": "official_feed",
+        "depletion": "slowing"
+      },
+      {
+        "variantId": "green-zero",
+        "price": 7.9,
+        "qty": null,
+        "seenAt": "2026-09-18T13:41:23.000",
+        "source": "official_feed",
+        "depletion": "slowing"
       },
       {
         "variantId": "ultra",
         "price": 7.5,
         "qty": null,
-        "seenAt": "2026-09-18T15:06:27.000",
+        "seenAt": "2026-09-18T12:36:09.000",
         "source": "official_feed",
-        "depletion": "slowing"
+        "depletion": "likely_out"
       },
       {
         "variantId": "mango-loco",
         "price": 7.9,
         "qty": null,
-        "seenAt": "2026-09-18T15:06:27.000",
+        "seenAt": "2026-09-18T11:43:32.000",
         "source": "official_feed",
         "depletion": "slowing"
+      }
+    ]
+  },
+  {
+    "id": "rami_levy-58",
+    "chain": "Rami Levy",
+    "name": "חדרה ויוה",
+    "address": "תרנ\"א 20",
+    "city": "חדרה",
+    "lat": 32.4336338,
+    "lng": 34.924936,
+    "approximate": false,
+    "shelf": [
+      {
+        "variantId": "ultra-peachy-keen",
+        "price": 7.9,
+        "qty": null,
+        "seenAt": "2026-08-20T12:01:04.000",
+        "source": "official_feed",
+        "depletion": "insufficient_data"
+      },
+      {
+        "variantId": "original",
+        "price": 7.9,
+        "qty": null,
+        "seenAt": "2026-09-18T14:48:26.000",
+        "source": "official_feed",
+        "depletion": "slowing"
+      },
+      {
+        "variantId": "ultra",
+        "price": 7.5,
+        "qty": null,
+        "seenAt": "2026-07-07T12:45:34.000",
+        "source": "official_feed",
+        "depletion": "insufficient_data"
       }
     ]
   },
@@ -17971,7 +17971,7 @@
         "qty": null,
         "seenAt": "2026-09-18T09:39:41.000",
         "source": "official_feed",
-        "depletion": "healthy"
+        "depletion": "slowing"
       }
     ]
   },
@@ -20479,7 +20479,7 @@
         "qty": null,
         "seenAt": "2026-09-17T18:53:22.000",
         "source": "official_feed",
-        "depletion": "likely_out"
+        "depletion": "slowing"
       },
       {
         "variantId": "aussie-lemonade",
@@ -26776,6 +26776,86 @@
     ]
   },
   {
+    "id": "osher_ad-25",
+    "chain": "Osher Ad",
+    "name": "ראשון לציון",
+    "address": "אצל 26",
+    "city": "ראשון לציון",
+    "lat": 31.9913839,
+    "lng": 34.7594332,
+    "approximate": false,
+    "shelf": [
+      {
+        "variantId": "ultra",
+        "price": 7.5,
+        "qty": null,
+        "seenAt": "2026-09-18T15:02:40.000",
+        "source": "official_feed",
+        "depletion": "likely_out"
+      },
+      {
+        "variantId": "ultra-paradise",
+        "price": 7.5,
+        "qty": null,
+        "seenAt": "2026-09-18T14:34:01.000",
+        "source": "official_feed",
+        "depletion": "likely_out"
+      },
+      {
+        "variantId": "original",
+        "price": 7.5,
+        "qty": null,
+        "seenAt": "2026-09-18T13:59:37.000",
+        "source": "official_feed",
+        "depletion": "likely_out"
+      }
+    ]
+  },
+  {
+    "id": "osher_ad-19",
+    "chain": "Osher Ad",
+    "name": "עפולה",
+    "address": "חיים לסקוב",
+    "city": "עפולה",
+    "lat": 32.6244526,
+    "lng": 35.3159194,
+    "approximate": false,
+    "shelf": [
+      {
+        "variantId": "ultra",
+        "price": 7.2,
+        "qty": null,
+        "seenAt": "2026-09-18T15:01:07.000",
+        "source": "official_feed",
+        "depletion": "slowing"
+      },
+      {
+        "variantId": "mango-loco",
+        "price": 7.2,
+        "qty": null,
+        "seenAt": "2026-08-06T17:25:45.000",
+        "source": "official_feed",
+        "depletion": "insufficient_data"
+      },
+      {
+        "variantId": "ultra-paradise",
+        "price": 7.2,
+        "qty": null,
+        "seenAt": "2026-09-17T17:34:13.000",
+        "source": "official_feed",
+        "depletion": "slowing"
+      },
+      {
+        "variantId": "original",
+        "price": 7.2,
+        "qty": null,
+        "seenAt": "2026-09-18T13:17:00.000",
+        "source": "official_feed",
+        "depletion": "likely_out"
+      }
+    ]
+  },
+  {
     "id": "osher_ad-13",
     "chain": "Osher Ad",
     "name": "באר שבע",
@@ -26799,7 +26879,7 @@
         "qty": null,
         "seenAt": "2026-09-18T12:56:52.000",
         "source": "official_feed",
-        "depletion": "healthy"
+        "depletion": "likely_out"
       },
       {
         "variantId": "original",
@@ -26807,7 +26887,7 @@
         "qty": null,
         "seenAt": "2026-09-18T12:00:21.000",
         "source": "official_feed",
-        "depletion": "healthy"
+        "depletion": "likely_out"
       }
     ]
   },
@@ -26827,7 +26907,7 @@
         "qty": null,
         "seenAt": "2026-09-18T14:56:47.000",
         "source": "official_feed",
-        "depletion": "healthy"
+        "depletion": "likely_out"
       },
       {
         "variantId": "ultra-paradise",
@@ -26835,7 +26915,7 @@
         "qty": null,
         "seenAt": "2026-09-18T15:32:06.000",
         "source": "official_feed",
-        "depletion": "healthy"
+        "depletion": "likely_out"
       },
       {
         "variantId": "ultra-fiesta",
@@ -26851,7 +26931,7 @@
         "qty": null,
         "seenAt": "2026-09-18T08:42:15.000",
         "source": "official_feed",
-        "depletion": "healthy"
+        "depletion": "likely_out"
       }
     ]
   },
@@ -26871,7 +26951,7 @@
         "qty": null,
         "seenAt": "2026-09-18T14:15:14.000",
         "source": "official_feed",
-        "depletion": "healthy"
+        "depletion": "likely_out"
       },
       {
         "variantId": "ultra-paradise",
@@ -26879,7 +26959,7 @@
         "qty": null,
         "seenAt": "2026-09-18T14:15:14.000",
         "source": "official_feed",
-        "depletion": "healthy"
+        "depletion": "likely_out"
       },
       {
         "variantId": "strawberry",
@@ -26895,7 +26975,7 @@
         "qty": null,
         "seenAt": "2026-09-18T14:15:14.000",
         "source": "official_feed",
-        "depletion": "healthy"
+        "depletion": "likely_out"
       }
     ]
   },
@@ -26915,7 +26995,7 @@
         "qty": null,
         "seenAt": "2026-09-18T14:37:13.000",
         "source": "official_feed",
-        "depletion": "healthy"
+        "depletion": "likely_out"
       },
       {
         "variantId": "ultra-paradise",
@@ -26923,7 +27003,7 @@
         "qty": null,
         "seenAt": "2026-09-18T15:09:48.000",
         "source": "official_feed",
-        "depletion": "healthy"
+        "depletion": "likely_out"
       },
       {
         "variantId": "original",
@@ -26931,7 +27011,7 @@
         "qty": null,
         "seenAt": "2026-09-18T15:09:48.000",
         "source": "official_feed",
-        "depletion": "healthy"
+        "depletion": "likely_out"
       }
     ]
   },
@@ -26975,7 +27055,7 @@
         "qty": null,
         "seenAt": "2026-09-18T09:39:50.000",
         "source": "official_feed",
-        "depletion": "healthy"
+        "depletion": "slowing"
       }
     ]
   },
@@ -26995,7 +27075,7 @@
         "qty": null,
         "seenAt": "2026-09-18T14:22:28.000",
         "source": "official_feed",
-        "depletion": "healthy"
+        "depletion": "likely_out"
       },
       {
         "variantId": "ultra",
@@ -27011,87 +27091,7 @@
         "qty": null,
         "seenAt": "2026-09-18T14:26:09.000",
         "source": "official_feed",
-        "depletion": "healthy"
-      }
-    ]
-  },
-  {
-    "id": "osher_ad-25",
-    "chain": "Osher Ad",
-    "name": "ראשון לציון",
-    "address": "אצל 26",
-    "city": "ראשון לציון",
-    "lat": 31.9913839,
-    "lng": 34.7594332,
-    "approximate": false,
-    "shelf": [
-      {
-        "variantId": "ultra",
-        "price": 7.5,
-        "qty": null,
-        "seenAt": "2026-09-18T15:02:40.000",
-        "source": "official_feed",
-        "depletion": "healthy"
-      },
-      {
-        "variantId": "ultra-paradise",
-        "price": 7.5,
-        "qty": null,
-        "seenAt": "2026-09-18T14:34:01.000",
-        "source": "official_feed",
-        "depletion": "healthy"
-      },
-      {
-        "variantId": "original",
-        "price": 7.5,
-        "qty": null,
-        "seenAt": "2026-09-18T13:59:37.000",
-        "source": "official_feed",
-        "depletion": "healthy"
-      }
-    ]
-  },
-  {
-    "id": "osher_ad-19",
-    "chain": "Osher Ad",
-    "name": "עפולה",
-    "address": "חיים לסקוב",
-    "city": "עפולה",
-    "lat": 32.6244526,
-    "lng": 35.3159194,
-    "approximate": false,
-    "shelf": [
-      {
-        "variantId": "ultra",
-        "price": 7.2,
-        "qty": null,
-        "seenAt": "2026-09-18T15:01:07.000",
-        "source": "official_feed",
-        "depletion": "healthy"
-      },
-      {
-        "variantId": "mango-loco",
-        "price": 7.2,
-        "qty": null,
-        "seenAt": "2026-08-06T17:25:45.000",
-        "source": "official_feed",
-        "depletion": "insufficient_data"
-      },
-      {
-        "variantId": "ultra-paradise",
-        "price": 7.2,
-        "qty": null,
-        "seenAt": "2026-09-17T17:34:13.000",
-        "source": "official_feed",
-        "depletion": "slowing"
-      },
-      {
-        "variantId": "original",
-        "price": 7.2,
-        "qty": null,
-        "seenAt": "2026-09-18T13:17:00.000",
-        "source": "official_feed",
-        "depletion": "healthy"
+        "depletion": "likely_out"
       }
     ]
   },
@@ -27111,7 +27111,7 @@
         "qty": null,
         "seenAt": "2026-09-18T14:19:27.000",
         "source": "official_feed",
-        "depletion": "healthy"
+        "depletion": "likely_out"
       },
       {
         "variantId": "ultra-paradise",
@@ -27119,7 +27119,7 @@
         "qty": null,
         "seenAt": "2026-09-18T09:42:07.000",
         "source": "official_feed",
-        "depletion": "healthy"
+        "depletion": "slowing"
       },
       {
         "variantId": "original",
@@ -27127,7 +27127,43 @@
         "qty": null,
         "seenAt": "2026-09-18T10:45:34.000",
         "source": "official_feed",
-        "depletion": "healthy"
+        "depletion": "likely_out"
+      }
+    ]
+  },
+  {
+    "id": "osher_ad-24",
+    "chain": "Osher Ad",
+    "name": "תל אביב",
+    "address": "קרמינצקי 3",
+    "city": "תל אביב - יפו",
+    "lat": 32.066964,
+    "lng": 34.794418,
+    "approximate": false,
+    "shelf": [
+      {
+        "variantId": "original",
+        "price": 7.5,
+        "qty": null,
+        "seenAt": "2026-09-18T14:15:29.000",
+        "source": "official_feed",
+        "depletion": "likely_out"
+      },
+      {
+        "variantId": "ultra",
+        "price": 7.5,
+        "qty": null,
+        "seenAt": "2026-09-18T13:18:54.000",
+        "source": "official_feed",
+        "depletion": "likely_out"
+      },
+      {
+        "variantId": "ultra-paradise",
+        "price": 7.5,
+        "qty": null,
+        "seenAt": "2026-09-18T13:43:21.000",
+        "source": "official_feed",
+        "depletion": "likely_out"
       }
     ]
   },
@@ -27147,7 +27183,7 @@
         "qty": null,
         "seenAt": "2026-09-18T14:50:54.000",
         "source": "official_feed",
-        "depletion": "healthy"
+        "depletion": "likely_out"
       },
       {
         "variantId": "ultra-paradise",
@@ -27155,7 +27191,7 @@
         "qty": null,
         "seenAt": "2026-09-18T15:29:39.000",
         "source": "official_feed",
-        "depletion": "healthy"
+        "depletion": "likely_out"
       },
       {
         "variantId": "original",
@@ -27163,7 +27199,7 @@
         "qty": null,
         "seenAt": "2026-09-18T13:32:19.000",
         "source": "official_feed",
-        "depletion": "healthy"
+        "depletion": "slowing"
       }
     ]
   },
@@ -27191,7 +27227,7 @@
         "qty": null,
         "seenAt": "2026-09-18T13:45:35.000",
         "source": "official_feed",
-        "depletion": "healthy"
+        "depletion": "likely_out"
       },
       {
         "variantId": "original",
@@ -27199,7 +27235,7 @@
         "qty": null,
         "seenAt": "2026-09-18T15:13:48.000",
         "source": "official_feed",
-        "depletion": "healthy"
+        "depletion": "likely_out"
       }
     ]
   },
@@ -27219,7 +27255,7 @@
         "qty": null,
         "seenAt": "2026-09-18T13:40:04.000",
         "source": "official_feed",
-        "depletion": "healthy"
+        "depletion": "likely_out"
       },
       {
         "variantId": "ultra-paradise",
@@ -27227,7 +27263,7 @@
         "qty": null,
         "seenAt": "2026-09-18T11:19:56.000",
         "source": "official_feed",
-        "depletion": "healthy"
+        "depletion": "likely_out"
       },
       {
         "variantId": "original",
@@ -27235,7 +27271,7 @@
         "qty": null,
         "seenAt": "2026-09-18T13:40:04.000",
         "source": "official_feed",
-        "depletion": "healthy"
+        "depletion": "likely_out"
       }
     ]
   },
@@ -27255,7 +27291,7 @@
         "qty": null,
         "seenAt": "2026-09-18T13:39:01.000",
         "source": "official_feed",
-        "depletion": "healthy"
+        "depletion": "likely_out"
       },
       {
         "variantId": "strawberry",
@@ -27279,7 +27315,7 @@
         "qty": null,
         "seenAt": "2026-09-18T14:43:29.000",
         "source": "official_feed",
-        "depletion": "healthy"
+        "depletion": "slowing"
       }
     ]
   },
@@ -27299,7 +27335,7 @@
         "qty": null,
         "seenAt": "2026-09-18T11:45:38.000",
         "source": "official_feed",
-        "depletion": "healthy"
+        "depletion": "likely_out"
       },
       {
         "variantId": "ultra",
@@ -27307,7 +27343,7 @@
         "qty": null,
         "seenAt": "2026-09-18T14:43:02.000",
         "source": "official_feed",
-        "depletion": "healthy"
+        "depletion": "likely_out"
       },
       {
         "variantId": "ultra-paradise",
@@ -27315,43 +27351,7 @@
         "qty": null,
         "seenAt": "2026-09-18T11:45:38.000",
         "source": "official_feed",
-        "depletion": "healthy"
-      }
-    ]
-  },
-  {
-    "id": "osher_ad-24",
-    "chain": "Osher Ad",
-    "name": "תל אביב",
-    "address": "קרמינצקי 3",
-    "city": "תל אביב - יפו",
-    "lat": 32.066964,
-    "lng": 34.794418,
-    "approximate": false,
-    "shelf": [
-      {
-        "variantId": "original",
-        "price": 7.5,
-        "qty": null,
-        "seenAt": "2026-09-18T14:15:29.000",
-        "source": "official_feed",
-        "depletion": "healthy"
-      },
-      {
-        "variantId": "ultra",
-        "price": 7.5,
-        "qty": null,
-        "seenAt": "2026-09-18T13:18:54.000",
-        "source": "official_feed",
-        "depletion": "healthy"
-      },
-      {
-        "variantId": "ultra-paradise",
-        "price": 7.5,
-        "qty": null,
-        "seenAt": "2026-09-18T13:43:21.000",
-        "source": "official_feed",
-        "depletion": "healthy"
+        "depletion": "likely_out"
       }
     ]
   },
@@ -27371,7 +27371,7 @@
         "qty": null,
         "seenAt": "2026-09-18T10:16:46.000",
         "source": "official_feed",
-        "depletion": "healthy"
+        "depletion": "slowing"
       },
       {
         "variantId": "ultra-paradise",
@@ -27387,35 +27387,7 @@
         "qty": null,
         "seenAt": "2026-09-18T11:10:52.000",
         "source": "official_feed",
-        "depletion": "healthy"
-      }
-    ]
-  },
-  {
-    "id": "osher_ad-31",
-    "chain": "Osher Ad",
-    "name": "כפר סבא",
-    "address": "דרך הים 9",
-    "city": "כפר סבא",
-    "lat": 32.1848235,
-    "lng": 34.9529112,
-    "approximate": false,
-    "shelf": [
-      {
-        "variantId": "original",
-        "price": 4.9,
-        "qty": null,
-        "seenAt": "2026-08-27T19:44:30.000",
-        "source": "official_feed",
-        "depletion": "insufficient_data"
-      },
-      {
-        "variantId": "ultra-paradise",
-        "price": 4.9,
-        "qty": null,
-        "seenAt": "2026-08-31T19:33:49.000",
-        "source": "official_feed",
-        "depletion": "insufficient_data"
+        "depletion": "likely_out"
       }
     ]
   },
@@ -27442,6 +27414,34 @@
         "price": 7.5,
         "qty": null,
         "seenAt": "2026-08-16T14:21:02.000",
+        "source": "official_feed",
+        "depletion": "insufficient_data"
+      }
+    ]
+  },
+  {
+    "id": "osher_ad-31",
+    "chain": "Osher Ad",
+    "name": "כפר סבא",
+    "address": "דרך הים 9",
+    "city": "כפר סבא",
+    "lat": 32.1848235,
+    "lng": 34.9529112,
+    "approximate": false,
+    "shelf": [
+      {
+        "variantId": "original",
+        "price": 4.9,
+        "qty": null,
+        "seenAt": "2026-08-27T19:44:30.000",
+        "source": "official_feed",
+        "depletion": "insufficient_data"
+      },
+      {
+        "variantId": "ultra-paradise",
+        "price": 4.9,
+        "qty": null,
+        "seenAt": "2026-08-31T19:33:49.000",
         "source": "official_feed",
         "depletion": "insufficient_data"
       }
@@ -33243,7 +33243,7 @@
         "qty": null,
         "seenAt": "2026-09-17T07:49:13.000",
         "source": "official_feed",
-        "depletion": "likely_out"
+        "depletion": "slowing"
       }
     ]
   },
@@ -33263,7 +33263,7 @@
         "qty": null,
         "seenAt": "2026-09-10T20:02:16.000",
         "source": "official_feed",
-        "depletion": "healthy"
+        "depletion": "likely_out"
       },
       {
         "variantId": "ultra",
@@ -33279,7 +33279,7 @@
         "qty": null,
         "seenAt": "2026-09-09T16:27:44.000",
         "source": "official_feed",
-        "depletion": "healthy"
+        "depletion": "likely_out"
       },
       {
         "variantId": "pipeline-punch",
@@ -33287,7 +33287,7 @@
         "qty": null,
         "seenAt": "2026-09-10T15:24:20.000",
         "source": "official_feed",
-        "depletion": "healthy"
+        "depletion": "likely_out"
       },
       {
         "variantId": "ultra-paradise",
@@ -33295,7 +33295,7 @@
         "qty": null,
         "seenAt": "2026-08-19T19:04:56.000",
         "source": "official_feed",
-        "depletion": "healthy"
+        "depletion": "likely_out"
       }
     ]
   },
@@ -33599,7 +33599,7 @@
         "qty": null,
         "seenAt": "2026-09-16T16:58:02.000",
         "source": "official_feed",
-        "depletion": "likely_out"
+        "depletion": "slowing"
       },
       {
         "variantId": "ultra",
@@ -33615,7 +33615,7 @@
         "qty": null,
         "seenAt": "2026-09-17T15:47:15.000",
         "source": "official_feed",
-        "depletion": "likely_out"
+        "depletion": "slowing"
       },
       {
         "variantId": "ultra-fiesta",
@@ -33623,7 +33623,7 @@
         "qty": null,
         "seenAt": "2026-09-17T14:38:06.000",
         "source": "official_feed",
-        "depletion": "likely_out"
+        "depletion": "slowing"
       },
       {
         "variantId": "green-zero",
@@ -33971,7 +33971,7 @@
         "qty": null,
         "seenAt": "2026-09-16T12:31:55.000",
         "source": "official_feed",
-        "depletion": "likely_out"
+        "depletion": "slowing"
       },
       {
         "variantId": "pipeline-punch",
@@ -33995,7 +33995,7 @@
         "qty": null,
         "seenAt": "2026-09-17T16:53:41.000",
         "source": "official_feed",
-        "depletion": "likely_out"
+        "depletion": "slowing"
       },
       {
         "variantId": "green-zero",
@@ -34547,7 +34547,7 @@
         "qty": null,
         "seenAt": "2026-09-17T15:05:29.000",
         "source": "official_feed",
-        "depletion": "likely_out"
+        "depletion": "slowing"
       },
       {
         "variantId": "monarch",
@@ -34655,7 +34655,7 @@
         "qty": null,
         "seenAt": "2026-09-17T20:09:55.000",
         "source": "official_feed",
-        "depletion": "likely_out"
+        "depletion": "slowing"
       },
       {
         "variantId": "ultra-paradise",
@@ -34663,7 +34663,7 @@
         "qty": null,
         "seenAt": "2026-09-17T15:01:04.000",
         "source": "official_feed",
-        "depletion": "likely_out"
+        "depletion": "slowing"
       },
       {
         "variantId": "ultra-fiesta",
@@ -34671,7 +34671,7 @@
         "qty": null,
         "seenAt": "2026-09-17T20:09:55.000",
         "source": "official_feed",
-        "depletion": "likely_out"
+        "depletion": "slowing"
       },
       {
         "variantId": "ultra-peachy-keen",
@@ -34855,7 +34855,7 @@
         "qty": null,
         "seenAt": "2026-09-17T20:41:55.000",
         "source": "official_feed",
-        "depletion": "likely_out"
+        "depletion": "slowing"
       },
       {
         "variantId": "ultra-paradise",
@@ -35047,7 +35047,7 @@
         "qty": null,
         "seenAt": "2026-09-17T13:32:28.000",
         "source": "official_feed",
-        "depletion": "likely_out"
+        "depletion": "slowing"
       }
     ]
   },
@@ -35139,7 +35139,7 @@
         "qty": null,
         "seenAt": "2026-09-17T16:29:52.000",
         "source": "official_feed",
-        "depletion": "likely_out"
+        "depletion": "slowing"
       },
       {
         "variantId": "ultra-fiesta",
@@ -35311,7 +35311,7 @@
         "qty": null,
         "seenAt": "2026-09-17T17:47:42.000",
         "source": "official_feed",
-        "depletion": "likely_out"
+        "depletion": "slowing"
       },
       {
         "variantId": "full-zero",
@@ -35403,7 +35403,7 @@
         "qty": null,
         "seenAt": "2026-09-17T09:16:10.000",
         "source": "official_feed",
-        "depletion": "likely_out"
+        "depletion": "slowing"
       },
       {
         "variantId": "original",
@@ -35619,7 +35619,7 @@
         "qty": null,
         "seenAt": "2026-09-17T13:59:56.000",
         "source": "official_feed",
-        "depletion": "likely_out"
+        "depletion": "slowing"
       },
       {
         "variantId": "ultra-paradise",
@@ -35927,7 +35927,7 @@
         "qty": null,
         "seenAt": "2026-09-16T10:03:32.000",
         "source": "official_feed",
-        "depletion": "likely_out"
+        "depletion": "slowing"
       },
       {
         "variantId": "ultra-paradise",
@@ -35935,7 +35935,7 @@
         "qty": null,
         "seenAt": "2026-09-17T15:52:00.000",
         "source": "official_feed",
-        "depletion": "likely_out"
+        "depletion": "slowing"
       },
       {
         "variantId": "ultra",
@@ -36431,7 +36431,7 @@
         "qty": null,
         "seenAt": "2026-09-17T08:56:36.000",
         "source": "official_feed",
-        "depletion": "likely_out"
+        "depletion": "slowing"
       },
       {
         "variantId": "ultra",
@@ -36667,7 +36667,7 @@
         "qty": null,
         "seenAt": "2026-09-17T18:23:09.000",
         "source": "official_feed",
-        "depletion": "likely_out"
+        "depletion": "slowing"
       }
     ]
   },
@@ -37371,7 +37371,7 @@
         "qty": null,
         "seenAt": "2026-09-17T10:22:50.000",
         "source": "official_feed",
-        "depletion": "likely_out"
+        "depletion": "slowing"
       },
       {
         "variantId": "ultra-fiesta",
@@ -37631,7 +37631,7 @@
         "qty": null,
         "seenAt": "2026-09-16T13:30:03.000",
         "source": "official_feed",
-        "depletion": "likely_out"
+        "depletion": "slowing"
       },
       {
         "variantId": "pipeline-punch",
@@ -44995,7 +44995,7 @@
         "qty": null,
         "seenAt": "2026-09-17T19:14:38.000",
         "source": "official_feed",
-        "depletion": "likely_out"
+        "depletion": "slowing"
       }
     ]
   },
@@ -45291,7 +45291,7 @@
         "qty": null,
         "seenAt": "2026-09-17T15:15:28.000",
         "source": "official_feed",
-        "depletion": "likely_out"
+        "depletion": "slowing"
       },
       {
         "variantId": "original",
@@ -45531,7 +45531,7 @@
         "qty": null,
         "seenAt": "2026-09-16T17:32:26.000",
         "source": "official_feed",
-        "depletion": "likely_out"
+        "depletion": "slowing"
       }
     ]
   },
@@ -45743,7 +45743,7 @@
         "qty": null,
         "seenAt": "2026-09-16T09:55:20.000",
         "source": "official_feed",
-        "depletion": "likely_out"
+        "depletion": "slowing"
       },
       {
         "variantId": "pipeline-punch",
@@ -45947,7 +45947,7 @@
         "qty": null,
         "seenAt": "2026-09-18T14:53:38.000",
         "source": "official_feed",
-        "depletion": "likely_out"
+        "depletion": "slowing"
       },
       {
         "variantId": "pipeline-punch",
@@ -50311,7 +50311,7 @@
         "qty": null,
         "seenAt": "2026-09-16T07:16:00.000",
         "source": "official_feed",
-        "depletion": "likely_out"
+        "depletion": "slowing"
       },
       {
         "variantId": "original",
@@ -50351,7 +50351,7 @@
         "qty": null,
         "seenAt": "2026-09-11T07:06:00.000",
         "source": "official_feed",
-        "depletion": "likely_out"
+        "depletion": "slowing"
       },
       {
         "variantId": "monarch",
@@ -50359,7 +50359,7 @@
         "qty": null,
         "seenAt": "2026-09-11T07:06:00.000",
         "source": "official_feed",
-        "depletion": "likely_out"
+        "depletion": "slowing"
       },
       {
         "variantId": "full-zero",
@@ -50707,7 +50707,7 @@
         "qty": null,
         "seenAt": "2026-09-14T18:49:00.000",
         "source": "official_feed",
-        "depletion": "likely_out"
+        "depletion": "slowing"
       },
       {
         "variantId": "aussie-lemonade",

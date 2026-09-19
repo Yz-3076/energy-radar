@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-19T10:44:38.341473+00:00",
+  "generated_at": "2026-09-19T15:46:20.540608+00:00",
   "chains_covered": [
     "SHUFERSAL",
     "VICTORY_NEW_SOURCE",
@@ -26,8 +26,8 @@
     "POLIZER"
   ],
   "store_count": 997,
-  "total_observations": 233621,
-  "observations_this_run": 7231,
+  "total_observations": 241379,
+  "observations_this_run": 7758,
   "listings_per_variant": {
     "ultra": 894,
     "mango-loco": 686,
@@ -37,17 +37,17 @@
     "full-zero": 432,
     "ultra-peachy-keen": 432,
     "rossi": 199,
-    "monarch": 339,
     "strawberry": 434,
     "pipeline-punch": 471,
+    "monarch": 339,
     "green-zero": 413,
     "aussie-lemonade": 394
   },
   "depletion_breakdown": {
-    "slowing": 1630,
-    "healthy": 2271,
+    "slowing": 1754,
+    "healthy": 2141,
     "insufficient_data": 2767,
-    "likely_out": 242
+    "likely_out": 248
   },
   "live_listings": 6910,
   "flavours_on_shelves": 13,
