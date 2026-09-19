@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-19T20:27:59.821200+00:00",
+  "generated_at": "2026-09-19T22:51:17.527851+00:00",
   "chains_covered": [
     "SHUFERSAL",
     "VICTORY_NEW_SOURCE",
@@ -25,52 +25,49 @@
     "SHUK_AHIR",
     "POLIZER"
   ],
-  "store_count": 997,
-  "total_observations": 249231,
-  "observations_this_run": 7852,
+  "store_count": 832,
+  "total_observations": 253578,
+  "observations_this_run": 4347,
   "listings_per_variant": {
-    "ultra": 894,
-    "mango-loco": 686,
-    "ultra-paradise": 802,
-    "original": 889,
-    "ultra-fiesta": 525,
-    "full-zero": 432,
-    "ultra-peachy-keen": 432,
-    "rossi": 199,
-    "strawberry": 434,
-    "pipeline-punch": 471,
-    "monarch": 339,
-    "green-zero": 413,
-    "aussie-lemonade": 394
+    "ultra": 748,
+    "mango-loco": 562,
+    "ultra-paradise": 655,
+    "original": 730,
+    "ultra-fiesta": 412,
+    "full-zero": 323,
+    "ultra-peachy-keen": 327,
+    "rossi": 176,
+    "strawberry": 358,
+    "pipeline-punch": 345,
+    "monarch": 273,
+    "green-zero": 301,
+    "aussie-lemonade": 371
   },
   "depletion_breakdown": {
-    "slowing": 2661,
-    "healthy": 1059,
-    "insufficient_data": 2767,
-    "likely_out": 423
+    "slowing": 1813,
+    "insufficient_data": 2361,
+    "likely_out": 218,
+    "healthy": 1189
   },
-  "live_listings": 6910,
+  "live_listings": 5581,
   "flavours_on_shelves": 13,
   "stores_per_chain": {
     "Shufersal": 218,
     "Super Pharm": 138,
     "Yellow": 101,
-    "Rami Levy": 79,
     "Dor Alon": 75,
-    "Yayno Bitan And Carrefour": 67,
     "Victory New Source": 61,
     "Netiv Hased": 53,
     "Tiv Taam": 43,
-    "Fresh Market And Super Dosh": 33,
-    "Super Yuda": 25,
+    "Fresh Market And Super Dosh": 32,
+    "Super Yuda": 26,
     "Super Sapir": 22,
     "Maayan 2000": 20,
-    "Osher Ad": 18,
     "Bareket": 11,
     "Shuk Ahir": 9,
     "Yohananof": 8,
     "Hazi Hinam": 7,
-    "Stop Market": 5,
+    "Stop Market": 4,
     "Keshet": 2,
     "Salach Dabach": 1,
     "Polizer": 1
@@ -92,7 +89,7 @@
       "min": 9.5,
       "median": 9.9,
       "max": 10.9,
-      "listings": 287
+      "listings": 271
     },
     "Hazi Hinam": {
       "min": 7.9,
@@ -118,23 +115,11 @@
       "max": 9.4,
       "listings": 275
     },
-    "Osher Ad": {
-      "min": 4.9,
-      "median": 7.5,
-      "max": 7.5,
-      "listings": 57
-    },
     "Polizer": {
       "min": 8.5,
       "median": 8.5,
       "max": 8.5,
       "listings": 12
-    },
-    "Rami Levy": {
-      "min": 6.5,
-      "median": 7.9,
-      "max": 9.2,
-      "listings": 774
     },
     "Salach Dabach": {
       "min": 7.9,
@@ -158,7 +143,7 @@
       "min": 8.9,
       "median": 9.2,
       "max": 9.2,
-      "listings": 54
+      "listings": 48
     },
     "Super Pharm": {
       "min": 8.5,
@@ -176,13 +161,13 @@
       "min": 8.5,
       "median": 10.9,
       "max": 10.9,
-      "listings": 243
+      "listings": 249
     },
     "Tiv Taam": {
       "min": 8.9,
       "median": 8.9,
       "max": 9.9,
-      "listings": 485
+      "listings": 490
     },
     "Victory New Source": {
       "min": 8.9,
@@ -190,17 +175,11 @@
       "max": 9.9,
       "listings": 679
     },
-    "Yayno Bitan And Carrefour": {
-      "min": 7.3,
-      "median": 9.9,
-      "max": 9.9,
-      "listings": 485
-    },
     "Yellow": {
       "min": 12.4,
       "median": 13.0,
       "max": 13.0,
-      "listings": 936
+      "listings": 934
     },
     "Yohananof": {
       "min": 7.9,
@@ -212,88 +191,88 @@
   "price_by_variant": {
     "aussie-lemonade": {
       "min": 7.5,
-      "median": 9.9,
+      "median": 10.5,
       "max": 13.0,
-      "listings": 394
+      "listings": 371
     },
     "full-zero": {
-      "min": 6.8,
+      "min": 7.0,
       "median": 8.9,
       "max": 9.9,
-      "listings": 432
+      "listings": 323
     },
     "green-zero": {
-      "min": 6.8,
-      "median": 9.4,
+      "min": 6.9,
+      "median": 9.9,
       "max": 13.0,
-      "listings": 413
+      "listings": 301
     },
     "mango-loco": {
-      "min": 6.8,
+      "min": 6.9,
       "median": 9.9,
       "max": 13.0,
-      "listings": 686
+      "listings": 562
     },
     "monarch": {
-      "min": 6.8,
+      "min": 6.9,
       "median": 9.9,
       "max": 13.0,
-      "listings": 339
+      "listings": 273
     },
     "original": {
-      "min": 4.9,
+      "min": 6.9,
       "median": 9.9,
       "max": 13.0,
-      "listings": 889
+      "listings": 730
     },
     "pipeline-punch": {
-      "min": 6.8,
-      "median": 9.4,
+      "min": 6.9,
+      "median": 9.9,
       "max": 13.0,
-      "listings": 471
+      "listings": 345
     },
     "rossi": {
       "min": 7.0,
-      "median": 9.4,
-      "max": 13.0,
-      "listings": 199
-    },
-    "strawberry": {
-      "min": 6.8,
-      "median": 9.9,
-      "max": 13.0,
-      "listings": 434
-    },
-    "ultra": {
-      "min": 6.5,
-      "median": 9.9,
-      "max": 13.0,
-      "listings": 894
-    },
-    "ultra-fiesta": {
-      "min": 6.8,
       "median": 8.9,
       "max": 13.0,
-      "listings": 525
+      "listings": 176
+    },
+    "strawberry": {
+      "min": 7.9,
+      "median": 9.9,
+      "max": 13.0,
+      "listings": 358
+    },
+    "ultra": {
+      "min": 6.9,
+      "median": 9.9,
+      "max": 13.0,
+      "listings": 748
+    },
+    "ultra-fiesta": {
+      "min": 6.9,
+      "median": 9.9,
+      "max": 13.0,
+      "listings": 412
     },
     "ultra-paradise": {
-      "min": 4.9,
+      "min": 6.9,
       "median": 9.9,
       "max": 13.0,
-      "listings": 802
+      "listings": 655
     },
     "ultra-peachy-keen": {
-      "min": 6.8,
+      "min": 7.0,
       "median": 9.9,
       "max": 13.0,
-      "listings": 432
+      "listings": 327
     }
   },
   "cheapest_listing": {
-    "price": 4.9,
-    "variantId": "original",
-    "storeId": "osher_ad-31",
-    "storeName": "כפר סבא",
-    "chain": "Osher Ad"
+    "price": 6.9,
+    "variantId": "ultra",
+    "storeId": "super_sapir-53",
+    "storeName": "עפולה נטו חיסכון* ת.",
+    "chain": "Super Sapir"
   }
 }
