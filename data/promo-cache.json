@@ -9981,51 +9981,51 @@
     "promos": {}
   },
   "KING_STORE:14": {
-    "fetchedAt": "2026-09-18T12:24:07.697343+00:00",
+    "fetchedAt": "2026-09-20T05:08:48.173463+00:00",
     "promos": {}
   },
   "KING_STORE:15": {
-    "fetchedAt": "2026-09-18T12:24:06.607758+00:00",
+    "fetchedAt": "2026-09-20T05:08:48.033191+00:00",
     "promos": {}
   },
   "KING_STORE:16": {
-    "fetchedAt": "2026-09-18T12:24:05.777025+00:00",
+    "fetchedAt": "2026-09-20T05:08:48.225254+00:00",
     "promos": {}
   },
   "KING_STORE:18": {
-    "fetchedAt": "2026-09-18T12:24:09.460050+00:00",
+    "fetchedAt": "2026-09-20T05:08:51.301546+00:00",
     "promos": {}
   },
   "KING_STORE:200": {
-    "fetchedAt": "2026-09-18T12:24:08.277755+00:00",
+    "fetchedAt": "2026-09-20T05:08:48.243389+00:00",
     "promos": {}
   },
   "KING_STORE:27": {
-    "fetchedAt": "2026-09-18T12:24:05.582969+00:00",
+    "fetchedAt": "2026-09-20T05:08:48.198280+00:00",
     "promos": {}
   },
   "KING_STORE:3": {
-    "fetchedAt": "2026-09-18T12:24:08.501235+00:00",
+    "fetchedAt": "2026-09-20T05:08:51.567255+00:00",
     "promos": {}
   },
   "KING_STORE:31": {
-    "fetchedAt": "2026-09-18T12:24:06.002446+00:00",
+    "fetchedAt": "2026-09-20T05:08:51.716506+00:00",
     "promos": {}
   },
   "KING_STORE:334": {
-    "fetchedAt": "2026-09-18T12:24:09.120651+00:00",
+    "fetchedAt": "2026-09-20T05:08:48.058680+00:00",
     "promos": {}
   },
   "KING_STORE:338": {
-    "fetchedAt": "2026-09-18T12:24:07.097822+00:00",
+    "fetchedAt": "2026-09-20T05:08:51.626813+00:00",
     "promos": {}
   },
   "KING_STORE:339": {
-    "fetchedAt": "2026-09-18T12:24:06.959383+00:00",
+    "fetchedAt": "2026-09-20T05:08:48.045808+00:00",
     "promos": {}
   },
   "KING_STORE:8": {
-    "fetchedAt": "2026-09-18T12:24:09.447739+00:00",
+    "fetchedAt": "2026-09-20T05:08:48.272244+00:00",
     "promos": {}
   },
   "MAAYAN_2000:1": {
@@ -14365,8 +14365,16 @@
     "fetchedAt": "2026-09-19T21:01:53.243846+00:00",
     "promos": {}
   },
+  "YAYNO_BITAN_AND_CARREFOUR:108": {
+    "fetchedAt": "2026-09-20T05:07:12.102086+00:00",
+    "promos": {}
+  },
+  "YAYNO_BITAN_AND_CARREFOUR:117": {
+    "fetchedAt": "2026-09-20T05:07:11.311543+00:00",
+    "promos": {}
+  },
   "YAYNO_BITAN_AND_CARREFOUR:119": {
-    "fetchedAt": "2026-09-19T04:43:35.504060+00:00",
+    "fetchedAt": "2026-09-20T05:07:11.622624+00:00",
     "promos": {}
   },
   "YAYNO_BITAN_AND_CARREFOUR:12": {
@@ -14542,7 +14550,7 @@
     "promos": {}
   },
   "YAYNO_BITAN_AND_CARREFOUR:62": {
-    "fetchedAt": "2026-09-19T04:43:36.021037+00:00",
+    "fetchedAt": "2026-09-20T05:07:12.318283+00:00",
     "promos": {}
   },
   "YAYNO_BITAN_AND_CARREFOUR:63": {
@@ -14574,7 +14582,7 @@
     "promos": {}
   },
   "YAYNO_BITAN_AND_CARREFOUR:80": {
-    "fetchedAt": "2026-09-19T04:43:37.052983+00:00",
+    "fetchedAt": "2026-09-20T05:07:11.077105+00:00",
     "promos": {}
   },
   "YAYNO_BITAN_AND_CARREFOUR:81": {
@@ -14586,7 +14594,7 @@
     "promos": {}
   },
   "YAYNO_BITAN_AND_CARREFOUR:83": {
-    "fetchedAt": "2026-09-19T04:43:36.591445+00:00",
+    "fetchedAt": "2026-09-20T05:07:12.831675+00:00",
     "promos": {}
   },
   "YAYNO_BITAN_AND_CARREFOUR:830": {
@@ -14594,7 +14602,7 @@
     "promos": {}
   },
   "YAYNO_BITAN_AND_CARREFOUR:84": {
-    "fetchedAt": "2026-09-19T04:43:35.803425+00:00",
+    "fetchedAt": "2026-09-20T05:07:10.832207+00:00",
     "promos": {}
   },
   "YAYNO_BITAN_AND_CARREFOUR:85": {
@@ -14618,7 +14626,7 @@
     "promos": {}
   },
   "YAYNO_BITAN_AND_CARREFOUR:914": {
-    "fetchedAt": "2026-09-19T04:43:37.396664+00:00",
+    "fetchedAt": "2026-09-20T05:07:11.863869+00:00",
     "promos": {}
   },
   "YELLOW:100": {
