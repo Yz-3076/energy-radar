@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-20T15:54:51.158855+00:00",
+  "generated_at": "2026-09-20T20:40:04.114093+00:00",
   "chains_covered": [
     "SHUFERSAL",
     "VICTORY_NEW_SOURCE",
@@ -25,53 +25,52 @@
     "SHUK_AHIR",
     "POLIZER"
   ],
-  "store_count": 1015,
-  "total_observations": 276003,
-  "observations_this_run": 8231,
+  "store_count": 843,
+  "total_observations": 281386,
+  "observations_this_run": 5383,
   "listings_per_variant": {
-    "ultra": 906,
-    "mango-loco": 696,
-    "ultra-paradise": 815,
-    "ultra-fiesta": 527,
-    "original": 905,
-    "full-zero": 440,
-    "ultra-peachy-keen": 434,
-    "rossi": 202,
-    "monarch": 346,
-    "strawberry": 446,
-    "pipeline-punch": 483,
-    "green-zero": 424,
-    "aussie-lemonade": 397
+    "ultra": 743,
+    "mango-loco": 557,
+    "ultra-paradise": 652,
+    "ultra-fiesta": 442,
+    "original": 738,
+    "full-zero": 408,
+    "ultra-peachy-keen": 308,
+    "rossi": 162,
+    "pipeline-punch": 368,
+    "green-zero": 323,
+    "strawberry": 312,
+    "monarch": 245,
+    "aussie-lemonade": 316
   },
   "depletion_breakdown": {
-    "slowing": 2456,
-    "insufficient_data": 2727,
-    "healthy": 1624,
-    "likely_out": 214
+    "slowing": 2405,
+    "insufficient_data": 2392,
+    "healthy": 535,
+    "likely_out": 242
   },
-  "live_listings": 7021,
+  "live_listings": 5574,
   "flavours_on_shelves": 13,
   "stores_per_chain": {
     "Shufersal": 218,
     "Super Pharm": 138,
-    "Yellow": 101,
-    "Rami Levy": 80,
-    "Dor Alon": 75,
+    "Rami Levy": 67,
     "Yayno Bitan And Carrefour": 67,
     "Victory New Source": 61,
     "Netiv Hased": 53,
-    "Tiv Taam": 43,
-    "Fresh Market And Super Dosh": 34,
-    "Super Yuda": 26,
+    "Yellow": 50,
+    "Dor Alon": 45,
+    "Tiv Taam": 24,
     "Super Sapir": 22,
-    "Osher Ad": 20,
     "Maayan 2000": 20,
+    "Fresh Market And Super Dosh": 15,
+    "Super Yuda": 13,
     "King Store": 12,
     "Bareket": 11,
     "Shuk Ahir": 9,
-    "Yohananof": 8,
     "Hazi Hinam": 7,
-    "Stop Market": 6,
+    "Stop Market": 4,
+    "Yohananof": 3,
     "Keshet": 2,
     "Salach Dabach": 1,
     "Polizer": 1
@@ -87,13 +86,13 @@
       "min": 9.9,
       "median": 9.9,
       "max": 12.9,
-      "listings": 600
+      "listings": 360
     },
     "Fresh Market And Super Dosh": {
       "min": 9.5,
-      "median": 9.9,
+      "median": 10.5,
       "max": 10.9,
-      "listings": 289
+      "listings": 138
     },
     "Hazi Hinam": {
       "min": 7.9,
@@ -125,12 +124,6 @@
       "max": 9.4,
       "listings": 275
     },
-    "Osher Ad": {
-      "min": 4.9,
-      "median": 7.5,
-      "max": 7.5,
-      "listings": 65
-    },
     "Polizer": {
       "min": 8.5,
       "median": 8.5,
@@ -141,7 +134,7 @@
       "min": 6.5,
       "median": 7.9,
       "max": 9.2,
-      "listings": 783
+      "listings": 660
     },
     "Salach Dabach": {
       "min": 7.9,
@@ -165,7 +158,7 @@
       "min": 8.9,
       "median": 9.2,
       "max": 9.2,
-      "listings": 66
+      "listings": 42
     },
     "Super Pharm": {
       "min": 8.5,
@@ -183,13 +176,13 @@
       "min": 8.5,
       "median": 10.9,
       "max": 10.9,
-      "listings": 249
+      "listings": 124
     },
     "Tiv Taam": {
       "min": 8.9,
       "median": 8.9,
       "max": 9.9,
-      "listings": 490
+      "listings": 269
     },
     "Victory New Source": {
       "min": 8.9,
@@ -207,13 +200,13 @@
       "min": 12.4,
       "median": 13.0,
       "max": 13.0,
-      "listings": 934
+      "listings": 469
     },
     "Yohananof": {
       "min": 7.9,
       "median": 7.9,
       "max": 7.9,
-      "listings": 53
+      "listings": 20
     }
   },
   "price_by_variant": {
@@ -221,86 +214,86 @@
       "min": 7.5,
       "median": 9.9,
       "max": 13.0,
-      "listings": 397
+      "listings": 316
     },
     "full-zero": {
       "min": 6.8,
       "median": 8.9,
       "max": 9.9,
-      "listings": 440
+      "listings": 408
     },
     "green-zero": {
       "min": 6.8,
-      "median": 9.4,
+      "median": 8.9,
       "max": 13.0,
-      "listings": 424
+      "listings": 323
     },
     "mango-loco": {
       "min": 6.8,
-      "median": 9.9,
+      "median": 9.5,
       "max": 13.0,
-      "listings": 696
+      "listings": 557
     },
     "monarch": {
       "min": 6.8,
-      "median": 9.9,
+      "median": 8.9,
       "max": 13.0,
-      "listings": 346
+      "listings": 245
     },
     "original": {
-      "min": 4.9,
+      "min": 6.8,
       "median": 9.9,
       "max": 13.0,
-      "listings": 905
+      "listings": 738
     },
     "pipeline-punch": {
       "min": 6.8,
       "median": 9.4,
       "max": 13.0,
-      "listings": 483
+      "listings": 368
     },
     "rossi": {
       "min": 7.0,
-      "median": 9.4,
+      "median": 8.9,
       "max": 13.0,
-      "listings": 202
+      "listings": 162
     },
     "strawberry": {
       "min": 6.8,
-      "median": 9.5,
+      "median": 9.2,
       "max": 13.0,
-      "listings": 446
+      "listings": 312
     },
     "ultra": {
       "min": 6.5,
       "median": 9.9,
       "max": 13.0,
-      "listings": 906
+      "listings": 743
     },
     "ultra-fiesta": {
       "min": 6.8,
       "median": 8.9,
       "max": 13.0,
-      "listings": 527
+      "listings": 442
     },
     "ultra-paradise": {
-      "min": 4.9,
+      "min": 6.5,
       "median": 9.9,
       "max": 13.0,
-      "listings": 815
+      "listings": 652
     },
     "ultra-peachy-keen": {
       "min": 6.8,
-      "median": 9.9,
+      "median": 9.4,
       "max": 13.0,
-      "listings": 434
+      "listings": 308
     }
   },
   "cheapest_listing": {
-    "price": 4.9,
-    "variantId": "original",
-    "storeId": "osher_ad-31",
-    "storeName": "כפר סבא",
-    "chain": "Osher Ad"
+    "price": 6.5,
+    "variantId": "ultra",
+    "storeId": "rami_levy-203",
+    "storeName": "אילת",
+    "chain": "Rami Levy"
   }
 }
