@@ -10102,51 +10102,51 @@
     "promos": {}
   },
   "KING_STORE:14": {
-    "fetchedAt": "2026-09-20T05:08:48.173463+00:00",
+    "fetchedAt": "2026-09-21T05:07:07.546872+00:00",
     "promos": {}
   },
   "KING_STORE:15": {
-    "fetchedAt": "2026-09-20T05:08:48.033191+00:00",
+    "fetchedAt": "2026-09-21T05:07:09.302938+00:00",
     "promos": {}
   },
   "KING_STORE:16": {
-    "fetchedAt": "2026-09-20T05:08:48.225254+00:00",
+    "fetchedAt": "2026-09-21T05:07:07.387362+00:00",
     "promos": {}
   },
   "KING_STORE:18": {
-    "fetchedAt": "2026-09-20T05:08:51.301546+00:00",
+    "fetchedAt": "2026-09-21T05:07:10.659338+00:00",
     "promos": {}
   },
   "KING_STORE:200": {
-    "fetchedAt": "2026-09-20T05:08:48.243389+00:00",
+    "fetchedAt": "2026-09-21T05:07:10.902623+00:00",
     "promos": {}
   },
   "KING_STORE:27": {
-    "fetchedAt": "2026-09-20T05:08:48.198280+00:00",
+    "fetchedAt": "2026-09-21T05:07:07.519493+00:00",
     "promos": {}
   },
   "KING_STORE:3": {
-    "fetchedAt": "2026-09-20T05:08:51.567255+00:00",
+    "fetchedAt": "2026-09-21T05:07:07.450876+00:00",
     "promos": {}
   },
   "KING_STORE:31": {
-    "fetchedAt": "2026-09-20T05:08:51.716506+00:00",
+    "fetchedAt": "2026-09-21T05:07:07.495425+00:00",
     "promos": {}
   },
   "KING_STORE:334": {
-    "fetchedAt": "2026-09-20T05:08:48.058680+00:00",
+    "fetchedAt": "2026-09-21T05:07:07.230635+00:00",
     "promos": {}
   },
   "KING_STORE:338": {
-    "fetchedAt": "2026-09-20T05:08:51.626813+00:00",
+    "fetchedAt": "2026-09-21T05:07:11.004688+00:00",
     "promos": {}
   },
   "KING_STORE:339": {
-    "fetchedAt": "2026-09-20T05:08:48.045808+00:00",
+    "fetchedAt": "2026-09-21T05:07:08.639316+00:00",
     "promos": {}
   },
   "KING_STORE:8": {
-    "fetchedAt": "2026-09-20T05:08:48.272244+00:00",
+    "fetchedAt": "2026-09-21T05:07:10.861452+00:00",
     "promos": {}
   },
   "MAAYAN_2000:1": {
@@ -14487,15 +14487,15 @@
     "promos": {}
   },
   "YAYNO_BITAN_AND_CARREFOUR:108": {
-    "fetchedAt": "2026-09-20T05:07:12.102086+00:00",
+    "fetchedAt": "2026-09-21T05:07:05.505125+00:00",
     "promos": {}
   },
   "YAYNO_BITAN_AND_CARREFOUR:117": {
-    "fetchedAt": "2026-09-20T05:07:11.311543+00:00",
+    "fetchedAt": "2026-09-21T05:06:29.741769+00:00",
     "promos": {}
   },
   "YAYNO_BITAN_AND_CARREFOUR:119": {
-    "fetchedAt": "2026-09-20T05:07:11.622624+00:00",
+    "fetchedAt": "2026-09-21T05:06:29.286538+00:00",
     "promos": {}
   },
   "YAYNO_BITAN_AND_CARREFOUR:12": {
@@ -14575,7 +14575,7 @@
     "promos": {}
   },
   "YAYNO_BITAN_AND_CARREFOUR:353": {
-    "fetchedAt": "2026-09-14T04:05:03.948379+00:00",
+    "fetchedAt": "2026-09-21T05:06:30.381526+00:00",
     "promos": {}
   },
   "YAYNO_BITAN_AND_CARREFOUR:37": {
@@ -14616,6 +14616,10 @@
   },
   "YAYNO_BITAN_AND_CARREFOUR:427": {
     "fetchedAt": "2026-09-20T21:20:01.849226+00:00",
+    "promos": {}
+  },
+  "YAYNO_BITAN_AND_CARREFOUR:428": {
+    "fetchedAt": "2026-09-21T05:06:28.979250+00:00",
     "promos": {}
   },
   "YAYNO_BITAN_AND_CARREFOUR:44": {
@@ -14671,7 +14675,7 @@
     "promos": {}
   },
   "YAYNO_BITAN_AND_CARREFOUR:62": {
-    "fetchedAt": "2026-09-20T05:07:12.318283+00:00",
+    "fetchedAt": "2026-09-21T05:06:30.166966+00:00",
     "promos": {}
   },
   "YAYNO_BITAN_AND_CARREFOUR:63": {
@@ -14707,7 +14711,7 @@
     "promos": {}
   },
   "YAYNO_BITAN_AND_CARREFOUR:80": {
-    "fetchedAt": "2026-09-20T05:07:11.077105+00:00",
+    "fetchedAt": "2026-09-21T05:07:05.239942+00:00",
     "promos": {}
   },
   "YAYNO_BITAN_AND_CARREFOUR:81": {
@@ -14719,7 +14723,7 @@
     "promos": {}
   },
   "YAYNO_BITAN_AND_CARREFOUR:83": {
-    "fetchedAt": "2026-09-20T05:07:12.831675+00:00",
+    "fetchedAt": "2026-09-21T05:06:28.754802+00:00",
     "promos": {}
   },
   "YAYNO_BITAN_AND_CARREFOUR:830": {
@@ -14727,7 +14731,7 @@
     "promos": {}
   },
   "YAYNO_BITAN_AND_CARREFOUR:84": {
-    "fetchedAt": "2026-09-20T05:07:10.832207+00:00",
+    "fetchedAt": "2026-09-21T05:06:29.521604+00:00",
     "promos": {}
   },
   "YAYNO_BITAN_AND_CARREFOUR:85": {
@@ -14751,7 +14755,7 @@
     "promos": {}
   },
   "YAYNO_BITAN_AND_CARREFOUR:914": {
-    "fetchedAt": "2026-09-20T05:07:11.863869+00:00",
+    "fetchedAt": "2026-09-21T05:06:29.954478+00:00",
     "promos": {}
   },
   "YELLOW:100": {
