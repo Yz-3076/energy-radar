@@ -248,7 +248,7 @@ footer .fl{display:flex;gap:18px;font-family:var(--mono);font-size:11.5px;letter
 
   <section class="blk" id="deals-sec">
     <div class="shead"><span class="snum">06</span><h2 data-i="h_deals">Live deals</h2></div>
-    <p class="snote" data-i="n_deals">Current nationwide promotions, via the free Open Israeli Supermarkets API. Chain-wide, never store-specific — and a flavour missing here just means no promo was published, not that there's no deal.</p>
+    <p class="snote" data-i="n_deals">Live promotions parsed directly from each chain's own government-mandated promo feed — store-specific, not a chain-wide guess. A flavour missing here just means no promo was published for it, not that there's no deal.</p>
     <div id="deals">
       <div class="bp"><i class="c tl"></i><i class="c tr"></i><i class="c bl"></i><i class="c br"></i>
         <div class="empty"><span class="big" data-i="e_deals">No promotions published right now</span><span class="path">data/promotions.json</span></div>
@@ -307,7 +307,7 @@ const HE={
  h_stock:"מצב מלאי",n_stock:"קריאת מודל ההתרוקנות לכל ליסטינג: תקין, מאט, או כנראה אזל.",
  h_pop:"פריסת טעמים",n_pop:"על כמה מדפים כל טעם מופיע ברחבי הארץ — מדד לפריסה, לא למכירות.",
  h_time:"מחיר לאורך זמן",n_time:"מחיר מדף ממוצע ארצי ליום, מחושב מחדש מכל תצפית שנרשמה אי פעם.",
- h_deals:"מבצעים חיים",n_deals:"מבצעים ארציים נוכחיים, דרך ה-API החינמי של Open Israeli Supermarkets. ברמת הרשת ולא ברמת הסניף — וטעם שחסר כאן פשוט לא פורסם לו מבצע.",
+ h_deals:"מבצעים חיים",n_deals:"מבצעים חיים שנקראים ישירות מקובץ המבצעים הרשמי של כל רשת — ברמת הסניף בפועל, לא ניחוש ארצי. טעם שחסר כאן פשוט לא פורסם לו מבצע.",
  e_wait:"ממתין להרצה הראשונה",e_wait2:"ממתין להרצה הראשונה",e_wait3:"ממתין להרצה הראשונה",
  e_wait4:"ממתין להרצה הראשונה",e_wait5:"ממתין להרצה הראשונה",e_deals:"אין מבצעים מפורסמים כרגע",
  foot:"Energy Radar הוא פרויקט עצמאי, ללא שיוך, חסות או קשר ל-Monster Energy או לרשת קמעונאית כלשהי. המחירים הם מה שהרשתות עצמן פרסמו ועשויים לפגר אחרי המדף.",
@@ -592,8 +592,28 @@ function chart(){
 function deals(){
   const host=document.getElementById("deals");
   const p=STATE.promos;
-  const items=[];
-  if(p)for(const [vid,list] of Object.entries(p))for(const d of (list||[]))items.push({vid,...d});
+  // promotions.json is storeId -> variantId -> [promo,...] (store-specific by
+  // design, see israel-poc/promotions_gov.py) -- NOT variantId -> [promo,...].
+  // This used to assume the flat shape, so Object.entries(p) handed it a
+  // storeId as "vid" and an {variantId:[...]} object as "list", and
+  // `for (const d of list)` threw on a plain object ("list is not
+  // iterable"). The section never rendered again after that: it's the
+  // static "No promotions published right now" placeholder from the raw
+  // HTML that stayed on screen every time, live deals or not.
+  //
+  // Deals are aggregated across stores here (same description + end date =
+  // one card, with a branch count) rather than shown once per store, which
+  // would be 2000+ near-duplicate cards for ~190 stores.
+  const byDeal=new Map();
+  if(p)for(const byVariant of Object.values(p))
+    for(const [vid,list] of Object.entries(byVariant||{}))
+      for(const d of (list||[])){
+        const key=`${vid}|${d.description}|${d.endsAt}`;
+        const seen=byDeal.get(key);
+        if(seen)seen.storeCount+=1;
+        else byDeal.set(key,{vid,...d,storeCount:1});
+      }
+  const items=[...byDeal.values()].sort((a,b)=>b.storeCount-a.storeCount);
   if(!items.length){
     host.innerHTML=`<div class="bp">${emptyBox("e_deals","No promotions published right now","data/promotions.json")}</div>`;
     return;
@@ -603,6 +623,8 @@ function deals(){
     if(d.discountRate)bits.push(`<span class="pill">-${esc(d.discountRate)}%</span>`);
     if(d.minQuantity)bits.push(`<span class="pill">${LANG==="he"?"מ-":"min "}${esc(d.minQuantity)}</span>`);
     if(d.clubOnly)bits.push(`<span class="pill">${LANG==="he"?"מועדון":"Club only"}</span>`);
+    const branches=`${esc(d.storeCount)} ${LANG==="he"?(d.storeCount===1?"סניף":"סניפים"):(d.storeCount===1?"branch":"branches")}`;
+    bits.push(`<span class="pill">${branches}</span>`);
     const end=d.endsAt?`${LANG==="he"?"עד":"until"} ${esc(String(d.endsAt).slice(0,10))}`:"";
     return `<div class="bp deal"><i class="c tl"></i><i class="c tr"></i><i class="c bl"></i><i class="c br"></i>
       <div class="fl2">${esc(vname(d.vid))}</div>
