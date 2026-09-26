@@ -732,6 +732,28 @@ async def run() -> None:
         mid = s[n // 2] if n % 2 else (s[n // 2 - 1] + s[n // 2]) / 2
         return {"min": s[0], "median": round(mid, 2), "max": s[-1], "listings": n}
 
+    # One row per day, so a website can draw the price trend without the
+    # history file. That file is already 55 MB and only grows; downloading it
+    # to plot thirty points would be the single heaviest thing on the site,
+    # and it is cheap to fold down here where the rows are already in memory.
+    by_day: dict[str, list[float]] = defaultdict(list)
+    stores_by_day: dict[str, set] = defaultdict(set)
+    for row in full_history:
+        day = str(row.get("fetched_at", ""))[:10]
+        if len(day) != 10:
+            continue
+        by_day[day].append(row["price"])
+        stores_by_day[day].add(row["store_id"])
+    timeline = [
+        {
+            "date": day,
+            "observations": len(by_day[day]),
+            "stores": len(stores_by_day[day]),
+            **{k: v for k, v in _spread(by_day[day]).items() if k != "listings"},
+        }
+        for day in sorted(by_day)
+    ]
+
     stats = {
         "generated_at": now,
         "chains_covered": CHAINS,
@@ -752,6 +774,8 @@ async def run() -> None:
             variant: _spread(v) for variant, v in sorted(prices_by_variant.items())
         },
         "cheapest_listing": cheapest_now,
+        # --- the trend, one point per day (see the comment on `timeline`)
+        "timeline": timeline,
     }
     (DATA_DIR / "stats.json").write_text(json.dumps(stats, ensure_ascii=False, indent=2), encoding="utf-8")
     print("Wrote data/stats.json")

@@ -302,5 +302,159 @@
     "storeId": "osher_ad-31",
     "storeName": "כפר סבא",
     "chain": "Osher Ad"
-  }
+  },
+  "timeline": [
+    {
+      "date": "2026-09-08",
+      "observations": 1747,
+      "stores": 321,
+      "min": 6.5,
+      "median": 8.9,
+      "max": 12.9
+    },
+    {
+      "date": "2026-09-09",
+      "observations": 9980,
+      "stores": 335,
+      "min": 4.9,
+      "median": 8.9,
+      "max": 12.9
+    },
+    {
+      "date": "2026-09-10",
+      "observations": 13605,
+      "stores": 335,
+      "min": 4.9,
+      "median": 8.9,
+      "max": 12.9
+    },
+    {
+      "date": "2026-09-11",
+      "observations": 11876,
+      "stores": 335,
+      "min": 4.9,
+      "median": 8.9,
+      "max": 12.9
+    },
+    {
+      "date": "2026-09-12",
+      "observations": 10897,
+      "stores": 334,
+      "min": 4.9,
+      "median": 8.9,
+      "max": 12.9
+    },
+    {
+      "date": "2026-09-13",
+      "observations": 13519,
+      "stores": 478,
+      "min": 4.9,
+      "median": 8.9,
+      "max": 12.9
+    },
+    {
+      "date": "2026-09-14",
+      "observations": 42550,
+      "stores": 1041,
+      "min": 4.9,
+      "median": 8.9,
+      "max": 13.0
+    },
+    {
+      "date": "2026-09-15",
+      "observations": 22657,
+      "stores": 755,
+      "min": 4.9,
+      "median": 8.9,
+      "max": 13.0
+    },
+    {
+      "date": "2026-09-16",
+      "observations": 30273,
+      "stores": 758,
+      "min": 4.9,
+      "median": 8.9,
+      "max": 13.0
+    },
+    {
+      "date": "2026-09-17",
+      "observations": 29284,
+      "stores": 761,
+      "min": 4.9,
+      "median": 8.9,
+      "max": 13.0
+    },
+    {
+      "date": "2026-09-18",
+      "observations": 33603,
+      "stores": 761,
+      "min": 4.9,
+      "median": 9.2,
+      "max": 13.0
+    },
+    {
+      "date": "2026-09-19",
+      "observations": 33587,
+      "stores": 740,
+      "min": 4.9,
+      "median": 9.9,
+      "max": 13.0
+    },
+    {
+      "date": "2026-09-20",
+      "observations": 32085,
+      "stores": 756,
+      "min": 4.9,
+      "median": 9.2,
+      "max": 13.0
+    },
+    {
+      "date": "2026-09-21",
+      "observations": 32012,
+      "stores": 758,
+      "min": 4.9,
+      "median": 8.9,
+      "max": 13.0
+    },
+    {
+      "date": "2026-09-22",
+      "observations": 21360,
+      "stores": 757,
+      "min": 4.9,
+      "median": 8.9,
+      "max": 13.0
+    },
+    {
+      "date": "2026-09-23",
+      "observations": 21553,
+      "stores": 757,
+      "min": 4.9,
+      "median": 9.2,
+      "max": 13.0
+    },
+    {
+      "date": "2026-09-24",
+      "observations": 28780,
+      "stores": 758,
+      "min": 4.9,
+      "median": 9.2,
+      "max": 13.0
+    },
+    {
+      "date": "2026-09-25",
+      "observations": 29227,
+      "stores": 756,
+      "min": 4.9,
+      "median": 9.2,
+      "max": 13.0
+    },
+    {
+      "date": "2026-09-26",
+      "observations": 21570,
+      "stores": 747,
+      "min": 4.9,
+      "median": 9.2,
+      "max": 13.0
+    }
+  ]
 }

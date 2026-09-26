@@ -56,6 +56,8 @@ header{border-bottom:1px solid var(--line);background:rgba(6,8,7,.92);backdrop-f
 nav.links{display:flex;gap:20px;align-items:center}
 nav.links a{font-family:var(--cond);font-size:15px;letter-spacing:.1em;text-transform:uppercase;color:var(--dim);border:0}
 nav.links a:hover{color:var(--grn)}
+nav.links a.nav-app{color:var(--grn);border:1px solid var(--grn);padding:6px 13px}
+nav.links a.nav-app:hover{background:var(--grn);color:#04120a}
 .langtog{display:flex;border:1px solid var(--line)}
 .langtog button{background:none;border:0;color:var(--dim);font-family:var(--mono);font-size:11px;letter-spacing:.1em;padding:7px 11px;cursor:pointer}
 .langtog button[aria-pressed="true"]{background:var(--grn);color:#04120a;font-weight:600}
@@ -66,6 +68,13 @@ nav.links a:hover{color:var(--grn)}
 h1{font-family:var(--cond);font-weight:700;font-size:clamp(42px,7vw,82px);line-height:.94;letter-spacing:-.01em;margin:0 0 18px;text-wrap:balance}
 h1 em{font-style:normal;color:var(--grn);text-shadow:0 0 34px rgba(57,255,106,.45)}
 .lede{font-size:17px;line-height:1.6;color:var(--dim);max-width:60ch;text-wrap:pretty;margin:0}
+
+/* The route into the app itself — the one thing on this page a visitor is
+   most likely to want, so it gets the accent rather than a text link. */
+.app-cta{display:block;margin:28px 0 0;padding:20px 22px;border:1px solid var(--grn);background:rgba(57,255,106,.06);max-width:60ch}
+.app-cta:hover{background:rgba(57,255,106,.12)}
+.app-cta-t{display:block;font-family:var(--cond);font-size:24px;letter-spacing:.02em;text-transform:uppercase;color:var(--grn)}
+.app-cta-s{display:block;margin-top:6px;font-size:14px;line-height:1.55;color:var(--dim)}
 
 /* ── transparency strip ────────────────────────────── */
 .strip{display:flex;flex-wrap:wrap;gap:0;margin:34px 0 0;font-family:var(--mono);font-size:11.5px;letter-spacing:.08em;text-transform:uppercase}
@@ -163,6 +172,7 @@ footer .fl{display:flex;gap:18px;font-family:var(--mono);font-size:11.5px;letter
     <div class="brand"><span class="pulse"></span><span data-i="brand">Energy Radar</span></div>
     <div class="navspace"></div>
     <nav class="links">
+      <a href="app/" class="nav-app" data-i="nav_app">Open the live map</a>
       <a href="#map-sec" data-i="nav_map">Heatmap</a>
       <a href="analysis.html" data-i="nav_analysis">Analysis</a>
       <a href="privacy.html" data-i="nav_privacy">Privacy</a>
@@ -190,6 +200,16 @@ footer .fl{display:flex;gap:18px;font-family:var(--mono);font-size:11.5px;letter
     </div>
 
     <div class="callouts" id="callouts" hidden></div>
+
+    <!--
+      The web version of the app. Same map, same cans, same search — it is
+      built from the app's own source files (see web/), so the two cannot
+      drift apart. This page stays the overview; that is the thing you use.
+    -->
+    <a class="app-cta" href="app/">
+      <span class="app-cta-t" data-i="cta_t">Open the live map</span>
+      <span class="app-cta-s" data-i="cta_s">The app, in your browser — every shelf near you, with today's price. No install, no account.</span>
+    </a>
   </div>
 
   <section class="blk" id="map-sec">
@@ -297,6 +317,8 @@ const vname=id=>{const v=VN[id];return v?(LANG==="he"?v.he:v.name.replace(/^Mons
 /* ── i18n ───────────────────────────────────────────── */
 const HE={
  brand:"אנרג'י ראדאר",nav_map:"מפת חום",nav_analysis:"ניתוח",nav_privacy:"פרטיות",
+ nav_app:"למפה החיה",cta_t:"פתחו את המפה החיה",
+ cta_s:"האפליקציה, בדפדפן — כל מדף לידכם, עם המחיר של היום. בלי התקנה, בלי חשבון.",
  eyebrow:"נתוני מחירים פתוחים · ישראל",h1a:"כל מונסטר בישראל,",h1b:"עם מחיר.",
  lede:"תצוגה ציבורית של פיד המחירים שמאחורי אפליקציית Energy Radar. נבנה כולו מהקבצים שהרשתות בישראל מחויבות בחוק לפרסם — בלי מעקב אחרי אנשים, בלי חשבונות, בלי פרסומות.",
  st_updated:"עודכן לאחרונה",st_chains:"רשתות מכוסות",st_stores:"חנויות עם מונסטר",st_obs:"תצפיות מחיר",

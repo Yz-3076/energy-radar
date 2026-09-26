@@ -1,0 +1,9 @@
+{
+  "//": "Used only by build.mjs. Points @/ at the mobile app's source so the website compiles the app's own modules, and renders JSX through the string shim in src/shim.",
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "jsxImportSource": "react",
+    "baseUrl": ".",
+    "paths": { "@/*": ["../mobile/src/*"] }
+  }
+}

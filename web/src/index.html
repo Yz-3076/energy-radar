@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1">
+<meta name="theme-color" content="#0a0b0a">
+<title>Energy Radar — live Monster prices in Israel</title>
+<meta name="description" content="Every shelf in Israel selling Monster Energy, with the price each branch published, on a live map. The web version of the Energy Radar app.">
+
+<meta property="og:title" content="Energy Radar">
+<meta property="og:description" content="Every shelf in Israel selling Monster Energy, with the price each branch published, on a live map.">
+<meta property="og:type" content="website">
+
+<link rel="icon" href="../favicon.png">
+<link rel="stylesheet" href="maplibre-gl.css">
+<link rel="stylesheet" href="app.css">
+</head>
+<body>
+<div id="root"></div>
+<script type="module" src="app.js"></script>
+<noscript>
+  <p style="padding:24px;color:#eaf0ea;font-family:system-ui">
+    Energy Radar draws a live map, which needs JavaScript.
+    The price data itself is plain JSON and readable without it:
+    <a href="https://github.com/Yz-3076/energy-radar/blob/main/data/latest.json" style="color:#00ff41">data/latest.json</a>.
+  </p>
+</noscript>
+</body>
+</html>
