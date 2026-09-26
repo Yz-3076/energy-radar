@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-26T04:41:15.990584+00:00",
+  "generated_at": "2026-09-26T11:13:07.923376+00:00",
   "chains_covered": [
     "SHUFERSAL",
     "VICTORY_NEW_SOURCE",
@@ -25,18 +25,18 @@
     "SHUK_AHIR",
     "POLIZER"
   ],
-  "store_count": 986,
-  "total_observations": 425032,
-  "observations_this_run": 6437,
+  "store_count": 1006,
+  "total_observations": 432346,
+  "observations_this_run": 7314,
   "listings_per_variant": {
-    "ultra": 884,
-    "mango-loco": 693,
-    "ultra-paradise": 791,
-    "ultra-fiesta": 521,
-    "original": 883,
+    "ultra": 902,
+    "mango-loco": 694,
+    "ultra-paradise": 811,
+    "ultra-fiesta": 522,
+    "original": 903,
     "full-zero": 439,
     "ultra-peachy-keen": 421,
-    "strawberry": 432,
+    "strawberry": 437,
     "green-zero": 420,
     "monarch": 346,
     "pipeline-punch": 475,
@@ -44,12 +44,12 @@
     "rossi": 205
   },
   "depletion_breakdown": {
-    "insufficient_data": 2395,
-    "slowing": 2055,
-    "healthy": 2331,
-    "likely_out": 116
+    "insufficient_data": 2404,
+    "slowing": 2275,
+    "healthy": 2155,
+    "likely_out": 128
   },
-  "live_listings": 6897,
+  "live_listings": 6962,
   "flavours_on_shelves": 13,
   "stores_per_chain": {
     "Shufersal": 218,
@@ -64,6 +64,7 @@
     "Fresh Market And Super Dosh": 29,
     "Super Yuda": 25,
     "Super Sapir": 21,
+    "Osher Ad": 20,
     "Maayan 2000": 18,
     "King Store": 12,
     "Bareket": 11,
@@ -123,6 +124,12 @@
       "median": 9.4,
       "max": 9.4,
       "listings": 275
+    },
+    "Osher Ad": {
+      "min": 4.9,
+      "median": 7.5,
+      "max": 7.5,
+      "listings": 65
     },
     "Polizer": {
       "min": 8.5,
@@ -232,7 +239,7 @@
       "min": 6.8,
       "median": 9.9,
       "max": 13.0,
-      "listings": 693
+      "listings": 694
     },
     "monarch": {
       "min": 6.8,
@@ -241,10 +248,10 @@
       "listings": 346
     },
     "original": {
-      "min": 6.8,
+      "min": 4.9,
       "median": 9.9,
       "max": 13.0,
-      "listings": 883
+      "listings": 903
     },
     "pipeline-punch": {
       "min": 6.8,
@@ -260,27 +267,27 @@
     },
     "strawberry": {
       "min": 6.8,
-      "median": 9.7,
+      "median": 9.5,
       "max": 13.0,
-      "listings": 432
+      "listings": 437
     },
     "ultra": {
       "min": 6.5,
       "median": 9.9,
       "max": 13.0,
-      "listings": 884
+      "listings": 902
     },
     "ultra-fiesta": {
       "min": 6.8,
       "median": 8.9,
       "max": 13.0,
-      "listings": 521
+      "listings": 522
     },
     "ultra-paradise": {
-      "min": 6.5,
+      "min": 4.9,
       "median": 9.9,
       "max": 13.0,
-      "listings": 791
+      "listings": 811
     },
     "ultra-peachy-keen": {
       "min": 6.8,
@@ -290,10 +297,10 @@
     }
   },
   "cheapest_listing": {
-    "price": 6.5,
-    "variantId": "ultra",
-    "storeId": "rami_levy-203",
-    "storeName": "אילת",
-    "chain": "Rami Levy"
+    "price": 4.9,
+    "variantId": "original",
+    "storeId": "osher_ad-31",
+    "storeName": "כפר סבא",
+    "chain": "Osher Ad"
   }
 }
