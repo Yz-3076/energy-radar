@@ -73,7 +73,18 @@ a { color: inherit; text-decoration: none; }
   background: linear-gradient(rgba(7,8,7,.96), rgba(7,8,7,.55) 58%, rgba(7,8,7,0));
 }
 
-.top-bar { position: absolute; left: 0; right: 0; top: 14px; padding: 0 16px; display: grid; gap: 11px; }
+/*
+ * The header floats over the map, and its boxes are mostly empty space —
+ * the brand row, the grid gaps, the strip the chips scroll in. Left
+ * clickable, those transparent boxes swallowed every pin in the top third
+ * of the screen: the can was plainly visible and simply did not respond.
+ * Only the actual controls take clicks; everything else passes through to
+ * the map. Same for the 3D/locate stack on the right.
+ */
+.top-bar { position: absolute; left: 0; right: 0; top: 14px; padding: 0 16px; display: grid; gap: 11px; pointer-events: none; }
+.top-bar .search-btn, .top-bar .chip { pointer-events: auto; }
+.controls { pointer-events: none; }
+.control { pointer-events: auto; }
 
 .brand-row { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
 .kicker-sm {
