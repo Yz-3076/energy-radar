@@ -395,7 +395,7 @@ export function createVariantScreen(root, app) {
 
         <div class="variant-stage">
           <span class="variant-glow"></span>
-          ${Can({ variant, size: 268, hero: true })}
+          ${Can({ variant, size: 268, hero: true, animated: true })}
         </div>
 
         <div class="variant-rarity">${

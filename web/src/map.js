@@ -442,7 +442,7 @@ export function createMapScreen(root, app) {
 
         <div class="focus-stage">
           <span class="focus-glow"></span>
-          ${Can({ variant, size: 132, hero: true })}
+          ${Can({ variant, size: 132, hero: true, animated: true })}
         </div>
 
         <div class="focus-body">

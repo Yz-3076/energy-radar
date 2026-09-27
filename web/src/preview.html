@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Energy Radar — can artwork</title>
+<link rel="stylesheet" href="app.css">
+<style>
+  /* app.css pins #root to the viewport for the real app; this sheet is a
+     long scrolling page, so undo that here rather than there. */
+  html, body { overflow: auto; height: auto; }
+  #root { position: static; inset: auto; }
+  body { padding: 28px 24px 80px; }
+  h1 { font-size: 26px; letter-spacing: -.6px; margin: 0 0 6px; }
+  h2 { font-size: 15px; letter-spacing: 1.4px; text-transform: uppercase;
+       color: rgba(234,240,234,.5); margin: 44px 0 14px; }
+  header p, .note { font-size: 12.5px; line-height: 19px; color: rgba(234,240,234,.55); max-width: 66ch; margin: 0 0 12px; }
+  .toggle { display: inline-flex; align-items: center; gap: 6px; font-size: 12px;
+            color: rgba(234,240,234,.7); margin-right: 16px; }
+
+  .heroes { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 14px; }
+  .hero { margin: 0; border: 1px solid var(--n800); border-radius: var(--r-md); background: #0b0d0b; overflow: hidden; }
+  .stage { height: 250px; display: grid; place-items: center; position: relative; }
+  figcaption { padding: 10px 11px 12px; border-top: 1px solid var(--n900); background: var(--surface); }
+  figcaption b { display: block; font-size: 13px; }
+  .meta { display: flex; align-items: center; gap: 5px; font-size: 10px;
+          color: rgba(234,240,234,.45); margin-top: 4px; font-variant-numeric: tabular-nums; }
+  .sw { width: 11px; height: 11px; border-radius: 3px; border: 1px solid rgba(255,255,255,.18); }
+
+  table.sizes { border-collapse: collapse; width: 100%; }
+  table.sizes th { font-size: 10px; letter-spacing: 1.2px; text-transform: uppercase;
+                   color: rgba(234,240,234,.4); text-align: left; padding: 6px 10px; font-weight: 600; }
+  table.sizes td { padding: 5px 10px; border-top: 1px solid var(--n900); vertical-align: middle; }
+  table.sizes td.nm { font-size: 12px; white-space: nowrap; }
+
+  .pinrow { display: flex; flex-wrap: wrap; gap: 10px; align-items: flex-end;
+            padding: 18px; border-radius: var(--r-md); border: 1px solid var(--n800);
+            background: #0e120e; }
+
+  /* The sheet's own switches, for judging the artwork in isolation. */
+  :root.no-motion * { animation: none !important; }
+  :root.light body { background: #e8ece8; color: #111411; }
+  :root.light .hero, :root.light .stage, :root.light .pinrow { background: #f4f7f4; }
+  :root.light figcaption { background: #eef2ee; }
+</style>
+</head>
+<body>
+<div id="root"></div>
+<script type="module" src="preview.js"></script>
+</body>
+</html>

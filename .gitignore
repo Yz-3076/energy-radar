@@ -23,8 +23,9 @@ Thumbs.db
 .env
 !*.env.example
 
-# generated design-review sheet
-mobile/scripts/cans-preview.html
+# Generated design-review sheet. `npm run preview` in web/ builds it by
+# rendering the real Can component through the web shim, so it cannot drift
+# from what ships; it replaced a Python script that re-parsed Can.tsx.
 
 # Staged-geocoder cache. Per-machine working state; the results that matter
 # are exported into data/geocode-cache.json, which IS committed.
@@ -38,3 +39,4 @@ build/
 
 # Regenerated on demand by israel-poc/dump_solvable.py.
 data/unresolved.txt
+web/.preview/

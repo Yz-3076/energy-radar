@@ -2,10 +2,11 @@
   "name": "energy-radar-web",
   "private": true,
   "type": "module",
-  "description": "The web version of the Energy Radar app, served by GitHub Pages from docs/. Built from the mobile app's own source — see build.mjs.",
+  "description": "The web version of the Energy Radar app, served by GitHub Pages from docs/. Built from the mobile app's own source \u2014 see build.mjs.",
   "scripts": {
     "build": "node build.mjs",
-    "watch": "node build.mjs --watch"
+    "watch": "node build.mjs --watch",
+    "preview": "node build.mjs --preview"
   },
   "devDependencies": {
     "esbuild": "^0.25.0"

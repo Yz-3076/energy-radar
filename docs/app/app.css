@@ -162,6 +162,48 @@ a { color: inherit; text-decoration: none; }
 }
 .puck-halo { position: absolute; width: 56px; height: 56px; border-radius: 50%; background: rgba(0,255,65,.12); }
 
+/*
+ * The animated can — hero sizes only.
+ *
+ * Carbonation rising inside the shell, a band of light travelling across
+ * the metal, and the flavour glow breathing behind it. Drawn by Can.tsx
+ * when it is passed `animated`, which the map only does for the one big
+ * can on the detail card: each of these is a layer the compositor has to
+ * keep awake, and there can be three dozen pins on screen.
+ *
+ * transform-box:fill-box makes a percentage-free transform resolve against
+ * the element's own box rather than the SVG viewport, which is what lets
+ * one keyframe set work at every rendered size.
+ */
+.can-bub, .can-sweep, .can-glow { transform-box: fill-box; }
+
+.can-bub { animation-name: canRise; animation-timing-function: linear; animation-iteration-count: infinite; }
+@keyframes canRise {
+  0%        { transform: translateY(0) scale(.5);    opacity: 0 }
+  12%       { opacity: .5 }
+  70%       { opacity: .3 }
+  100%      { transform: translateY(-52px) scale(1); opacity: 0 }
+}
+
+.can-sweep { animation: canSweep 6s cubic-bezier(.45,0,.4,1) infinite; }
+@keyframes canSweep {
+  0%        { transform: translateX(0) }
+  60%, 100% { transform: translateX(74px) }
+}
+
+.can-glow { transform-origin: center; animation: canGlow 5s ease-in-out infinite; }
+@keyframes canGlow {
+  0%, 100%  { transform: scale(1);    opacity: .82 }
+  50%       { transform: scale(1.07); opacity: 1 }
+}
+
+/* A can that shimmers is decoration; someone who has asked for less motion
+   should still get the drink, the price and the shelf. */
+@media (prefers-reduced-motion: reduce) {
+  .can-bub, .can-sweep, .can-glow { animation: none; }
+  .can-bub, .can-sweep { display: none; }
+}
+
 /* The live motif from the app: a ring that expands and fades, forever. */
 .ring {
   position: absolute; border-radius: 50%; border: 1px solid currentColor;

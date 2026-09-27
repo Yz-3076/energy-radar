@@ -54,6 +54,29 @@ fs.copyFileSync(
   path.join(outdir, "maplibre-gl.css"),
 );
 
+/**
+ * The design sheet (npm run preview): every can, every size, one page.
+ * Built into web/.preview/ rather than docs/ — it is a tool for judging the
+ * artwork, not part of the site.
+ */
+if (process.argv.includes("--preview")) {
+  const dir = path.join(here, ".preview");
+  fs.mkdirSync(dir, { recursive: true });
+  await esbuild.build({
+    ...options,
+    entryPoints: [path.join(here, "src", "preview.js")],
+    outfile: path.join(dir, "preview.js"),
+    minify: false,
+    metafile: false,
+  });
+  for (const file of ["preview.html", "app.css"]) {
+    fs.copyFileSync(path.join(here, "src", file), path.join(dir, file));
+  }
+  fs.renameSync(path.join(dir, "preview.html"), path.join(dir, "index.html"));
+  console.log("design sheet -> web/.preview/index.html");
+  process.exit(0);
+}
+
 if (process.argv.includes("--watch")) {
   const ctx = await esbuild.context(options);
   await ctx.watch();

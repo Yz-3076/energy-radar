@@ -9,6 +9,10 @@
 import { renderChildren } from "./react/jsx-runtime.js";
 
 const KEBAB = {
+  // react-native-svg has no concept of a CSS class, but the browser does,
+  // and it is how the animated cans hook into the stylesheet. On the phone
+  // the prop is simply never passed.
+  className: "class",
   stopColor: "stop-color",
   stopOpacity: "stop-opacity",
   strokeOpacity: "stroke-opacity",
