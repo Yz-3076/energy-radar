@@ -52,16 +52,24 @@ and navigation are rebuilt for the browser in `src/*.js`.
 
 | screen | file | notes |
 | --- | --- | --- |
-| Map | `src/map.js` | MapLibre GL with the app's own style object and 62° pitch, supercluster, can pins, the focused-pin bubble |
+| Map | `src/map.js` | MapLibre GL with the app's own style object and 62° pitch, supercluster, can pins, and the detail card a pin opens |
 | Search | `src/screens.js` | flavour-first, filter chips, "known but not nearby" |
 | Store | `src/screens.js` | shelf with stock dots, deals, price spread |
 | Flavour | `src/screens.js` | hero can, figures, deals, closest shelves |
-| Stats | `src/stats.js` | the website's second purpose — market analysis |
+
+That is the whole app: **find a cold can near you**. Two things are
+deliberately absent.
 
 There is **no profile**. The app's Me tab holds saved shelves, alerts, the
-drink log and a streak, all of which are per-device state tied to an account
-the website does not have. Stats takes that tab slot instead: analysis is
-something a public page can do that a phone in your pocket cannot.
+drink log and a streak — all per-device state tied to an account the website
+does not have.
+
+There are **no statistics in here either**. They have two pages of their own
+at the site root (`docs/index.html` and `docs/analysis.html`) which are older,
+richer and already linked from everywhere. A Stats screen briefly lived in
+this app and was removed: it was a third, worse copy of those pages inside a
+map. The dock's right tab now opens them instead, naming both destinations
+and what is on each, and both pages carry an "Open the live map" button back.
 
 ## Data
 
@@ -70,6 +78,9 @@ Read over the network from the repo (`data/latest.json`, `promotions.json`,
 reads the working tree instead so a pipeline change can be seen before it is
 pushed.
 
-The price history (`data/history/*.ndjson`) is never fetched — it is tens of
-megabytes and grows every run. The pipeline folds it to one row per day and
-ships that as `stats.timeline`, which is what the trend chart draws.
+The price history (`data/history/*.ndjson`) is never fetched here — 55 MB on
+disk, 4.3 MB gzipped, and it grows every run. The pipeline folds it to one
+row per day and publishes that as `stats.timeline`. Nothing reads that field
+yet; it exists because `docs/index.html` and `docs/analysis.html` still do
+download the whole archive to draw their charts, and that is the fix waiting
+for them when it starts to hurt.

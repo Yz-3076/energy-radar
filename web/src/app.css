@@ -63,10 +63,16 @@ a { color: inherit; text-decoration: none; }
 #map { position: absolute; inset: 0; }
 .maplibregl-ctrl-attrib { font-size: 10px; background: rgba(6,8,6,.7) !important; }
 .maplibregl-ctrl-attrib a { color: rgba(234,240,234,.55); }
-/* Lift MapLibre's own controls clear of the dock and the shelf deck, which
-   both float over the bottom of the map. */
+/* The shelf deck and the dock both float over the bottom of the map, leaving
+   one narrow lane between them. MapLibre's control container carries its own
+   padding, which made its box tall enough to overlap the deck even when the
+   attribution text itself had room; zero it and the strip fits the lane.
+   Attribution is a licence condition, so it stays legible rather than being
+   pushed off-screen. */
 .maplibregl-ctrl-bottom-left,
-.maplibregl-ctrl-bottom-right { bottom: calc(var(--dock-h) + 22px); }
+.maplibregl-ctrl-bottom-right { bottom: calc(var(--dock-h) + 18px); padding: 0 8px; }
+.maplibregl-ctrl-bottom-left .maplibregl-ctrl,
+.maplibregl-ctrl-bottom-right .maplibregl-ctrl { margin: 0; }
 
 .top-scrim {
   position: absolute; left: 0; right: 0; top: 0; height: 190px; pointer-events: none;
@@ -182,55 +188,121 @@ a { color: inherit; text-decoration: none; }
 .deck-price { font-size: 16px; font-weight: 700; color: var(--accent); margin-top: 6px; }
 .deck-stock { font-size: 9.5px; color: rgba(234,240,234,.45); margin-left: 6px; }
 
+/*
+ * Modal layers sit above everything, MapLibre's own controls included —
+ * its attribution ships with z-index:2, so an unlayered card lost to it and
+ * "© OpenStreetMap" printed across the middle of the detail sheet. The
+ * layers are click-through while empty so the map still works.
+ */
+#focus-layer, #exit-layer { position: absolute; inset: 0; z-index: 5; pointer-events: none; }
+#focus-layer > *, #exit-layer > * { pointer-events: auto; }
+
 .focus-scrim { position: absolute; inset: 0; background: rgba(4,5,4,.72); animation: fade .25s ease; }
 @keyframes fade { from { opacity: 0 } to { opacity: 1 } }
+@keyframes riseIn { from { opacity: 0; transform: translateY(26px) } to { opacity: 1; transform: none } }
 @keyframes slideIn { from { opacity: 0; transform: translateY(10px) } to { opacity: 1; transform: none } }
 
-.hero-can {
-  position: absolute; left: 8px; width: 152px; display: grid; place-items: center;
-  pointer-events: none; animation: fade .3s ease;
+/*
+ * The detail card — the one white surface in the whole product, and the
+ * only screen that answers "what is this can, and what is it doing here"
+ * without leaving the map.
+ *
+ * A bottom sheet on a phone: a side card at 375 px left about 220 px for
+ * the text, which is not enough for a shelf list or a deal. Past 720 px
+ * there is room beside the pin, so it goes back to sitting there.
+ */
+.focus-card {
+  position: absolute; left: 0; right: 0; bottom: 0; max-height: 84%;
+  display: flex; flex-direction: column;
+  background: #f2f5f2; color: #111411;
+  border-radius: var(--r-lg) var(--r-lg) 0 0;
+  box-shadow: 0 -18px 40px rgba(0,0,0,.6);
+  animation: riseIn .34s cubic-bezier(.2,.9,.3,1);
 }
-.hero-glow {
-  position: absolute; width: 210px; height: 210px; border-radius: 50%;
-  background: rgba(0,255,65,.10);
+.focus-close {
+  position: absolute; right: 12px; top: 12px; width: 26px; height: 26px; border-radius: 50%;
+  background: rgba(226,230,226,.92); display: grid; place-items: center; z-index: 3;
 }
 
-/* The one white surface in the whole product. */
-.bubble {
-  position: absolute; background: #f2f5f2; color: #111411;
-  border-radius: var(--r-lg); padding: 17px 17px 11px;
-  box-shadow: 0 22px 34px rgba(0,0,0,.65);
-  animation: slideIn .32s cubic-bezier(.2,.9,.3,1);
-  max-height: 70vh; overflow-y: auto;
+/* The can keeps its moment: a dark stage inside the white card, matching
+   the hero band on the store screen. */
+.focus-stage {
+  position: relative; flex: none; height: 146px; display: grid; place-items: center;
+  background: #0b0d0b; border-radius: var(--r-lg) var(--r-lg) 0 0; overflow: hidden;
 }
-.bubble-tail {
-  position: absolute; left: -8px; top: 64px; width: 18px; height: 18px;
-  background: #f2f5f2; transform: rotate(45deg); border-radius: 3px;
+.focus-glow { position: absolute; width: 190px; height: 190px; border-radius: 50%; background: rgba(0,255,65,.13); }
+
+.focus-body {
+  padding: 15px 17px calc(17px + env(safe-area-inset-bottom, 0px));
+  overflow-y: auto; overscroll-behavior: contain;
 }
-.bubble-close {
-  position: absolute; right: 10px; top: 10px; width: 24px; height: 24px; border-radius: 50%;
-  background: #e2e6e2; display: grid; place-items: center; z-index: 2;
+
+.focus-status { display: flex; align-items: center; gap: 6px; font-size: 9.5px; font-weight: 600; letter-spacing: 1.3px; text-transform: uppercase; }
+.focus-vname { font-size: 19px; line-height: 22px; font-weight: 800; letter-spacing: -.5px; margin-top: 7px; }
+.focus-facts { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 8px; }
+.fact {
+  padding: 3px 8px; border-radius: 999px; background: #e3e8e3;
+  font-size: 10px; font-weight: 600; color: #4a524a;
 }
-.bubble-status { display: flex; align-items: center; gap: 6px; font-size: 9.5px; font-weight: 600; letter-spacing: 1.3px; text-transform: uppercase; }
-.bubble-name { font-size: 16.5px; line-height: 19px; font-weight: 800; letter-spacing: -.4px; margin: 8px 22px 0 0; }
-.bubble-addr { font-size: 11px; line-height: 16px; color: #5a615a; margin-top: 4px; }
-.bubble-div { height: 1px; background: #d8ddd8; margin: 11px 0; }
-.bubble-price-row { display: flex; align-items: flex-end; justify-content: space-between; }
-.bubble-plabel { font-size: 9px; font-weight: 500; letter-spacing: 1.3px; color: #767c76; text-transform: uppercase; }
-.bubble-price { font-size: 29px; font-weight: 800; letter-spacing: -1px; margin-top: 5px; }
+
+.focus-price-row {
+  display: flex; align-items: flex-end; justify-content: space-between; gap: 10px;
+  margin-top: 13px; padding-top: 13px; border-top: 1px solid #d8ddd8;
+}
+.focus-plabel { font-size: 9px; font-weight: 500; letter-spacing: 1.3px; color: #767c76; text-transform: uppercase; }
+.focus-price { font-size: 31px; font-weight: 800; letter-spacing: -1.1px; margin-top: 4px; line-height: 1; }
+/* The verdict is a judgement, so it is coloured like one. Rendering "Above
+   average" in the same green as "Cheapest nearby" read as praise for a
+   shelf that is charging you more than most. */
 .verdict {
-  display: flex; align-items: center; gap: 4px; padding: 4px 8px;
-  border: 1px solid #009a28; border-radius: var(--r-sm);
-  font-size: 9.5px; font-weight: 600; color: #00691b; letter-spacing: .4px; text-transform: uppercase;
+  flex: none; display: flex; align-items: center; gap: 4px; padding: 4px 8px;
+  border: 1px solid #b6bdb6; border-radius: var(--r-sm);
+  font-size: 9.5px; font-weight: 600; color: #5a615a; letter-spacing: .4px; text-transform: uppercase;
 }
-.bubble-variant { display: flex; align-items: center; gap: 8px; margin-top: 11px; padding: 8px; border-radius: var(--r-md); background: #e8ece8; }
-.bubble-vname { font-size: 12px; font-weight: 700; }
-.bubble-vmeta { font-size: 10px; color: #5a615a; margin-top: 2px; }
-.bubble-prov { font-size: 10.5px; line-height: 15px; color: #767c76; margin-top: 8px; }
-.bubble-actions { display: flex; gap: 6px; margin-top: 11px; }
-.btn-dark { flex: 1; height: 38px; border-radius: var(--r-md); background: #111411; color: #f2f5f2; font-size: 11.5px; font-weight: 700; display: flex; align-items: center; justify-content: center; gap: 6px; }
-.btn-light { padding: 0 11px; height: 38px; border-radius: var(--r-md); border: 1px solid #b6bdb6; font-size: 11.5px; font-weight: 700; }
-.bubble-foot { font-size: 9.5px; color: #8b938b; margin-top: 8px; text-align: center; }
+.verdict.good { border-color: #009a28; color: #00691b; background: rgba(0,154,40,.08); }
+.verdict.high { border-color: #cf7a1f; color: #9a5a10; background: rgba(207,122,31,.09); }
+
+.focus-sec {
+  font-size: 9px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase;
+  color: #8b938b; margin: 17px 0 7px;
+}
+.focus-store { display: flex; align-items: center; gap: 7px; flex-wrap: wrap; }
+.focus-sname { font-size: 14.5px; font-weight: 700; letter-spacing: -.2px; }
+.focus-chain {
+  padding: 2px 7px; border-radius: 999px; background: #e3e8e3;
+  font-size: 9px; font-weight: 700; letter-spacing: .6px; text-transform: uppercase; color: #5a615a;
+}
+.focus-addr { font-size: 11.5px; line-height: 17px; color: #5a615a; margin-top: 3px; direction: ltr; }
+.focus-blurb { font-size: 12.5px; line-height: 19px; color: #3d443d; }
+.focus-prov {
+  display: flex; align-items: center; gap: 6px;
+  font-size: 10.5px; line-height: 15px; color: #767c76; margin-top: 8px;
+}
+/* The stock dot is drawn for the dark UI; on the white card it needs its
+   own borders or the unconfirmed state disappears. */
+.focus-prov .stock-dot { border-color: #b6bdb6; }
+
+.focus-deals { border-radius: var(--r-md); background: #e8ece8; overflow: hidden; }
+.focus-deals .promo + .promo { border-top: 1px solid #d8ddd8; }
+.focus-deals .promo-desc { color: #111411; }
+.focus-deals .promo-rate { color: #00691b; }
+.focus-deals .promo-sub, .focus-deals .promo-terms { color: #767c76; }
+
+.focus-shelf { display: flex; gap: 7px; overflow-x: auto; scrollbar-width: none; padding-bottom: 3px; }
+.focus-shelf::-webkit-scrollbar { display: none; }
+.shelf-can {
+  flex: 0 0 66px; display: grid; justify-items: center; gap: 2px;
+  padding: 8px 4px; border-radius: var(--r-md); background: #e8ece8;
+}
+.shelf-price { font-size: 11.5px; font-weight: 800; color: #111411; }
+.shelf-name {
+  font-size: 8.5px; color: #767c76; max-width: 58px;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+
+.focus-actions { display: flex; gap: 7px; margin-top: 17px; }
+.btn-dark { flex: 1; height: 42px; border-radius: var(--r-md); background: #111411; color: #f2f5f2; font-size: 12px; font-weight: 700; display: flex; align-items: center; justify-content: center; gap: 6px; }
+.btn-light { flex: 1; height: 42px; border-radius: var(--r-md); border: 1px solid #b6bdb6; font-size: 12px; font-weight: 700; }
 
 /* Shared list and card furniture, ported from the app's ui.tsx. */
 /*
@@ -354,7 +426,11 @@ a { color: inherit; text-decoration: none; }
 .hbar-val { font-size: 10.5px; color: rgba(234,240,234,.55); font-variant-numeric: tabular-nums; }
 .spark { width: 100%; height: 130px; display: block; overflow: visible; }
 
-.dock { position: absolute; left: 12px; right: 12px; bottom: 14px; }
+.dock { position: absolute; left: 12px; right: 12px; bottom: 14px; transition: opacity .22s ease, transform .22s ease; }
+/* The detail card is a modal sheet and reaches the bottom of the screen, so
+   the dock would float on top of it and cover the actions. It steps aside
+   while the card is open — map.js sets this class. */
+:root.focus-open .dock { opacity: 0; transform: translateY(26px); pointer-events: none; }
 .dock-bar {
   height: var(--dock-h); border-radius: var(--r-lg); border: 1px solid var(--n800);
   background: rgba(12,14,12,.84); backdrop-filter: blur(18px);
@@ -393,8 +469,57 @@ a { color: inherit; text-decoration: none; }
 @keyframes spin { to { transform: rotate(360deg) } }
 
 /* Desktop gets a wider gutter; the app's layout is phone-first and the map
-   fills whatever it is given, so nothing else needs to change. */
+   fills whatever it is given, so nothing else needs to change. The detail
+   card is the exception: with room beside the pin it stops being a sheet
+   and becomes a floating card, which is where the app puts it. */
 @media (min-width: 720px) {
   .sheet { padding-left: max(16px, calc(50% - 340px)); padding-right: max(16px, calc(50% - 340px)); }
   .dock { left: 50%; transform: translateX(-50%); width: 420px; }
+
+  .focus-card {
+    left: auto; right: 22px; bottom: auto; top: 50%; transform: translateY(-50%);
+    width: 392px; max-height: 86%;
+    border-radius: var(--r-lg);
+    box-shadow: 0 24px 46px rgba(0,0,0,.66);
+    animation: slideIn .32s cubic-bezier(.2,.9,.3,1);
+  }
+  .focus-stage { border-radius: var(--r-lg) var(--r-lg) 0 0; }
+  /* riseIn ends on transform:none, which would cancel the vertical centring. */
+  @keyframes slideIn {
+    from { opacity: 0; transform: translateY(calc(-50% + 12px)) }
+    to   { opacity: 1; transform: translateY(-50%) }
+  }
+}
+
+/*
+ * The way back out to the rest of the site. The map answers "where do I buy
+ * one"; the pages behind this sheet answer "what is the market doing", which
+ * is a different question and a different page. Naming both destinations and
+ * what is on them beats a bare link that a visitor has to gamble on.
+ */
+.exit-sheet {
+  position: absolute; left: 12px; right: 12px; bottom: calc(var(--dock-h) + 24px);
+  border-radius: var(--r-lg); border: 1px solid var(--n800);
+  background: rgba(14,16,14,.97); backdrop-filter: blur(18px);
+  padding: 15px; box-shadow: 0 18px 34px rgba(0,0,0,.6);
+  animation: riseIn .28s cubic-bezier(.2,.9,.3,1);
+}
+.exit-head { display: flex; align-items: baseline; justify-content: space-between; gap: 8px; margin-bottom: 11px; }
+.exit-link {
+  display: flex; align-items: flex-start; gap: 11px; width: 100%; text-align: left;
+  padding: 12px; border-radius: var(--r-md);
+  border: 1px solid var(--n800); background: var(--surface);
+}
+.exit-link + .exit-link { margin-top: 7px; }
+.exit-link:hover { border-color: var(--accent); }
+.exit-icon {
+  flex: none; width: 34px; height: 34px; border-radius: var(--r-md);
+  background: var(--accent-900); display: grid; place-items: center;
+}
+.exit-title { display: block; font-size: 13px; font-weight: 700; color: var(--accent); }
+.exit-desc { display: block; font-size: 10.5px; line-height: 15px; color: rgba(234,240,234,.5); margin-top: 3px; }
+.exit-arrow { flex: none; align-self: center; color: rgba(234,240,234,.35); font-size: 15px; }
+
+@media (min-width: 720px) {
+  .exit-sheet { left: 50%; transform: translateX(-50%); width: 420px; }
 }

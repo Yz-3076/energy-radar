@@ -2,11 +2,14 @@
  * The web app: shared state, the router, and the dock.
  *
  * Structure follows the app's tab layout (mobile/app/(tabs)/_layout.tsx) —
- * Map on the left, the search FAB in the middle, one tab on the right. The
- * right tab is Stats rather than the app's Me: there is no account here, so
- * saved shelves, alerts and the drink log have nothing to live in, and a
- * public page can offer analysis a phone cannot. That is the one deliberate
- * difference between the two products.
+ * Map on the left, the search FAB in the middle, one tab on the right.
+ *
+ * The right tab is where the app puts Me, and where a Stats screen briefly
+ * lived here. Both are gone. There is no account on the website, so saved
+ * shelves and the drink log have nothing to live in; and the statistics
+ * already have two pages of their own at the site root, which this tab now
+ * opens rather than reimplementing them a third time in a worse place. This
+ * screen is for finding a cold can near you. That is the whole job.
  *
  * Screens are created once and kept — MapLibre in particular is expensive
  * to tear down and rebuild — and shown by toggling a class, which is why
@@ -17,7 +20,6 @@ import { Icons } from "./shared.ts";
 import { loadAll, locate } from "./data.js";
 import { createMapScreen } from "./map.js";
 import { createSearchScreen, createStoreScreen, createVariantScreen } from "./screens.js";
-import { createStatsScreen } from "./stats.js";
 
 /** The app's fallback until the browser gives us a real fix (AppState.tsx). */
 const FALLBACK_COORD = { lat: 32.0765, lng: 34.7742 };
@@ -52,7 +54,7 @@ mount.innerHTML = `
   <div class="screen" id="s-search"></div>
   <div class="screen" id="s-store"></div>
   <div class="screen" id="s-variant"></div>
-  <div class="screen" id="s-stats"></div>
+  <div id="exit-layer"></div>
   <div class="dock">
     <div class="dock-bar" id="dock-bar"></div>
     <button class="dock-fab tap" id="fab" aria-label="Search flavours and prices">
@@ -60,11 +62,11 @@ mount.innerHTML = `
     </button>
   </div>`;
 
-/* Map and Stats, drawn the way the app draws its dock: 19 px, filled when
-   selected, outline when not. Stats sits where the app puts Me. */
+/* Drawn the way the app draws its dock: 19 px, filled when selected,
+   outline when not. Stats is not a screen — it opens the sheet below. */
 const TABS = [
   { id: "map", label: "Map", Icon: Icons.MapTrifold },
-  { id: "stats", label: "Stats", Icon: Icons.StackSimple },
+  { id: "stats", label: "Stats", Icon: Icons.TrendDown },
 ];
 
 const dockBar = document.getElementById("dock-bar");
@@ -78,7 +80,9 @@ function renderDock(active) {
         <span class="dock-label">${label}</span>
       </button>`,
   ).join("");
-  for (const btn of dockBar.children) btn.onclick = () => go(btn.dataset.tab);
+  for (const btn of dockBar.children) {
+    btn.onclick = () => (btn.dataset.tab === "stats" ? toggleExitSheet() : go(btn.dataset.tab));
+  }
 }
 
 const screens = {
@@ -86,10 +90,67 @@ const screens = {
   search: { el: document.getElementById("s-search"), make: createSearchScreen },
   store: { el: document.getElementById("s-store"), make: createStoreScreen },
   variant: { el: document.getElementById("s-variant"), make: createVariantScreen },
-  stats: { el: document.getElementById("s-stats"), make: createStatsScreen, tab: "stats" },
 };
 
 document.getElementById("fab").onclick = () => go("search");
+
+/* ── the way back to the statistics ──────────────────────────────────── */
+
+/**
+ * The numbers live on two pages at the site root, not in here. Rather than
+ * a bare link labelled "Stats" — which gives a visitor no idea whether it
+ * is the heatmap, the deals or the chain comparison they are about to get —
+ * the tab names both destinations and says what is on each.
+ */
+const EXITS = [
+  {
+    href: "../index.html",
+    Icon: Icons.GridFour,
+    title: "Price stats",
+    desc: "National heatmap, cheapest chain, stock health, flavour reach, price over time and every live deal.",
+  },
+  {
+    href: "../analysis.html",
+    Icon: Icons.TrendDown,
+    title: "Deep price analysis",
+    desc: "How prices are distributed, the range per flavour, chain × flavour, and whether where you are changes what you pay.",
+  },
+];
+
+const exitLayer = document.getElementById("exit-layer");
+
+function toggleExitSheet() {
+  if (exitLayer.firstChild) return closeExitSheet();
+
+  exitLayer.innerHTML = `
+    <div class="focus-scrim" id="exit-scrim"></div>
+    <div class="exit-sheet" role="dialog" aria-label="More from Energy Radar">
+      <div class="exit-head">
+        <span class="kicker">The numbers behind the map</span>
+        <button class="cancel tap" id="exit-close">Close</button>
+      </div>
+      ${EXITS.map(
+        ({ href, Icon, title, desc }) => `
+        <a class="exit-link tap" href="${href}">
+          <span class="exit-icon">${Icon({ size: 17, color: color.accent, weight: "fill" })}</span>
+          <span style="flex:1;min-width:0">
+            <span class="exit-title">${title}</span>
+            <span class="exit-desc">${desc}</span>
+          </span>
+          <span class="exit-arrow">↗</span>
+        </a>`,
+      ).join("")}
+    </div>`;
+
+  exitLayer.querySelector("#exit-scrim").onclick = closeExitSheet;
+  exitLayer.querySelector("#exit-close").onclick = closeExitSheet;
+  renderDock("stats");
+}
+
+function closeExitSheet() {
+  exitLayer.innerHTML = "";
+  renderDock(screens[currentScreen]?.tab);
+}
 
 /* ── routing ─────────────────────────────────────────────────────────── */
 
@@ -110,6 +171,8 @@ function back() {
   else go("map");
 }
 
+let currentScreen = "map";
+
 function show(name, arg) {
   const target = screens[name] ? name : "map";
   const screen = screens[target];
@@ -117,6 +180,8 @@ function show(name, arg) {
   if (!screen.instance) screen.instance = screen.make(screen.el, app);
 
   for (const [key, s] of Object.entries(screens)) s.el.classList.toggle("on", key === target);
+  currentScreen = target;
+  exitLayer.innerHTML = "";
   renderDock(screen.tab);
 
   screen.instance.onShow?.(arg);
