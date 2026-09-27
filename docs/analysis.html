@@ -248,12 +248,12 @@ const VARIANTS=[
  {id:"ultra-violet",name:"Ultra Violet",he:"אולטרה ויולט"},{id:"juice-khaotic",name:"Juice Khaotic",he:"ג'וס קאוטיק"},
  {id:"pipeline-punch",name:"Pipeline Punch",he:"פייפליין פאנץ'"},{id:"ultra-gold",name:"Ultra Gold",he:"אולטרה גולד"},
  {id:"nitro-super-dry",name:"Nitro Super Dry",he:"ניטרו סופר דריי"},{id:"rehab-lemonade",name:"Rehab Lemonade",he:"ריהאב לימונדה"},
- {id:"ultra-peachy-keen",name:"Monster Ultra Peachy Keen",he:"אולטרה פיצ'י קין"},
- {id:"green-zero",name:"Monster Energy Zero Sugar",he:"מונסטר זירו שוגר"},
- {id:"strawberry",name:"Monster Strawberry",he:"מונסטר תות"},
- {id:"aussie-lemonade",name:"Monster Aussie Lemonade",he:"אוזי לימונדה"},
- {id:"monarch",name:"Monster Monarch",he:"מונארק"},
- {id:"rossi",name:"Monster Rossi",he:"רוסי"}];
+ {id:"ultra-peachy-keen",name:"Ultra Peachy Keen",he:"אולטרה פיצ'י קין"},
+ {id:"green-zero",name:"Energy Zero Sugar",he:"זירו שוגר"},
+ {id:"strawberry",name:"Strawberry",he:"תות"},
+ {id:"aussie-lemonade",name:"Aussie Lemonade",he:"אוזי לימונדה"},
+ {id:"monarch",name:"Monarch",he:"מונארק"},
+ {id:"rossi",name:"Rossi",he:"רוסי"}];
 const VN=Object.fromEntries(VARIANTS.map(v=>[v.id,v]));
 const vname=id=>{const v=VN[id];return v?(LANG==="he"?v.he:v.name):id;};
 const chainName=c=>String(c).replace(/_/g," ").replace(/\b\w/g,m=>m.toUpperCase());
