@@ -8,7 +8,13 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Barlow:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-<script src="https://unpkg.com/d3@7.9.0/dist/d3.min.js" integrity="sha384-CjloA8y00+1SDAUkjs099PVfnY2KmDC2BZnws9kh8D/lX1s46w6EPhpXdqMfjK6i" crossorigin="anonymous"></script>
+<!--
+  Served from this site rather than unpkg. Every chart on this page starts
+  with a d3 call, so when unpkg was slow or blocked the page rendered its
+  header and nothing else at all. Byte-identical file, same sha384 as the
+  CDN copy, one fewer thing that can take the page down.
+-->
+<script src="vendor/d3.v7.min.js"></script>
 <style>
 :root{
   color-scheme: dark;
@@ -225,7 +231,12 @@ footer .fl{display:flex;gap:18px;font-family:var(--mono);font-size:11.5px;letter
 
 <script>
 const REPO="Yz-3076/energy-radar",BRANCH="main";
-const RAW=`https://raw.githubusercontent.com/${REPO}/${BRANCH}/data`;
+const PUBLISHED=`https://raw.githubusercontent.com/${REPO}/${BRANCH}/data`;
+/* Served locally, read the working tree instead: `py -m http.server` from the
+   repo root puts this page at /docs/ and the data at /data/. Without it,
+   checking a pipeline change meant pushing first to see it. */
+const LOCAL=["localhost","127.0.0.1","[::1]"].includes(location.hostname);
+const RAW=LOCAL?"../data":PUBLISHED;
 const ILS=n=>"₪"+n.toFixed(2);
 const esc=s=>String(s).replace(/[&<>"]/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[m]));
 const CORNERS='<i class="c tl"></i><i class="c tr"></i><i class="c bl"></i><i class="c br"></i>';
@@ -236,7 +247,13 @@ const VARIANTS=[
  {id:"mango-loco",name:"Mango Loco",he:"מנגו לוקו"},{id:"full-zero",name:"Full Zero",he:"פול זירו"},
  {id:"ultra-violet",name:"Ultra Violet",he:"אולטרה ויולט"},{id:"juice-khaotic",name:"Juice Khaotic",he:"ג'וס קאוטיק"},
  {id:"pipeline-punch",name:"Pipeline Punch",he:"פייפליין פאנץ'"},{id:"ultra-gold",name:"Ultra Gold",he:"אולטרה גולד"},
- {id:"nitro-super-dry",name:"Nitro Super Dry",he:"ניטרו סופר דריי"},{id:"rehab-lemonade",name:"Rehab Lemonade",he:"ריהאב לימונדה"}];
+ {id:"nitro-super-dry",name:"Nitro Super Dry",he:"ניטרו סופר דריי"},{id:"rehab-lemonade",name:"Rehab Lemonade",he:"ריהאב לימונדה"},
+ {id:"ultra-peachy-keen",name:"Monster Ultra Peachy Keen",he:"אולטרה פיצ'י קין"},
+ {id:"green-zero",name:"Monster Energy Zero Sugar",he:"מונסטר זירו שוגר"},
+ {id:"strawberry",name:"Monster Strawberry",he:"מונסטר תות"},
+ {id:"aussie-lemonade",name:"Monster Aussie Lemonade",he:"אוזי לימונדה"},
+ {id:"monarch",name:"Monster Monarch",he:"מונארק"},
+ {id:"rossi",name:"Monster Rossi",he:"רוסי"}];
 const VN=Object.fromEntries(VARIANTS.map(v=>[v.id,v]));
 const vname=id=>{const v=VN[id];return v?(LANG==="he"?v.he:v.name):id;};
 const chainName=c=>String(c).replace(/_/g," ").replace(/\b\w/g,m=>m.toUpperCase());
@@ -244,6 +261,7 @@ const chainName=c=>String(c).replace(/_/g," ").replace(/\b\w/g,m=>m.toUpperCase(
 const HE={
  brand:"אנרג'י ראדאר",nav_stats:"נתונים",nav_analysis:"ניתוח",nav_privacy:"פרטיות",
  nav_app:"למפה החיה",
+ loading_all:"מוריד את הארכיון המלא (כמה מגה-בייט)…",noarchive:"לא ניתן לטעון את הארכיון — מוצגת ההרצה האחרונה.",
  eyebrow:"ניתוח מחירים",h1a:"אותה פחית עולה",h1b:"סכומים שונים לגמרי.",
  lede:"כל מה שלמטה מחושב בדפדפן שלכם, ישירות מקבצי הפלט של הפייפליין. אפשר לעבור בין ההרצה האחרונה לבין כל ההיסטוריה שנצברה — שום ממוצע לא עוגל כדי לחזק טענה.",
  h_dist:"איך המחירים מתפלגים",n_dist:"כל ליסטינג מונסטר בארץ, מחולק לפי מחיר מדף. פיזור רחב ומגובנן אומר שהרשתות מתמחרות את אותו מוצר בצורה שונה מאוד — שיא יחיד וצר היה אומר שהשוק התייצב.",
@@ -314,53 +332,77 @@ async function getAllHistory(){
   }
 }
 
+/*
+ * The archive is no longer downloaded on load.
+ *
+ * It is 4.3 MB gzipped and grows every run, and the page opens on "Right
+ * now", which needs only the current snapshot — so every visitor paid for
+ * data most of them never looked at, and on a slow connection the page sat
+ * blank until it arrived. "All time" now fetches it on demand, once, and
+ * says that it is doing so. The one section that genuinely needs the whole
+ * archive on load, "what the archive has collected", reads the per-day
+ * rollup pipeline.py publishes inside stats.json instead.
+ */
+const META=new Map();
+
 (async function boot(){
   applyLang();
   const soft=p=>p.catch(()=>null);
-  const [stores,stats,hist]=await Promise.all([
+  const [stores,stats]=await Promise.all([
     soft(fetch(`${RAW}/latest.json`,{cache:"no-store"}).then(r=>r.ok?r.json():null)),
-    soft(fetch(`${RAW}/stats.json`,{cache:"no-store"}).then(r=>r.ok?r.json():null)),
-    soft(getAllHistory())
+    soft(fetch(`${RAW}/stats.json`,{cache:"no-store"}).then(r=>r.ok?r.json():null))
   ]);
   DATA.stats=stats;
 
   // current snapshot
-  const meta=new Map();
   if(Array.isArray(stores)){
     for(const st of stores){
-      meta.set(st.id,st);
+      META.set(st.id,st);
       for(const r of (st.shelf||[]))
         if(typeof r.price==="number")
           DATA.snap.push({price:r.price,vid:r.variantId,chain:st.chain,store:st,lat:st.lat});
     }
   }
 
-  // full accumulated history, joined to store metadata for chain + coordinates
-  if(hist){
-    for(const line of hist.split("\n")){
-      if(!line)continue;
-      let r;try{r=JSON.parse(line)}catch{continue}
-      if(typeof r.price!=="number")continue;
-      const key=String(r.store_id||"").toLowerCase().replace(":","-");
-      const st=meta.get(key);
-      DATA.all.push({
-        price:r.price,vid:r.variant_id,
-        chain:st?st.chain:String(r.store_id||"").split(":")[0].replace(/_/g," ").replace(/\b\w/g,m=>m.toUpperCase()),
-        store:st||{id:key,name:"",lat:null},
-        lat:st?st.lat:null,
-        at:r.fetched_at
-      });
-    }
-    DATA.runs=[...new Set(DATA.all.map(d=>d.at))].sort();
-  }
-
-  DATA.L=DATA.snap.length?DATA.snap:DATA.all;
+  DATA.L=DATA.snap;
   DATA.ready=true;
   wireScope();
   renderAll();
 })();
 
-function setScope(s){
+/** Pull the full archive and join it to store metadata for chain and
+ *  coordinates, which the history rows themselves do not carry. */
+async function loadArchive(){
+  if(DATA.all.length)return true;
+  const hist=await getAllHistory().catch(()=>null);
+  if(!hist)return false;
+  for(const line of hist.split("\n")){
+    if(!line)continue;
+    let r;try{r=JSON.parse(line)}catch{continue}
+    if(typeof r.price!=="number")continue;
+    const key=String(r.store_id||"").toLowerCase().replace(":","-");
+    const st=META.get(key);
+    DATA.all.push({
+      price:r.price,vid:r.variant_id,
+      chain:st?st.chain:String(r.store_id||"").split(":")[0].replace(/_/g," ").replace(/\b\w/g,m=>m.toUpperCase()),
+      store:st||{id:key,name:"",lat:null},
+      lat:st?st.lat:null,
+      at:r.fetched_at
+    });
+  }
+  DATA.runs=[...new Set(DATA.all.map(d=>d.at))].sort();
+  return DATA.all.length>0;
+}
+
+async function setScope(s){
+  const note=document.getElementById("scopenote");
+  if(s==="all"&&!DATA.all.length){
+    // Say what is happening: this is a multi-megabyte download and going
+    // quiet for several seconds looks like a page that has broken.
+    note.textContent=T("loading_all","Downloading the full archive (a few MB)…");
+    const ok=await loadArchive();
+    if(!ok){note.textContent=T("noarchive","Could not load the archive — showing the latest run.");return;}
+  }
   DATA.scope=s;
   DATA.L=s==="all"?DATA.all:DATA.snap;
   document.getElementById("sc-now").setAttribute("aria-pressed",String(s==="now"));
@@ -368,7 +410,11 @@ function setScope(s){
   renderAll();
 }
 function wireScope(){
-  if(DATA.all.length<=DATA.snap.length||DATA.runs.length<2)return; // nothing extra to show yet
+  // The archive is not loaded yet, so there is nothing to compare sizes
+  // against; offer the toggle whenever the rollup shows more than one day
+  // of history exists, and fetch it if the reader asks.
+  const days=(DATA.stats&&Array.isArray(DATA.stats.timeline))?DATA.stats.timeline.length:0;
+  if(days<2)return;
   const box=document.getElementById("scope");
   box.hidden=false;
   document.getElementById("sc-now").onclick=()=>setScope("now");
@@ -378,7 +424,7 @@ function scopeNote(){
   const el=document.getElementById("scopenote");
   if(!el)return;
   const n=DATA.runs.length;
-  if(DATA.scope==="all"&&n){
+  if(DATA.scope==="all"&&n&&DATA.all.length){
     const a=new Date(DATA.runs[0]).toISOString().slice(0,10),b=new Date(DATA.runs[n-1]).toISOString().slice(0,10);
     el.textContent=LANG==="he"
       ? `${DATA.all.length.toLocaleString()} תצפיות · ${n} הרצות · ${a} → ${b}`
@@ -396,7 +442,15 @@ function renderAll(){
     document.getElementById("callouts").innerHTML="";
     return;
   }
-  callouts();distribution();ranges();matrix();geo();extremes();accumulation();coverage();
+  /* Each section draws independently. They used to run as one statement, so
+     the first to throw took every section after it with it — which is what a
+     blocked CDN did to the whole page, since every chart here opens with a
+     d3 call. */
+  for(const [name,fn] of [["callouts",callouts],["distribution",distribution],["ranges",ranges],
+                          ["matrix",matrix],["geo",geo],["extremes",extremes],
+                          ["accumulation",accumulation],["coverage",coverage]]){
+    try{fn()}catch(err){console.error(`Energy Radar: ${name} failed`,err);}
+  }
 }
 
 function callouts(){
@@ -586,18 +640,23 @@ function extremes(){
 
 function accumulation(){
   const host=document.getElementById("acc"),f=document.getElementById("f-acc");
-  const runs=DATA.runs;
-  if(!DATA.all.length){emptyIn("acc","data/history/");f.textContent="";return;}
-  const byRun=d3.rollups(DATA.all,v=>({n:v.length,med:d3.median(v,d=>d.price)}),d=>d.at)
-    .map(([at,d])=>({at:new Date(at),...d})).sort((a,b)=>a.at-b.at);
+  // Reads the per-day rollup from stats.json rather than the archive itself.
+  // One bar per day instead of one per run: the same shape of story — how
+  // much has been collected and where the median went — without asking every
+  // visitor to download several megabytes to see it.
+  const tl=(DATA.stats&&Array.isArray(DATA.stats.timeline))?DATA.stats.timeline:[];
+  if(!tl.length){emptyIn("acc","data/stats.json");f.textContent="";return;}
+  const byRun=tl.map(d=>({at:new Date(d.date+"T00:00:00Z"),n:d.observations,med:d.median}))
+    .sort((a,b)=>a.at-b.at);
+  const total=tl.reduce((s,d)=>s+d.observations,0);
 
   if(byRun.length<2){
     host.innerHTML=CORNERS+`<div class="empty">
-      <span class="big">${LANG==="he"?"הרצה אחת נרשמה עד כה":"One run recorded so far"}</span>
-      <span class="path">${DATA.all.length.toLocaleString()} ${LANG==="he"?"תצפיות ב-":"observations in "}history/</span></div>`;
+      <span class="big">${LANG==="he"?"יום אחד נרשם עד כה":"One day recorded so far"}</span>
+      <span class="path">${total.toLocaleString()} ${LANG==="he"?"תצפיות ב-":"observations in "}history/</span></div>`;
     f.innerHTML=LANG==="he"
-      ? `הארכיון מחזיק <b>${DATA.all.length.toLocaleString()}</b> תצפיות מהרצה אחת. מהרצה השנייה ואילך הדף הזה יוכל להראות שינויי מחיר אמיתיים — הקובץ נצבר, לא נדרס.`
-      : `The archive holds <b>${DATA.all.length.toLocaleString()}</b> observations from a single run. From the second run onward this page can show real price movement — the file accumulates rather than being replaced.`;
+      ? `הארכיון מחזיק <b>${total.toLocaleString()}</b> תצפיות מיום אחד. מהיום השני ואילך הדף הזה יוכל להראות שינויי מחיר אמיתיים — הקובץ נצבר, לא נדרס.`
+      : `The archive holds <b>${total.toLocaleString()}</b> observations from a single day. From the second day onward this page can show real price movement — the file accumulates rather than being replaced.`;
     return;
   }
 
@@ -617,7 +676,7 @@ function accumulation(){
     .attr("x",d=>x(+d.at)).attr("y",d=>y(d.n))
     .attr("width",x.bandwidth()).attr("height",d=>y(0)-y(d.n))
     .attr("fill","rgba(57,255,106,.30)").attr("stroke","rgba(57,255,106,.55)")
-    .attr("data-tip",d=>`<b>${d.n.toLocaleString()} ${T("listings","listings")}</b><br>${T("median","median")} ${ILS(d.med)}<br>${d.at.toISOString().slice(0,16).replace("T"," ")} UTC`);
+    .attr("data-tip",d=>`<b>${d.n.toLocaleString()} ${T("listings","listings")}</b><br>${T("median","median")} ${ILS(d.med)}<br>${d.at.toISOString().slice(0,10)}`);
   svg.append("path").datum(byRun).attr("fill","none").attr("stroke","#39ff6a").attr("stroke-width",2)
     .attr("d",d3.line().x(d=>x(+d.at)+x.bandwidth()/2).y(d=>y2(d.med)).curve(d3.curveMonotoneX));
   svg.selectAll("circle.m").data(byRun).join("circle").attr("class","m")
@@ -628,8 +687,8 @@ function accumulation(){
   const drift=last.med-first.med;
   const days=Math.max(1,Math.round((last.at-first.at)/864e5));
   f.innerHTML=LANG==="he"
-    ? `<b>${DATA.all.length.toLocaleString()}</b> תצפיות על פני <b>${byRun.length}</b> הרצות ב-${days} ימים. החציון הארצי ${drift===0?"לא זז בכלל":(drift>0?"עלה ב-":"ירד ב-")}<b>${drift===0?"":ILS(Math.abs(drift))}</b> מאז ההרצה הראשונה.`
-    : `<b>${DATA.all.length.toLocaleString()}</b> observations across <b>${byRun.length}</b> runs over ${days} day${days===1?"":"s"}. The national median has ${drift===0?"not moved at all":(drift>0?"risen by <b>"+ILS(drift)+"</b>":"fallen by <b>"+ILS(Math.abs(drift))+"</b>")} since the first run.`;
+    ? `<b>${total.toLocaleString()}</b> תצפיות על פני <b>${byRun.length}</b> ימים. החציון הארצי ${drift===0?"לא זז בכלל":(drift>0?"עלה ב-":"ירד ב-")}<b>${drift===0?"":ILS(Math.abs(drift))}</b> מאז היום הראשון.`
+    : `<b>${total.toLocaleString()}</b> observations across <b>${byRun.length}</b> days. The national median has ${drift===0?"not moved at all":(drift>0?"risen by <b>"+ILS(drift)+"</b>":"fallen by <b>"+ILS(Math.abs(drift))+"</b>")} since the first day recorded.`;
 }
 
 function coverage(){
@@ -640,15 +699,17 @@ function coverage(){
     ? Math.max(1,Math.round(st.total_observations/st.observations_this_run)) : 1;
   const seen=new Set(DATA.L.map(d=>d.vid)).size;
   const items=[];
-  const nRuns=DATA.runs.length;
-  if(nRuns<=1||dep.insufficient_data>(dep.healthy||0)*3){
+  const tl=Array.isArray(st.timeline)?st.timeline:[];
+  const nDays=tl.length;
+  const totalObs=st.total_observations||tl.reduce((a,d)=>a+d.observations,0);
+  if(nDays<=1||dep.insufficient_data>(dep.healthy||0)*3){
     items.push(LANG==="he"
-      ? ["מגמות לאורך זמן",`הארכיון מחזיק <b>${DATA.all.length.toLocaleString()}</b> תצפיות מ-<b>${nRuns||1}</b> הרצות, ורוב הליסטינגים עדיין מסומנים <b>insufficient_data</b>. הערכות התרוקנות ומגמות מחיר מתחדדות ככל שנצברות הרצות — הקובץ נוסף אליו, לא נדרס.`]
-      : ["Trends over time",`The archive holds <b>${DATA.all.length.toLocaleString()}</b> observations from <b>${nRuns||1}</b> run${nRuns===1?"":"s"}, and most listings still read <b>insufficient_data</b>. Depletion estimates and price trends sharpen as runs accumulate — the file is appended to, never replaced.`]);
+      ? ["מגמות לאורך זמן",`הארכיון מחזיק <b>${totalObs.toLocaleString()}</b> תצפיות מ-<b>${nDays||1}</b> ימים, ורוב הליסטינגים עדיין מסומנים <b>insufficient_data</b>. הערכות התרוקנות ומגמות מחיר מתחדדות ככל שנצברות הרצות — הקובץ נוסף אליו, לא נדרס.`]
+      : ["Trends over time",`The archive holds <b>${totalObs.toLocaleString()}</b> observations from <b>${nDays||1}</b> day${nDays===1?"":"s"}, and most listings still read <b>insufficient_data</b>. Depletion estimates and price trends sharpen as runs accumulate — the file is appended to, never replaced.`]);
   }
   items.push(LANG==="he"
-    ? ["גודל הארכיון",`הדף הזה מוריד את כל <b>history/</b> ומחשב הכל בדפדפן. הקובץ מחולק לחודשים (ראו <b>pipeline.py</b>) כדי שאף קובץ בודד לא יגדל ללא גבול — בקצב הנוכחי כ-3.4MB ליום מתחלקים לקובץ חודשי חדש בכל פעם.`]
-    : ["Archive size",`This page downloads all of <b>history/</b> and computes everything in the browser. It's sharded one file per month (see <b>pipeline.py</b>) so no single file grows without bound — at the current ~3.4MB/day rate, that just means a fresh file starts each month.`]);
+    ? ["גודל הארכיון",`הדף הזה נטען מתוך תמונת המצב האחרונה ומתוך סיכום יומי ש-<b>pipeline.py</b> מפרסם — לא מתוך הארכיון המלא. הארכיון עצמו נמשך רק אם בוחרים <b>כל הזמן</b>, והוא מחולק לקבצים חודשיים כדי שאף קובץ לא יגדל ללא גבול.`]
+    : ["Archive size",`This page loads the latest snapshot plus a per-day summary that <b>pipeline.py</b> publishes — not the full archive. The archive is fetched only if you switch to <b>All time</b>, and it is sharded one file per month so no single file grows without bound.`]);
   items.push(LANG==="he"
     ? ["שמות ערים",`קבצי הרשתות מספקים קוד עיר מספרי ולא שם, ולכן כל ניתוח גיאוגרפי כאן מבוסס על קואורדינטות שקודדו מכתובת הסניף — ולא על גבולות מוניציפליים.`]
     : ["City names",`Chain files give a numeric city code, never a name, so every geographic cut here is built from coordinates geocoded off the branch address — not from municipal boundaries.`]);

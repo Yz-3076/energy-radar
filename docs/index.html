@@ -8,8 +8,19 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Barlow:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-<script src="https://unpkg.com/d3@7.9.0/dist/d3.min.js" integrity="sha384-CjloA8y00+1SDAUkjs099PVfnY2KmDC2BZnws9kh8D/lX1s46w6EPhpXdqMfjK6i" crossorigin="anonymous"></script>
-<script src="https://unpkg.com/topojson-client@3.1.0/dist/topojson-client.min.js" integrity="sha384-Ukv1p/xTma6P4/2bY5KzWBw+ydSpXmhCMtyciIQVDJ1RmOxtCYNMF1uXT9T63H67" crossorigin="anonymous"></script>
+<!--
+  d3 is served from this site, not from unpkg. When unpkg was slow or blocked
+  — which it is on plenty of networks — `d3` came back undefined, heatmap()
+  threw on the first d3 call, and because renderAll() runs the sections in
+  sequence everything after it was skipped: the page showed its header and
+  counters and nothing else. Byte-identical file (same sha384 as the CDN
+  copy), one fewer third party, and it cannot go down on its own.
+
+  topojson-client is gone with it. It existed to decode one country out of a
+  110 KB TopoJSON of the whole world; docs/vendor/israel.geo.json is that one
+  country, decoded once, in 1 KB of plain GeoJSON.
+-->
+<script src="vendor/d3.v7.min.js"></script>
 <style>
 :root{
   color-scheme: dark;
@@ -295,7 +306,12 @@ footer .fl{display:flex;gap:18px;font-family:var(--mono);font-size:11.5px;letter
 <script>
 /* ── config ─────────────────────────────────────────── */
 const REPO="Yz-3076/energy-radar", BRANCH="main";
-const RAW=`https://raw.githubusercontent.com/${REPO}/${BRANCH}/data`;
+const PUBLISHED=`https://raw.githubusercontent.com/${REPO}/${BRANCH}/data`;
+/* Served locally, read the working tree instead: `py -m http.server` from the
+   repo root puts this page at /docs/ and the data at /data/. Without it,
+   checking a pipeline change meant pushing first to see it. */
+const LOCAL=["localhost","127.0.0.1","[::1]"].includes(location.hostname);
+const RAW=LOCAL?"../data":PUBLISHED;
 const ILS=n=>"₪"+n.toFixed(2);
 
 const VARIANTS=[
@@ -310,7 +326,13 @@ const VARIANTS=[
  {id:"pipeline-punch",name:"Monster Pipeline Punch",he:"פייפליין פאנץ'"},
  {id:"ultra-gold",name:"Monster Ultra Gold",he:"אולטרה גולד"},
  {id:"nitro-super-dry",name:"Monster Nitro Super Dry",he:"ניטרו סופר דריי"},
- {id:"rehab-lemonade",name:"Monster Rehab Lemonade",he:"ריהאב לימונדה"}];
+ {id:"rehab-lemonade",name:"Monster Rehab Lemonade",he:"ריהאב לימונדה"},
+ {id:"ultra-peachy-keen",name:"Monster Ultra Peachy Keen",he:"אולטרה פיצ'י קין"},
+ {id:"green-zero",name:"Monster Energy Zero Sugar",he:"מונסטר זירו שוגר"},
+ {id:"strawberry",name:"Monster Strawberry",he:"מונסטר תות"},
+ {id:"aussie-lemonade",name:"Monster Aussie Lemonade",he:"אוזי לימונדה"},
+ {id:"monarch",name:"Monster Monarch",he:"מונארק"},
+ {id:"rossi",name:"Monster Rossi",he:"רוסי"}];
 const VN=Object.fromEntries(VARIANTS.map(v=>[v.id,v]));
 const vname=id=>{const v=VN[id];return v?(LANG==="he"?v.he:v.name.replace(/^Monster /,"")):id;};
 
@@ -358,49 +380,43 @@ btnHe.onclick=()=>{LANG="he";applyLang()};
 const T=(k,en)=>LANG==="he"?(HE[k]??en):en;
 
 /* ── data ───────────────────────────────────────────── */
-const STATE={stats:null,stores:null,history:null,promos:null,israel:null,loaded:false};
+const STATE={stats:null,stores:null,promos:null,israel:null,loaded:false};
 
 async function getJSON(u){const r=await fetch(u,{cache:"no-store"});if(!r.ok)throw 0;return r.json();}
-async function getText(u){const r=await fetch(u,{cache:"no-store"});if(!r.ok)throw 0;return r.text();}
 const soft=p=>p.catch(()=>null);
-// history is sharded one file per month (data/history/YYYY-MM.ndjson) so no
-// single file grows without bound. A raw.githubusercontent.com fetch can't
-// list a directory, so data/history/index.json (written by pipeline.py each
-// run) names which months exist; concatenate them all for the full history.
-async function getAllHistory(){
-  try{
-    const idx=await getJSON(`${RAW}/history/index.json`);
-    if(!Array.isArray(idx)||!idx.length)throw 0;
-    const texts=await Promise.all(idx.map(f=>getText(`${RAW}/history/${f}`)));
-    return texts.join("\n");
-  }catch{
-    const ym=new Date().toISOString().slice(0,7);
-    return getText(`${RAW}/history/${ym}.ndjson`);
-  }
-}
 
+/* The price archive (data/history/) is deliberately NOT downloaded here.
+   It is 55 MB on disk, 4.3 MB gzipped, and grows every run — and this page
+   only ever used it to draw one line per flavour per day. pipeline.py now
+   folds it to exactly that, one row per day with a median per flavour, and
+   ships it inside stats.json as `timeline`. Same chart, no download. */
 (async function boot(){
   applyLang();
-  const [stats,stores,hist,promos,world]=await Promise.all([
+  const [stats,stores,promos,world]=await Promise.all([
     soft(getJSON(`${RAW}/stats.json`)),
     soft(getJSON(`${RAW}/latest.json`)),
-    soft(getAllHistory()),
     soft(getJSON(`${RAW}/promotions.json`)),
-    soft(getJSON("https://cdn.jsdelivr.net/npm/world-atlas@2.0.2/countries-110m.json"))
+    soft(getJSON("vendor/israel.geo.json"))
   ]);
   STATE.stats=stats;
   STATE.stores=Array.isArray(stores)?stores:null;
   STATE.promos=promos&&Object.keys(promos).length?promos:null;
-  STATE.history=hist?hist.split("\n").filter(Boolean).map(l=>{try{return JSON.parse(l)}catch{return null}}).filter(Boolean):null;
-  if(world){
-    const f=topojson.feature(world,world.objects.countries);
-    STATE.israel=f.features.find(d=>d.properties&&d.properties.name==="Israel")||null;
-  }
+  STATE.israel=world&&world.geometry?world:null;
   STATE.loaded=true;
   renderAll();
 })();
 
-function renderAll(){strip();callouts();heatmap();chains();stock();popularity();chart();deals();}
+/* Each section renders independently. They used to run as one statement, so
+   the first one to throw silently took every section after it down with it —
+   which is exactly what a missing d3 did. A section that cannot draw now
+   says so in its own box and the rest of the page still works. */
+function renderAll(){
+  for(const [name,fn] of [["strip",strip],["callouts",callouts],["heatmap",heatmap],
+                          ["chains",chains],["stock",stock],["popularity",popularity],
+                          ["chart",chart],["deals",deals]]){
+    try{fn()}catch(err){console.error(`Energy Radar: ${name} failed`,err);}
+  }
+}
 
 /* ── strip ──────────────────────────────────────────── */
 function ago(iso){
@@ -569,18 +585,23 @@ function popularity(){
 /* ── chart ──────────────────────────────────────────── */
 function chart(){
   const host=document.getElementById("chart"),sel=document.getElementById("flavsel");
-  const h=STATE.history;
-  if(!h||!h.length){host.innerHTML=emptyBox("e_wait","Awaiting first pipeline run","data/history/");sel.hidden=true;return;}
-  const ids=[...new Set(h.map(r=>r.variant_id))];
-  if(!ids.length){host.innerHTML=emptyBox("e_wait","Awaiting first pipeline run","data/history/");sel.hidden=true;return;}
+  // stats.timeline: one row per day, each carrying the national median for
+  // that day plus a median per flavour. Written by pipeline.py from the full
+  // archive, so this is the same series the page used to compute itself out
+  // of a 4.3 MB download.
+  const tl=Array.isArray(STATE.stats&&STATE.stats.timeline)?STATE.stats.timeline:null;
+  if(!tl||!tl.length){host.innerHTML=emptyBox("e_wait","Awaiting first pipeline run","data/stats.json");sel.hidden=true;return;}
+  const ids=[...new Set(tl.flatMap(d=>Object.keys(d.by_variant||{})))].sort();
+  if(!ids.length){host.innerHTML=emptyBox("e_wait","Awaiting first pipeline run","data/stats.json");sel.hidden=true;return;}
   sel.hidden=false;
   const keep=sel.value&&ids.includes(sel.value)?sel.value:ids[0];
   sel.innerHTML=ids.map(id=>`<option value="${esc(id)}"${id===keep?" selected":""}>${esc(vname(id))}</option>`).join("");
   sel.onchange=chart;
 
-  const rows=h.filter(r=>r.variant_id===keep&&typeof r.price==="number");
-  const series=d3.rollups(rows,v=>d3.mean(v,d=>d.price),d=>String(d.fetched_at).slice(0,10))
-    .map(([d,v])=>({d:new Date(d+"T00:00:00Z"),v})).sort((a,b)=>a.d-b.d);
+  const series=tl
+    .filter(d=>d.by_variant&&typeof d.by_variant[keep]==="number")
+    .map(d=>({d:new Date(d.date+"T00:00:00Z"),v:d.by_variant[keep]}))
+    .sort((a,b)=>a.d-b.d);
 
   host.innerHTML=`<i class="c tl"></i><i class="c tr"></i><i class="c bl"></i><i class="c br"></i>`;
   if(series.length<2){

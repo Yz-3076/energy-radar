@@ -732,24 +732,40 @@ async def run() -> None:
         mid = s[n // 2] if n % 2 else (s[n // 2 - 1] + s[n // 2]) / 2
         return {"min": s[0], "median": round(mid, 2), "max": s[-1], "listings": n}
 
-    # One row per day, so a website can draw the price trend without the
-    # history file. That file is already 55 MB and only grows; downloading it
-    # to plot thirty points would be the single heaviest thing on the site,
-    # and it is cheap to fold down here where the rows are already in memory.
+    # One row per day, so the website can draw its price trends without the
+    # history file at all. That file is 55 MB on disk and 4.3 MB gzipped over
+    # the wire, it grows every run, and the pages only ever used it to plot a
+    # few dozen points per flavour. Folding it down here — where the rows are
+    # already in memory — turns the heaviest request on the site into nothing.
+    #
+    # `by_variant` carries a median per flavour per day, which is what powers
+    # the flavour picker on the "price over time" chart.
     by_day: dict[str, list[float]] = defaultdict(list)
     stores_by_day: dict[str, set] = defaultdict(set)
+    by_day_variant: dict[str, dict[str, list[float]]] = defaultdict(lambda: defaultdict(list))
     for row in full_history:
         day = str(row.get("fetched_at", ""))[:10]
         if len(day) != 10:
             continue
         by_day[day].append(row["price"])
         stores_by_day[day].add(row["store_id"])
+        by_day_variant[day][row["variant_id"]].append(row["price"])
+
+    def _median(values: list[float]) -> float:
+        s = sorted(values)
+        n = len(s)
+        return round(s[n // 2] if n % 2 else (s[n // 2 - 1] + s[n // 2]) / 2, 2)
+
     timeline = [
         {
             "date": day,
             "observations": len(by_day[day]),
             "stores": len(stores_by_day[day]),
             **{k: v for k, v in _spread(by_day[day]).items() if k != "listings"},
+            "by_variant": {
+                variant: _median(prices)
+                for variant, prices in sorted(by_day_variant[day].items())
+            },
         }
         for day in sorted(by_day)
     ]
