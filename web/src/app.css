@@ -175,33 +175,43 @@ a { color: inherit; text-decoration: none; }
  * the element's own box rather than the SVG viewport, which is what lets
  * one keyframe set work at every rendered size.
  */
-.can-bub, .can-sweep, .can-glow { transform-box: fill-box; }
+.can-eye, .can-float, .can-shine, .can-glow { transform-box: fill-box; transform-origin: center; }
 
-.can-bub { animation-name: canRise; animation-timing-function: linear; animation-iteration-count: infinite; }
-@keyframes canRise {
-  0%        { transform: translateY(0) scale(.5);    opacity: 0 }
-  12%       { opacity: .5 }
-  70%       { opacity: .3 }
-  100%      { transform: translateY(-52px) scale(1); opacity: 0 }
+/* The blink. Long hold open, one fast shut — the ratio is what separates a
+   character blinking from a light flickering. The two eyes are offset by a
+   frame or so, because eyes that close in perfect lockstep look mechanical. */
+.can-eye { animation: canBlink 5.2s ease-in-out infinite; }
+@keyframes canBlink {
+  0%, 92%, 100% { transform: scaleY(1) }
+  95.5%         { transform: scaleY(.08) }
 }
 
-.can-sweep { animation: canSweep 6s cubic-bezier(.45,0,.4,1) infinite; }
-@keyframes canSweep {
+/* A slow float, so the can reads as a character standing there rather than
+   a sticker pasted on. Small: 1.5 units of a 100-unit can. */
+.can-float { animation: canFloat 4.4s ease-in-out infinite; }
+@keyframes canFloat {
+  0%, 100% { transform: translateY(0) rotate(0deg) }
+  50%      { transform: translateY(-1.6px) rotate(-.7deg) }
+}
+
+.can-shine { animation: canShine 6.5s cubic-bezier(.45,0,.4,1) infinite; }
+@keyframes canShine {
   0%        { transform: translateX(0) }
-  60%, 100% { transform: translateX(74px) }
+  55%, 100% { transform: translateX(76px) }
 }
 
-.can-glow { transform-origin: center; animation: canGlow 5s ease-in-out infinite; }
+.can-glow { animation: canGlow 5s ease-in-out infinite; }
 @keyframes canGlow {
   0%, 100%  { transform: scale(1);    opacity: .82 }
   50%       { transform: scale(1.07); opacity: 1 }
 }
 
-/* A can that shimmers is decoration; someone who has asked for less motion
-   should still get the drink, the price and the shelf. */
+/* A can that blinks is decoration; someone who has asked for less motion
+   should still get the drink, the price and the shelf. The eyes stay open
+   rather than vanishing — they are part of the artwork, not the motion. */
 @media (prefers-reduced-motion: reduce) {
-  .can-bub, .can-sweep, .can-glow { animation: none; }
-  .can-bub, .can-sweep { display: none; }
+  .can-eye, .can-float, .can-shine, .can-glow { animation: none; }
+  .can-shine { display: none; }
 }
 
 /* The live motif from the app: a ring that expands and fades, forever. */

@@ -10,6 +10,7 @@ import Svg, {
   RadialGradient,
   Rect,
   Stop,
+  Text,
   type CircleProps,
   type RectProps,
 } from "react-native-svg";
@@ -40,20 +41,15 @@ import type { Artwork, Body, Variant } from "@/data/catalog";
 const VB_W = 54;
 const VB_H = 100;
 
-/** Silhouette: neck, shoulder, straight body, rolled base. */
+/**
+ * Silhouette: short neck, soft shoulder, straight body, rounded foot.
+ *
+ * Rounder and chunkier than the photographic can it replaced, because a
+ * 2 px ink outline needs room to turn a corner — on the old silhouette the
+ * shoulder curve and the outline fought each other and read as a dent.
+ */
 const BODY_PATH =
-  "M17,9 C13,11 8,15 8,21 L8,85 C8,90 11,93 27,93 C43,93 46,90 46,85 L46,21 C46,15 41,11 37,9 Z";
-
-const SHELL_BLACK: [string, string][] = [
-  ["0", "#141814"],
-  ["0.45", "#050705"],
-  ["1", "#0d100d"],
-];
-const SHELL_WHITE: [string, string][] = [
-  ["0", "#f4f7f4"],
-  ["0.45", "#dfe5df"],
-  ["1", "#eef2ee"],
-];
+  "M19,13 C14,15 10,20 10,27 L10,81 C10,88 16,92 27,92 C38,92 44,88 44,81 L44,27 C44,20 40,15 35,13 Z";
 
 /**
  * Which of the four label inks a shape is drawn in.
@@ -344,25 +340,47 @@ function artworkPaths(kind: Artwork): Mark[] {
   }
 }
 
+/**
+ * The Energy Radar mark: a sweep, an arc and a blip.
+ *
+ * Our own logo, in our own product's language — the pulsing dot is already
+ * the site's brand element and the ring is already the map's "sold here
+ * recently" motif. It sits where a real can puts its brand, which is simply
+ * where a brand goes on a cylinder, and it is the one thing that is
+ * identical on all eighteen: a set that reads as a set.
+ */
+function RadarMark({ x, y, r, color }: { x: number; y: number; r: number; color: string }) {
+  return (
+    <G>
+      <Circle cx={x} cy={y} r={r} fill="none" stroke={color} strokeWidth={r * 0.26} opacity={0.55} />
+      <Path
+        d={`M${x},${y} L${x + r},${y} A${r},${r} 0 0 0 ${(x + r * 0.35).toFixed(2)},${(y - r * 0.94).toFixed(2)} Z`}
+        fill={color}
+      />
+      <Circle cx={x + r * 0.46} cy={y - r * 0.5} r={r * 0.2} fill={color} />
+    </G>
+  );
+}
+
 type Props = {
   /** Everything the label needs. Passing the variant keeps call sites honest —
    *  a can is always some specific flavour, never a loose colour. */
-  variant: Pick<Variant, "accent" | "secondary" | "body" | "artwork">;
+  variant: Pick<Variant, "name" | "accent" | "secondary" | "body" | "artwork">;
   /** Rendered height in px; width follows the can's aspect ratio. */
   size: number;
   dim?: boolean;
-  /** Hero treatment: adds the glow behind the can, a sharper specular down
-   *  the left edge and a floor reflection. Only worth drawing large — at
-   *  pin size it is invisible detail costing paint time on every marker. */
+  /** Hero treatment: the glow pooled behind the can and a cast shadow.
+   *  Only worth drawing large — at pin size it is invisible detail costing
+   *  paint time on every marker. */
   hero?: boolean;
   /**
-   * Web only: carbonation, a travelling specular, and a breathing glow,
-   * driven by CSS classes the stylesheet animates (see app.css).
+   * Web only: the blink, the float and the shine, driven by CSS classes the
+   * stylesheet animates (see app.css).
    *
    * Never passed on the phone — react-native-svg has no stylesheet to hook
    * into — and never passed for a pin or a list row on the web either. The
    * map draws up to 36 markers at once and each animated can is a layer the
-   * compositor has to keep awake; this is for the one big can on screen.
+   * compositor has to keep awake; this is for the big cans on screen.
    */
   animated?: boolean;
 };
@@ -378,21 +396,104 @@ type Props = {
 const webOnly = <T,>(props: { className: string; style?: Record<string, string> }) =>
   props as unknown as T;
 
-const BUBBLES = [
-  { cx: 17, r: 1.5, dur: 7.5, delay: 0 },
-  { cx: 24, r: 2.1, dur: 9.5, delay: 1.7 },
-  { cx: 31, r: 1.3, dur: 6.8, delay: 3.1 },
-  { cx: 38, r: 1.8, dur: 10.5, delay: 0.9 },
-  { cx: 21, r: 1.1, dur: 8.2, delay: 4.6 },
-  { cx: 35, r: 1.6, dur: 11.5, delay: 2.4 },
-  { cx: 28, r: 1.2, dur: 8.8, delay: 6.0 },
-];
+/** Below this the face is dropped: two eyes and a mouth inside 30 px is
+ *  three grey smudges, which reads as dirt on the can rather than a face. */
+const FACE_MIN = 34;
+/** And below this the logo goes too — at 3 px it is a speck. */
+const LOGO_MIN = 58;
+/**
+ * The flavour name needs real height before it is worth setting.
+ *
+ * Type is drawn at 4-8 of the 100 viewBox units, so a 52 px pin renders it
+ * at 2-4 px: a grey smear that only looks like text. 110 px puts the
+ * smallest names around 8 px, which is the floor for reading them. In
+ * practice that means the name appears on the detail card and the flavour
+ * page, and pins and rows rely on the label the UI already prints beside
+ * them.
+ */
+const NAME_MIN = 110;
+
+/**
+ * Is this accent bright enough that the name has to be set in dark ink?
+ *
+ * The plate takes the flavour's own colour, and those run from a near-black
+ * blue to Aussie Lemonade's #ffe066. White type on that yellow is unreadable
+ * and dark type on the blue is worse, so the ink follows the plate rather
+ * than being picked once. Rec. 709 luma, which is close enough to perceived
+ * brightness for a two-way choice.
+ */
+function isLight(hex: string) {
+  const h = hex.replace("#", "");
+  const n = parseInt(h.length === 3 ? h.replace(/./g, (c) => c + c) : h, 16);
+  const r = (n >> 16) & 255;
+  const g = (n >> 8) & 255;
+  const b = n & 255;
+  return (0.2126 * r + 0.7152 * g + 0.0722 * b) / 255 > 0.55;
+}
+
+/**
+ * The flavour name, broken and sized to fit the plate.
+ *
+ * The plate is 34 units wide and the names run from "Ultra" to "Ultra
+ * Peachy Keen", so a single size cannot serve both — the first attempt set
+ * everything on one line and half the catalogue ran off the side of the
+ * can as "ULTRA PARADIS" and "MANGO LOC".
+ *
+ * Anything that does not fit on one line is split across two at the word
+ * boundary that leaves the two halves closest in length, which keeps the
+ * type far bigger than shrinking a single line would. 0.70 em is about the
+ * average advance of upper-case bold Archivo, measured rather than guessed:
+ * the first estimate of 0.62 left "REHAB LEMONAD" and "ONARCH" running off
+ * the sides of the can.
+ */
+// 27, not the 29 the maths allows: measuring the rendered type showed
+// "MONARCH" landing at 32.3 units on a 34-unit can, which is inside the
+// plate but hard against the body's curved edge. Wide letters (M, W) run
+// well past the average advance, so the budget carries the slack.
+const PLATE_W = 27;
+
+function namePlate(name: string) {
+  const words = name.toUpperCase().split(/\s+/);
+  const fits = (line: string, size: number) => line.length * 0.70 * size <= PLATE_W;
+
+  if (words.length === 1 || fits(words.join(" "), 6.6)) {
+    const line = words.join(" ");
+    return { lines: [line], size: Math.min(8.4, PLATE_W / (line.length * 0.70)) };
+  }
+
+  let at = 1;
+  let narrowest = Infinity;
+  for (let i = 1; i < words.length; i++) {
+    const longer = Math.max(
+      words.slice(0, i).join(" ").length,
+      words.slice(i).join(" ").length,
+    );
+    if (longer < narrowest) {
+      narrowest = longer;
+      at = i;
+    }
+  }
+  const lines = [words.slice(0, at).join(" "), words.slice(at).join(" ")];
+  return { lines, size: Math.min(6.2, PLATE_W / (narrowest * 0.70)) };
+}
 
 function CanBase({ variant, size, dim = false, hero = false, animated = false }: Props) {
   const id = useId().replace(/[^a-zA-Z0-9]/g, "");
   const w = (size * VB_W) / VB_H;
   const white = variant.body === "white";
   const marks = artworkPaths(variant.artwork);
+  const face = size >= FACE_MIN;
+  const logo = size >= LOGO_MIN;
+  const name = size >= NAME_MIN;
+  const plate = { ...namePlate(variant.name), onLight: isLight(variant.accent) };
+
+  /* Sticker palette. The body is charcoal rather than true black: the app's
+     own background is #0a0b0a, and a black can outlined in black on it is a
+     hole. The ink outline is what gives the whole thing its cartoon read. */
+  const shell = white ? "#f4f7f2" : "#23291f";
+  const shellLit = white ? "#ffffff" : "#343b2f";
+  const outline = white ? "#171c15" : "#080a07";
+  const metal = white ? "#c9d1c6" : "#8e978a";
 
   /** Label inks. `light` and `shade` sit on top of whichever shell is under
    *  them, so they flip with it — a white highlight on a white can is not a
@@ -406,6 +507,14 @@ function CanBase({ variant, size, dim = false, hero = false, animated = false }:
           ? white ? "#ffffff" : "#ffffff"
           : white ? "#2a302a" : "#000000";
 
+  const eye = (cx: number, delay: string) => (
+    <G {...(animated ? webOnly<object>({ className: "can-eye", style: { animationDelay: delay } }) : null)}>
+      <Ellipse cx={cx} cy={61} rx={5.1} ry={5.7} fill="#ffffff" stroke={outline} strokeWidth={1.5} />
+      <Circle cx={cx + 0.9} cy={62} r={2.5} fill={outline} />
+      <Circle cx={cx + 2} cy={60.4} r={1} fill="#ffffff" />
+    </G>
+  );
+
   return (
     <Svg width={w} height={size} viewBox={`0 0 ${VB_W} ${VB_H}`}>
       <Defs>
@@ -413,65 +522,16 @@ function CanBase({ variant, size, dim = false, hero = false, animated = false }:
           <Path d={BODY_PATH} />
         </ClipPath>
 
-        {/* Shell tone: the ink-black can, or the Ultra line's white one. */}
-        <LinearGradient id={`shell${id}`} x1="0" y1="0" x2="0" y2="1">
-          {(white ? SHELL_WHITE : SHELL_BLACK).map((stop) => (
-            <Stop key={stop[0]} offset={stop[0]} stopColor={stop[1]} />
-          ))}
-        </LinearGradient>
-
-        {/* Curvature: a hot specular near the left, falling to shadow right. */}
-        <LinearGradient id={`cyl${id}`} x1="0" y1="0" x2="1" y2="0">
-          <Stop offset="0" stopColor="#000000" stopOpacity={white ? 0.3 : 0.55} />
-          <Stop offset="0.17" stopColor="#ffffff" stopOpacity={white ? 0.55 : 0.2} />
-          <Stop offset="0.42" stopColor="#ffffff" stopOpacity={0.03} />
-          <Stop offset="0.78" stopColor="#000000" stopOpacity={white ? 0.22 : 0.42} />
-          <Stop offset="1" stopColor="#000000" stopOpacity={white ? 0.42 : 0.68} />
-        </LinearGradient>
-
-        <LinearGradient id={`cap${id}`} x1="0" y1="0" x2="1" y2="0">
-          <Stop offset="0" stopColor="#eef2ee" />
-          <Stop offset="0.38" stopColor="#9aa39a" />
-          <Stop offset="1" stopColor="#565d56" />
-        </LinearGradient>
-
-        <LinearGradient id={`band${id}`} x1="0" y1="0" x2="1" y2="0">
-          <Stop offset="0" stopColor={variant.accent} stopOpacity={0.7} />
-          <Stop offset="0.28" stopColor={variant.accent} stopOpacity={1} />
-          <Stop offset="1" stopColor={variant.secondary} stopOpacity={0.8} />
-        </LinearGradient>
-
-        {/* Light bouncing off the base, so the lower third reads as metal
-            rather than as a hole in the map. */}
-        <LinearGradient id={`floor${id}`} x1="0" y1="0" x2="0" y2="1">
-          <Stop offset="0" stopColor={variant.accent} stopOpacity={0} />
-          <Stop offset="1" stopColor={variant.accent} stopOpacity={white ? 0.14 : 0.24} />
-        </LinearGradient>
-
-        <LinearGradient id={`base${id}`} x1="0" y1="0" x2="1" y2="0">
-          <Stop offset="0" stopColor="#d3dad3" />
-          <Stop offset="0.45" stopColor="#828a82" />
-          <Stop offset="1" stopColor="#3f453f" />
-        </LinearGradient>
-
-        {/* Hero-only: a soft pool of the flavour's own colour behind the
-            can, so the silhouette separates from a dark screen. */}
         <RadialGradient id={`glow${id}`} cx="0.5" cy="0.5" r="0.5">
-          <Stop offset="0" stopColor={variant.accent} stopOpacity={0.3} />
-          <Stop offset="0.6" stopColor={variant.accent} stopOpacity={0.09} />
+          <Stop offset="0" stopColor={variant.accent} stopOpacity={0.34} />
+          <Stop offset="0.6" stopColor={variant.accent} stopOpacity={0.1} />
           <Stop offset="1" stopColor={variant.accent} stopOpacity={0} />
         </RadialGradient>
 
-        {/* Hero-only: the reflection under the can fades out downwards. */}
-        <LinearGradient id={`refl${id}`} x1="0" y1="0" x2="0" y2="1">
-          <Stop offset="0" stopColor={variant.accent} stopOpacity={0.22} />
-          <Stop offset="1" stopColor={variant.accent} stopOpacity={0} />
-        </LinearGradient>
-
-        {/* Animated only: the band of light that travels across the can. */}
-        <LinearGradient id={`sweep${id}`} x1="0" y1="0" x2="1" y2="0">
+        {/* The cartoon shine: a hard-edged band, not a soft specular. */}
+        <LinearGradient id={`shine${id}`} x1="0" y1="0" x2="1" y2="0">
           <Stop offset="0" stopColor="#ffffff" stopOpacity={0} />
-          <Stop offset="0.5" stopColor="#ffffff" stopOpacity={white ? 0.5 : 0.34} />
+          <Stop offset="0.5" stopColor="#ffffff" stopOpacity={white ? 0.55 : 0.3} />
           <Stop offset="1" stopColor="#ffffff" stopOpacity={0} />
         </LinearGradient>
       </Defs>
@@ -479,107 +539,137 @@ function CanBase({ variant, size, dim = false, hero = false, animated = false }:
       {hero ? (
         <Ellipse
           cx={27}
-          cy={50}
-          rx={30}
-          ry={34}
+          cy={52}
+          rx={31}
+          ry={36}
           fill={`url(#glow${id})`}
-          {...(animated ? webOnly<CircleProps>({ className: "can-glow" }) : null)}
+          {...(animated ? webOnly<object>({ className: "can-glow" }) : null)}
         />
       ) : null}
 
-      <G opacity={dim ? 0.5 : 1}>
-        {/* lid + rim */}
-        <Ellipse cx={27} cy={8.6} rx={10.4} ry={2.9} fill={`url(#cap${id})`} />
-        <Ellipse cx={27} cy={8.1} rx={7.4} ry={1.7} fill="#3d443d" />
-        <Ellipse cx={25} cy={8} rx={2.4} ry={0.7} fill="#aab1aa" opacity={0.7} />
+      {/* One group for the whole character, so the float moves all of it. */}
+      <G
+        opacity={dim ? 0.45 : 1}
+        {...(animated ? webOnly<object>({ className: "can-float" }) : null)}
+      >
+        {/* lid + pull tab */}
+        <Ellipse cx={27} cy={12} rx={9.6} ry={3.1} fill={metal} stroke={outline} strokeWidth={1.6} />
+        <Ellipse cx={27} cy={11.4} rx={5.6} ry={1.5} fill="none" stroke={outline} strokeWidth={1} opacity={0.6} />
+        <Ellipse cx={24.6} cy={11.2} rx={2.2} ry={0.8} fill={shellLit} opacity={0.8} />
 
-        <Path d={BODY_PATH} fill={`url(#shell${id})`} />
+        <Path d={BODY_PATH} fill={shell} />
 
         <G clipPath={`url(#body${id})`}>
-          {marks.map((m, i) => {
-            const paint = ink(m.tone);
-            const stroked = m.w
-              ? { fill: "none", stroke: paint, strokeWidth: m.w, strokeLinecap: m.cap ?? "round", strokeLinejoin: "round" as const }
-              : { fill: paint };
-            if (m.t === "c") {
-              return <Circle key={i} cx={m.cx} cy={m.cy} r={m.r} opacity={m.o ?? 1} {...stroked} />;
-            }
-            if (m.t === "e") {
-              return (
-                <Ellipse
+          {/* The flavour mark, scaled and dropped into the label area — the
+              artwork is authored around y=33 for a taller label than this
+              silhouette has, so it is placed rather than redrawn. */}
+          <G transform="translate(7.56,15.24) scale(0.72)">
+            {marks.map((m, i) => {
+              const paint = ink(m.tone);
+              const stroked = m.w
+                ? {
+                    fill: "none",
+                    stroke: paint,
+                    strokeWidth: m.w,
+                    strokeLinecap: m.cap ?? "round",
+                    strokeLinejoin: "round" as const,
+                  }
+                : { fill: paint };
+              if (m.t === "c") {
+                return <Circle key={i} cx={m.cx} cy={m.cy} r={m.r} opacity={m.o ?? 1} {...stroked} />;
+              }
+              if (m.t === "e") {
+                return (
+                  <Ellipse
+                    key={i}
+                    cx={m.cx}
+                    cy={m.cy}
+                    rx={m.rx}
+                    ry={m.ry}
+                    opacity={m.o ?? 1}
+                    {...(m.rot ? { transform: `rotate(${m.rot} ${m.cx} ${m.cy})` } : null)}
+                    {...stroked}
+                  />
+                );
+              }
+              return <Path key={i} d={m.d} opacity={m.o ?? 1} {...stroked} />;
+            })}
+          </G>
+
+          {logo ? <RadarMark x={27} y={21.5} r={4.1} color={variant.accent} /> : null}
+
+          {/* The flavour name, on the can, where every real can puts it.
+              This is the part that answers "which one is this" — a drawing
+              of a mango matches the flavour but not the thing you picked up
+              in the shop, which had the words on it. Nominative use of a
+              product name is ordinary; the label around it is ours. */}
+          {/* The flavour name, on the can, where every real can puts it.
+              This is the part that answers "which one is this" — a drawing
+              of a mango matches the flavour but not the thing you picked up
+              in the shop, which had the words on it. Nominative use of a
+              product name is ordinary; the label around it is ours. */}
+          <Path d="M10,73.5 L44,73.5 L44,89.5 L10,89.5 Z" fill={variant.accent} />
+          <Path d="M10,73.5 L44,73.5 L44,75.6 L10,75.6 Z" fill="#ffffff" opacity={0.3} />
+          {name
+            ? plate.lines.map((line, i) => (
+                <Text
                   key={i}
-                  cx={m.cx}
-                  cy={m.cy}
-                  rx={m.rx}
-                  ry={m.ry}
-                  opacity={m.o ?? 1}
-                  {...(m.rot ? { transform: `rotate(${m.rot} ${m.cx} ${m.cy})` } : null)}
-                  {...stroked}
-                />
-              );
-            }
-            return <Path key={i} d={m.d} opacity={m.o ?? 1} {...stroked} />;
-          })}
+                  x={27}
+                  y={
+                    plate.lines.length === 1
+                      ? 81.6
+                      : 78.6 + i * (plate.size * 1.15)
+                  }
+                  fill={plate.onLight ? "#14180f" : "#ffffff"}
+                  fontSize={plate.size}
+                  fontWeight="800"
+                  fontFamily="Archivo, system-ui, sans-serif"
+                  textAnchor="middle"
+                >
+                  {line}
+                </Text>
+              ))
+            : null}
 
-          <Rect x={0} y={52} width={VB_W} height={13} fill={`url(#band${id})`} />
-          <Rect x={0} y={67} width={VB_W} height={2.6} fill={variant.secondary} opacity={0.75} />
+          {/* Cartoon shading: one lit edge, one shadowed, both hard. */}
+          <Path d="M13,20 C11.5,26 11.5,62 13,80 C16.5,81 17.5,78 16.5,62 C16,44 16,28 16.5,22 Z" fill={shellLit} opacity={white ? 0.85 : 0.5} />
+          <Path d="M39,17 C41,24 41,64 39.5,86 L44,86 L44,20 Z" fill={outline} opacity={0.22} />
 
-          <Rect x={0} y={64} width={VB_W} height={24} fill={`url(#floor${id})`} />
-          <Rect x={0} y={85} width={VB_W} height={8} fill={`url(#base${id})`} opacity={0.9} />
-
-          {/* Carbonation. Below the cylinder shading because it is inside
-              the can: the same curve that darkens the right edge has to
-              darken the bubbles drifting up it. */}
           {animated ? (
-            <>
-              {BUBBLES.map((b, i) => (
-                <Circle
-                  key={i}
-                  cx={b.cx}
-                  cy={78}
-                  r={b.r}
-                  fill="#ffffff"
-                  opacity={0}
-                  {...webOnly<CircleProps>({
-                    className: "can-bub",
-                    style: { animationDuration: `${b.dur}s`, animationDelay: `${b.delay}s` },
-                  })}
-                />
-              ))}
-            </>
-          ) : null}
-
-          <Rect x={0} y={0} width={VB_W} height={VB_H} fill={`url(#cyl${id})`} />
-
-          {/* Hero-only: a tight specular running down the aluminium, and a
-              cooler one on the far edge. Enough to read as a cylinder
-              without needing a photographic texture. */}
-          {hero ? (
-            <>
-              <Rect x={11.5} y={10} width={2.2} height={80} fill="#ffffff" opacity={white ? 0.5 : 0.22} rx={1.1} />
-              <Rect x={40} y={12} width={1.4} height={76} fill="#ffffff" opacity={white ? 0.26 : 0.1} rx={0.7} />
-            </>
-          ) : null}
-
-          {/* A light travelling across the metal. This one belongs on top:
-              it is a reflection off the outside of the can. */}
-          {animated ? (
-            <Rect x={-16} y={0} width={13} height={VB_H} fill={`url(#sweep${id})`} {...webOnly<RectProps>({ className: "can-sweep" })} />
+            <Rect
+              x={-16}
+              y={0}
+              width={11}
+              height={VB_H}
+              fill={`url(#shine${id})`}
+              {...webOnly<RectProps>({ className: "can-shine" })}
+            />
           ) : null}
         </G>
 
-        <Path
-          d={BODY_PATH}
-          fill="none"
-          stroke="#000000"
-          strokeOpacity={white ? 0.35 : 0.6}
-          strokeWidth={0.8}
-        />
+        {/* The ink outline last, so nothing inside overlaps it. */}
+        <Path d={BODY_PATH} fill="none" stroke={outline} strokeWidth={2} strokeLinejoin="round" />
 
-        {hero ? (
-          <Ellipse cx={27} cy={95} rx={17} ry={3.4} fill={`url(#refl${id})`} />
+        {face ? (
+          <G>
+            {eye(20.4, "0s")}
+            {eye(33.6, "0.12s")}
+            {/* A closed smile: an open one needs a tongue, and a tongue at
+                40 px is a pink smear. */}
+            <Path
+              d="M21.8,69.4 C24.2,73.2 29.8,73.2 32.2,69.4"
+              fill="none"
+              stroke={outline}
+              strokeWidth={1.9}
+              strokeLinecap="round"
+            />
+            <Circle cx={15.4} cy={67.5} r={2} fill={variant.accent} opacity={0.4} />
+            <Circle cx={38.6} cy={67.5} r={2} fill={variant.accent} opacity={0.4} />
+          </G>
         ) : null}
       </G>
+
+      {hero ? <Ellipse cx={27} cy={95.5} rx={15} ry={2.6} fill={outline} opacity={0.45} /> : null}
     </Svg>
   );
 }

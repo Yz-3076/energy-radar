@@ -9,6 +9,11 @@
 import { renderChildren } from "./react/jsx-runtime.js";
 
 const KEBAB = {
+  fontSize: "font-size",
+  fontWeight: "font-weight",
+  fontFamily: "font-family",
+  textAnchor: "text-anchor",
+  letterSpacing: "letter-spacing",
   // react-native-svg has no concept of a CSS class, but the browser does,
   // and it is how the animated cans hook into the stylesheet. On the phone
   // the prop is simply never passed.
@@ -50,3 +55,7 @@ export const Stop = element("stop");
 export const Rect = element("rect");
 export const Ellipse = element("ellipse");
 export const Circle = element("circle");
+/** react-native-svg centres <Text> on its y; SVG puts the baseline there.
+ *  dominant-baseline="central" makes the browser agree with the phone, so
+ *  the same y lands the flavour name in the same place on both. */
+export const Text = element("text", ' dominant-baseline="central"');
