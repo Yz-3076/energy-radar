@@ -22,6 +22,10 @@ Merge rules, by what the file actually is:
                             meaningless.
   history/*.ndjson          UNION of lines, order preserved. Append-only
                             observations; losing either side loses history.
+  promo-history.json        UNION of keys AND of the date list under each.
+                            Each side recorded the days it saw; a plain key
+                            union would take ours wholesale for a store and
+                            drop days only theirs has.
   *-cache.json,             UNION of keys. An address or town resolves to
   town-coords.json          the same coordinate whoever asked, so a
                             collision is not a disagreement. Ours wins on
@@ -41,6 +45,7 @@ DATA = ROOT / "data"
 
 SNAPSHOTS = ("latest.json", "stats.json", "promotions.json")
 UNION_CACHES = ("geocode-cache.json", "town-coords.json", "promo-cache.json")
+DAY_SETS = ("promo-history.json",)
 
 
 def merge_union(ours: Path, theirs: Path) -> int:
@@ -56,6 +61,28 @@ def merge_union(ours: Path, theirs: Path) -> int:
         json.dumps(a, ensure_ascii=False, indent=2, sort_keys=True), encoding="utf-8"
     )
     return len(a)
+
+
+def merge_daysets(ours: Path, theirs: Path) -> int:
+    """theirs <- per-key union of the date lists. Returns the day count.
+
+    Without this promo-history.json fell through to "anything else" and was
+    left as origin/main had it, so a run that lost the push race silently
+    threw away the deal day it had just recorded.
+    """
+    a = json.loads(theirs.read_text(encoding="utf-8")) if theirs.exists() else {}
+    b = json.loads(ours.read_text(encoding="utf-8")) if ours.exists() else {}
+    if not isinstance(a, dict) or not isinstance(b, dict):
+        shutil.copy2(ours, theirs)
+        return 0
+    merged = {k: sorted(set(v)) for k, v in a.items() if isinstance(v, list)}
+    for key, days in b.items():
+        if isinstance(days, list):
+            merged[key] = sorted(set(merged.get(key, [])) | set(days))
+    theirs.write_text(
+        json.dumps(merged, ensure_ascii=False, indent=1, sort_keys=True), encoding="utf-8"
+    )
+    return sum(len(v) for v in merged.values())
 
 
 def merge_history(ours_dir: Path, theirs_dir: Path) -> int:
@@ -96,6 +123,12 @@ def main() -> None:
         if src.exists():
             n = merge_union(src, DATA / name)
             print(f"  {name}: unioned -> {n} keys")
+
+    for name in DAY_SETS:
+        src = ours_root / name
+        if src.exists():
+            n = merge_daysets(src, DATA / name)
+            print(f"  {name}: unioned -> {n} recorded day(s)")
 
     if (ours_root / "history").is_dir():
         n = merge_history(ours_root / "history", DATA / "history")

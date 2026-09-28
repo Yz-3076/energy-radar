@@ -281,6 +281,11 @@ const TAG_META = {
     tone: "warn",
     why: "Two or more flavours here sold regularly and then went quiet, which usually means an empty shelf.",
   },
+  deal_regular: {
+    label: "Often has deals",
+    tone: "good",
+    why: "This branch has been running a promotion on at least 40% of the days since Energy Radar started keeping a record of them.",
+  },
 };
 
 function storeTags(store, dealCount) {

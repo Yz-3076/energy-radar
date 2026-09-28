@@ -44,7 +44,7 @@ import os
 import shutil
 import xml.etree.ElementTree as ET
 from collections import Counter, defaultdict
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 from il_supermarket_scarper.scrappers_factory import ScraperFactory
@@ -368,13 +368,73 @@ def _current_history_path() -> Path:
     return HISTORY_DIR / f"{month}.ndjson"
 
 
+PROMO_HISTORY = DATA_DIR / "promo-history.json"
+
+#: How far back the promo record reaches. Long enough that "often runs
+#: deals" means something, short enough that a branch which stopped three
+#: months ago stops being described as one that runs them.
+PROMO_WINDOW_DAYS = 90
+
+
+def record_promo_day(promo_by_store: dict, now: str) -> dict[str, list[str]]:
+    """Remember which days each branch was running a deal.
+
+    promotions.json is rewritten whole every run, so until this existed the
+    question "does this shop run deals often?" had no answer anywhere — only
+    "is it running one right now".
+
+    Deliberately NOT shaped like data/history/*.ndjson. That file appends a
+    row per observation and is already 55 MB after three weeks; a promo row
+    per store per run would be four thousand rows a day and would repeat the
+    same mistake. What the question actually needs is a set of dates per
+    branch, so that is what is kept — bounded at roughly a megabyte however
+    long the pipeline runs.
+
+    Storing the day rather than the run also makes it idempotent: four
+    scrapes on a Tuesday leave one Tuesday, so a day that happened to be
+    scraped more often does not look like a shop with more deals.
+
+    Carried-forward promos count. A chain that went silent this run has not
+    withdrawn its deals, and promotions.json shows them to the reader, so
+    the record matches what the site actually said that day.
+    """
+    day = now[:10]
+
+    try:
+        history = json.loads(PROMO_HISTORY.read_text(encoding="utf-8"))
+        if not isinstance(history, dict):
+            raise ValueError("promo history is not an object")
+    except (OSError, ValueError, json.JSONDecodeError) as e:
+        if PROMO_HISTORY.exists():
+            print(f"  promo history unreadable, starting a fresh one ({e})")
+        history = {}
+
+    for store_id, by_variant in promo_by_store.items():
+        if not any(by_variant.values()):
+            continue
+        history[store_id] = sorted(set(history.get(store_id, [])) | {day})
+
+    cutoff = (datetime.now(timezone.utc) - timedelta(days=PROMO_WINDOW_DAYS)).strftime("%Y-%m-%d")
+    history = {
+        store_id: kept
+        for store_id, days in history.items()
+        if (kept := [d for d in days if d >= cutoff])
+    }
+
+    PROMO_HISTORY.write_text(json.dumps(history, ensure_ascii=False, indent=1), encoding="utf-8")
+    print(f"Wrote data/promo-history.json — {len(history)} store(s) with deal days on record")
+    return history
+
+
 def _median(values: list[float]) -> float:
     s = sorted(values)
     n = len(s)
-    return s[n // 2] if n % 2 else (s[n // 2 - 1] + s[n // 2]) / 2
+    return round(s[n // 2] if n % 2 else (s[n // 2 - 1] + s[n // 2]) / 2, 2)
 
 
-def tag_stores(stores: list[dict], history: list[dict]) -> None:
+def tag_stores(
+    stores: list[dict], history: list[dict], promo_days: dict[str, list[str]] | None = None
+) -> None:
     """Give each branch a few plain-language tags, written onto `tags`.
 
     A shelf listing is a snapshot; what a person actually wants to know
@@ -383,11 +443,10 @@ def tag_stores(stores: list[dict], history: list[dict]) -> None:
     day — but it is 55 MB, so the website cannot work it out itself. It is
     folded down here into a handful of words.
 
-    Every tag is about something measured. Note what is deliberately absent:
-    there is no "often has deals" tag, because promotions.json is rewritten
-    whole each run and no history of it is kept, so nothing here can say
-    whether a branch runs deals *often* — only whether it is running one
-    right now, which the site reads from promotions.json directly.
+    Every tag is about something measured. "Runs deals often" leans on
+    data/promo-history.json, which only started being written in late
+    September 2026 — before there are enough recorded days to divide by,
+    the tag is simply not emitted rather than guessed at.
     """
     days_by_store: dict[str, set[str]] = defaultdict(set)
     for row in history:
@@ -406,6 +465,12 @@ def tag_stores(stores: list[dict], history: list[dict]) -> None:
         for row in store["shelf"]:
             chain_prices[store["chain"]].append(row["price"])
     chain_median = {c: _median(v) for c, v in chain_prices.items() if v}
+
+    # The day promo recording started. Until there are enough days behind
+    # it, no branch gets a deals tag at all rather than one built on two
+    # data points.
+    all_promo_days = sorted({d for days in (promo_days or {}).values() for d in days})
+    promo_since = all_promo_days[0] if all_promo_days else None
 
     for store in stores:
         tags: list[str] = []
@@ -431,6 +496,16 @@ def tag_stores(stores: list[dict], history: list[dict]) -> None:
         chain_med = chain_median.get(store["chain"])
         if med is not None and chain_med is not None and med <= chain_med - 0.2:
             tags.append("cheap")
+
+        # Deal days over days observed, measured from when promo recording
+        # began rather than from each branch's own first deal — anchoring
+        # per-store would score a shop that started running deals yesterday
+        # at 100%.
+        if promo_since:
+            deal_days = set(promo_days.get(store["id"], []))
+            seen = {d for d in days if d >= promo_since}
+            if len(seen) >= 5 and len(deal_days) / len(seen) >= 0.4:
+                tags.append("deal_regular")
 
         depletions = [r.get("depletion") for r in shelf]
         if shelf and sum(1 for d in depletions if d == "healthy") / len(shelf) >= 0.6:
@@ -744,7 +819,6 @@ async def run() -> None:
         stores_out.append(store)
 
     stores_out += carry_forward(stores_out, silent_chains)
-    tag_stores(stores_out, full_history)
 
     DATA_DIR.mkdir(parents=True, exist_ok=True)
     (DATA_DIR / "latest.json").write_text(
@@ -771,6 +845,15 @@ async def run() -> None:
     print(
         f"Wrote data/promotions.json — {len(promo_by_store)} store(s) "
         f"running {len(distinct)} distinct deal(s)"
+    )
+
+    # Tagging waits for this: "runs deals often" needs the promo record, and
+    # the record needs today's promotions, so latest.json is rewritten once
+    # the tags are on it.
+    promo_days = record_promo_day(promo_by_store, now)
+    tag_stores(stores_out, full_history, promo_days)
+    (DATA_DIR / "latest.json").write_text(
+        json.dumps(stores_out, ensure_ascii=False, indent=2), encoding="utf-8"
     )
 
     # A small rollup for the GitHub Pages dashboard — cheap to compute here,
@@ -824,11 +907,6 @@ async def run() -> None:
         by_day[day].append(row["price"])
         stores_by_day[day].add(row["store_id"])
         by_day_variant[day][row["variant_id"]].append(row["price"])
-
-    def _median(values: list[float]) -> float:
-        s = sorted(values)
-        n = len(s)
-        return round(s[n // 2] if n % 2 else (s[n // 2 - 1] + s[n // 2]) / 2, 2)
 
     timeline = [
         {
