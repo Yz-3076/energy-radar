@@ -24,6 +24,7 @@ export {
   prettyDistance,
   ils,
   chainLabel,
+  chainColor,
   walkMinutes,
 } from "@/data/stores";
 export { FILTERS, matchesFilter } from "@/data/filters";

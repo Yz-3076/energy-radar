@@ -265,4 +265,46 @@ const CHAIN_LABELS: Record<string, string> = {
 
 export const chainLabel = (chain: string) => CHAIN_LABELS[chain] ?? chain;
 
+/**
+ * A colour per chain, so the tag on a shelf says which shop at a glance.
+ *
+ * These are picked to be told apart on a near-black surface and to sit in
+ * the rough family of each brand — Shufersal reads red, the fuel-station
+ * chains blue, Yellow yellow. They are not sampled brand values and nothing
+ * here reproduces a logo; it is a coloured chip with a shop's name on it.
+ *
+ * Deliberately no greens: #00ff41 is the app's own accent and means "live
+ * price", and a green chain tag would borrow that meaning.
+ */
+const CHAIN_COLORS: Record<string, string> = {
+  Shufersal: "#e2231a",
+  "Rami Levy": "#1f5fd0",
+  "Osher Ad": "#d81f26",
+  Victory: "#c4262e",
+  Yohananof: "#c0392b",
+  "Super Pharm": "#0e7ec4",
+  "Dor Alon": "#1668b3",
+  "Tiv Taam": "#2b6cb0",
+  Carrefour: "#1e56a8",
+  Yellow: "#e8b400",
+  "Hazi Hinam": "#e07b1a",
+  "Super Yuda": "#c2185b",
+  "Fresh Market": "#7a4bbd",
+  "Netiv Hased": "#8e6bd0",
+  "Super Sapir": "#b5417a",
+  "Maayan 2000": "#3a7bd5",
+  "King Store": "#a03bbd",
+  Bareket: "#0f8fa0",
+  "Shuk Ahir": "#cf6a2a",
+  "Stop Market": "#c23b5e",
+  Keshet: "#5b6fd6",
+  "Salach Dabach": "#b8452f",
+  Polizer: "#6d7fb8",
+};
+
+/** Falls back to a muted slate, so an unknown chain looks deliberate
+ *  rather than broken. */
+export const chainColor = (chain: string) =>
+  CHAIN_COLORS[chainLabel(chain)] ?? "#5a6357";
+
 export const walkMinutes = (m: number) => Math.max(1, Math.round(m / 80));

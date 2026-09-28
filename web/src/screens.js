@@ -9,13 +9,19 @@
  * tied to a device, and the website has no profile to keep them in — see
  * the Stats screen, which takes that slot instead.
  */
+import maplibregl from "maplibre-gl";
+
 import {
   Can,
+  Crown,
   Icons,
   VARIANTS,
   getVariant,
   cheapest,
   chainLabel,
+  chainColor,
+  MAP_STYLE,
+  PITCH_3D,
   stockStatus,
   STOCK_LABEL,
   FILTERS,
@@ -210,13 +216,79 @@ export function createSearchScreen(root, app) {
 
 /* ── store ───────────────────────────────────────────────────────────── */
 
+/**
+ * How this shelf's price compares to the same can everywhere else.
+ *
+ * Six rows of "₪9.90" is a list with nothing to read. The national median
+ * per flavour is already computed by the pipeline and shipped in
+ * stats.json, so each row can say whether this branch is under or over it —
+ * which is both the missing information and the missing colour.
+ */
+function priceDelta(app, variantId, price) {
+  const median = app.stats?.price_by_variant?.[variantId]?.median;
+  if (typeof median !== "number") return null;
+  const diff = +(price - median).toFixed(2);
+  if (Math.abs(diff) < 0.05) return { label: "average", tone: "mid" };
+  return diff < 0
+    ? { label: `${ils(Math.abs(diff))} under`, tone: "good" }
+    : { label: `${ils(diff)} over`, tone: "high" };
+}
+
 export function createStoreScreen(root, app) {
   let storeId = null;
+  let map = null;
+  let marker = null;
+
+  /*
+   * The page is built once and only its body is redrawn, because the mini
+   * map has to survive between stores — a MapLibre instance per store would
+   * be a new GL context every time you tapped a shelf.
+   */
+  root.innerHTML = `
+    <div class="sheet">
+      <div class="mini-map" id="mini-map">
+        <button class="back floating tap" id="back" aria-label="Back"></button>
+        <button class="mini-open tap" id="mini-open">Open on the map</button>
+      </div>
+      <div id="store-body"></div>
+    </div>`;
+
+  const body = root.querySelector("#store-body");
+  root.querySelector("#back").innerHTML = Icons.CaretLeft({ size: 15, color: "#eaf0ea" });
+  root.querySelector("#back").onclick = () => app.back();
+  root.querySelector("#mini-open").onclick = () => {
+    const store = app.storeById.get(storeId);
+    if (store) app.go("map", store.id);
+  };
+
+  /** Non-interactive on purpose: it is a picture of where the shop is, and
+   *  a map inside a scrolling page that eats drags is a trap. */
+  function ensureMap(store) {
+    if (!map) {
+      map = new maplibregl.Map({
+        container: root.querySelector("#mini-map"),
+        style: MAP_STYLE,
+        center: [store.lng, store.lat],
+        zoom: 15.2,
+        pitch: PITCH_3D,
+        interactive: false,
+        attributionControl: false,
+      });
+    }
+    map.resize();
+    map.jumpTo({ center: [store.lng, store.lat], zoom: 15.2, pitch: PITCH_3D });
+
+    const node = marker?.getElement() ?? document.createElement("div");
+    node.className = "mini-pin";
+    node.innerHTML = `<span class="ring" style="width:44px;height:44px;color:rgba(0,255,65,.5)"></span><span class="mini-dot"></span>`;
+    if (!marker) marker = new maplibregl.Marker({ element: node }).setLngLat([store.lng, store.lat]).addTo(map);
+    else marker.setLngLat([store.lng, store.lat]);
+  }
 
   function draw() {
     const store = app.storeById.get(storeId);
     if (!store) {
-      root.innerHTML = `<div class="sheet"><div class="notice"><div class="notice-title">That shelf is no longer in the dataset.</div></div></div>`;
+      body.innerHTML = `<div class="notice"><div class="notice-title">That shelf is no longer in the dataset.</div></div>`;
       return;
     }
 
@@ -242,22 +314,18 @@ export function createStoreScreen(root, app) {
     const min = Math.min(...rows.map((x) => x.r.price), best.price);
     const cheaper = rows.filter((x) => x.r.price < best.price).length;
 
-    root.innerHTML = `
-      <div class="sheet">
-        <div class="hero-band">
-          <div class="hero-cans">
-            ${shelf.slice(0, 3).map((r, i) => Can({ variant: getVariant(r.variantId), size: i === 1 ? 92 : 74 })).join("")}
-          </div>
-        </div>
+    const bestDelta = priceDelta(app, best.variantId, best.price);
+    const priceRange =
+      shelf.length > 1 && shelf[0].price !== shelf[shelf.length - 1].price
+        ? `${ils(shelf[0].price)}–${ils(shelf[shelf.length - 1].price)}`
+        : ils(best.price);
+    const freshest = shelf.reduce((a, r) => (r.seenAt > a.seenAt ? r : a), shelf[0]);
 
-        <div style="display:flex;gap:8px;margin-top:14px">
-          <button class="back tap" id="back">${Icons.CaretLeft({ size: 15, color: "#eaf0ea" })}</button>
-        </div>
-
-        <div class="open-row">
-          <span class="chain-pill">${h(chainLabel(store.chain))}</span>
-          ${store.closesAt ? `${Icons.Clock({ size: 12, color: "#00ff41", weight: "fill" })}<span class="open-label">${store.closesAt === "24h" ? "Open 24 hours" : `Open until ${h(store.closesAt)}`}</span>` : ""}
+    body.innerHTML = `
+        <div class="store-head">
+          <span class="chain-tag" style="--chain:${h(chainColor(store.chain))}">${h(chainLabel(store.chain))}</span>
           ${deals.length ? `<span class="deal-pill">${Icons.Flame({ size: 10, color: "#ff5a2e" })}${deals.length} ${deals.length === 1 ? "deal" : "deals"}</span>` : ""}
+          ${store.closesAt ? `<span class="open-label">${Icons.Clock({ size: 12, color: "#00ff41", weight: "fill" })}${store.closesAt === "24h" ? "Open 24 hours" : `Open until ${h(store.closesAt)}`}</span>` : ""}
         </div>
 
         <div class="detail-name">${h(store.name)}</div>
@@ -268,6 +336,33 @@ export function createStoreScreen(root, app) {
             : ""
         }
 
+        <!-- The answer, before the list. Every other screen in the app leads
+             with the number; this one used to bury it in row four. -->
+        <div class="store-hero">
+          <span class="store-hero-glow"></span>
+          <div class="store-hero-can">${Can({ variant: bestVariant, size: 104, hero: true, animated: true })}</div>
+          <div class="store-hero-text">
+            <div class="kicker">Cheapest here</div>
+            <div class="store-hero-price">${h(ils(best.price))}</div>
+            <div class="store-hero-name">${h(bestVariant.fullName)}</div>
+            ${
+              bestDelta
+                ? `<span class="delta ${h(bestDelta.tone)}">${
+                    bestDelta.tone === "mid"
+                      ? "At the national median"
+                      : `${h(bestDelta.label)} the national median`
+                  }</span>`
+                : ""
+            }
+          </div>
+        </div>
+
+        <div class="stats">
+          <div class="card"><div class="stat-v">${shelf.length}</div><div class="stat-k">flavours here</div></div>
+          <div class="card"><div class="stat-v" style="font-size:14px">${h(priceRange)}</div><div class="stat-k">price range</div></div>
+          <div class="card"><div class="stat-v" style="font-size:14px">${h(relativeTime(freshest.seenAt, app.now))}</div><div class="stat-k">last sold</div></div>
+        </div>
+
         <button class="ghost tap" id="directions">
           ${Icons.NavigationArrow({ size: 14, color: "#00ff41", weight: "fill" })}Directions
         </button>
@@ -275,7 +370,7 @@ export function createStoreScreen(root, app) {
         <div class="kicker k-top">On the shelf · ${shelf.length}</div>
         <div class="group">
           ${shelf
-            .map((row) => {
+            .map((row, i) => {
               const v = getVariant(row.variantId);
               const status = stockStatus(row, app.now);
               const why =
@@ -286,17 +381,26 @@ export function createStoreScreen(root, app) {
                     : row.source === "featured"
                       ? "listed by the store"
                       : `hunter photo, ${relativeTime(row.seenAt, app.now)}`;
+              const delta = priceDelta(app, v.id, row.price);
+              // Only the first row: at a branch where every can is the
+              // same price this was crowning all six, which says nothing.
+              const isBest = i === 0 && shelf.length > 1;
               return `
-                <button class="row tap" data-variant="${h(v.id)}">
-                  ${Can({ variant: v, size: 45, dim: status === "unconfirmed" || status === "likely_out" })}
+                <button class="row tap${isBest ? " row-best" : ""}" data-variant="${h(v.id)}">
+                  <span class="row-can">
+                    ${Can({ variant: v, size: 45, dim: status === "unconfirmed" || status === "likely_out" })}
+                    ${isBest ? `<span class="row-crown">${Crown({ size: 11, color: "#0a0b0a" })}</span>` : ""}
+                  </span>
                   <span class="row-text">
                     <span class="row-title">${h(v.fullName)}</span>
-                    ${v.barcode ? `<span class="row-sub" style="font-variant-numeric:tabular-nums">${h(v.barcode)}</span>` : ""}
                     <span class="row-sub" style="display:flex;align-items:center;gap:6px">
                       <span class="stock-dot ${h(status)}"></span>${h(STOCK_LABEL[status])} · ${h(why)}
                     </span>
                   </span>
-                  <span class="row-price" style="${row.price === best.price ? "" : "color:#eaf0ea"}">${h(ils(row.price))}</span>
+                  <span class="row-money">
+                    <span class="row-price" style="${isBest ? "" : "color:#eaf0ea"}">${h(ils(row.price))}</span>
+                    ${delta ? `<span class="delta ${h(delta.tone)}">${h(delta.label)}</span>` : ""}
+                  </span>
                 </button>`;
             })
             .join("")}
@@ -333,12 +437,16 @@ export function createStoreScreen(root, app) {
           Stock status is an estimate from two things: how fresh this price is, and whether the chain's own
           files show this flavour still being rung up at this branch. Neither is a live look at the shelf —
           a can may already be gone even when it reads "In stock".
-        </div>
-      </div>`;
+        </div>`;
 
-    root.querySelector("#back").onclick = () => app.back();
-    root.querySelector("#directions").onclick = () => openDirections(store);
-    root.querySelector(".sheet").onclick = (e) => {
+    // Built here rather than in onShow: opening a store link directly runs
+    // onShow before the store data exists, and only draw() is re-run once it
+    // arrives. Guarded on visibility because MapLibre cannot measure itself
+    // inside a display:none screen, and update() redraws hidden screens too.
+    if (root.classList.contains("on")) ensureMap(store);
+
+    body.querySelector("#directions").onclick = () => openDirections(store);
+    body.onclick = (e) => {
       const v = e.target.closest("[data-variant]");
       if (v) app.go("variant", v.dataset.variant);
     };
