@@ -368,6 +368,79 @@ def _current_history_path() -> Path:
     return HISTORY_DIR / f"{month}.ndjson"
 
 
+def _median(values: list[float]) -> float:
+    s = sorted(values)
+    n = len(s)
+    return s[n // 2] if n % 2 else (s[n // 2 - 1] + s[n // 2]) / 2
+
+
+def tag_stores(stores: list[dict], history: list[dict]) -> None:
+    """Give each branch a few plain-language tags, written onto `tags`.
+
+    A shelf listing is a snapshot; what a person actually wants to know
+    before walking somewhere is what the place is usually like. The archive
+    already answers that — it records which branches had Monster on which
+    day — but it is 55 MB, so the website cannot work it out itself. It is
+    folded down here into a handful of words.
+
+    Every tag is about something measured. Note what is deliberately absent:
+    there is no "often has deals" tag, because promotions.json is rewritten
+    whole each run and no history of it is kept, so nothing here can say
+    whether a branch runs deals *often* — only whether it is running one
+    right now, which the site reads from promotions.json directly.
+    """
+    days_by_store: dict[str, set[str]] = defaultdict(set)
+    for row in history:
+        sid = str(row.get("store_id", "")).lower().replace(":", "-")
+        day = str(row.get("fetched_at", ""))[:10]
+        if sid and len(day) == 10:
+            days_by_store[sid].add(day)
+
+    every_day = sorted({d for days in days_by_store.values() for d in days})
+
+    # "Cheap" has to mean cheap *for that chain* — a Dor Alon forecourt is
+    # dearer than a Rami Levy on principle, and tagging every discounter
+    # cheap and every garage dear would say nothing about the branch.
+    chain_prices: dict[str, list[float]] = defaultdict(list)
+    for store in stores:
+        for row in store["shelf"]:
+            chain_prices[store["chain"]].append(row["price"])
+    chain_median = {c: _median(v) for c, v in chain_prices.items() if v}
+
+    for store in stores:
+        tags: list[str] = []
+        days = days_by_store.get(store["id"], set())
+
+        if days and every_day:
+            # Measured from when this branch first appeared, so a shop added
+            # last week is not marked unreliable for the weeks before it
+            # existed.
+            since = [d for d in every_day if d >= min(days)]
+            if len(since) <= 4:
+                tags.append("new")
+            elif len(days) / len(since) >= 0.85:
+                tags.append("reliable")
+            elif len(days) / len(since) < 0.6:
+                tags.append("intermittent")
+
+        shelf = store["shelf"]
+        if len(shelf) >= 8:
+            tags.append("wide")
+
+        med = _median([r["price"] for r in shelf]) if shelf else None
+        chain_med = chain_median.get(store["chain"])
+        if med is not None and chain_med is not None and med <= chain_med - 0.2:
+            tags.append("cheap")
+
+        depletions = [r.get("depletion") for r in shelf]
+        if shelf and sum(1 for d in depletions if d == "healthy") / len(shelf) >= 0.6:
+            tags.append("sells_fast")
+        if sum(1 for d in depletions if d == "likely_out") >= 2:
+            tags.append("runs_out")
+
+        store["tags"] = tags
+
+
 def load_history() -> list[dict]:
     """Every observation ever recorded, across every monthly file — this is
     the FULL accumulated history, not just the current month. Depletion
@@ -671,6 +744,7 @@ async def run() -> None:
         stores_out.append(store)
 
     stores_out += carry_forward(stores_out, silent_chains)
+    tag_stores(stores_out, full_history)
 
     DATA_DIR.mkdir(parents=True, exist_ok=True)
     (DATA_DIR / "latest.json").write_text(

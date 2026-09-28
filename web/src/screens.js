@@ -234,6 +234,73 @@ function priceDelta(app, variantId, price) {
     : { label: `${ils(diff)} over`, tone: "high" };
 }
 
+/**
+ * What a branch is usually like, in a few words.
+ *
+ * A shelf listing tells you about one moment; before walking somewhere you
+ * want to know what the place is normally like. Most of these come from
+ * `store.tags`, which pipeline.py works out from the price archive — the
+ * site never sees that archive, so it cannot derive them itself.
+ *
+ * `title` carries the rule behind each one, because a badge whose meaning
+ * you have to guess is decoration.
+ */
+const TAG_META = {
+  reliable: {
+    label: "Usually has it",
+    tone: "good",
+    why: "Monster was on this shelf on at least 85% of the days since this branch first appeared in the data.",
+  },
+  intermittent: {
+    label: "Comes and goes",
+    tone: "warn",
+    why: "Monster was missing from this branch on more than 40% of the days since it first appeared.",
+  },
+  new: {
+    label: "New here",
+    tone: "",
+    why: "This branch has only been in the dataset a few days, so there is not enough history to judge it yet.",
+  },
+  wide: {
+    label: "Wide range",
+    tone: "",
+    why: "Eight or more flavours on the shelf — most branches carry fewer.",
+  },
+  cheap: {
+    label: "Cheap for the chain",
+    tone: "good",
+    why: "This branch's median price is at least ₪0.20 below the median across its whole chain.",
+  },
+  sells_fast: {
+    label: "Sells steadily",
+    tone: "good",
+    why: "Most cans here are still being rung up recently, rather than sitting unsold.",
+  },
+  runs_out: {
+    label: "Often runs out",
+    tone: "warn",
+    why: "Two or more flavours here sold regularly and then went quiet, which usually means an empty shelf.",
+  },
+};
+
+function storeTags(store, dealCount) {
+  const tags = (store.tags ?? [])
+    .filter((id) => TAG_META[id])
+    .map((id) => TAG_META[id]);
+
+  // Not from the archive: promotions.json is rewritten whole every run and
+  // no history of it is kept, so this can only ever say what is running
+  // now — never that a branch runs deals *often*.
+  if (dealCount > 0) {
+    tags.unshift({
+      label: dealCount === 1 ? "1 deal on now" : `${dealCount} deals on now`,
+      tone: "hot",
+      why: "Deals published by the chain for this branch right now. Energy Radar keeps no history of promotions, so this says nothing about how often this branch runs them.",
+    });
+  }
+  return tags;
+}
+
 export function createStoreScreen(root, app) {
   let storeId = null;
   let map = null;
@@ -314,6 +381,7 @@ export function createStoreScreen(root, app) {
     const min = Math.min(...rows.map((x) => x.r.price), best.price);
     const cheaper = rows.filter((x) => x.r.price < best.price).length;
 
+    const tags = storeTags(store, deals.length);
     const bestDelta = priceDelta(app, best.variantId, best.price);
     const priceRange =
       shelf.length > 1 && shelf[0].price !== shelf[shelf.length - 1].price
@@ -324,7 +392,6 @@ export function createStoreScreen(root, app) {
     body.innerHTML = `
         <div class="store-head">
           <span class="chain-tag" style="--chain:${h(chainColor(store.chain))}">${h(chainLabel(store.chain))}</span>
-          ${deals.length ? `<span class="deal-pill">${Icons.Flame({ size: 10, color: "#ff5a2e" })}${deals.length} ${deals.length === 1 ? "deal" : "deals"}</span>` : ""}
           ${store.closesAt ? `<span class="open-label">${Icons.Clock({ size: 12, color: "#00ff41", weight: "fill" })}${store.closesAt === "24h" ? "Open 24 hours" : `Open until ${h(store.closesAt)}`}</span>` : ""}
         </div>
 
@@ -333,6 +400,17 @@ export function createStoreScreen(root, app) {
         ${
           store.approximate
             ? `<div class="approx-note">Approximate — this branch is listed only as ${h(isolate(store.city))}, with no street address.</div>`
+            : ""
+        }
+
+        ${
+          tags.length
+            ? `<div class="tag-row">${tags
+                .map(
+                  (t) =>
+                    `<span class="tag ${h(t.tone)}" title="${h(t.why)}">${h(t.label)}</span>`,
+                )
+                .join("")}</div>`
             : ""
         }
 
