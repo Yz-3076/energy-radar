@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-29T12:37:33.152699+00:00",
+  "generated_at": "2026-09-29T19:55:18.389635+00:00",
   "chains_covered": [
     "SHUFERSAL",
     "VICTORY_NEW_SOURCE",
@@ -26,11 +26,11 @@
     "POLIZER"
   ],
   "store_count": 1015,
-  "total_observations": 515223,
-  "observations_this_run": 7542,
+  "total_observations": 523322,
+  "observations_this_run": 8099,
   "listings_per_variant": {
-    "ultra": 912,
-    "mango-loco": 702,
+    "ultra": 913,
+    "mango-loco": 703,
     "ultra-paradise": 815,
     "ultra-fiesta": 521,
     "original": 914,
@@ -44,12 +44,12 @@
     "rossi": 210
   },
   "depletion_breakdown": {
-    "slowing": 2342,
-    "healthy": 2255,
+    "slowing": 2462,
+    "healthy": 2118,
     "insufficient_data": 2330,
-    "likely_out": 101
+    "likely_out": 120
   },
-  "live_listings": 7028,
+  "live_listings": 7030,
   "flavours_on_shelves": 13,
   "stores_per_chain": {
     "Shufersal": 218,
@@ -141,7 +141,7 @@
       "min": 6.5,
       "median": 7.9,
       "max": 9.2,
-      "listings": 772
+      "listings": 774
     },
     "Salach Dabach": {
       "min": 7.9,
@@ -239,7 +239,7 @@
       "min": 6.8,
       "median": 9.9,
       "max": 13.0,
-      "listings": 702
+      "listings": 703
     },
     "monarch": {
       "min": 6.8,
@@ -275,7 +275,7 @@
       "min": 6.5,
       "median": 9.9,
       "max": 13.0,
-      "listings": 912
+      "listings": 913
     },
     "ultra-fiesta": {
       "min": 6.8,
@@ -775,24 +775,24 @@
     },
     {
       "date": "2026-09-29",
-      "observations": 14235,
+      "observations": 22334,
       "stores": 756,
       "min": 4.9,
-      "median": 9.5,
+      "median": 9.2,
       "max": 13.0,
       "by_variant": {
         "aussie-lemonade": 9.9,
         "full-zero": 8.9,
         "green-zero": 8.9,
         "mango-loco": 9.9,
-        "monarch": 9.2,
-        "original": 9.5,
-        "pipeline-punch": 9.35,
+        "monarch": 8.9,
+        "original": 8.9,
+        "pipeline-punch": 8.9,
         "rossi": 9.9,
-        "strawberry": 9.5,
-        "ultra": 9.9,
+        "strawberry": 9.2,
+        "ultra": 9.5,
         "ultra-fiesta": 8.9,
-        "ultra-paradise": 9.9,
+        "ultra-paradise": 9.5,
         "ultra-peachy-keen": 9.9
       }
     }
