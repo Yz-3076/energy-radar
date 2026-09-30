@@ -37,7 +37,10 @@ import {
   STOCK_LABEL,
   ils,
 } from "./shared.ts";
-import { h, isolate, openDirections, storeHasPromo, promoCard, promosAtStore } from "./ui.js";
+import {
+  h, isolate, openDirections, storeHasPromo, promoCard, promosAtStore,
+  distanceLabel, walkLabel,
+} from "./ui.js";
 
 /** Matches the app: never flood the view with marker elements. */
 const MAX_MARKERS = 36;
@@ -342,7 +345,7 @@ export function createMapScreen(root, app) {
             ${Can({ variant, size: 59 })}
             <span style="flex:1;min-width:0">
               <span class="deck-store">${h(s.name)}</span>
-              <span class="deck-meta">${h(prettyDistance(distanceM(app.coord, s)))} · ${h(variant.name)}</span>
+              <span class="deck-meta">${h(distanceLabel(s, distanceM(app.coord, s)))} · ${h(variant.name)}</span>
               <span style="display:flex;align-items:baseline">
                 <span class="deck-price">${h(ils(row.price))}</span>
                 <span class="deck-stock">${storeIsFresh(s, app.now) ? "sold today" : `${s.shelf.length} variants`}</span>
@@ -470,7 +473,7 @@ export function createMapScreen(root, app) {
             <span class="focus-chain">${h(chainLabel(store.chain))}</span>
           </div>
           <div class="focus-addr">${h(isolate(store.address))}</div>
-          <div class="focus-addr">${h(prettyDistance(metres))} away · ${walkMinutes(metres)} min walk</div>
+          <div class="focus-addr">${h(walkLabel(store, metres))}</div>
 
           <div class="focus-sec">About this can</div>
           <div class="focus-blurb">${h(variant.blurb)}</div>

@@ -1,3 +1,4 @@
+import { prettyDistance, walkMinutes } from "./shared.ts";
 /**
  * Small rendering helpers shared by every screen.
  *
@@ -116,6 +117,37 @@ export const storeHasPromo = (promotions, storeId) =>
  * them to a fixed width lands mid-word.
  */
 export const shortCity = (city) => (city?.split("-")[0] ?? "").trim().slice(0, 8);
+
+
+/**
+ * How far away a shop is — or an honest refusal to say.
+ *
+ * A store flagged `approximate` is pinned at its town's centre, because the
+ * chain filed it as "צומת אשקלון" or "קיבוץ עינת" and there is no street
+ * address to place. The distance to that pin is the distance to the middle
+ * of the town, which is not the distance to the shop, and a forecourt on a
+ * motorway is not a three-minute walk from anywhere. Printing "240 m · 3
+ * min walk" for one of those is exactly the small dishonesty that makes a
+ * walking app untrustworthy, so these say where the shop is instead of how
+ * far, and never offer a walking time.
+ */
+export function distanceLabel(store, metres) {
+  if (store?.approximate) {
+    const town = shortCityFull(store.city);
+    return town ? `somewhere in ${town}` : "location approximate";
+  }
+  return prettyDistance(metres);
+}
+
+/** As above, for the places that also print a walking time. */
+export function walkLabel(store, metres) {
+  return store?.approximate
+    ? distanceLabel(store, metres)
+    : `${prettyDistance(metres)} away · ${walkMinutes(metres)} min walk`;
+}
+
+/** The town's full name — shortCity() truncates for chart axes. */
+const shortCityFull = (city) => (city || "").trim();
 
 /** Open directions in whatever maps app the visitor has. */
 export function openDirections(store) {

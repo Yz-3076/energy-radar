@@ -326,19 +326,32 @@ def _in_israel(lat: float, lng: float) -> bool:
 
 
 def is_approximate(address: str, city_code: str) -> bool:
-    """Will this store be pinned at its village's centre rather than its own
+    """Will this store be pinned at its town's centre rather than its own
     address?
 
-    True only for an address with no street number in a locality small
-    enough that the distinction barely matters (see is_rural). Callers
-    should surface it — a pin the app presents as exact when it is really
-    "somewhere in this kibbutz" is the kind of small dishonesty that makes
-    a walking app untrustworthy.
+    True for any address with no street number in a town we can place. It
+    used to be true only for RURAL localities, on the reasoning that a
+    kibbutz is small enough for the distinction not to matter. That was
+    sound, and it also meant 213 branches with no street number in an
+    ordinary town were dropped entirely rather than shown imprecisely —
+    including most of Yellow and a third of Dor Alon, whose forecourts are
+    filed as "צומת אשקלון" or "כביש גהה" because a petrol station on a
+    junction genuinely has no street address.
+
+    Measured 2026-10-01 before widening it: OpenStreetMap could place only
+    2 of 26 sampled Yellow junctions and 0 of 26 Dor Alon ones by name, so
+    an exact pin is not available for these at any effort. The choice is a
+    town-centre pin or nothing.
+
+    Showing them is only honest if the app stops presenting a town-centre
+    pin as a doorway, which is why this widening ships together with the
+    UI change: an approximate store reads "somewhere in Ashkelon" and gives
+    no walking time, rather than "240 m · 3 min walk" to a motorway.
 
     Pure function of its inputs, so the pipeline can ask about a store
     without re-running the lookup.
     """
-    return _too_vague(address) and bool(city_name(city_code)) and is_rural(city_code)
+    return _too_vague(address) and bool(city_name(city_code))
 
 
 def _too_vague(address: str) -> bool:
@@ -660,13 +673,12 @@ def geocode(
     if result is None:
         if _too_vague(address):
             if is_approximate(address, city_code):
-                # A petrol station or shop in a kibbutz, addressed as
-                # "קיבוץ עינת" or "בכניסה לקיבוץ מזרע" — no street, because
-                # the village has no streets to speak of. Dor Alon files
-                # hundreds of these. The village's own coordinate is a
-                # genuinely good pin at that scale, so the store appears
-                # instead of being dropped; callers can tell these apart
-                # via is_approximate() and say so in the UI.
+                # A shop with no street address: a kibbutz store filed as
+                # "קיבוץ עינת", or a forecourt filed as "צומת אשקלון". The
+                # town's own coordinate is the best that exists for either —
+                # OSM cannot place these junctions by name — so the store
+                # appears instead of being dropped, and callers tell them
+                # apart via is_approximate() and say so in the UI.
                 centre = town_coord(town)
                 if centre is not None:
                     print(f"  geocode placed {address!r} at the centre of {town} (village, no street address)")

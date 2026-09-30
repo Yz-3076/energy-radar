@@ -40,6 +40,8 @@ import {
   promosForVariant,
   shortCity,
   openDirections,
+  distanceLabel,
+  walkLabel,
 } from "./ui.js";
 
 /* ── search ──────────────────────────────────────────────────────────── */
@@ -137,7 +139,7 @@ export function createSearchScreen(root, app) {
                 ${Can({ variant: v, size: 45 })}
                 <span class="row-text">
                   <span class="row-title">${h(v.fullName)}</span>
-                  <span class="row-sub">${h(isolate(hit.store.name))} · ${h(prettyDistance(hit.metres))} · ${h(relativeTime(hit.seenAt, app.now))}</span>
+                  <span class="row-sub">${h(isolate(hit.store.name))} · ${h(distanceLabel(hit.store, hit.metres))} · ${h(relativeTime(hit.seenAt, app.now))}</span>
                 </span>
                 <span class="row-price">${h(ils(hit.price))}</span>
               </button>`;
@@ -173,7 +175,7 @@ export function createSearchScreen(root, app) {
             ${Icons.Storefront({ size: 18, color: "rgba(234,240,234,.5)" })}
             <span class="row-text">
               <span class="row-title">${h(store.name)}</span>
-              <span class="row-sub">${h(isolate(chainLabel(store.chain)))} · ${h(prettyDistance(metres))} · ${store.shelf.length} variants</span>
+              <span class="row-sub">${h(isolate(chainLabel(store.chain)))} · ${h(distanceLabel(store, metres))} · ${store.shelf.length} variants</span>
             </span>
           </button>`,
         )
@@ -401,7 +403,7 @@ export function createStoreScreen(root, app) {
         </div>
 
         <div class="detail-name">${h(store.name)}</div>
-        <div class="detail-addr">${h(isolate(store.address))} · ${walkMinutes(metres)} min walk · ${h(prettyDistance(metres))}</div>
+        <div class="detail-addr">${h(isolate(store.address))} · ${h(walkLabel(store, metres))}</div>
         ${
           store.approximate
             ? `<div class="approx-note">Approximate — this branch is listed only as ${h(isolate(store.city))}, with no street address.</div>`
@@ -632,7 +634,7 @@ export function createVariantScreen(root, app) {
                       <span class="row-title">${h(s.name)}</span>
                       <span class="pill">${h(chainLabel(s.chain))}</span>
                     </span>
-                    <span class="row-sub">${h(prettyDistance(metres))} · ${
+                    <span class="row-sub">${h(distanceLabel(s, metres))} · ${
                       r.source === "official_feed"
                         ? `official feed · ${h(relativeTime(r.seenAt, app.now))}`
                         : `${h(r.qty ?? "?")} on shelf · ${h(relativeTime(r.seenAt, app.now))}`
