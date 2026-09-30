@@ -50,6 +50,7 @@ from pathlib import Path
 from il_supermarket_scarper.scrappers_factory import ScraperFactory
 from il_supermarket_scarper.utils.file_output import DiskFileOutput
 
+import archive
 import depletion
 import geocode as geo
 import promotions_gov
@@ -162,6 +163,10 @@ CHAINS = [
     # Found on a re-probe (see below) — the first pass sampled too few files
     # and wrongly cleared both.
     "SHUK_AHIR", "POLIZER",
+    # Sourced from the public archive rather than scraped — see archive.py
+    # for why, and for the licence that decides how long that lasts.
+    "MAHSANI_ASHUK_NEW_SOURCE", "ZOL_VEBEGADOL", "CITY_MARKET_KIRYATGAT",
+    "HET_COHEN_NEW_SOURCE",
 ]
 
 # PIPELINE_CHAINS=SUPER_PHARM,NETIV_HASED runs only those chains and leaves
@@ -420,6 +425,34 @@ def parse_stores(stores_dir: Path) -> dict[str, dict]:
                 "cityCode": city_code,
             }
     return stores
+
+
+def _is_monster_row(code: str, name: str) -> bool:
+    """The single rule for what counts as a Monster row, so a price read from
+    the archive is judged exactly as one scraped from a chain's own XML."""
+    name = name or ""
+    lowered = name.lower()
+    if code in BARCODE_TO_VARIANT:
+        return True
+    return (KNOWN_NAME_HINT in name or "MONSTER" in name.upper()) and not any(
+        x in lowered for x in NAME_HINT_EXCLUDES
+    )
+
+
+ARCHIVE_CACHE = DATA_DIR / "archive-cache.json"
+
+
+def load_archive_cache() -> dict:
+    try:
+        return json.loads(ARCHIVE_CACHE.read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        return {}
+
+
+def save_archive_cache(cache: dict) -> None:
+    ARCHIVE_CACHE.write_text(
+        json.dumps(cache, ensure_ascii=False, indent=1, sort_keys=True), encoding="utf-8"
+    )
 
 
 def parse_monster_items(prices_dir: Path, covered: set[str] | None = None):
@@ -836,14 +869,58 @@ async def run() -> None:
     covered_by_chain: dict[str, set[str]] = {}
     silent_chains: set[str] = set(_ALL_CHAINS) - set(CHAINS)
 
+    archive_cache = load_archive_cache()
+    archive_files = None
+
     for chain in CHAINS:
         print(f"=== {chain} ===")
-        stores_dir = await fetch_files(chain, "STORE_FILE", "stores")
-        prices_dir = await fetch_files(chain, "PRICE_FULL_FILE", "prices")
-
-        store_info = parse_stores(stores_dir)
         covered: set[str] = set()
-        items = list(parse_monster_items(prices_dir, covered))
+
+        slug = archive.ARCHIVE_CHAINS.get(chain)
+        if slug:
+            # Read from the archive instead of scraping. Cached in the repo
+            # because it only republishes once a day and CI runners are
+            # ephemeral — without this every run would pull ~400 MB to get
+            # yesterday's files again.
+            entry = archive_cache.get(chain)
+            if archive.is_fresh(entry):
+                store_info = {k: dict(v) for k, v in entry["stores"].items()}
+                items = list(entry["items"])
+                print(f"  {len(items)} Monster row(s) across {len(store_info)} "
+                      f"branch(es) (archive, cached)")
+            else:
+                if archive_files is None:
+                    archive_files = archive.list_files()
+                got = archive.fetch_chain(
+                    chain, slug, DUMPS_DIR, _is_monster_row, archive_files
+                )
+                if got is None:
+                    store_info, items = {}, []
+                else:
+                    store_info, items = got
+                    archive_cache[chain] = {
+                        "fetchedAt": datetime.now(timezone.utc).isoformat(),
+                        "stores": store_info,
+                        "items": items,
+                    }
+            # The pipeline anchors on a CBS code, and the archive's `city`
+            # column is not one thing: Hazi Hinam files the numeric code
+            # there, Zol Vebegadol files the town's name. Taking either
+            # literally loses the other, so it is decided per value.
+            for info in store_info.values():
+                if info.get("cityCode"):
+                    continue
+                city = (info.get("cityName") or "").strip().strip("'\"")
+                info["cityCode"] = city if city.isdigit() else _CODE_BY_TOWN.get(city, "")
+            # Every branch here came with its prices in one file, so there is
+            # no such thing as a branch we failed to fetch.
+            covered = set(store_info)
+        else:
+            stores_dir = await fetch_files(chain, "STORE_FILE", "stores")
+            prices_dir = await fetch_files(chain, "PRICE_FULL_FILE", "prices")
+            store_info = parse_stores(stores_dir)
+            items = list(parse_monster_items(prices_dir, covered))
+
         covered_by_chain[chain] = covered
         if not store_info and not items:
             # Nothing at all came back — could not look, as opposed to
@@ -957,6 +1034,7 @@ async def run() -> None:
     verify_pins(stores_by_key, store_city_code)
 
     geo.save_cache(geocode_cache)
+    save_archive_cache(archive_cache)
     promotions_gov.save_cache(promo_cache)
     append_history(new_observations)
 
