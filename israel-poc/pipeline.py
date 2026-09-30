@@ -11,7 +11,7 @@ Writes, all under ../data/:
                         app's Store[] (src/data/stores.ts) — the file the
                         app fetches directly.
   history/YYYY-MM.ndjson — append-only, one line per (store, variant) per
-                        run, sharded into one file per calendar month (see
+                        run, sharded into one file per day (see
                         _current_history_path). The "database": every past
                         price/sale observation, never overwritten, never
                         edited — this is what stats and the depletion
@@ -316,9 +316,16 @@ def parse_stores(stores_dir: Path) -> dict[str, dict]:
     return stores
 
 
-def parse_monster_items(prices_dir: Path):
+def parse_monster_items(prices_dir: Path, covered: set[str] | None = None):
     """Yields {store_id, barcode, name, price, last_sale} for every Monster
-    row found across every PriceFull file in `prices_dir`."""
+    row found across every PriceFull file in `prices_dir`.
+
+    `covered`, if given, collects the id of every branch whose price file we
+    actually managed to read — including the ones with no Monster in them.
+    That set is the difference between "this branch has stopped stocking it"
+    and "this branch's file never arrived", which carry_forward needs and
+    could not otherwise tell apart: both look like an absence of rows.
+    """
     for path in glob.glob(str(prices_dir / "*.xml")):
         try:
             root = ET.parse(path).getroot()
@@ -327,6 +334,8 @@ def parse_monster_items(prices_dir: Path):
         store_id = _normalize_store_id(root.findtext("StoreID"))
         if not store_id:
             continue
+        if covered is not None:
+            covered.add(store_id)
         for item in root.iter("Item"):
             code = item.findtext("ItemCode")
             name = item.findtext("ItemName") or ""
@@ -358,14 +367,24 @@ HISTORY_DIR = DATA_DIR / "history"
 
 
 def _current_history_path() -> Path:
-    """One file per calendar month (UTC) — data/history/2026-09.ndjson,
-    data/history/2026-10.ndjson, and so on. A single ever-growing file would
-    hit GitHub's 100MB-per-file push limit after roughly a month at this
-    project's real observed volume (~2,700 observations / 3-hour run
-    nationwide, confirmed 2026-09-08); sharding by month means no file ever
-    grows past about a month's worth, forever, with zero manual upkeep."""
-    month = datetime.now(timezone.utc).strftime("%Y-%m")
-    return HISTORY_DIR / f"{month}.ndjson"
+    """One file per day (UTC) — data/history/2026-10-01.ndjson, and so on.
+
+    This was one file per MONTH, sized against a measured ~2,700
+    observations per 3-hour run on 2026-09-08. That measurement went stale:
+    the chain list grew from 6 to 22 and the nationwide store count from
+    ~330 to ~1,000, and by 2026-09-30 the month's file was 88.6 MB after
+    growing 7 MB in a single day. GitHub refuses any file over 100 MB, so
+    September only escaped because it ran out of days — October would have
+    hit the wall around the 15th and every push after it would have failed,
+    silently freezing the website.
+
+    A day's worth is ~7 MB at today's volume, which leaves room for the
+    store count to grow several times over before a single file is anywhere
+    near the limit. Nothing that reads history needs to change: load_history
+    globs the directory, and write_history_index lists whatever is there, so
+    the old monthly files keep working alongside the new daily ones."""
+    day = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+    return HISTORY_DIR / f"{day}.ndjson"
 
 
 PROMO_HISTORY = DATA_DIR / "promo-history.json"
@@ -546,14 +565,14 @@ def append_history(new_rows: list[dict]) -> None:
 
 
 def write_history_index() -> None:
-    """data/history/index.json — the sorted list of monthly filenames that
+    """data/history/index.json — the sorted list of history filenames that
     actually exist. A browser fetching raw.githubusercontent.com has no way
     to list a directory, so anything client-side that wants the FULL
     history (a stats/analysis website, say) reads this manifest first, then
     fetches each file it names. Rewritten every run; trivially cheap."""
-    months = sorted(p.name for p in HISTORY_DIR.glob("*.ndjson"))
+    shards = sorted(p.name for p in HISTORY_DIR.glob("*.ndjson"))
     (HISTORY_DIR / "index.json").write_text(
-        json.dumps(months, indent=2), encoding="utf-8"
+        json.dumps(shards, indent=2), encoding="utf-8"
     )
 
 
@@ -628,7 +647,11 @@ def carry_forward_promos(fresh: dict, stores_by_key: dict[str, dict]) -> dict:
     return {**carried, **fresh}
 
 
-def carry_forward(stores_out: list[dict], silent_chains: set[str]) -> list[dict]:
+def carry_forward(
+    stores_out: list[dict],
+    silent_chains: set[str],
+    covered_by_chain: dict[str, set[str]] | None = None,
+) -> list[dict]:
     """Keep the previous run's stores for chains that returned nothing today.
 
     Several chains answer a home connection in Israel and not GitHub's
@@ -639,18 +662,25 @@ def carry_forward(stores_out: list[dict], silent_chains: set[str]) -> list[dict]
     silently delete them again, because latest.json is rebuilt from scratch
     every time and a chain that fetched nothing contributes nothing.
 
-    Only chains that fetched NOTHING AT ALL are carried. A chain that came
-    back with real files is authoritative for its own branches, so a branch
-    it no longer lists has genuinely stopped stocking Monster and must
-    disappear. This is the difference between "we could not look" and "we
-    looked and it is gone", and only the first is worth preserving.
+    Authority is per BRANCH, not per chain. It used to be per chain: any
+    chain that returned a store file and a single price file was treated as
+    authoritative for all of its branches, and every branch it had not
+    actually covered was deleted. Measured on run 36484313469
+    (2026-09-28): Carrefour returned its store file and exactly 1 price
+    file out of 147 branches, so 146 real shops were dropped on the spot.
+    The site swung between 1,016 and 810 stores depending on which chains
+    happened to fetch cleanly — Carrefour vanished on 6 runs out of 22,
+    Osher Ad on 5, Fresh Market on 4.
+
+    So a branch is only deleted when its own price file came back and had no
+    Monster in it. `covered_by_chain` carries that set; a branch missing
+    from it was never looked at, and is kept.
 
     Prices on a carried store are as old as the run that fetched them. The
     app already dates every shelf row from `seenAt` and fades stale ones, so
     a carried store reads as old rather than as current.
+
     """
-    if not silent_chains:
-        return []
     path = DATA_DIR / "latest.json"
     if not path.exists():
         return []
@@ -661,10 +691,21 @@ def carry_forward(stores_out: list[dict], silent_chains: set[str]) -> list[dict]
         return []
 
     have = {s["id"] for s in stores_out}
-    carried = [
-        s for s in previous
-        if s.get("chain", "").upper().replace(" ", "_") in silent_chains and s["id"] not in have
-    ]
+    covered_by_chain = covered_by_chain or {}
+
+    def keep(store: dict) -> bool:
+        if store["id"] in have:
+            return False  # this run produced it; nothing to carry
+        chain = store.get("chain", "").upper().replace(" ", "_")
+        if chain in silent_chains:
+            return True  # chain returned nothing at all
+        covered = covered_by_chain.get(chain)
+        if covered is None:
+            return False  # chain not attempted this run and not silent
+        # Kept unless this branch's own price file came back empty of Monster.
+        return store["id"].split("-", 1)[-1] not in covered
+
+    carried = [s for s in previous if keep(s)]
     if carried:
         by_chain = Counter(s["chain"] for s in carried)
         print(f"  carried {len(carried)} store(s) from chain(s) that returned nothing "
@@ -685,6 +726,8 @@ async def run() -> None:
     # never reach the "returned nothing" branch below — carry_forward would
     # find nothing to carry and latest.json would shrink to just the chains
     # that ran. Confirmed: a SHUFERSAL-only run wrote 220 stores over 1,019.
+    # chain -> ids of branches whose price file we actually read this run
+    covered_by_chain: dict[str, set[str]] = {}
     silent_chains: set[str] = set(_ALL_CHAINS) - set(CHAINS)
 
     for chain in CHAINS:
@@ -693,12 +736,20 @@ async def run() -> None:
         prices_dir = await fetch_files(chain, "PRICE_FULL_FILE", "prices")
 
         store_info = parse_stores(stores_dir)
-        items = list(parse_monster_items(prices_dir))
+        covered: set[str] = set()
+        items = list(parse_monster_items(prices_dir, covered))
+        covered_by_chain[chain] = covered
         if not store_info and not items:
             # Nothing at all came back — could not look, as opposed to
             # looked and found none. carry_forward() treats the two
             # differently.
             silent_chains.add(chain)
+        if store_info and len(covered) < len(store_info):
+            # Normal for a chain that publishes one file per branch and is
+            # slow; worth printing because it is also what a partial outage
+            # looks like, and those branches are about to be carried rather
+            # than deleted.
+            print(f"  price files covered {len(covered)}/{len(store_info)} branch(es)")
         print(f"  {len(items)} Monster row(s) across {len(store_info)} branch(es)")
 
         # Both dicts are fully in memory now, so the XML has no further use.
@@ -818,7 +869,7 @@ async def run() -> None:
             row["depletion"] = depletion.assess(history_rows)
         stores_out.append(store)
 
-    stores_out += carry_forward(stores_out, silent_chains)
+    stores_out += carry_forward(stores_out, silent_chains, covered_by_chain)
 
     DATA_DIR.mkdir(parents=True, exist_ok=True)
     (DATA_DIR / "latest.json").write_text(
