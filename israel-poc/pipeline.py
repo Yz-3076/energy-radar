@@ -292,6 +292,102 @@ def _normalize_store_id(raw: str | None) -> str | None:
     return stripped or "0"
 
 
+# Towns whose name is also an ordinary Hebrew word, so finding one inside a
+# branch name proves nothing. "אזור" is a real town south of Tel Aviv and
+# also simply means "zone", which is how "שער בנימין אזור תעשיה" — a West
+# Bank industrial estate — nearly ended up pinned in Azor.
+# Towns whose name is also an ordinary Hebrew word, so finding one inside a
+# branch name proves nothing. "אזור" is a real town south of Tel Aviv and
+# also simply means "zone", which is how "שער בנימין אזור תעשיה" — a West
+# Bank industrial estate — nearly ended up pinned in Azor. "מסעדה" is a
+# Druze village in the Golan and also the word for "restaurant", which put
+# a branch called "מסעדה נצרת" — a Nazareth restaurant — a hundred
+# kilometres north of Nazareth.
+AMBIGUOUS_TOWN_NAMES = {
+    "אזור", "מרכז", "גבעה", "הר", "עמק", "שדה", "גן", "כפר", "בית",
+    "מסעדה", "רמות", "כרמל", "שמיר", "נאות", "סלמה",
+}
+
+#: Branches that are not places you can walk into. Several chains list their
+#: web shop as a branch, with a URL where the address should be; pinning one
+#: on a map tells someone to walk to a website.
+ONLINE_BRANCH_HINTS = ("אונליין", "online", "משלוח", "דילברי")
+
+#: A town name must sit on word boundaries inside the branch name. Hebrew
+#: has no case to lean on, so this is what stops "כרמל" matching inside
+#: "דליית אל כרמל", which is a different town twenty minutes away.
+_TOWN_BOUNDARY = set(" 	 ,.;:()[]{}|/\'\"") | {"-", "–", "—", "*"}
+
+
+def _load_town_codes() -> dict[str, str]:
+    """Town name -> CBS code, the reverse of data/city-codes.json.
+
+    First spelling wins where a code is duplicated; the table is the same
+    one verify_pins already uses to turn a code back into a name, so a code
+    guessed here round-trips to the name it came from.
+    """
+    try:
+        names = json.loads((DATA_DIR / "city-codes.json").read_text(encoding="utf-8"))["names"]
+    except (OSError, ValueError, KeyError):
+        return {}
+    out: dict[str, str] = {}
+    for code, town in names.items():
+        t = (town or "").strip()
+        if t and t not in out:
+            out[t] = code
+    return out
+
+
+_CODE_BY_TOWN = _load_town_codes()
+
+
+def is_online_branch(name: str, address: str) -> bool:
+    """True for a chain's web shop masquerading as a branch."""
+    blob = f"{name or ''} {address or ''}".lower()
+    return any(h in blob for h in ONLINE_BRANCH_HINTS) or "http" in blob
+
+
+def town_code_from_name(branch_name: str, code_by_town: dict[str, str]) -> str:
+    """The CBS town code for a branch whose chain published none, read out of
+    the branch's own name.
+
+    Several chains publish every branch with City=0 — Yohananof, Keshet,
+    Super Sapir, Shuk Ahir and Salach Dabach among them — while naming the
+    branch after the town it is in: Keshet's branches are literally called
+    נהריה, נשר and נוף הגליל, next to a real street address. Without a town
+    the geocoder has nothing to anchor on and the branch never reaches the
+    map, which is why Yohananof showed 8 shops out of the 44 that stock
+    Monster.
+
+    Ambiguity is refused rather than guessed. If two different towns both
+    appear in the name we return nothing, because there is no honest way to
+    choose: "רמלה נאות שמיר" contains both Ramla and Shamir, which are at
+    opposite ends of the country, and picking the longer or the earlier
+    match is right about half the time. A branch left unresolved is exactly
+    as unresolved as it was before this function existed; a branch pinned in
+    the wrong town tells someone there is Monster where there is none.
+    """
+    name = (branch_name or "").strip()
+    if not name:
+        return ""
+    found = set()
+    for town in code_by_town:
+        if town in AMBIGUOUS_TOWN_NAMES:
+            continue
+        start = name.find(town)
+        if start == -1:
+            continue
+        before = name[start - 1] if start else " "
+        after_i = start + len(town)
+        after = name[after_i] if after_i < len(name) else " "
+        if before in _TOWN_BOUNDARY and after in _TOWN_BOUNDARY:
+            found.add(town)
+    # One town whose name contains another (Kiryat Ono vs Ono) is not a
+    # conflict — the longer one is the real match. Two unrelated towns are.
+    distinct = {t for t in found if not any(t != o and t in o for o in found)}
+    return code_by_town[distinct.pop()] if len(distinct) == 1 else ""
+
+
 def parse_stores(stores_dir: Path) -> dict[str, dict]:
     """StoreID -> {name, address, zip}"""
     stores = {}
@@ -304,14 +400,24 @@ def parse_stores(stores_dir: Path) -> dict[str, dict]:
             sid = _normalize_store_id(store.findtext("StoreID"))
             if not sid:
                 continue
+            name = (store.findtext("StoreName") or "").strip()
+            address = (store.findtext("Address") or "").strip()
+            if is_online_branch(name, address):
+                continue  # a web shop is not somewhere you can walk to
+            city_code = (store.findtext("City") or "").strip()
+            if city_code in ("", "0"):
+                # Several chains publish every branch with City=0 while
+                # naming the branch after its town. Reading it back is the
+                # difference between Yohananof showing 8 shops and 44.
+                city_code = town_code_from_name(name, _CODE_BY_TOWN) or city_code
             stores[sid] = {
-                "name": (store.findtext("StoreName") or "").strip(),
-                "address": (store.findtext("Address") or "").strip(),
+                "name": name,
+                "address": address,
                 "zip": (store.findtext("ZIPCode") or "").strip(),
                 # A numeric municipality code, not a name. Useless for
                 # geocoding directly, but it groups branches by town, which
                 # is what validates a city guessed from a store name.
-                "cityCode": (store.findtext("City") or "").strip(),
+                "cityCode": city_code,
             }
     return stores
 
