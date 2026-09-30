@@ -291,12 +291,19 @@ footer .fl{display:flex;gap:18px;font-family:var(--mono);font-size:11.5px;letter
 
 <footer>
   <div class="wrap frow">
-    <p data-i="foot">Energy Radar is an independent project and is not affiliated with, endorsed by, or connected to Monster Energy or any retail chain. Prices are what the chains themselves published and can lag the shelf.</p>
+    <p data-i="foot">Energy Radar is an independent project and is not affiliated with, endorsed by, or connected to Monster Energy or any retail chain. Prices are what the chains themselves published and can lag the shelf. Prices for some chains come from the OpenIsraeliSupermarkets archive (CC BY-NC-SA), which scrapes chains that do not answer from outside Israel.</p>
     <div class="fl">
       <a href="privacy.html" data-i="f_priv">Privacy</a>
       <a href="analysis.html" data-i="f_analysis">Analysis</a>
       <a href="https://github.com/Yz-3076/energy-radar" data-i="f_src">Source</a>
       <a href="https://github.com/Yz-3076/energy-radar/tree/main/data" data-i="f_raw">Raw data</a>
+      <!--
+        Required, not decorative. Eight chains' prices come from the
+        OpenIsraeliSupermarkets archive, which is CC BY-NC-SA: attribution
+        is a condition of using it at all. See israel-poc/archive.py.
+      -->
+      <a href="https://www.kaggle.com/datasets/erlichsefi/israeli-supermarkets-2024"
+         rel="noopener" data-i="f_archive">Archive source</a>
     </div>
   </div>
 </footer>
@@ -356,6 +363,7 @@ const HE={
  e_wait4:"ממתין להרצה הראשונה",e_wait5:"ממתין להרצה הראשונה",e_deals:"אין מבצעים מפורסמים כרגע",
  foot:"Energy Radar הוא פרויקט עצמאי, ללא שיוך, חסות או קשר ל-Monster Energy או לרשת קמעונאית כלשהי. המחירים הם מה שהרשתות עצמן פרסמו ועשויים לפגר אחרי המדף.",
  f_priv:"פרטיות",f_analysis:"ניתוח",f_src:"קוד מקור",f_raw:"נתונים גולמיים",
+ f_archive:"מקור הארכיון",
  c_cheap:"הזול בישראל כרגע",c_spread:"פער בין הזול ליקר",c_flav:"טעמים במעקב",c_cover:"ערים מכוסות",
  lo:"זול",hi:"יקר",noloc:"אין נתוני מיקום",day:"יום",avg:"ממוצע"
 };
