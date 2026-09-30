@@ -362,15 +362,49 @@ def _too_vague(address: str) -> bool:
     return not any(ch.isdigit() for ch in address)
 
 
+#: Bumped whenever this module gets better at resolving an address. A
+#: cached failure is only trustworthy while the thing that produced it has
+#: not changed, and the cache key is address|zip — it does not include the
+#: town, so a branch that gains a usable city code keeps returning the old
+#: "no" forever. That is not hypothetical: the run of 2026-09-30 shipped
+#: town-from-name resolution for 91 branches and the store count moved by
+#: two, because every one of those addresses short-circuited on a cached
+#: None before the new town was ever consulted.
+#:
+#:   1  street + town, place-in-town, rural town-centre fallback
+#:   2  town read from the branch name; town-centre pins outside rural areas
+RESOLVER_VERSION = 2
+
+#: Not a valid cache key — every real one contains a "|" separator.
+_VERSION_KEY = "__resolver_version__"
+
+
 def load_cache() -> dict:
-    if CACHE_PATH.exists():
-        return json.loads(CACHE_PATH.read_text(encoding="utf-8"))
-    return {}
+    """The address cache, with stale failures dropped.
+
+    Successful pins are kept forever: a street does not move. Failures are
+    dropped whenever RESOLVER_VERSION changes, because "we could not place
+    this" is a statement about the resolver as much as the address, and
+    keeping it would silently cancel the improvement that bumped it.
+    """
+    if not CACHE_PATH.exists():
+        return {}
+    cache = json.loads(CACHE_PATH.read_text(encoding="utf-8"))
+    if cache.pop(_VERSION_KEY, None) != RESOLVER_VERSION:
+        failures = [k for k, v in cache.items() if v is None]
+        for k in failures:
+            del cache[k]
+        if failures:
+            print(f"  geocode cache: retrying {len(failures)} address(es) "
+                  f"that failed under an older resolver")
+    return cache
 
 
 def save_cache(cache: dict) -> None:
     CACHE_PATH.parent.mkdir(parents=True, exist_ok=True)
-    CACHE_PATH.write_text(json.dumps(cache, ensure_ascii=False, indent=2, sort_keys=True), encoding="utf-8")
+    out = dict(cache)
+    out[_VERSION_KEY] = RESOLVER_VERSION
+    CACHE_PATH.write_text(json.dumps(out, ensure_ascii=False, indent=2, sort_keys=True), encoding="utf-8")
 
 
 def _cache_key(address: str, zip_code: str) -> str:
