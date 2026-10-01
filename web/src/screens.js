@@ -283,6 +283,11 @@ const TAG_META = {
     tone: "warn",
     why: "Two or more flavours here sold regularly and then went quiet, which usually means an empty shelf.",
   },
+  delivery: {
+    label: "Delivery only",
+    tone: "warn",
+    why: "A dark store: real stock at a real address, picked by couriers. There is no shop floor, so this one comes to you rather than you to it.",
+  },
   deal_regular: {
     label: "Often has deals",
     tone: "good",

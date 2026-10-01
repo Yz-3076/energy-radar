@@ -166,7 +166,7 @@ CHAINS = [
     # Sourced from the public archive rather than scraped — see archive.py
     # for why, and for the licence that decides how long that lasts.
     "MAHSANI_ASHUK_NEW_SOURCE", "ZOL_VEBEGADOL", "CITY_MARKET_KIRYATGAT",
-    "HET_COHEN_NEW_SOURCE",
+    "HET_COHEN_NEW_SOURCE", "WOLT",
 ]
 
 # PIPELINE_CHAINS=SUPER_PHARM,NETIV_HASED runs only those chains and leaves
@@ -318,6 +318,23 @@ AMBIGUOUS_TOWN_NAMES = {
 #: on a map tells someone to walk to a website.
 ONLINE_BRANCH_HINTS = ("אונליין", "online", "משלוח", "דילברי")
 
+#: Chains whose branches are real, stocked, addressed places that you
+#: nonetheless cannot walk into. Wolt Market runs dark stores: couriers
+#: pick from them and the public never comes in.
+#:
+#: They are NOT filtered out the way ONLINE_BRANCH_HINTS filters a web
+#: shop, because the difference matters to the question this app answers.
+#: A web shop has no location at all, so pinning one tells you to walk to
+#: a website. A dark store has a real location holding real stock, and
+#: "there are 9 flavours sitting 600 m from you, Wolt will bring them" is
+#: a true and useful answer. What would be false is the walking time, so
+#: the store carries a `delivery` flag and the app drops it.
+DELIVERY_ONLY_CHAINS = {"WOLT"}
+
+#: Branch names that are not a branch. Wolt files "Wolt Market Israel Test
+#: Venue" among its real ones, with a plausible address in Rehovot.
+TEST_BRANCH_HINTS = ("test venue", "בדיקה")
+
 #: A town name must sit on word boundaries inside the branch name. Hebrew
 #: has no case to lean on, so this is what stops "כרמל" matching inside
 #: "דליית אל כרמל", which is a different town twenty minutes away.
@@ -350,6 +367,12 @@ def is_online_branch(name: str, address: str) -> bool:
     """True for a chain's web shop masquerading as a branch."""
     blob = f"{name or ''} {address or ''}".lower()
     return any(h in blob for h in ONLINE_BRANCH_HINTS) or "http" in blob
+
+
+def is_test_branch(name: str) -> bool:
+    """True for a placeholder a chain left in its own store file."""
+    lowered = (name or "").lower()
+    return any(h in lowered for h in TEST_BRANCH_HINTS)
 
 
 def town_code_from_name(branch_name: str, code_by_town: dict[str, str]) -> str:
@@ -643,7 +666,10 @@ def tag_stores(
     promo_since = all_promo_days[0] if all_promo_days else None
 
     for store in stores:
-        tags: list[str] = []
+        # Seeded rather than appended: the assignment at the end of this
+        # loop replaces `tags` wholesale, so a flag set when the store was
+        # built has to be put back here or it is lost.
+        tags: list[str] = ["delivery"] if store.get("delivery") else []
         days = days_by_store.get(store["id"], set())
 
         if days and every_day:
@@ -937,6 +963,18 @@ async def run() -> None:
                 # existing stores are carried rather than deleted.
                 store_info, items = {}, []
                 print("  awaiting its turn in the archive refresh budget")
+            # parse_stores drops web shops and placeholders for scraped
+            # chains; the archive path reached neither check until Wolt
+            # arrived with a test venue in its store file.
+            dropped = {
+                sid for sid, i in store_info.items()
+                if is_online_branch(i["name"], i["address"]) or is_test_branch(i["name"])
+            }
+            for sid in dropped:
+                del store_info[sid]
+            if dropped:
+                print(f"  dropped {len(dropped)} web-shop/placeholder branch(es)")
+
             # The pipeline anchors on a CBS code, and the archive's `city`
             # column is not one thing: Hazi Hinam files the numeric code
             # there, Zol Vebegadol files the town's name. Taking either
@@ -1019,6 +1057,11 @@ async def run() -> None:
                     ),
                     "shelf": [],
                 }
+                if chain in DELIVERY_ONLY_CHAINS:
+                    # Only set when true, rather than False on all 1,000+
+                    # others: the app reads it as a plain truthiness check
+                    # and latest.json is fetched on every page load.
+                    stores_by_key[store_key]["delivery"] = True
                 store_city_code[store_key] = info.get("cityCode", "")
                 # First time we're keeping this store this run, so this is
                 # the natural place to note that it needs promos — but only

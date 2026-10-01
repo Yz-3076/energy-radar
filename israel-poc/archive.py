@@ -49,6 +49,8 @@ ARCHIVE_CHAINS = {
     "ZOL_VEBEGADOL": "zol_vebegadol",
     "CITY_MARKET_KIRYATGAT": "city_market_kiryatgat",
     "HET_COHEN_NEW_SOURCE": "het_cohen_new_source",
+    # Delivery-only dark stores — see DELIVERY_ONLY_CHAINS in pipeline.py.
+    "WOLT": "wolt",
 }
 
 #: The archive carries 31 chains with both a store file and a price file.
@@ -70,12 +72,10 @@ ARCHIVE_CHAINS = {
 #: file gives "unknown" for the address and the town of all 72 branches.
 #: There is nowhere to put the pins.
 #:
-#: wolt is a decision rather than a measurement, which is why it is not
-#: in the table above. Those 30 branches are Wolt Market's own dark
-#: stores: real addresses, real stock, and no door you can walk through.
-#: Adding them to a map that answers "where can I buy this near me" and
-#: shows a walking time needs them labelled as delivery-only first, the
-#: way forecourts are labelled approximate.
+#: wolt was a decision rather than a measurement: 34 branches, 30 with
+#: Monster, 587 rows, and not one door you can walk through — they are
+#: Wolt Market's own dark stores. They are in, carrying the delivery-only
+#: flag that stops the app offering a walking time to a warehouse.
 
 #: Bytes of archive a single run is allowed to download.
 #:

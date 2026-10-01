@@ -139,11 +139,18 @@ export function distanceLabel(store, metres) {
   return prettyDistance(metres);
 }
 
-/** As above, for the places that also print a walking time. */
+/**
+ * As above, for the places that also print a walking time.
+ *
+ * A delivery-only branch keeps its distance and loses its walk. The pin is
+ * a real address holding real stock — Wolt Market's dark stores are where
+ * the couriers pick from — so "600 m away" is true and worth knowing, and
+ * it is only the invitation to walk there that is false: there is no door.
+ */
 export function walkLabel(store, metres) {
-  return store?.approximate
-    ? distanceLabel(store, metres)
-    : `${prettyDistance(metres)} away · ${walkMinutes(metres)} min walk`;
+  if (store?.approximate) return distanceLabel(store, metres);
+  if (store?.delivery) return `${prettyDistance(metres)} away · delivery only`;
+  return `${prettyDistance(metres)} away · ${walkMinutes(metres)} min walk`;
 }
 
 /** The town's full name — shortCity() truncates for chart axes. */
