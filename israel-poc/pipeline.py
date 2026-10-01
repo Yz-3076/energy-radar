@@ -439,7 +439,16 @@ def _is_monster_row(code: str, name: str) -> bool:
     )
 
 
-ARCHIVE_CACHE = DATA_DIR / "archive-cache.json"
+#: Deliberately NOT under data/, and gitignored.
+#:
+#: This is the parsed form of 1.08 GB of downloaded CSV, and it is rewritten
+#: whenever the archive republishes — committing it would add its whole size
+#: to the repo's history every single day, to store something the archive
+#: will hand back for free. CI keeps it across runs with actions/cache
+#: instead (see .github/workflows/fetch-prices.yml). A cache miss is not a
+#: failure: the run simply downloads, which is what it did before there was
+#: a cache at all.
+ARCHIVE_CACHE = Path(__file__).parent / ".archive-cache.json"
 
 
 def load_archive_cache() -> dict:
@@ -450,8 +459,11 @@ def load_archive_cache() -> dict:
 
 
 def save_archive_cache(cache: dict) -> None:
+    # Drop chains no longer sourced from the archive, so taking one out of
+    # ARCHIVE_CHAINS also stops us carrying its rows around forever.
+    kept = {k: v for k, v in cache.items() if k in archive.ARCHIVE_CHAINS}
     ARCHIVE_CACHE.write_text(
-        json.dumps(cache, ensure_ascii=False, indent=1, sort_keys=True), encoding="utf-8"
+        json.dumps(kept, ensure_ascii=False, indent=1, sort_keys=True), encoding="utf-8"
     )
 
 
@@ -870,7 +882,23 @@ async def run() -> None:
     silent_chains: set[str] = set(_ALL_CHAINS) - set(CHAINS)
 
     archive_cache = load_archive_cache()
-    archive_files = None
+    archive_files: list[dict] | None = None
+    archive_plan: dict[str, str] = {}
+    archive_chains = [c for c in CHAINS if c in archive.ARCHIVE_CHAINS]
+    if archive_chains:
+        archive_files = archive.list_files()
+        if not archive_files:
+            # Kaggle unreachable. Distinct from "nothing to refresh", and
+            # worth saying so: every archive chain falls back to its cached
+            # copy, or to carry_forward if there is none, and a run that
+            # printed "refreshing nothing" would look identical to a
+            # perfectly healthy one. Observed once locally on 2026-10-01.
+            print("archive: could not list the dataset — serving cached copies only")
+        else:
+            archive_plan = archive.refresh_plan(archive_cache, archive_files, archive_chains)
+            waiting = [c for c in archive_chains if c not in archive_plan]
+            print(f"archive: refreshing {sorted(archive_plan) or 'nothing (all current)'}"
+                  + (f", serving {len(waiting)} chain(s) from cache" if waiting else ""))
 
     for chain in CHAINS:
         print(f"=== {chain} ===")
@@ -878,19 +906,12 @@ async def run() -> None:
 
         slug = archive.ARCHIVE_CHAINS.get(chain)
         if slug:
-            # Read from the archive instead of scraping. Cached in the repo
-            # because it only republishes once a day and CI runners are
-            # ephemeral — without this every run would pull ~400 MB to get
-            # yesterday's files again.
+            # Read from the archive instead of scraping. Which chains a run
+            # actually downloads is decided up front by refresh_plan, which
+            # skips anything the archive has not republished since we last
+            # read it and rations the rest — see REFRESH_BUDGET.
             entry = archive_cache.get(chain)
-            if archive.is_fresh(entry):
-                store_info = {k: dict(v) for k, v in entry["stores"].items()}
-                items = list(entry["items"])
-                print(f"  {len(items)} Monster row(s) across {len(store_info)} "
-                      f"branch(es) (archive, cached)")
-            else:
-                if archive_files is None:
-                    archive_files = archive.list_files()
+            if chain in archive_plan:
                 got = archive.fetch_chain(
                     chain, slug, DUMPS_DIR, _is_monster_row, archive_files
                 )
@@ -899,10 +920,23 @@ async def run() -> None:
                 else:
                     store_info, items = got
                     archive_cache[chain] = {
+                        "sourceDate": archive_plan[chain],
                         "fetchedAt": datetime.now(timezone.utc).isoformat(),
                         "stores": store_info,
                         "items": items,
                     }
+            elif isinstance(entry, dict) and entry.get("stores"):
+                store_info = {k: dict(v) for k, v in entry["stores"].items()}
+                items = list(entry["items"])
+                print(f"  {len(items)} Monster row(s) across {len(store_info)} "
+                      f"branch(es) (archive, cached {entry.get('sourceDate', '?')[:10]})")
+            else:
+                # Waiting its turn under the refresh budget with nothing
+                # cached yet — only the first run or two after a cold cache.
+                # It falls through to the silent-chain path below, so its
+                # existing stores are carried rather than deleted.
+                store_info, items = {}, []
+                print("  awaiting its turn in the archive refresh budget")
             # The pipeline anchors on a CBS code, and the archive's `city`
             # column is not one thing: Hazi Hinam files the numeric code
             # there, Zol Vebegadol files the town's name. Taking either

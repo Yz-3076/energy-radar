@@ -43,6 +43,30 @@ jobs:
         working-directory: israel-poc
         run: pip install -r requirements.txt
 
+      # Eight chains come from the public price archive instead of being
+      # scraped (israel-poc/archive.py). Their source files total 1.08 GB —
+      # Super Pharm alone is 604 MB — and re-downloading the set every three
+      # hours is what pushed this job from 1:04 to the 120-minute timeout on
+      # 2026-09-30. The pipeline keeps the parsed result in a cache file and
+      # only refetches chains the archive has actually republished, but a CI
+      # runner is thrown away at the end of the job, so without this step
+      # that cache is empty on arrival every single time and the saving
+      # never happens.
+      #
+      # The key is per-run on purpose, so the exact key always misses and
+      # the post-job step always writes the updated file back; restore-keys
+      # then loads the most recent previous one. Keying on content instead
+      # would refuse to save the very update this exists to keep.
+      #
+      # A miss is not a failure. The run downloads, exactly as it did before
+      # there was a cache, and warms the next one.
+      - name: Restore the parsed price archive
+        uses: actions/cache@v4
+        with:
+          path: israel-poc/.archive-cache.json
+          key: price-archive-${{ github.run_id }}
+          restore-keys: price-archive-
+
       - name: Run the pipeline
         working-directory: israel-poc
         env:

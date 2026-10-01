@@ -40,3 +40,8 @@ build/
 # Regenerated on demand by israel-poc/dump_solvable.py.
 data/unresolved.txt
 web/.preview/
+
+# Parsed archive cache. Kept across CI runs by actions/cache, never
+# committed — it is 1 GB of downloaded CSV in parsed form and the archive
+# will hand it back for free. See pipeline.ARCHIVE_CACHE.
+israel-poc/.archive-cache.json

@@ -30,7 +30,6 @@ import io
 import json
 import subprocess
 import urllib.parse
-from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 DATASET = "erlichsefi/israeli-supermarkets-2024"
@@ -52,9 +51,46 @@ ARCHIVE_CHAINS = {
     "HET_COHEN_NEW_SOURCE": "het_cohen_new_source",
 }
 
-#: The archive publishes once a day, so refetching every three hours costs
-#: several hundred megabytes a run and buys nothing.
-CACHE_TTL = timedelta(hours=20)
+#: The archive carries 31 chains with both a store file and a price file.
+#: Of the ones above neither we scrape nor source, every one was read in
+#: full on 2026-10-01 — the whole price file, not the 40-file sample that
+#: previously cleared SHUK_AHIR and POLIZER by mistake:
+#:
+#:   wolt                  34 branches, 30 with Monster, 587 rows
+#:   city_market_shops     72 branches,  0 placeable    , 997 rows
+#:   good_pharm            82 branches,  1 with Monster,   1 row
+#:   shefa_barcart_ashem   22 branches,  0 with Monster,   0 rows
+#:   meshmat_yosef_2        4 branches,  0 with Monster,   0 rows
+#:
+#: So three of them are settled: they do not sell it, and re-measuring
+#: costs 78 MB to learn that again.
+#:
+#: city_market_shops is the frustrating one. It has the Monster rows and
+#: it has the store file our own scrape could never find, and the store
+#: file gives "unknown" for the address and the town of all 72 branches.
+#: There is nowhere to put the pins.
+#:
+#: wolt is a decision rather than a measurement, which is why it is not
+#: in the table above. Those 30 branches are Wolt Market's own dark
+#: stores: real addresses, real stock, and no door you can walk through.
+#: Adding them to a map that answers "where can I buy this near me" and
+#: shows a walking time needs them labelled as delivery-only first, the
+#: way forecourts are labelled approximate.
+
+#: Bytes of archive a single run is allowed to download.
+#:
+#: The whole set is 1.08 GB and Super Pharm alone is 604 MB of it. Pulling
+#: all eight chains in one run is what took the scheduled job from 1:04 to
+#: the 120-minute timeout on 2026-09-30 — the download is most of a run's
+#: wall clock, and on the old code every run paid it again for files that
+#: had not changed. So a run now refreshes only what fits in this budget
+#: and leaves the rest to the next one. The schedule fires eight times a
+#: day and the archive republishes once, so every chain still lands inside
+#: a day; a chain waiting its turn is served from the cache meanwhile, and
+#: the very first run after this lands is the only one that has nothing to
+#: serve. 400 MB is chosen so Super Pharm gets a run to itself and the
+#: other seven fit in two.
+REFRESH_BUDGET = 400_000_000
 
 #: Columns the archive writes once per source file rather than on every row.
 _MERGED_COLUMNS = ("file_name", "storeid", "chainid", "subchainid")
@@ -94,15 +130,20 @@ def list_files() -> list[dict]:
     return files
 
 
-def path_for(files: list[dict], kind: str, slug: str) -> str | None:
+def meta_for(files: list[dict], kind: str, slug: str) -> dict | None:
     """Look a file up by name, not by assumed folder — the dataset moves
     chains between folders and Victory currently lives under misc/."""
     want = f"{kind}_{slug}.csv"
     for f in files:
         name = f.get("name") or ""
         if name == want or name.endswith("/" + want):
-            return name
+            return f
     return None
+
+
+def path_for(files: list[dict], kind: str, slug: str) -> str | None:
+    meta = meta_for(files, kind, slug)
+    return (meta.get("name") or None) if meta else None
 
 
 def _forward_fill(reader, columns=_MERGED_COLUMNS):
@@ -141,11 +182,18 @@ def fetch_chain(chain: str, slug: str, tmp_dir: Path, is_monster, files=None):
         sid = (row.get("storeid") or "").strip().lstrip("0") or "0"
         address = (row.get("address") or "").strip()
         city = (row.get("city") or "").strip()
+        if city.lower() == "unknown":
+            city = ""
         if address.lower() in ("", "unknown"):
             # Het Cohen publishes a town and no street at all. Falling back
             # to the town name keeps the branch alive and lands it on the
             # existing approximate-pin path, which the app already labels
             # "somewhere in this town" rather than implying a doorway.
+            #
+            # Blanking an "unknown" city first is what stops that fallback
+            # turning into a store whose address is the literal string
+            # "unknown" — City Market Shops files exactly that, for all 72
+            # of its branches, and one of them was getting through.
             address = city
         if not sid or not address:
             continue
@@ -193,12 +241,52 @@ def fetch_chain(chain: str, slug: str, tmp_dir: Path, is_monster, files=None):
     return store_info, items
 
 
-def is_fresh(entry) -> bool:
-    """Has this chain been pulled from the archive recently enough to skip?"""
-    if not isinstance(entry, dict):
-        return False
-    try:
-        fetched = datetime.fromisoformat(entry["fetchedAt"])
-    except (KeyError, ValueError, TypeError):
-        return False
-    return datetime.now(timezone.utc) - fetched < CACHE_TTL
+def refresh_plan(cache: dict, files: list[dict], chains=None,
+                 budget: int = REFRESH_BUDGET) -> dict:
+    """{chain: publication date} for the chains this run should download.
+
+    Two gates, in order.
+
+    Has it changed? Each cache entry records the `creationDate` Kaggle
+    reports for the price file it was built from, so an unchanged date is
+    an unchanged file and there is nothing to fetch. This replaced a
+    20-hour timer, which could only ever guess: it re-downloaded 1.08 GB
+    to find yesterday's bytes whenever the timer expired before the
+    archive republished, and served a stale chain whenever it did not.
+
+    `chains` restricts the plan to the run's own chain list, so a
+    PIPELINE_CHAINS-limited run does not spend its budget downloading
+    chains it is not going to look at.
+
+    Does it fit? Whatever is left competes for REFRESH_BUDGET, oldest
+    first, so a run spreads its cost instead of paying for all eight. One
+    chain is always taken even if it alone blows the budget — otherwise
+    Super Pharm, at 604 MB, would never be refreshed at all. That cannot
+    starve the small chains either: a chain skipped for size stays a
+    candidate, and once the ones that do fit are current they drop out of
+    the running and it is the only thing left to take.
+    """
+    wanted = ARCHIVE_CHAINS if chains is None else [c for c in chains if c in ARCHIVE_CHAINS]
+    candidates = []
+    for chain in wanted:
+        meta = meta_for(files, "price_full_file", ARCHIVE_CHAINS[chain])
+        if meta is None:
+            continue  # fetch_chain prints the "not in the archive" line
+        published = (meta.get("creationDate") or "").strip()
+        entry = cache.get(chain)
+        held = entry.get("sourceDate") if isinstance(entry, dict) else None
+        if published and held == published:
+            continue
+        # Never fetched sorts ahead of merely stale: a chain with no cache
+        # entry contributes no stores at all until its first download.
+        candidates.append(((held or "", chain), chain, published, meta.get("totalBytes") or 0))
+    candidates.sort()
+
+    plan: dict[str, str] = {}
+    spend = 0
+    for _, chain, published, size in candidates:
+        if plan and spend + size > budget:
+            continue
+        plan[chain] = published
+        spend += size
+    return plan
