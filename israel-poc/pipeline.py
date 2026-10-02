@@ -923,7 +923,11 @@ async def run() -> None:
         else:
             archive_plan = archive.refresh_plan(archive_cache, archive_files, archive_chains)
             waiting = [c for c in archive_chains if c not in archive_plan]
-            print(f"archive: refreshing {sorted(archive_plan) or 'nothing (all current)'}"
+            todo = ", ".join(
+                f"{c}({'+'.join('prices' if k.startswith('price') else 'promos' for k in sorted(kinds))})"
+                for c, kinds in sorted(archive_plan.items())
+            )
+            print(f"archive: refreshing {todo or 'nothing (all current)'}"
                   + (f", serving {len(waiting)} chain(s) from cache" if waiting else ""))
 
     for chain in CHAINS:
@@ -937,7 +941,7 @@ async def run() -> None:
             # skips anything the archive has not republished since we last
             # read it and rations the rest — see REFRESH_BUDGET.
             entry = archive_cache.get(chain)
-            if chain in archive_plan:
+            if "price_full_file" in archive_plan.get(chain, {}):
                 got = archive.fetch_chain(
                     chain, slug, DUMPS_DIR, _is_monster_row, archive_files
                 )
@@ -945,12 +949,12 @@ async def run() -> None:
                     store_info, items = {}, []
                 else:
                     store_info, items = got
-                    archive_cache[chain] = {
-                        "sourceDate": archive_plan[chain],
+                    archive_cache.setdefault(chain, {}).update({
+                        "sourceDate": archive_plan[chain]["price_full_file"],
                         "fetchedAt": datetime.now(timezone.utc).isoformat(),
                         "stores": store_info,
                         "items": items,
-                    }
+                    })
             elif isinstance(entry, dict) and entry.get("stores"):
                 store_info = {k: dict(v) for k, v in entry["stores"].items()}
                 items = list(entry["items"])
@@ -1116,6 +1120,31 @@ async def run() -> None:
     gov_promo_maps = await promotions_gov.get_promos_for_stores(
         promo_stores, BARCODE_TO_VARIANT, promo_cache
     )
+
+    # The archive chains' promos. Scraped chains are fetched one store at a
+    # time above; an archive chain publishes every branch in one file, so
+    # it is one download for the whole chain and it rides the same budget,
+    # the same creationDate check and the same cache as its prices.
+    on_the_map = {s["id"] for s in stores_by_key.values()}
+    for chain in archive_chains:
+        kinds = archive_plan.get(chain, {})
+        entry = archive_cache.setdefault(chain, {})
+        if "promo_full_file" in kinds:
+            by_store = archive.fetch_chain_promos(
+                chain, archive.ARCHIVE_CHAINS[chain], DUMPS_DIR, BARCODE_TO_VARIANT,
+                promotions_gov.shape_row, promotions_gov.is_real_discount_row,
+                archive_files,
+            )
+            entry["promoSourceDate"] = kinds["promo_full_file"]
+            entry["promos"] = by_store
+        else:
+            by_store = entry.get("promos") or {}
+        for store_id, by_variant in by_store.items():
+            key = f"{chain}:{store_id}".lower().replace(":", "-")
+            # Only for branches that actually reached the map this run —
+            # a deal at a shop with no pin has nowhere to be shown.
+            if key in on_the_map:
+                gov_promo_maps[key] = by_variant
 
     verify_pins(stores_by_key, store_city_code)
 

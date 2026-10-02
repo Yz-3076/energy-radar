@@ -206,6 +206,53 @@ def _to_float(s):
         return None
 
 
+# ---------------------------------------------------------------------------
+# The same two rules, for rows that came from the archive's CSV rather than a
+# chain's XML. They live here, next to the originals, so that "what counts as
+# a real discount" and "what a promo looks like" cannot drift apart depending
+# on where a chain's data happened to come from. archive.fetch_chain_promos
+# takes both as arguments for exactly that reason.
+# ---------------------------------------------------------------------------
+
+def is_real_discount_row(description: str, item_count: int) -> bool:
+    """`_is_real_discount` for an archive row."""
+    if any(v in (description or "") for v in VOUCHER_PROVIDERS):
+        return False
+    return 0 < item_count <= MAX_PROMO_ITEMS
+
+
+def shape_row(row: dict, item: dict) -> dict:
+    """`_shape` for an archive row, plus the one thing the XML never gave us.
+
+    discountedPrice is what the shopper actually pays, and it is the field
+    this app should have had all along. discountRate is the saving on the
+    whole bundle, not per can: Victory's two-for-18 files rate 4.92, which
+    read as a per-unit saving turns an 11.46 can into 6.54 instead of 9.00.
+    The XML feed buries that number and the archive states it, so it is
+    carried through and the older path simply leaves it None.
+    """
+    def _clean(value):
+        text = str(value or "").strip().strip("'\"")
+        return "" if text == "NO_BODY" else text
+
+    club_id = _clean(row.get("clubid")) or "0"
+    quantity = _to_float(_clean(item.get("minqty")))
+    price = _to_float(_clean(item.get("discountedprice")))
+    return {
+        "description": _clean(row.get("promotiondescription")) or "Promotion",
+        "discountRate": _to_float(_clean(item.get("discountrate"))),
+        # Filed for the bundle, so a "2 for 18" states 18. Per-can is what
+        # the app wants to show and only this end knows the quantity.
+        "discountedPrice": round(price / quantity, 2) if price and quantity else price,
+        "minQuantity": _to_int(_clean(item.get("minqty"))),
+        "maxQuantity": _to_int(_clean(item.get("maxqty"))),
+        "startsAt": _clean(row.get("promotionstartdatetime")) or None,
+        "endsAt": _clean(row.get("promotionenddatetime")) or None,
+        "terms": _clean_terms(_clean(row.get("additionalrestrictions"))),
+        "clubOnly": not club_id.startswith("0"),
+    }
+
+
 def parse_store_promos(promo_dir: Path, barcode_to_variant: dict[str, str]) -> dict[str, list[dict]]:
     """One store's PromoFull file -> variant_id -> [promo, ...], real
     discounts only (see module docstring for why most of the raw feed gets

@@ -29,8 +29,21 @@ import csv
 import io
 import json
 import subprocess
+import sys
 import urllib.parse
 from pathlib import Path
+
+# A promo file's `groups` column is one JSON blob holding every barcode the
+# promotion covers, and a chain-wide deal pushes it past the 131,072-char
+# default, which csv raises on rather than truncating. Mahsani Ashuk does
+# exactly that. sys.maxsize overflows the C long on some builds, so this
+# walks down until one is accepted.
+for _limit in (sys.maxsize, 2**31 - 1, 2**27):
+    try:
+        csv.field_size_limit(_limit)
+        break
+    except OverflowError:
+        continue
 
 DATASET = "erlichsefi/israeli-supermarkets-2024"
 _API = "https://www.kaggle.com/api/v1/datasets"
@@ -79,21 +92,36 @@ ARCHIVE_CHAINS = {
 
 #: Bytes of archive a single run is allowed to download.
 #:
-#: The whole set is 1.08 GB and Super Pharm alone is 604 MB of it. Pulling
-#: all eight chains in one run is what took the scheduled job from 1:04 to
-#: the 120-minute timeout on 2026-09-30 — the download is most of a run's
-#: wall clock, and on the old code every run paid it again for files that
-#: had not changed. So a run now refreshes only what fits in this budget
-#: and leaves the rest to the next one. The schedule fires eight times a
-#: day and the archive republishes once, so every chain still lands inside
-#: a day; a chain waiting its turn is served from the cache meanwhile, and
-#: the very first run after this lands is the only one that has nothing to
-#: serve. 400 MB is chosen so Super Pharm gets a run to itself and the
-#: other seven fit in two.
-REFRESH_BUDGET = 400_000_000
+#: The full set is about 3.0 GB a day — 1.2 GB of price files and 1.8 GB of
+#: promo files, Super Pharm alone being 604 MB and 1287 MB of that. Pulling
+#: it in one run is what took the scheduled job from 1:04 to the timeout on
+#: 2026-09-30, so a run refreshes only what fits here and leaves the rest to
+#: the next one. The archive republishes once a day and the schedule fires
+#: eight times, so everything still lands inside a day; a chain waiting its
+#: turn is served from the cache meanwhile.
+#:
+#: 900 MB measured at ~7 MB/s end to end, download and parse together, is
+#: about two minutes — set against a run that is 65 minutes of scraping, and
+#: with 7.2 GB/day of capacity against 3.0 GB of need, so a missed run does
+#: not put the schedule behind.
+REFRESH_BUDGET = 900_000_000
 
 #: Columns the archive writes once per source file rather than on every row.
 _MERGED_COLUMNS = ("file_name", "storeid", "chainid", "subchainid")
+
+#: The same merging, one level deeper, in the promo files.
+#:
+#: A promo covering several barcodes is flattened to one row per barcode and
+#: only the FIRST carries the promotion itself — measured on Victory, where
+#: 60% of rows have no promotionid or description, 97% no start date and
+#: 99.7% no club id. Read literally, a two-for-18 on three flavours reads as
+#: one real deal and two nameless ones with no dates, which the app would
+#: then show as permanent. Only `groups` is genuinely per-row.
+_PROMO_MERGED_COLUMNS = _MERGED_COLUMNS + (
+    "promotionid", "promotiondescription", "promotionstartdatetime",
+    "promotionenddatetime", "minnoofitemoffered", "clubid",
+    "additionalrestrictions", "allowmultiplediscounts", "remarks",
+)
 
 _TIMEOUT_S = 900
 
@@ -241,9 +269,117 @@ def fetch_chain(chain: str, slug: str, tmp_dir: Path, is_monster, files=None):
     return store_info, items
 
 
+def _promo_items(groups_json: str):
+    """The promotion's item rows out of the `groups` column.
+
+    This column is where the archive keeps what the XML feed calls
+    PromotionItem, and it is the only part of a promo row that is not a
+    merged cell.
+
+    Both levels collapse a single child to a bare object instead of a
+    one-element list, which is ordinary XML-to-JSON behaviour and bit once
+    already: `group` is a list whenever a promotion has more than one
+    group, and assuming a dict there took the run down.
+    """
+    def _many(value):
+        if isinstance(value, dict):
+            return [value]
+        return value if isinstance(value, list) else []
+
+    try:
+        parsed = json.loads(groups_json or "")
+    except (json.JSONDecodeError, TypeError):
+        return []
+    if not isinstance(parsed, dict):
+        return []
+    items = []
+    for group in _many(parsed.get("group")):
+        container = group.get("promotionitems")
+        if isinstance(container, dict):
+            items += _many(container.get("promotionitem"))
+    return items
+
+
+def _num(value):
+    """A number, or None for the archive's several ways of writing one."""
+    text = str(value or "").strip().strip("'\"")
+    if not text or text == "NO_BODY":
+        return None
+    try:
+        return float(text)
+    except ValueError:
+        return None
+
+
+def _text(value):
+    text = str(value or "").strip().strip("'\"")
+    return "" if text == "NO_BODY" else text
+
+
+def fetch_chain_promos(chain: str, slug: str, tmp_dir: Path, barcode_to_variant: dict,
+                       shape, is_real, files=None):
+    """{store_id: {variant_id: [promo, ...]}} for one chain, in exactly the
+    shape promotions_gov.get_promos_for_stores returns.
+
+    The nine archive chains had no promos at all: they cannot be scraped
+    from a CI runner, which is why they are archive chains in the first
+    place, and that applies to their promo files as much as their prices.
+    This is the other half.
+
+    `shape` and `is_real` are passed in rather than imported so that what
+    counts as a real discount, and what a promo looks like once shaped,
+    stay defined in one place — promotions_gov.
+    """
+    files = files if files is not None else list_files()
+    path = path_for(files, "promo_full_file", slug)
+    if not path:
+        print(f"  {chain}: no promo file in the archive (looked for {slug})")
+        return {}
+
+    local = tmp_dir / f"archive_promo_{slug}.csv"
+    local.parent.mkdir(parents=True, exist_ok=True)
+    _curl(_download_url(path), local)
+    if not local.exists():
+        print(f"  {chain}: promo download failed")
+        return {}
+
+    out: dict[str, dict[str, list[dict]]] = {}
+    rows = 0
+    try:
+        with io.open(local, encoding="utf-8", errors="replace", newline="") as f:
+            for row in _forward_fill(csv.DictReader(f), _PROMO_MERGED_COLUMNS):
+                items = _promo_items(row.get("groups"))
+                matched = [
+                    (i, barcode_to_variant[code])
+                    for i in items
+                    if (code := _text(i.get("itemcode"))) in barcode_to_variant
+                ]
+                if not matched or not is_real(_text(row.get("promotiondescription")), len(items)):
+                    continue
+                sid = _text(row.get("storeid")).lstrip("0") or "0"
+                if sid == "0":
+                    continue
+                for item, variant_id in matched:
+                    promo = shape(row, item)
+                    by_variant = out.setdefault(sid, {}).setdefault(variant_id, [])
+                    if promo not in by_variant:  # a promo repeats per barcode it covers
+                        by_variant.append(promo)
+                        rows += 1
+    finally:
+        local.unlink(missing_ok=True)
+
+    print(f"  {chain}: {rows} Monster promo(s) across {len(out)} branch(es) (archive)")
+    return out
+
+
 def refresh_plan(cache: dict, files: list[dict], chains=None,
                  budget: int = REFRESH_BUDGET) -> dict:
-    """{chain: publication date} for the chains this run should download.
+    """What this run should download, as {chain: {kind: publication date}}.
+
+    "Kind" is the price file or the promo file. They are planned together
+    rather than in two passes so that one budget covers both and prices
+    keep priority: a promo on a branch that has no price yet is a deal on
+    a shop that is not on the map.
 
     Two gates, in order.
 
@@ -269,24 +405,31 @@ def refresh_plan(cache: dict, files: list[dict], chains=None,
     wanted = ARCHIVE_CHAINS if chains is None else [c for c in chains if c in ARCHIVE_CHAINS]
     candidates = []
     for chain in wanted:
-        meta = meta_for(files, "price_full_file", ARCHIVE_CHAINS[chain])
-        if meta is None:
-            continue  # fetch_chain prints the "not in the archive" line
-        published = (meta.get("creationDate") or "").strip()
-        entry = cache.get(chain)
-        held = entry.get("sourceDate") if isinstance(entry, dict) else None
-        if published and held == published:
-            continue
-        # Never fetched sorts ahead of merely stale: a chain with no cache
-        # entry contributes no stores at all until its first download.
-        candidates.append(((held or "", chain), chain, published, meta.get("totalBytes") or 0))
+        for kind, date_key in (("price_full_file", "sourceDate"),
+                               ("promo_full_file", "promoSourceDate")):
+            meta = meta_for(files, kind, ARCHIVE_CHAINS[chain])
+            if meta is None:
+                continue  # the fetch prints the "not in the archive" line
+            published = (meta.get("creationDate") or "").strip()
+            entry = cache.get(chain)
+            held = entry.get(date_key) if isinstance(entry, dict) else None
+            if published and held == published:
+                continue
+            # Prices before promos, and never-fetched ahead of merely stale:
+            # a chain with no price entry contributes no stores at all,
+            # and a promo on a branch that is not on the map shows nobody
+            # anything.
+            candidates.append((
+                (0 if kind == "price_full_file" else 1, held or "", chain),
+                chain, kind, published, meta.get("totalBytes") or 0,
+            ))
     candidates.sort()
 
-    plan: dict[str, str] = {}
+    plan: dict[str, dict[str, str]] = {}
     spend = 0
-    for _, chain, published, size in candidates:
+    for _, chain, kind, published, size in candidates:
         if plan and spend + size > budget:
             continue
-        plan[chain] = published
+        plan.setdefault(chain, {})[kind] = published
         spend += size
     return plan

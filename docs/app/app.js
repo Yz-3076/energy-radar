@@ -801,7 +801,7 @@ ${x.shaderPreludeCode.vertexSource}`,define:x.shaderDefine},defaultProjectionDat
     <div class="promo">
       <div class="promo-head">
         <div class="promo-desc">${Pe(N.description||"Promotion")}</div>
-        ${typeof N.discountRate=="number"?`<div class="promo-rate">${Pe(N.discountRate)}% off</div>`:""}
+        ${typeof N.discountedPrice=="number"?`<div class="promo-rate">\u20AA${Pe(N.discountedPrice.toFixed(2))} each</div>`:""}
       </div>
       <div class="promo-sub">${Pe(X.join(" \xB7 ")||"Terms vary by store")}</div>
       ${N.terms?`<div class="promo-terms">${Pe(N.terms)}</div>`:""}

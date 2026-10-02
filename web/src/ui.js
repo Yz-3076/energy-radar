@@ -53,6 +53,21 @@ export function untilLabel(iso) {
  * flavour screen (the same deal rolled up across branches, with a count),
  * exactly as PromoList does on the phone.
  */
+/**
+ * One deal.
+ *
+ * The headline number is `discountedPrice` — what one can costs once the
+ * deal applies — and nothing is shown when we do not have it.
+ *
+ * It used to print `discountRate` as "N% off". That was wrong wherever it
+ * mattered: Victory's two-for-18 files a rate of 4.92, which is the shekels
+ * saved on the PAIR (2 x 11.46 - 18), and the card read "4.92% off" for a
+ * deal that is really about 21% off. The field means different things to
+ * different chains depending on their discount type, so there is no honest
+ * way to render it on its own. The archive states the discounted price
+ * outright, so chains read from it say the true thing and the rest say
+ * nothing rather than something false.
+ */
 export function promoCard(promo, storeCount) {
   const bits = [
     promo.minQuantity ? `Buy ${promo.minQuantity}+` : null,
@@ -65,7 +80,7 @@ export function promoCard(promo, storeCount) {
     <div class="promo">
       <div class="promo-head">
         <div class="promo-desc">${h(promo.description || "Promotion")}</div>
-        ${typeof promo.discountRate === "number" ? `<div class="promo-rate">${h(promo.discountRate)}% off</div>` : ""}
+        ${typeof promo.discountedPrice === "number" ? `<div class="promo-rate">₪${h(promo.discountedPrice.toFixed(2))} each</div>` : ""}
       </div>
       <div class="promo-sub">${h(bits.join(" · ") || "Terms vary by store")}</div>
       ${promo.terms ? `<div class="promo-terms">${h(promo.terms)}</div>` : ""}
