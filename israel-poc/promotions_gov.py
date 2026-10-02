@@ -32,6 +32,7 @@ files, so it stays.
 """
 
 import asyncio
+import time
 import json
 import xml.etree.ElementTree as ET
 from datetime import datetime, timedelta, timezone
@@ -80,6 +81,23 @@ MAX_CONCURRENT_FETCHES = 8
 # error -- the same shape as the third-party auth hang documented in
 # promotions.py. Generous enough that a merely slow store still succeeds.
 FETCH_TIMEOUT_SECONDS = 90
+
+#: Wall-clock ceiling on the whole promo phase, not one store.
+#:
+#: Per-store timeouts bound each fetch and bound nothing in aggregate: on
+#: 2026-10-02 the phase started at 01:43 with 941 stores to fetch, none of
+#: them cached, and was still going when the job was killed at 02:38. That
+#: is a self-sustaining failure, which is the reason for a ceiling rather
+#: than a bigger per-store timeout. The run that overruns commits nothing,
+#: so the promo cache it would have written is never written, so the next
+#: run also starts with nothing cached and also overruns. Four runs in a
+#: row died this way and the site went 30 hours without an update.
+#:
+#: Past the deadline the remaining stores fall back to whatever is cached,
+#: however old. A day-old promo is worth incomparably more than a run that
+#: never finishes, and it is the finishing that refills the cache and
+#: makes the next run fast.
+PROMO_PHASE_BUDGET_SECONDS = 25 * 60
 
 
 def load_cache() -> dict:
@@ -216,7 +234,8 @@ def parse_store_promos(promo_dir: Path, barcode_to_variant: dict[str, str]) -> d
 
 
 async def get_store_promos(
-    chain: str, store_id: str, barcode_to_variant: dict[str, str], cache: dict
+    chain: str, store_id: str, barcode_to_variant: dict[str, str], cache: dict,
+    deadline: float | None = None,
 ) -> dict[str, list[dict]]:
     """Cache-aware entry point pipeline.py should call instead of
     fetch_store_promos + parse_store_promos directly -- reuses a fresh
@@ -226,6 +245,10 @@ async def get_store_promos(
     entry = cache.get(key)
     if entry is not None and _is_fresh(entry):
         return entry["promos"]
+    if deadline is not None and time.monotonic() > deadline:
+        # Out of time. Stale beats nothing, and nothing beats a run that
+        # never finishes — see PROMO_PHASE_BUDGET_SECONDS.
+        return entry["promos"] if entry is not None else {}
 
     promo_dir, ok = await fetch_store_promos(chain, store_id)
     promos = parse_store_promos(promo_dir, barcode_to_variant)
@@ -262,14 +285,18 @@ async def get_promos_for_stores(
     print(f"  promos: {len(stores)} store(s) — {cached} cached, {len(stores) - cached} to fetch")
 
     sem = asyncio.Semaphore(MAX_CONCURRENT_FETCHES)
+    deadline = time.monotonic() + PROMO_PHASE_BUDGET_SECONDS
 
     async def one(chain: str, store_id: str) -> dict[str, list[dict]]:
         async with sem:
-            return await get_store_promos(chain, store_id, barcode_to_variant, cache)
+            return await get_store_promos(chain, store_id, barcode_to_variant, cache, deadline)
 
     results = await asyncio.gather(
         *(one(chain, store_id) for chain, store_id in stores), return_exceptions=True
     )
+    if time.monotonic() > deadline:
+        print(f"  promos: hit the {PROMO_PHASE_BUDGET_SECONDS // 60}-minute budget; "
+              "the rest were served from cache")
     out: dict[str, dict[str, list[dict]]] = {}
     for (chain, store_id), result in zip(stores, results):
         if isinstance(result, BaseException):

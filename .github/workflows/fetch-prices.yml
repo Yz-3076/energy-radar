@@ -29,9 +29,17 @@ concurrency:
 jobs:
   fetch:
     runs-on: ubuntu-latest
-    # A scrape that has not finished in two hours is stuck, not slow —
-    # without this the default is six hours of a wedged runner.
-    timeout-minutes: 120
+    # A scrape that has not finished in two and a half hours is stuck, not
+    # slow — without this the default is six hours of a wedged runner.
+    #
+    # Was 120, which the run outgrew: the scrape alone is ~65 minutes and
+    # roughly 13 GB of XML. The promo phase is capped at 25 now
+    # (PROMO_PHASE_BUDGET_SECONDS) so the total is bounded at about 95,
+    # and the extra 30 here is margin for the one run a day that refreshes
+    # the archive. Margin matters more than it looks: a run that overruns
+    # commits nothing, which leaves the next run's caches cold, which
+    # makes it slower still.
+    timeout-minutes: 150
     steps:
       - uses: actions/checkout@v4
 
@@ -54,14 +62,21 @@ jobs:
       # never happens.
       #
       # The key is per-run on purpose, so the exact key always misses and
-      # the post-job step always writes the updated file back; restore-keys
+      # the save step always writes the updated file back; restore-keys
       # then loads the most recent previous one. Keying on content instead
       # would refuse to save the very update this exists to keep.
+      #
+      # Restore and save are separate actions rather than one cache step
+      # because the combined one saves in a post-job hook that is skipped
+      # when the job fails. Four runs in a row overran the timeout, so the
+      # save never ran, so every run started cold and re-downloaded 365 MB
+      # it already had — the cache could not warm up until something
+      # finished, and nothing could finish until the cache was warm.
       #
       # A miss is not a failure. The run downloads, exactly as it did before
       # there was a cache, and warms the next one.
       - name: Restore the parsed price archive
-        uses: actions/cache@v4
+        uses: actions/cache/restore@v4
         with:
           path: israel-poc/.archive-cache.json
           key: price-archive-${{ github.run_id }}
@@ -77,6 +92,14 @@ jobs:
           # openisraelisupermarkets.co.il.
           OPEN_IL_SUPERMARKETS_TOKEN: ${{ secrets.OPEN_IL_SUPERMARKETS_TOKEN }}
         run: python pipeline.py
+
+      # if: always() is the point of the split — see above.
+      - name: Save the parsed price archive
+        if: always()
+        uses: actions/cache/save@v4
+        with:
+          path: israel-poc/.archive-cache.json
+          key: price-archive-${{ github.run_id }}
 
       - name: Commit updated data
         run: |

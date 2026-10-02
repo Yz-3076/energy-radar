@@ -1069,7 +1069,16 @@ async def run() -> None:
                 # multi-MB file at a time, which is what pushed nationwide
                 # runs past 40 minutes; they're fetched concurrently in one
                 # batch once every chain has been walked instead.
-                promo_stores.append((chain, item["store_id"]))
+                #
+                # Not for the archive chains. A chain is in ARCHIVE_CHAINS
+                # precisely because scraping it from a CI runner does not
+                # work, and that applies to its promo files exactly as it
+                # applies to its prices: asking anyway bought 71 Mahsani
+                # Ashuk branches × 90 s of timeout per run, for nothing.
+                # The archive publishes promo files too, which is where
+                # these should come from when it is worth the bytes.
+                if chain not in archive.ARCHIVE_CHAINS:
+                    promo_stores.append((chain, item["store_id"]))
 
             new_row = {
                 "variantId": variant_id,
