@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-30T19:56:15.538100+00:00",
+  "generated_at": "2026-10-02T03:21:55.561107+00:00",
   "chains_covered": [
     "SHUFERSAL",
     "VICTORY_NEW_SOURCE",
@@ -23,57 +23,65 @@
     "SALACH_DABACH",
     "STOP_MARKET",
     "SHUK_AHIR",
-    "POLIZER"
+    "POLIZER",
+    "MAHSANI_ASHUK_NEW_SOURCE",
+    "ZOL_VEBEGADOL",
+    "CITY_MARKET_KIRYATGAT",
+    "HET_COHEN_NEW_SOURCE",
+    "WOLT"
   ],
-  "store_count": 1015,
-  "total_observations": 551673,
-  "observations_this_run": 8000,
+  "store_count": 1271,
+  "total_observations": 460257,
+  "observations_this_run": 8588,
   "listings_per_variant": {
-    "ultra": 909,
-    "mango-loco": 703,
-    "ultra-paradise": 813,
-    "ultra-fiesta": 518,
-    "original": 910,
-    "full-zero": 436,
-    "ultra-peachy-keen": 425,
-    "pipeline-punch": 484,
-    "monarch": 351,
-    "strawberry": 443,
-    "green-zero": 428,
-    "aussie-lemonade": 390,
-    "rossi": 210
+    "ultra": 1063,
+    "mango-loco": 858,
+    "full-zero": 467,
+    "ultra-paradise": 942,
+    "original": 1115,
+    "ultra-fiesta": 591,
+    "ultra-peachy-keen": 548,
+    "pipeline-punch": 570,
+    "green-zero": 505,
+    "strawberry": 616,
+    "monarch": 454,
+    "aussie-lemonade": 419,
+    "rossi": 207
   },
   "depletion_breakdown": {
-    "slowing": 2277,
-    "healthy": 2401,
-    "insufficient_data": 2281,
-    "likely_out": 61
+    "healthy": 3639,
+    "slowing": 1147,
+    "insufficient_data": 3524,
+    "likely_out": 45
   },
-  "live_listings": 7020,
+  "live_listings": 8355,
   "flavours_on_shelves": 13,
   "stores_per_chain": {
-    "Shufersal": 218,
+    "Shufersal": 241,
+    "Yellow": 194,
     "Super Pharm": 138,
-    "Yellow": 102,
-    "Rami Levy": 80,
-    "Dor Alon": 73,
-    "Yayno Bitan And Carrefour": 68,
+    "Dor Alon": 102,
+    "Rami Levy": 86,
+    "Yayno Bitan And Carrefour": 74,
     "Victory New Source": 61,
     "Netiv Hased": 53,
-    "Tiv Taam": 43,
-    "Fresh Market And Super Dosh": 35,
-    "Super Yuda": 25,
-    "Osher Ad": 21,
+    "Tiv Taam": 44,
+    "Mahsani Ashuk New Source": 39,
+    "Fresh Market And Super Dosh": 38,
+    "Super Yuda": 26,
     "Super Sapir": 21,
-    "Maayan 2000": 20,
+    "Maayan 2000": 21,
+    "City Market Kiryatgat": 21,
+    "Osher Ad": 21,
+    "Zol Vebegadol": 20,
+    "Yohananof": 15,
     "King Store": 12,
     "Bareket": 11,
     "Shuk Ahir": 9,
-    "Yohananof": 8,
+    "Stop Market": 8,
     "Hazi Hinam": 7,
-    "Stop Market": 6,
+    "Salach Dabach": 6,
     "Keshet": 2,
-    "Salach Dabach": 1,
     "Polizer": 1
   },
   "price_by_chain": {
@@ -81,25 +89,31 @@
       "min": 8.5,
       "median": 8.5,
       "max": 8.9,
-      "listings": 90
+      "listings": 86
+    },
+    "City Market Kiryatgat": {
+      "min": 10.9,
+      "median": 13.0,
+      "max": 14.9,
+      "listings": 34
     },
     "Dor Alon": {
       "min": 9.9,
       "median": 9.9,
       "max": 12.9,
-      "listings": 588
+      "listings": 779
     },
     "Fresh Market And Super Dosh": {
       "min": 9.5,
       "median": 9.9,
       "max": 10.9,
-      "listings": 298
+      "listings": 321
     },
     "Hazi Hinam": {
       "min": 7.9,
       "median": 7.9,
       "max": 7.9,
-      "listings": 84
+      "listings": 61
     },
     "Keshet": {
       "min": 8.9,
@@ -111,19 +125,25 @@
       "min": 9.5,
       "median": 9.5,
       "max": 10.5,
-      "listings": 69
+      "listings": 73
     },
     "Maayan 2000": {
       "min": 7.5,
       "median": 8.5,
       "max": 8.5,
-      "listings": 67
+      "listings": 70
+    },
+    "Mahsani Ashuk New Source": {
+      "min": 7.3,
+      "median": 8.5,
+      "max": 8.5,
+      "listings": 76
     },
     "Netiv Hased": {
       "min": 9.3,
       "median": 9.4,
       "max": 9.4,
-      "listings": 275
+      "listings": 72
     },
     "Osher Ad": {
       "min": 4.9,
@@ -141,31 +161,31 @@
       "min": 6.5,
       "median": 7.9,
       "max": 9.2,
-      "listings": 782
+      "listings": 841
     },
     "Salach Dabach": {
       "min": 7.9,
-      "median": 8.4,
+      "median": 8.9,
       "max": 8.9,
-      "listings": 10
+      "listings": 60
     },
     "Shufersal": {
       "min": 7.0,
       "median": 9.9,
       "max": 9.9,
-      "listings": 1037
+      "listings": 1151
     },
     "Shuk Ahir": {
       "min": 8.9,
       "median": 8.9,
       "max": 9.9,
-      "listings": 53
+      "listings": 51
     },
     "Stop Market": {
       "min": 8.9,
       "median": 9.2,
       "max": 9.2,
-      "listings": 66
+      "listings": 89
     },
     "Super Pharm": {
       "min": 8.5,
@@ -177,19 +197,19 @@
       "min": 6.9,
       "median": 7.9,
       "max": 10.8,
-      "listings": 139
+      "listings": 140
     },
     "Super Yuda": {
       "min": 8.5,
       "median": 10.9,
       "max": 10.9,
-      "listings": 239
+      "listings": 249
     },
     "Tiv Taam": {
       "min": 8.9,
       "median": 8.9,
       "max": 9.9,
-      "listings": 508
+      "listings": 517
     },
     "Victory New Source": {
       "min": 8.9,
@@ -201,99 +221,105 @@
       "min": 7.3,
       "median": 9.9,
       "max": 9.9,
-      "listings": 489
+      "listings": 544
     },
     "Yellow": {
-      "min": 12.4,
+      "min": 10.0,
       "median": 13.0,
       "max": 13.0,
-      "listings": 925
+      "listings": 1763
     },
     "Yohananof": {
       "min": 7.9,
       "median": 7.9,
-      "max": 7.9,
-      "listings": 53
+      "max": 8.9,
+      "listings": 101
+    },
+    "Zol Vebegadol": {
+      "min": 8.5,
+      "median": 8.5,
+      "max": 8.5,
+      "listings": 29
     }
   },
   "price_by_variant": {
     "aussie-lemonade": {
       "min": 7.9,
-      "median": 9.9,
+      "median": 10.9,
       "max": 13.0,
-      "listings": 390
+      "listings": 419
     },
     "full-zero": {
       "min": 6.8,
       "median": 8.9,
       "max": 9.9,
-      "listings": 436
+      "listings": 467
     },
     "green-zero": {
       "min": 6.8,
-      "median": 9.4,
+      "median": 9.9,
       "max": 13.0,
-      "listings": 428
+      "listings": 505
     },
     "mango-loco": {
       "min": 6.8,
       "median": 9.9,
       "max": 13.0,
-      "listings": 703
+      "listings": 858
     },
     "monarch": {
       "min": 6.8,
       "median": 9.9,
-      "max": 13.0,
-      "listings": 351
+      "max": 14.9,
+      "listings": 454
     },
     "original": {
       "min": 4.9,
       "median": 9.9,
-      "max": 13.0,
-      "listings": 910
+      "max": 14.9,
+      "listings": 1115
     },
     "pipeline-punch": {
       "min": 6.8,
-      "median": 9.4,
-      "max": 13.0,
-      "listings": 484
+      "median": 9.9,
+      "max": 14.9,
+      "listings": 570
     },
     "rossi": {
       "min": 7.3,
-      "median": 9.4,
-      "max": 13.0,
-      "listings": 210
+      "median": 8.9,
+      "max": 14.9,
+      "listings": 207
     },
     "strawberry": {
       "min": 6.8,
-      "median": 9.5,
+      "median": 9.9,
       "max": 13.0,
-      "listings": 443
+      "listings": 616
     },
     "ultra": {
       "min": 6.5,
       "median": 9.9,
       "max": 13.0,
-      "listings": 909
+      "listings": 1063
     },
     "ultra-fiesta": {
       "min": 6.8,
-      "median": 8.9,
+      "median": 9.4,
       "max": 13.0,
-      "listings": 518
+      "listings": 591
     },
     "ultra-paradise": {
       "min": 4.9,
       "median": 9.9,
       "max": 13.0,
-      "listings": 813
+      "listings": 942
     },
     "ultra-peachy-keen": {
       "min": 6.8,
       "median": 9.9,
-      "max": 13.0,
-      "listings": 425
+      "max": 14.9,
+      "listings": 548
     }
   },
   "cheapest_listing": {
@@ -430,111 +456,387 @@
     },
     {
       "date": "2026-09-14",
-      "observations": 42550,
+      "observations": 34552,
       "stores": 1041,
       "min": 4.9,
-      "median": 8.9,
+      "median": 9.2,
       "max": 13.0,
       "by_variant": {
-        "aussie-lemonade": 8.9,
+        "aussie-lemonade": 9.5,
         "full-zero": 8.9,
         "green-zero": 8.9,
-        "mango-loco": 8.9,
-        "monarch": 9.2,
-        "original": 8.9,
+        "mango-loco": 9.5,
+        "monarch": 9.5,
+        "original": 9.4,
         "pipeline-punch": 8.9,
         "rossi": 8.9,
-        "strawberry": 8.9,
-        "ultra": 8.9,
+        "strawberry": 9.2,
+        "ultra": 9.5,
         "ultra-fiesta": 8.9,
         "ultra-paradise": 9.5,
-        "ultra-peachy-keen": 9.2
+        "ultra-peachy-keen": 9.9
       }
     },
     {
       "date": "2026-09-15",
-      "observations": 22657,
+      "observations": 17491,
       "stores": 755,
       "min": 4.9,
-      "median": 8.9,
+      "median": 9.9,
       "max": 13.0,
       "by_variant": {
         "aussie-lemonade": 10.5,
         "full-zero": 8.9,
-        "green-zero": 8.9,
-        "mango-loco": 9.2,
-        "monarch": 8.9,
-        "original": 8.9,
-        "pipeline-punch": 8.9,
+        "green-zero": 9.9,
+        "mango-loco": 9.9,
+        "monarch": 9.9,
+        "original": 9.9,
+        "pipeline-punch": 9.9,
         "rossi": 9.9,
-        "strawberry": 9.2,
-        "ultra": 8.9,
-        "ultra-fiesta": 8.9,
-        "ultra-paradise": 8.9,
-        "ultra-peachy-keen": 9.2
+        "strawberry": 9.9,
+        "ultra": 9.9,
+        "ultra-fiesta": 9.2,
+        "ultra-paradise": 9.9,
+        "ultra-peachy-keen": 9.9
       }
     },
     {
       "date": "2026-09-16",
-      "observations": 30273,
+      "observations": 23669,
       "stores": 758,
       "min": 4.9,
-      "median": 8.9,
+      "median": 9.9,
       "max": 13.0,
       "by_variant": {
-        "aussie-lemonade": 9.9,
+        "aussie-lemonade": 10.5,
         "full-zero": 8.9,
-        "green-zero": 8.9,
-        "mango-loco": 9.5,
-        "monarch": 8.9,
-        "original": 8.9,
-        "pipeline-punch": 8.9,
+        "green-zero": 9.9,
+        "mango-loco": 9.9,
+        "monarch": 9.9,
+        "original": 9.9,
+        "pipeline-punch": 9.9,
         "rossi": 9.9,
-        "strawberry": 9.2,
-        "ultra": 8.9,
-        "ultra-fiesta": 8.9,
-        "ultra-paradise": 8.9,
+        "strawberry": 9.9,
+        "ultra": 9.9,
+        "ultra-fiesta": 9.2,
+        "ultra-paradise": 9.9,
         "ultra-peachy-keen": 9.9
       }
     },
     {
       "date": "2026-09-17",
-      "observations": 29284,
+      "observations": 22851,
       "stores": 761,
       "min": 4.9,
-      "median": 8.9,
-      "max": 13.0,
-      "by_variant": {
-        "aussie-lemonade": 9.9,
-        "full-zero": 8.9,
-        "green-zero": 8.9,
-        "mango-loco": 9.5,
-        "monarch": 8.9,
-        "original": 8.9,
-        "pipeline-punch": 8.9,
-        "rossi": 9.9,
-        "strawberry": 9.2,
-        "ultra": 8.9,
-        "ultra-fiesta": 8.9,
-        "ultra-paradise": 8.9,
-        "ultra-peachy-keen": 9.2
-      }
-    },
-    {
-      "date": "2026-09-18",
-      "observations": 33603,
-      "stores": 761,
-      "min": 4.9,
-      "median": 9.2,
+      "median": 9.9,
       "max": 13.0,
       "by_variant": {
         "aussie-lemonade": 10.5,
         "full-zero": 8.9,
-        "green-zero": 8.9,
+        "green-zero": 9.9,
         "mango-loco": 9.9,
-        "monarch": 8.9,
-        "original": 9.2,
-        "pipeline-punch": 8.9,
+        "monarch": 9.9,
+        "original": 9.9,
+        "pipeline-punch": 9.9,
+        "rossi": 9.9,
+        "strawberry": 9.9,
+        "ultra": 9.9,
+        "ultra-fiesta": 9.2,
+        "ultra-paradise": 9.9,
+        "ultra-peachy-keen": 9.9
+      }
+    },
+    {
+      "date": "2026-09-18",
+      "observations": 28001,
+      "stores": 761,
+      "min": 4.9,
+      "median": 9.9,
+      "max": 13.0,
+      "by_variant": {
+        "aussie-lemonade": 10.5,
+        "full-zero": 8.9,
+        "green-zero": 9.9,
+        "mango-loco": 9.9,
+        "monarch": 9.9,
+        "original": 9.9,
+        "pipeline-punch": 9.9,
+        "rossi": 9.9,
+        "strawberry": 9.9,
+        "ultra": 9.9,
+        "ultra-fiesta": 9.9,
+        "ultra-paradise": 9.9,
+        "ultra-peachy-keen": 9.9
+      }
+    },
+    {
+      "date": "2026-09-19",
+      "observations": 27449,
+      "stores": 740,
+      "min": 4.9,
+      "median": 9.9,
+      "max": 13.0,
+      "by_variant": {
+        "aussie-lemonade": 10.5,
+        "full-zero": 8.9,
+        "green-zero": 9.9,
+        "mango-loco": 9.9,
+        "monarch": 9.9,
+        "original": 9.9,
+        "pipeline-punch": 9.9,
+        "rossi": 9.9,
+        "strawberry": 9.9,
+        "ultra": 9.9,
+        "ultra-fiesta": 9.9,
+        "ultra-paradise": 9.9,
+        "ultra-peachy-keen": 9.9
+      }
+    },
+    {
+      "date": "2026-09-20",
+      "observations": 26671,
+      "stores": 756,
+      "min": 4.9,
+      "median": 9.9,
+      "max": 13.0,
+      "by_variant": {
+        "aussie-lemonade": 10.5,
+        "full-zero": 8.9,
+        "green-zero": 9.9,
+        "mango-loco": 9.9,
+        "monarch": 9.9,
+        "original": 9.9,
+        "pipeline-punch": 9.9,
+        "rossi": 9.9,
+        "strawberry": 9.9,
+        "ultra": 9.9,
+        "ultra-fiesta": 9.9,
+        "ultra-paradise": 9.9,
+        "ultra-peachy-keen": 9.9
+      }
+    },
+    {
+      "date": "2026-09-21",
+      "observations": 23783,
+      "stores": 758,
+      "min": 4.9,
+      "median": 9.9,
+      "max": 13.0,
+      "by_variant": {
+        "aussie-lemonade": 9.9,
+        "full-zero": 8.9,
+        "green-zero": 9.9,
+        "mango-loco": 9.9,
+        "monarch": 9.9,
+        "original": 9.9,
+        "pipeline-punch": 9.9,
+        "rossi": 9.5,
+        "strawberry": 9.9,
+        "ultra": 9.9,
+        "ultra-fiesta": 9.9,
+        "ultra-paradise": 9.9,
+        "ultra-peachy-keen": 9.9
+      }
+    },
+    {
+      "date": "2026-09-22",
+      "observations": 16805,
+      "stores": 757,
+      "min": 4.9,
+      "median": 9.9,
+      "max": 13.0,
+      "by_variant": {
+        "aussie-lemonade": 10.5,
+        "full-zero": 8.9,
+        "green-zero": 9.9,
+        "mango-loco": 9.9,
+        "monarch": 9.9,
+        "original": 9.9,
+        "pipeline-punch": 9.9,
+        "rossi": 9.9,
+        "strawberry": 9.9,
+        "ultra": 9.9,
+        "ultra-fiesta": 9.2,
+        "ultra-paradise": 9.9,
+        "ultra-peachy-keen": 9.9
+      }
+    },
+    {
+      "date": "2026-09-23",
+      "observations": 17471,
+      "stores": 757,
+      "min": 4.9,
+      "median": 9.9,
+      "max": 13.0,
+      "by_variant": {
+        "aussie-lemonade": 10.5,
+        "full-zero": 8.9,
+        "green-zero": 9.9,
+        "mango-loco": 9.9,
+        "monarch": 9.9,
+        "original": 9.9,
+        "pipeline-punch": 9.9,
+        "rossi": 9.9,
+        "strawberry": 9.9,
+        "ultra": 9.9,
+        "ultra-fiesta": 9.9,
+        "ultra-paradise": 9.9,
+        "ultra-peachy-keen": 9.9
+      }
+    },
+    {
+      "date": "2026-09-24",
+      "observations": 23336,
+      "stores": 758,
+      "min": 4.9,
+      "median": 9.9,
+      "max": 13.0,
+      "by_variant": {
+        "aussie-lemonade": 10.5,
+        "full-zero": 8.9,
+        "green-zero": 9.9,
+        "mango-loco": 9.9,
+        "monarch": 9.9,
+        "original": 9.9,
+        "pipeline-punch": 9.9,
+        "rossi": 9.9,
+        "strawberry": 9.9,
+        "ultra": 9.9,
+        "ultra-fiesta": 9.9,
+        "ultra-paradise": 9.9,
+        "ultra-peachy-keen": 9.9
+      }
+    },
+    {
+      "date": "2026-09-25",
+      "observations": 23817,
+      "stores": 756,
+      "min": 4.9,
+      "median": 9.9,
+      "max": 13.0,
+      "by_variant": {
+        "aussie-lemonade": 10.5,
+        "full-zero": 8.9,
+        "green-zero": 9.9,
+        "mango-loco": 9.9,
+        "monarch": 9.9,
+        "original": 9.9,
+        "pipeline-punch": 9.9,
+        "rossi": 9.9,
+        "strawberry": 9.9,
+        "ultra": 9.9,
+        "ultra-fiesta": 9.2,
+        "ultra-paradise": 9.9,
+        "ultra-peachy-keen": 9.9
+      }
+    },
+    {
+      "date": "2026-09-26",
+      "observations": 26511,
+      "stores": 755,
+      "min": 4.9,
+      "median": 9.9,
+      "max": 13.0,
+      "by_variant": {
+        "aussie-lemonade": 10.5,
+        "full-zero": 8.9,
+        "green-zero": 9.9,
+        "mango-loco": 9.9,
+        "monarch": 9.9,
+        "original": 9.9,
+        "pipeline-punch": 9.9,
+        "rossi": 9.9,
+        "strawberry": 9.9,
+        "ultra": 9.9,
+        "ultra-fiesta": 9.9,
+        "ultra-paradise": 9.9,
+        "ultra-peachy-keen": 9.9
+      }
+    },
+    {
+      "date": "2026-09-27",
+      "observations": 23167,
+      "stores": 757,
+      "min": 4.9,
+      "median": 9.9,
+      "max": 13.0,
+      "by_variant": {
+        "aussie-lemonade": 9.9,
+        "full-zero": 8.9,
+        "green-zero": 9.9,
+        "mango-loco": 9.9,
+        "monarch": 9.9,
+        "original": 9.9,
+        "pipeline-punch": 9.9,
+        "rossi": 9.9,
+        "strawberry": 9.9,
+        "ultra": 9.9,
+        "ultra-fiesta": 9.5,
+        "ultra-paradise": 9.9,
+        "ultra-peachy-keen": 9.9
+      }
+    },
+    {
+      "date": "2026-09-28",
+      "observations": 17345,
+      "stores": 756,
+      "min": 4.9,
+      "median": 9.9,
+      "max": 13.0,
+      "by_variant": {
+        "aussie-lemonade": 9.9,
+        "full-zero": 8.9,
+        "green-zero": 9.9,
+        "mango-loco": 9.9,
+        "monarch": 9.9,
+        "original": 9.9,
+        "pipeline-punch": 9.9,
+        "rossi": 9.9,
+        "strawberry": 9.9,
+        "ultra": 9.9,
+        "ultra-fiesta": 9.2,
+        "ultra-paradise": 9.9,
+        "ultra-peachy-keen": 9.9
+      }
+    },
+    {
+      "date": "2026-09-29",
+      "observations": 18118,
+      "stores": 756,
+      "min": 4.9,
+      "median": 9.9,
+      "max": 13.0,
+      "by_variant": {
+        "aussie-lemonade": 9.9,
+        "full-zero": 8.9,
+        "green-zero": 9.9,
+        "mango-loco": 9.9,
+        "monarch": 9.9,
+        "original": 9.9,
+        "pipeline-punch": 9.9,
+        "rossi": 9.9,
+        "strawberry": 9.9,
+        "ultra": 9.9,
+        "ultra-fiesta": 9.9,
+        "ultra-paradise": 9.9,
+        "ultra-peachy-keen": 9.9
+      }
+    },
+    {
+      "date": "2026-09-30",
+      "observations": 19008,
+      "stores": 759,
+      "min": 4.9,
+      "median": 9.9,
+      "max": 13.0,
+      "by_variant": {
+        "aussie-lemonade": 9.9,
+        "full-zero": 8.9,
+        "green-zero": 9.5,
+        "mango-loco": 9.9,
+        "monarch": 9.9,
+        "original": 9.9,
+        "pipeline-punch": 9.5,
         "rossi": 9.9,
         "strawberry": 9.5,
         "ultra": 9.9,
@@ -544,279 +846,26 @@
       }
     },
     {
-      "date": "2026-09-19",
-      "observations": 33587,
-      "stores": 740,
-      "min": 4.9,
+      "date": "2026-10-02",
+      "observations": 8588,
+      "stores": 1048,
+      "min": 6.5,
       "median": 9.9,
-      "max": 13.0,
+      "max": 14.9,
       "by_variant": {
-        "aussie-lemonade": 10.5,
+        "aussie-lemonade": 10.9,
         "full-zero": 8.9,
-        "green-zero": 8.9,
+        "green-zero": 9.9,
         "mango-loco": 9.9,
-        "monarch": 9.2,
+        "monarch": 9.9,
         "original": 9.9,
-        "pipeline-punch": 8.9,
+        "pipeline-punch": 9.9,
         "rossi": 9.9,
         "strawberry": 9.9,
         "ultra": 9.9,
         "ultra-fiesta": 8.9,
         "ultra-paradise": 9.9,
         "ultra-peachy-keen": 9.9
-      }
-    },
-    {
-      "date": "2026-09-20",
-      "observations": 32085,
-      "stores": 756,
-      "min": 4.9,
-      "median": 9.2,
-      "max": 13.0,
-      "by_variant": {
-        "aussie-lemonade": 9.9,
-        "full-zero": 8.9,
-        "green-zero": 8.9,
-        "mango-loco": 9.9,
-        "monarch": 9.2,
-        "original": 9.5,
-        "pipeline-punch": 8.9,
-        "rossi": 9.9,
-        "strawberry": 9.2,
-        "ultra": 9.9,
-        "ultra-fiesta": 8.9,
-        "ultra-paradise": 9.9,
-        "ultra-peachy-keen": 9.9
-      }
-    },
-    {
-      "date": "2026-09-21",
-      "observations": 32012,
-      "stores": 758,
-      "min": 4.9,
-      "median": 8.9,
-      "max": 13.0,
-      "by_variant": {
-        "aussie-lemonade": 8.9,
-        "full-zero": 8.9,
-        "green-zero": 8.9,
-        "mango-loco": 8.9,
-        "monarch": 8.9,
-        "original": 8.9,
-        "pipeline-punch": 8.9,
-        "rossi": 8.9,
-        "strawberry": 9.2,
-        "ultra": 8.9,
-        "ultra-fiesta": 8.9,
-        "ultra-paradise": 8.9,
-        "ultra-peachy-keen": 9.9
-      }
-    },
-    {
-      "date": "2026-09-22",
-      "observations": 21360,
-      "stores": 757,
-      "min": 4.9,
-      "median": 8.9,
-      "max": 13.0,
-      "by_variant": {
-        "aussie-lemonade": 9.9,
-        "full-zero": 8.9,
-        "green-zero": 8.9,
-        "mango-loco": 9.5,
-        "monarch": 8.9,
-        "original": 8.9,
-        "pipeline-punch": 8.9,
-        "rossi": 9.9,
-        "strawberry": 9.2,
-        "ultra": 9.2,
-        "ultra-fiesta": 8.9,
-        "ultra-paradise": 8.9,
-        "ultra-peachy-keen": 9.9
-      }
-    },
-    {
-      "date": "2026-09-23",
-      "observations": 21553,
-      "stores": 757,
-      "min": 4.9,
-      "median": 9.2,
-      "max": 13.0,
-      "by_variant": {
-        "aussie-lemonade": 9.9,
-        "full-zero": 8.9,
-        "green-zero": 8.9,
-        "mango-loco": 9.9,
-        "monarch": 8.9,
-        "original": 8.9,
-        "pipeline-punch": 8.9,
-        "rossi": 9.9,
-        "strawberry": 9.2,
-        "ultra": 9.5,
-        "ultra-fiesta": 8.9,
-        "ultra-paradise": 9.5,
-        "ultra-peachy-keen": 9.9
-      }
-    },
-    {
-      "date": "2026-09-24",
-      "observations": 28780,
-      "stores": 758,
-      "min": 4.9,
-      "median": 9.2,
-      "max": 13.0,
-      "by_variant": {
-        "aussie-lemonade": 9.9,
-        "full-zero": 8.9,
-        "green-zero": 8.9,
-        "mango-loco": 9.9,
-        "monarch": 8.9,
-        "original": 8.9,
-        "pipeline-punch": 8.9,
-        "rossi": 9.9,
-        "strawberry": 9.2,
-        "ultra": 9.5,
-        "ultra-fiesta": 8.9,
-        "ultra-paradise": 8.9,
-        "ultra-peachy-keen": 9.9
-      }
-    },
-    {
-      "date": "2026-09-25",
-      "observations": 29227,
-      "stores": 756,
-      "min": 4.9,
-      "median": 9.2,
-      "max": 13.0,
-      "by_variant": {
-        "aussie-lemonade": 9.9,
-        "full-zero": 8.9,
-        "green-zero": 8.9,
-        "mango-loco": 9.9,
-        "monarch": 8.9,
-        "original": 8.9,
-        "pipeline-punch": 8.9,
-        "rossi": 9.9,
-        "strawberry": 9.2,
-        "ultra": 9.5,
-        "ultra-fiesta": 8.9,
-        "ultra-paradise": 9.5,
-        "ultra-peachy-keen": 9.9
-      }
-    },
-    {
-      "date": "2026-09-26",
-      "observations": 32574,
-      "stores": 755,
-      "min": 4.9,
-      "median": 9.2,
-      "max": 13.0,
-      "by_variant": {
-        "aussie-lemonade": 9.9,
-        "full-zero": 8.9,
-        "green-zero": 8.9,
-        "mango-loco": 9.9,
-        "monarch": 8.9,
-        "original": 9.2,
-        "pipeline-punch": 8.9,
-        "rossi": 9.9,
-        "strawberry": 9.2,
-        "ultra": 9.9,
-        "ultra-fiesta": 8.9,
-        "ultra-paradise": 9.5,
-        "ultra-peachy-keen": 9.9
-      }
-    },
-    {
-      "date": "2026-09-27",
-      "observations": 28483,
-      "stores": 757,
-      "min": 4.9,
-      "median": 9.2,
-      "max": 13.0,
-      "by_variant": {
-        "aussie-lemonade": 9.9,
-        "full-zero": 8.9,
-        "green-zero": 8.9,
-        "mango-loco": 9.9,
-        "monarch": 8.9,
-        "original": 8.9,
-        "pipeline-punch": 8.9,
-        "rossi": 9.9,
-        "strawberry": 9.2,
-        "ultra": 9.2,
-        "ultra-fiesta": 8.9,
-        "ultra-paradise": 8.9,
-        "ultra-peachy-keen": 9.9
-      }
-    },
-    {
-      "date": "2026-09-28",
-      "observations": 21336,
-      "stores": 756,
-      "min": 4.9,
-      "median": 9.2,
-      "max": 13.0,
-      "by_variant": {
-        "aussie-lemonade": 9.9,
-        "full-zero": 8.9,
-        "green-zero": 8.9,
-        "mango-loco": 9.9,
-        "monarch": 8.9,
-        "original": 8.9,
-        "pipeline-punch": 8.9,
-        "rossi": 9.9,
-        "strawberry": 9.2,
-        "ultra": 9.35,
-        "ultra-fiesta": 8.9,
-        "ultra-paradise": 8.9,
-        "ultra-peachy-keen": 9.9
-      }
-    },
-    {
-      "date": "2026-09-29",
-      "observations": 22334,
-      "stores": 756,
-      "min": 4.9,
-      "median": 9.2,
-      "max": 13.0,
-      "by_variant": {
-        "aussie-lemonade": 9.9,
-        "full-zero": 8.9,
-        "green-zero": 8.9,
-        "mango-loco": 9.9,
-        "monarch": 8.9,
-        "original": 8.9,
-        "pipeline-punch": 8.9,
-        "rossi": 9.9,
-        "strawberry": 9.2,
-        "ultra": 9.5,
-        "ultra-fiesta": 8.9,
-        "ultra-paradise": 9.5,
-        "ultra-peachy-keen": 9.9
-      }
-    },
-    {
-      "date": "2026-09-30",
-      "observations": 28351,
-      "stores": 759,
-      "min": 4.9,
-      "median": 8.9,
-      "max": 13.0,
-      "by_variant": {
-        "aussie-lemonade": 9.2,
-        "full-zero": 8.9,
-        "green-zero": 8.9,
-        "mango-loco": 8.9,
-        "monarch": 8.9,
-        "original": 8.9,
-        "pipeline-punch": 8.9,
-        "rossi": 8.9,
-        "strawberry": 9.2,
-        "ultra": 8.9,
-        "ultra-fiesta": 8.9,
-        "ultra-paradise": 8.9,
-        "ultra-peachy-keen": 9.2
       }
     }
   ]
