@@ -363,6 +363,56 @@ def _load_town_codes() -> dict[str, str]:
 _CODE_BY_TOWN = _load_town_codes()
 
 
+def _normalise_town(name: str) -> str:
+    """A town name with its punctuation flattened, for comparison only."""
+    return " ".join((name or "").replace("-", " ").split())
+
+
+def _build_primary_index(code_by_town: dict[str, str]) -> dict[str, set[str]]:
+    """Town codes keyed by the FIRST part of each official name.
+
+    The CBS register names a merged municipality after all of its parts —
+    מודיעין-מכבים-רעות, תל אביב - יפו — and no chain writes that. They
+    write מודיעין and תל-אביב, which match nothing at all on an exact
+    lookup. Keying on the part before the first hyphen catches those.
+
+    It does not make מודיעין עילית or נשר ambiguous with it, because a
+    name with no hyphen is its own primary and keeps its whole self as the
+    key. Measured over all 1261 towns: 1256 distinct keys and 4 that cover
+    more than one town, which is why this returns a set and the caller
+    refuses anything that is not a single answer.
+    """
+    index: dict[str, set[str]] = {}
+    for town, code in code_by_town.items():
+        index.setdefault(_normalise_town(town.split("-")[0]), set()).add(code)
+    return index
+
+
+_PRIMARY_BY_TOWN = _build_primary_index(_CODE_BY_TOWN)
+
+
+def town_code_from_city(city: str) -> str:
+    """The CBS code for a town name a chain wrote itself.
+
+    Victory files its Modi'in branch as city "מודיעין", which is not what
+    the register calls it, so the exact lookup returned nothing, the branch
+    went out with no town, and the geocoder put "מנחם בגין 21" on the
+    Menachem Begin in Tel Aviv — 28 km from the shop. Every chain has a
+    street by that name; the town is the only thing that separates them.
+
+    Ambiguity is refused rather than guessed, the same as
+    town_code_from_name: a wrong town is a pin in another city, which is
+    worse than no pin at all because it looks like an answer.
+    """
+    city = (city or "").strip().strip("'\"")
+    if not city:
+        return ""
+    if city in _CODE_BY_TOWN:
+        return _CODE_BY_TOWN[city]
+    codes = _PRIMARY_BY_TOWN.get(_normalise_town(city), set())
+    return next(iter(codes)) if len(codes) == 1 else ""
+
+
 def is_online_branch(name: str, address: str) -> bool:
     """True for a chain's web shop masquerading as a branch."""
     blob = f"{name or ''} {address or ''}".lower()
@@ -987,7 +1037,11 @@ async def run() -> None:
                 if info.get("cityCode"):
                     continue
                 city = (info.get("cityName") or "").strip().strip("'\"")
-                info["cityCode"] = city if city.isdigit() else _CODE_BY_TOWN.get(city, "")
+                info["cityCode"] = city if city.isdigit() else town_code_from_city(city)
+                if not info["cityCode"]:
+                    # Last resort, the same one parse_stores uses: several
+                    # chains name a branch after the town it is in.
+                    info["cityCode"] = town_code_from_name(info["name"], _CODE_BY_TOWN)
             # Every branch here came with its prices in one file, so there is
             # no such thing as a branch we failed to fetch.
             covered = set(store_info)

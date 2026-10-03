@@ -114,7 +114,13 @@ export function createSearchScreen(root, app) {
 
     const storeHits = q
       ? pool
-          .filter((s) => `${s.name} ${s.chain} ${s.address}`.toLowerCase().includes(q))
+          // The town is in here because the chain's own branch name often
+          // is not, or is misspelled: Rami Levy files its Ishpro branch as
+          // "מודעין ישפרו", missing a letter, so searching the town it is
+          // actually in found nothing. `city` is the one field the pipeline
+          // fills itself, from the CBS register, so it is the only spelling
+          // that is dependable.
+          .filter((s) => `${s.name} ${s.chain} ${s.address} ${s.city ?? ""}`.toLowerCase().includes(q))
           .map((s) => ({ store: s, metres: distanceM(app.coord, s) }))
           .sort((a, b) => a.metres - b.metres)
           .slice(0, 6)
