@@ -1,46 +1,46 @@
 {
   "BAREKET:10": {
-    "fetchedAt": "2026-10-03T21:14:11.650242+00:00",
+    "fetchedAt": "2026-10-05T01:08:48.689479+00:00",
     "promos": {}
   },
   "BAREKET:2": {
-    "fetchedAt": "2026-10-03T21:14:10.627335+00:00",
+    "fetchedAt": "2026-10-05T01:08:48.596197+00:00",
     "promos": {}
   },
   "BAREKET:5": {
-    "fetchedAt": "2026-10-03T21:14:10.338559+00:00",
+    "fetchedAt": "2026-10-05T01:08:48.290495+00:00",
     "promos": {}
   },
   "BAREKET:6": {
-    "fetchedAt": "2026-10-03T21:14:13.684909+00:00",
+    "fetchedAt": "2026-10-05T01:08:48.043864+00:00",
     "promos": {}
   },
   "BAREKET:60": {
-    "fetchedAt": "2026-10-03T21:14:11.470540+00:00",
+    "fetchedAt": "2026-10-05T01:08:44.796303+00:00",
     "promos": {}
   },
   "BAREKET:61": {
-    "fetchedAt": "2026-10-03T21:14:10.379010+00:00",
+    "fetchedAt": "2026-10-05T01:08:46.506645+00:00",
     "promos": {}
   },
   "BAREKET:62": {
-    "fetchedAt": "2026-10-03T21:14:10.426334+00:00",
+    "fetchedAt": "2026-10-05T01:08:44.364927+00:00",
     "promos": {}
   },
   "BAREKET:63": {
-    "fetchedAt": "2026-10-03T21:14:12.975432+00:00",
+    "fetchedAt": "2026-10-05T01:08:48.638528+00:00",
     "promos": {}
   },
   "BAREKET:65": {
-    "fetchedAt": "2026-10-03T21:14:13.104052+00:00",
+    "fetchedAt": "2026-10-05T01:08:42.788843+00:00",
     "promos": {}
   },
   "BAREKET:7": {
-    "fetchedAt": "2026-10-03T21:14:11.543360+00:00",
+    "fetchedAt": "2026-10-05T01:08:45.114303+00:00",
     "promos": {}
   },
   "BAREKET:9": {
-    "fetchedAt": "2026-10-03T21:14:12.346897+00:00",
+    "fetchedAt": "2026-10-05T01:08:48.238057+00:00",
     "promos": {}
   },
   "DOR_ALON:401": {
@@ -9427,113 +9427,113 @@
     }
   },
   "DOR_ALON:807": {
-    "fetchedAt": "2026-10-03T12:05:07.320183+00:00",
+    "fetchedAt": "2026-10-05T01:06:21.032999+00:00",
     "promos": {
       "green-zero": [
         {
           "clubOnly": false,
-          "description": "משקה מונסטר 500מ ל 2 ב 21.90",
+          "description": "משקה מונסטר 500מ ל 2 ב 22",
           "discountRate": null,
-          "endsAt": "2026-10-04T23:59:00.000",
+          "endsAt": "2026-11-09T23:59:00.000",
           "maxQuantity": null,
           "minQuantity": 2,
-          "startsAt": "2026-09-01T00:00:00.000",
+          "startsAt": "2026-10-05T00:00:00.000",
           "terms": null
         }
       ],
       "mango-loco": [
         {
           "clubOnly": false,
-          "description": "משקה מונסטר 500מ ל 2 ב 21.90",
+          "description": "משקה מונסטר 500מ ל 2 ב 22",
           "discountRate": null,
-          "endsAt": "2026-10-04T23:59:00.000",
+          "endsAt": "2026-11-09T23:59:00.000",
           "maxQuantity": null,
           "minQuantity": 2,
-          "startsAt": "2026-09-01T00:00:00.000",
+          "startsAt": "2026-10-05T00:00:00.000",
           "terms": null
         }
       ],
       "monarch": [
         {
           "clubOnly": false,
-          "description": "משקה מונסטר 500מ ל 2 ב 21.90",
+          "description": "משקה מונסטר 500מ ל 2 ב 22",
           "discountRate": null,
-          "endsAt": "2026-10-04T23:59:00.000",
+          "endsAt": "2026-11-09T23:59:00.000",
           "maxQuantity": null,
           "minQuantity": 2,
-          "startsAt": "2026-09-01T00:00:00.000",
+          "startsAt": "2026-10-05T00:00:00.000",
           "terms": null
         }
       ],
       "original": [
         {
           "clubOnly": false,
-          "description": "משקה מונסטר 500מ ל 2 ב 21.90",
+          "description": "משקה מונסטר 500מ ל 2 ב 22",
           "discountRate": null,
-          "endsAt": "2026-10-04T23:59:00.000",
+          "endsAt": "2026-11-09T23:59:00.000",
           "maxQuantity": null,
           "minQuantity": 2,
-          "startsAt": "2026-09-01T00:00:00.000",
+          "startsAt": "2026-10-05T00:00:00.000",
           "terms": null
         }
       ],
       "strawberry": [
         {
           "clubOnly": false,
-          "description": "משקה מונסטר 500מ ל 2 ב 21.90",
+          "description": "משקה מונסטר 500מ ל 2 ב 22",
           "discountRate": null,
-          "endsAt": "2026-10-04T23:59:00.000",
+          "endsAt": "2026-11-09T23:59:00.000",
           "maxQuantity": null,
           "minQuantity": 2,
-          "startsAt": "2026-09-01T00:00:00.000",
+          "startsAt": "2026-10-05T00:00:00.000",
           "terms": null
         }
       ],
       "ultra": [
         {
           "clubOnly": false,
-          "description": "משקה מונסטר 500מ ל 2 ב 21.90",
+          "description": "משקה מונסטר 500מ ל 2 ב 22",
           "discountRate": null,
-          "endsAt": "2026-10-04T23:59:00.000",
+          "endsAt": "2026-11-09T23:59:00.000",
           "maxQuantity": null,
           "minQuantity": 2,
-          "startsAt": "2026-09-01T00:00:00.000",
+          "startsAt": "2026-10-05T00:00:00.000",
           "terms": null
         }
       ],
       "ultra-fiesta": [
         {
           "clubOnly": false,
-          "description": "משקה מונסטר 500מ ל 2 ב 21.90",
+          "description": "משקה מונסטר 500מ ל 2 ב 22",
           "discountRate": null,
-          "endsAt": "2026-10-04T23:59:00.000",
+          "endsAt": "2026-11-09T23:59:00.000",
           "maxQuantity": null,
           "minQuantity": 2,
-          "startsAt": "2026-09-01T00:00:00.000",
+          "startsAt": "2026-10-05T00:00:00.000",
           "terms": null
         }
       ],
       "ultra-paradise": [
         {
           "clubOnly": false,
-          "description": "משקה מונסטר 500מ ל 2 ב 21.90",
+          "description": "משקה מונסטר 500מ ל 2 ב 22",
           "discountRate": null,
-          "endsAt": "2026-10-04T23:59:00.000",
+          "endsAt": "2026-11-09T23:59:00.000",
           "maxQuantity": null,
           "minQuantity": 2,
-          "startsAt": "2026-09-01T00:00:00.000",
+          "startsAt": "2026-10-05T00:00:00.000",
           "terms": null
         }
       ],
       "ultra-peachy-keen": [
         {
           "clubOnly": false,
-          "description": "משקה מונסטר 500מ ל 2 ב 21.90",
+          "description": "משקה מונסטר 500מ ל 2 ב 22",
           "discountRate": null,
-          "endsAt": "2026-10-04T23:59:00.000",
+          "endsAt": "2026-11-09T23:59:00.000",
           "maxQuantity": null,
           "minQuantity": 2,
-          "startsAt": "2026-09-01T00:00:00.000",
+          "startsAt": "2026-10-05T00:00:00.000",
           "terms": null
         }
       ]
@@ -11675,113 +11675,113 @@
     }
   },
   "DOR_ALON:927": {
-    "fetchedAt": "2026-10-04T00:20:01.560482+00:00",
+    "fetchedAt": "2026-10-05T01:06:20.555402+00:00",
     "promos": {
       "green-zero": [
         {
           "clubOnly": false,
-          "description": "משקה מונסטר 500מ ל 2 ב 21.90",
+          "description": "משקה מונסטר 500מ ל 2 ב 22",
           "discountRate": null,
-          "endsAt": "2026-10-04T23:59:00.000",
+          "endsAt": "2026-11-09T23:59:00.000",
           "maxQuantity": null,
           "minQuantity": 2,
-          "startsAt": "2026-09-01T00:00:00.000",
+          "startsAt": "2026-10-05T00:00:00.000",
           "terms": null
         }
       ],
       "mango-loco": [
         {
           "clubOnly": false,
-          "description": "משקה מונסטר 500מ ל 2 ב 21.90",
+          "description": "משקה מונסטר 500מ ל 2 ב 22",
           "discountRate": null,
-          "endsAt": "2026-10-04T23:59:00.000",
+          "endsAt": "2026-11-09T23:59:00.000",
           "maxQuantity": null,
           "minQuantity": 2,
-          "startsAt": "2026-09-01T00:00:00.000",
+          "startsAt": "2026-10-05T00:00:00.000",
           "terms": null
         }
       ],
       "monarch": [
         {
           "clubOnly": false,
-          "description": "משקה מונסטר 500מ ל 2 ב 21.90",
+          "description": "משקה מונסטר 500מ ל 2 ב 22",
           "discountRate": null,
-          "endsAt": "2026-10-04T23:59:00.000",
+          "endsAt": "2026-11-09T23:59:00.000",
           "maxQuantity": null,
           "minQuantity": 2,
-          "startsAt": "2026-09-01T00:00:00.000",
+          "startsAt": "2026-10-05T00:00:00.000",
           "terms": null
         }
       ],
       "original": [
         {
           "clubOnly": false,
-          "description": "משקה מונסטר 500מ ל 2 ב 21.90",
+          "description": "משקה מונסטר 500מ ל 2 ב 22",
           "discountRate": null,
-          "endsAt": "2026-10-04T23:59:00.000",
+          "endsAt": "2026-11-09T23:59:00.000",
           "maxQuantity": null,
           "minQuantity": 2,
-          "startsAt": "2026-09-01T00:00:00.000",
+          "startsAt": "2026-10-05T00:00:00.000",
           "terms": null
         }
       ],
       "strawberry": [
         {
           "clubOnly": false,
-          "description": "משקה מונסטר 500מ ל 2 ב 21.90",
+          "description": "משקה מונסטר 500מ ל 2 ב 22",
           "discountRate": null,
-          "endsAt": "2026-10-04T23:59:00.000",
+          "endsAt": "2026-11-09T23:59:00.000",
           "maxQuantity": null,
           "minQuantity": 2,
-          "startsAt": "2026-09-01T00:00:00.000",
+          "startsAt": "2026-10-05T00:00:00.000",
           "terms": null
         }
       ],
       "ultra": [
         {
           "clubOnly": false,
-          "description": "משקה מונסטר 500מ ל 2 ב 21.90",
+          "description": "משקה מונסטר 500מ ל 2 ב 22",
           "discountRate": null,
-          "endsAt": "2026-10-04T23:59:00.000",
+          "endsAt": "2026-11-09T23:59:00.000",
           "maxQuantity": null,
           "minQuantity": 2,
-          "startsAt": "2026-09-01T00:00:00.000",
+          "startsAt": "2026-10-05T00:00:00.000",
           "terms": null
         }
       ],
       "ultra-fiesta": [
         {
           "clubOnly": false,
-          "description": "משקה מונסטר 500מ ל 2 ב 21.90",
+          "description": "משקה מונסטר 500מ ל 2 ב 22",
           "discountRate": null,
-          "endsAt": "2026-10-04T23:59:00.000",
+          "endsAt": "2026-11-09T23:59:00.000",
           "maxQuantity": null,
           "minQuantity": 2,
-          "startsAt": "2026-09-01T00:00:00.000",
+          "startsAt": "2026-10-05T00:00:00.000",
           "terms": null
         }
       ],
       "ultra-paradise": [
         {
           "clubOnly": false,
-          "description": "משקה מונסטר 500מ ל 2 ב 21.90",
+          "description": "משקה מונסטר 500מ ל 2 ב 22",
           "discountRate": null,
-          "endsAt": "2026-10-04T23:59:00.000",
+          "endsAt": "2026-11-09T23:59:00.000",
           "maxQuantity": null,
           "minQuantity": 2,
-          "startsAt": "2026-09-01T00:00:00.000",
+          "startsAt": "2026-10-05T00:00:00.000",
           "terms": null
         }
       ],
       "ultra-peachy-keen": [
         {
           "clubOnly": false,
-          "description": "משקה מונסטר 500מ ל 2 ב 21.90",
+          "description": "משקה מונסטר 500מ ל 2 ב 22",
           "discountRate": null,
-          "endsAt": "2026-10-04T23:59:00.000",
+          "endsAt": "2026-11-09T23:59:00.000",
           "maxQuantity": null,
           "minQuantity": 2,
-          "startsAt": "2026-09-01T00:00:00.000",
+          "startsAt": "2026-10-05T00:00:00.000",
           "terms": null
         }
       ]
@@ -13031,67 +13031,67 @@
     }
   },
   "FRESH_MARKET_AND_SUPER_DOSH:1": {
-    "fetchedAt": "2026-10-03T21:13:39.156765+00:00",
+    "fetchedAt": "2026-10-05T01:08:03.257348+00:00",
     "promos": {}
   },
   "FRESH_MARKET_AND_SUPER_DOSH:11": {
-    "fetchedAt": "2026-10-03T21:13:35.236267+00:00",
+    "fetchedAt": "2026-10-05T01:07:55.290634+00:00",
     "promos": {}
   },
   "FRESH_MARKET_AND_SUPER_DOSH:12": {
-    "fetchedAt": "2026-10-03T21:13:46.552629+00:00",
+    "fetchedAt": "2026-10-05T01:07:49.246579+00:00",
     "promos": {}
   },
   "FRESH_MARKET_AND_SUPER_DOSH:14": {
-    "fetchedAt": "2026-10-03T21:13:41.591700+00:00",
+    "fetchedAt": "2026-10-05T01:07:57.593448+00:00",
     "promos": {}
   },
   "FRESH_MARKET_AND_SUPER_DOSH:17": {
-    "fetchedAt": "2026-10-03T21:13:45.405569+00:00",
+    "fetchedAt": "2026-10-05T01:07:50.222727+00:00",
     "promos": {}
   },
   "FRESH_MARKET_AND_SUPER_DOSH:2": {
-    "fetchedAt": "2026-10-03T21:13:46.311470+00:00",
+    "fetchedAt": "2026-10-05T01:08:00.060584+00:00",
     "promos": {}
   },
   "FRESH_MARKET_AND_SUPER_DOSH:20": {
-    "fetchedAt": "2026-10-03T21:13:37.518846+00:00",
+    "fetchedAt": "2026-10-05T01:07:35.956142+00:00",
     "promos": {}
   },
   "FRESH_MARKET_AND_SUPER_DOSH:21": {
-    "fetchedAt": "2026-10-03T21:13:42.444722+00:00",
+    "fetchedAt": "2026-10-05T01:07:56.009096+00:00",
     "promos": {}
   },
   "FRESH_MARKET_AND_SUPER_DOSH:22": {
-    "fetchedAt": "2026-10-03T21:13:47.321165+00:00",
+    "fetchedAt": "2026-10-05T01:07:40.671319+00:00",
     "promos": {}
   },
   "FRESH_MARKET_AND_SUPER_DOSH:23": {
-    "fetchedAt": "2026-10-03T21:13:45.667397+00:00",
+    "fetchedAt": "2026-10-05T01:07:34.701877+00:00",
     "promos": {}
   },
   "FRESH_MARKET_AND_SUPER_DOSH:24": {
-    "fetchedAt": "2026-10-03T21:13:44.626347+00:00",
+    "fetchedAt": "2026-10-05T01:07:54.731855+00:00",
     "promos": {}
   },
   "FRESH_MARKET_AND_SUPER_DOSH:25": {
-    "fetchedAt": "2026-10-03T21:13:39.128754+00:00",
+    "fetchedAt": "2026-10-05T01:07:42.272379+00:00",
     "promos": {}
   },
   "FRESH_MARKET_AND_SUPER_DOSH:26": {
-    "fetchedAt": "2026-10-03T21:13:37.338880+00:00",
+    "fetchedAt": "2026-10-05T01:07:50.041975+00:00",
     "promos": {}
   },
   "FRESH_MARKET_AND_SUPER_DOSH:27": {
-    "fetchedAt": "2026-10-03T21:13:48.229770+00:00",
+    "fetchedAt": "2026-10-05T01:07:56.473205+00:00",
     "promos": {}
   },
   "FRESH_MARKET_AND_SUPER_DOSH:28": {
-    "fetchedAt": "2026-10-03T21:13:45.158065+00:00",
+    "fetchedAt": "2026-10-05T01:08:01.974476+00:00",
     "promos": {}
   },
   "FRESH_MARKET_AND_SUPER_DOSH:29": {
-    "fetchedAt": "2026-10-03T21:13:47.126604+00:00",
+    "fetchedAt": "2026-10-05T01:07:49.086035+00:00",
     "promos": {}
   },
   "FRESH_MARKET_AND_SUPER_DOSH:3": {
@@ -13099,31 +13099,31 @@
     "promos": {}
   },
   "FRESH_MARKET_AND_SUPER_DOSH:31": {
-    "fetchedAt": "2026-10-03T21:13:40.412577+00:00",
+    "fetchedAt": "2026-10-05T01:07:52.915629+00:00",
     "promos": {}
   },
   "FRESH_MARKET_AND_SUPER_DOSH:32": {
-    "fetchedAt": "2026-10-03T21:13:39.600140+00:00",
+    "fetchedAt": "2026-10-05T01:07:43.382027+00:00",
     "promos": {}
   },
   "FRESH_MARKET_AND_SUPER_DOSH:35": {
-    "fetchedAt": "2026-10-03T21:13:45.650616+00:00",
+    "fetchedAt": "2026-10-05T01:07:38.710933+00:00",
     "promos": {}
   },
   "FRESH_MARKET_AND_SUPER_DOSH:37": {
-    "fetchedAt": "2026-10-03T21:13:44.375205+00:00",
+    "fetchedAt": "2026-10-05T01:07:56.335238+00:00",
     "promos": {}
   },
   "FRESH_MARKET_AND_SUPER_DOSH:39": {
-    "fetchedAt": "2026-10-03T21:13:48.485523+00:00",
+    "fetchedAt": "2026-10-05T01:07:46.001167+00:00",
     "promos": {}
   },
   "FRESH_MARKET_AND_SUPER_DOSH:4": {
-    "fetchedAt": "2026-10-03T21:13:41.103873+00:00",
+    "fetchedAt": "2026-10-05T01:07:42.980909+00:00",
     "promos": {}
   },
   "FRESH_MARKET_AND_SUPER_DOSH:40": {
-    "fetchedAt": "2026-10-03T21:13:39.802307+00:00",
+    "fetchedAt": "2026-10-05T01:07:35.270292+00:00",
     "promos": {}
   },
   "FRESH_MARKET_AND_SUPER_DOSH:41": {
@@ -13131,31 +13131,31 @@
     "promos": {}
   },
   "FRESH_MARKET_AND_SUPER_DOSH:43": {
-    "fetchedAt": "2026-10-03T21:13:48.462529+00:00",
+    "fetchedAt": "2026-10-05T01:08:03.370075+00:00",
     "promos": {}
   },
   "FRESH_MARKET_AND_SUPER_DOSH:44": {
-    "fetchedAt": "2026-10-03T21:13:40.689660+00:00",
+    "fetchedAt": "2026-10-05T01:08:03.739934+00:00",
     "promos": {}
   },
   "FRESH_MARKET_AND_SUPER_DOSH:45": {
-    "fetchedAt": "2026-10-03T21:13:41.094613+00:00",
+    "fetchedAt": "2026-10-05T01:07:41.806602+00:00",
     "promos": {}
   },
   "FRESH_MARKET_AND_SUPER_DOSH:46": {
-    "fetchedAt": "2026-10-03T21:13:50.739174+00:00",
+    "fetchedAt": "2026-10-05T01:07:34.823323+00:00",
     "promos": {}
   },
   "FRESH_MARKET_AND_SUPER_DOSH:47": {
-    "fetchedAt": "2026-10-03T21:13:49.014761+00:00",
+    "fetchedAt": "2026-10-05T01:07:41.996208+00:00",
     "promos": {}
   },
   "FRESH_MARKET_AND_SUPER_DOSH:48": {
-    "fetchedAt": "2026-10-03T21:13:39.590283+00:00",
+    "fetchedAt": "2026-10-05T01:07:47.865706+00:00",
     "promos": {}
   },
   "FRESH_MARKET_AND_SUPER_DOSH:49": {
-    "fetchedAt": "2026-10-03T21:13:37.250317+00:00",
+    "fetchedAt": "2026-10-05T01:07:57.343009+00:00",
     "promos": {}
   },
   "FRESH_MARKET_AND_SUPER_DOSH:5": {
@@ -13163,15 +13163,15 @@
     "promos": {}
   },
   "FRESH_MARKET_AND_SUPER_DOSH:50": {
-    "fetchedAt": "2026-10-03T21:13:43.621037+00:00",
+    "fetchedAt": "2026-10-05T01:07:47.660379+00:00",
     "promos": {}
   },
   "FRESH_MARKET_AND_SUPER_DOSH:51": {
-    "fetchedAt": "2026-10-03T21:13:43.748613+00:00",
+    "fetchedAt": "2026-10-05T01:08:02.375223+00:00",
     "promos": {}
   },
   "FRESH_MARKET_AND_SUPER_DOSH:54": {
-    "fetchedAt": "2026-10-03T21:13:36.295079+00:00",
+    "fetchedAt": "2026-10-05T01:07:48.967326+00:00",
     "promos": {}
   },
   "FRESH_MARKET_AND_SUPER_DOSH:55": {
@@ -13179,11 +13179,11 @@
     "promos": {}
   },
   "FRESH_MARKET_AND_SUPER_DOSH:8": {
-    "fetchedAt": "2026-10-03T21:13:47.068316+00:00",
+    "fetchedAt": "2026-10-05T01:07:36.265833+00:00",
     "promos": {}
   },
   "FRESH_MARKET_AND_SUPER_DOSH:9": {
-    "fetchedAt": "2026-10-03T21:13:43.070958+00:00",
+    "fetchedAt": "2026-10-05T01:07:40.453520+00:00",
     "promos": {}
   },
   "HAZI_HINAM:201": {
@@ -13215,107 +13215,107 @@
     "promos": {}
   },
   "KESHET:14": {
-    "fetchedAt": "2026-10-03T21:14:03.178003+00:00",
+    "fetchedAt": "2026-10-05T01:08:25.212255+00:00",
     "promos": {}
   },
   "KESHET:21": {
-    "fetchedAt": "2026-10-03T21:14:03.336436+00:00",
+    "fetchedAt": "2026-10-05T01:08:24.951990+00:00",
     "promos": {}
   },
   "KING_STORE:14": {
-    "fetchedAt": "2026-10-03T21:13:58.821188+00:00",
+    "fetchedAt": "2026-10-05T01:08:17.606120+00:00",
     "promos": {}
   },
   "KING_STORE:15": {
-    "fetchedAt": "2026-10-03T21:13:59.238604+00:00",
+    "fetchedAt": "2026-10-05T01:08:19.018971+00:00",
     "promos": {}
   },
   "KING_STORE:16": {
-    "fetchedAt": "2026-10-03T21:13:58.705240+00:00",
+    "fetchedAt": "2026-10-05T01:08:21.130914+00:00",
     "promos": {}
   },
   "KING_STORE:18": {
-    "fetchedAt": "2026-10-03T21:13:59.599089+00:00",
+    "fetchedAt": "2026-10-05T01:08:20.716461+00:00",
     "promos": {}
   },
   "KING_STORE:200": {
-    "fetchedAt": "2026-10-03T21:14:01.102837+00:00",
+    "fetchedAt": "2026-10-05T01:08:17.282975+00:00",
     "promos": {}
   },
   "KING_STORE:27": {
-    "fetchedAt": "2026-10-03T21:13:59.530733+00:00",
+    "fetchedAt": "2026-10-05T01:08:21.053368+00:00",
     "promos": {}
   },
   "KING_STORE:3": {
-    "fetchedAt": "2026-10-03T21:14:01.525401+00:00",
+    "fetchedAt": "2026-10-05T01:08:17.859863+00:00",
     "promos": {}
   },
   "KING_STORE:31": {
-    "fetchedAt": "2026-10-03T21:14:01.369766+00:00",
+    "fetchedAt": "2026-10-05T01:08:17.900524+00:00",
     "promos": {}
   },
   "KING_STORE:334": {
-    "fetchedAt": "2026-10-03T21:13:58.294546+00:00",
+    "fetchedAt": "2026-10-05T01:08:17.020211+00:00",
     "promos": {}
   },
   "KING_STORE:338": {
-    "fetchedAt": "2026-10-03T21:14:01.686080+00:00",
+    "fetchedAt": "2026-10-05T01:08:17.713459+00:00",
     "promos": {}
   },
   "KING_STORE:339": {
-    "fetchedAt": "2026-10-03T21:13:59.435185+00:00",
+    "fetchedAt": "2026-10-05T01:08:17.165310+00:00",
     "promos": {}
   },
   "KING_STORE:8": {
-    "fetchedAt": "2026-10-03T21:13:58.512492+00:00",
+    "fetchedAt": "2026-10-05T01:08:14.962942+00:00",
     "promos": {}
   },
   "MAAYAN_2000:1": {
-    "fetchedAt": "2026-10-03T21:13:53.244122+00:00",
+    "fetchedAt": "2026-10-05T01:08:07.255601+00:00",
     "promos": {}
   },
   "MAAYAN_2000:13": {
-    "fetchedAt": "2026-10-03T21:13:50.116249+00:00",
+    "fetchedAt": "2026-10-05T01:08:09.786063+00:00",
     "promos": {}
   },
   "MAAYAN_2000:16": {
-    "fetchedAt": "2026-10-03T21:13:51.367016+00:00",
+    "fetchedAt": "2026-10-05T01:08:13.810634+00:00",
     "promos": {}
   },
   "MAAYAN_2000:17": {
-    "fetchedAt": "2026-10-03T21:13:53.402503+00:00",
+    "fetchedAt": "2026-10-05T01:08:10.843410+00:00",
     "promos": {}
   },
   "MAAYAN_2000:2": {
-    "fetchedAt": "2026-10-03T21:13:54.065081+00:00",
+    "fetchedAt": "2026-10-05T01:08:06.681938+00:00",
     "promos": {}
   },
   "MAAYAN_2000:20": {
-    "fetchedAt": "2026-10-03T21:13:55.950764+00:00",
+    "fetchedAt": "2026-10-05T01:08:10.194937+00:00",
     "promos": {}
   },
   "MAAYAN_2000:27": {
-    "fetchedAt": "2026-09-22T00:46:08.472885+00:00",
+    "fetchedAt": "2026-10-05T01:08:02.397856+00:00",
     "promos": {}
   },
   "MAAYAN_2000:28": {
-    "fetchedAt": "2026-10-03T21:13:53.213296+00:00",
+    "fetchedAt": "2026-10-05T01:08:13.261903+00:00",
     "promos": {}
   },
   "MAAYAN_2000:29": {
-    "fetchedAt": "2026-10-03T21:13:55.912219+00:00",
+    "fetchedAt": "2026-10-05T01:08:10.425069+00:00",
     "promos": {}
   },
   "MAAYAN_2000:3": {
-    "fetchedAt": "2026-10-03T21:13:56.603795+00:00",
+    "fetchedAt": "2026-10-05T01:08:06.645792+00:00",
     "promos": {}
   },
   "MAAYAN_2000:35": {
-    "fetchedAt": "2026-10-03T21:13:52.595693+00:00",
+    "fetchedAt": "2026-10-05T01:08:10.277732+00:00",
     "promos": {}
   },
   "MAAYAN_2000:38": {
-    "fetchedAt": "2026-10-03T21:13:52.941555+00:00",
+    "fetchedAt": "2026-10-05T01:08:06.894240+00:00",
     "promos": {}
   },
   "MAAYAN_2000:39": {
@@ -13323,55 +13323,55 @@
     "promos": {}
   },
   "MAAYAN_2000:4": {
-    "fetchedAt": "2026-10-03T21:13:51.399618+00:00",
+    "fetchedAt": "2026-10-05T01:08:10.596191+00:00",
     "promos": {}
   },
   "MAAYAN_2000:40": {
-    "fetchedAt": "2026-10-03T21:13:55.065121+00:00",
+    "fetchedAt": "2026-10-05T01:08:13.499274+00:00",
     "promos": {}
   },
   "MAAYAN_2000:43": {
-    "fetchedAt": "2026-10-03T21:13:50.766749+00:00",
+    "fetchedAt": "2026-10-05T01:08:14.102851+00:00",
     "promos": {}
   },
   "MAAYAN_2000:44": {
-    "fetchedAt": "2026-09-30T10:48:41.978408+00:00",
+    "fetchedAt": "2026-10-05T01:08:13.680664+00:00",
     "promos": {}
   },
   "MAAYAN_2000:45": {
-    "fetchedAt": "2026-10-03T21:13:54.169180+00:00",
+    "fetchedAt": "2026-10-05T01:08:06.717784+00:00",
     "promos": {}
   },
   "MAAYAN_2000:5": {
-    "fetchedAt": "2026-10-03T21:13:50.456745+00:00",
+    "fetchedAt": "2026-10-05T01:08:06.284053+00:00",
     "promos": {}
   },
   "MAAYAN_2000:6": {
-    "fetchedAt": "2026-09-22T00:46:08.144212+00:00",
+    "fetchedAt": "2026-10-05T01:08:10.555913+00:00",
     "promos": {}
   },
   "MAAYAN_2000:60": {
-    "fetchedAt": "2026-10-03T21:13:56.780766+00:00",
+    "fetchedAt": "2026-10-05T01:08:10.062115+00:00",
     "promos": {}
   },
   "MAAYAN_2000:63": {
-    "fetchedAt": "2026-10-03T21:13:55.664037+00:00",
+    "fetchedAt": "2026-10-05T01:08:07.477560+00:00",
     "promos": {}
   },
   "MAAYAN_2000:64": {
-    "fetchedAt": "2026-10-03T21:13:56.658074+00:00",
+    "fetchedAt": "2026-10-05T01:08:14.071573+00:00",
     "promos": {}
   },
   "MAAYAN_2000:7": {
-    "fetchedAt": "2026-10-03T21:13:49.961962+00:00",
+    "fetchedAt": "2026-10-05T01:08:07.008695+00:00",
     "promos": {}
   },
   "MAAYAN_2000:8": {
-    "fetchedAt": "2026-10-03T21:13:52.889790+00:00",
+    "fetchedAt": "2026-10-05T01:08:04.121612+00:00",
     "promos": {}
   },
   "MAAYAN_2000:9": {
-    "fetchedAt": "2026-10-03T21:13:55.994056+00:00",
+    "fetchedAt": "2026-10-05T01:08:13.926453+00:00",
     "promos": {}
   },
   "NETIV_HASED:17": {
@@ -13647,7 +13647,7 @@
     "promos": {}
   },
   "POLIZER:4": {
-    "fetchedAt": "2026-10-04T00:20:20.908858+00:00",
+    "fetchedAt": "2026-10-05T01:09:10.553995+00:00",
     "promos": {}
   },
   "RAMI_LEVY:1": {
@@ -13999,27 +13999,27 @@
     "promos": {}
   },
   "SALACH_DABACH:11": {
-    "fetchedAt": "2026-10-03T21:14:13.552155+00:00",
+    "fetchedAt": "2026-10-05T01:08:55.350959+00:00",
     "promos": {}
   },
   "SALACH_DABACH:13": {
-    "fetchedAt": "2026-10-04T00:20:16.209350+00:00",
+    "fetchedAt": "2026-10-05T01:08:53.868734+00:00",
     "promos": {}
   },
   "SALACH_DABACH:15": {
-    "fetchedAt": "2026-10-04T00:20:11.447803+00:00",
+    "fetchedAt": "2026-10-05T01:08:59.290732+00:00",
     "promos": {}
   },
   "SALACH_DABACH:19": {
-    "fetchedAt": "2026-10-03T21:14:15.913225+00:00",
+    "fetchedAt": "2026-10-05T01:08:55.026763+00:00",
     "promos": {}
   },
   "SALACH_DABACH:4": {
-    "fetchedAt": "2026-10-03T21:14:13.459150+00:00",
+    "fetchedAt": "2026-10-05T01:08:55.517185+00:00",
     "promos": {}
   },
   "SALACH_DABACH:7": {
-    "fetchedAt": "2026-10-03T21:14:13.424455+00:00",
+    "fetchedAt": "2026-10-05T01:08:52.096236+00:00",
     "promos": {}
   },
   "SHUFERSAL:1": {
@@ -15007,71 +15007,71 @@
     "promos": {}
   },
   "SHUK_AHIR:11": {
-    "fetchedAt": "2026-10-03T21:14:17.494675+00:00",
+    "fetchedAt": "2026-10-05T01:09:06.701770+00:00",
     "promos": {}
   },
   "SHUK_AHIR:12": {
-    "fetchedAt": "2026-10-03T21:14:16.511811+00:00",
+    "fetchedAt": "2026-10-05T01:08:59.729673+00:00",
     "promos": {}
   },
   "SHUK_AHIR:13": {
-    "fetchedAt": "2026-10-03T21:14:18.400560+00:00",
+    "fetchedAt": "2026-10-05T01:09:07.982238+00:00",
     "promos": {}
   },
   "SHUK_AHIR:14": {
-    "fetchedAt": "2026-10-03T21:14:21.137719+00:00",
+    "fetchedAt": "2026-10-05T01:09:08.024793+00:00",
     "promos": {}
   },
   "SHUK_AHIR:17": {
-    "fetchedAt": "2026-10-03T21:14:21.774948+00:00",
+    "fetchedAt": "2026-10-05T01:09:05.436688+00:00",
     "promos": {}
   },
   "SHUK_AHIR:18": {
-    "fetchedAt": "2026-10-03T21:14:22.828738+00:00",
+    "fetchedAt": "2026-10-05T01:09:03.188738+00:00",
     "promos": {}
   },
   "SHUK_AHIR:21": {
-    "fetchedAt": "2026-10-03T21:14:20.237045+00:00",
+    "fetchedAt": "2026-10-05T01:09:05.427457+00:00",
     "promos": {}
   },
   "SHUK_AHIR:6": {
-    "fetchedAt": "2026-10-03T21:14:19.213504+00:00",
+    "fetchedAt": "2026-10-05T01:09:07.943241+00:00",
     "promos": {}
   },
   "SHUK_AHIR:9": {
-    "fetchedAt": "2026-10-03T21:14:22.128702+00:00",
+    "fetchedAt": "2026-10-05T01:09:05.404418+00:00",
     "promos": {}
   },
   "STOP_MARKET:10": {
-    "fetchedAt": "2026-10-04T00:20:16.712319+00:00",
+    "fetchedAt": "2026-10-05T01:09:03.029324+00:00",
     "promos": {}
   },
   "STOP_MARKET:11": {
-    "fetchedAt": "2026-10-03T21:14:20.199695+00:00",
+    "fetchedAt": "2026-10-05T01:09:02.151601+00:00",
     "promos": {}
   },
   "STOP_MARKET:12": {
-    "fetchedAt": "2026-10-04T00:20:18.044470+00:00",
+    "fetchedAt": "2026-10-05T01:08:54.880868+00:00",
     "promos": {}
   },
   "STOP_MARKET:4": {
-    "fetchedAt": "2026-10-03T21:14:19.672102+00:00",
+    "fetchedAt": "2026-10-05T01:09:00.136958+00:00",
     "promos": {}
   },
   "STOP_MARKET:5": {
-    "fetchedAt": "2026-10-03T21:14:16.317857+00:00",
+    "fetchedAt": "2026-10-05T01:09:03.839913+00:00",
     "promos": {}
   },
   "STOP_MARKET:6": {
-    "fetchedAt": "2026-10-03T21:14:14.894958+00:00",
+    "fetchedAt": "2026-10-05T01:08:51.457495+00:00",
     "promos": {}
   },
   "STOP_MARKET:7": {
-    "fetchedAt": "2026-10-03T21:14:19.122820+00:00",
+    "fetchedAt": "2026-10-05T01:09:00.637568+00:00",
     "promos": {}
   },
   "STOP_MARKET:8": {
-    "fetchedAt": "2026-10-03T21:14:15.402239+00:00",
+    "fetchedAt": "2026-10-05T01:09:03.457162+00:00",
     "promos": {}
   },
   "SUPER_PHARM:10": {
@@ -15861,55 +15861,55 @@
     "promos": {}
   },
   "SUPER_SAPIR:13": {
-    "fetchedAt": "2026-10-03T21:13:10.334094+00:00",
+    "fetchedAt": "2026-10-05T01:06:28.695575+00:00",
     "promos": {}
   },
   "SUPER_SAPIR:17": {
-    "fetchedAt": "2026-10-03T21:13:08.851228+00:00",
+    "fetchedAt": "2026-10-05T01:06:28.598082+00:00",
     "promos": {}
   },
   "SUPER_SAPIR:192": {
-    "fetchedAt": "2026-10-03T21:13:06.795458+00:00",
+    "fetchedAt": "2026-10-05T01:06:24.833304+00:00",
     "promos": {}
   },
   "SUPER_SAPIR:193": {
-    "fetchedAt": "2026-10-03T21:13:09.638210+00:00",
+    "fetchedAt": "2026-10-05T01:06:25.591007+00:00",
     "promos": {}
   },
   "SUPER_SAPIR:20": {
-    "fetchedAt": "2026-10-03T21:13:04.053744+00:00",
+    "fetchedAt": "2026-10-05T01:06:29.409743+00:00",
     "promos": {}
   },
   "SUPER_SAPIR:21": {
-    "fetchedAt": "2026-10-03T21:13:04.024872+00:00",
+    "fetchedAt": "2026-10-05T01:06:21.077656+00:00",
     "promos": {}
   },
   "SUPER_SAPIR:26": {
-    "fetchedAt": "2026-10-03T21:13:06.746575+00:00",
+    "fetchedAt": "2026-10-05T01:06:24.143442+00:00",
     "promos": {}
   },
   "SUPER_SAPIR:260": {
-    "fetchedAt": "2026-10-03T21:13:11.153249+00:00",
+    "fetchedAt": "2026-10-05T01:06:31.677646+00:00",
     "promos": {}
   },
   "SUPER_SAPIR:261": {
-    "fetchedAt": "2026-09-30T01:21:04.624704+00:00",
+    "fetchedAt": "2026-10-05T01:06:32.591336+00:00",
     "promos": {}
   },
   "SUPER_SAPIR:264": {
-    "fetchedAt": "2026-10-03T21:13:08.688417+00:00",
+    "fetchedAt": "2026-10-05T01:06:32.697875+00:00",
     "promos": {}
   },
   "SUPER_SAPIR:27": {
-    "fetchedAt": "2026-10-03T21:13:11.690065+00:00",
+    "fetchedAt": "2026-10-05T01:06:32.082113+00:00",
     "promos": {}
   },
   "SUPER_SAPIR:29": {
-    "fetchedAt": "2026-10-03T21:13:03.920458+00:00",
+    "fetchedAt": "2026-10-05T01:06:24.701294+00:00",
     "promos": {}
   },
   "SUPER_SAPIR:396": {
-    "fetchedAt": "2026-10-03T21:13:07.556451+00:00",
+    "fetchedAt": "2026-10-05T01:06:24.910885+00:00",
     "promos": {}
   },
   "SUPER_SAPIR:399": {
@@ -15917,19 +15917,19 @@
     "promos": {}
   },
   "SUPER_SAPIR:40": {
-    "fetchedAt": "2026-10-03T21:13:10.284192+00:00",
+    "fetchedAt": "2026-10-05T01:06:28.929727+00:00",
     "promos": {}
   },
   "SUPER_SAPIR:42": {
-    "fetchedAt": "2026-10-03T21:13:10.090235+00:00",
+    "fetchedAt": "2026-10-05T01:06:27.877998+00:00",
     "promos": {}
   },
   "SUPER_SAPIR:43": {
-    "fetchedAt": "2026-10-03T21:13:11.663037+00:00",
+    "fetchedAt": "2026-10-05T01:06:28.754476+00:00",
     "promos": {}
   },
   "SUPER_SAPIR:44": {
-    "fetchedAt": "2026-10-03T21:13:03.932953+00:00",
+    "fetchedAt": "2026-10-05T01:06:24.853423+00:00",
     "promos": {}
   },
   "SUPER_SAPIR:46": {
@@ -15937,303 +15937,303 @@
     "promos": {}
   },
   "SUPER_SAPIR:47": {
-    "fetchedAt": "2026-10-03T21:13:08.395567+00:00",
+    "fetchedAt": "2026-10-05T01:06:25.224846+00:00",
     "promos": {}
   },
   "SUPER_SAPIR:48": {
-    "fetchedAt": "2026-10-03T21:13:03.963675+00:00",
+    "fetchedAt": "2026-10-05T01:06:29.130419+00:00",
     "promos": {}
   },
   "SUPER_SAPIR:53": {
-    "fetchedAt": "2026-10-03T21:13:07.609773+00:00",
+    "fetchedAt": "2026-10-05T01:06:32.646127+00:00",
     "promos": {}
   },
   "SUPER_SAPIR:6": {
-    "fetchedAt": "2026-10-03T21:13:06.984399+00:00",
+    "fetchedAt": "2026-10-05T01:06:29.460227+00:00",
     "promos": {}
   },
   "SUPER_SAPIR:66": {
-    "fetchedAt": "2026-10-03T21:13:10.011728+00:00",
+    "fetchedAt": "2026-10-05T01:06:25.401390+00:00",
     "promos": {}
   },
   "SUPER_YUDA:201": {
-    "fetchedAt": "2026-10-03T21:14:07.535863+00:00",
+    "fetchedAt": "2026-10-05T01:08:41.215601+00:00",
     "promos": {}
   },
   "SUPER_YUDA:202": {
-    "fetchedAt": "2026-10-04T00:20:14.727038+00:00",
+    "fetchedAt": "2026-10-05T01:08:44.320819+00:00",
     "promos": {}
   },
   "SUPER_YUDA:203": {
-    "fetchedAt": "2026-10-03T21:14:08.957002+00:00",
+    "fetchedAt": "2026-10-05T01:08:31.138521+00:00",
     "promos": {}
   },
   "SUPER_YUDA:204": {
-    "fetchedAt": "2026-10-03T21:14:03.172738+00:00",
+    "fetchedAt": "2026-10-05T01:08:27.485213+00:00",
     "promos": {}
   },
   "SUPER_YUDA:205": {
-    "fetchedAt": "2026-10-04T00:20:15.212405+00:00",
+    "fetchedAt": "2026-10-05T01:08:41.275875+00:00",
     "promos": {}
   },
   "SUPER_YUDA:206": {
-    "fetchedAt": "2026-10-03T21:14:03.453914+00:00",
+    "fetchedAt": "2026-10-05T01:08:34.679449+00:00",
     "promos": {}
   },
   "SUPER_YUDA:207": {
-    "fetchedAt": "2026-10-04T00:20:08.770404+00:00",
+    "fetchedAt": "2026-10-05T01:08:37.819870+00:00",
     "promos": {}
   },
   "SUPER_YUDA:208": {
-    "fetchedAt": "2026-10-04T00:20:14.039384+00:00",
+    "fetchedAt": "2026-10-05T01:08:32.229144+00:00",
     "promos": {}
   },
   "SUPER_YUDA:209": {
-    "fetchedAt": "2026-10-03T21:14:04.843342+00:00",
+    "fetchedAt": "2026-10-05T01:08:31.014968+00:00",
     "promos": {}
   },
   "SUPER_YUDA:210": {
-    "fetchedAt": "2026-10-03T21:14:06.470094+00:00",
+    "fetchedAt": "2026-10-05T01:08:38.108794+00:00",
     "promos": {}
   },
   "SUPER_YUDA:211": {
-    "fetchedAt": "2026-10-03T21:14:07.161258+00:00",
+    "fetchedAt": "2026-10-05T01:08:38.809021+00:00",
     "promos": {}
   },
   "SUPER_YUDA:212": {
-    "fetchedAt": "2026-10-03T21:14:07.455175+00:00",
+    "fetchedAt": "2026-10-05T01:08:24.272968+00:00",
     "promos": {}
   },
   "SUPER_YUDA:213": {
-    "fetchedAt": "2026-10-03T21:14:06.692259+00:00",
+    "fetchedAt": "2026-10-05T01:08:28.070659+00:00",
     "promos": {}
   },
   "SUPER_YUDA:214": {
-    "fetchedAt": "2026-10-03T21:14:08.345165+00:00",
+    "fetchedAt": "2026-10-05T01:08:44.853951+00:00",
     "promos": {}
   },
   "SUPER_YUDA:215": {
-    "fetchedAt": "2026-10-03T21:14:03.542342+00:00",
+    "fetchedAt": "2026-10-05T01:08:34.620916+00:00",
     "promos": {}
   },
   "SUPER_YUDA:216": {
-    "fetchedAt": "2026-10-04T00:20:14.970530+00:00",
+    "fetchedAt": "2026-10-05T01:08:31.570961+00:00",
     "promos": {}
   },
   "SUPER_YUDA:217": {
-    "fetchedAt": "2026-10-03T21:14:08.490535+00:00",
+    "fetchedAt": "2026-10-05T01:08:38.303882+00:00",
     "promos": {}
   },
   "SUPER_YUDA:230": {
-    "fetchedAt": "2026-10-04T00:20:08.864832+00:00",
+    "fetchedAt": "2026-10-05T01:08:34.096170+00:00",
     "promos": {}
   },
   "SUPER_YUDA:231": {
-    "fetchedAt": "2026-10-04T00:20:07.011745+00:00",
+    "fetchedAt": "2026-10-05T01:08:44.427718+00:00",
     "promos": {}
   },
   "SUPER_YUDA:232": {
-    "fetchedAt": "2026-10-03T21:14:07.849398+00:00",
+    "fetchedAt": "2026-10-05T01:08:31.744725+00:00",
     "promos": {}
   },
   "SUPER_YUDA:233": {
-    "fetchedAt": "2026-10-03T21:14:04.610562+00:00",
+    "fetchedAt": "2026-10-05T01:08:24.384762+00:00",
     "promos": {}
   },
   "SUPER_YUDA:235": {
-    "fetchedAt": "2026-10-04T00:20:13.852676+00:00",
+    "fetchedAt": "2026-10-05T01:08:44.915591+00:00",
     "promos": {}
   },
   "SUPER_YUDA:236": {
-    "fetchedAt": "2026-10-04T00:20:08.162886+00:00",
+    "fetchedAt": "2026-10-05T01:08:37.751195+00:00",
     "promos": {}
   },
   "SUPER_YUDA:237": {
-    "fetchedAt": "2026-10-03T21:14:07.480488+00:00",
+    "fetchedAt": "2026-10-05T01:08:25.623727+00:00",
     "promos": {}
   },
   "SUPER_YUDA:238": {
-    "fetchedAt": "2026-10-03T21:14:07.603100+00:00",
+    "fetchedAt": "2026-10-05T01:08:28.134945+00:00",
     "promos": {}
   },
   "SUPER_YUDA:241": {
-    "fetchedAt": "2026-10-03T21:14:02.912156+00:00",
+    "fetchedAt": "2026-10-05T01:08:40.684124+00:00",
     "promos": {}
   },
   "TIV_TAAM:10": {
-    "fetchedAt": "2026-10-03T21:13:27.083267+00:00",
+    "fetchedAt": "2026-10-05T01:07:14.599459+00:00",
     "promos": {}
   },
   "TIV_TAAM:12": {
-    "fetchedAt": "2026-10-03T21:13:19.524473+00:00",
+    "fetchedAt": "2026-10-05T01:07:19.918726+00:00",
     "promos": {}
   },
   "TIV_TAAM:14": {
-    "fetchedAt": "2026-10-03T21:13:21.606486+00:00",
+    "fetchedAt": "2026-10-05T01:06:41.710013+00:00",
     "promos": {}
   },
   "TIV_TAAM:15": {
-    "fetchedAt": "2026-10-03T21:13:24.013155+00:00",
+    "fetchedAt": "2026-10-05T01:07:02.964716+00:00",
     "promos": {}
   },
   "TIV_TAAM:156": {
-    "fetchedAt": "2026-10-03T21:13:29.405516+00:00",
+    "fetchedAt": "2026-10-05T01:07:02.392904+00:00",
     "promos": {}
   },
   "TIV_TAAM:17": {
-    "fetchedAt": "2026-10-03T21:13:30.097147+00:00",
+    "fetchedAt": "2026-10-05T01:06:39.802121+00:00",
     "promos": {}
   },
   "TIV_TAAM:18": {
-    "fetchedAt": "2026-10-03T21:13:22.330434+00:00",
+    "fetchedAt": "2026-10-05T01:06:58.241936+00:00",
     "promos": {}
   },
   "TIV_TAAM:19": {
-    "fetchedAt": "2026-10-03T21:13:12.316771+00:00",
+    "fetchedAt": "2026-10-05T01:06:50.191477+00:00",
     "promos": {}
   },
   "TIV_TAAM:2": {
-    "fetchedAt": "2026-10-04T00:19:59.969185+00:00",
+    "fetchedAt": "2026-10-05T01:07:07.655870+00:00",
     "promos": {}
   },
   "TIV_TAAM:20": {
-    "fetchedAt": "2026-10-03T21:13:29.677519+00:00",
+    "fetchedAt": "2026-10-05T01:06:49.428063+00:00",
     "promos": {}
   },
   "TIV_TAAM:21": {
-    "fetchedAt": "2026-10-04T00:20:07.715282+00:00",
+    "fetchedAt": "2026-10-05T01:07:05.749155+00:00",
     "promos": {}
   },
   "TIV_TAAM:22": {
-    "fetchedAt": "2026-10-04T00:20:08.107116+00:00",
+    "fetchedAt": "2026-10-05T01:07:06.198144+00:00",
     "promos": {}
   },
   "TIV_TAAM:23": {
-    "fetchedAt": "2026-10-03T21:13:20.637209+00:00",
+    "fetchedAt": "2026-10-05T01:06:54.086756+00:00",
     "promos": {}
   },
   "TIV_TAAM:24": {
-    "fetchedAt": "2026-10-03T21:13:18.699902+00:00",
+    "fetchedAt": "2026-10-05T01:06:45.537588+00:00",
     "promos": {}
   },
   "TIV_TAAM:3": {
-    "fetchedAt": "2026-10-04T00:20:08.676425+00:00",
+    "fetchedAt": "2026-10-05T01:06:45.133151+00:00",
     "promos": {}
   },
   "TIV_TAAM:30": {
-    "fetchedAt": "2026-10-03T21:13:12.573197+00:00",
+    "fetchedAt": "2026-10-05T01:06:58.752515+00:00",
     "promos": {}
   },
   "TIV_TAAM:51": {
-    "fetchedAt": "2026-10-03T21:13:28.305787+00:00",
+    "fetchedAt": "2026-10-05T01:07:07.002673+00:00",
     "promos": {}
   },
   "TIV_TAAM:52": {
-    "fetchedAt": "2026-10-03T21:13:22.879582+00:00",
+    "fetchedAt": "2026-10-05T01:07:11.866235+00:00",
     "promos": {}
   },
   "TIV_TAAM:56": {
-    "fetchedAt": "2026-10-03T21:13:20.057434+00:00",
+    "fetchedAt": "2026-10-05T01:06:53.305484+00:00",
     "promos": {}
   },
   "TIV_TAAM:57": {
-    "fetchedAt": "2026-10-03T21:13:22.657807+00:00",
+    "fetchedAt": "2026-10-05T01:06:53.686248+00:00",
     "promos": {}
   },
   "TIV_TAAM:58": {
-    "fetchedAt": "2026-10-03T21:13:11.669502+00:00",
+    "fetchedAt": "2026-10-05T01:06:41.186956+00:00",
     "promos": {}
   },
   "TIV_TAAM:59": {
-    "fetchedAt": "2026-10-03T21:13:12.348518+00:00",
+    "fetchedAt": "2026-10-05T01:06:47.763057+00:00",
     "promos": {}
   },
   "TIV_TAAM:6": {
-    "fetchedAt": "2026-10-03T21:13:22.411074+00:00",
+    "fetchedAt": "2026-10-05T01:06:57.787682+00:00",
     "promos": {}
   },
   "TIV_TAAM:61": {
-    "fetchedAt": "2026-10-03T21:13:17.145971+00:00",
+    "fetchedAt": "2026-10-05T01:07:15.522167+00:00",
     "promos": {}
   },
   "TIV_TAAM:63": {
-    "fetchedAt": "2026-10-04T00:19:58.631727+00:00",
+    "fetchedAt": "2026-10-05T01:07:18.460287+00:00",
     "promos": {}
   },
   "TIV_TAAM:68": {
-    "fetchedAt": "2026-10-04T00:20:07.321869+00:00",
+    "fetchedAt": "2026-10-05T01:07:13.983633+00:00",
     "promos": {}
   },
   "TIV_TAAM:7": {
-    "fetchedAt": "2026-10-03T21:13:25.290238+00:00",
+    "fetchedAt": "2026-10-05T01:06:40.528270+00:00",
     "promos": {}
   },
   "TIV_TAAM:70": {
-    "fetchedAt": "2026-10-03T21:13:20.226790+00:00",
+    "fetchedAt": "2026-10-05T01:07:10.571156+00:00",
     "promos": {}
   },
   "TIV_TAAM:71": {
-    "fetchedAt": "2026-10-03T21:13:24.362970+00:00",
+    "fetchedAt": "2026-10-05T01:07:01.827175+00:00",
     "promos": {}
   },
   "TIV_TAAM:73": {
-    "fetchedAt": "2026-10-03T21:13:16.837020+00:00",
+    "fetchedAt": "2026-10-05T01:06:57.239410+00:00",
     "promos": {}
   },
   "TIV_TAAM:74": {
-    "fetchedAt": "2026-10-03T21:13:19.387669+00:00",
+    "fetchedAt": "2026-10-05T01:07:10.248464+00:00",
     "promos": {}
   },
   "TIV_TAAM:75": {
-    "fetchedAt": "2026-10-03T21:13:16.694708+00:00",
+    "fetchedAt": "2026-10-05T01:07:12.693372+00:00",
     "promos": {}
   },
   "TIV_TAAM:79": {
-    "fetchedAt": "2026-10-03T21:13:17.823438+00:00",
+    "fetchedAt": "2026-10-05T01:06:48.839202+00:00",
     "promos": {}
   },
   "TIV_TAAM:80": {
-    "fetchedAt": "2026-10-03T21:13:30.108977+00:00",
+    "fetchedAt": "2026-10-05T01:06:49.760363+00:00",
     "promos": {}
   },
   "TIV_TAAM:82": {
-    "fetchedAt": "2026-10-03T21:13:24.836440+00:00",
+    "fetchedAt": "2026-10-05T01:07:15.066876+00:00",
     "promos": {}
   },
   "TIV_TAAM:83": {
-    "fetchedAt": "2026-10-03T21:13:28.217598+00:00",
+    "fetchedAt": "2026-10-05T01:07:20.876414+00:00",
     "promos": {}
   },
   "TIV_TAAM:84": {
-    "fetchedAt": "2026-10-03T21:13:17.136196+00:00",
+    "fetchedAt": "2026-10-05T01:06:40.877616+00:00",
     "promos": {}
   },
   "TIV_TAAM:85": {
-    "fetchedAt": "2026-10-03T21:13:21.690092+00:00",
+    "fetchedAt": "2026-10-05T01:06:36.550685+00:00",
     "promos": {}
   },
   "TIV_TAAM:87": {
-    "fetchedAt": "2026-10-03T21:13:29.417917+00:00",
+    "fetchedAt": "2026-10-05T01:06:56.324615+00:00",
     "promos": {}
   },
   "TIV_TAAM:88": {
-    "fetchedAt": "2026-10-03T21:13:18.109801+00:00",
+    "fetchedAt": "2026-10-05T01:07:04.497965+00:00",
     "promos": {}
   },
   "TIV_TAAM:91": {
-    "fetchedAt": "2026-10-04T00:19:59.189069+00:00",
+    "fetchedAt": "2026-10-05T01:06:45.846917+00:00",
     "promos": {}
   },
   "TIV_TAAM:92": {
-    "fetchedAt": "2026-10-03T21:13:17.520208+00:00",
+    "fetchedAt": "2026-10-05T01:07:18.144596+00:00",
     "promos": {}
   },
   "TIV_TAAM:93": {
-    "fetchedAt": "2026-10-03T21:13:12.006576+00:00",
+    "fetchedAt": "2026-10-05T01:06:37.084437+00:00",
     "promos": {}
   },
   "TIV_TAAM:94": {
-    "fetchedAt": "2026-10-03T21:13:25.656122+00:00",
+    "fetchedAt": "2026-10-05T01:06:37.453813+00:00",
     "promos": {}
   },
   "VICTORY_NEW_SOURCE:1": {
@@ -22925,27 +22925,27 @@
     "promos": {}
   },
   "YELLOW:144": {
-    "fetchedAt": "2026-10-02T10:22:41.270834+00:00",
+    "fetchedAt": "2026-10-05T01:06:20.065652+00:00",
     "promos": {
       "aussie-lemonade": [
         {
           "clubOnly": false,
           "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2ב20",
           "discountRate": null,
-          "endsAt": "2026-10-04T23:59:00.000",
+          "endsAt": "2026-11-29T23:59:00.000",
           "maxQuantity": null,
           "minQuantity": 2,
-          "startsAt": "2026-08-03T00:00:00.000",
+          "startsAt": "2026-10-05T00:00:00.000",
           "terms": null
         },
         {
           "clubOnly": true,
           "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2 ב 18-",
           "discountRate": null,
-          "endsAt": "2026-10-04T23:59:00.000",
+          "endsAt": "2026-11-29T23:59:00.000",
           "maxQuantity": null,
           "minQuantity": 2,
-          "startsAt": "2026-08-03T00:00:00.000",
+          "startsAt": "2026-10-05T00:00:00.000",
           "terms": null
         }
       ],
@@ -22954,20 +22954,20 @@
           "clubOnly": false,
           "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2ב20",
           "discountRate": null,
-          "endsAt": "2026-10-04T23:59:00.000",
+          "endsAt": "2026-11-29T23:59:00.000",
           "maxQuantity": null,
           "minQuantity": 2,
-          "startsAt": "2026-08-03T00:00:00.000",
+          "startsAt": "2026-10-05T00:00:00.000",
           "terms": null
         },
         {
           "clubOnly": true,
           "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2 ב 18-",
           "discountRate": null,
-          "endsAt": "2026-10-04T23:59:00.000",
+          "endsAt": "2026-11-29T23:59:00.000",
           "maxQuantity": null,
           "minQuantity": 2,
-          "startsAt": "2026-08-03T00:00:00.000",
+          "startsAt": "2026-10-05T00:00:00.000",
           "terms": null
         }
       ],
@@ -22976,20 +22976,20 @@
           "clubOnly": false,
           "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2ב20",
           "discountRate": null,
-          "endsAt": "2026-10-04T23:59:00.000",
+          "endsAt": "2026-11-29T23:59:00.000",
           "maxQuantity": null,
           "minQuantity": 2,
-          "startsAt": "2026-08-03T00:00:00.000",
+          "startsAt": "2026-10-05T00:00:00.000",
           "terms": null
         },
         {
           "clubOnly": true,
           "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2 ב 18-",
           "discountRate": null,
-          "endsAt": "2026-10-04T23:59:00.000",
+          "endsAt": "2026-11-29T23:59:00.000",
           "maxQuantity": null,
           "minQuantity": 2,
-          "startsAt": "2026-08-03T00:00:00.000",
+          "startsAt": "2026-10-05T00:00:00.000",
           "terms": null
         }
       ],
@@ -22998,20 +22998,20 @@
           "clubOnly": false,
           "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2ב20",
           "discountRate": null,
-          "endsAt": "2026-10-04T23:59:00.000",
+          "endsAt": "2026-11-29T23:59:00.000",
           "maxQuantity": null,
           "minQuantity": 2,
-          "startsAt": "2026-08-03T00:00:00.000",
+          "startsAt": "2026-10-05T00:00:00.000",
           "terms": null
         },
         {
           "clubOnly": true,
           "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2 ב 18-",
           "discountRate": null,
-          "endsAt": "2026-10-04T23:59:00.000",
+          "endsAt": "2026-11-29T23:59:00.000",
           "maxQuantity": null,
           "minQuantity": 2,
-          "startsAt": "2026-08-03T00:00:00.000",
+          "startsAt": "2026-10-05T00:00:00.000",
           "terms": null
         }
       ],
@@ -23020,20 +23020,20 @@
           "clubOnly": false,
           "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2ב20",
           "discountRate": null,
-          "endsAt": "2026-10-04T23:59:00.000",
+          "endsAt": "2026-11-29T23:59:00.000",
           "maxQuantity": null,
           "minQuantity": 2,
-          "startsAt": "2026-08-03T00:00:00.000",
+          "startsAt": "2026-10-05T00:00:00.000",
           "terms": null
         },
         {
           "clubOnly": true,
           "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2 ב 18-",
           "discountRate": null,
-          "endsAt": "2026-10-04T23:59:00.000",
+          "endsAt": "2026-11-29T23:59:00.000",
           "maxQuantity": null,
           "minQuantity": 2,
-          "startsAt": "2026-08-03T00:00:00.000",
+          "startsAt": "2026-10-05T00:00:00.000",
           "terms": null
         }
       ],
@@ -23042,20 +23042,20 @@
           "clubOnly": false,
           "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2ב20",
           "discountRate": null,
-          "endsAt": "2026-10-04T23:59:00.000",
+          "endsAt": "2026-11-29T23:59:00.000",
           "maxQuantity": null,
           "minQuantity": 2,
-          "startsAt": "2026-08-03T00:00:00.000",
+          "startsAt": "2026-10-05T00:00:00.000",
           "terms": null
         },
         {
           "clubOnly": true,
           "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2 ב 18-",
           "discountRate": null,
-          "endsAt": "2026-10-04T23:59:00.000",
+          "endsAt": "2026-11-29T23:59:00.000",
           "maxQuantity": null,
           "minQuantity": 2,
-          "startsAt": "2026-08-03T00:00:00.000",
+          "startsAt": "2026-10-05T00:00:00.000",
           "terms": null
         }
       ],
@@ -23064,20 +23064,20 @@
           "clubOnly": false,
           "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2ב20",
           "discountRate": null,
-          "endsAt": "2026-10-04T23:59:00.000",
+          "endsAt": "2026-11-29T23:59:00.000",
           "maxQuantity": null,
           "minQuantity": 2,
-          "startsAt": "2026-08-03T00:00:00.000",
+          "startsAt": "2026-10-05T00:00:00.000",
           "terms": null
         },
         {
           "clubOnly": true,
           "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2 ב 18-",
           "discountRate": null,
-          "endsAt": "2026-10-04T23:59:00.000",
+          "endsAt": "2026-11-29T23:59:00.000",
           "maxQuantity": null,
           "minQuantity": 2,
-          "startsAt": "2026-08-03T00:00:00.000",
+          "startsAt": "2026-10-05T00:00:00.000",
           "terms": null
         }
       ],
@@ -23086,20 +23086,20 @@
           "clubOnly": false,
           "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2ב20",
           "discountRate": null,
-          "endsAt": "2026-10-04T23:59:00.000",
+          "endsAt": "2026-11-29T23:59:00.000",
           "maxQuantity": null,
           "minQuantity": 2,
-          "startsAt": "2026-08-03T00:00:00.000",
+          "startsAt": "2026-10-05T00:00:00.000",
           "terms": null
         },
         {
           "clubOnly": true,
           "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2 ב 18-",
           "discountRate": null,
-          "endsAt": "2026-10-04T23:59:00.000",
+          "endsAt": "2026-11-29T23:59:00.000",
           "maxQuantity": null,
           "minQuantity": 2,
-          "startsAt": "2026-08-03T00:00:00.000",
+          "startsAt": "2026-10-05T00:00:00.000",
           "terms": null
         }
       ],
@@ -23108,20 +23108,20 @@
           "clubOnly": false,
           "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2ב20",
           "discountRate": null,
-          "endsAt": "2026-10-04T23:59:00.000",
+          "endsAt": "2026-11-29T23:59:00.000",
           "maxQuantity": null,
           "minQuantity": 2,
-          "startsAt": "2026-08-03T00:00:00.000",
+          "startsAt": "2026-10-05T00:00:00.000",
           "terms": null
         },
         {
           "clubOnly": true,
           "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2 ב 18-",
           "discountRate": null,
-          "endsAt": "2026-10-04T23:59:00.000",
+          "endsAt": "2026-11-29T23:59:00.000",
           "maxQuantity": null,
           "minQuantity": 2,
-          "startsAt": "2026-08-03T00:00:00.000",
+          "startsAt": "2026-10-05T00:00:00.000",
           "terms": null
         }
       ],
@@ -23130,20 +23130,20 @@
           "clubOnly": false,
           "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2ב20",
           "discountRate": null,
-          "endsAt": "2026-10-04T23:59:00.000",
+          "endsAt": "2026-11-29T23:59:00.000",
           "maxQuantity": null,
           "minQuantity": 2,
-          "startsAt": "2026-08-03T00:00:00.000",
+          "startsAt": "2026-10-05T00:00:00.000",
           "terms": null
         },
         {
           "clubOnly": true,
           "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2 ב 18-",
           "discountRate": null,
-          "endsAt": "2026-10-04T23:59:00.000",
+          "endsAt": "2026-11-29T23:59:00.000",
           "maxQuantity": null,
           "minQuantity": 2,
-          "startsAt": "2026-08-03T00:00:00.000",
+          "startsAt": "2026-10-05T00:00:00.000",
           "terms": null
         }
       ],
@@ -23152,20 +23152,20 @@
           "clubOnly": false,
           "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2ב20",
           "discountRate": null,
-          "endsAt": "2026-10-04T23:59:00.000",
+          "endsAt": "2026-11-29T23:59:00.000",
           "maxQuantity": null,
           "minQuantity": 2,
-          "startsAt": "2026-08-03T00:00:00.000",
+          "startsAt": "2026-10-05T00:00:00.000",
           "terms": null
         },
         {
           "clubOnly": true,
           "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2 ב 18-",
           "discountRate": null,
-          "endsAt": "2026-10-04T23:59:00.000",
+          "endsAt": "2026-11-29T23:59:00.000",
           "maxQuantity": null,
           "minQuantity": 2,
-          "startsAt": "2026-08-03T00:00:00.000",
+          "startsAt": "2026-10-05T00:00:00.000",
           "terms": null
         }
       ]
@@ -28857,27 +28857,27 @@
     }
   },
   "YELLOW:208": {
-    "fetchedAt": "2026-10-04T00:19:58.896084+00:00",
+    "fetchedAt": "2026-10-05T01:06:19.800471+00:00",
     "promos": {
       "aussie-lemonade": [
         {
           "clubOnly": false,
           "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2ב20",
           "discountRate": null,
-          "endsAt": "2026-10-04T23:59:00.000",
+          "endsAt": "2026-11-29T23:59:00.000",
           "maxQuantity": null,
           "minQuantity": 2,
-          "startsAt": "2026-08-03T00:00:00.000",
+          "startsAt": "2026-10-05T00:00:00.000",
           "terms": null
         },
         {
           "clubOnly": true,
           "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2 ב 18-",
           "discountRate": null,
-          "endsAt": "2026-10-04T23:59:00.000",
+          "endsAt": "2026-11-29T23:59:00.000",
           "maxQuantity": null,
           "minQuantity": 2,
-          "startsAt": "2026-08-03T00:00:00.000",
+          "startsAt": "2026-10-05T00:00:00.000",
           "terms": null
         }
       ],
@@ -28886,20 +28886,20 @@
           "clubOnly": false,
           "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2ב20",
           "discountRate": null,
-          "endsAt": "2026-10-04T23:59:00.000",
+          "endsAt": "2026-11-29T23:59:00.000",
           "maxQuantity": null,
           "minQuantity": 2,
-          "startsAt": "2026-08-03T00:00:00.000",
+          "startsAt": "2026-10-05T00:00:00.000",
           "terms": null
         },
         {
           "clubOnly": true,
           "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2 ב 18-",
           "discountRate": null,
-          "endsAt": "2026-10-04T23:59:00.000",
+          "endsAt": "2026-11-29T23:59:00.000",
           "maxQuantity": null,
           "minQuantity": 2,
-          "startsAt": "2026-08-03T00:00:00.000",
+          "startsAt": "2026-10-05T00:00:00.000",
           "terms": null
         }
       ],
@@ -28908,20 +28908,20 @@
           "clubOnly": false,
           "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2ב20",
           "discountRate": null,
-          "endsAt": "2026-10-04T23:59:00.000",
+          "endsAt": "2026-11-29T23:59:00.000",
           "maxQuantity": null,
           "minQuantity": 2,
-          "startsAt": "2026-08-03T00:00:00.000",
+          "startsAt": "2026-10-05T00:00:00.000",
           "terms": null
         },
         {
           "clubOnly": true,
           "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2 ב 18-",
           "discountRate": null,
-          "endsAt": "2026-10-04T23:59:00.000",
+          "endsAt": "2026-11-29T23:59:00.000",
           "maxQuantity": null,
           "minQuantity": 2,
-          "startsAt": "2026-08-03T00:00:00.000",
+          "startsAt": "2026-10-05T00:00:00.000",
           "terms": null
         }
       ],
@@ -28930,20 +28930,20 @@
           "clubOnly": false,
           "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2ב20",
           "discountRate": null,
-          "endsAt": "2026-10-04T23:59:00.000",
+          "endsAt": "2026-11-29T23:59:00.000",
           "maxQuantity": null,
           "minQuantity": 2,
-          "startsAt": "2026-08-03T00:00:00.000",
+          "startsAt": "2026-10-05T00:00:00.000",
           "terms": null
         },
         {
           "clubOnly": true,
           "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2 ב 18-",
           "discountRate": null,
-          "endsAt": "2026-10-04T23:59:00.000",
+          "endsAt": "2026-11-29T23:59:00.000",
           "maxQuantity": null,
           "minQuantity": 2,
-          "startsAt": "2026-08-03T00:00:00.000",
+          "startsAt": "2026-10-05T00:00:00.000",
           "terms": null
         }
       ],
@@ -28952,20 +28952,20 @@
           "clubOnly": false,
           "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2ב20",
           "discountRate": null,
-          "endsAt": "2026-10-04T23:59:00.000",
+          "endsAt": "2026-11-29T23:59:00.000",
           "maxQuantity": null,
           "minQuantity": 2,
-          "startsAt": "2026-08-03T00:00:00.000",
+          "startsAt": "2026-10-05T00:00:00.000",
           "terms": null
         },
         {
           "clubOnly": true,
           "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2 ב 18-",
           "discountRate": null,
-          "endsAt": "2026-10-04T23:59:00.000",
+          "endsAt": "2026-11-29T23:59:00.000",
           "maxQuantity": null,
           "minQuantity": 2,
-          "startsAt": "2026-08-03T00:00:00.000",
+          "startsAt": "2026-10-05T00:00:00.000",
           "terms": null
         }
       ],
@@ -28974,20 +28974,20 @@
           "clubOnly": false,
           "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2ב20",
           "discountRate": null,
-          "endsAt": "2026-10-04T23:59:00.000",
+          "endsAt": "2026-11-29T23:59:00.000",
           "maxQuantity": null,
           "minQuantity": 2,
-          "startsAt": "2026-08-03T00:00:00.000",
+          "startsAt": "2026-10-05T00:00:00.000",
           "terms": null
         },
         {
           "clubOnly": true,
           "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2 ב 18-",
           "discountRate": null,
-          "endsAt": "2026-10-04T23:59:00.000",
+          "endsAt": "2026-11-29T23:59:00.000",
           "maxQuantity": null,
           "minQuantity": 2,
-          "startsAt": "2026-08-03T00:00:00.000",
+          "startsAt": "2026-10-05T00:00:00.000",
           "terms": null
         }
       ],
@@ -28996,20 +28996,20 @@
           "clubOnly": false,
           "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2ב20",
           "discountRate": null,
-          "endsAt": "2026-10-04T23:59:00.000",
+          "endsAt": "2026-11-29T23:59:00.000",
           "maxQuantity": null,
           "minQuantity": 2,
-          "startsAt": "2026-08-03T00:00:00.000",
+          "startsAt": "2026-10-05T00:00:00.000",
           "terms": null
         },
         {
           "clubOnly": true,
           "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2 ב 18-",
           "discountRate": null,
-          "endsAt": "2026-10-04T23:59:00.000",
+          "endsAt": "2026-11-29T23:59:00.000",
           "maxQuantity": null,
           "minQuantity": 2,
-          "startsAt": "2026-08-03T00:00:00.000",
+          "startsAt": "2026-10-05T00:00:00.000",
           "terms": null
         }
       ],
@@ -29018,20 +29018,20 @@
           "clubOnly": false,
           "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2ב20",
           "discountRate": null,
-          "endsAt": "2026-10-04T23:59:00.000",
+          "endsAt": "2026-11-29T23:59:00.000",
           "maxQuantity": null,
           "minQuantity": 2,
-          "startsAt": "2026-08-03T00:00:00.000",
+          "startsAt": "2026-10-05T00:00:00.000",
           "terms": null
         },
         {
           "clubOnly": true,
           "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2 ב 18-",
           "discountRate": null,
-          "endsAt": "2026-10-04T23:59:00.000",
+          "endsAt": "2026-11-29T23:59:00.000",
           "maxQuantity": null,
           "minQuantity": 2,
-          "startsAt": "2026-08-03T00:00:00.000",
+          "startsAt": "2026-10-05T00:00:00.000",
           "terms": null
         }
       ],
@@ -29040,20 +29040,20 @@
           "clubOnly": false,
           "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2ב20",
           "discountRate": null,
-          "endsAt": "2026-10-04T23:59:00.000",
+          "endsAt": "2026-11-29T23:59:00.000",
           "maxQuantity": null,
           "minQuantity": 2,
-          "startsAt": "2026-08-03T00:00:00.000",
+          "startsAt": "2026-10-05T00:00:00.000",
           "terms": null
         },
         {
           "clubOnly": true,
           "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2 ב 18-",
           "discountRate": null,
-          "endsAt": "2026-10-04T23:59:00.000",
+          "endsAt": "2026-11-29T23:59:00.000",
           "maxQuantity": null,
           "minQuantity": 2,
-          "startsAt": "2026-08-03T00:00:00.000",
+          "startsAt": "2026-10-05T00:00:00.000",
           "terms": null
         }
       ],
@@ -29062,20 +29062,20 @@
           "clubOnly": false,
           "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2ב20",
           "discountRate": null,
-          "endsAt": "2026-10-04T23:59:00.000",
+          "endsAt": "2026-11-29T23:59:00.000",
           "maxQuantity": null,
           "minQuantity": 2,
-          "startsAt": "2026-08-03T00:00:00.000",
+          "startsAt": "2026-10-05T00:00:00.000",
           "terms": null
         },
         {
           "clubOnly": true,
           "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2 ב 18-",
           "discountRate": null,
-          "endsAt": "2026-10-04T23:59:00.000",
+          "endsAt": "2026-11-29T23:59:00.000",
           "maxQuantity": null,
           "minQuantity": 2,
-          "startsAt": "2026-08-03T00:00:00.000",
+          "startsAt": "2026-10-05T00:00:00.000",
           "terms": null
         }
       ],
@@ -29084,20 +29084,20 @@
           "clubOnly": false,
           "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2ב20",
           "discountRate": null,
-          "endsAt": "2026-10-04T23:59:00.000",
+          "endsAt": "2026-11-29T23:59:00.000",
           "maxQuantity": null,
           "minQuantity": 2,
-          "startsAt": "2026-08-03T00:00:00.000",
+          "startsAt": "2026-10-05T00:00:00.000",
           "terms": null
         },
         {
           "clubOnly": true,
           "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2 ב 18-",
           "discountRate": null,
-          "endsAt": "2026-10-04T23:59:00.000",
+          "endsAt": "2026-11-29T23:59:00.000",
           "maxQuantity": null,
           "minQuantity": 2,
-          "startsAt": "2026-08-03T00:00:00.000",
+          "startsAt": "2026-10-05T00:00:00.000",
           "terms": null
         }
       ]
@@ -31821,27 +31821,27 @@
     }
   },
   "YELLOW:242": {
-    "fetchedAt": "2026-10-04T00:20:01.079873+00:00",
+    "fetchedAt": "2026-10-05T01:06:19.548429+00:00",
     "promos": {
       "aussie-lemonade": [
         {
           "clubOnly": false,
           "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2ב20",
           "discountRate": null,
-          "endsAt": "2026-10-04T23:59:00.000",
+          "endsAt": "2026-11-29T23:59:00.000",
           "maxQuantity": null,
           "minQuantity": 2,
-          "startsAt": "2026-08-03T00:00:00.000",
+          "startsAt": "2026-10-05T00:00:00.000",
           "terms": null
         },
         {
           "clubOnly": true,
           "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2 ב 18-",
           "discountRate": null,
-          "endsAt": "2026-10-04T23:59:00.000",
+          "endsAt": "2026-11-29T23:59:00.000",
           "maxQuantity": null,
           "minQuantity": 2,
-          "startsAt": "2026-08-03T00:00:00.000",
+          "startsAt": "2026-10-05T00:00:00.000",
           "terms": null
         }
       ],
@@ -31850,20 +31850,20 @@
           "clubOnly": false,
           "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2ב20",
           "discountRate": null,
-          "endsAt": "2026-10-04T23:59:00.000",
+          "endsAt": "2026-11-29T23:59:00.000",
           "maxQuantity": null,
           "minQuantity": 2,
-          "startsAt": "2026-08-03T00:00:00.000",
+          "startsAt": "2026-10-05T00:00:00.000",
           "terms": null
         },
         {
           "clubOnly": true,
           "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2 ב 18-",
           "discountRate": null,
-          "endsAt": "2026-10-04T23:59:00.000",
+          "endsAt": "2026-11-29T23:59:00.000",
           "maxQuantity": null,
           "minQuantity": 2,
-          "startsAt": "2026-08-03T00:00:00.000",
+          "startsAt": "2026-10-05T00:00:00.000",
           "terms": null
         }
       ],
@@ -31872,20 +31872,20 @@
           "clubOnly": false,
           "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2ב20",
           "discountRate": null,
-          "endsAt": "2026-10-04T23:59:00.000",
+          "endsAt": "2026-11-29T23:59:00.000",
           "maxQuantity": null,
           "minQuantity": 2,
-          "startsAt": "2026-08-03T00:00:00.000",
+          "startsAt": "2026-10-05T00:00:00.000",
           "terms": null
         },
         {
           "clubOnly": true,
           "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2 ב 18-",
           "discountRate": null,
-          "endsAt": "2026-10-04T23:59:00.000",
+          "endsAt": "2026-11-29T23:59:00.000",
           "maxQuantity": null,
           "minQuantity": 2,
-          "startsAt": "2026-08-03T00:00:00.000",
+          "startsAt": "2026-10-05T00:00:00.000",
           "terms": null
         }
       ],
@@ -31894,20 +31894,20 @@
           "clubOnly": false,
           "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2ב20",
           "discountRate": null,
-          "endsAt": "2026-10-04T23:59:00.000",
+          "endsAt": "2026-11-29T23:59:00.000",
           "maxQuantity": null,
           "minQuantity": 2,
-          "startsAt": "2026-08-03T00:00:00.000",
+          "startsAt": "2026-10-05T00:00:00.000",
           "terms": null
         },
         {
           "clubOnly": true,
           "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2 ב 18-",
           "discountRate": null,
-          "endsAt": "2026-10-04T23:59:00.000",
+          "endsAt": "2026-11-29T23:59:00.000",
           "maxQuantity": null,
           "minQuantity": 2,
-          "startsAt": "2026-08-03T00:00:00.000",
+          "startsAt": "2026-10-05T00:00:00.000",
           "terms": null
         }
       ],
@@ -31916,20 +31916,20 @@
           "clubOnly": false,
           "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2ב20",
           "discountRate": null,
-          "endsAt": "2026-10-04T23:59:00.000",
+          "endsAt": "2026-11-29T23:59:00.000",
           "maxQuantity": null,
           "minQuantity": 2,
-          "startsAt": "2026-08-03T00:00:00.000",
+          "startsAt": "2026-10-05T00:00:00.000",
           "terms": null
         },
         {
           "clubOnly": true,
           "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2 ב 18-",
           "discountRate": null,
-          "endsAt": "2026-10-04T23:59:00.000",
+          "endsAt": "2026-11-29T23:59:00.000",
           "maxQuantity": null,
           "minQuantity": 2,
-          "startsAt": "2026-08-03T00:00:00.000",
+          "startsAt": "2026-10-05T00:00:00.000",
           "terms": null
         }
       ],
@@ -31938,20 +31938,20 @@
           "clubOnly": false,
           "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2ב20",
           "discountRate": null,
-          "endsAt": "2026-10-04T23:59:00.000",
+          "endsAt": "2026-11-29T23:59:00.000",
           "maxQuantity": null,
           "minQuantity": 2,
-          "startsAt": "2026-08-03T00:00:00.000",
+          "startsAt": "2026-10-05T00:00:00.000",
           "terms": null
         },
         {
           "clubOnly": true,
           "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2 ב 18-",
           "discountRate": null,
-          "endsAt": "2026-10-04T23:59:00.000",
+          "endsAt": "2026-11-29T23:59:00.000",
           "maxQuantity": null,
           "minQuantity": 2,
-          "startsAt": "2026-08-03T00:00:00.000",
+          "startsAt": "2026-10-05T00:00:00.000",
           "terms": null
         }
       ],
@@ -31960,20 +31960,20 @@
           "clubOnly": false,
           "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2ב20",
           "discountRate": null,
-          "endsAt": "2026-10-04T23:59:00.000",
+          "endsAt": "2026-11-29T23:59:00.000",
           "maxQuantity": null,
           "minQuantity": 2,
-          "startsAt": "2026-08-03T00:00:00.000",
+          "startsAt": "2026-10-05T00:00:00.000",
           "terms": null
         },
         {
           "clubOnly": true,
           "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2 ב 18-",
           "discountRate": null,
-          "endsAt": "2026-10-04T23:59:00.000",
+          "endsAt": "2026-11-29T23:59:00.000",
           "maxQuantity": null,
           "minQuantity": 2,
-          "startsAt": "2026-08-03T00:00:00.000",
+          "startsAt": "2026-10-05T00:00:00.000",
           "terms": null
         }
       ],
@@ -31982,20 +31982,20 @@
           "clubOnly": false,
           "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2ב20",
           "discountRate": null,
-          "endsAt": "2026-10-04T23:59:00.000",
+          "endsAt": "2026-11-29T23:59:00.000",
           "maxQuantity": null,
           "minQuantity": 2,
-          "startsAt": "2026-08-03T00:00:00.000",
+          "startsAt": "2026-10-05T00:00:00.000",
           "terms": null
         },
         {
           "clubOnly": true,
           "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2 ב 18-",
           "discountRate": null,
-          "endsAt": "2026-10-04T23:59:00.000",
+          "endsAt": "2026-11-29T23:59:00.000",
           "maxQuantity": null,
           "minQuantity": 2,
-          "startsAt": "2026-08-03T00:00:00.000",
+          "startsAt": "2026-10-05T00:00:00.000",
           "terms": null
         }
       ],
@@ -32004,20 +32004,20 @@
           "clubOnly": false,
           "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2ב20",
           "discountRate": null,
-          "endsAt": "2026-10-04T23:59:00.000",
+          "endsAt": "2026-11-29T23:59:00.000",
           "maxQuantity": null,
           "minQuantity": 2,
-          "startsAt": "2026-08-03T00:00:00.000",
+          "startsAt": "2026-10-05T00:00:00.000",
           "terms": null
         },
         {
           "clubOnly": true,
           "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2 ב 18-",
           "discountRate": null,
-          "endsAt": "2026-10-04T23:59:00.000",
+          "endsAt": "2026-11-29T23:59:00.000",
           "maxQuantity": null,
           "minQuantity": 2,
-          "startsAt": "2026-08-03T00:00:00.000",
+          "startsAt": "2026-10-05T00:00:00.000",
           "terms": null
         }
       ],
@@ -32026,20 +32026,20 @@
           "clubOnly": false,
           "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2ב20",
           "discountRate": null,
-          "endsAt": "2026-10-04T23:59:00.000",
+          "endsAt": "2026-11-29T23:59:00.000",
           "maxQuantity": null,
           "minQuantity": 2,
-          "startsAt": "2026-08-03T00:00:00.000",
+          "startsAt": "2026-10-05T00:00:00.000",
           "terms": null
         },
         {
           "clubOnly": true,
           "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2 ב 18-",
           "discountRate": null,
-          "endsAt": "2026-10-04T23:59:00.000",
+          "endsAt": "2026-11-29T23:59:00.000",
           "maxQuantity": null,
           "minQuantity": 2,
-          "startsAt": "2026-08-03T00:00:00.000",
+          "startsAt": "2026-10-05T00:00:00.000",
           "terms": null
         }
       ],
@@ -32048,20 +32048,20 @@
           "clubOnly": false,
           "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2ב20",
           "discountRate": null,
-          "endsAt": "2026-10-04T23:59:00.000",
+          "endsAt": "2026-11-29T23:59:00.000",
           "maxQuantity": null,
           "minQuantity": 2,
-          "startsAt": "2026-08-03T00:00:00.000",
+          "startsAt": "2026-10-05T00:00:00.000",
           "terms": null
         },
         {
           "clubOnly": true,
           "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2 ב 18-",
           "discountRate": null,
-          "endsAt": "2026-10-04T23:59:00.000",
+          "endsAt": "2026-11-29T23:59:00.000",
           "maxQuantity": null,
           "minQuantity": 2,
-          "startsAt": "2026-08-03T00:00:00.000",
+          "startsAt": "2026-10-05T00:00:00.000",
           "terms": null
         }
       ]
@@ -47876,27 +47876,27 @@
     }
   },
   "YELLOW:375": {
-    "fetchedAt": "2026-10-04T00:19:59.521298+00:00",
+    "fetchedAt": "2026-10-05T01:06:19.209479+00:00",
     "promos": {
       "aussie-lemonade": [
         {
           "clubOnly": false,
           "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2ב20",
           "discountRate": null,
-          "endsAt": "2026-10-04T23:59:00.000",
+          "endsAt": "2026-11-29T23:59:00.000",
           "maxQuantity": null,
           "minQuantity": 2,
-          "startsAt": "2026-08-03T00:00:00.000",
+          "startsAt": "2026-10-05T00:00:00.000",
           "terms": null
         },
         {
           "clubOnly": true,
           "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2 ב 18-",
           "discountRate": null,
-          "endsAt": "2026-10-04T23:59:00.000",
+          "endsAt": "2026-11-29T23:59:00.000",
           "maxQuantity": null,
           "minQuantity": 2,
-          "startsAt": "2026-08-03T00:00:00.000",
+          "startsAt": "2026-10-05T00:00:00.000",
           "terms": null
         }
       ],
@@ -47905,20 +47905,20 @@
           "clubOnly": false,
           "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2ב20",
           "discountRate": null,
-          "endsAt": "2026-10-04T23:59:00.000",
+          "endsAt": "2026-11-29T23:59:00.000",
           "maxQuantity": null,
           "minQuantity": 2,
-          "startsAt": "2026-08-03T00:00:00.000",
+          "startsAt": "2026-10-05T00:00:00.000",
           "terms": null
         },
         {
           "clubOnly": true,
           "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2 ב 18-",
           "discountRate": null,
-          "endsAt": "2026-10-04T23:59:00.000",
+          "endsAt": "2026-11-29T23:59:00.000",
           "maxQuantity": null,
           "minQuantity": 2,
-          "startsAt": "2026-08-03T00:00:00.000",
+          "startsAt": "2026-10-05T00:00:00.000",
           "terms": null
         }
       ],
@@ -47927,20 +47927,20 @@
           "clubOnly": false,
           "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2ב20",
           "discountRate": null,
-          "endsAt": "2026-10-04T23:59:00.000",
+          "endsAt": "2026-11-29T23:59:00.000",
           "maxQuantity": null,
           "minQuantity": 2,
-          "startsAt": "2026-08-03T00:00:00.000",
+          "startsAt": "2026-10-05T00:00:00.000",
           "terms": null
         },
         {
           "clubOnly": true,
           "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2 ב 18-",
           "discountRate": null,
-          "endsAt": "2026-10-04T23:59:00.000",
+          "endsAt": "2026-11-29T23:59:00.000",
           "maxQuantity": null,
           "minQuantity": 2,
-          "startsAt": "2026-08-03T00:00:00.000",
+          "startsAt": "2026-10-05T00:00:00.000",
           "terms": null
         }
       ],
@@ -47949,20 +47949,20 @@
           "clubOnly": false,
           "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2ב20",
           "discountRate": null,
-          "endsAt": "2026-10-04T23:59:00.000",
+          "endsAt": "2026-11-29T23:59:00.000",
           "maxQuantity": null,
           "minQuantity": 2,
-          "startsAt": "2026-08-03T00:00:00.000",
+          "startsAt": "2026-10-05T00:00:00.000",
           "terms": null
         },
         {
           "clubOnly": true,
           "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2 ב 18-",
           "discountRate": null,
-          "endsAt": "2026-10-04T23:59:00.000",
+          "endsAt": "2026-11-29T23:59:00.000",
           "maxQuantity": null,
           "minQuantity": 2,
-          "startsAt": "2026-08-03T00:00:00.000",
+          "startsAt": "2026-10-05T00:00:00.000",
           "terms": null
         }
       ],
@@ -47971,20 +47971,20 @@
           "clubOnly": false,
           "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2ב20",
           "discountRate": null,
-          "endsAt": "2026-10-04T23:59:00.000",
+          "endsAt": "2026-11-29T23:59:00.000",
           "maxQuantity": null,
           "minQuantity": 2,
-          "startsAt": "2026-08-03T00:00:00.000",
+          "startsAt": "2026-10-05T00:00:00.000",
           "terms": null
         },
         {
           "clubOnly": true,
           "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2 ב 18-",
           "discountRate": null,
-          "endsAt": "2026-10-04T23:59:00.000",
+          "endsAt": "2026-11-29T23:59:00.000",
           "maxQuantity": null,
           "minQuantity": 2,
-          "startsAt": "2026-08-03T00:00:00.000",
+          "startsAt": "2026-10-05T00:00:00.000",
           "terms": null
         }
       ],
@@ -47993,20 +47993,20 @@
           "clubOnly": false,
           "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2ב20",
           "discountRate": null,
-          "endsAt": "2026-10-04T23:59:00.000",
+          "endsAt": "2026-11-29T23:59:00.000",
           "maxQuantity": null,
           "minQuantity": 2,
-          "startsAt": "2026-08-03T00:00:00.000",
+          "startsAt": "2026-10-05T00:00:00.000",
           "terms": null
         },
         {
           "clubOnly": true,
           "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2 ב 18-",
           "discountRate": null,
-          "endsAt": "2026-10-04T23:59:00.000",
+          "endsAt": "2026-11-29T23:59:00.000",
           "maxQuantity": null,
           "minQuantity": 2,
-          "startsAt": "2026-08-03T00:00:00.000",
+          "startsAt": "2026-10-05T00:00:00.000",
           "terms": null
         }
       ],
@@ -48015,20 +48015,20 @@
           "clubOnly": false,
           "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2ב20",
           "discountRate": null,
-          "endsAt": "2026-10-04T23:59:00.000",
+          "endsAt": "2026-11-29T23:59:00.000",
           "maxQuantity": null,
           "minQuantity": 2,
-          "startsAt": "2026-08-03T00:00:00.000",
+          "startsAt": "2026-10-05T00:00:00.000",
           "terms": null
         },
         {
           "clubOnly": true,
           "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2 ב 18-",
           "discountRate": null,
-          "endsAt": "2026-10-04T23:59:00.000",
+          "endsAt": "2026-11-29T23:59:00.000",
           "maxQuantity": null,
           "minQuantity": 2,
-          "startsAt": "2026-08-03T00:00:00.000",
+          "startsAt": "2026-10-05T00:00:00.000",
           "terms": null
         }
       ],
@@ -48037,20 +48037,20 @@
           "clubOnly": false,
           "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2ב20",
           "discountRate": null,
-          "endsAt": "2026-10-04T23:59:00.000",
+          "endsAt": "2026-11-29T23:59:00.000",
           "maxQuantity": null,
           "minQuantity": 2,
-          "startsAt": "2026-08-03T00:00:00.000",
+          "startsAt": "2026-10-05T00:00:00.000",
           "terms": null
         },
         {
           "clubOnly": true,
           "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2 ב 18-",
           "discountRate": null,
-          "endsAt": "2026-10-04T23:59:00.000",
+          "endsAt": "2026-11-29T23:59:00.000",
           "maxQuantity": null,
           "minQuantity": 2,
-          "startsAt": "2026-08-03T00:00:00.000",
+          "startsAt": "2026-10-05T00:00:00.000",
           "terms": null
         }
       ],
@@ -48059,20 +48059,20 @@
           "clubOnly": false,
           "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2ב20",
           "discountRate": null,
-          "endsAt": "2026-10-04T23:59:00.000",
+          "endsAt": "2026-11-29T23:59:00.000",
           "maxQuantity": null,
           "minQuantity": 2,
-          "startsAt": "2026-08-03T00:00:00.000",
+          "startsAt": "2026-10-05T00:00:00.000",
           "terms": null
         },
         {
           "clubOnly": true,
           "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2 ב 18-",
           "discountRate": null,
-          "endsAt": "2026-10-04T23:59:00.000",
+          "endsAt": "2026-11-29T23:59:00.000",
           "maxQuantity": null,
           "minQuantity": 2,
-          "startsAt": "2026-08-03T00:00:00.000",
+          "startsAt": "2026-10-05T00:00:00.000",
           "terms": null
         }
       ],
@@ -48081,20 +48081,20 @@
           "clubOnly": false,
           "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2ב20",
           "discountRate": null,
-          "endsAt": "2026-10-04T23:59:00.000",
+          "endsAt": "2026-11-29T23:59:00.000",
           "maxQuantity": null,
           "minQuantity": 2,
-          "startsAt": "2026-08-03T00:00:00.000",
+          "startsAt": "2026-10-05T00:00:00.000",
           "terms": null
         },
         {
           "clubOnly": true,
           "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2 ב 18-",
           "discountRate": null,
-          "endsAt": "2026-10-04T23:59:00.000",
+          "endsAt": "2026-11-29T23:59:00.000",
           "maxQuantity": null,
           "minQuantity": 2,
-          "startsAt": "2026-08-03T00:00:00.000",
+          "startsAt": "2026-10-05T00:00:00.000",
           "terms": null
         }
       ],
@@ -48103,20 +48103,20 @@
           "clubOnly": false,
           "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2ב20",
           "discountRate": null,
-          "endsAt": "2026-10-04T23:59:00.000",
+          "endsAt": "2026-11-29T23:59:00.000",
           "maxQuantity": null,
           "minQuantity": 2,
-          "startsAt": "2026-08-03T00:00:00.000",
+          "startsAt": "2026-10-05T00:00:00.000",
           "terms": null
         },
         {
           "clubOnly": true,
           "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2 ב 18-",
           "discountRate": null,
-          "endsAt": "2026-10-04T23:59:00.000",
+          "endsAt": "2026-11-29T23:59:00.000",
           "maxQuantity": null,
           "minQuantity": 2,
-          "startsAt": "2026-08-03T00:00:00.000",
+          "startsAt": "2026-10-05T00:00:00.000",
           "terms": null
         }
       ]
@@ -56027,27 +56027,27 @@
     }
   },
   "YELLOW:524": {
-    "fetchedAt": "2026-10-04T00:20:00.826093+00:00",
+    "fetchedAt": "2026-10-05T01:06:21.747575+00:00",
     "promos": {
       "aussie-lemonade": [
         {
           "clubOnly": false,
           "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2ב20",
           "discountRate": null,
-          "endsAt": "2026-10-04T23:59:00.000",
+          "endsAt": "2026-11-29T23:59:00.000",
           "maxQuantity": null,
           "minQuantity": 2,
-          "startsAt": "2026-08-03T00:00:00.000",
+          "startsAt": "2026-10-05T00:00:00.000",
           "terms": null
         },
         {
           "clubOnly": true,
           "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2 ב 18-",
           "discountRate": null,
-          "endsAt": "2026-10-04T23:59:00.000",
+          "endsAt": "2026-11-29T23:59:00.000",
           "maxQuantity": null,
           "minQuantity": 2,
-          "startsAt": "2026-08-03T00:00:00.000",
+          "startsAt": "2026-10-05T00:00:00.000",
           "terms": null
         }
       ],
@@ -56056,20 +56056,20 @@
           "clubOnly": false,
           "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2ב20",
           "discountRate": null,
-          "endsAt": "2026-10-04T23:59:00.000",
+          "endsAt": "2026-11-29T23:59:00.000",
           "maxQuantity": null,
           "minQuantity": 2,
-          "startsAt": "2026-08-03T00:00:00.000",
+          "startsAt": "2026-10-05T00:00:00.000",
           "terms": null
         },
         {
           "clubOnly": true,
           "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2 ב 18-",
           "discountRate": null,
-          "endsAt": "2026-10-04T23:59:00.000",
+          "endsAt": "2026-11-29T23:59:00.000",
           "maxQuantity": null,
           "minQuantity": 2,
-          "startsAt": "2026-08-03T00:00:00.000",
+          "startsAt": "2026-10-05T00:00:00.000",
           "terms": null
         }
       ],
@@ -56078,20 +56078,20 @@
           "clubOnly": false,
           "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2ב20",
           "discountRate": null,
-          "endsAt": "2026-10-04T23:59:00.000",
+          "endsAt": "2026-11-29T23:59:00.000",
           "maxQuantity": null,
           "minQuantity": 2,
-          "startsAt": "2026-08-03T00:00:00.000",
+          "startsAt": "2026-10-05T00:00:00.000",
           "terms": null
         },
         {
           "clubOnly": true,
           "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2 ב 18-",
           "discountRate": null,
-          "endsAt": "2026-10-04T23:59:00.000",
+          "endsAt": "2026-11-29T23:59:00.000",
           "maxQuantity": null,
           "minQuantity": 2,
-          "startsAt": "2026-08-03T00:00:00.000",
+          "startsAt": "2026-10-05T00:00:00.000",
           "terms": null
         }
       ],
@@ -56100,20 +56100,20 @@
           "clubOnly": false,
           "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2ב20",
           "discountRate": null,
-          "endsAt": "2026-10-04T23:59:00.000",
+          "endsAt": "2026-11-29T23:59:00.000",
           "maxQuantity": null,
           "minQuantity": 2,
-          "startsAt": "2026-08-03T00:00:00.000",
+          "startsAt": "2026-10-05T00:00:00.000",
           "terms": null
         },
         {
           "clubOnly": true,
           "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2 ב 18-",
           "discountRate": null,
-          "endsAt": "2026-10-04T23:59:00.000",
+          "endsAt": "2026-11-29T23:59:00.000",
           "maxQuantity": null,
           "minQuantity": 2,
-          "startsAt": "2026-08-03T00:00:00.000",
+          "startsAt": "2026-10-05T00:00:00.000",
           "terms": null
         }
       ],
@@ -56122,20 +56122,20 @@
           "clubOnly": false,
           "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2ב20",
           "discountRate": null,
-          "endsAt": "2026-10-04T23:59:00.000",
+          "endsAt": "2026-11-29T23:59:00.000",
           "maxQuantity": null,
           "minQuantity": 2,
-          "startsAt": "2026-08-03T00:00:00.000",
+          "startsAt": "2026-10-05T00:00:00.000",
           "terms": null
         },
         {
           "clubOnly": true,
           "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2 ב 18-",
           "discountRate": null,
-          "endsAt": "2026-10-04T23:59:00.000",
+          "endsAt": "2026-11-29T23:59:00.000",
           "maxQuantity": null,
           "minQuantity": 2,
-          "startsAt": "2026-08-03T00:00:00.000",
+          "startsAt": "2026-10-05T00:00:00.000",
           "terms": null
         }
       ],
@@ -56144,20 +56144,20 @@
           "clubOnly": false,
           "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2ב20",
           "discountRate": null,
-          "endsAt": "2026-10-04T23:59:00.000",
+          "endsAt": "2026-11-29T23:59:00.000",
           "maxQuantity": null,
           "minQuantity": 2,
-          "startsAt": "2026-08-03T00:00:00.000",
+          "startsAt": "2026-10-05T00:00:00.000",
           "terms": null
         },
         {
           "clubOnly": true,
           "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2 ב 18-",
           "discountRate": null,
-          "endsAt": "2026-10-04T23:59:00.000",
+          "endsAt": "2026-11-29T23:59:00.000",
           "maxQuantity": null,
           "minQuantity": 2,
-          "startsAt": "2026-08-03T00:00:00.000",
+          "startsAt": "2026-10-05T00:00:00.000",
           "terms": null
         }
       ],
@@ -56166,20 +56166,20 @@
           "clubOnly": false,
           "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2ב20",
           "discountRate": null,
-          "endsAt": "2026-10-04T23:59:00.000",
+          "endsAt": "2026-11-29T23:59:00.000",
           "maxQuantity": null,
           "minQuantity": 2,
-          "startsAt": "2026-08-03T00:00:00.000",
+          "startsAt": "2026-10-05T00:00:00.000",
           "terms": null
         },
         {
           "clubOnly": true,
           "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2 ב 18-",
           "discountRate": null,
-          "endsAt": "2026-10-04T23:59:00.000",
+          "endsAt": "2026-11-29T23:59:00.000",
           "maxQuantity": null,
           "minQuantity": 2,
-          "startsAt": "2026-08-03T00:00:00.000",
+          "startsAt": "2026-10-05T00:00:00.000",
           "terms": null
         }
       ],
@@ -56188,20 +56188,20 @@
           "clubOnly": false,
           "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2ב20",
           "discountRate": null,
-          "endsAt": "2026-10-04T23:59:00.000",
+          "endsAt": "2026-11-29T23:59:00.000",
           "maxQuantity": null,
           "minQuantity": 2,
-          "startsAt": "2026-08-03T00:00:00.000",
+          "startsAt": "2026-10-05T00:00:00.000",
           "terms": null
         },
         {
           "clubOnly": true,
           "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2 ב 18-",
           "discountRate": null,
-          "endsAt": "2026-10-04T23:59:00.000",
+          "endsAt": "2026-11-29T23:59:00.000",
           "maxQuantity": null,
           "minQuantity": 2,
-          "startsAt": "2026-08-03T00:00:00.000",
+          "startsAt": "2026-10-05T00:00:00.000",
           "terms": null
         }
       ],
@@ -56210,20 +56210,20 @@
           "clubOnly": false,
           "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2ב20",
           "discountRate": null,
-          "endsAt": "2026-10-04T23:59:00.000",
+          "endsAt": "2026-11-29T23:59:00.000",
           "maxQuantity": null,
           "minQuantity": 2,
-          "startsAt": "2026-08-03T00:00:00.000",
+          "startsAt": "2026-10-05T00:00:00.000",
           "terms": null
         },
         {
           "clubOnly": true,
           "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2 ב 18-",
           "discountRate": null,
-          "endsAt": "2026-10-04T23:59:00.000",
+          "endsAt": "2026-11-29T23:59:00.000",
           "maxQuantity": null,
           "minQuantity": 2,
-          "startsAt": "2026-08-03T00:00:00.000",
+          "startsAt": "2026-10-05T00:00:00.000",
           "terms": null
         }
       ],
@@ -56232,20 +56232,20 @@
           "clubOnly": false,
           "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2ב20",
           "discountRate": null,
-          "endsAt": "2026-10-04T23:59:00.000",
+          "endsAt": "2026-11-29T23:59:00.000",
           "maxQuantity": null,
           "minQuantity": 2,
-          "startsAt": "2026-08-03T00:00:00.000",
+          "startsAt": "2026-10-05T00:00:00.000",
           "terms": null
         },
         {
           "clubOnly": true,
           "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2 ב 18-",
           "discountRate": null,
-          "endsAt": "2026-10-04T23:59:00.000",
+          "endsAt": "2026-11-29T23:59:00.000",
           "maxQuantity": null,
           "minQuantity": 2,
-          "startsAt": "2026-08-03T00:00:00.000",
+          "startsAt": "2026-10-05T00:00:00.000",
           "terms": null
         }
       ],
@@ -56254,20 +56254,20 @@
           "clubOnly": false,
           "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2ב20",
           "discountRate": null,
-          "endsAt": "2026-10-04T23:59:00.000",
+          "endsAt": "2026-11-29T23:59:00.000",
           "maxQuantity": null,
           "minQuantity": 2,
-          "startsAt": "2026-08-03T00:00:00.000",
+          "startsAt": "2026-10-05T00:00:00.000",
           "terms": null
         },
         {
           "clubOnly": true,
           "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2 ב 18-",
           "discountRate": null,
-          "endsAt": "2026-10-04T23:59:00.000",
+          "endsAt": "2026-11-29T23:59:00.000",
           "maxQuantity": null,
           "minQuantity": 2,
-          "startsAt": "2026-08-03T00:00:00.000",
+          "startsAt": "2026-10-05T00:00:00.000",
           "terms": null
         }
       ]
@@ -65166,63 +65166,63 @@
     }
   },
   "YOHANANOF:12": {
-    "fetchedAt": "2026-10-03T21:13:34.271797+00:00",
+    "fetchedAt": "2026-10-05T01:07:33.638892+00:00",
     "promos": {}
   },
   "YOHANANOF:15": {
-    "fetchedAt": "2026-10-03T21:13:29.421375+00:00",
+    "fetchedAt": "2026-10-05T01:07:29.391819+00:00",
     "promos": {}
   },
   "YOHANANOF:19": {
-    "fetchedAt": "2026-10-03T21:13:32.295092+00:00",
+    "fetchedAt": "2026-10-05T01:07:31.719431+00:00",
     "promos": {}
   },
   "YOHANANOF:20": {
-    "fetchedAt": "2026-10-03T21:13:34.370072+00:00",
+    "fetchedAt": "2026-10-05T01:07:28.828014+00:00",
     "promos": {}
   },
   "YOHANANOF:27": {
-    "fetchedAt": "2026-10-03T21:13:34.605884+00:00",
+    "fetchedAt": "2026-10-05T01:07:22.567531+00:00",
     "promos": {}
   },
   "YOHANANOF:28": {
-    "fetchedAt": "2026-10-03T21:13:31.342031+00:00",
+    "fetchedAt": "2026-10-05T01:07:26.785024+00:00",
     "promos": {}
   },
   "YOHANANOF:29": {
-    "fetchedAt": "2026-10-03T21:13:31.202255+00:00",
+    "fetchedAt": "2026-10-05T01:07:26.691140+00:00",
     "promos": {}
   },
   "YOHANANOF:30": {
-    "fetchedAt": "2026-10-03T21:13:35.102831+00:00",
+    "fetchedAt": "2026-10-05T01:07:27.558094+00:00",
     "promos": {}
   },
   "YOHANANOF:31": {
-    "fetchedAt": "2026-10-03T21:13:30.358072+00:00",
+    "fetchedAt": "2026-10-05T01:07:33.559898+00:00",
     "promos": {}
   },
   "YOHANANOF:37": {
-    "fetchedAt": "2026-10-03T21:13:30.214015+00:00",
+    "fetchedAt": "2026-10-05T01:07:21.469416+00:00",
     "promos": {}
   },
   "YOHANANOF:38": {
-    "fetchedAt": "2026-10-03T21:13:34.252916+00:00",
+    "fetchedAt": "2026-10-05T01:07:28.283279+00:00",
     "promos": {}
   },
   "YOHANANOF:39": {
-    "fetchedAt": "2026-10-03T21:13:35.438271+00:00",
+    "fetchedAt": "2026-10-05T01:07:25.063739+00:00",
     "promos": {}
   },
   "YOHANANOF:5": {
-    "fetchedAt": "2026-10-03T21:13:33.168567+00:00",
+    "fetchedAt": "2026-10-05T01:07:21.941288+00:00",
     "promos": {}
   },
   "YOHANANOF:7": {
-    "fetchedAt": "2026-10-03T21:13:31.348857+00:00",
+    "fetchedAt": "2026-10-05T01:07:21.169923+00:00",
     "promos": {}
   },
   "YOHANANOF:9": {
-    "fetchedAt": "2026-10-03T21:13:33.262542+00:00",
+    "fetchedAt": "2026-10-05T01:07:28.034795+00:00",
     "promos": {}
   }
 }
