@@ -1051,6 +1051,25 @@ async def run() -> None:
             store_info = parse_stores(stores_dir)
             items = list(parse_monster_items(prices_dir, covered))
 
+        # A branch has only been looked at if we read its prices AND know
+        # where it is. Prices without an address cannot be placed, so this
+        # run says nothing about that branch either way, and it must be
+        # carried rather than counted as "checked, no Monster".
+        #
+        # Measured 2026-10-09: Shufersal's store file timed out while its
+        # price files downloaded fine — "1150 Monster rows across 0
+        # branches". Every branch counted as covered, none could be built,
+        # and carry_forward deleted 224 of Shufersal's 242 stores from the
+        # map. The silent-chain check below never fired, because the chain
+        # had not returned nothing; it had returned half.
+        unplaceable = covered - set(store_info)
+        covered &= set(store_info)
+        if items and not store_info:
+            print(f"  store file missing — {len(items)} price row(s) cannot be placed; "
+                  "every branch is carried from the last run")
+        elif unplaceable:
+            print(f"  {len(unplaceable)} branch(es) priced but not in the store file — carried")
+
         covered_by_chain[chain] = covered
         if not store_info and not items:
             # Nothing at all came back — could not look, as opposed to
