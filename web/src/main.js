@@ -219,17 +219,72 @@ function updatePlaceLabel() {
   app.placeLabel = nearest?.city || "Israel";
 }
 
-async function boot() {
-  readHash();
-
-  const { stores, promotions, stats } = await loadAll();
+/** Swap in a freshly loaded set of shelves. */
+function applyData({ stores, promotions, stats }) {
   app.now = new Date();
   app.stores = stores;
   app.storeById = new Map(stores.map((s) => [s.id, s]));
   app.promotions = promotions;
   app.stats = stats;
   updatePlaceLabel();
+}
+
+/*
+ * Keeping an open page current.
+ *
+ * The clock and the shelves used to be read once, when the page opened. A
+ * phone keeps a browser tab alive for days, so a tab opened in the evening
+ * was still saying "Sold here today" the next afternoon — "today" was frozen
+ * at the moment it loaded — and never showed a single newer price until
+ * someone thought to reload. The pipeline rewrites the data every few hours;
+ * the page has to come and get it.
+ *
+ * The clock is re-read every minute, which is free and is what moves "today"
+ * past midnight and "5 min ago" to "1 h ago". The data is re-fetched only
+ * when it is older than DATA_MAX_AGE_MS, so leaving a tab open costs one
+ * small request a quarter of an hour rather than one a minute. Both run
+ * immediately when the tab comes back to the front, which is when a person
+ * is actually looking. A failed fetch keeps what is on screen.
+ */
+const DATA_MAX_AGE_MS = 15 * 60_000;
+let dataLoadedAt = 0;
+let reloading = false;
+
+async function keepCurrent(returning = false) {
+  if (document.hidden || reloading) return;
+  const before = app.now.toDateString();
+  app.now = new Date();
+  // Re-render only for a reason. Redrawing every minute regardless would
+  // jolt whatever screen someone is in the middle of reading; a few minutes
+  // of drift in "3 h ago" is not worth that, a new day or new data is.
+  let changed = returning || app.now.toDateString() !== before;
+  if (Date.now() - dataLoadedAt >= DATA_MAX_AGE_MS) {
+    reloading = true;
+    try {
+      const fresh = await loadAll();
+      if (fresh.stores.length) {
+        applyData(fresh);
+        dataLoadedAt = Date.now();
+        changed = true;
+      }
+    } finally {
+      reloading = false;
+    }
+  }
+  if (changed) refresh();
+}
+
+async function boot() {
+  readHash();
+
+  const data = await loadAll();
+  const { stores } = data;
+  applyData(data);
+  if (stores.length) dataLoadedAt = Date.now();
   refresh();
+
+  setInterval(() => keepCurrent(), 60_000);
+  document.addEventListener("visibilitychange", () => keepCurrent(true));
 
   if (!stores.length) {
     screens.map.el.insertAdjacentHTML(
