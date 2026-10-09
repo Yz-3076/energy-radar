@@ -1145,6 +1145,18 @@ async def run() -> None:
                 "seenAt": item["last_sale"] or now,
                 "source": "official_feed",
             }
+            if not item["last_sale"]:
+                # The chain published a price and no sale time. seenAt still
+                # needs a value — every screen sorts and ages rows by it — so
+                # it holds when we read the listing, and this flag says that
+                # is all it is.
+                #
+                # Without the flag the app read our own fetch time as a sale:
+                # every one of Wolt's 217 rows said "Sold here today", every
+                # run, forever, because Wolt never publishes sale times and
+                # the fallback was always "now". That is the app inventing a
+                # purchase. Set only when true, like `delivery`.
+                new_row["noSaleTime"] = True
             shelf = stores_by_key[store_key]["shelf"]
             # Some chains' own price feeds list the same barcode twice for
             # one store (confirmed 2026-09-10 on a handful of Rami Levy
@@ -1156,9 +1168,13 @@ async def run() -> None:
             # first-wins, in case a real same-run price update is what's
             # actually happening.
             existing = next((r for r in shelf if r["variantId"] == variant_id), None)
+            # A real sale time beats a stand-in one whatever the clock says:
+            # the stand-in is the fetch time, which is always the newest,
+            # and would otherwise win every comparison against a genuine sale.
+            known = lambda r: not r.get("noSaleTime")
             if existing is None:
                 shelf.append(new_row)
-            elif new_row["seenAt"] > existing["seenAt"]:
+            elif (known(new_row), new_row["seenAt"]) > (known(existing), existing["seenAt"]):
                 shelf.remove(existing)
                 shelf.append(new_row)
             new_observations.append(

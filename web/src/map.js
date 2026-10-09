@@ -28,6 +28,9 @@ import {
   originalRow,
   storeIsFresh,
   isFresh,
+  soldToday,
+  saleLabel,
+  lastSeen,
   distanceM,
   prettyDistance,
   relativeTime,
@@ -348,7 +351,7 @@ export function createMapScreen(root, app) {
               <span class="deck-meta">${h(distanceLabel(s, distanceM(app.coord, s)))} · ${h(variant.name)}</span>
               <span style="display:flex;align-items:baseline">
                 <span class="deck-price">${h(ils(row.price))}</span>
-                <span class="deck-stock">${storeIsFresh(s, app.now) ? "sold today" : `${s.shelf.length} variants`}</span>
+                <span class="deck-stock">${soldToday(lastSeen(s) || "", app.now) ? "sold today" : `${s.shelf.length} variants`}</span>
               </span>
             </span>
           </button>`;
@@ -421,7 +424,9 @@ export function createMapScreen(root, app) {
       (variantId && store.shelf.find((r) => r.variantId === variantId)) || originalRow(store);
     const variant = getVariant(row.variantId);
     const metres = distanceM(app.coord, store);
-    const fresh = isFresh(row.seenAt, app.now);
+    // "Sold here today" has to mean the viewer's today, and has to be a
+    // sale: a row with no sale time is just a listing we read.
+    const fresh = !row.noSaleTime && soldToday(row.seenAt, app.now);
     const verdict = priceVerdict(row);
     const status = stockStatus(row, app.now);
     const deals = promosAtStore(app.promotions, store, getVariant);
@@ -451,7 +456,13 @@ export function createMapScreen(root, app) {
         <div class="focus-body">
           <div class="focus-status" style="color:${fresh ? "#009a28" : "#767c76"}">
             ${Icons.CheckCircle({ size: 13, color: fresh ? "#009a28" : "#767c76", weight: "fill" })}
-            ${fresh ? "Sold here today" : `Last sold ${h(relativeTime(row.seenAt, app.now))}`}
+            ${
+              fresh
+                ? "Sold here today"
+                : row.noSaleTime
+                  ? "No sale times from this chain"
+                  : `Last sold ${h(relativeTime(row.seenAt, app.now))}`
+            }
           </div>
           <div class="focus-vname">${h(variant.fullName)}</div>
           <div class="focus-facts">${facts.map((f) => `<span class="fact">${h(f)}</span>`).join("")}</div>
@@ -480,7 +491,7 @@ export function createMapScreen(root, app) {
           <div class="focus-prov">
             <span class="stock-dot ${h(status)}"></span>${h(STOCK_LABEL[status])} · ${
               row.source === "official_feed"
-                ? `official price feed, sold ${h(relativeTime(row.seenAt, app.now))}`
+                ? `official price feed, ${h(saleLabel(row, app.now))}`
                 : row.source === "featured"
                   ? "listed by the store itself"
                   : `hunter photo, ${h(row.qty ?? "?")} on shelf ${h(relativeTime(row.seenAt, app.now))}`

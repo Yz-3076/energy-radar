@@ -30,6 +30,13 @@ export type ShelfRow = {
    * Absent on hunter rows and on anything without ~18h of history.
    */
   depletion?: "insufficient_data" | "healthy" | "slowing" | "likely_out";
+  /**
+   * Set when the chain published this price with no sale time at all — Wolt
+   * never does, and a few archive rows lack one. `seenAt` then holds when
+   * the pipeline read the listing, which says nothing about a purchase, so
+   * nothing may describe it as one. Absent rather than false everywhere else.
+   */
+  noSaleTime?: true;
 };
 
 export type Store = {
@@ -198,11 +205,44 @@ export const hoursSince = (iso: string, now: Date = new Date()) =>
 
 export const isFresh = (iso: string, now?: Date) => hoursSince(iso, now) <= FRESH_HOURS;
 
-/** Most recent activity anywhere on this shelf. */
+/**
+ * Most recent real sale anywhere on this shelf, or "" if the chain gives none.
+ *
+ * Compared as instants, not strings: sale times arrive as Israeli local time
+ * with no offset and stand-in times as UTC with one, and comparing those as
+ * text puts them up to three hours out of order.
+ */
 export const lastSeen = (s: Store) =>
-  s.shelf.reduce((acc, r) => (r.seenAt > acc ? r.seenAt : acc), s.shelf[0]?.seenAt ?? "");
+  s.shelf
+    .filter((r) => !r.noSaleTime)
+    .reduce((acc, r) => (!acc || new Date(r.seenAt) > new Date(acc) ? r.seenAt : acc), "");
 
-export const storeIsFresh = (s: Store, now?: Date) => isFresh(lastSeen(s), now);
+export const storeIsFresh = (s: Store, now?: Date) => {
+  const last = lastSeen(s);
+  return last !== "" && isFresh(last, now);
+};
+
+/**
+ * Whether `iso` falls on the viewer's own calendar day.
+ *
+ * "Sold here today" used to be isFresh — within 36 hours — so a can last
+ * rung up yesterday morning still claimed today, and kept claiming it until
+ * the evening after. A label that says today has to mean today.
+ */
+export function soldToday(iso: string, now: Date = new Date()): boolean {
+  const t = new Date(iso);
+  return (
+    !Number.isNaN(t.getTime()) &&
+    t <= now &&
+    t.getFullYear() === now.getFullYear() &&
+    t.getMonth() === now.getMonth() &&
+    t.getDate() === now.getDate()
+  );
+}
+
+/** The sale line for one row: "sold 3 h ago", or an honest "no sale data". */
+export const saleLabel = (row: ShelfRow, now?: Date) =>
+  row.noSaleTime ? "chain publishes no sale times" : `sold ${relativeTime(row.seenAt, now)}`;
 
 export const cheapest = (s: Store) =>
   s.shelf.reduce((acc, r) => (r.price < acc.price ? r : acc), s.shelf[0]);

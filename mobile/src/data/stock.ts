@@ -27,6 +27,9 @@ export const STOCK_LABEL: Record<StockStatus, string> = {
 /** How much to trust the row on age alone — "how stale is our copy of this
  *  price", which is a different question from whether the can is there. */
 function freshness(row: ShelfRow, now: Date): StockStatus {
+  // No sale time means `seenAt` is just when we read the listing, which is
+  // always minutes old — so on age alone every such row read "In stock".
+  if (row.noSaleTime) return "unconfirmed";
   const hours = hoursSince(row.seenAt, now);
 
   if (row.source === "featured") return "in_stock"; // the store itself keeps this listing current

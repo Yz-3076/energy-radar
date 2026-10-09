@@ -29,6 +29,8 @@ import {
   distanceM,
   prettyDistance,
   relativeTime,
+  lastSeen,
+  saleLabel,
   walkMinutes,
   ils,
 } from "./shared.ts";
@@ -106,7 +108,7 @@ export function createSearchScreen(root, app) {
         if (q && !hay.includes(q)) continue;
         const prev = best.get(v.id);
         if (!prev || row.price < prev.price) {
-          best.set(v.id, { variantId: v.id, store, price: row.price, seenAt: row.seenAt, metres });
+          best.set(v.id, { variantId: v.id, store, price: row.price, seenAt: row.seenAt, noSaleTime: row.noSaleTime, metres });
         }
       }
     }
@@ -145,7 +147,7 @@ export function createSearchScreen(root, app) {
                 ${Can({ variant: v, size: 45 })}
                 <span class="row-text">
                   <span class="row-title">${h(v.fullName)}</span>
-                  <span class="row-sub">${h(isolate(hit.store.name))} · ${h(distanceLabel(hit.store, hit.metres))} · ${h(relativeTime(hit.seenAt, app.now))}</span>
+                  <span class="row-sub">${h(isolate(hit.store.name))} · ${h(distanceLabel(hit.store, hit.metres))} · ${h(hit.noSaleTime ? "no sale times" : relativeTime(hit.seenAt, app.now))}</span>
                 </span>
                 <span class="row-price">${h(ils(hit.price))}</span>
               </button>`;
@@ -405,7 +407,9 @@ export function createStoreScreen(root, app) {
       shelf.length > 1 && shelf[0].price !== shelf[shelf.length - 1].price
         ? `${ils(shelf[0].price)}–${ils(shelf[shelf.length - 1].price)}`
         : ils(best.price);
-    const freshest = shelf.reduce((a, r) => (r.seenAt > a.seenAt ? r : a), shelf[0]);
+    // The newest real sale. A chain that publishes none gets a dash, not
+    // the time we happened to read its file.
+    const lastSale = lastSeen(store);
 
     body.innerHTML = `
         <div class="store-head">
@@ -456,7 +460,7 @@ export function createStoreScreen(root, app) {
         <div class="stats">
           <div class="card"><div class="stat-v">${shelf.length}</div><div class="stat-k">flavours here</div></div>
           <div class="card"><div class="stat-v" style="font-size:14px">${h(priceRange)}</div><div class="stat-k">price range</div></div>
-          <div class="card"><div class="stat-v" style="font-size:14px">${h(relativeTime(freshest.seenAt, app.now))}</div><div class="stat-k">last sold</div></div>
+          <div class="card"><div class="stat-v" style="font-size:14px">${h(lastSale ? relativeTime(lastSale, app.now) : "—")}</div><div class="stat-k">${lastSale ? "last sold" : "no sale times"}</div></div>
         </div>
 
         <button class="ghost tap" id="directions">
@@ -473,7 +477,7 @@ export function createStoreScreen(root, app) {
                 status === "likely_out"
                   ? "sold regularly here, then stopped"
                   : row.source === "official_feed"
-                    ? `official feed, sold ${relativeTime(row.seenAt, app.now)}`
+                    ? `official feed, ${saleLabel(row, app.now)}`
                     : row.source === "featured"
                       ? "listed by the store"
                       : `hunter photo, ${relativeTime(row.seenAt, app.now)}`;
@@ -647,7 +651,7 @@ export function createVariantScreen(root, app) {
                     </span>
                     <span class="row-sub">${h(distanceLabel(s, metres))} · ${
                       r.source === "official_feed"
-                        ? `official feed · ${h(relativeTime(r.seenAt, app.now))}`
+                        ? `official feed · ${h(r.noSaleTime ? "no sale times" : relativeTime(r.seenAt, app.now))}`
                         : `${h(r.qty ?? "?")} on shelf · ${h(relativeTime(r.seenAt, app.now))}`
                     }</span>
                   </span>

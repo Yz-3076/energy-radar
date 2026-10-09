@@ -17,6 +17,8 @@ export {
   isFresh,
   lastSeen,
   storeIsFresh,
+  soldToday,
+  saleLabel,
   cheapest,
   originalRow,
   relativeTime,
