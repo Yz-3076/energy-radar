@@ -59,9 +59,16 @@ export function stockStatus(row: ShelfRow, now: Date = new Date()): StockStatus 
       // collapse in demand — worth saying even if the price is fresh.
       return "likely_out";
     case "healthy":
-      // Rang up in the last ~12h, so the line is live at this branch even
-      // if our copy of the price has aged past the 24h mark.
-      return fresh === "unconfirmed" ? "fading" : "in_stock";
+      // "Healthy" means the chain reported a NEWER sale time in the last
+      // few fetches — not that the sale itself was recent. Chains report
+      // sale times about a day late, so a row can be healthy while its
+      // newest sale is two days old, and this used to call that "In
+      // stock" right next to "sold 2 d ago". Measured 2026-10-09: 2,106 of
+      // 3,350 "In stock" rows had last sold more than 24h earlier.
+      //
+      // So the activity can lift a row out of "Unconfirmed" but cannot
+      // claim stock on its own: "In stock" needs a sale within the day.
+      return fresh === "in_stock" ? "in_stock" : "fading";
     case "slowing":
       return fresh === "in_stock" ? "fading" : fresh;
     default:
