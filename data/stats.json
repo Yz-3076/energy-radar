@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-10T09:41:09.034686+00:00",
+  "generated_at": "2026-10-10T17:15:37.862480+00:00",
   "chains_covered": [
     "SHUFERSAL",
     "VICTORY_NEW_SOURCE",
@@ -31,14 +31,14 @@
     "WOLT"
   ],
   "store_count": 1414,
-  "total_observations": 757914,
-  "observations_this_run": 10180,
+  "total_observations": 768504,
+  "observations_this_run": 10590,
   "listings_per_variant": {
-    "ultra": 1151,
+    "ultra": 1152,
     "mango-loco": 805,
     "ultra-paradise": 997,
     "ultra-fiesta": 557,
-    "original": 1227,
+    "original": 1226,
     "full-zero": 423,
     "ultra-peachy-keen": 483,
     "strawberry": 647,
@@ -49,10 +49,10 @@
     "aussie-lemonade": 454
   },
   "depletion_breakdown": {
-    "healthy": 3451,
-    "slowing": 3447,
-    "insufficient_data": 1244,
-    "likely_out": 172
+    "healthy": 3262,
+    "slowing": 3561,
+    "insufficient_data": 1239,
+    "likely_out": 252
   },
   "live_listings": 8314,
   "flavours_on_shelves": 13,
@@ -284,7 +284,7 @@
       "min": 4.9,
       "median": 9.9,
       "max": 14.9,
-      "listings": 1227
+      "listings": 1226
     },
     "pipeline-punch": {
       "min": 6.8,
@@ -308,7 +308,7 @@
       "min": 6.5,
       "median": 9.9,
       "max": 13.0,
-      "listings": 1151
+      "listings": 1152
     },
     "ultra-fiesta": {
       "min": 6.8,
@@ -1038,21 +1038,21 @@
     },
     {
       "date": "2026-10-10",
-      "observations": 23123,
-      "stores": 1385,
+      "observations": 33713,
+      "stores": 1386,
       "min": 4.9,
       "median": 9.9,
       "max": 14.9,
       "by_variant": {
         "aussie-lemonade": 10.9,
         "full-zero": 8.9,
-        "green-zero": 8.9,
-        "mango-loco": 8.9,
+        "green-zero": 9.2,
+        "mango-loco": 9.5,
         "monarch": 8.9,
         "original": 9.9,
-        "pipeline-punch": 8.9,
+        "pipeline-punch": 9.5,
         "rossi": 8.9,
-        "strawberry": 8.9,
+        "strawberry": 9.4,
         "ultra": 9.9,
         "ultra-fiesta": 8.9,
         "ultra-paradise": 9.9,
