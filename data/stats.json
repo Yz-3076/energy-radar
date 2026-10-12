@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-12T10:35:04.584481+00:00",
+  "generated_at": "2026-10-12T21:11:36.095192+00:00",
   "chains_covered": [
     "SHUFERSAL",
     "VICTORY_NEW_SOURCE",
@@ -31,16 +31,16 @@
     "WOLT"
   ],
   "store_count": 1410,
-  "total_observations": 833836,
-  "observations_this_run": 11011,
+  "total_observations": 838885,
+  "observations_this_run": 5049,
   "listings_per_variant": {
-    "ultra": 1151,
+    "ultra": 1150,
     "mango-loco": 805,
     "ultra-paradise": 995,
     "ultra-fiesta": 556,
     "original": 1220,
     "full-zero": 420,
-    "ultra-peachy-keen": 478,
+    "ultra-peachy-keen": 477,
     "strawberry": 646,
     "rossi": 164,
     "pipeline-punch": 533,
@@ -49,12 +49,12 @@
     "aussie-lemonade": 451
   },
   "depletion_breakdown": {
-    "slowing": 3782,
-    "healthy": 3213,
-    "insufficient_data": 1164,
-    "likely_out": 127
+    "slowing": 3451,
+    "healthy": 3580,
+    "insufficient_data": 1151,
+    "likely_out": 102
   },
-  "live_listings": 8286,
+  "live_listings": 8284,
   "flavours_on_shelves": 13,
   "stores_per_chain": {
     "Super Pharm": 258,
@@ -72,8 +72,8 @@
     "Wolt": 25,
     "Zol Vebegadol": 22,
     "City Market Kiryatgat": 22,
-    "Osher Ad": 21,
     "Super Sapir": 21,
+    "Osher Ad": 21,
     "Maayan 2000": 18,
     "Yohananof": 15,
     "King Store": 13,
@@ -108,7 +108,7 @@
       "min": 9.5,
       "median": 9.9,
       "max": 10.9,
-      "listings": 319
+      "listings": 318
     },
     "Hazi Hinam": {
       "min": 8.9,
@@ -234,7 +234,7 @@
       "min": 10.0,
       "median": 13.0,
       "max": 13.0,
-      "listings": 1746
+      "listings": 1745
     },
     "Yohananof": {
       "min": 7.9,
@@ -308,7 +308,7 @@
       "min": 6.5,
       "median": 9.9,
       "max": 13.0,
-      "listings": 1151
+      "listings": 1150
     },
     "ultra-fiesta": {
       "min": 6.8,
@@ -326,7 +326,7 @@
       "min": 6.8,
       "median": 9.9,
       "max": 14.9,
-      "listings": 478
+      "listings": 477
     }
   },
   "cheapest_listing": {
@@ -1084,18 +1084,18 @@
     },
     {
       "date": "2026-10-12",
-      "observations": 25956,
+      "observations": 31005,
       "stores": 1410,
       "min": 4.9,
-      "median": 8.9,
+      "median": 9.4,
       "max": 14.9,
       "by_variant": {
-        "aussie-lemonade": 9.9,
+        "aussie-lemonade": 10.9,
         "full-zero": 8.9,
         "green-zero": 8.9,
         "mango-loco": 8.9,
         "monarch": 8.9,
-        "original": 9.4,
+        "original": 9.9,
         "pipeline-punch": 8.9,
         "rossi": 8.9,
         "strawberry": 8.9,
