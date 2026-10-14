@@ -17935,246 +17935,246 @@
     ]
   },
   "yellow-144": {
-    "strawberry": [
+    "aussie-lemonade": [
       {
+        "clubOnly": false,
         "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2ב20",
         "discountRate": null,
-        "minQuantity": 2,
-        "maxQuantity": null,
-        "startsAt": "2026-10-05T00:00:00.000",
         "endsAt": "2026-11-29T23:59:00.000",
-        "terms": null,
-        "clubOnly": false
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-10-05T00:00:00.000",
+        "terms": null
       },
       {
+        "clubOnly": true,
         "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2 ב 18-",
         "discountRate": null,
-        "minQuantity": 2,
-        "maxQuantity": null,
-        "startsAt": "2026-10-05T00:00:00.000",
         "endsAt": "2026-11-29T23:59:00.000",
-        "terms": null,
-        "clubOnly": true
-      }
-    ],
-    "ultra-peachy-keen": [
-      {
-        "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2ב20",
-        "discountRate": null,
-        "minQuantity": 2,
         "maxQuantity": null,
-        "startsAt": "2026-10-05T00:00:00.000",
-        "endsAt": "2026-11-29T23:59:00.000",
-        "terms": null,
-        "clubOnly": false
-      },
-      {
-        "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2 ב 18-",
-        "discountRate": null,
         "minQuantity": 2,
-        "maxQuantity": null,
         "startsAt": "2026-10-05T00:00:00.000",
-        "endsAt": "2026-11-29T23:59:00.000",
-        "terms": null,
-        "clubOnly": true
-      }
-    ],
-    "original": [
-      {
-        "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2ב20",
-        "discountRate": null,
-        "minQuantity": 2,
-        "maxQuantity": null,
-        "startsAt": "2026-10-05T00:00:00.000",
-        "endsAt": "2026-11-29T23:59:00.000",
-        "terms": null,
-        "clubOnly": false
-      },
-      {
-        "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2 ב 18-",
-        "discountRate": null,
-        "minQuantity": 2,
-        "maxQuantity": null,
-        "startsAt": "2026-10-05T00:00:00.000",
-        "endsAt": "2026-11-29T23:59:00.000",
-        "terms": null,
-        "clubOnly": true
-      }
-    ],
-    "ultra": [
-      {
-        "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2ב20",
-        "discountRate": null,
-        "minQuantity": 2,
-        "maxQuantity": null,
-        "startsAt": "2026-10-05T00:00:00.000",
-        "endsAt": "2026-11-29T23:59:00.000",
-        "terms": null,
-        "clubOnly": false
-      },
-      {
-        "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2 ב 18-",
-        "discountRate": null,
-        "minQuantity": 2,
-        "maxQuantity": null,
-        "startsAt": "2026-10-05T00:00:00.000",
-        "endsAt": "2026-11-29T23:59:00.000",
-        "terms": null,
-        "clubOnly": true
-      }
-    ],
-    "mango-loco": [
-      {
-        "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2ב20",
-        "discountRate": null,
-        "minQuantity": 2,
-        "maxQuantity": null,
-        "startsAt": "2026-10-05T00:00:00.000",
-        "endsAt": "2026-11-29T23:59:00.000",
-        "terms": null,
-        "clubOnly": false
-      },
-      {
-        "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2 ב 18-",
-        "discountRate": null,
-        "minQuantity": 2,
-        "maxQuantity": null,
-        "startsAt": "2026-10-05T00:00:00.000",
-        "endsAt": "2026-11-29T23:59:00.000",
-        "terms": null,
-        "clubOnly": true
-      }
-    ],
-    "pipeline-punch": [
-      {
-        "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2ב20",
-        "discountRate": null,
-        "minQuantity": 2,
-        "maxQuantity": null,
-        "startsAt": "2026-10-05T00:00:00.000",
-        "endsAt": "2026-11-29T23:59:00.000",
-        "terms": null,
-        "clubOnly": false
-      },
-      {
-        "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2 ב 18-",
-        "discountRate": null,
-        "minQuantity": 2,
-        "maxQuantity": null,
-        "startsAt": "2026-10-05T00:00:00.000",
-        "endsAt": "2026-11-29T23:59:00.000",
-        "terms": null,
-        "clubOnly": true
-      }
-    ],
-    "ultra-paradise": [
-      {
-        "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2ב20",
-        "discountRate": null,
-        "minQuantity": 2,
-        "maxQuantity": null,
-        "startsAt": "2026-10-05T00:00:00.000",
-        "endsAt": "2026-11-29T23:59:00.000",
-        "terms": null,
-        "clubOnly": false
-      },
-      {
-        "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2 ב 18-",
-        "discountRate": null,
-        "minQuantity": 2,
-        "maxQuantity": null,
-        "startsAt": "2026-10-05T00:00:00.000",
-        "endsAt": "2026-11-29T23:59:00.000",
-        "terms": null,
-        "clubOnly": true
-      }
-    ],
-    "ultra-fiesta": [
-      {
-        "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2ב20",
-        "discountRate": null,
-        "minQuantity": 2,
-        "maxQuantity": null,
-        "startsAt": "2026-10-05T00:00:00.000",
-        "endsAt": "2026-11-29T23:59:00.000",
-        "terms": null,
-        "clubOnly": false
-      },
-      {
-        "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2 ב 18-",
-        "discountRate": null,
-        "minQuantity": 2,
-        "maxQuantity": null,
-        "startsAt": "2026-10-05T00:00:00.000",
-        "endsAt": "2026-11-29T23:59:00.000",
-        "terms": null,
-        "clubOnly": true
-      }
-    ],
-    "monarch": [
-      {
-        "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2ב20",
-        "discountRate": null,
-        "minQuantity": 2,
-        "maxQuantity": null,
-        "startsAt": "2026-10-05T00:00:00.000",
-        "endsAt": "2026-11-29T23:59:00.000",
-        "terms": null,
-        "clubOnly": false
-      },
-      {
-        "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2 ב 18-",
-        "discountRate": null,
-        "minQuantity": 2,
-        "maxQuantity": null,
-        "startsAt": "2026-10-05T00:00:00.000",
-        "endsAt": "2026-11-29T23:59:00.000",
-        "terms": null,
-        "clubOnly": true
+        "terms": null
       }
     ],
     "green-zero": [
       {
+        "clubOnly": false,
         "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2ב20",
         "discountRate": null,
-        "minQuantity": 2,
-        "maxQuantity": null,
-        "startsAt": "2026-10-05T00:00:00.000",
         "endsAt": "2026-11-29T23:59:00.000",
-        "terms": null,
-        "clubOnly": false
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-10-05T00:00:00.000",
+        "terms": null
       },
       {
+        "clubOnly": true,
         "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2 ב 18-",
         "discountRate": null,
-        "minQuantity": 2,
-        "maxQuantity": null,
-        "startsAt": "2026-10-05T00:00:00.000",
         "endsAt": "2026-11-29T23:59:00.000",
-        "terms": null,
-        "clubOnly": true
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-10-05T00:00:00.000",
+        "terms": null
       }
     ],
-    "aussie-lemonade": [
+    "mango-loco": [
       {
+        "clubOnly": false,
         "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2ב20",
         "discountRate": null,
-        "minQuantity": 2,
-        "maxQuantity": null,
-        "startsAt": "2026-10-05T00:00:00.000",
         "endsAt": "2026-11-29T23:59:00.000",
-        "terms": null,
-        "clubOnly": false
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-10-05T00:00:00.000",
+        "terms": null
       },
       {
+        "clubOnly": true,
         "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2 ב 18-",
         "discountRate": null,
-        "minQuantity": 2,
-        "maxQuantity": null,
-        "startsAt": "2026-10-05T00:00:00.000",
         "endsAt": "2026-11-29T23:59:00.000",
-        "terms": null,
-        "clubOnly": true
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-10-05T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "monarch": [
+      {
+        "clubOnly": false,
+        "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2ב20",
+        "discountRate": null,
+        "endsAt": "2026-11-29T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-10-05T00:00:00.000",
+        "terms": null
+      },
+      {
+        "clubOnly": true,
+        "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2 ב 18-",
+        "discountRate": null,
+        "endsAt": "2026-11-29T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-10-05T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "original": [
+      {
+        "clubOnly": false,
+        "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2ב20",
+        "discountRate": null,
+        "endsAt": "2026-11-29T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-10-05T00:00:00.000",
+        "terms": null
+      },
+      {
+        "clubOnly": true,
+        "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2 ב 18-",
+        "discountRate": null,
+        "endsAt": "2026-11-29T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-10-05T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "pipeline-punch": [
+      {
+        "clubOnly": false,
+        "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2ב20",
+        "discountRate": null,
+        "endsAt": "2026-11-29T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-10-05T00:00:00.000",
+        "terms": null
+      },
+      {
+        "clubOnly": true,
+        "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2 ב 18-",
+        "discountRate": null,
+        "endsAt": "2026-11-29T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-10-05T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "strawberry": [
+      {
+        "clubOnly": false,
+        "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2ב20",
+        "discountRate": null,
+        "endsAt": "2026-11-29T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-10-05T00:00:00.000",
+        "terms": null
+      },
+      {
+        "clubOnly": true,
+        "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2 ב 18-",
+        "discountRate": null,
+        "endsAt": "2026-11-29T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-10-05T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "ultra": [
+      {
+        "clubOnly": false,
+        "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2ב20",
+        "discountRate": null,
+        "endsAt": "2026-11-29T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-10-05T00:00:00.000",
+        "terms": null
+      },
+      {
+        "clubOnly": true,
+        "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2 ב 18-",
+        "discountRate": null,
+        "endsAt": "2026-11-29T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-10-05T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "ultra-fiesta": [
+      {
+        "clubOnly": false,
+        "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2ב20",
+        "discountRate": null,
+        "endsAt": "2026-11-29T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-10-05T00:00:00.000",
+        "terms": null
+      },
+      {
+        "clubOnly": true,
+        "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2 ב 18-",
+        "discountRate": null,
+        "endsAt": "2026-11-29T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-10-05T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "ultra-paradise": [
+      {
+        "clubOnly": false,
+        "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2ב20",
+        "discountRate": null,
+        "endsAt": "2026-11-29T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-10-05T00:00:00.000",
+        "terms": null
+      },
+      {
+        "clubOnly": true,
+        "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2 ב 18-",
+        "discountRate": null,
+        "endsAt": "2026-11-29T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-10-05T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "ultra-peachy-keen": [
+      {
+        "clubOnly": false,
+        "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2ב20",
+        "discountRate": null,
+        "endsAt": "2026-11-29T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-10-05T00:00:00.000",
+        "terms": null
+      },
+      {
+        "clubOnly": true,
+        "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2 ב 18-",
+        "discountRate": null,
+        "endsAt": "2026-11-29T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-10-05T00:00:00.000",
+        "terms": null
       }
     ]
   },
@@ -18667,246 +18667,246 @@
     ]
   },
   "yellow-254": {
-    "strawberry": [
+    "aussie-lemonade": [
       {
+        "clubOnly": false,
         "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2ב20",
         "discountRate": null,
-        "minQuantity": 2,
-        "maxQuantity": null,
-        "startsAt": "2026-10-05T00:00:00.000",
         "endsAt": "2026-11-29T23:59:00.000",
-        "terms": null,
-        "clubOnly": false
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-10-05T00:00:00.000",
+        "terms": null
       },
       {
+        "clubOnly": true,
         "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2 ב 18-",
         "discountRate": null,
-        "minQuantity": 2,
-        "maxQuantity": null,
-        "startsAt": "2026-10-05T00:00:00.000",
         "endsAt": "2026-11-29T23:59:00.000",
-        "terms": null,
-        "clubOnly": true
-      }
-    ],
-    "ultra-peachy-keen": [
-      {
-        "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2ב20",
-        "discountRate": null,
-        "minQuantity": 2,
         "maxQuantity": null,
-        "startsAt": "2026-10-05T00:00:00.000",
-        "endsAt": "2026-11-29T23:59:00.000",
-        "terms": null,
-        "clubOnly": false
-      },
-      {
-        "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2 ב 18-",
-        "discountRate": null,
         "minQuantity": 2,
-        "maxQuantity": null,
         "startsAt": "2026-10-05T00:00:00.000",
-        "endsAt": "2026-11-29T23:59:00.000",
-        "terms": null,
-        "clubOnly": true
-      }
-    ],
-    "original": [
-      {
-        "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2ב20",
-        "discountRate": null,
-        "minQuantity": 2,
-        "maxQuantity": null,
-        "startsAt": "2026-10-05T00:00:00.000",
-        "endsAt": "2026-11-29T23:59:00.000",
-        "terms": null,
-        "clubOnly": false
-      },
-      {
-        "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2 ב 18-",
-        "discountRate": null,
-        "minQuantity": 2,
-        "maxQuantity": null,
-        "startsAt": "2026-10-05T00:00:00.000",
-        "endsAt": "2026-11-29T23:59:00.000",
-        "terms": null,
-        "clubOnly": true
-      }
-    ],
-    "ultra": [
-      {
-        "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2ב20",
-        "discountRate": null,
-        "minQuantity": 2,
-        "maxQuantity": null,
-        "startsAt": "2026-10-05T00:00:00.000",
-        "endsAt": "2026-11-29T23:59:00.000",
-        "terms": null,
-        "clubOnly": false
-      },
-      {
-        "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2 ב 18-",
-        "discountRate": null,
-        "minQuantity": 2,
-        "maxQuantity": null,
-        "startsAt": "2026-10-05T00:00:00.000",
-        "endsAt": "2026-11-29T23:59:00.000",
-        "terms": null,
-        "clubOnly": true
-      }
-    ],
-    "mango-loco": [
-      {
-        "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2ב20",
-        "discountRate": null,
-        "minQuantity": 2,
-        "maxQuantity": null,
-        "startsAt": "2026-10-05T00:00:00.000",
-        "endsAt": "2026-11-29T23:59:00.000",
-        "terms": null,
-        "clubOnly": false
-      },
-      {
-        "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2 ב 18-",
-        "discountRate": null,
-        "minQuantity": 2,
-        "maxQuantity": null,
-        "startsAt": "2026-10-05T00:00:00.000",
-        "endsAt": "2026-11-29T23:59:00.000",
-        "terms": null,
-        "clubOnly": true
-      }
-    ],
-    "pipeline-punch": [
-      {
-        "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2ב20",
-        "discountRate": null,
-        "minQuantity": 2,
-        "maxQuantity": null,
-        "startsAt": "2026-10-05T00:00:00.000",
-        "endsAt": "2026-11-29T23:59:00.000",
-        "terms": null,
-        "clubOnly": false
-      },
-      {
-        "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2 ב 18-",
-        "discountRate": null,
-        "minQuantity": 2,
-        "maxQuantity": null,
-        "startsAt": "2026-10-05T00:00:00.000",
-        "endsAt": "2026-11-29T23:59:00.000",
-        "terms": null,
-        "clubOnly": true
-      }
-    ],
-    "ultra-paradise": [
-      {
-        "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2ב20",
-        "discountRate": null,
-        "minQuantity": 2,
-        "maxQuantity": null,
-        "startsAt": "2026-10-05T00:00:00.000",
-        "endsAt": "2026-11-29T23:59:00.000",
-        "terms": null,
-        "clubOnly": false
-      },
-      {
-        "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2 ב 18-",
-        "discountRate": null,
-        "minQuantity": 2,
-        "maxQuantity": null,
-        "startsAt": "2026-10-05T00:00:00.000",
-        "endsAt": "2026-11-29T23:59:00.000",
-        "terms": null,
-        "clubOnly": true
-      }
-    ],
-    "ultra-fiesta": [
-      {
-        "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2ב20",
-        "discountRate": null,
-        "minQuantity": 2,
-        "maxQuantity": null,
-        "startsAt": "2026-10-05T00:00:00.000",
-        "endsAt": "2026-11-29T23:59:00.000",
-        "terms": null,
-        "clubOnly": false
-      },
-      {
-        "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2 ב 18-",
-        "discountRate": null,
-        "minQuantity": 2,
-        "maxQuantity": null,
-        "startsAt": "2026-10-05T00:00:00.000",
-        "endsAt": "2026-11-29T23:59:00.000",
-        "terms": null,
-        "clubOnly": true
-      }
-    ],
-    "monarch": [
-      {
-        "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2ב20",
-        "discountRate": null,
-        "minQuantity": 2,
-        "maxQuantity": null,
-        "startsAt": "2026-10-05T00:00:00.000",
-        "endsAt": "2026-11-29T23:59:00.000",
-        "terms": null,
-        "clubOnly": false
-      },
-      {
-        "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2 ב 18-",
-        "discountRate": null,
-        "minQuantity": 2,
-        "maxQuantity": null,
-        "startsAt": "2026-10-05T00:00:00.000",
-        "endsAt": "2026-11-29T23:59:00.000",
-        "terms": null,
-        "clubOnly": true
+        "terms": null
       }
     ],
     "green-zero": [
       {
+        "clubOnly": false,
         "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2ב20",
         "discountRate": null,
-        "minQuantity": 2,
-        "maxQuantity": null,
-        "startsAt": "2026-10-05T00:00:00.000",
         "endsAt": "2026-11-29T23:59:00.000",
-        "terms": null,
-        "clubOnly": false
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-10-05T00:00:00.000",
+        "terms": null
       },
       {
+        "clubOnly": true,
         "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2 ב 18-",
         "discountRate": null,
-        "minQuantity": 2,
-        "maxQuantity": null,
-        "startsAt": "2026-10-05T00:00:00.000",
         "endsAt": "2026-11-29T23:59:00.000",
-        "terms": null,
-        "clubOnly": true
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-10-05T00:00:00.000",
+        "terms": null
       }
     ],
-    "aussie-lemonade": [
+    "mango-loco": [
       {
+        "clubOnly": false,
         "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2ב20",
         "discountRate": null,
-        "minQuantity": 2,
-        "maxQuantity": null,
-        "startsAt": "2026-10-05T00:00:00.000",
         "endsAt": "2026-11-29T23:59:00.000",
-        "terms": null,
-        "clubOnly": false
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-10-05T00:00:00.000",
+        "terms": null
       },
       {
+        "clubOnly": true,
         "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2 ב 18-",
         "discountRate": null,
-        "minQuantity": 2,
-        "maxQuantity": null,
-        "startsAt": "2026-10-05T00:00:00.000",
         "endsAt": "2026-11-29T23:59:00.000",
-        "terms": null,
-        "clubOnly": true
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-10-05T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "monarch": [
+      {
+        "clubOnly": false,
+        "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2ב20",
+        "discountRate": null,
+        "endsAt": "2026-11-29T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-10-05T00:00:00.000",
+        "terms": null
+      },
+      {
+        "clubOnly": true,
+        "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2 ב 18-",
+        "discountRate": null,
+        "endsAt": "2026-11-29T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-10-05T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "original": [
+      {
+        "clubOnly": false,
+        "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2ב20",
+        "discountRate": null,
+        "endsAt": "2026-11-29T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-10-05T00:00:00.000",
+        "terms": null
+      },
+      {
+        "clubOnly": true,
+        "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2 ב 18-",
+        "discountRate": null,
+        "endsAt": "2026-11-29T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-10-05T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "pipeline-punch": [
+      {
+        "clubOnly": false,
+        "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2ב20",
+        "discountRate": null,
+        "endsAt": "2026-11-29T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-10-05T00:00:00.000",
+        "terms": null
+      },
+      {
+        "clubOnly": true,
+        "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2 ב 18-",
+        "discountRate": null,
+        "endsAt": "2026-11-29T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-10-05T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "strawberry": [
+      {
+        "clubOnly": false,
+        "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2ב20",
+        "discountRate": null,
+        "endsAt": "2026-11-29T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-10-05T00:00:00.000",
+        "terms": null
+      },
+      {
+        "clubOnly": true,
+        "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2 ב 18-",
+        "discountRate": null,
+        "endsAt": "2026-11-29T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-10-05T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "ultra": [
+      {
+        "clubOnly": false,
+        "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2ב20",
+        "discountRate": null,
+        "endsAt": "2026-11-29T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-10-05T00:00:00.000",
+        "terms": null
+      },
+      {
+        "clubOnly": true,
+        "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2 ב 18-",
+        "discountRate": null,
+        "endsAt": "2026-11-29T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-10-05T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "ultra-fiesta": [
+      {
+        "clubOnly": false,
+        "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2ב20",
+        "discountRate": null,
+        "endsAt": "2026-11-29T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-10-05T00:00:00.000",
+        "terms": null
+      },
+      {
+        "clubOnly": true,
+        "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2 ב 18-",
+        "discountRate": null,
+        "endsAt": "2026-11-29T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-10-05T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "ultra-paradise": [
+      {
+        "clubOnly": false,
+        "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2ב20",
+        "discountRate": null,
+        "endsAt": "2026-11-29T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-10-05T00:00:00.000",
+        "terms": null
+      },
+      {
+        "clubOnly": true,
+        "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2 ב 18-",
+        "discountRate": null,
+        "endsAt": "2026-11-29T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-10-05T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "ultra-peachy-keen": [
+      {
+        "clubOnly": false,
+        "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2ב20",
+        "discountRate": null,
+        "endsAt": "2026-11-29T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-10-05T00:00:00.000",
+        "terms": null
+      },
+      {
+        "clubOnly": true,
+        "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2 ב 18-",
+        "discountRate": null,
+        "endsAt": "2026-11-29T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-10-05T00:00:00.000",
+        "terms": null
       }
     ]
   },
@@ -20131,246 +20131,246 @@
     ]
   },
   "yellow-100": {
-    "strawberry": [
+    "aussie-lemonade": [
       {
+        "clubOnly": false,
         "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2ב20",
         "discountRate": null,
-        "minQuantity": 2,
-        "maxQuantity": null,
-        "startsAt": "2026-10-05T00:00:00.000",
         "endsAt": "2026-11-29T23:59:00.000",
-        "terms": null,
-        "clubOnly": false
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-10-05T00:00:00.000",
+        "terms": null
       },
       {
+        "clubOnly": true,
         "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2 ב 18-",
         "discountRate": null,
-        "minQuantity": 2,
-        "maxQuantity": null,
-        "startsAt": "2026-10-05T00:00:00.000",
         "endsAt": "2026-11-29T23:59:00.000",
-        "terms": null,
-        "clubOnly": true
-      }
-    ],
-    "ultra-peachy-keen": [
-      {
-        "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2ב20",
-        "discountRate": null,
-        "minQuantity": 2,
         "maxQuantity": null,
-        "startsAt": "2026-10-05T00:00:00.000",
-        "endsAt": "2026-11-29T23:59:00.000",
-        "terms": null,
-        "clubOnly": false
-      },
-      {
-        "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2 ב 18-",
-        "discountRate": null,
         "minQuantity": 2,
-        "maxQuantity": null,
         "startsAt": "2026-10-05T00:00:00.000",
-        "endsAt": "2026-11-29T23:59:00.000",
-        "terms": null,
-        "clubOnly": true
-      }
-    ],
-    "original": [
-      {
-        "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2ב20",
-        "discountRate": null,
-        "minQuantity": 2,
-        "maxQuantity": null,
-        "startsAt": "2026-10-05T00:00:00.000",
-        "endsAt": "2026-11-29T23:59:00.000",
-        "terms": null,
-        "clubOnly": false
-      },
-      {
-        "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2 ב 18-",
-        "discountRate": null,
-        "minQuantity": 2,
-        "maxQuantity": null,
-        "startsAt": "2026-10-05T00:00:00.000",
-        "endsAt": "2026-11-29T23:59:00.000",
-        "terms": null,
-        "clubOnly": true
-      }
-    ],
-    "ultra": [
-      {
-        "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2ב20",
-        "discountRate": null,
-        "minQuantity": 2,
-        "maxQuantity": null,
-        "startsAt": "2026-10-05T00:00:00.000",
-        "endsAt": "2026-11-29T23:59:00.000",
-        "terms": null,
-        "clubOnly": false
-      },
-      {
-        "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2 ב 18-",
-        "discountRate": null,
-        "minQuantity": 2,
-        "maxQuantity": null,
-        "startsAt": "2026-10-05T00:00:00.000",
-        "endsAt": "2026-11-29T23:59:00.000",
-        "terms": null,
-        "clubOnly": true
-      }
-    ],
-    "mango-loco": [
-      {
-        "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2ב20",
-        "discountRate": null,
-        "minQuantity": 2,
-        "maxQuantity": null,
-        "startsAt": "2026-10-05T00:00:00.000",
-        "endsAt": "2026-11-29T23:59:00.000",
-        "terms": null,
-        "clubOnly": false
-      },
-      {
-        "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2 ב 18-",
-        "discountRate": null,
-        "minQuantity": 2,
-        "maxQuantity": null,
-        "startsAt": "2026-10-05T00:00:00.000",
-        "endsAt": "2026-11-29T23:59:00.000",
-        "terms": null,
-        "clubOnly": true
-      }
-    ],
-    "pipeline-punch": [
-      {
-        "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2ב20",
-        "discountRate": null,
-        "minQuantity": 2,
-        "maxQuantity": null,
-        "startsAt": "2026-10-05T00:00:00.000",
-        "endsAt": "2026-11-29T23:59:00.000",
-        "terms": null,
-        "clubOnly": false
-      },
-      {
-        "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2 ב 18-",
-        "discountRate": null,
-        "minQuantity": 2,
-        "maxQuantity": null,
-        "startsAt": "2026-10-05T00:00:00.000",
-        "endsAt": "2026-11-29T23:59:00.000",
-        "terms": null,
-        "clubOnly": true
-      }
-    ],
-    "ultra-paradise": [
-      {
-        "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2ב20",
-        "discountRate": null,
-        "minQuantity": 2,
-        "maxQuantity": null,
-        "startsAt": "2026-10-05T00:00:00.000",
-        "endsAt": "2026-11-29T23:59:00.000",
-        "terms": null,
-        "clubOnly": false
-      },
-      {
-        "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2 ב 18-",
-        "discountRate": null,
-        "minQuantity": 2,
-        "maxQuantity": null,
-        "startsAt": "2026-10-05T00:00:00.000",
-        "endsAt": "2026-11-29T23:59:00.000",
-        "terms": null,
-        "clubOnly": true
-      }
-    ],
-    "ultra-fiesta": [
-      {
-        "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2ב20",
-        "discountRate": null,
-        "minQuantity": 2,
-        "maxQuantity": null,
-        "startsAt": "2026-10-05T00:00:00.000",
-        "endsAt": "2026-11-29T23:59:00.000",
-        "terms": null,
-        "clubOnly": false
-      },
-      {
-        "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2 ב 18-",
-        "discountRate": null,
-        "minQuantity": 2,
-        "maxQuantity": null,
-        "startsAt": "2026-10-05T00:00:00.000",
-        "endsAt": "2026-11-29T23:59:00.000",
-        "terms": null,
-        "clubOnly": true
-      }
-    ],
-    "monarch": [
-      {
-        "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2ב20",
-        "discountRate": null,
-        "minQuantity": 2,
-        "maxQuantity": null,
-        "startsAt": "2026-10-05T00:00:00.000",
-        "endsAt": "2026-11-29T23:59:00.000",
-        "terms": null,
-        "clubOnly": false
-      },
-      {
-        "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2 ב 18-",
-        "discountRate": null,
-        "minQuantity": 2,
-        "maxQuantity": null,
-        "startsAt": "2026-10-05T00:00:00.000",
-        "endsAt": "2026-11-29T23:59:00.000",
-        "terms": null,
-        "clubOnly": true
+        "terms": null
       }
     ],
     "green-zero": [
       {
+        "clubOnly": false,
         "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2ב20",
         "discountRate": null,
-        "minQuantity": 2,
-        "maxQuantity": null,
-        "startsAt": "2026-10-05T00:00:00.000",
         "endsAt": "2026-11-29T23:59:00.000",
-        "terms": null,
-        "clubOnly": false
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-10-05T00:00:00.000",
+        "terms": null
       },
       {
+        "clubOnly": true,
         "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2 ב 18-",
         "discountRate": null,
-        "minQuantity": 2,
-        "maxQuantity": null,
-        "startsAt": "2026-10-05T00:00:00.000",
         "endsAt": "2026-11-29T23:59:00.000",
-        "terms": null,
-        "clubOnly": true
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-10-05T00:00:00.000",
+        "terms": null
       }
     ],
-    "aussie-lemonade": [
+    "mango-loco": [
       {
+        "clubOnly": false,
         "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2ב20",
         "discountRate": null,
-        "minQuantity": 2,
-        "maxQuantity": null,
-        "startsAt": "2026-10-05T00:00:00.000",
         "endsAt": "2026-11-29T23:59:00.000",
-        "terms": null,
-        "clubOnly": false
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-10-05T00:00:00.000",
+        "terms": null
       },
       {
+        "clubOnly": true,
         "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2 ב 18-",
         "discountRate": null,
-        "minQuantity": 2,
-        "maxQuantity": null,
-        "startsAt": "2026-10-05T00:00:00.000",
         "endsAt": "2026-11-29T23:59:00.000",
-        "terms": null,
-        "clubOnly": true
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-10-05T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "monarch": [
+      {
+        "clubOnly": false,
+        "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2ב20",
+        "discountRate": null,
+        "endsAt": "2026-11-29T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-10-05T00:00:00.000",
+        "terms": null
+      },
+      {
+        "clubOnly": true,
+        "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2 ב 18-",
+        "discountRate": null,
+        "endsAt": "2026-11-29T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-10-05T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "original": [
+      {
+        "clubOnly": false,
+        "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2ב20",
+        "discountRate": null,
+        "endsAt": "2026-11-29T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-10-05T00:00:00.000",
+        "terms": null
+      },
+      {
+        "clubOnly": true,
+        "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2 ב 18-",
+        "discountRate": null,
+        "endsAt": "2026-11-29T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-10-05T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "pipeline-punch": [
+      {
+        "clubOnly": false,
+        "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2ב20",
+        "discountRate": null,
+        "endsAt": "2026-11-29T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-10-05T00:00:00.000",
+        "terms": null
+      },
+      {
+        "clubOnly": true,
+        "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2 ב 18-",
+        "discountRate": null,
+        "endsAt": "2026-11-29T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-10-05T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "strawberry": [
+      {
+        "clubOnly": false,
+        "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2ב20",
+        "discountRate": null,
+        "endsAt": "2026-11-29T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-10-05T00:00:00.000",
+        "terms": null
+      },
+      {
+        "clubOnly": true,
+        "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2 ב 18-",
+        "discountRate": null,
+        "endsAt": "2026-11-29T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-10-05T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "ultra": [
+      {
+        "clubOnly": false,
+        "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2ב20",
+        "discountRate": null,
+        "endsAt": "2026-11-29T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-10-05T00:00:00.000",
+        "terms": null
+      },
+      {
+        "clubOnly": true,
+        "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2 ב 18-",
+        "discountRate": null,
+        "endsAt": "2026-11-29T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-10-05T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "ultra-fiesta": [
+      {
+        "clubOnly": false,
+        "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2ב20",
+        "discountRate": null,
+        "endsAt": "2026-11-29T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-10-05T00:00:00.000",
+        "terms": null
+      },
+      {
+        "clubOnly": true,
+        "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2 ב 18-",
+        "discountRate": null,
+        "endsAt": "2026-11-29T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-10-05T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "ultra-paradise": [
+      {
+        "clubOnly": false,
+        "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2ב20",
+        "discountRate": null,
+        "endsAt": "2026-11-29T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-10-05T00:00:00.000",
+        "terms": null
+      },
+      {
+        "clubOnly": true,
+        "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2 ב 18-",
+        "discountRate": null,
+        "endsAt": "2026-11-29T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-10-05T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "ultra-peachy-keen": [
+      {
+        "clubOnly": false,
+        "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2ב20",
+        "discountRate": null,
+        "endsAt": "2026-11-29T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-10-05T00:00:00.000",
+        "terms": null
+      },
+      {
+        "clubOnly": true,
+        "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2 ב 18-",
+        "discountRate": null,
+        "endsAt": "2026-11-29T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-10-05T00:00:00.000",
+        "terms": null
       }
     ]
   },
@@ -25255,246 +25255,246 @@
     ]
   },
   "yellow-242": {
-    "strawberry": [
+    "aussie-lemonade": [
       {
+        "clubOnly": false,
         "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2ב20",
         "discountRate": null,
-        "minQuantity": 2,
-        "maxQuantity": null,
-        "startsAt": "2026-10-05T00:00:00.000",
         "endsAt": "2026-11-29T23:59:00.000",
-        "terms": null,
-        "clubOnly": false
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-10-05T00:00:00.000",
+        "terms": null
       },
       {
+        "clubOnly": true,
         "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2 ב 18-",
         "discountRate": null,
-        "minQuantity": 2,
-        "maxQuantity": null,
-        "startsAt": "2026-10-05T00:00:00.000",
         "endsAt": "2026-11-29T23:59:00.000",
-        "terms": null,
-        "clubOnly": true
-      }
-    ],
-    "ultra-peachy-keen": [
-      {
-        "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2ב20",
-        "discountRate": null,
-        "minQuantity": 2,
         "maxQuantity": null,
-        "startsAt": "2026-10-05T00:00:00.000",
-        "endsAt": "2026-11-29T23:59:00.000",
-        "terms": null,
-        "clubOnly": false
-      },
-      {
-        "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2 ב 18-",
-        "discountRate": null,
         "minQuantity": 2,
-        "maxQuantity": null,
         "startsAt": "2026-10-05T00:00:00.000",
-        "endsAt": "2026-11-29T23:59:00.000",
-        "terms": null,
-        "clubOnly": true
-      }
-    ],
-    "original": [
-      {
-        "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2ב20",
-        "discountRate": null,
-        "minQuantity": 2,
-        "maxQuantity": null,
-        "startsAt": "2026-10-05T00:00:00.000",
-        "endsAt": "2026-11-29T23:59:00.000",
-        "terms": null,
-        "clubOnly": false
-      },
-      {
-        "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2 ב 18-",
-        "discountRate": null,
-        "minQuantity": 2,
-        "maxQuantity": null,
-        "startsAt": "2026-10-05T00:00:00.000",
-        "endsAt": "2026-11-29T23:59:00.000",
-        "terms": null,
-        "clubOnly": true
-      }
-    ],
-    "ultra": [
-      {
-        "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2ב20",
-        "discountRate": null,
-        "minQuantity": 2,
-        "maxQuantity": null,
-        "startsAt": "2026-10-05T00:00:00.000",
-        "endsAt": "2026-11-29T23:59:00.000",
-        "terms": null,
-        "clubOnly": false
-      },
-      {
-        "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2 ב 18-",
-        "discountRate": null,
-        "minQuantity": 2,
-        "maxQuantity": null,
-        "startsAt": "2026-10-05T00:00:00.000",
-        "endsAt": "2026-11-29T23:59:00.000",
-        "terms": null,
-        "clubOnly": true
-      }
-    ],
-    "mango-loco": [
-      {
-        "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2ב20",
-        "discountRate": null,
-        "minQuantity": 2,
-        "maxQuantity": null,
-        "startsAt": "2026-10-05T00:00:00.000",
-        "endsAt": "2026-11-29T23:59:00.000",
-        "terms": null,
-        "clubOnly": false
-      },
-      {
-        "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2 ב 18-",
-        "discountRate": null,
-        "minQuantity": 2,
-        "maxQuantity": null,
-        "startsAt": "2026-10-05T00:00:00.000",
-        "endsAt": "2026-11-29T23:59:00.000",
-        "terms": null,
-        "clubOnly": true
-      }
-    ],
-    "pipeline-punch": [
-      {
-        "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2ב20",
-        "discountRate": null,
-        "minQuantity": 2,
-        "maxQuantity": null,
-        "startsAt": "2026-10-05T00:00:00.000",
-        "endsAt": "2026-11-29T23:59:00.000",
-        "terms": null,
-        "clubOnly": false
-      },
-      {
-        "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2 ב 18-",
-        "discountRate": null,
-        "minQuantity": 2,
-        "maxQuantity": null,
-        "startsAt": "2026-10-05T00:00:00.000",
-        "endsAt": "2026-11-29T23:59:00.000",
-        "terms": null,
-        "clubOnly": true
-      }
-    ],
-    "ultra-paradise": [
-      {
-        "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2ב20",
-        "discountRate": null,
-        "minQuantity": 2,
-        "maxQuantity": null,
-        "startsAt": "2026-10-05T00:00:00.000",
-        "endsAt": "2026-11-29T23:59:00.000",
-        "terms": null,
-        "clubOnly": false
-      },
-      {
-        "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2 ב 18-",
-        "discountRate": null,
-        "minQuantity": 2,
-        "maxQuantity": null,
-        "startsAt": "2026-10-05T00:00:00.000",
-        "endsAt": "2026-11-29T23:59:00.000",
-        "terms": null,
-        "clubOnly": true
-      }
-    ],
-    "ultra-fiesta": [
-      {
-        "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2ב20",
-        "discountRate": null,
-        "minQuantity": 2,
-        "maxQuantity": null,
-        "startsAt": "2026-10-05T00:00:00.000",
-        "endsAt": "2026-11-29T23:59:00.000",
-        "terms": null,
-        "clubOnly": false
-      },
-      {
-        "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2 ב 18-",
-        "discountRate": null,
-        "minQuantity": 2,
-        "maxQuantity": null,
-        "startsAt": "2026-10-05T00:00:00.000",
-        "endsAt": "2026-11-29T23:59:00.000",
-        "terms": null,
-        "clubOnly": true
-      }
-    ],
-    "monarch": [
-      {
-        "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2ב20",
-        "discountRate": null,
-        "minQuantity": 2,
-        "maxQuantity": null,
-        "startsAt": "2026-10-05T00:00:00.000",
-        "endsAt": "2026-11-29T23:59:00.000",
-        "terms": null,
-        "clubOnly": false
-      },
-      {
-        "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2 ב 18-",
-        "discountRate": null,
-        "minQuantity": 2,
-        "maxQuantity": null,
-        "startsAt": "2026-10-05T00:00:00.000",
-        "endsAt": "2026-11-29T23:59:00.000",
-        "terms": null,
-        "clubOnly": true
+        "terms": null
       }
     ],
     "green-zero": [
       {
+        "clubOnly": false,
         "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2ב20",
         "discountRate": null,
-        "minQuantity": 2,
-        "maxQuantity": null,
-        "startsAt": "2026-10-05T00:00:00.000",
         "endsAt": "2026-11-29T23:59:00.000",
-        "terms": null,
-        "clubOnly": false
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-10-05T00:00:00.000",
+        "terms": null
       },
       {
+        "clubOnly": true,
         "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2 ב 18-",
         "discountRate": null,
-        "minQuantity": 2,
-        "maxQuantity": null,
-        "startsAt": "2026-10-05T00:00:00.000",
         "endsAt": "2026-11-29T23:59:00.000",
-        "terms": null,
-        "clubOnly": true
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-10-05T00:00:00.000",
+        "terms": null
       }
     ],
-    "aussie-lemonade": [
+    "mango-loco": [
       {
+        "clubOnly": false,
         "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2ב20",
         "discountRate": null,
-        "minQuantity": 2,
-        "maxQuantity": null,
-        "startsAt": "2026-10-05T00:00:00.000",
         "endsAt": "2026-11-29T23:59:00.000",
-        "terms": null,
-        "clubOnly": false
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-10-05T00:00:00.000",
+        "terms": null
       },
       {
+        "clubOnly": true,
         "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2 ב 18-",
         "discountRate": null,
-        "minQuantity": 2,
-        "maxQuantity": null,
-        "startsAt": "2026-10-05T00:00:00.000",
         "endsAt": "2026-11-29T23:59:00.000",
-        "terms": null,
-        "clubOnly": true
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-10-05T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "monarch": [
+      {
+        "clubOnly": false,
+        "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2ב20",
+        "discountRate": null,
+        "endsAt": "2026-11-29T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-10-05T00:00:00.000",
+        "terms": null
+      },
+      {
+        "clubOnly": true,
+        "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2 ב 18-",
+        "discountRate": null,
+        "endsAt": "2026-11-29T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-10-05T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "original": [
+      {
+        "clubOnly": false,
+        "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2ב20",
+        "discountRate": null,
+        "endsAt": "2026-11-29T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-10-05T00:00:00.000",
+        "terms": null
+      },
+      {
+        "clubOnly": true,
+        "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2 ב 18-",
+        "discountRate": null,
+        "endsAt": "2026-11-29T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-10-05T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "pipeline-punch": [
+      {
+        "clubOnly": false,
+        "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2ב20",
+        "discountRate": null,
+        "endsAt": "2026-11-29T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-10-05T00:00:00.000",
+        "terms": null
+      },
+      {
+        "clubOnly": true,
+        "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2 ב 18-",
+        "discountRate": null,
+        "endsAt": "2026-11-29T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-10-05T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "strawberry": [
+      {
+        "clubOnly": false,
+        "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2ב20",
+        "discountRate": null,
+        "endsAt": "2026-11-29T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-10-05T00:00:00.000",
+        "terms": null
+      },
+      {
+        "clubOnly": true,
+        "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2 ב 18-",
+        "discountRate": null,
+        "endsAt": "2026-11-29T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-10-05T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "ultra": [
+      {
+        "clubOnly": false,
+        "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2ב20",
+        "discountRate": null,
+        "endsAt": "2026-11-29T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-10-05T00:00:00.000",
+        "terms": null
+      },
+      {
+        "clubOnly": true,
+        "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2 ב 18-",
+        "discountRate": null,
+        "endsAt": "2026-11-29T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-10-05T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "ultra-fiesta": [
+      {
+        "clubOnly": false,
+        "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2ב20",
+        "discountRate": null,
+        "endsAt": "2026-11-29T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-10-05T00:00:00.000",
+        "terms": null
+      },
+      {
+        "clubOnly": true,
+        "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2 ב 18-",
+        "discountRate": null,
+        "endsAt": "2026-11-29T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-10-05T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "ultra-paradise": [
+      {
+        "clubOnly": false,
+        "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2ב20",
+        "discountRate": null,
+        "endsAt": "2026-11-29T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-10-05T00:00:00.000",
+        "terms": null
+      },
+      {
+        "clubOnly": true,
+        "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2 ב 18-",
+        "discountRate": null,
+        "endsAt": "2026-11-29T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-10-05T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "ultra-peachy-keen": [
+      {
+        "clubOnly": false,
+        "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2ב20",
+        "discountRate": null,
+        "endsAt": "2026-11-29T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-10-05T00:00:00.000",
+        "terms": null
+      },
+      {
+        "clubOnly": true,
+        "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2 ב 18-",
+        "discountRate": null,
+        "endsAt": "2026-11-29T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-10-05T00:00:00.000",
+        "terms": null
       }
     ]
   },
@@ -33551,246 +33551,246 @@
     ]
   },
   "yellow-208": {
-    "strawberry": [
+    "aussie-lemonade": [
       {
+        "clubOnly": false,
         "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2ב20",
         "discountRate": null,
-        "minQuantity": 2,
-        "maxQuantity": null,
-        "startsAt": "2026-10-05T00:00:00.000",
         "endsAt": "2026-11-29T23:59:00.000",
-        "terms": null,
-        "clubOnly": false
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-10-05T00:00:00.000",
+        "terms": null
       },
       {
+        "clubOnly": true,
         "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2 ב 18-",
         "discountRate": null,
-        "minQuantity": 2,
-        "maxQuantity": null,
-        "startsAt": "2026-10-05T00:00:00.000",
         "endsAt": "2026-11-29T23:59:00.000",
-        "terms": null,
-        "clubOnly": true
-      }
-    ],
-    "ultra-peachy-keen": [
-      {
-        "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2ב20",
-        "discountRate": null,
-        "minQuantity": 2,
         "maxQuantity": null,
-        "startsAt": "2026-10-05T00:00:00.000",
-        "endsAt": "2026-11-29T23:59:00.000",
-        "terms": null,
-        "clubOnly": false
-      },
-      {
-        "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2 ב 18-",
-        "discountRate": null,
         "minQuantity": 2,
-        "maxQuantity": null,
         "startsAt": "2026-10-05T00:00:00.000",
-        "endsAt": "2026-11-29T23:59:00.000",
-        "terms": null,
-        "clubOnly": true
-      }
-    ],
-    "original": [
-      {
-        "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2ב20",
-        "discountRate": null,
-        "minQuantity": 2,
-        "maxQuantity": null,
-        "startsAt": "2026-10-05T00:00:00.000",
-        "endsAt": "2026-11-29T23:59:00.000",
-        "terms": null,
-        "clubOnly": false
-      },
-      {
-        "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2 ב 18-",
-        "discountRate": null,
-        "minQuantity": 2,
-        "maxQuantity": null,
-        "startsAt": "2026-10-05T00:00:00.000",
-        "endsAt": "2026-11-29T23:59:00.000",
-        "terms": null,
-        "clubOnly": true
-      }
-    ],
-    "ultra": [
-      {
-        "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2ב20",
-        "discountRate": null,
-        "minQuantity": 2,
-        "maxQuantity": null,
-        "startsAt": "2026-10-05T00:00:00.000",
-        "endsAt": "2026-11-29T23:59:00.000",
-        "terms": null,
-        "clubOnly": false
-      },
-      {
-        "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2 ב 18-",
-        "discountRate": null,
-        "minQuantity": 2,
-        "maxQuantity": null,
-        "startsAt": "2026-10-05T00:00:00.000",
-        "endsAt": "2026-11-29T23:59:00.000",
-        "terms": null,
-        "clubOnly": true
-      }
-    ],
-    "mango-loco": [
-      {
-        "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2ב20",
-        "discountRate": null,
-        "minQuantity": 2,
-        "maxQuantity": null,
-        "startsAt": "2026-10-05T00:00:00.000",
-        "endsAt": "2026-11-29T23:59:00.000",
-        "terms": null,
-        "clubOnly": false
-      },
-      {
-        "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2 ב 18-",
-        "discountRate": null,
-        "minQuantity": 2,
-        "maxQuantity": null,
-        "startsAt": "2026-10-05T00:00:00.000",
-        "endsAt": "2026-11-29T23:59:00.000",
-        "terms": null,
-        "clubOnly": true
-      }
-    ],
-    "pipeline-punch": [
-      {
-        "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2ב20",
-        "discountRate": null,
-        "minQuantity": 2,
-        "maxQuantity": null,
-        "startsAt": "2026-10-05T00:00:00.000",
-        "endsAt": "2026-11-29T23:59:00.000",
-        "terms": null,
-        "clubOnly": false
-      },
-      {
-        "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2 ב 18-",
-        "discountRate": null,
-        "minQuantity": 2,
-        "maxQuantity": null,
-        "startsAt": "2026-10-05T00:00:00.000",
-        "endsAt": "2026-11-29T23:59:00.000",
-        "terms": null,
-        "clubOnly": true
-      }
-    ],
-    "ultra-paradise": [
-      {
-        "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2ב20",
-        "discountRate": null,
-        "minQuantity": 2,
-        "maxQuantity": null,
-        "startsAt": "2026-10-05T00:00:00.000",
-        "endsAt": "2026-11-29T23:59:00.000",
-        "terms": null,
-        "clubOnly": false
-      },
-      {
-        "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2 ב 18-",
-        "discountRate": null,
-        "minQuantity": 2,
-        "maxQuantity": null,
-        "startsAt": "2026-10-05T00:00:00.000",
-        "endsAt": "2026-11-29T23:59:00.000",
-        "terms": null,
-        "clubOnly": true
-      }
-    ],
-    "ultra-fiesta": [
-      {
-        "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2ב20",
-        "discountRate": null,
-        "minQuantity": 2,
-        "maxQuantity": null,
-        "startsAt": "2026-10-05T00:00:00.000",
-        "endsAt": "2026-11-29T23:59:00.000",
-        "terms": null,
-        "clubOnly": false
-      },
-      {
-        "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2 ב 18-",
-        "discountRate": null,
-        "minQuantity": 2,
-        "maxQuantity": null,
-        "startsAt": "2026-10-05T00:00:00.000",
-        "endsAt": "2026-11-29T23:59:00.000",
-        "terms": null,
-        "clubOnly": true
-      }
-    ],
-    "monarch": [
-      {
-        "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2ב20",
-        "discountRate": null,
-        "minQuantity": 2,
-        "maxQuantity": null,
-        "startsAt": "2026-10-05T00:00:00.000",
-        "endsAt": "2026-11-29T23:59:00.000",
-        "terms": null,
-        "clubOnly": false
-      },
-      {
-        "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2 ב 18-",
-        "discountRate": null,
-        "minQuantity": 2,
-        "maxQuantity": null,
-        "startsAt": "2026-10-05T00:00:00.000",
-        "endsAt": "2026-11-29T23:59:00.000",
-        "terms": null,
-        "clubOnly": true
+        "terms": null
       }
     ],
     "green-zero": [
       {
+        "clubOnly": false,
         "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2ב20",
         "discountRate": null,
-        "minQuantity": 2,
-        "maxQuantity": null,
-        "startsAt": "2026-10-05T00:00:00.000",
         "endsAt": "2026-11-29T23:59:00.000",
-        "terms": null,
-        "clubOnly": false
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-10-05T00:00:00.000",
+        "terms": null
       },
       {
+        "clubOnly": true,
         "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2 ב 18-",
         "discountRate": null,
-        "minQuantity": 2,
-        "maxQuantity": null,
-        "startsAt": "2026-10-05T00:00:00.000",
         "endsAt": "2026-11-29T23:59:00.000",
-        "terms": null,
-        "clubOnly": true
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-10-05T00:00:00.000",
+        "terms": null
       }
     ],
-    "aussie-lemonade": [
+    "mango-loco": [
       {
+        "clubOnly": false,
         "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2ב20",
         "discountRate": null,
-        "minQuantity": 2,
-        "maxQuantity": null,
-        "startsAt": "2026-10-05T00:00:00.000",
         "endsAt": "2026-11-29T23:59:00.000",
-        "terms": null,
-        "clubOnly": false
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-10-05T00:00:00.000",
+        "terms": null
       },
       {
+        "clubOnly": true,
         "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2 ב 18-",
         "discountRate": null,
-        "minQuantity": 2,
-        "maxQuantity": null,
-        "startsAt": "2026-10-05T00:00:00.000",
         "endsAt": "2026-11-29T23:59:00.000",
-        "terms": null,
-        "clubOnly": true
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-10-05T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "monarch": [
+      {
+        "clubOnly": false,
+        "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2ב20",
+        "discountRate": null,
+        "endsAt": "2026-11-29T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-10-05T00:00:00.000",
+        "terms": null
+      },
+      {
+        "clubOnly": true,
+        "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2 ב 18-",
+        "discountRate": null,
+        "endsAt": "2026-11-29T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-10-05T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "original": [
+      {
+        "clubOnly": false,
+        "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2ב20",
+        "discountRate": null,
+        "endsAt": "2026-11-29T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-10-05T00:00:00.000",
+        "terms": null
+      },
+      {
+        "clubOnly": true,
+        "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2 ב 18-",
+        "discountRate": null,
+        "endsAt": "2026-11-29T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-10-05T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "pipeline-punch": [
+      {
+        "clubOnly": false,
+        "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2ב20",
+        "discountRate": null,
+        "endsAt": "2026-11-29T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-10-05T00:00:00.000",
+        "terms": null
+      },
+      {
+        "clubOnly": true,
+        "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2 ב 18-",
+        "discountRate": null,
+        "endsAt": "2026-11-29T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-10-05T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "strawberry": [
+      {
+        "clubOnly": false,
+        "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2ב20",
+        "discountRate": null,
+        "endsAt": "2026-11-29T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-10-05T00:00:00.000",
+        "terms": null
+      },
+      {
+        "clubOnly": true,
+        "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2 ב 18-",
+        "discountRate": null,
+        "endsAt": "2026-11-29T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-10-05T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "ultra": [
+      {
+        "clubOnly": false,
+        "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2ב20",
+        "discountRate": null,
+        "endsAt": "2026-11-29T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-10-05T00:00:00.000",
+        "terms": null
+      },
+      {
+        "clubOnly": true,
+        "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2 ב 18-",
+        "discountRate": null,
+        "endsAt": "2026-11-29T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-10-05T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "ultra-fiesta": [
+      {
+        "clubOnly": false,
+        "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2ב20",
+        "discountRate": null,
+        "endsAt": "2026-11-29T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-10-05T00:00:00.000",
+        "terms": null
+      },
+      {
+        "clubOnly": true,
+        "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2 ב 18-",
+        "discountRate": null,
+        "endsAt": "2026-11-29T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-10-05T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "ultra-paradise": [
+      {
+        "clubOnly": false,
+        "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2ב20",
+        "discountRate": null,
+        "endsAt": "2026-11-29T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-10-05T00:00:00.000",
+        "terms": null
+      },
+      {
+        "clubOnly": true,
+        "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2 ב 18-",
+        "discountRate": null,
+        "endsAt": "2026-11-29T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-10-05T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "ultra-peachy-keen": [
+      {
+        "clubOnly": false,
+        "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2ב20",
+        "discountRate": null,
+        "endsAt": "2026-11-29T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-10-05T00:00:00.000",
+        "terms": null
+      },
+      {
+        "clubOnly": true,
+        "description": "מונסטר משקה אנרגיה פחית 500 מ ל 2 ב 18-",
+        "discountRate": null,
+        "endsAt": "2026-11-29T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-10-05T00:00:00.000",
+        "terms": null
       }
     ]
   },
@@ -49853,124 +49853,124 @@
     ]
   },
   "dor_alon-563": {
-    "strawberry": [
+    "green-zero": [
       {
+        "clubOnly": false,
         "description": "מבצע משקה אנרגיה מונסטר 2 ב 16.90 שח",
         "discountRate": 17.16,
-        "minQuantity": 2,
-        "maxQuantity": null,
-        "startsAt": "2026-10-05T00:00:00.000",
         "endsAt": "2026-11-09T23:59:00.000",
-        "terms": null,
-        "clubOnly": false
-      }
-    ],
-    "ultra-peachy-keen": [
-      {
-        "description": "מבצע משקה אנרגיה מונסטר 2 ב 16.90 שח",
-        "discountRate": 17.16,
-        "minQuantity": 2,
         "maxQuantity": null,
-        "startsAt": "2026-10-05T00:00:00.000",
-        "endsAt": "2026-11-09T23:59:00.000",
-        "terms": null,
-        "clubOnly": false
-      }
-    ],
-    "original": [
-      {
-        "description": "מבצע משקה אנרגיה מונסטר 2 ב 16.90 שח",
-        "discountRate": 17.16,
         "minQuantity": 2,
-        "maxQuantity": null,
         "startsAt": "2026-10-05T00:00:00.000",
-        "endsAt": "2026-11-09T23:59:00.000",
-        "terms": null,
-        "clubOnly": false
-      }
-    ],
-    "ultra": [
-      {
-        "description": "מבצע משקה אנרגיה מונסטר 2 ב 16.90 שח",
-        "discountRate": 17.16,
-        "minQuantity": 2,
-        "maxQuantity": null,
-        "startsAt": "2026-10-05T00:00:00.000",
-        "endsAt": "2026-11-09T23:59:00.000",
-        "terms": null,
-        "clubOnly": false
+        "terms": null
       }
     ],
     "mango-loco": [
       {
+        "clubOnly": false,
         "description": "מבצע משקה אנרגיה מונסטר 2 ב 16.90 שח",
         "discountRate": 17.16,
-        "minQuantity": 2,
-        "maxQuantity": null,
-        "startsAt": "2026-10-05T00:00:00.000",
         "endsAt": "2026-11-09T23:59:00.000",
-        "terms": null,
-        "clubOnly": false
-      }
-    ],
-    "pipeline-punch": [
-      {
-        "description": "מבצע משקה אנרגיה מונסטר 2 ב 16.90 שח",
-        "discountRate": 17.16,
-        "minQuantity": 2,
         "maxQuantity": null,
-        "startsAt": "2026-10-05T00:00:00.000",
-        "endsAt": "2026-11-09T23:59:00.000",
-        "terms": null,
-        "clubOnly": false
-      }
-    ],
-    "ultra-paradise": [
-      {
-        "description": "מבצע משקה אנרגיה מונסטר 2 ב 16.90 שח",
-        "discountRate": 17.16,
         "minQuantity": 2,
-        "maxQuantity": null,
         "startsAt": "2026-10-05T00:00:00.000",
-        "endsAt": "2026-11-09T23:59:00.000",
-        "terms": null,
-        "clubOnly": false
-      }
-    ],
-    "ultra-fiesta": [
-      {
-        "description": "מבצע משקה אנרגיה מונסטר 2 ב 16.90 שח",
-        "discountRate": 17.16,
-        "minQuantity": 2,
-        "maxQuantity": null,
-        "startsAt": "2026-10-05T00:00:00.000",
-        "endsAt": "2026-11-09T23:59:00.000",
-        "terms": null,
-        "clubOnly": false
+        "terms": null
       }
     ],
     "monarch": [
       {
+        "clubOnly": false,
         "description": "מבצע משקה אנרגיה מונסטר 2 ב 16.90 שח",
         "discountRate": 17.16,
-        "minQuantity": 2,
-        "maxQuantity": null,
-        "startsAt": "2026-10-05T00:00:00.000",
         "endsAt": "2026-11-09T23:59:00.000",
-        "terms": null,
-        "clubOnly": false
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-10-05T00:00:00.000",
+        "terms": null
       }
     ],
-    "green-zero": [
+    "original": [
       {
+        "clubOnly": false,
         "description": "מבצע משקה אנרגיה מונסטר 2 ב 16.90 שח",
         "discountRate": 17.16,
-        "minQuantity": 2,
-        "maxQuantity": null,
-        "startsAt": "2026-10-05T00:00:00.000",
         "endsAt": "2026-11-09T23:59:00.000",
-        "terms": null,
-        "clubOnly": false
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-10-05T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "pipeline-punch": [
+      {
+        "clubOnly": false,
+        "description": "מבצע משקה אנרגיה מונסטר 2 ב 16.90 שח",
+        "discountRate": 17.16,
+        "endsAt": "2026-11-09T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-10-05T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "strawberry": [
+      {
+        "clubOnly": false,
+        "description": "מבצע משקה אנרגיה מונסטר 2 ב 16.90 שח",
+        "discountRate": 17.16,
+        "endsAt": "2026-11-09T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-10-05T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "ultra": [
+      {
+        "clubOnly": false,
+        "description": "מבצע משקה אנרגיה מונסטר 2 ב 16.90 שח",
+        "discountRate": 17.16,
+        "endsAt": "2026-11-09T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-10-05T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "ultra-fiesta": [
+      {
+        "clubOnly": false,
+        "description": "מבצע משקה אנרגיה מונסטר 2 ב 16.90 שח",
+        "discountRate": 17.16,
+        "endsAt": "2026-11-09T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-10-05T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "ultra-paradise": [
+      {
+        "clubOnly": false,
+        "description": "מבצע משקה אנרגיה מונסטר 2 ב 16.90 שח",
+        "discountRate": 17.16,
+        "endsAt": "2026-11-09T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-10-05T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "ultra-peachy-keen": [
+      {
+        "clubOnly": false,
+        "description": "מבצע משקה אנרגיה מונסטר 2 ב 16.90 שח",
+        "discountRate": 17.16,
+        "endsAt": "2026-11-09T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-10-05T00:00:00.000",
+        "terms": null
       }
     ]
   },
@@ -51099,124 +51099,124 @@
     ]
   },
   "dor_alon-401": {
-    "strawberry": [
+    "green-zero": [
       {
+        "clubOnly": false,
         "description": "מבצע משקה אנרגיה מונסטר 2 ב 16.90 שח",
         "discountRate": 17.16,
-        "minQuantity": 2,
-        "maxQuantity": null,
-        "startsAt": "2026-10-05T00:00:00.000",
         "endsAt": "2026-11-09T23:59:00.000",
-        "terms": null,
-        "clubOnly": false
-      }
-    ],
-    "ultra-peachy-keen": [
-      {
-        "description": "מבצע משקה אנרגיה מונסטר 2 ב 16.90 שח",
-        "discountRate": 17.16,
-        "minQuantity": 2,
         "maxQuantity": null,
-        "startsAt": "2026-10-05T00:00:00.000",
-        "endsAt": "2026-11-09T23:59:00.000",
-        "terms": null,
-        "clubOnly": false
-      }
-    ],
-    "original": [
-      {
-        "description": "מבצע משקה אנרגיה מונסטר 2 ב 16.90 שח",
-        "discountRate": 17.16,
         "minQuantity": 2,
-        "maxQuantity": null,
         "startsAt": "2026-10-05T00:00:00.000",
-        "endsAt": "2026-11-09T23:59:00.000",
-        "terms": null,
-        "clubOnly": false
-      }
-    ],
-    "ultra": [
-      {
-        "description": "מבצע משקה אנרגיה מונסטר 2 ב 16.90 שח",
-        "discountRate": 17.16,
-        "minQuantity": 2,
-        "maxQuantity": null,
-        "startsAt": "2026-10-05T00:00:00.000",
-        "endsAt": "2026-11-09T23:59:00.000",
-        "terms": null,
-        "clubOnly": false
+        "terms": null
       }
     ],
     "mango-loco": [
       {
+        "clubOnly": false,
         "description": "מבצע משקה אנרגיה מונסטר 2 ב 16.90 שח",
         "discountRate": 17.16,
-        "minQuantity": 2,
-        "maxQuantity": null,
-        "startsAt": "2026-10-05T00:00:00.000",
         "endsAt": "2026-11-09T23:59:00.000",
-        "terms": null,
-        "clubOnly": false
-      }
-    ],
-    "pipeline-punch": [
-      {
-        "description": "מבצע משקה אנרגיה מונסטר 2 ב 16.90 שח",
-        "discountRate": 17.16,
-        "minQuantity": 2,
         "maxQuantity": null,
-        "startsAt": "2026-10-05T00:00:00.000",
-        "endsAt": "2026-11-09T23:59:00.000",
-        "terms": null,
-        "clubOnly": false
-      }
-    ],
-    "ultra-paradise": [
-      {
-        "description": "מבצע משקה אנרגיה מונסטר 2 ב 16.90 שח",
-        "discountRate": 17.16,
         "minQuantity": 2,
-        "maxQuantity": null,
         "startsAt": "2026-10-05T00:00:00.000",
-        "endsAt": "2026-11-09T23:59:00.000",
-        "terms": null,
-        "clubOnly": false
-      }
-    ],
-    "ultra-fiesta": [
-      {
-        "description": "מבצע משקה אנרגיה מונסטר 2 ב 16.90 שח",
-        "discountRate": 17.16,
-        "minQuantity": 2,
-        "maxQuantity": null,
-        "startsAt": "2026-10-05T00:00:00.000",
-        "endsAt": "2026-11-09T23:59:00.000",
-        "terms": null,
-        "clubOnly": false
+        "terms": null
       }
     ],
     "monarch": [
       {
+        "clubOnly": false,
         "description": "מבצע משקה אנרגיה מונסטר 2 ב 16.90 שח",
         "discountRate": 17.16,
-        "minQuantity": 2,
-        "maxQuantity": null,
-        "startsAt": "2026-10-05T00:00:00.000",
         "endsAt": "2026-11-09T23:59:00.000",
-        "terms": null,
-        "clubOnly": false
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-10-05T00:00:00.000",
+        "terms": null
       }
     ],
-    "green-zero": [
+    "original": [
       {
+        "clubOnly": false,
         "description": "מבצע משקה אנרגיה מונסטר 2 ב 16.90 שח",
         "discountRate": 17.16,
-        "minQuantity": 2,
-        "maxQuantity": null,
-        "startsAt": "2026-10-05T00:00:00.000",
         "endsAt": "2026-11-09T23:59:00.000",
-        "terms": null,
-        "clubOnly": false
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-10-05T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "pipeline-punch": [
+      {
+        "clubOnly": false,
+        "description": "מבצע משקה אנרגיה מונסטר 2 ב 16.90 שח",
+        "discountRate": 17.16,
+        "endsAt": "2026-11-09T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-10-05T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "strawberry": [
+      {
+        "clubOnly": false,
+        "description": "מבצע משקה אנרגיה מונסטר 2 ב 16.90 שח",
+        "discountRate": 17.16,
+        "endsAt": "2026-11-09T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-10-05T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "ultra": [
+      {
+        "clubOnly": false,
+        "description": "מבצע משקה אנרגיה מונסטר 2 ב 16.90 שח",
+        "discountRate": 17.16,
+        "endsAt": "2026-11-09T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-10-05T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "ultra-fiesta": [
+      {
+        "clubOnly": false,
+        "description": "מבצע משקה אנרגיה מונסטר 2 ב 16.90 שח",
+        "discountRate": 17.16,
+        "endsAt": "2026-11-09T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-10-05T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "ultra-paradise": [
+      {
+        "clubOnly": false,
+        "description": "מבצע משקה אנרגיה מונסטר 2 ב 16.90 שח",
+        "discountRate": 17.16,
+        "endsAt": "2026-11-09T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-10-05T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "ultra-peachy-keen": [
+      {
+        "clubOnly": false,
+        "description": "מבצע משקה אנרגיה מונסטר 2 ב 16.90 שח",
+        "discountRate": 17.16,
+        "endsAt": "2026-11-09T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-10-05T00:00:00.000",
+        "terms": null
       }
     ]
   },
@@ -51417,124 +51417,124 @@
     ]
   },
   "dor_alon-517": {
-    "strawberry": [
+    "green-zero": [
       {
+        "clubOnly": false,
         "description": "מבצע משקה אנרגיה מונסטר 2 ב 16.90 שח",
         "discountRate": 17.16,
-        "minQuantity": 2,
-        "maxQuantity": null,
-        "startsAt": "2026-10-05T00:00:00.000",
         "endsAt": "2026-11-09T23:59:00.000",
-        "terms": null,
-        "clubOnly": false
-      }
-    ],
-    "ultra-peachy-keen": [
-      {
-        "description": "מבצע משקה אנרגיה מונסטר 2 ב 16.90 שח",
-        "discountRate": 17.16,
-        "minQuantity": 2,
         "maxQuantity": null,
-        "startsAt": "2026-10-05T00:00:00.000",
-        "endsAt": "2026-11-09T23:59:00.000",
-        "terms": null,
-        "clubOnly": false
-      }
-    ],
-    "original": [
-      {
-        "description": "מבצע משקה אנרגיה מונסטר 2 ב 16.90 שח",
-        "discountRate": 17.16,
         "minQuantity": 2,
-        "maxQuantity": null,
         "startsAt": "2026-10-05T00:00:00.000",
-        "endsAt": "2026-11-09T23:59:00.000",
-        "terms": null,
-        "clubOnly": false
-      }
-    ],
-    "ultra": [
-      {
-        "description": "מבצע משקה אנרגיה מונסטר 2 ב 16.90 שח",
-        "discountRate": 17.16,
-        "minQuantity": 2,
-        "maxQuantity": null,
-        "startsAt": "2026-10-05T00:00:00.000",
-        "endsAt": "2026-11-09T23:59:00.000",
-        "terms": null,
-        "clubOnly": false
+        "terms": null
       }
     ],
     "mango-loco": [
       {
+        "clubOnly": false,
         "description": "מבצע משקה אנרגיה מונסטר 2 ב 16.90 שח",
         "discountRate": 17.16,
-        "minQuantity": 2,
-        "maxQuantity": null,
-        "startsAt": "2026-10-05T00:00:00.000",
         "endsAt": "2026-11-09T23:59:00.000",
-        "terms": null,
-        "clubOnly": false
-      }
-    ],
-    "pipeline-punch": [
-      {
-        "description": "מבצע משקה אנרגיה מונסטר 2 ב 16.90 שח",
-        "discountRate": 17.16,
-        "minQuantity": 2,
         "maxQuantity": null,
-        "startsAt": "2026-10-05T00:00:00.000",
-        "endsAt": "2026-11-09T23:59:00.000",
-        "terms": null,
-        "clubOnly": false
-      }
-    ],
-    "ultra-paradise": [
-      {
-        "description": "מבצע משקה אנרגיה מונסטר 2 ב 16.90 שח",
-        "discountRate": 17.16,
         "minQuantity": 2,
-        "maxQuantity": null,
         "startsAt": "2026-10-05T00:00:00.000",
-        "endsAt": "2026-11-09T23:59:00.000",
-        "terms": null,
-        "clubOnly": false
-      }
-    ],
-    "ultra-fiesta": [
-      {
-        "description": "מבצע משקה אנרגיה מונסטר 2 ב 16.90 שח",
-        "discountRate": 17.16,
-        "minQuantity": 2,
-        "maxQuantity": null,
-        "startsAt": "2026-10-05T00:00:00.000",
-        "endsAt": "2026-11-09T23:59:00.000",
-        "terms": null,
-        "clubOnly": false
+        "terms": null
       }
     ],
     "monarch": [
       {
+        "clubOnly": false,
         "description": "מבצע משקה אנרגיה מונסטר 2 ב 16.90 שח",
         "discountRate": 17.16,
-        "minQuantity": 2,
-        "maxQuantity": null,
-        "startsAt": "2026-10-05T00:00:00.000",
         "endsAt": "2026-11-09T23:59:00.000",
-        "terms": null,
-        "clubOnly": false
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-10-05T00:00:00.000",
+        "terms": null
       }
     ],
-    "green-zero": [
+    "original": [
       {
+        "clubOnly": false,
         "description": "מבצע משקה אנרגיה מונסטר 2 ב 16.90 שח",
         "discountRate": 17.16,
-        "minQuantity": 2,
-        "maxQuantity": null,
-        "startsAt": "2026-10-05T00:00:00.000",
         "endsAt": "2026-11-09T23:59:00.000",
-        "terms": null,
-        "clubOnly": false
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-10-05T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "pipeline-punch": [
+      {
+        "clubOnly": false,
+        "description": "מבצע משקה אנרגיה מונסטר 2 ב 16.90 שח",
+        "discountRate": 17.16,
+        "endsAt": "2026-11-09T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-10-05T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "strawberry": [
+      {
+        "clubOnly": false,
+        "description": "מבצע משקה אנרגיה מונסטר 2 ב 16.90 שח",
+        "discountRate": 17.16,
+        "endsAt": "2026-11-09T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-10-05T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "ultra": [
+      {
+        "clubOnly": false,
+        "description": "מבצע משקה אנרגיה מונסטר 2 ב 16.90 שח",
+        "discountRate": 17.16,
+        "endsAt": "2026-11-09T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-10-05T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "ultra-fiesta": [
+      {
+        "clubOnly": false,
+        "description": "מבצע משקה אנרגיה מונסטר 2 ב 16.90 שח",
+        "discountRate": 17.16,
+        "endsAt": "2026-11-09T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-10-05T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "ultra-paradise": [
+      {
+        "clubOnly": false,
+        "description": "מבצע משקה אנרגיה מונסטר 2 ב 16.90 שח",
+        "discountRate": 17.16,
+        "endsAt": "2026-11-09T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-10-05T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "ultra-peachy-keen": [
+      {
+        "clubOnly": false,
+        "description": "מבצע משקה אנרגיה מונסטר 2 ב 16.90 שח",
+        "discountRate": 17.16,
+        "endsAt": "2026-11-09T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-10-05T00:00:00.000",
+        "terms": null
       }
     ]
   },
@@ -53749,210 +53749,210 @@
     ]
   },
   "dor_alon-913": {
-    "strawberry": [
+    "green-zero": [
       {
+        "clubOnly": false,
         "description": "משקה מונסטר 500מ ל 2 ב 22",
         "discountRate": null,
-        "minQuantity": 2,
-        "maxQuantity": null,
-        "startsAt": "2026-10-05T00:00:00.000",
         "endsAt": "2026-11-09T23:59:00.000",
-        "terms": null,
-        "clubOnly": false
-      }
-    ],
-    "ultra-peachy-keen": [
-      {
-        "description": "משקה מונסטר 500מ ל 2 ב 22",
-        "discountRate": null,
-        "minQuantity": 2,
         "maxQuantity": null,
-        "startsAt": "2026-10-05T00:00:00.000",
-        "endsAt": "2026-11-09T23:59:00.000",
-        "terms": null,
-        "clubOnly": false
-      }
-    ],
-    "original": [
-      {
-        "description": "משקה מונסטר 500מ ל 2 ב 22",
-        "discountRate": null,
         "minQuantity": 2,
-        "maxQuantity": null,
         "startsAt": "2026-10-05T00:00:00.000",
-        "endsAt": "2026-11-09T23:59:00.000",
-        "terms": null,
-        "clubOnly": false
-      }
-    ],
-    "ultra": [
-      {
-        "description": "משקה מונסטר 500מ ל 2 ב 22",
-        "discountRate": null,
-        "minQuantity": 2,
-        "maxQuantity": null,
-        "startsAt": "2026-10-05T00:00:00.000",
-        "endsAt": "2026-11-09T23:59:00.000",
-        "terms": null,
-        "clubOnly": false
+        "terms": null
       }
     ],
     "mango-loco": [
       {
+        "clubOnly": false,
         "description": "משקה מונסטר 500מ ל 2 ב 22",
         "discountRate": null,
-        "minQuantity": 2,
-        "maxQuantity": null,
-        "startsAt": "2026-10-05T00:00:00.000",
         "endsAt": "2026-11-09T23:59:00.000",
-        "terms": null,
-        "clubOnly": false
-      }
-    ],
-    "ultra-paradise": [
-      {
-        "description": "משקה מונסטר 500מ ל 2 ב 22",
-        "discountRate": null,
-        "minQuantity": 2,
         "maxQuantity": null,
-        "startsAt": "2026-10-05T00:00:00.000",
-        "endsAt": "2026-11-09T23:59:00.000",
-        "terms": null,
-        "clubOnly": false
-      }
-    ],
-    "ultra-fiesta": [
-      {
-        "description": "משקה מונסטר 500מ ל 2 ב 22",
-        "discountRate": null,
         "minQuantity": 2,
-        "maxQuantity": null,
         "startsAt": "2026-10-05T00:00:00.000",
-        "endsAt": "2026-11-09T23:59:00.000",
-        "terms": null,
-        "clubOnly": false
+        "terms": null
       }
     ],
     "monarch": [
       {
+        "clubOnly": false,
         "description": "משקה מונסטר 500מ ל 2 ב 22",
         "discountRate": null,
-        "minQuantity": 2,
-        "maxQuantity": null,
-        "startsAt": "2026-10-05T00:00:00.000",
         "endsAt": "2026-11-09T23:59:00.000",
-        "terms": null,
-        "clubOnly": false
-      }
-    ],
-    "green-zero": [
-      {
-        "description": "משקה מונסטר 500מ ל 2 ב 22",
-        "discountRate": null,
-        "minQuantity": 2,
         "maxQuantity": null,
-        "startsAt": "2026-10-05T00:00:00.000",
-        "endsAt": "2026-11-09T23:59:00.000",
-        "terms": null,
-        "clubOnly": false
-      }
-    ]
-  },
-  "dor_alon-721": {
-    "strawberry": [
-      {
-        "description": "משקה אנרגיה מונסטר 500מ ל  2 ב 17.90",
-        "discountRate": 12.25,
         "minQuantity": 2,
-        "maxQuantity": null,
         "startsAt": "2026-10-05T00:00:00.000",
-        "endsAt": "2026-11-09T23:59:00.000",
-        "terms": null,
-        "clubOnly": false
-      }
-    ],
-    "ultra-peachy-keen": [
-      {
-        "description": "משקה אנרגיה מונסטר 500מ ל  2 ב 17.90",
-        "discountRate": 12.25,
-        "minQuantity": 2,
-        "maxQuantity": null,
-        "startsAt": "2026-10-05T00:00:00.000",
-        "endsAt": "2026-11-09T23:59:00.000",
-        "terms": null,
-        "clubOnly": false
+        "terms": null
       }
     ],
     "original": [
       {
-        "description": "משקה אנרגיה מונסטר 500מ ל  2 ב 17.90",
-        "discountRate": 12.25,
-        "minQuantity": 2,
-        "maxQuantity": null,
-        "startsAt": "2026-10-05T00:00:00.000",
+        "clubOnly": false,
+        "description": "משקה מונסטר 500מ ל 2 ב 22",
+        "discountRate": null,
         "endsAt": "2026-11-09T23:59:00.000",
-        "terms": null,
-        "clubOnly": false
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-10-05T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "strawberry": [
+      {
+        "clubOnly": false,
+        "description": "משקה מונסטר 500מ ל 2 ב 22",
+        "discountRate": null,
+        "endsAt": "2026-11-09T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-10-05T00:00:00.000",
+        "terms": null
       }
     ],
     "ultra": [
       {
-        "description": "משקה אנרגיה מונסטר 500מ ל  2 ב 17.90",
-        "discountRate": 12.25,
-        "minQuantity": 2,
-        "maxQuantity": null,
-        "startsAt": "2026-10-05T00:00:00.000",
+        "clubOnly": false,
+        "description": "משקה מונסטר 500מ ל 2 ב 22",
+        "discountRate": null,
         "endsAt": "2026-11-09T23:59:00.000",
-        "terms": null,
-        "clubOnly": false
-      }
-    ],
-    "mango-loco": [
-      {
-        "description": "משקה אנרגיה מונסטר 500מ ל  2 ב 17.90",
-        "discountRate": 12.25,
-        "minQuantity": 2,
         "maxQuantity": null,
-        "startsAt": "2026-10-05T00:00:00.000",
-        "endsAt": "2026-11-09T23:59:00.000",
-        "terms": null,
-        "clubOnly": false
-      }
-    ],
-    "ultra-paradise": [
-      {
-        "description": "משקה אנרגיה מונסטר 500מ ל  2 ב 17.90",
-        "discountRate": 12.25,
         "minQuantity": 2,
-        "maxQuantity": null,
         "startsAt": "2026-10-05T00:00:00.000",
-        "endsAt": "2026-11-09T23:59:00.000",
-        "terms": null,
-        "clubOnly": false
+        "terms": null
       }
     ],
     "ultra-fiesta": [
       {
-        "description": "משקה אנרגיה מונסטר 500מ ל  2 ב 17.90",
-        "discountRate": 12.25,
-        "minQuantity": 2,
-        "maxQuantity": null,
-        "startsAt": "2026-10-05T00:00:00.000",
+        "clubOnly": false,
+        "description": "משקה מונסטר 500מ ל 2 ב 22",
+        "discountRate": null,
         "endsAt": "2026-11-09T23:59:00.000",
-        "terms": null,
-        "clubOnly": false
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-10-05T00:00:00.000",
+        "terms": null
       }
     ],
+    "ultra-paradise": [
+      {
+        "clubOnly": false,
+        "description": "משקה מונסטר 500מ ל 2 ב 22",
+        "discountRate": null,
+        "endsAt": "2026-11-09T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-10-05T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "ultra-peachy-keen": [
+      {
+        "clubOnly": false,
+        "description": "משקה מונסטר 500מ ל 2 ב 22",
+        "discountRate": null,
+        "endsAt": "2026-11-09T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-10-05T00:00:00.000",
+        "terms": null
+      }
+    ]
+  },
+  "dor_alon-721": {
     "green-zero": [
       {
+        "clubOnly": false,
         "description": "משקה אנרגיה מונסטר 500מ ל  2 ב 17.90",
         "discountRate": 12.25,
-        "minQuantity": 2,
-        "maxQuantity": null,
-        "startsAt": "2026-10-05T00:00:00.000",
         "endsAt": "2026-11-09T23:59:00.000",
-        "terms": null,
-        "clubOnly": false
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-10-05T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "mango-loco": [
+      {
+        "clubOnly": false,
+        "description": "משקה אנרגיה מונסטר 500מ ל  2 ב 17.90",
+        "discountRate": 12.25,
+        "endsAt": "2026-11-09T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-10-05T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "original": [
+      {
+        "clubOnly": false,
+        "description": "משקה אנרגיה מונסטר 500מ ל  2 ב 17.90",
+        "discountRate": 12.25,
+        "endsAt": "2026-11-09T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-10-05T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "strawberry": [
+      {
+        "clubOnly": false,
+        "description": "משקה אנרגיה מונסטר 500מ ל  2 ב 17.90",
+        "discountRate": 12.25,
+        "endsAt": "2026-11-09T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-10-05T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "ultra": [
+      {
+        "clubOnly": false,
+        "description": "משקה אנרגיה מונסטר 500מ ל  2 ב 17.90",
+        "discountRate": 12.25,
+        "endsAt": "2026-11-09T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-10-05T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "ultra-fiesta": [
+      {
+        "clubOnly": false,
+        "description": "משקה אנרגיה מונסטר 500מ ל  2 ב 17.90",
+        "discountRate": 12.25,
+        "endsAt": "2026-11-09T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-10-05T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "ultra-paradise": [
+      {
+        "clubOnly": false,
+        "description": "משקה אנרגיה מונסטר 500מ ל  2 ב 17.90",
+        "discountRate": 12.25,
+        "endsAt": "2026-11-09T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-10-05T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "ultra-peachy-keen": [
+      {
+        "clubOnly": false,
+        "description": "משקה אנרגיה מונסטר 500מ ל  2 ב 17.90",
+        "discountRate": 12.25,
+        "endsAt": "2026-11-09T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-10-05T00:00:00.000",
+        "terms": null
       }
     ]
   },
@@ -54531,124 +54531,124 @@
     ]
   },
   "dor_alon-533": {
-    "strawberry": [
+    "green-zero": [
       {
+        "clubOnly": false,
         "description": "מבצע משקה אנרגיה מונסטר 2 ב 16.90 שח",
         "discountRate": 17.16,
-        "minQuantity": 2,
-        "maxQuantity": null,
-        "startsAt": "2026-10-05T00:00:00.000",
         "endsAt": "2026-11-09T23:59:00.000",
-        "terms": null,
-        "clubOnly": false
-      }
-    ],
-    "ultra-peachy-keen": [
-      {
-        "description": "מבצע משקה אנרגיה מונסטר 2 ב 16.90 שח",
-        "discountRate": 17.16,
-        "minQuantity": 2,
         "maxQuantity": null,
-        "startsAt": "2026-10-05T00:00:00.000",
-        "endsAt": "2026-11-09T23:59:00.000",
-        "terms": null,
-        "clubOnly": false
-      }
-    ],
-    "original": [
-      {
-        "description": "מבצע משקה אנרגיה מונסטר 2 ב 16.90 שח",
-        "discountRate": 17.16,
         "minQuantity": 2,
-        "maxQuantity": null,
         "startsAt": "2026-10-05T00:00:00.000",
-        "endsAt": "2026-11-09T23:59:00.000",
-        "terms": null,
-        "clubOnly": false
-      }
-    ],
-    "ultra": [
-      {
-        "description": "מבצע משקה אנרגיה מונסטר 2 ב 16.90 שח",
-        "discountRate": 17.16,
-        "minQuantity": 2,
-        "maxQuantity": null,
-        "startsAt": "2026-10-05T00:00:00.000",
-        "endsAt": "2026-11-09T23:59:00.000",
-        "terms": null,
-        "clubOnly": false
+        "terms": null
       }
     ],
     "mango-loco": [
       {
+        "clubOnly": false,
         "description": "מבצע משקה אנרגיה מונסטר 2 ב 16.90 שח",
         "discountRate": 17.16,
-        "minQuantity": 2,
-        "maxQuantity": null,
-        "startsAt": "2026-10-05T00:00:00.000",
         "endsAt": "2026-11-09T23:59:00.000",
-        "terms": null,
-        "clubOnly": false
-      }
-    ],
-    "pipeline-punch": [
-      {
-        "description": "מבצע משקה אנרגיה מונסטר 2 ב 16.90 שח",
-        "discountRate": 17.16,
-        "minQuantity": 2,
         "maxQuantity": null,
-        "startsAt": "2026-10-05T00:00:00.000",
-        "endsAt": "2026-11-09T23:59:00.000",
-        "terms": null,
-        "clubOnly": false
-      }
-    ],
-    "ultra-paradise": [
-      {
-        "description": "מבצע משקה אנרגיה מונסטר 2 ב 16.90 שח",
-        "discountRate": 17.16,
         "minQuantity": 2,
-        "maxQuantity": null,
         "startsAt": "2026-10-05T00:00:00.000",
-        "endsAt": "2026-11-09T23:59:00.000",
-        "terms": null,
-        "clubOnly": false
-      }
-    ],
-    "ultra-fiesta": [
-      {
-        "description": "מבצע משקה אנרגיה מונסטר 2 ב 16.90 שח",
-        "discountRate": 17.16,
-        "minQuantity": 2,
-        "maxQuantity": null,
-        "startsAt": "2026-10-05T00:00:00.000",
-        "endsAt": "2026-11-09T23:59:00.000",
-        "terms": null,
-        "clubOnly": false
+        "terms": null
       }
     ],
     "monarch": [
       {
+        "clubOnly": false,
         "description": "מבצע משקה אנרגיה מונסטר 2 ב 16.90 שח",
         "discountRate": 17.16,
-        "minQuantity": 2,
-        "maxQuantity": null,
-        "startsAt": "2026-10-05T00:00:00.000",
         "endsAt": "2026-11-09T23:59:00.000",
-        "terms": null,
-        "clubOnly": false
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-10-05T00:00:00.000",
+        "terms": null
       }
     ],
-    "green-zero": [
+    "original": [
       {
+        "clubOnly": false,
         "description": "מבצע משקה אנרגיה מונסטר 2 ב 16.90 שח",
         "discountRate": 17.16,
-        "minQuantity": 2,
-        "maxQuantity": null,
-        "startsAt": "2026-10-05T00:00:00.000",
         "endsAt": "2026-11-09T23:59:00.000",
-        "terms": null,
-        "clubOnly": false
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-10-05T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "pipeline-punch": [
+      {
+        "clubOnly": false,
+        "description": "מבצע משקה אנרגיה מונסטר 2 ב 16.90 שח",
+        "discountRate": 17.16,
+        "endsAt": "2026-11-09T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-10-05T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "strawberry": [
+      {
+        "clubOnly": false,
+        "description": "מבצע משקה אנרגיה מונסטר 2 ב 16.90 שח",
+        "discountRate": 17.16,
+        "endsAt": "2026-11-09T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-10-05T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "ultra": [
+      {
+        "clubOnly": false,
+        "description": "מבצע משקה אנרגיה מונסטר 2 ב 16.90 שח",
+        "discountRate": 17.16,
+        "endsAt": "2026-11-09T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-10-05T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "ultra-fiesta": [
+      {
+        "clubOnly": false,
+        "description": "מבצע משקה אנרגיה מונסטר 2 ב 16.90 שח",
+        "discountRate": 17.16,
+        "endsAt": "2026-11-09T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-10-05T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "ultra-paradise": [
+      {
+        "clubOnly": false,
+        "description": "מבצע משקה אנרגיה מונסטר 2 ב 16.90 שח",
+        "discountRate": 17.16,
+        "endsAt": "2026-11-09T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-10-05T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "ultra-peachy-keen": [
+      {
+        "clubOnly": false,
+        "description": "מבצע משקה אנרגיה מונסטר 2 ב 16.90 שח",
+        "discountRate": 17.16,
+        "endsAt": "2026-11-09T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-10-05T00:00:00.000",
+        "terms": null
       }
     ]
   },
@@ -56351,124 +56351,124 @@
     ]
   },
   "dor_alon-501": {
-    "strawberry": [
+    "green-zero": [
       {
+        "clubOnly": false,
         "description": "מבצע משקה אנרגיה מונסטר 2 ב 16.90 שח",
         "discountRate": 17.16,
-        "minQuantity": 2,
-        "maxQuantity": null,
-        "startsAt": "2026-10-05T00:00:00.000",
         "endsAt": "2026-11-09T23:59:00.000",
-        "terms": null,
-        "clubOnly": false
-      }
-    ],
-    "ultra-peachy-keen": [
-      {
-        "description": "מבצע משקה אנרגיה מונסטר 2 ב 16.90 שח",
-        "discountRate": 17.16,
-        "minQuantity": 2,
         "maxQuantity": null,
-        "startsAt": "2026-10-05T00:00:00.000",
-        "endsAt": "2026-11-09T23:59:00.000",
-        "terms": null,
-        "clubOnly": false
-      }
-    ],
-    "original": [
-      {
-        "description": "מבצע משקה אנרגיה מונסטר 2 ב 16.90 שח",
-        "discountRate": 17.16,
         "minQuantity": 2,
-        "maxQuantity": null,
         "startsAt": "2026-10-05T00:00:00.000",
-        "endsAt": "2026-11-09T23:59:00.000",
-        "terms": null,
-        "clubOnly": false
-      }
-    ],
-    "ultra": [
-      {
-        "description": "מבצע משקה אנרגיה מונסטר 2 ב 16.90 שח",
-        "discountRate": 17.16,
-        "minQuantity": 2,
-        "maxQuantity": null,
-        "startsAt": "2026-10-05T00:00:00.000",
-        "endsAt": "2026-11-09T23:59:00.000",
-        "terms": null,
-        "clubOnly": false
+        "terms": null
       }
     ],
     "mango-loco": [
       {
+        "clubOnly": false,
         "description": "מבצע משקה אנרגיה מונסטר 2 ב 16.90 שח",
         "discountRate": 17.16,
-        "minQuantity": 2,
-        "maxQuantity": null,
-        "startsAt": "2026-10-05T00:00:00.000",
         "endsAt": "2026-11-09T23:59:00.000",
-        "terms": null,
-        "clubOnly": false
-      }
-    ],
-    "pipeline-punch": [
-      {
-        "description": "מבצע משקה אנרגיה מונסטר 2 ב 16.90 שח",
-        "discountRate": 17.16,
-        "minQuantity": 2,
         "maxQuantity": null,
-        "startsAt": "2026-10-05T00:00:00.000",
-        "endsAt": "2026-11-09T23:59:00.000",
-        "terms": null,
-        "clubOnly": false
-      }
-    ],
-    "ultra-paradise": [
-      {
-        "description": "מבצע משקה אנרגיה מונסטר 2 ב 16.90 שח",
-        "discountRate": 17.16,
         "minQuantity": 2,
-        "maxQuantity": null,
         "startsAt": "2026-10-05T00:00:00.000",
-        "endsAt": "2026-11-09T23:59:00.000",
-        "terms": null,
-        "clubOnly": false
-      }
-    ],
-    "ultra-fiesta": [
-      {
-        "description": "מבצע משקה אנרגיה מונסטר 2 ב 16.90 שח",
-        "discountRate": 17.16,
-        "minQuantity": 2,
-        "maxQuantity": null,
-        "startsAt": "2026-10-05T00:00:00.000",
-        "endsAt": "2026-11-09T23:59:00.000",
-        "terms": null,
-        "clubOnly": false
+        "terms": null
       }
     ],
     "monarch": [
       {
+        "clubOnly": false,
         "description": "מבצע משקה אנרגיה מונסטר 2 ב 16.90 שח",
         "discountRate": 17.16,
-        "minQuantity": 2,
-        "maxQuantity": null,
-        "startsAt": "2026-10-05T00:00:00.000",
         "endsAt": "2026-11-09T23:59:00.000",
-        "terms": null,
-        "clubOnly": false
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-10-05T00:00:00.000",
+        "terms": null
       }
     ],
-    "green-zero": [
+    "original": [
       {
+        "clubOnly": false,
         "description": "מבצע משקה אנרגיה מונסטר 2 ב 16.90 שח",
         "discountRate": 17.16,
-        "minQuantity": 2,
-        "maxQuantity": null,
-        "startsAt": "2026-10-05T00:00:00.000",
         "endsAt": "2026-11-09T23:59:00.000",
-        "terms": null,
-        "clubOnly": false
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-10-05T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "pipeline-punch": [
+      {
+        "clubOnly": false,
+        "description": "מבצע משקה אנרגיה מונסטר 2 ב 16.90 שח",
+        "discountRate": 17.16,
+        "endsAt": "2026-11-09T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-10-05T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "strawberry": [
+      {
+        "clubOnly": false,
+        "description": "מבצע משקה אנרגיה מונסטר 2 ב 16.90 שח",
+        "discountRate": 17.16,
+        "endsAt": "2026-11-09T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-10-05T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "ultra": [
+      {
+        "clubOnly": false,
+        "description": "מבצע משקה אנרגיה מונסטר 2 ב 16.90 שח",
+        "discountRate": 17.16,
+        "endsAt": "2026-11-09T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-10-05T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "ultra-fiesta": [
+      {
+        "clubOnly": false,
+        "description": "מבצע משקה אנרגיה מונסטר 2 ב 16.90 שח",
+        "discountRate": 17.16,
+        "endsAt": "2026-11-09T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-10-05T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "ultra-paradise": [
+      {
+        "clubOnly": false,
+        "description": "מבצע משקה אנרגיה מונסטר 2 ב 16.90 שח",
+        "discountRate": 17.16,
+        "endsAt": "2026-11-09T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-10-05T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "ultra-peachy-keen": [
+      {
+        "clubOnly": false,
+        "description": "מבצע משקה אנרגיה מונסטר 2 ב 16.90 שח",
+        "discountRate": 17.16,
+        "endsAt": "2026-11-09T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-10-05T00:00:00.000",
+        "terms": null
       }
     ]
   },
@@ -56571,124 +56571,124 @@
     ]
   },
   "dor_alon-535": {
-    "strawberry": [
+    "green-zero": [
       {
+        "clubOnly": false,
         "description": "מבצע משקה אנרגיה מונסטר 2 ב 16.90 שח",
         "discountRate": 17.16,
-        "minQuantity": 2,
-        "maxQuantity": null,
-        "startsAt": "2026-10-05T00:00:00.000",
         "endsAt": "2026-11-09T23:59:00.000",
-        "terms": null,
-        "clubOnly": false
-      }
-    ],
-    "ultra-peachy-keen": [
-      {
-        "description": "מבצע משקה אנרגיה מונסטר 2 ב 16.90 שח",
-        "discountRate": 17.16,
-        "minQuantity": 2,
         "maxQuantity": null,
-        "startsAt": "2026-10-05T00:00:00.000",
-        "endsAt": "2026-11-09T23:59:00.000",
-        "terms": null,
-        "clubOnly": false
-      }
-    ],
-    "original": [
-      {
-        "description": "מבצע משקה אנרגיה מונסטר 2 ב 16.90 שח",
-        "discountRate": 17.16,
         "minQuantity": 2,
-        "maxQuantity": null,
         "startsAt": "2026-10-05T00:00:00.000",
-        "endsAt": "2026-11-09T23:59:00.000",
-        "terms": null,
-        "clubOnly": false
-      }
-    ],
-    "ultra": [
-      {
-        "description": "מבצע משקה אנרגיה מונסטר 2 ב 16.90 שח",
-        "discountRate": 17.16,
-        "minQuantity": 2,
-        "maxQuantity": null,
-        "startsAt": "2026-10-05T00:00:00.000",
-        "endsAt": "2026-11-09T23:59:00.000",
-        "terms": null,
-        "clubOnly": false
+        "terms": null
       }
     ],
     "mango-loco": [
       {
+        "clubOnly": false,
         "description": "מבצע משקה אנרגיה מונסטר 2 ב 16.90 שח",
         "discountRate": 17.16,
-        "minQuantity": 2,
-        "maxQuantity": null,
-        "startsAt": "2026-10-05T00:00:00.000",
         "endsAt": "2026-11-09T23:59:00.000",
-        "terms": null,
-        "clubOnly": false
-      }
-    ],
-    "pipeline-punch": [
-      {
-        "description": "מבצע משקה אנרגיה מונסטר 2 ב 16.90 שח",
-        "discountRate": 17.16,
-        "minQuantity": 2,
         "maxQuantity": null,
-        "startsAt": "2026-10-05T00:00:00.000",
-        "endsAt": "2026-11-09T23:59:00.000",
-        "terms": null,
-        "clubOnly": false
-      }
-    ],
-    "ultra-paradise": [
-      {
-        "description": "מבצע משקה אנרגיה מונסטר 2 ב 16.90 שח",
-        "discountRate": 17.16,
         "minQuantity": 2,
-        "maxQuantity": null,
         "startsAt": "2026-10-05T00:00:00.000",
-        "endsAt": "2026-11-09T23:59:00.000",
-        "terms": null,
-        "clubOnly": false
-      }
-    ],
-    "ultra-fiesta": [
-      {
-        "description": "מבצע משקה אנרגיה מונסטר 2 ב 16.90 שח",
-        "discountRate": 17.16,
-        "minQuantity": 2,
-        "maxQuantity": null,
-        "startsAt": "2026-10-05T00:00:00.000",
-        "endsAt": "2026-11-09T23:59:00.000",
-        "terms": null,
-        "clubOnly": false
+        "terms": null
       }
     ],
     "monarch": [
       {
+        "clubOnly": false,
         "description": "מבצע משקה אנרגיה מונסטר 2 ב 16.90 שח",
         "discountRate": 17.16,
-        "minQuantity": 2,
-        "maxQuantity": null,
-        "startsAt": "2026-10-05T00:00:00.000",
         "endsAt": "2026-11-09T23:59:00.000",
-        "terms": null,
-        "clubOnly": false
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-10-05T00:00:00.000",
+        "terms": null
       }
     ],
-    "green-zero": [
+    "original": [
       {
+        "clubOnly": false,
         "description": "מבצע משקה אנרגיה מונסטר 2 ב 16.90 שח",
         "discountRate": 17.16,
-        "minQuantity": 2,
-        "maxQuantity": null,
-        "startsAt": "2026-10-05T00:00:00.000",
         "endsAt": "2026-11-09T23:59:00.000",
-        "terms": null,
-        "clubOnly": false
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-10-05T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "pipeline-punch": [
+      {
+        "clubOnly": false,
+        "description": "מבצע משקה אנרגיה מונסטר 2 ב 16.90 שח",
+        "discountRate": 17.16,
+        "endsAt": "2026-11-09T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-10-05T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "strawberry": [
+      {
+        "clubOnly": false,
+        "description": "מבצע משקה אנרגיה מונסטר 2 ב 16.90 שח",
+        "discountRate": 17.16,
+        "endsAt": "2026-11-09T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-10-05T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "ultra": [
+      {
+        "clubOnly": false,
+        "description": "מבצע משקה אנרגיה מונסטר 2 ב 16.90 שח",
+        "discountRate": 17.16,
+        "endsAt": "2026-11-09T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-10-05T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "ultra-fiesta": [
+      {
+        "clubOnly": false,
+        "description": "מבצע משקה אנרגיה מונסטר 2 ב 16.90 שח",
+        "discountRate": 17.16,
+        "endsAt": "2026-11-09T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-10-05T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "ultra-paradise": [
+      {
+        "clubOnly": false,
+        "description": "מבצע משקה אנרגיה מונסטר 2 ב 16.90 שח",
+        "discountRate": 17.16,
+        "endsAt": "2026-11-09T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-10-05T00:00:00.000",
+        "terms": null
+      }
+    ],
+    "ultra-peachy-keen": [
+      {
+        "clubOnly": false,
+        "description": "מבצע משקה אנרגיה מונסטר 2 ב 16.90 שח",
+        "discountRate": 17.16,
+        "endsAt": "2026-11-09T23:59:00.000",
+        "maxQuantity": null,
+        "minQuantity": 2,
+        "startsAt": "2026-10-05T00:00:00.000",
+        "terms": null
       }
     ]
   },
@@ -58879,846 +58879,846 @@
     ]
   },
   "victory_new_source-16": {
-    "aussie-lemonade": [
+    "strawberry": [
       {
-        "clubOnly": false,
         "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
         "discountRate": 4.92,
         "discountedPrice": 9.0,
-        "endsAt": "2026-10-31T00:00:00.000",
-        "maxQuantity": null,
         "minQuantity": 2,
-        "startsAt": "2026-10-04T00:00:00.000",
-        "terms": "הרשת רשאית להפסיק את המבצע בכל עת ללא הודעה מוקדמת"
-      }
-    ],
-    "full-zero": [
-      {
-        "clubOnly": false,
-        "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
-        "discountRate": 4.92,
-        "discountedPrice": 9.0,
-        "endsAt": "2026-10-31T00:00:00.000",
         "maxQuantity": null,
-        "minQuantity": 2,
         "startsAt": "2026-10-04T00:00:00.000",
-        "terms": "הרשת רשאית להפסיק את המבצע בכל עת ללא הודעה מוקדמת"
-      }
-    ],
-    "green-zero": [
-      {
-        "clubOnly": false,
-        "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
-        "discountRate": 4.92,
-        "discountedPrice": 9.0,
         "endsAt": "2026-10-31T00:00:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-10-04T00:00:00.000",
-        "terms": "הרשת רשאית להפסיק את המבצע בכל עת ללא הודעה מוקדמת"
-      }
-    ],
-    "mango-loco": [
-      {
-        "clubOnly": false,
-        "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
-        "discountRate": 4.92,
-        "discountedPrice": 9.0,
-        "endsAt": "2026-10-31T00:00:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-10-04T00:00:00.000",
-        "terms": "הרשת רשאית להפסיק את המבצע בכל עת ללא הודעה מוקדמת"
-      }
-    ],
-    "monarch": [
-      {
-        "clubOnly": false,
-        "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
-        "discountRate": 4.92,
-        "discountedPrice": 9.0,
-        "endsAt": "2026-10-31T00:00:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-10-04T00:00:00.000",
-        "terms": "הרשת רשאית להפסיק את המבצע בכל עת ללא הודעה מוקדמת"
+        "terms": "הרשת רשאית להפסיק את המבצע בכל עת ללא הודעה מוקדמת",
+        "clubOnly": false
       }
     ],
     "original": [
       {
-        "clubOnly": false,
         "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
         "discountRate": 4.92,
         "discountedPrice": 9.0,
-        "endsAt": "2026-10-31T00:00:00.000",
-        "maxQuantity": null,
         "minQuantity": 2,
-        "startsAt": "2026-10-04T00:00:00.000",
-        "terms": "הרשת רשאית להפסיק את המבצע בכל עת ללא הודעה מוקדמת"
-      }
-    ],
-    "pipeline-punch": [
-      {
-        "clubOnly": false,
-        "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
-        "discountRate": 4.92,
-        "discountedPrice": 9.0,
-        "endsAt": "2026-10-31T00:00:00.000",
         "maxQuantity": null,
-        "minQuantity": 2,
         "startsAt": "2026-10-04T00:00:00.000",
-        "terms": "הרשת רשאית להפסיק את המבצע בכל עת ללא הודעה מוקדמת"
+        "endsAt": "2026-10-31T00:00:00.000",
+        "terms": "הרשת רשאית להפסיק את המבצע בכל עת ללא הודעה מוקדמת",
+        "clubOnly": false
       }
     ],
     "rossi": [
       {
-        "clubOnly": false,
         "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
         "discountRate": 4.92,
         "discountedPrice": 9.0,
-        "endsAt": "2026-10-31T00:00:00.000",
-        "maxQuantity": null,
         "minQuantity": 2,
-        "startsAt": "2026-10-04T00:00:00.000",
-        "terms": "הרשת רשאית להפסיק את המבצע בכל עת ללא הודעה מוקדמת"
-      }
-    ],
-    "strawberry": [
-      {
-        "clubOnly": false,
-        "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
-        "discountRate": 4.92,
-        "discountedPrice": 9.0,
-        "endsAt": "2026-10-31T00:00:00.000",
         "maxQuantity": null,
-        "minQuantity": 2,
         "startsAt": "2026-10-04T00:00:00.000",
-        "terms": "הרשת רשאית להפסיק את המבצע בכל עת ללא הודעה מוקדמת"
+        "endsAt": "2026-10-31T00:00:00.000",
+        "terms": "הרשת רשאית להפסיק את המבצע בכל עת ללא הודעה מוקדמת",
+        "clubOnly": false
       }
     ],
     "ultra": [
       {
-        "clubOnly": false,
         "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
         "discountRate": 4.92,
         "discountedPrice": 9.0,
-        "endsAt": "2026-10-31T00:00:00.000",
-        "maxQuantity": null,
         "minQuantity": 2,
+        "maxQuantity": null,
         "startsAt": "2026-10-04T00:00:00.000",
-        "terms": "הרשת רשאית להפסיק את המבצע בכל עת ללא הודעה מוקדמת"
+        "endsAt": "2026-10-31T00:00:00.000",
+        "terms": "הרשת רשאית להפסיק את המבצע בכל עת ללא הודעה מוקדמת",
+        "clubOnly": false
       }
     ],
-    "ultra-fiesta": [
+    "mango-loco": [
       {
-        "clubOnly": false,
         "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
         "discountRate": 4.92,
         "discountedPrice": 9.0,
-        "endsAt": "2026-10-31T00:00:00.000",
-        "maxQuantity": null,
         "minQuantity": 2,
+        "maxQuantity": null,
         "startsAt": "2026-10-04T00:00:00.000",
-        "terms": "הרשת רשאית להפסיק את המבצע בכל עת ללא הודעה מוקדמת"
+        "endsAt": "2026-10-31T00:00:00.000",
+        "terms": "הרשת רשאית להפסיק את המבצע בכל עת ללא הודעה מוקדמת",
+        "clubOnly": false
+      }
+    ],
+    "pipeline-punch": [
+      {
+        "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
+        "discountRate": 4.92,
+        "discountedPrice": 9.0,
+        "minQuantity": 2,
+        "maxQuantity": null,
+        "startsAt": "2026-10-04T00:00:00.000",
+        "endsAt": "2026-10-31T00:00:00.000",
+        "terms": "הרשת רשאית להפסיק את המבצע בכל עת ללא הודעה מוקדמת",
+        "clubOnly": false
       }
     ],
     "ultra-paradise": [
       {
-        "clubOnly": false,
         "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
         "discountRate": 4.92,
         "discountedPrice": 9.0,
-        "endsAt": "2026-10-31T00:00:00.000",
-        "maxQuantity": null,
         "minQuantity": 2,
+        "maxQuantity": null,
         "startsAt": "2026-10-04T00:00:00.000",
-        "terms": "הרשת רשאית להפסיק את המבצע בכל עת ללא הודעה מוקדמת"
+        "endsAt": "2026-10-31T00:00:00.000",
+        "terms": "הרשת רשאית להפסיק את המבצע בכל עת ללא הודעה מוקדמת",
+        "clubOnly": false
+      }
+    ],
+    "ultra-fiesta": [
+      {
+        "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
+        "discountRate": 4.92,
+        "discountedPrice": 9.0,
+        "minQuantity": 2,
+        "maxQuantity": null,
+        "startsAt": "2026-10-04T00:00:00.000",
+        "endsAt": "2026-10-31T00:00:00.000",
+        "terms": "הרשת רשאית להפסיק את המבצע בכל עת ללא הודעה מוקדמת",
+        "clubOnly": false
+      }
+    ],
+    "monarch": [
+      {
+        "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
+        "discountRate": 4.92,
+        "discountedPrice": 9.0,
+        "minQuantity": 2,
+        "maxQuantity": null,
+        "startsAt": "2026-10-04T00:00:00.000",
+        "endsAt": "2026-10-31T00:00:00.000",
+        "terms": "הרשת רשאית להפסיק את המבצע בכל עת ללא הודעה מוקדמת",
+        "clubOnly": false
+      }
+    ],
+    "green-zero": [
+      {
+        "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
+        "discountRate": 4.92,
+        "discountedPrice": 9.0,
+        "minQuantity": 2,
+        "maxQuantity": null,
+        "startsAt": "2026-10-04T00:00:00.000",
+        "endsAt": "2026-10-31T00:00:00.000",
+        "terms": "הרשת רשאית להפסיק את המבצע בכל עת ללא הודעה מוקדמת",
+        "clubOnly": false
+      }
+    ],
+    "aussie-lemonade": [
+      {
+        "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
+        "discountRate": 4.92,
+        "discountedPrice": 9.0,
+        "minQuantity": 2,
+        "maxQuantity": null,
+        "startsAt": "2026-10-04T00:00:00.000",
+        "endsAt": "2026-10-31T00:00:00.000",
+        "terms": "הרשת רשאית להפסיק את המבצע בכל עת ללא הודעה מוקדמת",
+        "clubOnly": false
+      }
+    ],
+    "full-zero": [
+      {
+        "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
+        "discountRate": 4.92,
+        "discountedPrice": 9.0,
+        "minQuantity": 2,
+        "maxQuantity": null,
+        "startsAt": "2026-10-04T00:00:00.000",
+        "endsAt": "2026-10-31T00:00:00.000",
+        "terms": "הרשת רשאית להפסיק את המבצע בכל עת ללא הודעה מוקדמת",
+        "clubOnly": false
       }
     ]
   },
   "victory_new_source-35": {
-    "full-zero": [
+    "strawberry": [
       {
-        "clubOnly": false,
         "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
         "discountRate": 4.92,
         "discountedPrice": 9.0,
-        "endsAt": "2026-10-31T00:00:00.000",
-        "maxQuantity": null,
         "minQuantity": 2,
+        "maxQuantity": null,
         "startsAt": "2026-10-04T00:00:00.000",
-        "terms": null
+        "endsAt": "2026-10-31T00:00:00.000",
+        "terms": null,
+        "clubOnly": false
       }
     ],
-    "green-zero": [
+    "ultra-peachy-keen": [
       {
-        "clubOnly": false,
         "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
         "discountRate": 4.92,
         "discountedPrice": 9.0,
-        "endsAt": "2026-10-31T00:00:00.000",
-        "maxQuantity": null,
         "minQuantity": 2,
+        "maxQuantity": null,
         "startsAt": "2026-10-04T00:00:00.000",
-        "terms": null
+        "endsAt": "2026-10-31T00:00:00.000",
+        "terms": null,
+        "clubOnly": false
+      }
+    ],
+    "original": [
+      {
+        "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
+        "discountRate": 4.92,
+        "discountedPrice": 9.0,
+        "minQuantity": 2,
+        "maxQuantity": null,
+        "startsAt": "2026-10-04T00:00:00.000",
+        "endsAt": "2026-10-31T00:00:00.000",
+        "terms": null,
+        "clubOnly": false
+      }
+    ],
+    "ultra": [
+      {
+        "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
+        "discountRate": 4.92,
+        "discountedPrice": 9.0,
+        "minQuantity": 2,
+        "maxQuantity": null,
+        "startsAt": "2026-10-04T00:00:00.000",
+        "endsAt": "2026-10-31T00:00:00.000",
+        "terms": null,
+        "clubOnly": false
       }
     ],
     "mango-loco": [
       {
-        "clubOnly": false,
         "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
         "discountRate": 4.92,
         "discountedPrice": 9.0,
-        "endsAt": "2026-10-31T00:00:00.000",
-        "maxQuantity": null,
         "minQuantity": 2,
-        "startsAt": "2026-10-04T00:00:00.000",
-        "terms": null
-      }
-    ],
-    "monarch": [
-      {
-        "clubOnly": false,
-        "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
-        "discountRate": 4.92,
-        "discountedPrice": 9.0,
-        "endsAt": "2026-10-31T00:00:00.000",
         "maxQuantity": null,
-        "minQuantity": 2,
         "startsAt": "2026-10-04T00:00:00.000",
-        "terms": null
-      }
-    ],
-    "original": [
-      {
-        "clubOnly": false,
-        "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
-        "discountRate": 4.92,
-        "discountedPrice": 9.0,
         "endsAt": "2026-10-31T00:00:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-10-04T00:00:00.000",
-        "terms": null
+        "terms": null,
+        "clubOnly": false
       }
     ],
     "pipeline-punch": [
       {
-        "clubOnly": false,
         "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
         "discountRate": 4.92,
         "discountedPrice": 9.0,
-        "endsAt": "2026-10-31T00:00:00.000",
-        "maxQuantity": null,
         "minQuantity": 2,
-        "startsAt": "2026-10-04T00:00:00.000",
-        "terms": null
-      }
-    ],
-    "strawberry": [
-      {
-        "clubOnly": false,
-        "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
-        "discountRate": 4.92,
-        "discountedPrice": 9.0,
-        "endsAt": "2026-10-31T00:00:00.000",
         "maxQuantity": null,
-        "minQuantity": 2,
         "startsAt": "2026-10-04T00:00:00.000",
-        "terms": null
-      }
-    ],
-    "ultra": [
-      {
-        "clubOnly": false,
-        "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
-        "discountRate": 4.92,
-        "discountedPrice": 9.0,
         "endsAt": "2026-10-31T00:00:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-10-04T00:00:00.000",
-        "terms": null
-      }
-    ],
-    "ultra-fiesta": [
-      {
-        "clubOnly": false,
-        "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
-        "discountRate": 4.92,
-        "discountedPrice": 9.0,
-        "endsAt": "2026-10-31T00:00:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-10-04T00:00:00.000",
-        "terms": null
+        "terms": null,
+        "clubOnly": false
       }
     ],
     "ultra-paradise": [
       {
-        "clubOnly": false,
         "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
         "discountRate": 4.92,
         "discountedPrice": 9.0,
-        "endsAt": "2026-10-31T00:00:00.000",
-        "maxQuantity": null,
         "minQuantity": 2,
+        "maxQuantity": null,
         "startsAt": "2026-10-04T00:00:00.000",
-        "terms": null
+        "endsAt": "2026-10-31T00:00:00.000",
+        "terms": null,
+        "clubOnly": false
       }
     ],
-    "ultra-peachy-keen": [
+    "ultra-fiesta": [
       {
-        "clubOnly": false,
         "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
         "discountRate": 4.92,
         "discountedPrice": 9.0,
-        "endsAt": "2026-10-31T00:00:00.000",
-        "maxQuantity": null,
         "minQuantity": 2,
+        "maxQuantity": null,
         "startsAt": "2026-10-04T00:00:00.000",
-        "terms": null
+        "endsAt": "2026-10-31T00:00:00.000",
+        "terms": null,
+        "clubOnly": false
       }
-    ]
-  },
-  "victory_new_source-57": {
-    "full-zero": [
+    ],
+    "monarch": [
       {
-        "clubOnly": false,
         "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
         "discountRate": 4.92,
         "discountedPrice": 9.0,
-        "endsAt": "2026-10-31T00:00:00.000",
-        "maxQuantity": null,
         "minQuantity": 2,
+        "maxQuantity": null,
         "startsAt": "2026-10-04T00:00:00.000",
-        "terms": "הרשת רשאית להפסיק את המבצע בכל עת ללא הודעה מוקדמת"
+        "endsAt": "2026-10-31T00:00:00.000",
+        "terms": null,
+        "clubOnly": false
       }
     ],
     "green-zero": [
       {
-        "clubOnly": false,
         "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
         "discountRate": 4.92,
         "discountedPrice": 9.0,
-        "endsAt": "2026-10-31T00:00:00.000",
-        "maxQuantity": null,
         "minQuantity": 2,
+        "maxQuantity": null,
         "startsAt": "2026-10-04T00:00:00.000",
-        "terms": "הרשת רשאית להפסיק את המבצע בכל עת ללא הודעה מוקדמת"
+        "endsAt": "2026-10-31T00:00:00.000",
+        "terms": null,
+        "clubOnly": false
       }
     ],
-    "monarch": [
+    "full-zero": [
       {
-        "clubOnly": false,
         "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
         "discountRate": 4.92,
         "discountedPrice": 9.0,
-        "endsAt": "2026-10-31T00:00:00.000",
-        "maxQuantity": null,
         "minQuantity": 2,
-        "startsAt": "2026-10-04T00:00:00.000",
-        "terms": "הרשת רשאית להפסיק את המבצע בכל עת ללא הודעה מוקדמת"
-      }
-    ],
-    "original": [
-      {
-        "clubOnly": false,
-        "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
-        "discountRate": 4.92,
-        "discountedPrice": 9.0,
-        "endsAt": "2026-10-31T00:00:00.000",
         "maxQuantity": null,
-        "minQuantity": 2,
         "startsAt": "2026-10-04T00:00:00.000",
-        "terms": "הרשת רשאית להפסיק את המבצע בכל עת ללא הודעה מוקדמת"
-      }
-    ],
-    "pipeline-punch": [
-      {
-        "clubOnly": false,
-        "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
-        "discountRate": 4.92,
-        "discountedPrice": 9.0,
         "endsAt": "2026-10-31T00:00:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-10-04T00:00:00.000",
-        "terms": "הרשת רשאית להפסיק את המבצע בכל עת ללא הודעה מוקדמת"
-      }
-    ],
-    "rossi": [
-      {
-        "clubOnly": false,
-        "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
-        "discountRate": 4.92,
-        "discountedPrice": 9.0,
-        "endsAt": "2026-10-31T00:00:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-10-04T00:00:00.000",
-        "terms": "הרשת רשאית להפסיק את המבצע בכל עת ללא הודעה מוקדמת"
-      }
-    ],
-    "strawberry": [
-      {
-        "clubOnly": false,
-        "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
-        "discountRate": 4.92,
-        "discountedPrice": 9.0,
-        "endsAt": "2026-10-31T00:00:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-10-04T00:00:00.000",
-        "terms": "הרשת רשאית להפסיק את המבצע בכל עת ללא הודעה מוקדמת"
-      }
-    ],
-    "ultra": [
-      {
-        "clubOnly": false,
-        "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
-        "discountRate": 4.92,
-        "discountedPrice": 9.0,
-        "endsAt": "2026-10-31T00:00:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-10-04T00:00:00.000",
-        "terms": "הרשת רשאית להפסיק את המבצע בכל עת ללא הודעה מוקדמת"
-      }
-    ],
-    "ultra-fiesta": [
-      {
-        "clubOnly": false,
-        "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
-        "discountRate": 4.92,
-        "discountedPrice": 9.0,
-        "endsAt": "2026-10-31T00:00:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-10-04T00:00:00.000",
-        "terms": "הרשת רשאית להפסיק את המבצע בכל עת ללא הודעה מוקדמת"
-      }
-    ],
-    "ultra-paradise": [
-      {
-        "clubOnly": false,
-        "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
-        "discountRate": 4.92,
-        "discountedPrice": 9.0,
-        "endsAt": "2026-10-31T00:00:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-10-04T00:00:00.000",
-        "terms": "הרשת רשאית להפסיק את המבצע בכל עת ללא הודעה מוקדמת"
-      }
-    ],
-    "ultra-peachy-keen": [
-      {
-        "clubOnly": false,
-        "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
-        "discountRate": 4.92,
-        "discountedPrice": 9.0,
-        "endsAt": "2026-10-31T00:00:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-10-04T00:00:00.000",
-        "terms": "הרשת רשאית להפסיק את המבצע בכל עת ללא הודעה מוקדמת"
+        "terms": null,
+        "clubOnly": false
       }
     ]
   },
   "victory_new_source-67": {
-    "aussie-lemonade": [
-      {
-        "clubOnly": false,
-        "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
-        "discountRate": 4.92,
-        "discountedPrice": 9.0,
-        "endsAt": "2026-10-31T00:00:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-10-04T00:00:00.000",
-        "terms": "הרשת רשאית להפסיק את המבצע בכל עת ללא הודעה מוקדמת"
-      }
-    ],
-    "green-zero": [
-      {
-        "clubOnly": false,
-        "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
-        "discountRate": 4.92,
-        "discountedPrice": 9.0,
-        "endsAt": "2026-10-31T00:00:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-10-04T00:00:00.000",
-        "terms": "הרשת רשאית להפסיק את המבצע בכל עת ללא הודעה מוקדמת"
-      }
-    ],
-    "monarch": [
-      {
-        "clubOnly": false,
-        "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
-        "discountRate": 4.92,
-        "discountedPrice": 9.0,
-        "endsAt": "2026-10-31T00:00:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-10-04T00:00:00.000",
-        "terms": "הרשת רשאית להפסיק את המבצע בכל עת ללא הודעה מוקדמת"
-      }
-    ],
-    "original": [
-      {
-        "clubOnly": false,
-        "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
-        "discountRate": 4.92,
-        "discountedPrice": 9.0,
-        "endsAt": "2026-10-31T00:00:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-10-04T00:00:00.000",
-        "terms": "הרשת רשאית להפסיק את המבצע בכל עת ללא הודעה מוקדמת"
-      }
-    ],
-    "pipeline-punch": [
-      {
-        "clubOnly": false,
-        "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
-        "discountRate": 4.92,
-        "discountedPrice": 9.0,
-        "endsAt": "2026-10-31T00:00:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-10-04T00:00:00.000",
-        "terms": "הרשת רשאית להפסיק את המבצע בכל עת ללא הודעה מוקדמת"
-      }
-    ],
     "strawberry": [
       {
-        "clubOnly": false,
         "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
         "discountRate": 4.92,
         "discountedPrice": 9.0,
-        "endsAt": "2026-10-31T00:00:00.000",
-        "maxQuantity": null,
         "minQuantity": 2,
-        "startsAt": "2026-10-04T00:00:00.000",
-        "terms": "הרשת רשאית להפסיק את המבצע בכל עת ללא הודעה מוקדמת"
-      }
-    ],
-    "ultra": [
-      {
-        "clubOnly": false,
-        "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
-        "discountRate": 4.92,
-        "discountedPrice": 9.0,
-        "endsAt": "2026-10-31T00:00:00.000",
         "maxQuantity": null,
-        "minQuantity": 2,
         "startsAt": "2026-10-04T00:00:00.000",
-        "terms": "הרשת רשאית להפסיק את המבצע בכל עת ללא הודעה מוקדמת"
-      }
-    ],
-    "ultra-fiesta": [
-      {
-        "clubOnly": false,
-        "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
-        "discountRate": 4.92,
-        "discountedPrice": 9.0,
         "endsAt": "2026-10-31T00:00:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-10-04T00:00:00.000",
-        "terms": "הרשת רשאית להפסיק את המבצע בכל עת ללא הודעה מוקדמת"
+        "terms": "הרשת רשאית להפסיק את המבצע בכל עת ללא הודעה מוקדמת",
+        "clubOnly": false
       }
     ],
     "ultra-peachy-keen": [
       {
-        "clubOnly": false,
         "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
         "discountRate": 4.92,
         "discountedPrice": 9.0,
-        "endsAt": "2026-10-31T00:00:00.000",
-        "maxQuantity": null,
         "minQuantity": 2,
+        "maxQuantity": null,
         "startsAt": "2026-10-04T00:00:00.000",
-        "terms": "הרשת רשאית להפסיק את המבצע בכל עת ללא הודעה מוקדמת"
+        "endsAt": "2026-10-31T00:00:00.000",
+        "terms": "הרשת רשאית להפסיק את המבצע בכל עת ללא הודעה מוקדמת",
+        "clubOnly": false
+      }
+    ],
+    "original": [
+      {
+        "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
+        "discountRate": 4.92,
+        "discountedPrice": 9.0,
+        "minQuantity": 2,
+        "maxQuantity": null,
+        "startsAt": "2026-10-04T00:00:00.000",
+        "endsAt": "2026-10-31T00:00:00.000",
+        "terms": "הרשת רשאית להפסיק את המבצע בכל עת ללא הודעה מוקדמת",
+        "clubOnly": false
+      }
+    ],
+    "ultra": [
+      {
+        "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
+        "discountRate": 4.92,
+        "discountedPrice": 9.0,
+        "minQuantity": 2,
+        "maxQuantity": null,
+        "startsAt": "2026-10-04T00:00:00.000",
+        "endsAt": "2026-10-31T00:00:00.000",
+        "terms": "הרשת רשאית להפסיק את המבצע בכל עת ללא הודעה מוקדמת",
+        "clubOnly": false
+      }
+    ],
+    "pipeline-punch": [
+      {
+        "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
+        "discountRate": 4.92,
+        "discountedPrice": 9.0,
+        "minQuantity": 2,
+        "maxQuantity": null,
+        "startsAt": "2026-10-04T00:00:00.000",
+        "endsAt": "2026-10-31T00:00:00.000",
+        "terms": "הרשת רשאית להפסיק את המבצע בכל עת ללא הודעה מוקדמת",
+        "clubOnly": false
+      }
+    ],
+    "ultra-fiesta": [
+      {
+        "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
+        "discountRate": 4.92,
+        "discountedPrice": 9.0,
+        "minQuantity": 2,
+        "maxQuantity": null,
+        "startsAt": "2026-10-04T00:00:00.000",
+        "endsAt": "2026-10-31T00:00:00.000",
+        "terms": "הרשת רשאית להפסיק את המבצע בכל עת ללא הודעה מוקדמת",
+        "clubOnly": false
+      }
+    ],
+    "monarch": [
+      {
+        "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
+        "discountRate": 4.92,
+        "discountedPrice": 9.0,
+        "minQuantity": 2,
+        "maxQuantity": null,
+        "startsAt": "2026-10-04T00:00:00.000",
+        "endsAt": "2026-10-31T00:00:00.000",
+        "terms": "הרשת רשאית להפסיק את המבצע בכל עת ללא הודעה מוקדמת",
+        "clubOnly": false
+      }
+    ],
+    "green-zero": [
+      {
+        "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
+        "discountRate": 4.92,
+        "discountedPrice": 9.0,
+        "minQuantity": 2,
+        "maxQuantity": null,
+        "startsAt": "2026-10-04T00:00:00.000",
+        "endsAt": "2026-10-31T00:00:00.000",
+        "terms": "הרשת רשאית להפסיק את המבצע בכל עת ללא הודעה מוקדמת",
+        "clubOnly": false
+      }
+    ],
+    "aussie-lemonade": [
+      {
+        "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
+        "discountRate": 4.92,
+        "discountedPrice": 9.0,
+        "minQuantity": 2,
+        "maxQuantity": null,
+        "startsAt": "2026-10-04T00:00:00.000",
+        "endsAt": "2026-10-31T00:00:00.000",
+        "terms": "הרשת רשאית להפסיק את המבצע בכל עת ללא הודעה מוקדמת",
+        "clubOnly": false
       }
     ]
   },
   "victory_new_source-75": {
-    "aussie-lemonade": [
+    "strawberry": [
       {
-        "clubOnly": false,
         "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
         "discountRate": 4.92,
         "discountedPrice": 9.0,
-        "endsAt": "2026-10-31T00:00:00.000",
-        "maxQuantity": null,
         "minQuantity": 2,
+        "maxQuantity": null,
         "startsAt": "2026-10-04T00:00:00.000",
-        "terms": "הרשת רשאית להפסיק את המבצע בכל עת ללא הודעה מוקדמת"
+        "endsAt": "2026-10-31T00:00:00.000",
+        "terms": "הרשת רשאית להפסיק את המבצע בכל עת ללא הודעה מוקדמת",
+        "clubOnly": false
       }
     ],
-    "full-zero": [
+    "ultra-peachy-keen": [
       {
-        "clubOnly": false,
         "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
         "discountRate": 4.92,
         "discountedPrice": 9.0,
-        "endsAt": "2026-10-31T00:00:00.000",
-        "maxQuantity": null,
         "minQuantity": 2,
-        "startsAt": "2026-10-04T00:00:00.000",
-        "terms": "הרשת רשאית להפסיק את המבצע בכל עת ללא הודעה מוקדמת"
-      }
-    ],
-    "green-zero": [
-      {
-        "clubOnly": false,
-        "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
-        "discountRate": 4.92,
-        "discountedPrice": 9.0,
-        "endsAt": "2026-10-31T00:00:00.000",
         "maxQuantity": null,
-        "minQuantity": 2,
         "startsAt": "2026-10-04T00:00:00.000",
-        "terms": "הרשת רשאית להפסיק את המבצע בכל עת ללא הודעה מוקדמת"
-      }
-    ],
-    "mango-loco": [
-      {
-        "clubOnly": false,
-        "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
-        "discountRate": 4.92,
-        "discountedPrice": 9.0,
         "endsAt": "2026-10-31T00:00:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-10-04T00:00:00.000",
-        "terms": "הרשת רשאית להפסיק את המבצע בכל עת ללא הודעה מוקדמת"
-      }
-    ],
-    "monarch": [
-      {
-        "clubOnly": false,
-        "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
-        "discountRate": 4.92,
-        "discountedPrice": 9.0,
-        "endsAt": "2026-10-31T00:00:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-10-04T00:00:00.000",
-        "terms": "הרשת רשאית להפסיק את המבצע בכל עת ללא הודעה מוקדמת"
+        "terms": "הרשת רשאית להפסיק את המבצע בכל עת ללא הודעה מוקדמת",
+        "clubOnly": false
       }
     ],
     "original": [
       {
-        "clubOnly": false,
         "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
         "discountRate": 4.92,
         "discountedPrice": 9.0,
-        "endsAt": "2026-10-31T00:00:00.000",
-        "maxQuantity": null,
         "minQuantity": 2,
-        "startsAt": "2026-10-04T00:00:00.000",
-        "terms": "הרשת רשאית להפסיק את המבצע בכל עת ללא הודעה מוקדמת"
-      }
-    ],
-    "pipeline-punch": [
-      {
-        "clubOnly": false,
-        "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
-        "discountRate": 4.92,
-        "discountedPrice": 9.0,
-        "endsAt": "2026-10-31T00:00:00.000",
         "maxQuantity": null,
-        "minQuantity": 2,
         "startsAt": "2026-10-04T00:00:00.000",
-        "terms": "הרשת רשאית להפסיק את המבצע בכל עת ללא הודעה מוקדמת"
-      }
-    ],
-    "strawberry": [
-      {
-        "clubOnly": false,
-        "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
-        "discountRate": 4.92,
-        "discountedPrice": 9.0,
         "endsAt": "2026-10-31T00:00:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-10-04T00:00:00.000",
-        "terms": "הרשת רשאית להפסיק את המבצע בכל עת ללא הודעה מוקדמת"
+        "terms": "הרשת רשאית להפסיק את המבצע בכל עת ללא הודעה מוקדמת",
+        "clubOnly": false
       }
     ],
     "ultra": [
       {
-        "clubOnly": false,
         "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
         "discountRate": 4.92,
         "discountedPrice": 9.0,
-        "endsAt": "2026-10-31T00:00:00.000",
-        "maxQuantity": null,
         "minQuantity": 2,
+        "maxQuantity": null,
         "startsAt": "2026-10-04T00:00:00.000",
-        "terms": "הרשת רשאית להפסיק את המבצע בכל עת ללא הודעה מוקדמת"
+        "endsAt": "2026-10-31T00:00:00.000",
+        "terms": "הרשת רשאית להפסיק את המבצע בכל עת ללא הודעה מוקדמת",
+        "clubOnly": false
+      }
+    ],
+    "mango-loco": [
+      {
+        "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
+        "discountRate": 4.92,
+        "discountedPrice": 9.0,
+        "minQuantity": 2,
+        "maxQuantity": null,
+        "startsAt": "2026-10-04T00:00:00.000",
+        "endsAt": "2026-10-31T00:00:00.000",
+        "terms": "הרשת רשאית להפסיק את המבצע בכל עת ללא הודעה מוקדמת",
+        "clubOnly": false
+      }
+    ],
+    "pipeline-punch": [
+      {
+        "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
+        "discountRate": 4.92,
+        "discountedPrice": 9.0,
+        "minQuantity": 2,
+        "maxQuantity": null,
+        "startsAt": "2026-10-04T00:00:00.000",
+        "endsAt": "2026-10-31T00:00:00.000",
+        "terms": "הרשת רשאית להפסיק את המבצע בכל עת ללא הודעה מוקדמת",
+        "clubOnly": false
+      }
+    ],
+    "ultra-paradise": [
+      {
+        "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
+        "discountRate": 4.92,
+        "discountedPrice": 9.0,
+        "minQuantity": 2,
+        "maxQuantity": null,
+        "startsAt": "2026-10-04T00:00:00.000",
+        "endsAt": "2026-10-31T00:00:00.000",
+        "terms": "הרשת רשאית להפסיק את המבצע בכל עת ללא הודעה מוקדמת",
+        "clubOnly": false
       }
     ],
     "ultra-fiesta": [
       {
-        "clubOnly": false,
         "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
         "discountRate": 4.92,
         "discountedPrice": 9.0,
-        "endsAt": "2026-10-31T00:00:00.000",
-        "maxQuantity": null,
         "minQuantity": 2,
+        "maxQuantity": null,
         "startsAt": "2026-10-04T00:00:00.000",
-        "terms": "הרשת רשאית להפסיק את המבצע בכל עת ללא הודעה מוקדמת"
+        "endsAt": "2026-10-31T00:00:00.000",
+        "terms": "הרשת רשאית להפסיק את המבצע בכל עת ללא הודעה מוקדמת",
+        "clubOnly": false
       }
     ],
-    "ultra-paradise": [
+    "monarch": [
       {
-        "clubOnly": false,
         "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
         "discountRate": 4.92,
         "discountedPrice": 9.0,
-        "endsAt": "2026-10-31T00:00:00.000",
-        "maxQuantity": null,
         "minQuantity": 2,
-        "startsAt": "2026-10-04T00:00:00.000",
-        "terms": "הרשת רשאית להפסיק את המבצע בכל עת ללא הודעה מוקדמת"
-      }
-    ],
-    "ultra-peachy-keen": [
-      {
-        "clubOnly": false,
-        "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
-        "discountRate": 4.92,
-        "discountedPrice": 9.0,
-        "endsAt": "2026-10-31T00:00:00.000",
         "maxQuantity": null,
-        "minQuantity": 2,
         "startsAt": "2026-10-04T00:00:00.000",
-        "terms": "הרשת רשאית להפסיק את המבצע בכל עת ללא הודעה מוקדמת"
-      }
-    ]
-  },
-  "victory_new_source-80": {
-    "aussie-lemonade": [
-      {
-        "clubOnly": false,
-        "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
-        "discountRate": 4.92,
-        "discountedPrice": 9.0,
         "endsAt": "2026-10-31T00:00:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-10-04T00:00:00.000",
-        "terms": "הרשת רשאית להפסיק את המבצע בכל עת ללא הודעה מוקדמת"
-      }
-    ],
-    "full-zero": [
-      {
-        "clubOnly": false,
-        "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
-        "discountRate": 4.92,
-        "discountedPrice": 9.0,
-        "endsAt": "2026-10-31T00:00:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-10-04T00:00:00.000",
-        "terms": "הרשת רשאית להפסיק את המבצע בכל עת ללא הודעה מוקדמת"
+        "terms": "הרשת רשאית להפסיק את המבצע בכל עת ללא הודעה מוקדמת",
+        "clubOnly": false
       }
     ],
     "green-zero": [
       {
-        "clubOnly": false,
         "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
         "discountRate": 4.92,
         "discountedPrice": 9.0,
-        "endsAt": "2026-10-31T00:00:00.000",
-        "maxQuantity": null,
         "minQuantity": 2,
+        "maxQuantity": null,
         "startsAt": "2026-10-04T00:00:00.000",
-        "terms": "הרשת רשאית להפסיק את המבצע בכל עת ללא הודעה מוקדמת"
+        "endsAt": "2026-10-31T00:00:00.000",
+        "terms": "הרשת רשאית להפסיק את המבצע בכל עת ללא הודעה מוקדמת",
+        "clubOnly": false
       }
     ],
-    "mango-loco": [
+    "aussie-lemonade": [
       {
-        "clubOnly": false,
         "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
         "discountRate": 4.92,
         "discountedPrice": 9.0,
-        "endsAt": "2026-10-31T00:00:00.000",
-        "maxQuantity": null,
         "minQuantity": 2,
+        "maxQuantity": null,
         "startsAt": "2026-10-04T00:00:00.000",
-        "terms": "הרשת רשאית להפסיק את המבצע בכל עת ללא הודעה מוקדמת"
+        "endsAt": "2026-10-31T00:00:00.000",
+        "terms": "הרשת רשאית להפסיק את המבצע בכל עת ללא הודעה מוקדמת",
+        "clubOnly": false
       }
     ],
-    "original": [
+    "full-zero": [
       {
-        "clubOnly": false,
         "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
         "discountRate": 4.92,
         "discountedPrice": 9.0,
-        "endsAt": "2026-10-31T00:00:00.000",
-        "maxQuantity": null,
         "minQuantity": 2,
+        "maxQuantity": null,
         "startsAt": "2026-10-04T00:00:00.000",
-        "terms": "הרשת רשאית להפסיק את המבצע בכל עת ללא הודעה מוקדמת"
+        "endsAt": "2026-10-31T00:00:00.000",
+        "terms": "הרשת רשאית להפסיק את המבצע בכל עת ללא הודעה מוקדמת",
+        "clubOnly": false
       }
-    ],
-    "pipeline-punch": [
+    ]
+  },
+  "victory_new_source-57": {
+    "strawberry": [
       {
-        "clubOnly": false,
         "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
         "discountRate": 4.92,
         "discountedPrice": 9.0,
-        "endsAt": "2026-10-31T00:00:00.000",
-        "maxQuantity": null,
         "minQuantity": 2,
-        "startsAt": "2026-10-04T00:00:00.000",
-        "terms": "הרשת רשאית להפסיק את המבצע בכל עת ללא הודעה מוקדמת"
-      }
-    ],
-    "ultra": [
-      {
-        "clubOnly": false,
-        "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
-        "discountRate": 4.92,
-        "discountedPrice": 9.0,
-        "endsAt": "2026-10-31T00:00:00.000",
         "maxQuantity": null,
-        "minQuantity": 2,
         "startsAt": "2026-10-04T00:00:00.000",
-        "terms": "הרשת רשאית להפסיק את המבצע בכל עת ללא הודעה מוקדמת"
-      }
-    ],
-    "ultra-paradise": [
-      {
-        "clubOnly": false,
-        "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
-        "discountRate": 4.92,
-        "discountedPrice": 9.0,
         "endsAt": "2026-10-31T00:00:00.000",
-        "maxQuantity": null,
-        "minQuantity": 2,
-        "startsAt": "2026-10-04T00:00:00.000",
-        "terms": "הרשת רשאית להפסיק את המבצע בכל עת ללא הודעה מוקדמת"
+        "terms": "הרשת רשאית להפסיק את המבצע בכל עת ללא הודעה מוקדמת",
+        "clubOnly": false
       }
     ],
     "ultra-peachy-keen": [
       {
-        "clubOnly": false,
         "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
         "discountRate": 4.92,
         "discountedPrice": 9.0,
-        "endsAt": "2026-10-31T00:00:00.000",
-        "maxQuantity": null,
         "minQuantity": 2,
+        "maxQuantity": null,
         "startsAt": "2026-10-04T00:00:00.000",
-        "terms": "הרשת רשאית להפסיק את המבצע בכל עת ללא הודעה מוקדמת"
+        "endsAt": "2026-10-31T00:00:00.000",
+        "terms": "הרשת רשאית להפסיק את המבצע בכל עת ללא הודעה מוקדמת",
+        "clubOnly": false
+      }
+    ],
+    "original": [
+      {
+        "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
+        "discountRate": 4.92,
+        "discountedPrice": 9.0,
+        "minQuantity": 2,
+        "maxQuantity": null,
+        "startsAt": "2026-10-04T00:00:00.000",
+        "endsAt": "2026-10-31T00:00:00.000",
+        "terms": "הרשת רשאית להפסיק את המבצע בכל עת ללא הודעה מוקדמת",
+        "clubOnly": false
+      }
+    ],
+    "rossi": [
+      {
+        "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
+        "discountRate": 4.92,
+        "discountedPrice": 9.0,
+        "minQuantity": 2,
+        "maxQuantity": null,
+        "startsAt": "2026-10-04T00:00:00.000",
+        "endsAt": "2026-10-31T00:00:00.000",
+        "terms": "הרשת רשאית להפסיק את המבצע בכל עת ללא הודעה מוקדמת",
+        "clubOnly": false
+      }
+    ],
+    "ultra": [
+      {
+        "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
+        "discountRate": 4.92,
+        "discountedPrice": 9.0,
+        "minQuantity": 2,
+        "maxQuantity": null,
+        "startsAt": "2026-10-04T00:00:00.000",
+        "endsAt": "2026-10-31T00:00:00.000",
+        "terms": "הרשת רשאית להפסיק את המבצע בכל עת ללא הודעה מוקדמת",
+        "clubOnly": false
+      }
+    ],
+    "pipeline-punch": [
+      {
+        "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
+        "discountRate": 4.92,
+        "discountedPrice": 9.0,
+        "minQuantity": 2,
+        "maxQuantity": null,
+        "startsAt": "2026-10-04T00:00:00.000",
+        "endsAt": "2026-10-31T00:00:00.000",
+        "terms": "הרשת רשאית להפסיק את המבצע בכל עת ללא הודעה מוקדמת",
+        "clubOnly": false
+      }
+    ],
+    "ultra-paradise": [
+      {
+        "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
+        "discountRate": 4.92,
+        "discountedPrice": 9.0,
+        "minQuantity": 2,
+        "maxQuantity": null,
+        "startsAt": "2026-10-04T00:00:00.000",
+        "endsAt": "2026-10-31T00:00:00.000",
+        "terms": "הרשת רשאית להפסיק את המבצע בכל עת ללא הודעה מוקדמת",
+        "clubOnly": false
+      }
+    ],
+    "ultra-fiesta": [
+      {
+        "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
+        "discountRate": 4.92,
+        "discountedPrice": 9.0,
+        "minQuantity": 2,
+        "maxQuantity": null,
+        "startsAt": "2026-10-04T00:00:00.000",
+        "endsAt": "2026-10-31T00:00:00.000",
+        "terms": "הרשת רשאית להפסיק את המבצע בכל עת ללא הודעה מוקדמת",
+        "clubOnly": false
+      }
+    ],
+    "monarch": [
+      {
+        "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
+        "discountRate": 4.92,
+        "discountedPrice": 9.0,
+        "minQuantity": 2,
+        "maxQuantity": null,
+        "startsAt": "2026-10-04T00:00:00.000",
+        "endsAt": "2026-10-31T00:00:00.000",
+        "terms": "הרשת רשאית להפסיק את המבצע בכל עת ללא הודעה מוקדמת",
+        "clubOnly": false
+      }
+    ],
+    "green-zero": [
+      {
+        "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
+        "discountRate": 4.92,
+        "discountedPrice": 9.0,
+        "minQuantity": 2,
+        "maxQuantity": null,
+        "startsAt": "2026-10-04T00:00:00.000",
+        "endsAt": "2026-10-31T00:00:00.000",
+        "terms": "הרשת רשאית להפסיק את המבצע בכל עת ללא הודעה מוקדמת",
+        "clubOnly": false
+      }
+    ],
+    "full-zero": [
+      {
+        "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
+        "discountRate": 4.92,
+        "discountedPrice": 9.0,
+        "minQuantity": 2,
+        "maxQuantity": null,
+        "startsAt": "2026-10-04T00:00:00.000",
+        "endsAt": "2026-10-31T00:00:00.000",
+        "terms": "הרשת רשאית להפסיק את המבצע בכל עת ללא הודעה מוקדמת",
+        "clubOnly": false
+      }
+    ]
+  },
+  "victory_new_source-80": {
+    "ultra-peachy-keen": [
+      {
+        "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
+        "discountRate": 4.92,
+        "discountedPrice": 9.0,
+        "minQuantity": 2,
+        "maxQuantity": null,
+        "startsAt": "2026-10-04T00:00:00.000",
+        "endsAt": "2026-10-31T00:00:00.000",
+        "terms": "הרשת רשאית להפסיק את המבצע בכל עת ללא הודעה מוקדמת",
+        "clubOnly": false
+      }
+    ],
+    "original": [
+      {
+        "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
+        "discountRate": 4.92,
+        "discountedPrice": 9.0,
+        "minQuantity": 2,
+        "maxQuantity": null,
+        "startsAt": "2026-10-04T00:00:00.000",
+        "endsAt": "2026-10-31T00:00:00.000",
+        "terms": "הרשת רשאית להפסיק את המבצע בכל עת ללא הודעה מוקדמת",
+        "clubOnly": false
+      }
+    ],
+    "ultra": [
+      {
+        "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
+        "discountRate": 4.92,
+        "discountedPrice": 9.0,
+        "minQuantity": 2,
+        "maxQuantity": null,
+        "startsAt": "2026-10-04T00:00:00.000",
+        "endsAt": "2026-10-31T00:00:00.000",
+        "terms": "הרשת רשאית להפסיק את המבצע בכל עת ללא הודעה מוקדמת",
+        "clubOnly": false
+      }
+    ],
+    "mango-loco": [
+      {
+        "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
+        "discountRate": 4.92,
+        "discountedPrice": 9.0,
+        "minQuantity": 2,
+        "maxQuantity": null,
+        "startsAt": "2026-10-04T00:00:00.000",
+        "endsAt": "2026-10-31T00:00:00.000",
+        "terms": "הרשת רשאית להפסיק את המבצע בכל עת ללא הודעה מוקדמת",
+        "clubOnly": false
+      }
+    ],
+    "pipeline-punch": [
+      {
+        "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
+        "discountRate": 4.92,
+        "discountedPrice": 9.0,
+        "minQuantity": 2,
+        "maxQuantity": null,
+        "startsAt": "2026-10-04T00:00:00.000",
+        "endsAt": "2026-10-31T00:00:00.000",
+        "terms": "הרשת רשאית להפסיק את המבצע בכל עת ללא הודעה מוקדמת",
+        "clubOnly": false
+      }
+    ],
+    "ultra-paradise": [
+      {
+        "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
+        "discountRate": 4.92,
+        "discountedPrice": 9.0,
+        "minQuantity": 2,
+        "maxQuantity": null,
+        "startsAt": "2026-10-04T00:00:00.000",
+        "endsAt": "2026-10-31T00:00:00.000",
+        "terms": "הרשת רשאית להפסיק את המבצע בכל עת ללא הודעה מוקדמת",
+        "clubOnly": false
+      }
+    ],
+    "green-zero": [
+      {
+        "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
+        "discountRate": 4.92,
+        "discountedPrice": 9.0,
+        "minQuantity": 2,
+        "maxQuantity": null,
+        "startsAt": "2026-10-04T00:00:00.000",
+        "endsAt": "2026-10-31T00:00:00.000",
+        "terms": "הרשת רשאית להפסיק את המבצע בכל עת ללא הודעה מוקדמת",
+        "clubOnly": false
+      }
+    ],
+    "aussie-lemonade": [
+      {
+        "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
+        "discountRate": 4.92,
+        "discountedPrice": 9.0,
+        "minQuantity": 2,
+        "maxQuantity": null,
+        "startsAt": "2026-10-04T00:00:00.000",
+        "endsAt": "2026-10-31T00:00:00.000",
+        "terms": "הרשת רשאית להפסיק את המבצע בכל עת ללא הודעה מוקדמת",
+        "clubOnly": false
+      }
+    ],
+    "full-zero": [
+      {
+        "description": "2ב18 משקה אנרגיה מונסטר 500 מ\"ל                 קבוע",
+        "discountRate": 4.92,
+        "discountedPrice": 9.0,
+        "minQuantity": 2,
+        "maxQuantity": null,
+        "startsAt": "2026-10-04T00:00:00.000",
+        "endsAt": "2026-10-31T00:00:00.000",
+        "terms": "הרשת רשאית להפסיק את המבצע בכל עת ללא הודעה מוקדמת",
+        "clubOnly": false
       }
     ]
   },
