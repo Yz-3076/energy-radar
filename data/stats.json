@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-14T16:59:40.995058+00:00",
+  "generated_at": "2026-10-14T21:31:56.886185+00:00",
   "chains_covered": [
     "SHUFERSAL",
     "VICTORY_NEW_SOURCE",
@@ -31,30 +31,30 @@
     "WOLT"
   ],
   "store_count": 1414,
-  "total_observations": 897578,
-  "observations_this_run": 11417,
+  "total_observations": 908024,
+  "observations_this_run": 10446,
   "listings_per_variant": {
     "ultra": 1156,
-    "mango-loco": 813,
+    "mango-loco": 814,
     "ultra-paradise": 991,
     "ultra-fiesta": 554,
     "original": 1222,
     "full-zero": 424,
-    "ultra-peachy-keen": 475,
+    "ultra-peachy-keen": 474,
     "strawberry": 651,
     "rossi": 166,
     "pipeline-punch": 537,
     "monarch": 395,
-    "green-zero": 476,
-    "aussie-lemonade": 449
+    "green-zero": 478,
+    "aussie-lemonade": 448
   },
   "depletion_breakdown": {
-    "healthy": 3424,
-    "slowing": 3562,
-    "insufficient_data": 1103,
-    "likely_out": 220
+    "healthy": 3038,
+    "slowing": 3943,
+    "insufficient_data": 1098,
+    "likely_out": 231
   },
-  "live_listings": 8309,
+  "live_listings": 8310,
   "flavours_on_shelves": 13,
   "stores_per_chain": {
     "Super Pharm": 257,
@@ -73,8 +73,8 @@
     "Super Sapir": 24,
     "Zol Vebegadol": 22,
     "City Market Kiryatgat": 22,
-    "Osher Ad": 21,
     "Maayan 2000": 21,
+    "Osher Ad": 21,
     "Yohananof": 15,
     "King Store": 13,
     "Bareket": 11,
@@ -102,13 +102,13 @@
       "min": 9.9,
       "median": 9.9,
       "max": 12.9,
-      "listings": 774
+      "listings": 773
     },
     "Fresh Market And Super Dosh": {
       "min": 9.5,
       "median": 9.9,
       "max": 10.9,
-      "listings": 318
+      "listings": 319
     },
     "Hazi Hinam": {
       "min": 8.9,
@@ -234,7 +234,7 @@
       "min": 10.0,
       "median": 13.0,
       "max": 13.0,
-      "listings": 1740
+      "listings": 1741
     },
     "Yohananof": {
       "min": 7.9,
@@ -254,7 +254,7 @@
       "min": 7.9,
       "median": 10.9,
       "max": 13.0,
-      "listings": 449
+      "listings": 448
     },
     "full-zero": {
       "min": 6.8,
@@ -266,13 +266,13 @@
       "min": 6.8,
       "median": 10.5,
       "max": 13.0,
-      "listings": 476
+      "listings": 478
     },
     "mango-loco": {
       "min": 6.8,
       "median": 9.9,
       "max": 13.0,
-      "listings": 813
+      "listings": 814
     },
     "monarch": {
       "min": 6.8,
@@ -326,7 +326,7 @@
       "min": 6.8,
       "median": 9.9,
       "max": 14.9,
-      "listings": 475
+      "listings": 474
     }
   },
   "cheapest_listing": {
@@ -1130,8 +1130,8 @@
     },
     {
       "date": "2026-10-14",
-      "observations": 32118,
-      "stores": 1408,
+      "observations": 42564,
+      "stores": 1414,
       "min": 4.9,
       "median": 9.9,
       "max": 14.9,
