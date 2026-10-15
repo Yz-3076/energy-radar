@@ -1,50 +1,50 @@
 {
   "BAREKET:10": {
-    "fetchedAt": "2026-10-14T21:55:50.244294+00:00",
+    "fetchedAt": "2026-10-15T21:46:06.667496+00:00",
     "promos": {}
   },
   "BAREKET:2": {
-    "fetchedAt": "2026-10-14T21:55:49.368081+00:00",
+    "fetchedAt": "2026-10-15T21:46:06.531256+00:00",
     "promos": {}
   },
   "BAREKET:5": {
-    "fetchedAt": "2026-10-14T21:55:46.386012+00:00",
+    "fetchedAt": "2026-10-15T21:46:09.914485+00:00",
     "promos": {}
   },
   "BAREKET:6": {
-    "fetchedAt": "2026-10-14T21:55:48.513835+00:00",
+    "fetchedAt": "2026-10-15T21:46:06.596095+00:00",
     "promos": {}
   },
   "BAREKET:60": {
-    "fetchedAt": "2026-10-14T21:55:46.272161+00:00",
+    "fetchedAt": "2026-10-15T21:46:09.344208+00:00",
     "promos": {}
   },
   "BAREKET:61": {
-    "fetchedAt": "2026-10-14T21:55:46.229602+00:00",
+    "fetchedAt": "2026-10-15T21:46:09.844625+00:00",
     "promos": {}
   },
   "BAREKET:62": {
-    "fetchedAt": "2026-10-14T21:55:50.001214+00:00",
+    "fetchedAt": "2026-10-15T21:46:09.178266+00:00",
     "promos": {}
   },
   "BAREKET:63": {
-    "fetchedAt": "2026-10-14T21:55:49.409079+00:00",
+    "fetchedAt": "2026-10-15T21:46:09.446547+00:00",
     "promos": {}
   },
   "BAREKET:65": {
-    "fetchedAt": "2026-10-14T21:55:45.441777+00:00",
+    "fetchedAt": "2026-10-15T21:46:09.233033+00:00",
     "promos": {}
   },
   "BAREKET:7": {
-    "fetchedAt": "2026-10-14T21:55:50.087373+00:00",
+    "fetchedAt": "2026-10-15T21:46:06.169119+00:00",
     "promos": {}
   },
   "BAREKET:9": {
-    "fetchedAt": "2026-10-14T21:55:50.337080+00:00",
+    "fetchedAt": "2026-10-15T21:46:09.998356+00:00",
     "promos": {}
   },
   "DOR_ALON:401": {
-    "fetchedAt": "2026-10-14T21:53:27.799527+00:00",
+    "fetchedAt": "2026-10-15T21:44:00.124779+00:00",
     "promos": {
       "green-zero": [
         {
@@ -169,7 +169,7 @@
     }
   },
   "DOR_ALON:402": {
-    "fetchedAt": "2026-10-14T17:43:18.098032+00:00",
+    "fetchedAt": "2026-10-15T21:43:45.331311+00:00",
     "promos": {
       "green-zero": [
         {
@@ -294,7 +294,7 @@
     }
   },
   "DOR_ALON:403": {
-    "fetchedAt": "2026-10-14T17:42:38.826963+00:00",
+    "fetchedAt": "2026-10-15T21:43:38.030922+00:00",
     "promos": {
       "green-zero": [
         {
@@ -419,7 +419,7 @@
     }
   },
   "DOR_ALON:404": {
-    "fetchedAt": "2026-10-14T17:42:38.684010+00:00",
+    "fetchedAt": "2026-10-15T21:43:35.047460+00:00",
     "promos": {
       "green-zero": [
         {
@@ -544,7 +544,7 @@
     }
   },
   "DOR_ALON:415": {
-    "fetchedAt": "2026-10-14T17:43:11.773594+00:00",
+    "fetchedAt": "2026-10-15T21:43:51.855747+00:00",
     "promos": {
       "green-zero": [
         {
@@ -669,7 +669,7 @@
     }
   },
   "DOR_ALON:501": {
-    "fetchedAt": "2026-10-14T21:53:28.010779+00:00",
+    "fetchedAt": "2026-10-15T21:44:02.638869+00:00",
     "promos": {
       "green-zero": [
         {
@@ -794,7 +794,7 @@
     }
   },
   "DOR_ALON:503": {
-    "fetchedAt": "2026-10-14T17:42:50.712442+00:00",
+    "fetchedAt": "2026-10-15T21:43:54.732956+00:00",
     "promos": {
       "green-zero": [
         {
@@ -919,7 +919,7 @@
     }
   },
   "DOR_ALON:504": {
-    "fetchedAt": "2026-10-14T17:43:21.013764+00:00",
+    "fetchedAt": "2026-10-15T21:43:46.507011+00:00",
     "promos": {
       "green-zero": [
         {
@@ -1044,7 +1044,7 @@
     }
   },
   "DOR_ALON:505": {
-    "fetchedAt": "2026-10-14T17:42:42.517299+00:00",
+    "fetchedAt": "2026-10-15T21:43:42.721730+00:00",
     "promos": {
       "green-zero": [
         {
@@ -1169,7 +1169,7 @@
     }
   },
   "DOR_ALON:507": {
-    "fetchedAt": "2026-10-14T17:43:02.379242+00:00",
+    "fetchedAt": "2026-10-15T21:43:48.965676+00:00",
     "promos": {
       "green-zero": [
         {
@@ -1294,7 +1294,7 @@
     }
   },
   "DOR_ALON:508": {
-    "fetchedAt": "2026-10-14T17:42:56.742814+00:00",
+    "fetchedAt": "2026-10-15T21:43:51.733759+00:00",
     "promos": {
       "green-zero": [
         {
@@ -1419,7 +1419,7 @@
     }
   },
   "DOR_ALON:510": {
-    "fetchedAt": "2026-10-14T17:42:31.188236+00:00",
+    "fetchedAt": "2026-10-15T21:43:28.854846+00:00",
     "promos": {
       "green-zero": [
         {
@@ -1544,7 +1544,7 @@
     }
   },
   "DOR_ALON:511": {
-    "fetchedAt": "2026-10-14T17:42:47.925435+00:00",
+    "fetchedAt": "2026-10-15T21:43:48.813268+00:00",
     "promos": {
       "green-zero": [
         {
@@ -1794,7 +1794,7 @@
     }
   },
   "DOR_ALON:513": {
-    "fetchedAt": "2026-10-14T17:42:42.784511+00:00",
+    "fetchedAt": "2026-10-15T21:43:25.536869+00:00",
     "promos": {
       "green-zero": [
         {
@@ -1919,7 +1919,7 @@
     }
   },
   "DOR_ALON:514": {
-    "fetchedAt": "2026-10-14T21:53:26.861615+00:00",
+    "fetchedAt": "2026-10-15T21:43:48.672760+00:00",
     "promos": {
       "green-zero": [
         {
@@ -2044,7 +2044,7 @@
     }
   },
   "DOR_ALON:517": {
-    "fetchedAt": "2026-10-14T21:53:33.145698+00:00",
+    "fetchedAt": "2026-10-15T21:43:41.397154+00:00",
     "promos": {
       "green-zero": [
         {
@@ -2169,7 +2169,7 @@
     }
   },
   "DOR_ALON:518": {
-    "fetchedAt": "2026-10-14T17:43:25.059193+00:00",
+    "fetchedAt": "2026-10-15T21:43:31.488418+00:00",
     "promos": {
       "green-zero": [
         {
@@ -2294,7 +2294,7 @@
     }
   },
   "DOR_ALON:519": {
-    "fetchedAt": "2026-10-14T17:42:50.426417+00:00",
+    "fetchedAt": "2026-10-15T21:43:54.580187+00:00",
     "promos": {
       "green-zero": [
         {
@@ -2419,7 +2419,7 @@
     }
   },
   "DOR_ALON:524": {
-    "fetchedAt": "2026-10-14T17:42:59.728952+00:00",
+    "fetchedAt": "2026-10-15T21:44:02.774224+00:00",
     "promos": {
       "green-zero": [
         {
@@ -2544,7 +2544,7 @@
     }
   },
   "DOR_ALON:529": {
-    "fetchedAt": "2026-10-14T17:42:34.015334+00:00",
+    "fetchedAt": "2026-10-15T21:43:57.230407+00:00",
     "promos": {
       "green-zero": [
         {
@@ -2669,7 +2669,7 @@
     }
   },
   "DOR_ALON:531": {
-    "fetchedAt": "2026-10-14T17:43:26.389468+00:00",
+    "fetchedAt": "2026-10-15T21:43:52.149016+00:00",
     "promos": {
       "green-zero": [
         {
@@ -2794,7 +2794,7 @@
     }
   },
   "DOR_ALON:533": {
-    "fetchedAt": "2026-10-14T21:53:27.912529+00:00",
+    "fetchedAt": "2026-10-15T21:43:40.622985+00:00",
     "promos": {
       "green-zero": [
         {
@@ -2919,7 +2919,7 @@
     }
   },
   "DOR_ALON:534": {
-    "fetchedAt": "2026-10-14T17:43:30.514514+00:00",
+    "fetchedAt": "2026-10-15T21:43:36.909055+00:00",
     "promos": {
       "green-zero": [
         {
@@ -3044,7 +3044,7 @@
     }
   },
   "DOR_ALON:535": {
-    "fetchedAt": "2026-10-14T21:53:33.034377+00:00",
+    "fetchedAt": "2026-10-15T21:43:56.661952+00:00",
     "promos": {
       "green-zero": [
         {
@@ -3169,7 +3169,7 @@
     }
   },
   "DOR_ALON:536": {
-    "fetchedAt": "2026-10-14T17:42:32.986961+00:00",
+    "fetchedAt": "2026-10-15T21:43:39.713960+00:00",
     "promos": {
       "green-zero": [
         {
@@ -3294,7 +3294,7 @@
     }
   },
   "DOR_ALON:537": {
-    "fetchedAt": "2026-10-14T17:43:30.680960+00:00",
+    "fetchedAt": "2026-10-15T21:43:59.824182+00:00",
     "promos": {
       "green-zero": [
         {
@@ -3419,7 +3419,7 @@
     }
   },
   "DOR_ALON:540": {
-    "fetchedAt": "2026-10-14T17:42:54.795116+00:00",
+    "fetchedAt": "2026-10-15T21:43:34.347586+00:00",
     "promos": {
       "green-zero": [
         {
@@ -3544,7 +3544,7 @@
     }
   },
   "DOR_ALON:544": {
-    "fetchedAt": "2026-10-14T17:43:14.371091+00:00",
+    "fetchedAt": "2026-10-15T21:43:54.440195+00:00",
     "promos": {
       "green-zero": [
         {
@@ -3794,7 +3794,7 @@
     }
   },
   "DOR_ALON:549": {
-    "fetchedAt": "2026-10-14T17:43:33.259799+00:00",
+    "fetchedAt": "2026-10-15T21:43:35.596392+00:00",
     "promos": {
       "green-zero": [
         {
@@ -3919,7 +3919,7 @@
     }
   },
   "DOR_ALON:551": {
-    "fetchedAt": "2026-10-14T17:43:01.594870+00:00",
+    "fetchedAt": "2026-10-15T21:44:00.416276+00:00",
     "promos": {
       "green-zero": [
         {
@@ -4044,7 +4044,7 @@
     }
   },
   "DOR_ALON:554": {
-    "fetchedAt": "2026-10-14T17:43:05.086845+00:00",
+    "fetchedAt": "2026-10-15T21:43:36.760165+00:00",
     "promos": {
       "green-zero": [
         {
@@ -4169,7 +4169,7 @@
     }
   },
   "DOR_ALON:556": {
-    "fetchedAt": "2026-10-14T17:42:36.346061+00:00",
+    "fetchedAt": "2026-10-15T21:43:30.115874+00:00",
     "promos": {
       "green-zero": [
         {
@@ -4294,7 +4294,7 @@
     }
   },
   "DOR_ALON:558": {
-    "fetchedAt": "2026-10-14T17:42:34.149313+00:00",
+    "fetchedAt": "2026-10-15T21:43:35.865686+00:00",
     "promos": {
       "green-zero": [
         {
@@ -4419,7 +4419,7 @@
     }
   },
   "DOR_ALON:560": {
-    "fetchedAt": "2026-10-14T17:43:05.609707+00:00",
+    "fetchedAt": "2026-10-15T21:43:35.319327+00:00",
     "promos": {
       "green-zero": [
         {
@@ -4544,7 +4544,7 @@
     }
   },
   "DOR_ALON:563": {
-    "fetchedAt": "2026-10-14T21:53:26.753371+00:00",
+    "fetchedAt": "2026-10-15T21:44:02.064642+00:00",
     "promos": {
       "green-zero": [
         {
@@ -4669,7 +4669,7 @@
     }
   },
   "DOR_ALON:564": {
-    "fetchedAt": "2026-10-14T17:43:05.454077+00:00",
+    "fetchedAt": "2026-10-15T21:43:42.264556+00:00",
     "promos": {
       "green-zero": [
         {
@@ -4794,7 +4794,7 @@
     }
   },
   "DOR_ALON:566": {
-    "fetchedAt": "2026-10-14T17:42:53.528208+00:00",
+    "fetchedAt": "2026-10-15T21:43:48.507857+00:00",
     "promos": {
       "green-zero": [
         {
@@ -4919,7 +4919,7 @@
     }
   },
   "DOR_ALON:568": {
-    "fetchedAt": "2026-10-14T17:42:35.578222+00:00",
+    "fetchedAt": "2026-10-15T21:43:57.355770+00:00",
     "promos": {
       "green-zero": [
         {
@@ -5044,7 +5044,7 @@
     }
   },
   "DOR_ALON:570": {
-    "fetchedAt": "2026-10-14T17:42:48.321401+00:00",
+    "fetchedAt": "2026-10-15T21:43:41.022571+00:00",
     "promos": {
       "green-zero": [
         {
@@ -5169,7 +5169,7 @@
     }
   },
   "DOR_ALON:571": {
-    "fetchedAt": "2026-10-14T17:42:39.462460+00:00",
+    "fetchedAt": "2026-10-15T21:44:00.265310+00:00",
     "promos": {
       "green-zero": [
         {
@@ -5294,7 +5294,7 @@
     }
   },
   "DOR_ALON:576": {
-    "fetchedAt": "2026-10-14T17:43:32.308776+00:00",
+    "fetchedAt": "2026-10-15T21:43:23.970857+00:00",
     "promos": {
       "green-zero": [
         {
@@ -5419,7 +5419,7 @@
     }
   },
   "DOR_ALON:577": {
-    "fetchedAt": "2026-10-14T17:43:27.824223+00:00",
+    "fetchedAt": "2026-10-15T21:43:54.272344+00:00",
     "promos": {
       "green-zero": [
         {
@@ -5544,7 +5544,7 @@
     }
   },
   "DOR_ALON:578": {
-    "fetchedAt": "2026-10-14T17:42:28.459981+00:00",
+    "fetchedAt": "2026-10-15T21:43:27.194025+00:00",
     "promos": {
       "green-zero": [
         {
@@ -5669,7 +5669,7 @@
     }
   },
   "DOR_ALON:579": {
-    "fetchedAt": "2026-10-14T17:43:26.555475+00:00",
+    "fetchedAt": "2026-10-15T21:43:40.876189+00:00",
     "promos": {
       "green-zero": [
         {
@@ -5794,7 +5794,7 @@
     }
   },
   "DOR_ALON:580": {
-    "fetchedAt": "2026-10-14T17:42:33.321044+00:00",
+    "fetchedAt": "2026-10-15T21:43:32.710570+00:00",
     "promos": {
       "green-zero": [
         {
@@ -6044,7 +6044,7 @@
     }
   },
   "DOR_ALON:582": {
-    "fetchedAt": "2026-10-14T17:43:09.640793+00:00",
+    "fetchedAt": "2026-10-15T21:43:31.094866+00:00",
     "promos": {
       "green-zero": [
         {
@@ -6169,7 +6169,7 @@
     }
   },
   "DOR_ALON:583": {
-    "fetchedAt": "2026-10-14T17:42:59.226748+00:00",
+    "fetchedAt": "2026-10-15T21:43:43.690470+00:00",
     "promos": {
       "green-zero": [
         {
@@ -6294,7 +6294,7 @@
     }
   },
   "DOR_ALON:591": {
-    "fetchedAt": "2026-10-14T17:43:27.982599+00:00",
+    "fetchedAt": "2026-10-15T21:43:51.157100+00:00",
     "promos": {
       "green-zero": [
         {
@@ -6419,7 +6419,7 @@
     }
   },
   "DOR_ALON:594": {
-    "fetchedAt": "2026-10-14T21:53:33.225481+00:00",
+    "fetchedAt": "2026-10-15T21:43:25.926608+00:00",
     "promos": {
       "green-zero": [
         {
@@ -6544,7 +6544,7 @@
     }
   },
   "DOR_ALON:595": {
-    "fetchedAt": "2026-10-14T17:43:02.811744+00:00",
+    "fetchedAt": "2026-10-15T21:43:29.399659+00:00",
     "promos": {
       "green-zero": [
         {
@@ -6669,7 +6669,7 @@
     }
   },
   "DOR_ALON:596": {
-    "fetchedAt": "2026-10-14T17:42:53.998597+00:00",
+    "fetchedAt": "2026-10-15T21:43:57.494247+00:00",
     "promos": {
       "green-zero": [
         {
@@ -6794,7 +6794,7 @@
     }
   },
   "DOR_ALON:597": {
-    "fetchedAt": "2026-10-14T17:43:20.843137+00:00",
+    "fetchedAt": "2026-10-15T21:43:30.256007+00:00",
     "promos": {
       "green-zero": [
         {
@@ -6919,7 +6919,7 @@
     }
   },
   "DOR_ALON:599": {
-    "fetchedAt": "2026-10-14T17:43:08.318858+00:00",
+    "fetchedAt": "2026-10-15T21:43:46.221482+00:00",
     "promos": {
       "green-zero": [
         {
@@ -7157,7 +7157,7 @@
     }
   },
   "DOR_ALON:652": {
-    "fetchedAt": "2026-10-14T17:42:55.953488+00:00",
+    "fetchedAt": "2026-10-15T21:43:29.662594+00:00",
     "promos": {
       "green-zero": [
         {
@@ -13031,43 +13031,43 @@
     }
   },
   "FRESH_MARKET_AND_SUPER_DOSH:1": {
-    "fetchedAt": "2026-10-14T21:55:07.990396+00:00",
+    "fetchedAt": "2026-10-15T21:45:20.076680+00:00",
     "promos": {}
   },
   "FRESH_MARKET_AND_SUPER_DOSH:11": {
-    "fetchedAt": "2026-10-14T21:55:02.323712+00:00",
+    "fetchedAt": "2026-10-15T21:45:18.022632+00:00",
     "promos": {}
   },
   "FRESH_MARKET_AND_SUPER_DOSH:12": {
-    "fetchedAt": "2026-10-14T21:55:01.449616+00:00",
+    "fetchedAt": "2026-10-15T21:45:15.717435+00:00",
     "promos": {}
   },
   "FRESH_MARKET_AND_SUPER_DOSH:14": {
-    "fetchedAt": "2026-10-14T21:54:53.163803+00:00",
+    "fetchedAt": "2026-10-15T21:45:31.954809+00:00",
     "promos": {}
   },
   "FRESH_MARKET_AND_SUPER_DOSH:17": {
-    "fetchedAt": "2026-10-14T21:55:00.945410+00:00",
+    "fetchedAt": "2026-10-15T21:45:18.455494+00:00",
     "promos": {}
   },
   "FRESH_MARKET_AND_SUPER_DOSH:2": {
-    "fetchedAt": "2026-10-14T21:55:05.033572+00:00",
+    "fetchedAt": "2026-10-15T21:45:34.863519+00:00",
     "promos": {}
   },
   "FRESH_MARKET_AND_SUPER_DOSH:20": {
-    "fetchedAt": "2026-10-14T21:55:02.089190+00:00",
+    "fetchedAt": "2026-10-15T21:45:24.728431+00:00",
     "promos": {}
   },
   "FRESH_MARKET_AND_SUPER_DOSH:21": {
-    "fetchedAt": "2026-10-14T21:54:50.084968+00:00",
+    "fetchedAt": "2026-10-15T21:45:31.654646+00:00",
     "promos": {}
   },
   "FRESH_MARKET_AND_SUPER_DOSH:22": {
-    "fetchedAt": "2026-10-14T21:54:43.993473+00:00",
+    "fetchedAt": "2026-10-15T21:45:22.301027+00:00",
     "promos": {}
   },
   "FRESH_MARKET_AND_SUPER_DOSH:23": {
-    "fetchedAt": "2026-10-14T21:54:52.585924+00:00",
+    "fetchedAt": "2026-10-15T21:45:35.197783+00:00",
     "promos": {}
   },
   "FRESH_MARKET_AND_SUPER_DOSH:24": {
@@ -13075,7 +13075,7 @@
     "promos": {}
   },
   "FRESH_MARKET_AND_SUPER_DOSH:25": {
-    "fetchedAt": "2026-10-14T21:55:05.141711+00:00",
+    "fetchedAt": "2026-10-15T21:45:30.944590+00:00",
     "promos": {}
   },
   "FRESH_MARKET_AND_SUPER_DOSH:26": {
@@ -13083,15 +13083,15 @@
     "promos": {}
   },
   "FRESH_MARKET_AND_SUPER_DOSH:27": {
-    "fetchedAt": "2026-10-14T21:55:04.765014+00:00",
+    "fetchedAt": "2026-10-15T21:45:18.755806+00:00",
     "promos": {}
   },
   "FRESH_MARKET_AND_SUPER_DOSH:28": {
-    "fetchedAt": "2026-10-14T21:54:55.710366+00:00",
+    "fetchedAt": "2026-10-15T21:45:25.789939+00:00",
     "promos": {}
   },
   "FRESH_MARKET_AND_SUPER_DOSH:29": {
-    "fetchedAt": "2026-10-14T21:54:55.988631+00:00",
+    "fetchedAt": "2026-10-15T21:45:10.230271+00:00",
     "promos": {}
   },
   "FRESH_MARKET_AND_SUPER_DOSH:3": {
@@ -13103,27 +13103,27 @@
     "promos": {}
   },
   "FRESH_MARKET_AND_SUPER_DOSH:32": {
-    "fetchedAt": "2026-10-14T21:54:46.476930+00:00",
+    "fetchedAt": "2026-10-15T21:45:24.188507+00:00",
     "promos": {}
   },
   "FRESH_MARKET_AND_SUPER_DOSH:35": {
-    "fetchedAt": "2026-10-14T21:54:58.292949+00:00",
+    "fetchedAt": "2026-10-15T21:45:25.662880+00:00",
     "promos": {}
   },
   "FRESH_MARKET_AND_SUPER_DOSH:37": {
-    "fetchedAt": "2026-10-14T21:54:43.087983+00:00",
+    "fetchedAt": "2026-10-15T21:45:15.619195+00:00",
     "promos": {}
   },
   "FRESH_MARKET_AND_SUPER_DOSH:39": {
-    "fetchedAt": "2026-10-14T21:54:42.787344+00:00",
+    "fetchedAt": "2026-10-15T21:45:17.487020+00:00",
     "promos": {}
   },
   "FRESH_MARKET_AND_SUPER_DOSH:4": {
-    "fetchedAt": "2026-10-14T21:54:43.660647+00:00",
+    "fetchedAt": "2026-10-15T21:45:11.471367+00:00",
     "promos": {}
   },
   "FRESH_MARKET_AND_SUPER_DOSH:40": {
-    "fetchedAt": "2026-10-14T21:55:01.741346+00:00",
+    "fetchedAt": "2026-10-15T21:45:17.328248+00:00",
     "promos": {}
   },
   "FRESH_MARKET_AND_SUPER_DOSH:41": {
@@ -13131,7 +13131,7 @@
     "promos": {}
   },
   "FRESH_MARKET_AND_SUPER_DOSH:43": {
-    "fetchedAt": "2026-10-14T21:54:55.227004+00:00",
+    "fetchedAt": "2026-10-15T21:45:36.585506+00:00",
     "promos": {}
   },
   "FRESH_MARKET_AND_SUPER_DOSH:44": {
@@ -13143,47 +13143,47 @@
     "promos": {}
   },
   "FRESH_MARKET_AND_SUPER_DOSH:46": {
-    "fetchedAt": "2026-10-14T21:54:58.943674+00:00",
+    "fetchedAt": "2026-10-15T21:45:31.043936+00:00",
     "promos": {}
   },
   "FRESH_MARKET_AND_SUPER_DOSH:47": {
-    "fetchedAt": "2026-10-14T21:54:46.650891+00:00",
+    "fetchedAt": "2026-10-15T21:45:22.519782+00:00",
     "promos": {}
   },
   "FRESH_MARKET_AND_SUPER_DOSH:48": {
-    "fetchedAt": "2026-10-14T21:54:43.406061+00:00",
+    "fetchedAt": "2026-10-15T21:45:12.860774+00:00",
     "promos": {}
   },
   "FRESH_MARKET_AND_SUPER_DOSH:49": {
-    "fetchedAt": "2026-10-14T21:55:08.534279+00:00",
+    "fetchedAt": "2026-10-15T21:45:32.612303+00:00",
     "promos": {}
   },
   "FRESH_MARKET_AND_SUPER_DOSH:5": {
-    "fetchedAt": "2026-10-14T21:54:49.065707+00:00",
+    "fetchedAt": "2026-10-15T21:45:25.146726+00:00",
     "promos": {}
   },
   "FRESH_MARKET_AND_SUPER_DOSH:50": {
-    "fetchedAt": "2026-10-14T21:54:49.372397+00:00",
+    "fetchedAt": "2026-10-15T21:45:11.635427+00:00",
     "promos": {}
   },
   "FRESH_MARKET_AND_SUPER_DOSH:51": {
-    "fetchedAt": "2026-10-14T21:54:54.956639+00:00",
+    "fetchedAt": "2026-10-15T21:45:30.695976+00:00",
     "promos": {}
   },
   "FRESH_MARKET_AND_SUPER_DOSH:54": {
-    "fetchedAt": "2026-10-14T21:55:08.284428+00:00",
+    "fetchedAt": "2026-10-15T21:45:29.194559+00:00",
     "promos": {}
   },
   "FRESH_MARKET_AND_SUPER_DOSH:55": {
-    "fetchedAt": "2026-10-14T21:54:55.575227+00:00",
+    "fetchedAt": "2026-10-15T21:45:10.597763+00:00",
     "promos": {}
   },
   "FRESH_MARKET_AND_SUPER_DOSH:8": {
-    "fetchedAt": "2026-10-14T21:54:52.216615+00:00",
+    "fetchedAt": "2026-10-15T21:45:26.904130+00:00",
     "promos": {}
   },
   "FRESH_MARKET_AND_SUPER_DOSH:9": {
-    "fetchedAt": "2026-10-14T21:54:49.564456+00:00",
+    "fetchedAt": "2026-10-15T21:45:28.802391+00:00",
     "promos": {}
   },
   "HAZI_HINAM:201": {
@@ -13215,111 +13215,111 @@
     "promos": {}
   },
   "KESHET:14": {
-    "fetchedAt": "2026-10-14T21:55:26.563640+00:00",
+    "fetchedAt": "2026-10-15T21:45:50.003758+00:00",
     "promos": {}
   },
   "KESHET:21": {
-    "fetchedAt": "2026-10-14T21:55:27.280915+00:00",
+    "fetchedAt": "2026-10-15T21:45:51.079109+00:00",
     "promos": {}
   },
   "KING_STORE:14": {
-    "fetchedAt": "2026-10-14T21:55:22.194650+00:00",
+    "fetchedAt": "2026-10-15T21:45:43.537594+00:00",
     "promos": {}
   },
   "KING_STORE:15": {
-    "fetchedAt": "2026-10-14T21:55:20.206779+00:00",
+    "fetchedAt": "2026-10-15T21:45:44.310619+00:00",
     "promos": {}
   },
   "KING_STORE:16": {
-    "fetchedAt": "2026-10-14T21:55:20.324270+00:00",
+    "fetchedAt": "2026-10-15T21:45:44.219583+00:00",
     "promos": {}
   },
   "KING_STORE:18": {
-    "fetchedAt": "2026-10-14T21:55:23.516950+00:00",
+    "fetchedAt": "2026-10-15T21:45:43.395654+00:00",
     "promos": {}
   },
   "KING_STORE:200": {
-    "fetchedAt": "2026-10-14T21:55:20.224218+00:00",
+    "fetchedAt": "2026-10-15T21:45:44.028925+00:00",
     "promos": {}
   },
   "KING_STORE:27": {
-    "fetchedAt": "2026-10-14T21:55:24.003743+00:00",
+    "fetchedAt": "2026-10-15T21:45:44.858395+00:00",
     "promos": {}
   },
   "KING_STORE:3": {
-    "fetchedAt": "2026-10-14T21:55:22.548069+00:00",
+    "fetchedAt": "2026-10-15T21:45:46.413153+00:00",
     "promos": {}
   },
   "KING_STORE:31": {
-    "fetchedAt": "2026-10-14T21:55:20.361487+00:00",
+    "fetchedAt": "2026-10-15T21:45:47.052544+00:00",
     "promos": {}
   },
   "KING_STORE:334": {
-    "fetchedAt": "2026-10-14T21:55:23.948266+00:00",
+    "fetchedAt": "2026-10-15T21:45:44.262683+00:00",
     "promos": {}
   },
   "KING_STORE:3379": {
-    "fetchedAt": "2026-10-14T21:55:17.211046+00:00",
+    "fetchedAt": "2026-10-15T21:45:45.173681+00:00",
     "promos": {}
   },
   "KING_STORE:338": {
-    "fetchedAt": "2026-10-14T21:55:19.948211+00:00",
+    "fetchedAt": "2026-10-15T21:45:46.017854+00:00",
     "promos": {}
   },
   "KING_STORE:339": {
-    "fetchedAt": "2026-10-14T21:55:20.806850+00:00",
+    "fetchedAt": "2026-10-15T21:45:46.989164+00:00",
     "promos": {}
   },
   "KING_STORE:8": {
-    "fetchedAt": "2026-10-14T21:55:24.157546+00:00",
+    "fetchedAt": "2026-10-15T21:45:46.458535+00:00",
     "promos": {}
   },
   "MAAYAN_2000:1": {
-    "fetchedAt": "2026-10-14T21:55:09.120015+00:00",
+    "fetchedAt": "2026-10-15T21:45:40.285855+00:00",
     "promos": {}
   },
   "MAAYAN_2000:13": {
-    "fetchedAt": "2026-10-14T21:55:16.315882+00:00",
+    "fetchedAt": "2026-10-15T21:45:37.626783+00:00",
     "promos": {}
   },
   "MAAYAN_2000:16": {
-    "fetchedAt": "2026-10-14T21:55:16.232025+00:00",
+    "fetchedAt": "2026-10-15T21:45:34.442762+00:00",
     "promos": {}
   },
   "MAAYAN_2000:17": {
-    "fetchedAt": "2026-10-14T21:55:09.161142+00:00",
+    "fetchedAt": "2026-10-15T21:45:37.491190+00:00",
     "promos": {}
   },
   "MAAYAN_2000:2": {
-    "fetchedAt": "2026-10-14T21:55:12.746435+00:00",
+    "fetchedAt": "2026-10-15T21:45:38.024336+00:00",
     "promos": {}
   },
   "MAAYAN_2000:20": {
-    "fetchedAt": "2026-10-14T21:55:18.483127+00:00",
+    "fetchedAt": "2026-10-15T21:45:40.617321+00:00",
     "promos": {}
   },
   "MAAYAN_2000:27": {
-    "fetchedAt": "2026-10-14T21:55:15.051615+00:00",
+    "fetchedAt": "2026-10-15T21:45:35.614872+00:00",
     "promos": {}
   },
   "MAAYAN_2000:28": {
-    "fetchedAt": "2026-10-14T21:55:16.113706+00:00",
+    "fetchedAt": "2026-10-15T21:45:43.088598+00:00",
     "promos": {}
   },
   "MAAYAN_2000:29": {
-    "fetchedAt": "2026-10-14T21:55:15.355642+00:00",
+    "fetchedAt": "2026-10-15T21:45:38.326392+00:00",
     "promos": {}
   },
   "MAAYAN_2000:3": {
-    "fetchedAt": "2026-10-10T21:53:49.149791+00:00",
+    "fetchedAt": "2026-10-15T21:45:41.307447+00:00",
     "promos": {}
   },
   "MAAYAN_2000:35": {
-    "fetchedAt": "2026-10-14T21:55:12.508562+00:00",
+    "fetchedAt": "2026-10-15T21:45:37.949733+00:00",
     "promos": {}
   },
   "MAAYAN_2000:38": {
-    "fetchedAt": "2026-10-14T21:55:16.174280+00:00",
+    "fetchedAt": "2026-10-15T21:45:34.470185+00:00",
     "promos": {}
   },
   "MAAYAN_2000:39": {
@@ -13327,27 +13327,27 @@
     "promos": {}
   },
   "MAAYAN_2000:4": {
-    "fetchedAt": "2026-10-14T21:55:16.442751+00:00",
+    "fetchedAt": "2026-10-15T21:45:39.221483+00:00",
     "promos": {}
   },
   "MAAYAN_2000:40": {
-    "fetchedAt": "2026-10-14T21:55:15.859601+00:00",
+    "fetchedAt": "2026-10-15T21:45:40.238661+00:00",
     "promos": {}
   },
   "MAAYAN_2000:43": {
-    "fetchedAt": "2026-10-14T21:55:12.443363+00:00",
+    "fetchedAt": "2026-10-15T21:45:40.338003+00:00",
     "promos": {}
   },
   "MAAYAN_2000:44": {
-    "fetchedAt": "2026-10-14T21:55:11.470768+00:00",
+    "fetchedAt": "2026-10-15T21:45:38.377538+00:00",
     "promos": {}
   },
   "MAAYAN_2000:45": {
-    "fetchedAt": "2026-10-14T21:55:12.482302+00:00",
+    "fetchedAt": "2026-10-15T21:45:34.926333+00:00",
     "promos": {}
   },
   "MAAYAN_2000:5": {
-    "fetchedAt": "2026-10-14T21:55:11.765011+00:00",
+    "fetchedAt": "2026-10-15T21:45:41.090892+00:00",
     "promos": {}
   },
   "MAAYAN_2000:6": {
@@ -13355,7 +13355,7 @@
     "promos": {}
   },
   "MAAYAN_2000:60": {
-    "fetchedAt": "2026-10-14T21:55:09.133260+00:00",
+    "fetchedAt": "2026-10-15T21:45:41.910064+00:00",
     "promos": {}
   },
   "MAAYAN_2000:63": {
@@ -13367,15 +13367,15 @@
     "promos": {}
   },
   "MAAYAN_2000:7": {
-    "fetchedAt": "2026-10-14T21:55:18.880630+00:00",
+    "fetchedAt": "2026-10-15T21:45:37.662826+00:00",
     "promos": {}
   },
   "MAAYAN_2000:8": {
-    "fetchedAt": "2026-10-14T21:55:12.922189+00:00",
+    "fetchedAt": "2026-10-15T21:45:34.892887+00:00",
     "promos": {}
   },
   "MAAYAN_2000:9": {
-    "fetchedAt": "2026-10-14T21:55:12.889630+00:00",
+    "fetchedAt": "2026-10-15T21:45:40.660635+00:00",
     "promos": {}
   },
   "NETIV_HASED:17": {
@@ -13655,31 +13655,31 @@
     "promos": {}
   },
   "RAMI_LEVY:1": {
-    "fetchedAt": "2026-10-14T17:39:21.286551+00:00",
+    "fetchedAt": "2026-10-15T21:41:16.736538+00:00",
     "promos": {}
   },
   "RAMI_LEVY:10": {
-    "fetchedAt": "2026-10-14T17:38:36.900520+00:00",
+    "fetchedAt": "2026-10-15T21:40:52.780957+00:00",
     "promos": {}
   },
   "RAMI_LEVY:12": {
-    "fetchedAt": "2026-10-14T17:38:37.362802+00:00",
+    "fetchedAt": "2026-10-15T21:41:29.127999+00:00",
     "promos": {}
   },
   "RAMI_LEVY:13": {
-    "fetchedAt": "2026-10-14T17:38:16.088960+00:00",
+    "fetchedAt": "2026-10-15T21:40:51.075113+00:00",
     "promos": {}
   },
   "RAMI_LEVY:14": {
-    "fetchedAt": "2026-10-14T17:38:29.285929+00:00",
+    "fetchedAt": "2026-10-15T21:40:43.639630+00:00",
     "promos": {}
   },
   "RAMI_LEVY:15": {
-    "fetchedAt": "2026-10-14T17:38:52.399696+00:00",
+    "fetchedAt": "2026-10-15T21:40:21.065471+00:00",
     "promos": {}
   },
   "RAMI_LEVY:16": {
-    "fetchedAt": "2026-10-14T17:38:25.992829+00:00",
+    "fetchedAt": "2026-10-15T21:40:58.121694+00:00",
     "promos": {}
   },
   "RAMI_LEVY:17": {
@@ -13687,11 +13687,11 @@
     "promos": {}
   },
   "RAMI_LEVY:19": {
-    "fetchedAt": "2026-10-14T17:38:21.818592+00:00",
+    "fetchedAt": "2026-10-15T21:40:36.178904+00:00",
     "promos": {}
   },
   "RAMI_LEVY:2": {
-    "fetchedAt": "2026-10-14T17:38:54.130472+00:00",
+    "fetchedAt": "2026-10-15T21:41:22.823652+00:00",
     "promos": {}
   },
   "RAMI_LEVY:20": {
@@ -13699,115 +13699,550 @@
     "promos": {}
   },
   "RAMI_LEVY:203": {
-    "fetchedAt": "2026-10-14T17:38:53.787984+00:00",
+    "fetchedAt": "2026-10-15T21:40:00.793658+00:00",
     "promos": {}
   },
   "RAMI_LEVY:22": {
-    "fetchedAt": "2026-10-14T17:39:09.206504+00:00",
+    "fetchedAt": "2026-10-15T21:40:57.786405+00:00",
     "promos": {}
   },
   "RAMI_LEVY:24": {
-    "fetchedAt": "2026-10-14T17:39:01.463044+00:00",
-    "promos": {}
+    "fetchedAt": "2026-10-15T21:40:21.831794+00:00",
+    "promos": {
+      "aussie-lemonade": [
+        {
+          "clubOnly": false,
+          "description": "משקה אנרגיה מונסטר 500מ ל ב6.90 כולל",
+          "discountRate": 15.85,
+          "endsAt": "2026-10-31T23:59:00.000",
+          "maxQuantity": null,
+          "minQuantity": 1,
+          "startsAt": "2026-09-17T00:00:00.000",
+          "terms": null
+        }
+      ],
+      "full-zero": [
+        {
+          "clubOnly": false,
+          "description": "משקה אנרגיה מונסטר 500מ ל ב6.90 כולל",
+          "discountRate": 15.85,
+          "endsAt": "2026-10-31T23:59:00.000",
+          "maxQuantity": null,
+          "minQuantity": 1,
+          "startsAt": "2026-09-17T00:00:00.000",
+          "terms": null
+        }
+      ],
+      "green-zero": [
+        {
+          "clubOnly": false,
+          "description": "משקה אנרגיה מונסטר 500מ ל ב6.90 כולל",
+          "discountRate": 15.85,
+          "endsAt": "2026-10-31T23:59:00.000",
+          "maxQuantity": null,
+          "minQuantity": 1,
+          "startsAt": "2026-09-17T00:00:00.000",
+          "terms": null
+        }
+      ],
+      "mango-loco": [
+        {
+          "clubOnly": false,
+          "description": "משקה אנרגיה מונסטר 500מ ל ב6.90 כולל",
+          "discountRate": 15.85,
+          "endsAt": "2026-10-31T23:59:00.000",
+          "maxQuantity": null,
+          "minQuantity": 1,
+          "startsAt": "2026-09-17T00:00:00.000",
+          "terms": null
+        }
+      ],
+      "monarch": [
+        {
+          "clubOnly": false,
+          "description": "משקה אנרגיה מונסטר 500מ ל ב6.90 כולל",
+          "discountRate": 15.85,
+          "endsAt": "2026-10-31T23:59:00.000",
+          "maxQuantity": null,
+          "minQuantity": 1,
+          "startsAt": "2026-09-17T00:00:00.000",
+          "terms": null
+        }
+      ],
+      "original": [
+        {
+          "clubOnly": false,
+          "description": "משקה אנרגיה מונסטר 500מ ל ב6.90 כולל",
+          "discountRate": 15.85,
+          "endsAt": "2026-10-31T23:59:00.000",
+          "maxQuantity": null,
+          "minQuantity": 1,
+          "startsAt": "2026-09-17T00:00:00.000",
+          "terms": null
+        }
+      ],
+      "pipeline-punch": [
+        {
+          "clubOnly": false,
+          "description": "משקה אנרגיה מונסטר 500מ ל ב6.90 כולל",
+          "discountRate": 15.85,
+          "endsAt": "2026-10-31T23:59:00.000",
+          "maxQuantity": null,
+          "minQuantity": 1,
+          "startsAt": "2026-09-17T00:00:00.000",
+          "terms": null
+        }
+      ],
+      "strawberry": [
+        {
+          "clubOnly": false,
+          "description": "משקה אנרגיה מונסטר 500מ ל ב6.90 כולל",
+          "discountRate": 15.85,
+          "endsAt": "2026-10-31T23:59:00.000",
+          "maxQuantity": null,
+          "minQuantity": 1,
+          "startsAt": "2026-09-17T00:00:00.000",
+          "terms": null
+        }
+      ],
+      "ultra": [
+        {
+          "clubOnly": false,
+          "description": "משקה אנרגיה מונסטר 500מ ל ב6.90 כולל",
+          "discountRate": 11.54,
+          "endsAt": "2026-10-31T23:59:00.000",
+          "maxQuantity": null,
+          "minQuantity": 1,
+          "startsAt": "2026-09-17T00:00:00.000",
+          "terms": null
+        }
+      ],
+      "ultra-fiesta": [
+        {
+          "clubOnly": false,
+          "description": "משקה אנרגיה מונסטר 500מ ל ב6.90 כולל",
+          "discountRate": 15.85,
+          "endsAt": "2026-10-31T23:59:00.000",
+          "maxQuantity": null,
+          "minQuantity": 1,
+          "startsAt": "2026-09-17T00:00:00.000",
+          "terms": null
+        }
+      ],
+      "ultra-paradise": [
+        {
+          "clubOnly": false,
+          "description": "משקה אנרגיה מונסטר 500מ ל ב6.90 כולל",
+          "discountRate": 11.54,
+          "endsAt": "2026-10-31T23:59:00.000",
+          "maxQuantity": null,
+          "minQuantity": 1,
+          "startsAt": "2026-09-17T00:00:00.000",
+          "terms": null
+        }
+      ],
+      "ultra-peachy-keen": [
+        {
+          "clubOnly": false,
+          "description": "משקה אנרגיה מונסטר 500מ ל ב6.90 כולל",
+          "discountRate": 15.85,
+          "endsAt": "2026-10-31T23:59:00.000",
+          "maxQuantity": null,
+          "minQuantity": 1,
+          "startsAt": "2026-09-17T00:00:00.000",
+          "terms": null
+        }
+      ]
+    }
   },
   "RAMI_LEVY:25": {
-    "fetchedAt": "2026-10-14T17:38:13.715222+00:00",
+    "fetchedAt": "2026-10-15T21:40:58.517248+00:00",
     "promos": {}
   },
   "RAMI_LEVY:26": {
-    "fetchedAt": "2026-10-14T17:39:08.187940+00:00",
-    "promos": {}
+    "fetchedAt": "2026-10-15T21:40:44.490249+00:00",
+    "promos": {
+      "aussie-lemonade": [
+        {
+          "clubOnly": false,
+          "description": "משקה אנרגיה מונסטר 500מ ל ב6.90 כולל",
+          "discountRate": 15.85,
+          "endsAt": "2026-10-31T23:59:00.000",
+          "maxQuantity": null,
+          "minQuantity": 1,
+          "startsAt": "2026-09-17T00:00:00.000",
+          "terms": null
+        }
+      ],
+      "full-zero": [
+        {
+          "clubOnly": false,
+          "description": "משקה אנרגיה מונסטר 500מ ל ב6.90 כולל",
+          "discountRate": 15.85,
+          "endsAt": "2026-10-31T23:59:00.000",
+          "maxQuantity": null,
+          "minQuantity": 1,
+          "startsAt": "2026-09-17T00:00:00.000",
+          "terms": null
+        }
+      ],
+      "green-zero": [
+        {
+          "clubOnly": false,
+          "description": "משקה אנרגיה מונסטר 500מ ל ב6.90 כולל",
+          "discountRate": 15.85,
+          "endsAt": "2026-10-31T23:59:00.000",
+          "maxQuantity": null,
+          "minQuantity": 1,
+          "startsAt": "2026-09-17T00:00:00.000",
+          "terms": null
+        }
+      ],
+      "mango-loco": [
+        {
+          "clubOnly": false,
+          "description": "משקה אנרגיה מונסטר 500מ ל ב6.90 כולל",
+          "discountRate": 15.85,
+          "endsAt": "2026-10-31T23:59:00.000",
+          "maxQuantity": null,
+          "minQuantity": 1,
+          "startsAt": "2026-09-17T00:00:00.000",
+          "terms": null
+        }
+      ],
+      "monarch": [
+        {
+          "clubOnly": false,
+          "description": "משקה אנרגיה מונסטר 500מ ל ב6.90 כולל",
+          "discountRate": 15.85,
+          "endsAt": "2026-10-31T23:59:00.000",
+          "maxQuantity": null,
+          "minQuantity": 1,
+          "startsAt": "2026-09-17T00:00:00.000",
+          "terms": null
+        }
+      ],
+      "original": [
+        {
+          "clubOnly": false,
+          "description": "משקה אנרגיה מונסטר 500מ ל ב6.90 כולל",
+          "discountRate": 15.85,
+          "endsAt": "2026-10-31T23:59:00.000",
+          "maxQuantity": null,
+          "minQuantity": 1,
+          "startsAt": "2026-09-17T00:00:00.000",
+          "terms": null
+        }
+      ],
+      "pipeline-punch": [
+        {
+          "clubOnly": false,
+          "description": "משקה אנרגיה מונסטר 500מ ל ב6.90 כולל",
+          "discountRate": 15.85,
+          "endsAt": "2026-10-31T23:59:00.000",
+          "maxQuantity": null,
+          "minQuantity": 1,
+          "startsAt": "2026-09-17T00:00:00.000",
+          "terms": null
+        }
+      ],
+      "strawberry": [
+        {
+          "clubOnly": false,
+          "description": "משקה אנרגיה מונסטר 500מ ל ב6.90 כולל",
+          "discountRate": 15.85,
+          "endsAt": "2026-10-31T23:59:00.000",
+          "maxQuantity": null,
+          "minQuantity": 1,
+          "startsAt": "2026-09-17T00:00:00.000",
+          "terms": null
+        }
+      ],
+      "ultra": [
+        {
+          "clubOnly": false,
+          "description": "משקה אנרגיה מונסטר 500מ ל ב6.90 כולל",
+          "discountRate": 11.54,
+          "endsAt": "2026-10-31T23:59:00.000",
+          "maxQuantity": null,
+          "minQuantity": 1,
+          "startsAt": "2026-09-17T00:00:00.000",
+          "terms": null
+        }
+      ],
+      "ultra-fiesta": [
+        {
+          "clubOnly": false,
+          "description": "משקה אנרגיה מונסטר 500מ ל ב6.90 כולל",
+          "discountRate": 15.85,
+          "endsAt": "2026-10-31T23:59:00.000",
+          "maxQuantity": null,
+          "minQuantity": 1,
+          "startsAt": "2026-09-17T00:00:00.000",
+          "terms": null
+        }
+      ],
+      "ultra-paradise": [
+        {
+          "clubOnly": false,
+          "description": "משקה אנרגיה מונסטר 500מ ל ב6.90 כולל",
+          "discountRate": 11.54,
+          "endsAt": "2026-10-31T23:59:00.000",
+          "maxQuantity": null,
+          "minQuantity": 1,
+          "startsAt": "2026-09-17T00:00:00.000",
+          "terms": null
+        }
+      ],
+      "ultra-peachy-keen": [
+        {
+          "clubOnly": false,
+          "description": "משקה אנרגיה מונסטר 500מ ל ב6.90 כולל",
+          "discountRate": 15.85,
+          "endsAt": "2026-10-31T23:59:00.000",
+          "maxQuantity": null,
+          "minQuantity": 1,
+          "startsAt": "2026-09-17T00:00:00.000",
+          "terms": null
+        }
+      ]
+    }
   },
   "RAMI_LEVY:27": {
-    "fetchedAt": "2026-10-14T17:38:59.542121+00:00",
+    "fetchedAt": "2026-10-15T21:40:36.752404+00:00",
     "promos": {}
   },
   "RAMI_LEVY:29": {
-    "fetchedAt": "2026-10-14T17:38:26.508081+00:00",
+    "fetchedAt": "2026-10-15T21:41:09.208298+00:00",
     "promos": {}
   },
   "RAMI_LEVY:30": {
-    "fetchedAt": "2026-10-14T17:39:19.663808+00:00",
+    "fetchedAt": "2026-10-15T21:41:17.199466+00:00",
     "promos": {}
   },
   "RAMI_LEVY:31": {
-    "fetchedAt": "2026-10-14T17:38:46.518537+00:00",
+    "fetchedAt": "2026-10-15T21:40:49.906923+00:00",
     "promos": {}
   },
   "RAMI_LEVY:32": {
-    "fetchedAt": "2026-10-14T17:38:31.215057+00:00",
+    "fetchedAt": "2026-10-15T21:40:09.918879+00:00",
     "promos": {}
   },
   "RAMI_LEVY:34": {
-    "fetchedAt": "2026-10-14T17:38:38.268977+00:00",
+    "fetchedAt": "2026-10-15T21:41:15.522378+00:00",
     "promos": {}
   },
   "RAMI_LEVY:35": {
-    "fetchedAt": "2026-10-14T17:38:43.279381+00:00",
+    "fetchedAt": "2026-10-15T21:40:35.695714+00:00",
     "promos": {}
   },
   "RAMI_LEVY:36": {
-    "fetchedAt": "2026-10-14T17:39:11.964234+00:00",
+    "fetchedAt": "2026-10-15T21:40:17.617685+00:00",
     "promos": {}
   },
   "RAMI_LEVY:37": {
-    "fetchedAt": "2026-10-14T17:39:01.147557+00:00",
-    "promos": {}
+    "fetchedAt": "2026-10-15T21:40:45.546078+00:00",
+    "promos": {
+      "aussie-lemonade": [
+        {
+          "clubOnly": false,
+          "description": "משקה אנרגיה מונסטר 500מ ל ב6.90 כולל",
+          "discountRate": 15.85,
+          "endsAt": "2026-10-31T23:59:00.000",
+          "maxQuantity": null,
+          "minQuantity": 1,
+          "startsAt": "2026-09-17T00:00:00.000",
+          "terms": null
+        }
+      ],
+      "full-zero": [
+        {
+          "clubOnly": false,
+          "description": "משקה אנרגיה מונסטר 500מ ל ב6.90 כולל",
+          "discountRate": 15.85,
+          "endsAt": "2026-10-31T23:59:00.000",
+          "maxQuantity": null,
+          "minQuantity": 1,
+          "startsAt": "2026-09-17T00:00:00.000",
+          "terms": null
+        }
+      ],
+      "green-zero": [
+        {
+          "clubOnly": false,
+          "description": "משקה אנרגיה מונסטר 500מ ל ב6.90 כולל",
+          "discountRate": 15.85,
+          "endsAt": "2026-10-31T23:59:00.000",
+          "maxQuantity": null,
+          "minQuantity": 1,
+          "startsAt": "2026-09-17T00:00:00.000",
+          "terms": null
+        }
+      ],
+      "mango-loco": [
+        {
+          "clubOnly": false,
+          "description": "משקה אנרגיה מונסטר 500מ ל ב6.90 כולל",
+          "discountRate": 15.85,
+          "endsAt": "2026-10-31T23:59:00.000",
+          "maxQuantity": null,
+          "minQuantity": 1,
+          "startsAt": "2026-09-17T00:00:00.000",
+          "terms": null
+        }
+      ],
+      "monarch": [
+        {
+          "clubOnly": false,
+          "description": "משקה אנרגיה מונסטר 500מ ל ב6.90 כולל",
+          "discountRate": 15.85,
+          "endsAt": "2026-10-31T23:59:00.000",
+          "maxQuantity": null,
+          "minQuantity": 1,
+          "startsAt": "2026-09-17T00:00:00.000",
+          "terms": null
+        }
+      ],
+      "original": [
+        {
+          "clubOnly": false,
+          "description": "משקה אנרגיה מונסטר 500מ ל ב6.90 כולל",
+          "discountRate": 15.85,
+          "endsAt": "2026-10-31T23:59:00.000",
+          "maxQuantity": null,
+          "minQuantity": 1,
+          "startsAt": "2026-09-17T00:00:00.000",
+          "terms": null
+        }
+      ],
+      "pipeline-punch": [
+        {
+          "clubOnly": false,
+          "description": "משקה אנרגיה מונסטר 500מ ל ב6.90 כולל",
+          "discountRate": 15.85,
+          "endsAt": "2026-10-31T23:59:00.000",
+          "maxQuantity": null,
+          "minQuantity": 1,
+          "startsAt": "2026-09-17T00:00:00.000",
+          "terms": null
+        }
+      ],
+      "strawberry": [
+        {
+          "clubOnly": false,
+          "description": "משקה אנרגיה מונסטר 500מ ל ב6.90 כולל",
+          "discountRate": 15.85,
+          "endsAt": "2026-10-31T23:59:00.000",
+          "maxQuantity": null,
+          "minQuantity": 1,
+          "startsAt": "2026-09-17T00:00:00.000",
+          "terms": null
+        }
+      ],
+      "ultra": [
+        {
+          "clubOnly": false,
+          "description": "משקה אנרגיה מונסטר 500מ ל ב6.90 כולל",
+          "discountRate": 11.54,
+          "endsAt": "2026-10-31T23:59:00.000",
+          "maxQuantity": null,
+          "minQuantity": 1,
+          "startsAt": "2026-09-17T00:00:00.000",
+          "terms": null
+        }
+      ],
+      "ultra-fiesta": [
+        {
+          "clubOnly": false,
+          "description": "משקה אנרגיה מונסטר 500מ ל ב6.90 כולל",
+          "discountRate": 15.85,
+          "endsAt": "2026-10-31T23:59:00.000",
+          "maxQuantity": null,
+          "minQuantity": 1,
+          "startsAt": "2026-09-17T00:00:00.000",
+          "terms": null
+        }
+      ],
+      "ultra-paradise": [
+        {
+          "clubOnly": false,
+          "description": "משקה אנרגיה מונסטר 500מ ל ב6.90 כולל",
+          "discountRate": 11.54,
+          "endsAt": "2026-10-31T23:59:00.000",
+          "maxQuantity": null,
+          "minQuantity": 1,
+          "startsAt": "2026-09-17T00:00:00.000",
+          "terms": null
+        }
+      ],
+      "ultra-peachy-keen": [
+        {
+          "clubOnly": false,
+          "description": "משקה אנרגיה מונסטר 500מ ל ב6.90 כולל",
+          "discountRate": 15.85,
+          "endsAt": "2026-10-31T23:59:00.000",
+          "maxQuantity": null,
+          "minQuantity": 1,
+          "startsAt": "2026-09-17T00:00:00.000",
+          "terms": null
+        }
+      ]
+    }
   },
   "RAMI_LEVY:38": {
-    "fetchedAt": "2026-10-14T17:38:23.120346+00:00",
+    "fetchedAt": "2026-10-15T21:40:47.703794+00:00",
     "promos": {}
   },
   "RAMI_LEVY:40": {
-    "fetchedAt": "2026-10-14T17:38:33.748682+00:00",
+    "fetchedAt": "2026-10-15T21:40:44.156276+00:00",
     "promos": {}
   },
   "RAMI_LEVY:41": {
-    "fetchedAt": "2026-10-14T17:39:06.466152+00:00",
+    "fetchedAt": "2026-10-15T21:40:28.277432+00:00",
     "promos": {}
   },
   "RAMI_LEVY:43": {
-    "fetchedAt": "2026-10-14T17:38:24.155831+00:00",
+    "fetchedAt": "2026-10-15T21:40:51.868730+00:00",
     "promos": {}
   },
   "RAMI_LEVY:44": {
-    "fetchedAt": "2026-10-14T17:39:04.064813+00:00",
+    "fetchedAt": "2026-10-15T21:41:07.846717+00:00",
     "promos": {}
   },
   "RAMI_LEVY:45": {
-    "fetchedAt": "2026-10-14T17:38:45.484391+00:00",
+    "fetchedAt": "2026-10-15T21:41:08.828962+00:00",
     "promos": {}
   },
   "RAMI_LEVY:46": {
-    "fetchedAt": "2026-10-14T17:38:19.811000+00:00",
+    "fetchedAt": "2026-10-15T21:41:12.264943+00:00",
     "promos": {}
   },
   "RAMI_LEVY:48": {
-    "fetchedAt": "2026-10-14T17:39:13.274071+00:00",
+    "fetchedAt": "2026-10-15T21:40:30.045284+00:00",
     "promos": {}
   },
   "RAMI_LEVY:49": {
-    "fetchedAt": "2026-10-14T17:38:08.531980+00:00",
+    "fetchedAt": "2026-10-15T21:40:38.069198+00:00",
     "promos": {}
   },
   "RAMI_LEVY:5": {
-    "fetchedAt": "2026-10-14T17:38:50.460592+00:00",
+    "fetchedAt": "2026-10-15T21:40:33.149390+00:00",
     "promos": {}
   },
   "RAMI_LEVY:50": {
-    "fetchedAt": "2026-10-14T17:38:48.480737+00:00",
+    "fetchedAt": "2026-10-15T21:41:14.251211+00:00",
     "promos": {}
   },
   "RAMI_LEVY:53": {
-    "fetchedAt": "2026-10-14T17:38:40.208518+00:00",
+    "fetchedAt": "2026-10-15T21:41:23.216313+00:00",
     "promos": {}
   },
   "RAMI_LEVY:54": {
-    "fetchedAt": "2026-10-14T17:39:12.269181+00:00",
+    "fetchedAt": "2026-10-15T21:41:04.796704+00:00",
     "promos": {}
   },
   "RAMI_LEVY:55": {
-    "fetchedAt": "2026-10-14T17:38:33.272086+00:00",
+    "fetchedAt": "2026-10-15T21:41:27.308122+00:00",
     "promos": {}
   },
   "RAMI_LEVY:56": {
@@ -13815,39 +14250,39 @@
     "promos": {}
   },
   "RAMI_LEVY:57": {
-    "fetchedAt": "2026-10-14T17:39:05.156144+00:00",
+    "fetchedAt": "2026-10-15T21:40:25.191900+00:00",
     "promos": {}
   },
   "RAMI_LEVY:58": {
-    "fetchedAt": "2026-10-14T17:39:20.110014+00:00",
+    "fetchedAt": "2026-10-15T21:40:50.515425+00:00",
     "promos": {}
   },
   "RAMI_LEVY:59": {
-    "fetchedAt": "2026-10-14T17:38:43.965534+00:00",
+    "fetchedAt": "2026-10-15T21:40:22.809657+00:00",
     "promos": {}
   },
   "RAMI_LEVY:6": {
-    "fetchedAt": "2026-10-14T17:38:51.398277+00:00",
+    "fetchedAt": "2026-10-15T21:40:29.141134+00:00",
     "promos": {}
   },
   "RAMI_LEVY:61": {
-    "fetchedAt": "2026-10-14T17:38:20.538651+00:00",
+    "fetchedAt": "2026-10-15T21:40:06.958411+00:00",
     "promos": {}
   },
   "RAMI_LEVY:62": {
-    "fetchedAt": "2026-10-14T17:38:34.213726+00:00",
+    "fetchedAt": "2026-10-15T21:41:03.015561+00:00",
     "promos": {}
   },
   "RAMI_LEVY:63": {
-    "fetchedAt": "2026-10-14T17:39:15.193058+00:00",
+    "fetchedAt": "2026-10-15T21:41:21.503841+00:00",
     "promos": {}
   },
   "RAMI_LEVY:64": {
-    "fetchedAt": "2026-10-14T17:38:36.117171+00:00",
+    "fetchedAt": "2026-10-15T21:41:24.289703+00:00",
     "promos": {}
   },
   "RAMI_LEVY:66": {
-    "fetchedAt": "2026-10-14T17:38:47.630706+00:00",
+    "fetchedAt": "2026-10-15T21:40:55.221676+00:00",
     "promos": {}
   },
   "RAMI_LEVY:68": {
@@ -13855,11 +14290,11 @@
     "promos": {}
   },
   "RAMI_LEVY:69": {
-    "fetchedAt": "2026-10-14T17:38:55.259159+00:00",
+    "fetchedAt": "2026-10-15T21:41:15.859628+00:00",
     "promos": {}
   },
   "RAMI_LEVY:7": {
-    "fetchedAt": "2026-10-14T17:39:22.029437+00:00",
+    "fetchedAt": "2026-10-15T21:41:27.795596+00:00",
     "promos": {}
   },
   "RAMI_LEVY:70": {
@@ -13867,15 +14302,15 @@
     "promos": {}
   },
   "RAMI_LEVY:700": {
-    "fetchedAt": "2026-10-14T17:39:14.242964+00:00",
+    "fetchedAt": "2026-10-15T21:39:59.754224+00:00",
     "promos": {}
   },
   "RAMI_LEVY:703": {
-    "fetchedAt": "2026-10-14T17:39:15.713032+00:00",
+    "fetchedAt": "2026-10-15T21:40:42.503208+00:00",
     "promos": {}
   },
   "RAMI_LEVY:704": {
-    "fetchedAt": "2026-10-14T17:39:18.448326+00:00",
+    "fetchedAt": "2026-10-15T21:40:36.907284+00:00",
     "promos": {}
   },
   "RAMI_LEVY:705": {
@@ -13883,15 +14318,15 @@
     "promos": {}
   },
   "RAMI_LEVY:706": {
-    "fetchedAt": "2026-10-14T17:39:10.571639+00:00",
+    "fetchedAt": "2026-10-15T21:40:58.843563+00:00",
     "promos": {}
   },
   "RAMI_LEVY:709": {
-    "fetchedAt": "2026-10-14T17:39:02.033302+00:00",
+    "fetchedAt": "2026-10-15T21:39:59.125024+00:00",
     "promos": {}
   },
   "RAMI_LEVY:71": {
-    "fetchedAt": "2026-10-14T17:38:58.686159+00:00",
+    "fetchedAt": "2026-10-15T21:40:59.157222+00:00",
     "promos": {}
   },
   "RAMI_LEVY:711": {
@@ -13899,91 +14334,91 @@
     "promos": {}
   },
   "RAMI_LEVY:712": {
-    "fetchedAt": "2026-10-14T17:38:18.919098+00:00",
+    "fetchedAt": "2026-10-15T21:41:23.876145+00:00",
     "promos": {}
   },
   "RAMI_LEVY:713": {
-    "fetchedAt": "2026-10-14T17:39:17.061576+00:00",
+    "fetchedAt": "2026-10-15T21:41:22.491909+00:00",
     "promos": {}
   },
   "RAMI_LEVY:714": {
-    "fetchedAt": "2026-10-14T17:39:06.614808+00:00",
+    "fetchedAt": "2026-10-15T21:40:13.557588+00:00",
     "promos": {}
   },
   "RAMI_LEVY:715": {
-    "fetchedAt": "2026-10-14T17:38:39.663289+00:00",
+    "fetchedAt": "2026-10-15T21:40:28.428650+00:00",
     "promos": {}
   },
   "RAMI_LEVY:716": {
-    "fetchedAt": "2026-10-14T17:38:54.288744+00:00",
+    "fetchedAt": "2026-10-15T21:40:59.567614+00:00",
     "promos": {}
   },
   "RAMI_LEVY:717": {
-    "fetchedAt": "2026-10-14T17:38:46.939348+00:00",
+    "fetchedAt": "2026-10-15T21:40:35.879097+00:00",
     "promos": {}
   },
   "RAMI_LEVY:718": {
-    "fetchedAt": "2026-10-14T17:38:44.109589+00:00",
+    "fetchedAt": "2026-10-15T21:40:50.730989+00:00",
     "promos": {}
   },
   "RAMI_LEVY:719": {
-    "fetchedAt": "2026-10-14T17:39:04.831195+00:00",
+    "fetchedAt": "2026-10-15T21:40:15.206392+00:00",
     "promos": {}
   },
   "RAMI_LEVY:720": {
-    "fetchedAt": "2026-10-14T17:38:40.424314+00:00",
+    "fetchedAt": "2026-10-15T21:41:19.520543+00:00",
     "promos": {}
   },
   "RAMI_LEVY:721": {
-    "fetchedAt": "2026-10-14T17:39:00.085586+00:00",
+    "fetchedAt": "2026-10-15T21:41:08.002296+00:00",
     "promos": {}
   },
   "RAMI_LEVY:723": {
-    "fetchedAt": "2026-10-14T17:39:18.265689+00:00",
+    "fetchedAt": "2026-10-15T21:40:14.240107+00:00",
     "promos": {}
   },
   "RAMI_LEVY:724": {
-    "fetchedAt": "2026-10-14T17:39:07.678994+00:00",
+    "fetchedAt": "2026-10-15T21:40:51.382189+00:00",
     "promos": {}
   },
   "RAMI_LEVY:725": {
-    "fetchedAt": "2026-10-14T17:38:14.941968+00:00",
+    "fetchedAt": "2026-10-15T21:40:08.005678+00:00",
     "promos": {}
   },
   "RAMI_LEVY:726": {
-    "fetchedAt": "2026-10-14T17:38:12.412000+00:00",
+    "fetchedAt": "2026-10-15T21:40:56.915962+00:00",
     "promos": {}
   },
   "RAMI_LEVY:727": {
-    "fetchedAt": "2026-10-14T17:38:26.704819+00:00",
+    "fetchedAt": "2026-10-15T21:41:20.109360+00:00",
     "promos": {}
   },
   "RAMI_LEVY:728": {
-    "fetchedAt": "2026-10-14T17:38:29.653104+00:00",
+    "fetchedAt": "2026-10-15T21:41:08.480684+00:00",
     "promos": {}
   },
   "RAMI_LEVY:729": {
-    "fetchedAt": "2026-10-14T17:38:41.227675+00:00",
+    "fetchedAt": "2026-10-15T21:40:43.026202+00:00",
     "promos": {}
   },
   "RAMI_LEVY:730": {
-    "fetchedAt": "2026-10-14T17:38:50.797589+00:00",
+    "fetchedAt": "2026-10-15T21:40:43.860598+00:00",
     "promos": {}
   },
   "RAMI_LEVY:731": {
-    "fetchedAt": "2026-10-14T17:38:17.075369+00:00",
+    "fetchedAt": "2026-10-15T21:40:40.017574+00:00",
     "promos": {}
   },
   "RAMI_LEVY:732": {
-    "fetchedAt": "2026-10-14T17:38:12.785933+00:00",
+    "fetchedAt": "2026-10-15T21:40:07.164803+00:00",
     "promos": {}
   },
   "RAMI_LEVY:733": {
-    "fetchedAt": "2026-10-14T17:38:57.149592+00:00",
+    "fetchedAt": "2026-10-15T21:41:05.259798+00:00",
     "promos": {}
   },
   "RAMI_LEVY:734": {
-    "fetchedAt": "2026-10-14T17:38:08.985866+00:00",
+    "fetchedAt": "2026-10-15T21:41:13.437119+00:00",
     "promos": {}
   },
   "RAMI_LEVY:735": {
@@ -13991,39 +14426,184 @@
     "promos": {}
   },
   "RAMI_LEVY:736": {
-    "fetchedAt": "2026-10-14T17:38:33.399835+00:00",
+    "fetchedAt": "2026-10-15T21:41:15.056530+00:00",
     "promos": {}
   },
   "RAMI_LEVY:737": {
-    "fetchedAt": "2026-10-14T17:39:12.946317+00:00",
+    "fetchedAt": "2026-10-15T21:40:37.033218+00:00",
     "promos": {}
   },
   "RAMI_LEVY:9": {
-    "fetchedAt": "2026-10-14T17:38:58.148883+00:00",
-    "promos": {}
+    "fetchedAt": "2026-10-15T21:40:30.763481+00:00",
+    "promos": {
+      "aussie-lemonade": [
+        {
+          "clubOnly": false,
+          "description": "משקה אנרגיה מונסטר 500מ ל ב6.90 כולל",
+          "discountRate": 15.85,
+          "endsAt": "2026-10-31T23:59:00.000",
+          "maxQuantity": null,
+          "minQuantity": 1,
+          "startsAt": "2026-09-17T00:00:00.000",
+          "terms": null
+        }
+      ],
+      "full-zero": [
+        {
+          "clubOnly": false,
+          "description": "משקה אנרגיה מונסטר 500מ ל ב6.90 כולל",
+          "discountRate": 15.85,
+          "endsAt": "2026-10-31T23:59:00.000",
+          "maxQuantity": null,
+          "minQuantity": 1,
+          "startsAt": "2026-09-17T00:00:00.000",
+          "terms": null
+        }
+      ],
+      "green-zero": [
+        {
+          "clubOnly": false,
+          "description": "משקה אנרגיה מונסטר 500מ ל ב6.90 כולל",
+          "discountRate": 15.85,
+          "endsAt": "2026-10-31T23:59:00.000",
+          "maxQuantity": null,
+          "minQuantity": 1,
+          "startsAt": "2026-09-17T00:00:00.000",
+          "terms": null
+        }
+      ],
+      "mango-loco": [
+        {
+          "clubOnly": false,
+          "description": "משקה אנרגיה מונסטר 500מ ל ב6.90 כולל",
+          "discountRate": 15.85,
+          "endsAt": "2026-10-31T23:59:00.000",
+          "maxQuantity": null,
+          "minQuantity": 1,
+          "startsAt": "2026-09-17T00:00:00.000",
+          "terms": null
+        }
+      ],
+      "monarch": [
+        {
+          "clubOnly": false,
+          "description": "משקה אנרגיה מונסטר 500מ ל ב6.90 כולל",
+          "discountRate": 15.85,
+          "endsAt": "2026-10-31T23:59:00.000",
+          "maxQuantity": null,
+          "minQuantity": 1,
+          "startsAt": "2026-09-17T00:00:00.000",
+          "terms": null
+        }
+      ],
+      "original": [
+        {
+          "clubOnly": false,
+          "description": "משקה אנרגיה מונסטר 500מ ל ב6.90 כולל",
+          "discountRate": 15.85,
+          "endsAt": "2026-10-31T23:59:00.000",
+          "maxQuantity": null,
+          "minQuantity": 1,
+          "startsAt": "2026-09-17T00:00:00.000",
+          "terms": null
+        }
+      ],
+      "pipeline-punch": [
+        {
+          "clubOnly": false,
+          "description": "משקה אנרגיה מונסטר 500מ ל ב6.90 כולל",
+          "discountRate": 15.85,
+          "endsAt": "2026-10-31T23:59:00.000",
+          "maxQuantity": null,
+          "minQuantity": 1,
+          "startsAt": "2026-09-17T00:00:00.000",
+          "terms": null
+        }
+      ],
+      "strawberry": [
+        {
+          "clubOnly": false,
+          "description": "משקה אנרגיה מונסטר 500מ ל ב6.90 כולל",
+          "discountRate": 15.85,
+          "endsAt": "2026-10-31T23:59:00.000",
+          "maxQuantity": null,
+          "minQuantity": 1,
+          "startsAt": "2026-09-17T00:00:00.000",
+          "terms": null
+        }
+      ],
+      "ultra": [
+        {
+          "clubOnly": false,
+          "description": "משקה אנרגיה מונסטר 500מ ל ב6.90 כולל",
+          "discountRate": 11.54,
+          "endsAt": "2026-10-31T23:59:00.000",
+          "maxQuantity": null,
+          "minQuantity": 1,
+          "startsAt": "2026-09-17T00:00:00.000",
+          "terms": null
+        }
+      ],
+      "ultra-fiesta": [
+        {
+          "clubOnly": false,
+          "description": "משקה אנרגיה מונסטר 500מ ל ב6.90 כולל",
+          "discountRate": 15.85,
+          "endsAt": "2026-10-31T23:59:00.000",
+          "maxQuantity": null,
+          "minQuantity": 1,
+          "startsAt": "2026-09-17T00:00:00.000",
+          "terms": null
+        }
+      ],
+      "ultra-paradise": [
+        {
+          "clubOnly": false,
+          "description": "משקה אנרגיה מונסטר 500מ ל ב6.90 כולל",
+          "discountRate": 11.54,
+          "endsAt": "2026-10-31T23:59:00.000",
+          "maxQuantity": null,
+          "minQuantity": 1,
+          "startsAt": "2026-09-17T00:00:00.000",
+          "terms": null
+        }
+      ],
+      "ultra-peachy-keen": [
+        {
+          "clubOnly": false,
+          "description": "משקה אנרגיה מונסטר 500מ ל ב6.90 כולל",
+          "discountRate": 15.85,
+          "endsAt": "2026-10-31T23:59:00.000",
+          "maxQuantity": null,
+          "minQuantity": 1,
+          "startsAt": "2026-09-17T00:00:00.000",
+          "terms": null
+        }
+      ]
+    }
   },
   "SALACH_DABACH:11": {
-    "fetchedAt": "2026-10-14T21:55:54.555267+00:00",
+    "fetchedAt": "2026-10-15T21:46:13.095767+00:00",
     "promos": {}
   },
   "SALACH_DABACH:13": {
-    "fetchedAt": "2026-10-14T21:55:56.279166+00:00",
+    "fetchedAt": "2026-10-15T21:46:14.986758+00:00",
     "promos": {}
   },
   "SALACH_DABACH:15": {
-    "fetchedAt": "2026-10-14T21:55:57.211098+00:00",
+    "fetchedAt": "2026-10-15T21:46:18.139409+00:00",
     "promos": {}
   },
   "SALACH_DABACH:19": {
-    "fetchedAt": "2026-10-14T21:55:52.818131+00:00",
+    "fetchedAt": "2026-10-15T21:46:15.136104+00:00",
     "promos": {}
   },
   "SALACH_DABACH:4": {
-    "fetchedAt": "2026-10-14T21:55:55.477968+00:00",
+    "fetchedAt": "2026-10-15T21:46:14.821792+00:00",
     "promos": {}
   },
   "SALACH_DABACH:7": {
-    "fetchedAt": "2026-10-14T21:55:56.126296+00:00",
+    "fetchedAt": "2026-10-15T21:46:15.551128+00:00",
     "promos": {}
   },
   "SHUFERSAL:1": {
@@ -14067,7 +14647,7 @@
     "promos": {}
   },
   "SHUFERSAL:114": {
-    "fetchedAt": "2026-10-14T17:33:11.565792+00:00",
+    "fetchedAt": "2026-10-15T21:36:49.816246+00:00",
     "promos": {}
   },
   "SHUFERSAL:116": {
@@ -14083,11 +14663,11 @@
     "promos": {}
   },
   "SHUFERSAL:119": {
-    "fetchedAt": "2026-10-14T17:23:08.788055+00:00",
+    "fetchedAt": "2026-10-15T21:36:49.343518+00:00",
     "promos": {}
   },
   "SHUFERSAL:121": {
-    "fetchedAt": "2026-10-14T17:23:05.666211+00:00",
+    "fetchedAt": "2026-10-15T21:37:40.793233+00:00",
     "promos": {}
   },
   "SHUFERSAL:122": {
@@ -14095,11 +14675,11 @@
     "promos": {}
   },
   "SHUFERSAL:123": {
-    "fetchedAt": "2026-10-14T17:37:14.572054+00:00",
+    "fetchedAt": "2026-10-15T21:39:52.444041+00:00",
     "promos": {}
   },
   "SHUFERSAL:124": {
-    "fetchedAt": "2026-10-14T12:05:54.561332+00:00",
+    "fetchedAt": "2026-10-15T21:37:42.391414+00:00",
     "promos": {}
   },
   "SHUFERSAL:127": {
@@ -14107,7 +14687,7 @@
     "promos": {}
   },
   "SHUFERSAL:128": {
-    "fetchedAt": "2026-10-14T17:30:54.429466+00:00",
+    "fetchedAt": "2026-10-15T21:39:14.771918+00:00",
     "promos": {}
   },
   "SHUFERSAL:129": {
@@ -14115,11 +14695,11 @@
     "promos": {}
   },
   "SHUFERSAL:13": {
-    "fetchedAt": "2026-10-14T17:35:00.984136+00:00",
+    "fetchedAt": "2026-10-15T21:37:59.790492+00:00",
     "promos": {}
   },
   "SHUFERSAL:130": {
-    "fetchedAt": "2026-10-14T17:29:59.632743+00:00",
+    "fetchedAt": "2026-10-15T21:39:50.198103+00:00",
     "promos": {}
   },
   "SHUFERSAL:131": {
@@ -14127,7 +14707,7 @@
     "promos": {}
   },
   "SHUFERSAL:134": {
-    "fetchedAt": "2026-10-14T17:37:10.273424+00:00",
+    "fetchedAt": "2026-10-15T21:36:53.626952+00:00",
     "promos": {}
   },
   "SHUFERSAL:135": {
@@ -14135,11 +14715,11 @@
     "promos": {}
   },
   "SHUFERSAL:139": {
-    "fetchedAt": "2026-10-14T04:57:10.005244+00:00",
+    "fetchedAt": "2026-10-15T21:35:43.175713+00:00",
     "promos": {}
   },
   "SHUFERSAL:14": {
-    "fetchedAt": "2026-10-14T17:28:19.761172+00:00",
+    "fetchedAt": "2026-10-15T21:35:46.660108+00:00",
     "promos": {}
   },
   "SHUFERSAL:141": {
@@ -14147,11 +14727,11 @@
     "promos": {}
   },
   "SHUFERSAL:142": {
-    "fetchedAt": "2026-10-14T17:27:27.466901+00:00",
+    "fetchedAt": "2026-10-15T21:37:16.613666+00:00",
     "promos": {}
   },
   "SHUFERSAL:144": {
-    "fetchedAt": "2026-10-14T17:28:29.557303+00:00",
+    "fetchedAt": "2026-10-15T21:39:44.758258+00:00",
     "promos": {}
   },
   "SHUFERSAL:147": {
@@ -14159,7 +14739,7 @@
     "promos": {}
   },
   "SHUFERSAL:148": {
-    "fetchedAt": "2026-10-14T17:25:18.882380+00:00",
+    "fetchedAt": "2026-10-15T21:38:07.881848+00:00",
     "promos": {}
   },
   "SHUFERSAL:150": {
@@ -14167,7 +14747,7 @@
     "promos": {}
   },
   "SHUFERSAL:151": {
-    "fetchedAt": "2026-10-14T17:38:05.812105+00:00",
+    "fetchedAt": "2026-10-15T21:37:44.578935+00:00",
     "promos": {}
   },
   "SHUFERSAL:152": {
@@ -14183,11 +14763,11 @@
     "promos": {}
   },
   "SHUFERSAL:159": {
-    "fetchedAt": "2026-10-14T17:35:18.580354+00:00",
+    "fetchedAt": "2026-10-15T21:38:46.023910+00:00",
     "promos": {}
   },
   "SHUFERSAL:161": {
-    "fetchedAt": "2026-10-14T17:35:28.776635+00:00",
+    "fetchedAt": "2026-10-15T21:38:38.660957+00:00",
     "promos": {}
   },
   "SHUFERSAL:163": {
@@ -14207,7 +14787,7 @@
     "promos": {}
   },
   "SHUFERSAL:169": {
-    "fetchedAt": "2026-10-14T17:35:21.445073+00:00",
+    "fetchedAt": "2026-10-15T21:36:29.582897+00:00",
     "promos": {}
   },
   "SHUFERSAL:17": {
@@ -14219,7 +14799,7 @@
     "promos": {}
   },
   "SHUFERSAL:173": {
-    "fetchedAt": "2026-10-14T17:33:07.479530+00:00",
+    "fetchedAt": "2026-10-15T21:34:33.108554+00:00",
     "promos": {}
   },
   "SHUFERSAL:174": {
@@ -14227,11 +14807,11 @@
     "promos": {}
   },
   "SHUFERSAL:177": {
-    "fetchedAt": "2026-10-14T17:29:14.129613+00:00",
+    "fetchedAt": "2026-10-15T21:38:40.322211+00:00",
     "promos": {}
   },
   "SHUFERSAL:179": {
-    "fetchedAt": "2026-10-14T17:32:05.024488+00:00",
+    "fetchedAt": "2026-10-15T21:38:03.788019+00:00",
     "promos": {}
   },
   "SHUFERSAL:18": {
@@ -14243,7 +14823,7 @@
     "promos": {}
   },
   "SHUFERSAL:181": {
-    "fetchedAt": "2026-10-14T17:25:26.857786+00:00",
+    "fetchedAt": "2026-10-15T21:34:29.995316+00:00",
     "promos": {}
   },
   "SHUFERSAL:182": {
@@ -14259,11 +14839,11 @@
     "promos": {}
   },
   "SHUFERSAL:187": {
-    "fetchedAt": "2026-10-14T17:24:15.128110+00:00",
+    "fetchedAt": "2026-10-15T21:37:18.068394+00:00",
     "promos": {}
   },
   "SHUFERSAL:188": {
-    "fetchedAt": "2026-10-14T12:18:57.265361+00:00",
+    "fetchedAt": "2026-10-15T21:35:37.171277+00:00",
     "promos": {}
   },
   "SHUFERSAL:189": {
@@ -14275,7 +14855,7 @@
     "promos": {}
   },
   "SHUFERSAL:195": {
-    "fetchedAt": "2026-10-14T17:24:16.040239+00:00",
+    "fetchedAt": "2026-10-15T21:37:40.306656+00:00",
     "promos": {}
   },
   "SHUFERSAL:199": {
@@ -14287,11 +14867,11 @@
     "promos": {}
   },
   "SHUFERSAL:20": {
-    "fetchedAt": "2026-10-14T17:27:35.019123+00:00",
+    "fetchedAt": "2026-10-15T21:39:43.955018+00:00",
     "promos": {}
   },
   "SHUFERSAL:203": {
-    "fetchedAt": "2026-10-14T17:34:13.827560+00:00",
+    "fetchedAt": "2026-10-15T21:37:41.999962+00:00",
     "promos": {}
   },
   "SHUFERSAL:205": {
@@ -14319,7 +14899,7 @@
     "promos": {}
   },
   "SHUFERSAL:214": {
-    "fetchedAt": "2026-10-14T17:26:34.544517+00:00",
+    "fetchedAt": "2026-10-15T21:36:53.013811+00:00",
     "promos": {}
   },
   "SHUFERSAL:215": {
@@ -14343,23 +14923,23 @@
     "promos": {}
   },
   "SHUFERSAL:224": {
-    "fetchedAt": "2026-10-14T12:21:33.503207+00:00",
+    "fetchedAt": "2026-10-15T21:35:43.921754+00:00",
     "promos": {}
   },
   "SHUFERSAL:226": {
-    "fetchedAt": "2026-10-14T12:20:32.557441+00:00",
+    "fetchedAt": "2026-10-15T21:40:27.800811+00:00",
     "promos": {}
   },
   "SHUFERSAL:227": {
-    "fetchedAt": "2026-10-14T17:30:52.429042+00:00",
+    "fetchedAt": "2026-10-15T21:38:10.868494+00:00",
     "promos": {}
   },
   "SHUFERSAL:228": {
-    "fetchedAt": "2026-10-14T12:28:55.887953+00:00",
+    "fetchedAt": "2026-10-15T21:36:18.406499+00:00",
     "promos": {}
   },
   "SHUFERSAL:229": {
-    "fetchedAt": "2026-10-14T17:36:28.993686+00:00",
+    "fetchedAt": "2026-10-15T21:36:51.543677+00:00",
     "promos": {}
   },
   "SHUFERSAL:23": {
@@ -14367,11 +14947,11 @@
     "promos": {}
   },
   "SHUFERSAL:230": {
-    "fetchedAt": "2026-10-14T17:24:05.238922+00:00",
+    "fetchedAt": "2026-10-15T21:34:30.568758+00:00",
     "promos": {}
   },
   "SHUFERSAL:231": {
-    "fetchedAt": "2026-10-14T17:31:04.368833+00:00",
+    "fetchedAt": "2026-10-15T21:37:39.911731+00:00",
     "promos": {}
   },
   "SHUFERSAL:232": {
@@ -14383,7 +14963,7 @@
     "promos": {}
   },
   "SHUFERSAL:238": {
-    "fetchedAt": "2026-10-14T12:07:10.934804+00:00",
+    "fetchedAt": "2026-10-15T21:39:16.066200+00:00",
     "promos": {}
   },
   "SHUFERSAL:239": {
@@ -14407,11 +14987,11 @@
     "promos": {}
   },
   "SHUFERSAL:247": {
-    "fetchedAt": "2026-10-14T17:36:04.561395+00:00",
+    "fetchedAt": "2026-10-15T21:34:36.441861+00:00",
     "promos": {}
   },
   "SHUFERSAL:248": {
-    "fetchedAt": "2026-10-14T12:22:57.920112+00:00",
+    "fetchedAt": "2026-10-15T21:34:33.810063+00:00",
     "promos": {}
   },
   "SHUFERSAL:249": {
@@ -14419,7 +14999,7 @@
     "promos": {}
   },
   "SHUFERSAL:250": {
-    "fetchedAt": "2026-10-14T17:28:18.628725+00:00",
+    "fetchedAt": "2026-10-15T21:38:39.998242+00:00",
     "promos": {}
   },
   "SHUFERSAL:251": {
@@ -14431,7 +15011,7 @@
     "promos": {}
   },
   "SHUFERSAL:259": {
-    "fetchedAt": "2026-10-14T17:28:28.115499+00:00",
+    "fetchedAt": "2026-10-15T21:36:24.580197+00:00",
     "promos": {}
   },
   "SHUFERSAL:260": {
@@ -14451,27 +15031,27 @@
     "promos": {}
   },
   "SHUFERSAL:266": {
-    "fetchedAt": "2026-10-14T17:28:19.026366+00:00",
+    "fetchedAt": "2026-10-15T21:39:52.894008+00:00",
     "promos": {}
   },
   "SHUFERSAL:267": {
-    "fetchedAt": "2026-10-14T17:27:44.557314+00:00",
+    "fetchedAt": "2026-10-15T21:37:14.556220+00:00",
     "promos": {}
   },
   "SHUFERSAL:269": {
-    "fetchedAt": "2026-10-14T17:28:19.405406+00:00",
+    "fetchedAt": "2026-10-15T21:38:49.871527+00:00",
     "promos": {}
   },
   "SHUFERSAL:271": {
-    "fetchedAt": "2026-10-14T17:37:21.742963+00:00",
+    "fetchedAt": "2026-10-15T21:38:09.446902+00:00",
     "promos": {}
   },
   "SHUFERSAL:272": {
-    "fetchedAt": "2026-10-14T04:58:48.951492+00:00",
+    "fetchedAt": "2026-10-15T21:39:25.117914+00:00",
     "promos": {}
   },
   "SHUFERSAL:274": {
-    "fetchedAt": "2026-10-14T17:36:15.585639+00:00",
+    "fetchedAt": "2026-10-15T21:36:51.179300+00:00",
     "promos": {}
   },
   "SHUFERSAL:277": {
@@ -14491,7 +15071,7 @@
     "promos": {}
   },
   "SHUFERSAL:282": {
-    "fetchedAt": "2026-10-14T17:25:21.667259+00:00",
+    "fetchedAt": "2026-10-15T21:36:20.269732+00:00",
     "promos": {}
   },
   "SHUFERSAL:283": {
@@ -14511,7 +15091,7 @@
     "promos": {}
   },
   "SHUFERSAL:29": {
-    "fetchedAt": "2026-10-14T12:18:52.794268+00:00",
+    "fetchedAt": "2026-10-15T21:38:05.050923+00:00",
     "promos": {}
   },
   "SHUFERSAL:290": {
@@ -14523,7 +15103,7 @@
     "promos": {}
   },
   "SHUFERSAL:299": {
-    "fetchedAt": "2026-10-14T17:23:03.395147+00:00",
+    "fetchedAt": "2026-10-15T21:38:44.601976+00:00",
     "promos": {}
   },
   "SHUFERSAL:3": {
@@ -14567,7 +15147,7 @@
     "promos": {}
   },
   "SHUFERSAL:317": {
-    "fetchedAt": "2026-10-14T12:23:13.631730+00:00",
+    "fetchedAt": "2026-10-15T21:34:36.632179+00:00",
     "promos": {}
   },
   "SHUFERSAL:318": {
@@ -14579,7 +15159,7 @@
     "promos": {}
   },
   "SHUFERSAL:32": {
-    "fetchedAt": "2026-10-14T04:59:55.825378+00:00",
+    "fetchedAt": "2026-10-15T21:40:20.452508+00:00",
     "promos": {}
   },
   "SHUFERSAL:320": {
@@ -14615,7 +15195,7 @@
     "promos": {}
   },
   "SHUFERSAL:336": {
-    "fetchedAt": "2026-10-14T17:31:49.439955+00:00",
+    "fetchedAt": "2026-10-15T21:39:09.877026+00:00",
     "promos": {}
   },
   "SHUFERSAL:339": {
@@ -14623,11 +15203,11 @@
     "promos": {}
   },
   "SHUFERSAL:34": {
-    "fetchedAt": "2026-10-14T17:24:15.493921+00:00",
+    "fetchedAt": "2026-10-15T21:39:49.847783+00:00",
     "promos": {}
   },
   "SHUFERSAL:340": {
-    "fetchedAt": "2026-10-14T12:20:14.085129+00:00",
+    "fetchedAt": "2026-10-15T21:35:38.094531+00:00",
     "promos": {}
   },
   "SHUFERSAL:341": {
@@ -14635,11 +15215,11 @@
     "promos": {}
   },
   "SHUFERSAL:342": {
-    "fetchedAt": "2026-10-14T17:29:12.781086+00:00",
+    "fetchedAt": "2026-10-15T21:36:19.460962+00:00",
     "promos": {}
   },
   "SHUFERSAL:343": {
-    "fetchedAt": "2026-10-14T05:01:35.948845+00:00",
+    "fetchedAt": "2026-10-15T21:40:29.700674+00:00",
     "promos": {}
   },
   "SHUFERSAL:344": {
@@ -14679,7 +15259,7 @@
     "promos": {}
   },
   "SHUFERSAL:360": {
-    "fetchedAt": "2026-10-14T17:38:10.772505+00:00",
+    "fetchedAt": "2026-10-15T21:40:20.763895+00:00",
     "promos": {}
   },
   "SHUFERSAL:361": {
@@ -14687,7 +15267,7 @@
     "promos": {}
   },
   "SHUFERSAL:362": {
-    "fetchedAt": "2026-10-14T04:59:53.994894+00:00",
+    "fetchedAt": "2026-10-15T21:36:25.417592+00:00",
     "promos": {}
   },
   "SHUFERSAL:365": {
@@ -14695,11 +15275,11 @@
     "promos": {}
   },
   "SHUFERSAL:369": {
-    "fetchedAt": "2026-10-14T12:07:02.925722+00:00",
+    "fetchedAt": "2026-10-15T21:34:35.530751+00:00",
     "promos": {}
   },
   "SHUFERSAL:371": {
-    "fetchedAt": "2026-10-14T17:35:16.128026+00:00",
+    "fetchedAt": "2026-10-15T21:37:14.980357+00:00",
     "promos": {}
   },
   "SHUFERSAL:372": {
@@ -14707,7 +15287,7 @@
     "promos": {}
   },
   "SHUFERSAL:374": {
-    "fetchedAt": "2026-10-14T17:26:40.364324+00:00",
+    "fetchedAt": "2026-10-15T21:36:57.718580+00:00",
     "promos": {}
   },
   "SHUFERSAL:375": {
@@ -14723,7 +15303,7 @@
     "promos": {}
   },
   "SHUFERSAL:379": {
-    "fetchedAt": "2026-10-14T17:32:10.659484+00:00",
+    "fetchedAt": "2026-10-15T21:35:35.988686+00:00",
     "promos": {}
   },
   "SHUFERSAL:38": {
@@ -14747,11 +15327,11 @@
     "promos": {}
   },
   "SHUFERSAL:39": {
-    "fetchedAt": "2026-10-14T17:33:06.618001+00:00",
+    "fetchedAt": "2026-10-15T21:37:24.064319+00:00",
     "promos": {}
   },
   "SHUFERSAL:390": {
-    "fetchedAt": "2026-10-14T17:31:49.727611+00:00",
+    "fetchedAt": "2026-10-15T21:40:02.604290+00:00",
     "promos": {}
   },
   "SHUFERSAL:391": {
@@ -14767,7 +15347,7 @@
     "promos": {}
   },
   "SHUFERSAL:397": {
-    "fetchedAt": "2026-10-14T12:05:58.799756+00:00",
+    "fetchedAt": "2026-10-15T21:39:13.203666+00:00",
     "promos": {}
   },
   "SHUFERSAL:398": {
@@ -14775,11 +15355,11 @@
     "promos": {}
   },
   "SHUFERSAL:4": {
-    "fetchedAt": "2026-10-14T17:26:30.900632+00:00",
+    "fetchedAt": "2026-10-15T21:39:18.458617+00:00",
     "promos": {}
   },
   "SHUFERSAL:40": {
-    "fetchedAt": "2026-10-14T17:35:21.117778+00:00",
+    "fetchedAt": "2026-10-15T21:39:16.707860+00:00",
     "promos": {}
   },
   "SHUFERSAL:42": {
@@ -14835,15 +15415,15 @@
     "promos": {}
   },
   "SHUFERSAL:579": {
-    "fetchedAt": "2026-10-14T12:20:26.438576+00:00",
+    "fetchedAt": "2026-10-15T21:38:04.471043+00:00",
     "promos": {}
   },
   "SHUFERSAL:595": {
-    "fetchedAt": "2026-10-14T17:34:17.070450+00:00",
+    "fetchedAt": "2026-10-15T21:37:46.249527+00:00",
     "promos": {}
   },
   "SHUFERSAL:596": {
-    "fetchedAt": "2026-10-14T17:28:32.473158+00:00",
+    "fetchedAt": "2026-10-15T21:35:40.861083+00:00",
     "promos": {}
   },
   "SHUFERSAL:599": {
@@ -14863,11 +15443,11 @@
     "promos": {}
   },
   "SHUFERSAL:69": {
-    "fetchedAt": "2026-10-14T17:23:01.351315+00:00",
+    "fetchedAt": "2026-10-15T21:37:18.909597+00:00",
     "promos": {}
   },
   "SHUFERSAL:7": {
-    "fetchedAt": "2026-10-14T17:29:17.014176+00:00",
+    "fetchedAt": "2026-10-15T21:37:18.569042+00:00",
     "promos": {}
   },
   "SHUFERSAL:70": {
@@ -14883,7 +15463,7 @@
     "promos": {}
   },
   "SHUFERSAL:72": {
-    "fetchedAt": "2026-10-14T12:04:34.135722+00:00",
+    "fetchedAt": "2026-10-15T21:36:30.327058+00:00",
     "promos": {}
   },
   "SHUFERSAL:738": {
@@ -14895,7 +15475,7 @@
     "promos": {}
   },
   "SHUFERSAL:741": {
-    "fetchedAt": "2026-10-14T17:27:40.903356+00:00",
+    "fetchedAt": "2026-10-15T21:38:39.339574+00:00",
     "promos": {}
   },
   "SHUFERSAL:744": {
@@ -14903,7 +15483,7 @@
     "promos": {}
   },
   "SHUFERSAL:756": {
-    "fetchedAt": "2026-10-14T12:05:56.918509+00:00",
+    "fetchedAt": "2026-10-15T21:34:31.883067+00:00",
     "promos": {}
   },
   "SHUFERSAL:757": {
@@ -14911,7 +15491,7 @@
     "promos": {}
   },
   "SHUFERSAL:76": {
-    "fetchedAt": "2026-10-14T12:04:37.159647+00:00",
+    "fetchedAt": "2026-10-15T21:37:14.068668+00:00",
     "promos": {}
   },
   "SHUFERSAL:77": {
@@ -14935,7 +15515,7 @@
     "promos": {}
   },
   "SHUFERSAL:790": {
-    "fetchedAt": "2026-10-14T17:38:02.018471+00:00",
+    "fetchedAt": "2026-10-15T21:39:51.417710+00:00",
     "promos": {}
   },
   "SHUFERSAL:80": {
@@ -14955,11 +15535,11 @@
     "promos": {}
   },
   "SHUFERSAL:842": {
-    "fetchedAt": "2026-10-14T17:34:11.407171+00:00",
+    "fetchedAt": "2026-10-15T21:39:15.261019+00:00",
     "promos": {}
   },
   "SHUFERSAL:844": {
-    "fetchedAt": "2026-10-14T17:36:10.740999+00:00",
+    "fetchedAt": "2026-10-15T21:38:37.298784+00:00",
     "promos": {}
   },
   "SHUFERSAL:845": {
@@ -14967,7 +15547,7 @@
     "promos": {}
   },
   "SHUFERSAL:846": {
-    "fetchedAt": "2026-10-14T12:19:04.151226+00:00",
+    "fetchedAt": "2026-10-15T21:38:17.486797+00:00",
     "promos": {}
   },
   "SHUFERSAL:854": {
@@ -14979,15 +15559,15 @@
     "promos": {}
   },
   "SHUFERSAL:89": {
-    "fetchedAt": "2026-10-14T17:27:28.789517+00:00",
+    "fetchedAt": "2026-10-15T21:37:37.866247+00:00",
     "promos": {}
   },
   "SHUFERSAL:9": {
-    "fetchedAt": "2026-10-14T12:29:00.549815+00:00",
+    "fetchedAt": "2026-10-15T21:36:27.869185+00:00",
     "promos": {}
   },
   "SHUFERSAL:90": {
-    "fetchedAt": "2026-10-14T17:27:39.530398+00:00",
+    "fetchedAt": "2026-10-15T21:36:52.525199+00:00",
     "promos": {}
   },
   "SHUFERSAL:91": {
@@ -15011,75 +15591,75 @@
     "promos": {}
   },
   "SHUFERSAL:98": {
-    "fetchedAt": "2026-10-14T17:37:23.459576+00:00",
+    "fetchedAt": "2026-10-15T21:35:42.809127+00:00",
     "promos": {}
   },
   "SHUK_AHIR:11": {
-    "fetchedAt": "2026-10-14T21:56:06.158491+00:00",
+    "fetchedAt": "2026-10-15T21:46:26.643948+00:00",
     "promos": {}
   },
   "SHUK_AHIR:12": {
-    "fetchedAt": "2026-10-14T21:56:06.911539+00:00",
+    "fetchedAt": "2026-10-15T21:46:26.106208+00:00",
     "promos": {}
   },
   "SHUK_AHIR:13": {
-    "fetchedAt": "2026-10-14T21:56:08.567794+00:00",
+    "fetchedAt": "2026-10-15T21:46:24.808173+00:00",
     "promos": {}
   },
   "SHUK_AHIR:14": {
-    "fetchedAt": "2026-10-14T21:56:05.463981+00:00",
+    "fetchedAt": "2026-10-15T21:46:26.370056+00:00",
     "promos": {}
   },
   "SHUK_AHIR:17": {
-    "fetchedAt": "2026-10-14T21:56:07.502145+00:00",
+    "fetchedAt": "2026-10-15T21:46:21.458559+00:00",
     "promos": {}
   },
   "SHUK_AHIR:18": {
-    "fetchedAt": "2026-10-14T21:56:02.796910+00:00",
+    "fetchedAt": "2026-10-15T21:46:25.534670+00:00",
     "promos": {}
   },
   "SHUK_AHIR:21": {
-    "fetchedAt": "2026-10-14T21:56:07.219873+00:00",
+    "fetchedAt": "2026-10-15T21:46:25.450942+00:00",
     "promos": {}
   },
   "SHUK_AHIR:6": {
-    "fetchedAt": "2026-10-14T21:56:01.732140+00:00",
+    "fetchedAt": "2026-10-15T21:46:21.293934+00:00",
     "promos": {}
   },
   "SHUK_AHIR:9": {
-    "fetchedAt": "2026-10-14T21:56:07.427451+00:00",
+    "fetchedAt": "2026-10-15T21:46:24.728429+00:00",
     "promos": {}
   },
   "STOP_MARKET:10": {
-    "fetchedAt": "2026-10-14T21:56:04.384576+00:00",
+    "fetchedAt": "2026-10-15T21:46:22.771588+00:00",
     "promos": {}
   },
   "STOP_MARKET:11": {
-    "fetchedAt": "2026-10-14T21:56:01.576588+00:00",
+    "fetchedAt": "2026-10-15T21:46:20.150434+00:00",
     "promos": {}
   },
   "STOP_MARKET:12": {
-    "fetchedAt": "2026-10-14T21:55:55.314120+00:00",
+    "fetchedAt": "2026-10-15T21:46:20.626487+00:00",
     "promos": {}
   },
   "STOP_MARKET:4": {
-    "fetchedAt": "2026-10-14T21:55:57.738386+00:00",
+    "fetchedAt": "2026-10-15T21:46:16.889411+00:00",
     "promos": {}
   },
   "STOP_MARKET:5": {
-    "fetchedAt": "2026-10-14T21:56:03.154110+00:00",
+    "fetchedAt": "2026-10-15T21:46:22.356493+00:00",
     "promos": {}
   },
   "STOP_MARKET:6": {
-    "fetchedAt": "2026-10-14T21:56:00.416446+00:00",
+    "fetchedAt": "2026-10-15T21:46:23.608240+00:00",
     "promos": {}
   },
   "STOP_MARKET:7": {
-    "fetchedAt": "2026-10-14T21:56:04.065727+00:00",
+    "fetchedAt": "2026-10-15T21:46:16.258995+00:00",
     "promos": {}
   },
   "STOP_MARKET:8": {
-    "fetchedAt": "2026-10-14T21:56:02.743975+00:00",
+    "fetchedAt": "2026-10-15T21:46:23.917941+00:00",
     "promos": {}
   },
   "SUPER_PHARM:10": {
@@ -15869,35 +16449,51 @@
     "promos": {}
   },
   "SUPER_SAPIR:13": {
-    "fetchedAt": "2026-10-14T21:53:39.966842+00:00",
+    "fetchedAt": "2026-10-15T21:44:11.411636+00:00",
     "promos": {}
   },
   "SUPER_SAPIR:17": {
-    "fetchedAt": "2026-10-14T21:53:43.536388+00:00",
+    "fetchedAt": "2026-10-15T21:44:08.376661+00:00",
+    "promos": {}
+  },
+  "SUPER_SAPIR:190": {
+    "fetchedAt": "2026-10-15T21:44:03.704703+00:00",
+    "promos": {}
+  },
+  "SUPER_SAPIR:191": {
+    "fetchedAt": "2026-10-15T21:44:14.513270+00:00",
     "promos": {}
   },
   "SUPER_SAPIR:192": {
-    "fetchedAt": "2026-10-14T21:53:41.241879+00:00",
+    "fetchedAt": "2026-10-15T21:44:08.501691+00:00",
     "promos": {}
   },
   "SUPER_SAPIR:193": {
-    "fetchedAt": "2026-10-14T21:53:41.168779+00:00",
+    "fetchedAt": "2026-10-15T21:44:12.665766+00:00",
+    "promos": {}
+  },
+  "SUPER_SAPIR:194": {
+    "fetchedAt": "2026-10-15T21:44:10.179387+00:00",
+    "promos": {}
+  },
+  "SUPER_SAPIR:197": {
+    "fetchedAt": "2026-10-15T21:44:11.798042+00:00",
     "promos": {}
   },
   "SUPER_SAPIR:20": {
-    "fetchedAt": "2026-10-14T21:53:36.051171+00:00",
+    "fetchedAt": "2026-10-15T21:44:09.823217+00:00",
     "promos": {}
   },
   "SUPER_SAPIR:21": {
-    "fetchedAt": "2026-10-14T21:53:45.035448+00:00",
+    "fetchedAt": "2026-10-15T21:44:11.614729+00:00",
     "promos": {}
   },
   "SUPER_SAPIR:26": {
-    "fetchedAt": "2026-10-14T21:53:41.391543+00:00",
+    "fetchedAt": "2026-10-15T21:44:09.629502+00:00",
     "promos": {}
   },
   "SUPER_SAPIR:260": {
-    "fetchedAt": "2026-10-14T21:53:31.775093+00:00",
+    "fetchedAt": "2026-10-15T21:44:05.523404+00:00",
     "promos": {}
   },
   "SUPER_SAPIR:261": {
@@ -15905,23 +16501,27 @@
     "promos": {}
   },
   "SUPER_SAPIR:264": {
-    "fetchedAt": "2026-10-14T21:53:37.470435+00:00",
+    "fetchedAt": "2026-10-15T21:44:05.648754+00:00",
     "promos": {}
   },
   "SUPER_SAPIR:27": {
-    "fetchedAt": "2026-10-14T21:53:37.433285+00:00",
+    "fetchedAt": "2026-10-15T21:44:09.709150+00:00",
+    "promos": {}
+  },
+  "SUPER_SAPIR:275": {
+    "fetchedAt": "2026-10-15T21:44:07.925148+00:00",
     "promos": {}
   },
   "SUPER_SAPIR:29": {
-    "fetchedAt": "2026-10-14T21:53:39.767493+00:00",
+    "fetchedAt": "2026-10-15T21:44:03.660522+00:00",
     "promos": {}
   },
   "SUPER_SAPIR:38": {
-    "fetchedAt": "2026-10-14T21:53:31.807181+00:00",
+    "fetchedAt": "2026-10-15T21:44:01.379741+00:00",
     "promos": {}
   },
   "SUPER_SAPIR:396": {
-    "fetchedAt": "2026-10-14T21:53:31.507105+00:00",
+    "fetchedAt": "2026-10-15T21:44:05.537097+00:00",
     "promos": {}
   },
   "SUPER_SAPIR:399": {
@@ -15929,7 +16529,7 @@
     "promos": {}
   },
   "SUPER_SAPIR:40": {
-    "fetchedAt": "2026-10-14T21:53:37.551762+00:00",
+    "fetchedAt": "2026-10-15T21:44:13.244446+00:00",
     "promos": {}
   },
   "SUPER_SAPIR:42": {
@@ -15937,11 +16537,11 @@
     "promos": {}
   },
   "SUPER_SAPIR:43": {
-    "fetchedAt": "2026-10-14T21:53:36.132476+00:00",
+    "fetchedAt": "2026-10-15T21:44:04.903442+00:00",
     "promos": {}
   },
   "SUPER_SAPIR:44": {
-    "fetchedAt": "2026-10-14T21:53:43.399356+00:00",
+    "fetchedAt": "2026-10-15T21:44:13.718905+00:00",
     "promos": {}
   },
   "SUPER_SAPIR:46": {
@@ -15953,315 +16553,327 @@
     "promos": {}
   },
   "SUPER_SAPIR:48": {
-    "fetchedAt": "2026-10-14T21:53:44.031753+00:00",
+    "fetchedAt": "2026-10-15T21:44:06.709532+00:00",
     "promos": {}
   },
   "SUPER_SAPIR:52": {
-    "fetchedAt": "2026-10-14T21:53:40.993102+00:00",
+    "fetchedAt": "2026-10-15T21:44:03.779656+00:00",
     "promos": {}
   },
   "SUPER_SAPIR:53": {
-    "fetchedAt": "2026-10-14T21:53:39.916342+00:00",
+    "fetchedAt": "2026-10-15T21:44:03.605159+00:00",
     "promos": {}
   },
   "SUPER_SAPIR:6": {
-    "fetchedAt": "2026-10-14T21:53:44.983819+00:00",
+    "fetchedAt": "2026-10-15T21:44:06.792054+00:00",
     "promos": {}
   },
   "SUPER_SAPIR:66": {
-    "fetchedAt": "2026-10-14T21:53:37.269774+00:00",
+    "fetchedAt": "2026-10-15T21:44:08.538429+00:00",
     "promos": {}
   },
   "SUPER_SAPIR:76": {
-    "fetchedAt": "2026-10-14T21:53:37.162230+00:00",
+    "fetchedAt": "2026-10-15T21:44:06.938401+00:00",
     "promos": {}
   },
   "SUPER_SAPIR:77": {
-    "fetchedAt": "2026-10-14T21:53:35.789198+00:00",
+    "fetchedAt": "2026-10-15T21:44:06.877532+00:00",
     "promos": {}
   },
   "SUPER_SAPIR:79": {
-    "fetchedAt": "2026-10-14T21:53:41.454416+00:00",
+    "fetchedAt": "2026-10-15T21:44:14.423243+00:00",
+    "promos": {}
+  },
+  "SUPER_SAPIR:81": {
+    "fetchedAt": "2026-10-15T21:44:12.735508+00:00",
+    "promos": {}
+  },
+  "SUPER_SAPIR:83": {
+    "fetchedAt": "2026-10-15T21:44:12.797872+00:00",
+    "promos": {}
+  },
+  "SUPER_SAPIR:84": {
+    "fetchedAt": "2026-10-15T21:44:10.988154+00:00",
     "promos": {}
   },
   "SUPER_YUDA:201": {
-    "fetchedAt": "2026-10-14T21:55:46.191066+00:00",
+    "fetchedAt": "2026-10-15T21:46:06.934272+00:00",
     "promos": {}
   },
   "SUPER_YUDA:202": {
-    "fetchedAt": "2026-10-14T21:55:36.268459+00:00",
+    "fetchedAt": "2026-10-15T21:45:56.333280+00:00",
     "promos": {}
   },
   "SUPER_YUDA:203": {
-    "fetchedAt": "2026-10-14T21:55:46.597230+00:00",
+    "fetchedAt": "2026-10-15T21:45:51.740155+00:00",
     "promos": {}
   },
   "SUPER_YUDA:204": {
-    "fetchedAt": "2026-10-14T21:55:42.346172+00:00",
+    "fetchedAt": "2026-10-15T21:45:55.553499+00:00",
     "promos": {}
   },
   "SUPER_YUDA:205": {
-    "fetchedAt": "2026-10-14T21:55:29.671092+00:00",
+    "fetchedAt": "2026-10-15T21:45:52.955815+00:00",
     "promos": {}
   },
   "SUPER_YUDA:206": {
-    "fetchedAt": "2026-10-14T21:55:32.752976+00:00",
+    "fetchedAt": "2026-10-15T21:45:52.823130+00:00",
     "promos": {}
   },
   "SUPER_YUDA:207": {
-    "fetchedAt": "2026-10-14T21:55:36.318934+00:00",
+    "fetchedAt": "2026-10-15T21:45:56.049917+00:00",
     "promos": {}
   },
   "SUPER_YUDA:208": {
-    "fetchedAt": "2026-10-14T21:55:34.308466+00:00",
+    "fetchedAt": "2026-10-15T21:45:56.965025+00:00",
     "promos": {}
   },
   "SUPER_YUDA:209": {
-    "fetchedAt": "2026-10-14T21:55:39.310090+00:00",
+    "fetchedAt": "2026-10-15T21:46:06.731285+00:00",
     "promos": {}
   },
   "SUPER_YUDA:210": {
-    "fetchedAt": "2026-10-14T21:55:35.638759+00:00",
+    "fetchedAt": "2026-10-15T21:46:00.813524+00:00",
     "promos": {}
   },
   "SUPER_YUDA:211": {
-    "fetchedAt": "2026-10-14T21:55:28.240124+00:00",
+    "fetchedAt": "2026-10-15T21:46:07.692883+00:00",
     "promos": {}
   },
   "SUPER_YUDA:212": {
-    "fetchedAt": "2026-10-14T21:55:33.416296+00:00",
+    "fetchedAt": "2026-10-15T21:46:01.385698+00:00",
     "promos": {}
   },
   "SUPER_YUDA:213": {
-    "fetchedAt": "2026-10-14T21:55:44.580246+00:00",
+    "fetchedAt": "2026-10-15T21:46:03.453805+00:00",
     "promos": {}
   },
   "SUPER_YUDA:214": {
-    "fetchedAt": "2026-10-14T21:55:40.630765+00:00",
+    "fetchedAt": "2026-10-15T21:45:57.773559+00:00",
     "promos": {}
   },
   "SUPER_YUDA:215": {
-    "fetchedAt": "2026-10-14T21:55:38.633966+00:00",
+    "fetchedAt": "2026-10-15T21:46:06.232149+00:00",
     "promos": {}
   },
   "SUPER_YUDA:216": {
-    "fetchedAt": "2026-10-14T21:55:36.375563+00:00",
+    "fetchedAt": "2026-10-15T21:46:02.859490+00:00",
     "promos": {}
   },
   "SUPER_YUDA:217": {
-    "fetchedAt": "2026-10-14T21:55:45.337086+00:00",
+    "fetchedAt": "2026-10-15T21:45:58.104024+00:00",
     "promos": {}
   },
   "SUPER_YUDA:230": {
-    "fetchedAt": "2026-10-14T21:55:42.245681+00:00",
+    "fetchedAt": "2026-10-15T21:46:01.605437+00:00",
     "promos": {}
   },
   "SUPER_YUDA:231": {
-    "fetchedAt": "2026-10-14T21:55:34.586457+00:00",
+    "fetchedAt": "2026-10-15T21:45:57.413565+00:00",
     "promos": {}
   },
   "SUPER_YUDA:232": {
-    "fetchedAt": "2026-10-14T21:55:30.226992+00:00",
+    "fetchedAt": "2026-10-15T21:45:52.331255+00:00",
     "promos": {}
   },
   "SUPER_YUDA:233": {
-    "fetchedAt": "2026-10-14T21:55:28.547024+00:00",
+    "fetchedAt": "2026-10-15T21:46:02.393533+00:00",
     "promos": {}
   },
   "SUPER_YUDA:235": {
-    "fetchedAt": "2026-10-14T21:55:30.178032+00:00",
+    "fetchedAt": "2026-10-15T21:46:03.188160+00:00",
     "promos": {}
   },
   "SUPER_YUDA:236": {
-    "fetchedAt": "2026-10-14T21:55:41.544711+00:00",
+    "fetchedAt": "2026-10-15T21:45:50.626601+00:00",
     "promos": {}
   },
   "SUPER_YUDA:237": {
-    "fetchedAt": "2026-10-14T21:55:30.279495+00:00",
+    "fetchedAt": "2026-10-15T21:46:03.575471+00:00",
     "promos": {}
   },
   "SUPER_YUDA:238": {
-    "fetchedAt": "2026-10-14T21:55:40.345511+00:00",
+    "fetchedAt": "2026-10-15T21:45:58.212950+00:00",
     "promos": {}
   },
   "SUPER_YUDA:241": {
-    "fetchedAt": "2026-10-14T21:55:42.296845+00:00",
+    "fetchedAt": "2026-10-15T21:45:52.223447+00:00",
     "promos": {}
   },
   "TIV_TAAM:10": {
-    "fetchedAt": "2026-10-14T21:54:07.691984+00:00",
+    "fetchedAt": "2026-10-15T21:44:33.054167+00:00",
     "promos": {}
   },
   "TIV_TAAM:12": {
-    "fetchedAt": "2026-10-14T21:54:00.937162+00:00",
+    "fetchedAt": "2026-10-15T21:44:42.026530+00:00",
     "promos": {}
   },
   "TIV_TAAM:14": {
-    "fetchedAt": "2026-10-14T21:53:59.414818+00:00",
+    "fetchedAt": "2026-10-15T21:44:33.994354+00:00",
     "promos": {}
   },
   "TIV_TAAM:15": {
-    "fetchedAt": "2026-10-14T21:54:23.438390+00:00",
+    "fetchedAt": "2026-10-15T21:44:41.453247+00:00",
     "promos": {}
   },
   "TIV_TAAM:156": {
-    "fetchedAt": "2026-10-14T21:54:27.785551+00:00",
+    "fetchedAt": "2026-10-15T21:44:49.575109+00:00",
     "promos": {}
   },
   "TIV_TAAM:17": {
-    "fetchedAt": "2026-10-14T21:53:58.260265+00:00",
+    "fetchedAt": "2026-10-15T21:44:46.633793+00:00",
     "promos": {}
   },
   "TIV_TAAM:18": {
-    "fetchedAt": "2026-10-14T21:54:20.006184+00:00",
+    "fetchedAt": "2026-10-15T21:44:21.949126+00:00",
     "promos": {}
   },
   "TIV_TAAM:19": {
-    "fetchedAt": "2026-10-14T21:53:51.698060+00:00",
+    "fetchedAt": "2026-10-15T21:44:40.224023+00:00",
     "promos": {}
   },
   "TIV_TAAM:2": {
-    "fetchedAt": "2026-10-14T21:53:56.724709+00:00",
+    "fetchedAt": "2026-10-15T21:44:51.118209+00:00",
     "promos": {}
   },
   "TIV_TAAM:20": {
-    "fetchedAt": "2026-10-14T21:54:11.843936+00:00",
+    "fetchedAt": "2026-10-15T21:44:29.857766+00:00",
     "promos": {}
   },
   "TIV_TAAM:21": {
-    "fetchedAt": "2026-10-14T21:54:16.147575+00:00",
+    "fetchedAt": "2026-10-15T21:44:28.674064+00:00",
     "promos": {}
   },
   "TIV_TAAM:22": {
-    "fetchedAt": "2026-10-14T21:54:15.705352+00:00",
+    "fetchedAt": "2026-10-15T21:44:21.474297+00:00",
     "promos": {}
   },
   "TIV_TAAM:23": {
-    "fetchedAt": "2026-10-14T21:54:06.734778+00:00",
+    "fetchedAt": "2026-10-15T21:44:28.011349+00:00",
     "promos": {}
   },
   "TIV_TAAM:24": {
-    "fetchedAt": "2026-10-14T21:53:59.786960+00:00",
+    "fetchedAt": "2026-10-15T21:44:44.195175+00:00",
     "promos": {}
   },
   "TIV_TAAM:3": {
-    "fetchedAt": "2026-10-14T21:53:55.750653+00:00",
+    "fetchedAt": "2026-10-15T21:44:51.665437+00:00",
     "promos": {}
   },
   "TIV_TAAM:30": {
-    "fetchedAt": "2026-10-14T21:54:04.465606+00:00",
+    "fetchedAt": "2026-10-15T21:44:37.033717+00:00",
     "promos": {}
   },
   "TIV_TAAM:51": {
-    "fetchedAt": "2026-10-14T21:53:48.047466+00:00",
+    "fetchedAt": "2026-10-15T21:44:53.530609+00:00",
     "promos": {}
   },
   "TIV_TAAM:52": {
-    "fetchedAt": "2026-10-14T21:54:16.534711+00:00",
+    "fetchedAt": "2026-10-15T21:44:19.842093+00:00",
     "promos": {}
   },
   "TIV_TAAM:56": {
-    "fetchedAt": "2026-10-14T21:54:15.019989+00:00",
+    "fetchedAt": "2026-10-15T21:44:26.967603+00:00",
     "promos": {}
   },
   "TIV_TAAM:57": {
-    "fetchedAt": "2026-10-14T21:53:56.186176+00:00",
+    "fetchedAt": "2026-10-15T21:44:25.063646+00:00",
     "promos": {}
   },
   "TIV_TAAM:58": {
-    "fetchedAt": "2026-10-14T21:54:18.872023+00:00",
+    "fetchedAt": "2026-10-15T21:44:36.599729+00:00",
     "promos": {}
   },
   "TIV_TAAM:59": {
-    "fetchedAt": "2026-10-14T21:54:07.167399+00:00",
+    "fetchedAt": "2026-10-15T21:44:47.276355+00:00",
     "promos": {}
   },
   "TIV_TAAM:6": {
-    "fetchedAt": "2026-10-14T21:54:27.097883+00:00",
+    "fetchedAt": "2026-10-15T21:44:35.670530+00:00",
     "promos": {}
   },
   "TIV_TAAM:61": {
-    "fetchedAt": "2026-10-14T21:54:23.849083+00:00",
+    "fetchedAt": "2026-10-15T21:44:42.583151+00:00",
     "promos": {}
   },
   "TIV_TAAM:63": {
-    "fetchedAt": "2026-10-14T21:54:22.321252+00:00",
+    "fetchedAt": "2026-10-15T21:44:55.988198+00:00",
     "promos": {}
   },
   "TIV_TAAM:68": {
-    "fetchedAt": "2026-10-14T21:54:03.354270+00:00",
+    "fetchedAt": "2026-10-15T21:44:55.048742+00:00",
     "promos": {}
   },
   "TIV_TAAM:7": {
-    "fetchedAt": "2026-10-14T21:54:24.261050+00:00",
+    "fetchedAt": "2026-10-15T21:44:50.492738+00:00",
     "promos": {}
   },
   "TIV_TAAM:70": {
-    "fetchedAt": "2026-10-14T21:54:19.304459+00:00",
+    "fetchedAt": "2026-10-15T21:44:19.398573+00:00",
     "promos": {}
   },
   "TIV_TAAM:71": {
-    "fetchedAt": "2026-10-14T21:54:11.406758+00:00",
+    "fetchedAt": "2026-10-15T21:44:54.126570+00:00",
     "promos": {}
   },
   "TIV_TAAM:73": {
-    "fetchedAt": "2026-10-14T21:53:50.634673+00:00",
+    "fetchedAt": "2026-10-15T21:44:18.915470+00:00",
     "promos": {}
   },
   "TIV_TAAM:74": {
-    "fetchedAt": "2026-10-14T21:53:52.441896+00:00",
+    "fetchedAt": "2026-10-15T21:44:20.671542+00:00",
     "promos": {}
   },
   "TIV_TAAM:75": {
-    "fetchedAt": "2026-10-14T21:54:22.781773+00:00",
+    "fetchedAt": "2026-10-15T21:44:39.460614+00:00",
     "promos": {}
   },
   "TIV_TAAM:79": {
-    "fetchedAt": "2026-10-14T21:54:00.388105+00:00",
+    "fetchedAt": "2026-10-15T21:44:43.742523+00:00",
     "promos": {}
   },
   "TIV_TAAM:80": {
-    "fetchedAt": "2026-10-14T21:53:51.111937+00:00",
+    "fetchedAt": "2026-10-15T21:44:20.341238+00:00",
     "promos": {}
   },
   "TIV_TAAM:82": {
-    "fetchedAt": "2026-10-14T21:54:12.317959+00:00",
+    "fetchedAt": "2026-10-15T21:44:18.084682+00:00",
     "promos": {}
   },
   "TIV_TAAM:83": {
-    "fetchedAt": "2026-10-14T21:54:14.574349+00:00",
+    "fetchedAt": "2026-10-15T21:44:48.071197+00:00",
     "promos": {}
   },
   "TIV_TAAM:84": {
-    "fetchedAt": "2026-10-14T21:54:30.269984+00:00",
+    "fetchedAt": "2026-10-15T21:44:34.375585+00:00",
     "promos": {}
   },
   "TIV_TAAM:85": {
-    "fetchedAt": "2026-10-14T21:53:48.818508+00:00",
+    "fetchedAt": "2026-10-15T21:44:36.209695+00:00",
     "promos": {}
   },
   "TIV_TAAM:87": {
-    "fetchedAt": "2026-10-14T21:54:08.521852+00:00",
+    "fetchedAt": "2026-10-15T21:44:25.866858+00:00",
     "promos": {}
   },
   "TIV_TAAM:88": {
-    "fetchedAt": "2026-10-14T21:54:03.947418+00:00",
+    "fetchedAt": "2026-10-15T21:44:26.255647+00:00",
     "promos": {}
   },
   "TIV_TAAM:91": {
-    "fetchedAt": "2026-10-14T21:53:52.733747+00:00",
+    "fetchedAt": "2026-10-15T21:44:32.281563+00:00",
     "promos": {}
   },
   "TIV_TAAM:92": {
-    "fetchedAt": "2026-10-14T21:54:26.691390+00:00",
+    "fetchedAt": "2026-10-15T21:44:49.084456+00:00",
     "promos": {}
   },
   "TIV_TAAM:93": {
-    "fetchedAt": "2026-10-14T21:53:48.511926+00:00",
+    "fetchedAt": "2026-10-15T21:44:29.211318+00:00",
     "promos": {}
   },
   "TIV_TAAM:94": {
-    "fetchedAt": "2026-10-14T21:54:08.216040+00:00",
+    "fetchedAt": "2026-10-15T21:44:43.195002+00:00",
     "promos": {}
   },
   "VICTORY_NEW_SOURCE:1": {
@@ -17786,7 +18398,7 @@
     "promos": {}
   },
   "YELLOW:100": {
-    "fetchedAt": "2026-10-14T21:53:18.977993+00:00",
+    "fetchedAt": "2026-10-15T21:42:52.528516+00:00",
     "promos": {
       "aussie-lemonade": [
         {
@@ -18033,7 +18645,7 @@
     }
   },
   "YELLOW:107": {
-    "fetchedAt": "2026-10-14T17:41:20.060631+00:00",
+    "fetchedAt": "2026-10-15T21:43:05.968245+00:00",
     "promos": {
       "aussie-lemonade": [
         {
@@ -18280,7 +18892,7 @@
     }
   },
   "YELLOW:108": {
-    "fetchedAt": "2026-10-14T17:41:13.077180+00:00",
+    "fetchedAt": "2026-10-15T21:42:19.392302+00:00",
     "promos": {
       "aussie-lemonade": [
         {
@@ -18527,7 +19139,7 @@
     }
   },
   "YELLOW:109": {
-    "fetchedAt": "2026-10-14T17:40:14.963775+00:00",
+    "fetchedAt": "2026-10-15T21:42:39.887314+00:00",
     "promos": {
       "aussie-lemonade": [
         {
@@ -18774,7 +19386,7 @@
     }
   },
   "YELLOW:111": {
-    "fetchedAt": "2026-10-14T17:41:21.547024+00:00",
+    "fetchedAt": "2026-10-15T21:41:53.725863+00:00",
     "promos": {
       "aussie-lemonade": [
         {
@@ -19021,7 +19633,7 @@
     }
   },
   "YELLOW:112": {
-    "fetchedAt": "2026-10-14T17:41:40.364157+00:00",
+    "fetchedAt": "2026-10-15T21:42:45.138638+00:00",
     "promos": {
       "aussie-lemonade": [
         {
@@ -19268,7 +19880,7 @@
     }
   },
   "YELLOW:113": {
-    "fetchedAt": "2026-10-14T17:41:54.312219+00:00",
+    "fetchedAt": "2026-10-15T21:43:22.712208+00:00",
     "promos": {
       "aussie-lemonade": [
         {
@@ -19515,7 +20127,7 @@
     }
   },
   "YELLOW:114": {
-    "fetchedAt": "2026-10-14T17:41:49.952502+00:00",
+    "fetchedAt": "2026-10-15T21:41:52.694197+00:00",
     "promos": {
       "aussie-lemonade": [
         {
@@ -19762,7 +20374,7 @@
     }
   },
   "YELLOW:115": {
-    "fetchedAt": "2026-10-14T17:40:00.909345+00:00",
+    "fetchedAt": "2026-10-15T21:41:47.518781+00:00",
     "promos": {
       "aussie-lemonade": [
         {
@@ -20009,7 +20621,7 @@
     }
   },
   "YELLOW:116": {
-    "fetchedAt": "2026-10-14T17:40:28.864937+00:00",
+    "fetchedAt": "2026-10-15T21:43:09.270155+00:00",
     "promos": {
       "aussie-lemonade": [
         {
@@ -20256,7 +20868,7 @@
     }
   },
   "YELLOW:118": {
-    "fetchedAt": "2026-10-14T17:40:15.545024+00:00",
+    "fetchedAt": "2026-10-15T21:42:33.762848+00:00",
     "promos": {
       "aussie-lemonade": [
         {
@@ -20503,7 +21115,7 @@
     }
   },
   "YELLOW:122": {
-    "fetchedAt": "2026-10-14T17:39:31.589943+00:00",
+    "fetchedAt": "2026-10-15T21:42:30.289039+00:00",
     "promos": {
       "aussie-lemonade": [
         {
@@ -20750,7 +21362,7 @@
     }
   },
   "YELLOW:123": {
-    "fetchedAt": "2026-10-14T17:39:41.107731+00:00",
+    "fetchedAt": "2026-10-15T21:41:35.226680+00:00",
     "promos": {
       "aussie-lemonade": [
         {
@@ -20997,7 +21609,7 @@
     }
   },
   "YELLOW:124": {
-    "fetchedAt": "2026-10-14T17:41:45.150439+00:00",
+    "fetchedAt": "2026-10-15T21:42:55.587282+00:00",
     "promos": {
       "aussie-lemonade": [
         {
@@ -21244,7 +21856,7 @@
     }
   },
   "YELLOW:126": {
-    "fetchedAt": "2026-10-14T17:40:43.863738+00:00",
+    "fetchedAt": "2026-10-15T21:42:21.129665+00:00",
     "promos": {
       "aussie-lemonade": [
         {
@@ -21491,7 +22103,7 @@
     }
   },
   "YELLOW:131": {
-    "fetchedAt": "2026-10-14T17:41:50.684456+00:00",
+    "fetchedAt": "2026-10-15T21:41:49.782655+00:00",
     "promos": {
       "aussie-lemonade": [
         {
@@ -21738,7 +22350,7 @@
     }
   },
   "YELLOW:132": {
-    "fetchedAt": "2026-10-14T17:40:31.807262+00:00",
+    "fetchedAt": "2026-10-15T21:42:18.521378+00:00",
     "promos": {
       "aussie-lemonade": [
         {
@@ -21985,7 +22597,7 @@
     }
   },
   "YELLOW:133": {
-    "fetchedAt": "2026-10-14T17:40:53.491020+00:00",
+    "fetchedAt": "2026-10-15T21:41:57.920304+00:00",
     "promos": {
       "aussie-lemonade": [
         {
@@ -22232,7 +22844,7 @@
     }
   },
   "YELLOW:134": {
-    "fetchedAt": "2026-10-14T17:40:02.663735+00:00",
+    "fetchedAt": "2026-10-15T21:43:08.913131+00:00",
     "promos": {
       "aussie-lemonade": [
         {
@@ -22479,7 +23091,7 @@
     }
   },
   "YELLOW:135": {
-    "fetchedAt": "2026-10-14T17:41:03.190437+00:00",
+    "fetchedAt": "2026-10-15T21:43:02.633328+00:00",
     "promos": {
       "aussie-lemonade": [
         {
@@ -22726,7 +23338,7 @@
     }
   },
   "YELLOW:136": {
-    "fetchedAt": "2026-10-14T17:40:12.515606+00:00",
+    "fetchedAt": "2026-10-15T21:41:50.504259+00:00",
     "promos": {
       "aussie-lemonade": [
         {
@@ -22973,11 +23585,11 @@
     }
   },
   "YELLOW:138": {
-    "fetchedAt": "2026-10-14T17:40:08.006679+00:00",
+    "fetchedAt": "2026-10-15T21:41:54.727111+00:00",
     "promos": {}
   },
   "YELLOW:144": {
-    "fetchedAt": "2026-10-14T21:53:19.964389+00:00",
+    "fetchedAt": "2026-10-15T21:43:11.859625+00:00",
     "promos": {
       "aussie-lemonade": [
         {
@@ -23224,7 +23836,7 @@
     }
   },
   "YELLOW:145": {
-    "fetchedAt": "2026-10-14T17:41:33.682188+00:00",
+    "fetchedAt": "2026-10-15T21:43:09.625865+00:00",
     "promos": {
       "aussie-lemonade": [
         {
@@ -23471,7 +24083,7 @@
     }
   },
   "YELLOW:146": {
-    "fetchedAt": "2026-10-14T17:39:49.336039+00:00",
+    "fetchedAt": "2026-10-15T21:41:59.571659+00:00",
     "promos": {
       "aussie-lemonade": [
         {
@@ -23718,7 +24330,7 @@
     }
   },
   "YELLOW:147": {
-    "fetchedAt": "2026-10-14T17:40:11.574270+00:00",
+    "fetchedAt": "2026-10-15T21:42:58.091120+00:00",
     "promos": {
       "aussie-lemonade": [
         {
@@ -23965,7 +24577,7 @@
     }
   },
   "YELLOW:151": {
-    "fetchedAt": "2026-10-14T17:40:44.752965+00:00",
+    "fetchedAt": "2026-10-15T21:42:37.767759+00:00",
     "promos": {
       "aussie-lemonade": [
         {
@@ -24212,7 +24824,7 @@
     }
   },
   "YELLOW:153": {
-    "fetchedAt": "2026-10-14T17:39:23.028882+00:00",
+    "fetchedAt": "2026-10-15T21:43:12.839684+00:00",
     "promos": {
       "aussie-lemonade": [
         {
@@ -24459,7 +25071,7 @@
     }
   },
   "YELLOW:158": {
-    "fetchedAt": "2026-10-14T17:40:25.702958+00:00",
+    "fetchedAt": "2026-10-15T21:41:49.463281+00:00",
     "promos": {
       "aussie-lemonade": [
         {
@@ -24706,7 +25318,7 @@
     }
   },
   "YELLOW:159": {
-    "fetchedAt": "2026-10-14T17:41:52.915965+00:00",
+    "fetchedAt": "2026-10-15T21:41:57.627865+00:00",
     "promos": {
       "aussie-lemonade": [
         {
@@ -24953,7 +25565,7 @@
     }
   },
   "YELLOW:160": {
-    "fetchedAt": "2026-10-14T17:41:03.670633+00:00",
+    "fetchedAt": "2026-10-15T21:41:30.273047+00:00",
     "promos": {
       "aussie-lemonade": [
         {
@@ -25200,7 +25812,7 @@
     }
   },
   "YELLOW:161": {
-    "fetchedAt": "2026-10-14T17:39:37.772865+00:00",
+    "fetchedAt": "2026-10-15T21:42:54.031690+00:00",
     "promos": {
       "aussie-lemonade": [
         {
@@ -25447,7 +26059,7 @@
     }
   },
   "YELLOW:165": {
-    "fetchedAt": "2026-10-14T17:40:44.234017+00:00",
+    "fetchedAt": "2026-10-15T21:42:37.417335+00:00",
     "promos": {
       "aussie-lemonade": [
         {
@@ -25694,7 +26306,7 @@
     }
   },
   "YELLOW:166": {
-    "fetchedAt": "2026-10-14T17:40:54.537309+00:00",
+    "fetchedAt": "2026-10-15T21:43:23.825274+00:00",
     "promos": {
       "aussie-lemonade": [
         {
@@ -25941,7 +26553,7 @@
     }
   },
   "YELLOW:173": {
-    "fetchedAt": "2026-10-14T17:41:18.684687+00:00",
+    "fetchedAt": "2026-10-15T21:43:24.696205+00:00",
     "promos": {
       "aussie-lemonade": [
         {
@@ -26188,7 +26800,7 @@
     }
   },
   "YELLOW:177": {
-    "fetchedAt": "2026-10-14T17:39:45.180537+00:00",
+    "fetchedAt": "2026-10-15T21:41:51.460420+00:00",
     "promos": {
       "aussie-lemonade": [
         {
@@ -26435,11 +27047,11 @@
     }
   },
   "YELLOW:178": {
-    "fetchedAt": "2026-10-14T17:40:56.175676+00:00",
+    "fetchedAt": "2026-10-15T21:43:19.155926+00:00",
     "promos": {}
   },
   "YELLOW:179": {
-    "fetchedAt": "2026-10-14T17:41:44.717477+00:00",
+    "fetchedAt": "2026-10-15T21:43:20.845798+00:00",
     "promos": {
       "aussie-lemonade": [
         {
@@ -26686,7 +27298,7 @@
     }
   },
   "YELLOW:184": {
-    "fetchedAt": "2026-10-14T17:39:24.705919+00:00",
+    "fetchedAt": "2026-10-15T21:42:40.271665+00:00",
     "promos": {
       "aussie-lemonade": [
         {
@@ -26933,7 +27545,7 @@
     }
   },
   "YELLOW:186": {
-    "fetchedAt": "2026-10-14T17:39:26.731560+00:00",
+    "fetchedAt": "2026-10-15T21:42:05.168107+00:00",
     "promos": {
       "aussie-lemonade": [
         {
@@ -27180,7 +27792,7 @@
     }
   },
   "YELLOW:190": {
-    "fetchedAt": "2026-10-14T17:41:33.332105+00:00",
+    "fetchedAt": "2026-10-15T21:42:50.900197+00:00",
     "promos": {
       "aussie-lemonade": [
         {
@@ -27427,7 +28039,7 @@
     }
   },
   "YELLOW:192": {
-    "fetchedAt": "2026-10-14T17:39:54.002268+00:00",
+    "fetchedAt": "2026-10-15T21:42:03.384271+00:00",
     "promos": {
       "aussie-lemonade": [
         {
@@ -27674,7 +28286,7 @@
     }
   },
   "YELLOW:193": {
-    "fetchedAt": "2026-10-14T17:41:27.834011+00:00",
+    "fetchedAt": "2026-10-15T21:42:20.080607+00:00",
     "promos": {
       "aussie-lemonade": [
         {
@@ -27921,7 +28533,7 @@
     }
   },
   "YELLOW:195": {
-    "fetchedAt": "2026-10-14T17:40:32.595907+00:00",
+    "fetchedAt": "2026-10-15T21:42:06.765123+00:00",
     "promos": {
       "aussie-lemonade": [
         {
@@ -28168,7 +28780,7 @@
     }
   },
   "YELLOW:199": {
-    "fetchedAt": "2026-10-14T17:41:19.648458+00:00",
+    "fetchedAt": "2026-10-15T21:43:15.876048+00:00",
     "promos": {
       "aussie-lemonade": [
         {
@@ -28415,7 +29027,7 @@
     }
   },
   "YELLOW:202": {
-    "fetchedAt": "2026-10-14T17:41:32.544373+00:00",
+    "fetchedAt": "2026-10-15T21:42:10.547174+00:00",
     "promos": {
       "aussie-lemonade": [
         {
@@ -28662,7 +29274,7 @@
     }
   },
   "YELLOW:203": {
-    "fetchedAt": "2026-10-14T17:41:27.379866+00:00",
+    "fetchedAt": "2026-10-15T21:42:01.233238+00:00",
     "promos": {
       "aussie-lemonade": [
         {
@@ -28909,7 +29521,7 @@
     }
   },
   "YELLOW:208": {
-    "fetchedAt": "2026-10-14T21:53:19.721251+00:00",
+    "fetchedAt": "2026-10-15T21:42:17.128747+00:00",
     "promos": {
       "aussie-lemonade": [
         {
@@ -29156,7 +29768,7 @@
     }
   },
   "YELLOW:209": {
-    "fetchedAt": "2026-10-14T17:40:15.247383+00:00",
+    "fetchedAt": "2026-10-15T21:42:20.391978+00:00",
     "promos": {
       "aussie-lemonade": [
         {
@@ -29403,7 +30015,7 @@
     }
   },
   "YELLOW:210": {
-    "fetchedAt": "2026-10-14T17:41:38.495026+00:00",
+    "fetchedAt": "2026-10-15T21:42:32.485228+00:00",
     "promos": {
       "aussie-lemonade": [
         {
@@ -29650,7 +30262,7 @@
     }
   },
   "YELLOW:212": {
-    "fetchedAt": "2026-10-14T17:41:05.699611+00:00",
+    "fetchedAt": "2026-10-15T21:41:34.337739+00:00",
     "promos": {
       "aussie-lemonade": [
         {
@@ -29897,7 +30509,7 @@
     }
   },
   "YELLOW:214": {
-    "fetchedAt": "2026-10-14T17:39:36.511584+00:00",
+    "fetchedAt": "2026-10-15T21:43:04.893845+00:00",
     "promos": {
       "aussie-lemonade": [
         {
@@ -30144,7 +30756,7 @@
     }
   },
   "YELLOW:217": {
-    "fetchedAt": "2026-10-14T17:41:59.009303+00:00",
+    "fetchedAt": "2026-10-15T21:42:54.793836+00:00",
     "promos": {
       "aussie-lemonade": [
         {
@@ -30391,7 +31003,7 @@
     }
   },
   "YELLOW:218": {
-    "fetchedAt": "2026-10-14T17:42:02.479165+00:00",
+    "fetchedAt": "2026-10-15T21:41:57.083659+00:00",
     "promos": {
       "aussie-lemonade": [
         {
@@ -30638,7 +31250,7 @@
     }
   },
   "YELLOW:232": {
-    "fetchedAt": "2026-10-14T17:41:50.322241+00:00",
+    "fetchedAt": "2026-10-15T21:42:54.436149+00:00",
     "promos": {
       "aussie-lemonade": [
         {
@@ -30885,7 +31497,7 @@
     }
   },
   "YELLOW:234": {
-    "fetchedAt": "2026-10-14T17:40:07.920711+00:00",
+    "fetchedAt": "2026-10-15T21:41:28.809081+00:00",
     "promos": {
       "aussie-lemonade": [
         {
@@ -31132,7 +31744,7 @@
     }
   },
   "YELLOW:236": {
-    "fetchedAt": "2026-10-14T17:41:25.601391+00:00",
+    "fetchedAt": "2026-10-15T21:41:29.412783+00:00",
     "promos": {
       "aussie-lemonade": [
         {
@@ -31379,7 +31991,7 @@
     }
   },
   "YELLOW:238": {
-    "fetchedAt": "2026-10-14T17:39:53.269314+00:00",
+    "fetchedAt": "2026-10-15T21:42:11.193371+00:00",
     "promos": {
       "aussie-lemonade": [
         {
@@ -31626,7 +32238,7 @@
     }
   },
   "YELLOW:241": {
-    "fetchedAt": "2026-10-14T17:40:33.197167+00:00",
+    "fetchedAt": "2026-10-15T21:41:42.717789+00:00",
     "promos": {
       "aussie-lemonade": [
         {
@@ -31873,7 +32485,7 @@
     }
   },
   "YELLOW:242": {
-    "fetchedAt": "2026-10-14T21:53:19.220449+00:00",
+    "fetchedAt": "2026-10-15T21:41:38.121675+00:00",
     "promos": {
       "aussie-lemonade": [
         {
@@ -32120,7 +32732,7 @@
     }
   },
   "YELLOW:244": {
-    "fetchedAt": "2026-10-14T17:40:20.914456+00:00",
+    "fetchedAt": "2026-10-15T21:42:51.406300+00:00",
     "promos": {
       "aussie-lemonade": [
         {
@@ -32367,7 +32979,7 @@
     }
   },
   "YELLOW:245": {
-    "fetchedAt": "2026-10-14T17:40:39.054239+00:00",
+    "fetchedAt": "2026-10-15T21:42:18.076799+00:00",
     "promos": {
       "aussie-lemonade": [
         {
@@ -32614,7 +33226,7 @@
     }
   },
   "YELLOW:246": {
-    "fetchedAt": "2026-10-14T17:41:15.669718+00:00",
+    "fetchedAt": "2026-10-15T21:42:41.207470+00:00",
     "promos": {
       "aussie-lemonade": [
         {
@@ -32861,7 +33473,7 @@
     }
   },
   "YELLOW:248": {
-    "fetchedAt": "2026-10-14T17:39:46.561720+00:00",
+    "fetchedAt": "2026-10-15T21:43:05.372579+00:00",
     "promos": {
       "aussie-lemonade": [
         {
@@ -33108,7 +33720,7 @@
     }
   },
   "YELLOW:252": {
-    "fetchedAt": "2026-10-14T17:41:06.194732+00:00",
+    "fetchedAt": "2026-10-15T21:42:06.353887+00:00",
     "promos": {
       "aussie-lemonade": [
         {
@@ -33355,7 +33967,7 @@
     }
   },
   "YELLOW:253": {
-    "fetchedAt": "2026-10-14T17:39:33.077562+00:00",
+    "fetchedAt": "2026-10-15T21:42:04.648985+00:00",
     "promos": {
       "aussie-lemonade": [
         {
@@ -33602,7 +34214,7 @@
     }
   },
   "YELLOW:254": {
-    "fetchedAt": "2026-10-14T21:53:19.446693+00:00",
+    "fetchedAt": "2026-10-15T21:42:13.782725+00:00",
     "promos": {
       "aussie-lemonade": [
         {
@@ -33849,7 +34461,7 @@
     }
   },
   "YELLOW:255": {
-    "fetchedAt": "2026-10-14T17:39:55.685851+00:00",
+    "fetchedAt": "2026-10-15T21:41:33.962877+00:00",
     "promos": {
       "aussie-lemonade": [
         {
@@ -34096,7 +34708,7 @@
     }
   },
   "YELLOW:256": {
-    "fetchedAt": "2026-10-14T17:40:04.822748+00:00",
+    "fetchedAt": "2026-10-15T21:41:35.955174+00:00",
     "promos": {
       "aussie-lemonade": [
         {
@@ -34343,7 +34955,7 @@
     }
   },
   "YELLOW:258": {
-    "fetchedAt": "2026-10-14T17:41:51.178660+00:00",
+    "fetchedAt": "2026-10-15T21:43:02.958977+00:00",
     "promos": {
       "aussie-lemonade": [
         {
@@ -34590,7 +35202,7 @@
     }
   },
   "YELLOW:259": {
-    "fetchedAt": "2026-10-14T17:40:18.781895+00:00",
+    "fetchedAt": "2026-10-15T21:43:18.884310+00:00",
     "promos": {
       "aussie-lemonade": [
         {
@@ -34837,7 +35449,7 @@
     }
   },
   "YELLOW:260": {
-    "fetchedAt": "2026-10-14T17:40:42.080229+00:00",
+    "fetchedAt": "2026-10-15T21:41:44.278219+00:00",
     "promos": {
       "aussie-lemonade": [
         {
@@ -35084,7 +35696,7 @@
     }
   },
   "YELLOW:263": {
-    "fetchedAt": "2026-10-14T17:41:56.847532+00:00",
+    "fetchedAt": "2026-10-15T21:42:38.498295+00:00",
     "promos": {
       "aussie-lemonade": [
         {
@@ -35331,7 +35943,7 @@
     }
   },
   "YELLOW:265": {
-    "fetchedAt": "2026-10-14T17:39:44.168204+00:00",
+    "fetchedAt": "2026-10-15T21:41:51.778057+00:00",
     "promos": {
       "aussie-lemonade": [
         {
@@ -35578,7 +36190,7 @@
     }
   },
   "YELLOW:267": {
-    "fetchedAt": "2026-10-14T17:41:28.800439+00:00",
+    "fetchedAt": "2026-10-15T21:41:58.439389+00:00",
     "promos": {
       "aussie-lemonade": [
         {
@@ -35825,7 +36437,7 @@
     }
   },
   "YELLOW:270": {
-    "fetchedAt": "2026-10-14T17:39:52.644359+00:00",
+    "fetchedAt": "2026-10-15T21:42:55.218293+00:00",
     "promos": {
       "aussie-lemonade": [
         {
@@ -36072,7 +36684,7 @@
     }
   },
   "YELLOW:271": {
-    "fetchedAt": "2026-10-14T17:40:28.415836+00:00",
+    "fetchedAt": "2026-10-15T21:41:37.653514+00:00",
     "promos": {
       "aussie-lemonade": [
         {
@@ -36319,7 +36931,7 @@
     }
   },
   "YELLOW:272": {
-    "fetchedAt": "2026-10-14T17:41:48.136713+00:00",
+    "fetchedAt": "2026-10-15T21:42:12.537726+00:00",
     "promos": {
       "aussie-lemonade": [
         {
@@ -36566,7 +37178,7 @@
     }
   },
   "YELLOW:274": {
-    "fetchedAt": "2026-10-14T17:41:46.430887+00:00",
+    "fetchedAt": "2026-10-15T21:41:29.842370+00:00",
     "promos": {
       "aussie-lemonade": [
         {
@@ -36813,7 +37425,7 @@
     }
   },
   "YELLOW:275": {
-    "fetchedAt": "2026-10-14T17:41:01.701348+00:00",
+    "fetchedAt": "2026-10-15T21:42:48.659245+00:00",
     "promos": {
       "aussie-lemonade": [
         {
@@ -37060,7 +37672,7 @@
     }
   },
   "YELLOW:276": {
-    "fetchedAt": "2026-10-14T17:40:08.615973+00:00",
+    "fetchedAt": "2026-10-15T21:42:33.181355+00:00",
     "promos": {
       "aussie-lemonade": [
         {
@@ -37307,7 +37919,7 @@
     }
   },
   "YELLOW:301": {
-    "fetchedAt": "2026-10-14T17:40:21.253007+00:00",
+    "fetchedAt": "2026-10-15T21:41:35.507403+00:00",
     "promos": {
       "aussie-lemonade": [
         {
@@ -37554,7 +38166,7 @@
     }
   },
   "YELLOW:302": {
-    "fetchedAt": "2026-10-14T17:41:34.569194+00:00",
+    "fetchedAt": "2026-10-15T21:41:41.275144+00:00",
     "promos": {
       "aussie-lemonade": [
         {
@@ -37801,7 +38413,7 @@
     }
   },
   "YELLOW:303": {
-    "fetchedAt": "2026-10-14T17:41:09.785269+00:00",
+    "fetchedAt": "2026-10-15T21:42:47.210518+00:00",
     "promos": {
       "aussie-lemonade": [
         {
@@ -38048,7 +38660,7 @@
     }
   },
   "YELLOW:304": {
-    "fetchedAt": "2026-10-14T17:41:19.227694+00:00",
+    "fetchedAt": "2026-10-15T21:43:16.966275+00:00",
     "promos": {
       "aussie-lemonade": [
         {
@@ -38295,7 +38907,7 @@
     }
   },
   "YELLOW:305": {
-    "fetchedAt": "2026-10-14T17:40:45.894650+00:00",
+    "fetchedAt": "2026-10-15T21:42:23.690421+00:00",
     "promos": {
       "aussie-lemonade": [
         {
@@ -38542,7 +39154,7 @@
     }
   },
   "YELLOW:306": {
-    "fetchedAt": "2026-10-14T17:41:48.493301+00:00",
+    "fetchedAt": "2026-10-15T21:42:27.945725+00:00",
     "promos": {
       "aussie-lemonade": [
         {
@@ -38789,7 +39401,7 @@
     }
   },
   "YELLOW:307": {
-    "fetchedAt": "2026-10-14T17:39:32.249330+00:00",
+    "fetchedAt": "2026-10-15T21:42:23.374729+00:00",
     "promos": {
       "aussie-lemonade": [
         {
@@ -39036,7 +39648,7 @@
     }
   },
   "YELLOW:308": {
-    "fetchedAt": "2026-10-14T17:41:32.977883+00:00",
+    "fetchedAt": "2026-10-15T21:43:08.555280+00:00",
     "promos": {
       "aussie-lemonade": [
         {
@@ -39283,7 +39895,7 @@
     }
   },
   "YELLOW:312": {
-    "fetchedAt": "2026-10-14T17:41:13.461594+00:00",
+    "fetchedAt": "2026-10-15T21:42:10.033581+00:00",
     "promos": {
       "aussie-lemonade": [
         {
@@ -39530,7 +40142,7 @@
     }
   },
   "YELLOW:313": {
-    "fetchedAt": "2026-10-14T17:40:38.163899+00:00",
+    "fetchedAt": "2026-10-15T21:42:04.308748+00:00",
     "promos": {
       "aussie-lemonade": [
         {
@@ -39777,7 +40389,7 @@
     }
   },
   "YELLOW:315": {
-    "fetchedAt": "2026-10-14T17:41:12.704347+00:00",
+    "fetchedAt": "2026-10-15T21:42:16.676827+00:00",
     "promos": {
       "aussie-lemonade": [
         {
@@ -40024,7 +40636,7 @@
     }
   },
   "YELLOW:319": {
-    "fetchedAt": "2026-10-14T17:42:11.897039+00:00",
+    "fetchedAt": "2026-10-15T21:43:13.186192+00:00",
     "promos": {
       "aussie-lemonade": [
         {
@@ -40271,7 +40883,7 @@
     }
   },
   "YELLOW:320": {
-    "fetchedAt": "2026-10-14T17:40:37.402291+00:00",
+    "fetchedAt": "2026-10-15T21:42:07.669881+00:00",
     "promos": {
       "aussie-lemonade": [
         {
@@ -40518,7 +41130,7 @@
     }
   },
   "YELLOW:322": {
-    "fetchedAt": "2026-10-14T17:40:47.916729+00:00",
+    "fetchedAt": "2026-10-15T21:42:40.725275+00:00",
     "promos": {
       "aussie-lemonade": [
         {
@@ -40765,7 +41377,7 @@
     }
   },
   "YELLOW:323": {
-    "fetchedAt": "2026-10-14T17:39:38.183530+00:00",
+    "fetchedAt": "2026-10-15T21:43:00.844204+00:00",
     "promos": {
       "aussie-lemonade": [
         {
@@ -41012,7 +41624,7 @@
     }
   },
   "YELLOW:324": {
-    "fetchedAt": "2026-10-14T17:42:04.077445+00:00",
+    "fetchedAt": "2026-10-15T21:43:16.249362+00:00",
     "promos": {
       "aussie-lemonade": [
         {
@@ -41259,7 +41871,7 @@
     }
   },
   "YELLOW:325": {
-    "fetchedAt": "2026-10-14T17:40:43.147950+00:00",
+    "fetchedAt": "2026-10-15T21:42:47.899239+00:00",
     "promos": {
       "aussie-lemonade": [
         {
@@ -41506,7 +42118,7 @@
     }
   },
   "YELLOW:326": {
-    "fetchedAt": "2026-10-14T17:41:34.202639+00:00",
+    "fetchedAt": "2026-10-15T21:42:57.617425+00:00",
     "promos": {
       "aussie-lemonade": [
         {
@@ -41753,7 +42365,7 @@
     }
   },
   "YELLOW:329": {
-    "fetchedAt": "2026-10-14T17:41:40.728754+00:00",
+    "fetchedAt": "2026-10-15T21:41:41.878556+00:00",
     "promos": {
       "aussie-lemonade": [
         {
@@ -42000,7 +42612,7 @@
     }
   },
   "YELLOW:330": {
-    "fetchedAt": "2026-10-14T17:41:02.184439+00:00",
+    "fetchedAt": "2026-10-15T21:42:26.395527+00:00",
     "promos": {
       "aussie-lemonade": [
         {
@@ -42247,7 +42859,7 @@
     }
   },
   "YELLOW:331": {
-    "fetchedAt": "2026-10-14T17:42:11.535885+00:00",
+    "fetchedAt": "2026-10-15T21:42:00.141521+00:00",
     "promos": {
       "aussie-lemonade": [
         {
@@ -42494,7 +43106,7 @@
     }
   },
   "YELLOW:332": {
-    "fetchedAt": "2026-10-14T17:39:47.461853+00:00",
+    "fetchedAt": "2026-10-15T21:42:11.631727+00:00",
     "promos": {
       "aussie-lemonade": [
         {
@@ -42741,7 +43353,7 @@
     }
   },
   "YELLOW:333": {
-    "fetchedAt": "2026-10-14T17:39:30.072507+00:00",
+    "fetchedAt": "2026-10-15T21:43:16.627914+00:00",
     "promos": {
       "aussie-lemonade": [
         {
@@ -42988,7 +43600,7 @@
     }
   },
   "YELLOW:335": {
-    "fetchedAt": "2026-10-14T17:40:34.155700+00:00",
+    "fetchedAt": "2026-10-15T21:42:14.321346+00:00",
     "promos": {
       "aussie-lemonade": [
         {
@@ -43235,7 +43847,7 @@
     }
   },
   "YELLOW:337": {
-    "fetchedAt": "2026-10-14T17:42:12.748825+00:00",
+    "fetchedAt": "2026-10-15T21:42:13.393072+00:00",
     "promos": {
       "aussie-lemonade": [
         {
@@ -43482,7 +44094,7 @@
     }
   },
   "YELLOW:339": {
-    "fetchedAt": "2026-10-14T17:40:58.297262+00:00",
+    "fetchedAt": "2026-10-15T21:42:34.145496+00:00",
     "promos": {
       "aussie-lemonade": [
         {
@@ -43729,7 +44341,7 @@
     }
   },
   "YELLOW:340": {
-    "fetchedAt": "2026-10-14T17:39:52.241000+00:00",
+    "fetchedAt": "2026-10-15T21:42:31.620822+00:00",
     "promos": {
       "aussie-lemonade": [
         {
@@ -43976,7 +44588,7 @@
     }
   },
   "YELLOW:342": {
-    "fetchedAt": "2026-10-14T17:40:14.496227+00:00",
+    "fetchedAt": "2026-10-15T21:41:43.166646+00:00",
     "promos": {
       "aussie-lemonade": [
         {
@@ -44223,7 +44835,7 @@
     }
   },
   "YELLOW:343": {
-    "fetchedAt": "2026-10-14T17:40:47.128487+00:00",
+    "fetchedAt": "2026-10-15T21:42:25.575584+00:00",
     "promos": {
       "aussie-lemonade": [
         {
@@ -44470,7 +45082,7 @@
     }
   },
   "YELLOW:345": {
-    "fetchedAt": "2026-10-14T17:39:23.312784+00:00",
+    "fetchedAt": "2026-10-15T21:42:27.007463+00:00",
     "promos": {
       "aussie-lemonade": [
         {
@@ -44717,7 +45329,7 @@
     }
   },
   "YELLOW:349": {
-    "fetchedAt": "2026-10-14T17:39:59.231882+00:00",
+    "fetchedAt": "2026-10-15T21:42:27.455835+00:00",
     "promos": {
       "aussie-lemonade": [
         {
@@ -45211,7 +45823,7 @@
     }
   },
   "YELLOW:355": {
-    "fetchedAt": "2026-10-14T17:39:42.208496+00:00",
+    "fetchedAt": "2026-10-15T21:41:44.709343+00:00",
     "promos": {
       "aussie-lemonade": [
         {
@@ -45458,7 +46070,7 @@
     }
   },
   "YELLOW:356": {
-    "fetchedAt": "2026-10-14T17:41:26.003766+00:00",
+    "fetchedAt": "2026-10-15T21:43:24.352857+00:00",
     "promos": {
       "aussie-lemonade": [
         {
@@ -45705,7 +46317,7 @@
     }
   },
   "YELLOW:359": {
-    "fetchedAt": "2026-10-14T17:39:49.898082+00:00",
+    "fetchedAt": "2026-10-15T21:42:30.647909+00:00",
     "promos": {
       "aussie-lemonade": [
         {
@@ -45952,7 +46564,7 @@
     }
   },
   "YELLOW:360": {
-    "fetchedAt": "2026-10-14T17:39:43.045065+00:00",
+    "fetchedAt": "2026-10-15T21:43:07.951822+00:00",
     "promos": {
       "aussie-lemonade": [
         {
@@ -46199,7 +46811,7 @@
     }
   },
   "YELLOW:362": {
-    "fetchedAt": "2026-10-14T17:42:05.325213+00:00",
+    "fetchedAt": "2026-10-15T21:41:58.921900+00:00",
     "promos": {
       "aussie-lemonade": [
         {
@@ -46446,7 +47058,7 @@
     }
   },
   "YELLOW:363": {
-    "fetchedAt": "2026-10-14T17:40:55.119118+00:00",
+    "fetchedAt": "2026-10-15T21:42:48.232687+00:00",
     "promos": {
       "aussie-lemonade": [
         {
@@ -46693,7 +47305,7 @@
     }
   },
   "YELLOW:366": {
-    "fetchedAt": "2026-10-14T17:40:17.951312+00:00",
+    "fetchedAt": "2026-10-15T21:43:01.192739+00:00",
     "promos": {
       "aussie-lemonade": [
         {
@@ -46940,7 +47552,7 @@
     }
   },
   "YELLOW:367": {
-    "fetchedAt": "2026-10-14T17:42:09.328515+00:00",
+    "fetchedAt": "2026-10-15T21:41:40.811755+00:00",
     "promos": {
       "aussie-lemonade": [
         {
@@ -47187,7 +47799,7 @@
     }
   },
   "YELLOW:368": {
-    "fetchedAt": "2026-10-14T17:41:05.335877+00:00",
+    "fetchedAt": "2026-10-15T21:42:58.915536+00:00",
     "promos": {
       "aussie-lemonade": [
         {
@@ -47434,7 +48046,7 @@
     }
   },
   "YELLOW:369": {
-    "fetchedAt": "2026-10-14T17:42:04.761871+00:00",
+    "fetchedAt": "2026-10-15T21:41:36.647867+00:00",
     "promos": {
       "aussie-lemonade": [
         {
@@ -47681,7 +48293,7 @@
     }
   },
   "YELLOW:372": {
-    "fetchedAt": "2026-10-14T17:41:51.634826+00:00",
+    "fetchedAt": "2026-10-15T21:42:47.580754+00:00",
     "promos": {
       "aussie-lemonade": [
         {
@@ -47928,7 +48540,7 @@
     }
   },
   "YELLOW:375": {
-    "fetchedAt": "2026-10-14T17:40:34.865673+00:00",
+    "fetchedAt": "2026-10-15T21:42:43.080117+00:00",
     "promos": {
       "aussie-lemonade": [
         {
@@ -48175,7 +48787,7 @@
     }
   },
   "YELLOW:378": {
-    "fetchedAt": "2026-10-14T17:40:37.036310+00:00",
+    "fetchedAt": "2026-10-15T21:41:30.822312+00:00",
     "promos": {
       "aussie-lemonade": [
         {
@@ -48422,7 +49034,7 @@
     }
   },
   "YELLOW:383": {
-    "fetchedAt": "2026-10-14T17:40:59.234141+00:00",
+    "fetchedAt": "2026-10-15T21:42:05.649092+00:00",
     "promos": {
       "aussie-lemonade": [
         {
@@ -48669,7 +49281,7 @@
     }
   },
   "YELLOW:389": {
-    "fetchedAt": "2026-10-14T17:41:07.793165+00:00",
+    "fetchedAt": "2026-10-15T21:41:42.157853+00:00",
     "promos": {
       "aussie-lemonade": [
         {
@@ -48916,7 +49528,7 @@
     }
   },
   "YELLOW:390": {
-    "fetchedAt": "2026-10-14T17:41:25.204774+00:00",
+    "fetchedAt": "2026-10-15T21:42:25.236002+00:00",
     "promos": {
       "aussie-lemonade": [
         {
@@ -49163,7 +49775,7 @@
     }
   },
   "YELLOW:391": {
-    "fetchedAt": "2026-10-14T17:39:58.277998+00:00",
+    "fetchedAt": "2026-10-15T21:42:44.107862+00:00",
     "promos": {
       "aussie-lemonade": [
         {
@@ -49410,7 +50022,7 @@
     }
   },
   "YELLOW:392": {
-    "fetchedAt": "2026-10-14T17:41:08.715878+00:00",
+    "fetchedAt": "2026-10-15T21:43:01.511684+00:00",
     "promos": {
       "aussie-lemonade": [
         {
@@ -64724,7 +65336,7 @@
     }
   },
   "YELLOW:891": {
-    "fetchedAt": "2026-10-14T17:41:36.583658+00:00",
+    "fetchedAt": "2026-10-15T21:43:15.470503+00:00",
     "promos": {
       "aussie-lemonade": [
         {
@@ -64971,7 +65583,7 @@
     }
   },
   "YELLOW:892": {
-    "fetchedAt": "2026-10-14T17:39:25.807374+00:00",
+    "fetchedAt": "2026-10-15T21:42:35.964087+00:00",
     "promos": {
       "aussie-lemonade": [
         {
@@ -65218,63 +65830,63 @@
     }
   },
   "YOHANANOF:12": {
-    "fetchedAt": "2026-10-14T21:54:34.226095+00:00",
+    "fetchedAt": "2026-10-15T21:45:00.368237+00:00",
     "promos": {}
   },
   "YOHANANOF:15": {
-    "fetchedAt": "2026-10-14T21:54:36.673565+00:00",
+    "fetchedAt": "2026-10-15T21:45:03.746248+00:00",
     "promos": {}
   },
   "YOHANANOF:19": {
-    "fetchedAt": "2026-10-14T21:54:36.993864+00:00",
+    "fetchedAt": "2026-10-15T21:45:01.643620+00:00",
     "promos": {}
   },
   "YOHANANOF:20": {
-    "fetchedAt": "2026-10-14T21:54:33.830413+00:00",
+    "fetchedAt": "2026-10-15T21:45:00.649507+00:00",
     "promos": {}
   },
   "YOHANANOF:27": {
-    "fetchedAt": "2026-10-14T21:54:37.388673+00:00",
+    "fetchedAt": "2026-10-15T21:44:57.609203+00:00",
     "promos": {}
   },
   "YOHANANOF:28": {
-    "fetchedAt": "2026-10-14T21:54:31.393573+00:00",
+    "fetchedAt": "2026-10-15T21:44:57.237466+00:00",
     "promos": {}
   },
   "YOHANANOF:29": {
-    "fetchedAt": "2026-10-14T21:54:30.887210+00:00",
+    "fetchedAt": "2026-10-15T21:44:58.180611+00:00",
     "promos": {}
   },
   "YOHANANOF:30": {
-    "fetchedAt": "2026-10-14T21:54:30.532744+00:00",
+    "fetchedAt": "2026-10-15T21:45:02.920299+00:00",
     "promos": {}
   },
   "YOHANANOF:31": {
-    "fetchedAt": "2026-10-14T21:54:31.501516+00:00",
+    "fetchedAt": "2026-10-15T21:45:02.436485+00:00",
     "promos": {}
   },
   "YOHANANOF:37": {
-    "fetchedAt": "2026-10-14T21:54:33.684531+00:00",
+    "fetchedAt": "2026-10-15T21:45:08.471374+00:00",
     "promos": {}
   },
   "YOHANANOF:38": {
-    "fetchedAt": "2026-10-14T21:54:40.143830+00:00",
+    "fetchedAt": "2026-10-15T21:45:03.477438+00:00",
     "promos": {}
   },
   "YOHANANOF:39": {
-    "fetchedAt": "2026-10-14T21:54:37.892346+00:00",
+    "fetchedAt": "2026-10-15T21:45:07.902756+00:00",
     "promos": {}
   },
   "YOHANANOF:5": {
-    "fetchedAt": "2026-10-14T21:54:40.463799+00:00",
+    "fetchedAt": "2026-10-15T21:45:09.915692+00:00",
     "promos": {}
   },
   "YOHANANOF:7": {
-    "fetchedAt": "2026-10-14T21:54:38.001688+00:00",
+    "fetchedAt": "2026-10-15T21:45:04.569854+00:00",
     "promos": {}
   },
   "YOHANANOF:9": {
-    "fetchedAt": "2026-10-14T21:54:40.583581+00:00",
+    "fetchedAt": "2026-10-15T21:44:56.268898+00:00",
     "promos": {}
   }
 }
