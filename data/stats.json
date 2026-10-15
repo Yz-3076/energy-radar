@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-15T04:18:01.430200+00:00",
+  "generated_at": "2026-10-15T11:16:39.048441+00:00",
   "chains_covered": [
     "SHUFERSAL",
     "VICTORY_NEW_SOURCE",
@@ -31,30 +31,30 @@
     "WOLT"
   ],
   "store_count": 1423,
-  "total_observations": 917728,
-  "observations_this_run": 9704,
+  "total_observations": 928466,
+  "observations_this_run": 10738,
   "listings_per_variant": {
-    "ultra": 1164,
+    "ultra": 1163,
     "mango-loco": 820,
     "full-zero": 428,
-    "ultra-paradise": 996,
+    "ultra-paradise": 995,
     "ultra-fiesta": 556,
-    "original": 1229,
+    "original": 1228,
     "ultra-peachy-keen": 473,
     "strawberry": 658,
     "rossi": 164,
     "pipeline-punch": 544,
     "monarch": 394,
     "green-zero": 480,
-    "aussie-lemonade": 446
+    "aussie-lemonade": 447
   },
   "depletion_breakdown": {
-    "healthy": 3491,
-    "slowing": 3542,
-    "insufficient_data": 1131,
-    "likely_out": 188
+    "healthy": 3273,
+    "slowing": 3767,
+    "insufficient_data": 1123,
+    "likely_out": 187
   },
-  "live_listings": 8352,
+  "live_listings": 8350,
   "flavours_on_shelves": 13,
   "stores_per_chain": {
     "Super Pharm": 257,
@@ -192,7 +192,7 @@
       "min": 8.5,
       "median": 10.9,
       "max": 10.9,
-      "listings": 869
+      "listings": 867
     },
     "Super Sapir": {
       "min": 6.9,
@@ -254,7 +254,7 @@
       "min": 7.9,
       "median": 10.9,
       "max": 13.0,
-      "listings": 446
+      "listings": 447
     },
     "full-zero": {
       "min": 6.8,
@@ -284,7 +284,7 @@
       "min": 4.9,
       "median": 9.9,
       "max": 14.9,
-      "listings": 1229
+      "listings": 1228
     },
     "pipeline-punch": {
       "min": 6.8,
@@ -308,7 +308,7 @@
       "min": 6.5,
       "median": 9.9,
       "max": 13.0,
-      "listings": 1164
+      "listings": 1163
     },
     "ultra-fiesta": {
       "min": 6.8,
@@ -320,7 +320,7 @@
       "min": 4.9,
       "median": 9.9,
       "max": 13.0,
-      "listings": 996
+      "listings": 995
     },
     "ultra-peachy-keen": {
       "min": 6.8,
@@ -1153,9 +1153,9 @@
     },
     {
       "date": "2026-10-15",
-      "observations": 9704,
-      "stores": 1398,
-      "min": 6.5,
+      "observations": 20442,
+      "stores": 1420,
+      "min": 4.9,
       "median": 9.9,
       "max": 14.9,
       "by_variant": {
@@ -1169,7 +1169,7 @@
         "rossi": 9.7,
         "strawberry": 9.4,
         "ultra": 9.9,
-        "ultra-fiesta": 9.2,
+        "ultra-fiesta": 8.9,
         "ultra-paradise": 9.9,
         "ultra-peachy-keen": 9.9
       }
