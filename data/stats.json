@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-17T20:26:37.124922+00:00",
+  "generated_at": "2026-10-17T22:59:48.885026+00:00",
   "chains_covered": [
     "SHUFERSAL",
     "VICTORY_NEW_SOURCE",
@@ -31,8 +31,8 @@
     "WOLT"
   ],
   "store_count": 1426,
-  "total_observations": 1041602,
-  "observations_this_run": 11151,
+  "total_observations": 1049148,
+  "observations_this_run": 7546,
   "listings_per_variant": {
     "ultra": 1163,
     "mango-loco": 828,
@@ -40,21 +40,21 @@
     "ultra-fiesta": 564,
     "original": 1229,
     "full-zero": 421,
-    "ultra-peachy-keen": 475,
+    "ultra-peachy-keen": 473,
     "strawberry": 659,
     "rossi": 167,
-    "pipeline-punch": 548,
+    "pipeline-punch": 546,
     "monarch": 393,
     "green-zero": 481,
-    "aussie-lemonade": 445
+    "aussie-lemonade": 443
   },
   "depletion_breakdown": {
-    "healthy": 1274,
-    "insufficient_data": 1009,
-    "slowing": 5752,
-    "likely_out": 330
+    "slowing": 5352,
+    "insufficient_data": 996,
+    "likely_out": 312,
+    "healthy": 1699
   },
-  "live_listings": 8365,
+  "live_listings": 8359,
   "flavours_on_shelves": 13,
   "stores_per_chain": {
     "Super Pharm": 257,
@@ -108,7 +108,7 @@
       "min": 9.5,
       "median": 9.9,
       "max": 10.9,
-      "listings": 318
+      "listings": 317
     },
     "Hazi Hinam": {
       "min": 8.9,
@@ -204,7 +204,7 @@
       "min": 8.5,
       "median": 10.9,
       "max": 10.9,
-      "listings": 249
+      "listings": 248
     },
     "Tiv Taam": {
       "min": 8.9,
@@ -234,7 +234,7 @@
       "min": 10.0,
       "median": 13.0,
       "max": 13.0,
-      "listings": 1740
+      "listings": 1736
     },
     "Yohananof": {
       "min": 7.9,
@@ -254,7 +254,7 @@
       "min": 7.9,
       "median": 10.9,
       "max": 13.0,
-      "listings": 445
+      "listings": 443
     },
     "full-zero": {
       "min": 6.8,
@@ -290,7 +290,7 @@
       "min": 6.8,
       "median": 9.9,
       "max": 14.9,
-      "listings": 548
+      "listings": 546
     },
     "rossi": {
       "min": 7.2,
@@ -326,7 +326,7 @@
       "min": 6.8,
       "median": 9.9,
       "max": 14.9,
-      "listings": 475
+      "listings": 473
     }
   },
   "cheapest_listing": {
@@ -1199,8 +1199,8 @@
     },
     {
       "date": "2026-10-17",
-      "observations": 42437,
-      "stores": 1416,
+      "observations": 49983,
+      "stores": 1420,
       "min": 4.9,
       "median": 9.9,
       "max": 14.9,
@@ -1211,9 +1211,9 @@
         "mango-loco": 9.9,
         "monarch": 9.9,
         "original": 9.9,
-        "pipeline-punch": 9.5,
+        "pipeline-punch": 9.9,
         "rossi": 9.5,
-        "strawberry": 9.2,
+        "strawberry": 9.4,
         "ultra": 9.9,
         "ultra-fiesta": 8.9,
         "ultra-paradise": 9.9,
