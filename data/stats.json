@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-23T04:27:29.748535+00:00",
+  "generated_at": "2026-10-23T11:25:35.221399+00:00",
   "chains_covered": [
     "SHUFERSAL",
     "VICTORY_NEW_SOURCE",
@@ -31,17 +31,17 @@
     "WOLT"
   ],
   "store_count": 1426,
-  "total_observations": 1290937,
-  "observations_this_run": 9016,
+  "total_observations": 1300960,
+  "observations_this_run": 10023,
   "listings_per_variant": {
     "ultra": 1163,
     "mango-loco": 834,
     "ultra-paradise": 994,
     "ultra-fiesta": 571,
     "full-zero": 428,
-    "original": 1222,
-    "ultra-peachy-keen": 470,
-    "strawberry": 664,
+    "original": 1220,
+    "ultra-peachy-keen": 471,
+    "strawberry": 665,
     "rossi": 159,
     "pipeline-punch": 550,
     "monarch": 393,
@@ -49,10 +49,10 @@
     "aussie-lemonade": 430
   },
   "depletion_breakdown": {
-    "slowing": 3488,
-    "healthy": 3867,
-    "insufficient_data": 878,
-    "likely_out": 120
+    "slowing": 3518,
+    "healthy": 3851,
+    "insufficient_data": 875,
+    "likely_out": 109
   },
   "live_listings": 8353,
   "flavours_on_shelves": 13,
@@ -284,7 +284,7 @@
       "min": 4.9,
       "median": 9.9,
       "max": 14.9,
-      "listings": 1222
+      "listings": 1220
     },
     "pipeline-punch": {
       "min": 6.8,
@@ -302,7 +302,7 @@
       "min": 6.8,
       "median": 9.9,
       "max": 13.0,
-      "listings": 664
+      "listings": 665
     },
     "ultra": {
       "min": 6.5,
@@ -326,7 +326,7 @@
       "min": 6.8,
       "median": 9.9,
       "max": 14.9,
-      "listings": 470
+      "listings": 471
     }
   },
   "cheapest_listing": {
@@ -1337,23 +1337,23 @@
     },
     {
       "date": "2026-10-23",
-      "observations": 9016,
-      "stores": 1328,
-      "min": 6.5,
+      "observations": 19039,
+      "stores": 1349,
+      "min": 4.9,
       "median": 9.9,
       "max": 14.9,
       "by_variant": {
         "aussie-lemonade": 10.9,
         "full-zero": 8.9,
-        "green-zero": 10.9,
+        "green-zero": 10.5,
         "mango-loco": 9.9,
         "monarch": 9.9,
         "original": 9.9,
-        "pipeline-punch": 10.1,
+        "pipeline-punch": 9.9,
         "rossi": 9.9,
         "strawberry": 9.9,
         "ultra": 9.9,
-        "ultra-fiesta": 9.9,
+        "ultra-fiesta": 9.2,
         "ultra-paradise": 9.9,
         "ultra-peachy-keen": 9.9
       }
