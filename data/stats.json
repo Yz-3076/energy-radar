@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-24T04:17:30.133888+00:00",
+  "generated_at": "2026-10-24T10:44:33.011407+00:00",
   "chains_covered": [
     "SHUFERSAL",
     "VICTORY_NEW_SOURCE",
@@ -31,14 +31,14 @@
     "WOLT"
   ],
   "store_count": 1427,
-  "total_observations": 1329863,
-  "observations_this_run": 8791,
+  "total_observations": 1339547,
+  "observations_this_run": 9684,
   "listings_per_variant": {
     "ultra": 1165,
     "mango-loco": 836,
     "ultra-paradise": 996,
     "ultra-fiesta": 568,
-    "original": 1220,
+    "original": 1219,
     "full-zero": 430,
     "ultra-peachy-keen": 472,
     "strawberry": 665,
@@ -49,12 +49,12 @@
     "aussie-lemonade": 434
   },
   "depletion_breakdown": {
-    "healthy": 3607,
-    "slowing": 3757,
-    "insufficient_data": 864,
-    "likely_out": 137
+    "healthy": 3380,
+    "slowing": 3970,
+    "insufficient_data": 862,
+    "likely_out": 152
   },
-  "live_listings": 8365,
+  "live_listings": 8364,
   "flavours_on_shelves": 13,
   "stores_per_chain": {
     "Super Pharm": 258,
@@ -216,7 +216,7 @@
       "min": 8.9,
       "median": 8.9,
       "max": 9.9,
-      "listings": 109
+      "listings": 108
     },
     "Wolt": {
       "min": 10.9,
@@ -284,7 +284,7 @@
       "min": 4.9,
       "median": 9.9,
       "max": 14.9,
-      "listings": 1220
+      "listings": 1219
     },
     "pipeline-punch": {
       "min": 6.8,
@@ -1360,23 +1360,23 @@
     },
     {
       "date": "2026-10-24",
-      "observations": 8791,
-      "stores": 1327,
-      "min": 6.5,
+      "observations": 18475,
+      "stores": 1347,
+      "min": 4.9,
       "median": 9.9,
       "max": 14.9,
       "by_variant": {
         "aussie-lemonade": 10.9,
         "full-zero": 8.9,
-        "green-zero": 10.9,
+        "green-zero": 9.9,
         "mango-loco": 9.9,
         "monarch": 9.9,
         "original": 9.9,
         "pipeline-punch": 9.9,
         "rossi": 9.9,
-        "strawberry": 9.9,
+        "strawberry": 9.5,
         "ultra": 9.9,
-        "ultra-fiesta": 9.9,
+        "ultra-fiesta": 8.9,
         "ultra-paradise": 9.9,
         "ultra-peachy-keen": 9.9
       }
