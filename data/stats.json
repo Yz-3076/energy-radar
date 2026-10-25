@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-25T11:10:11.351134+00:00",
+  "generated_at": "2026-10-25T15:58:32.716596+00:00",
   "chains_covered": [
     "SHUFERSAL",
     "VICTORY_NEW_SOURCE",
@@ -31,11 +31,11 @@
     "WOLT"
   ],
   "store_count": 1427,
-  "total_observations": 1393321,
-  "observations_this_run": 13751,
+  "total_observations": 1407624,
+  "observations_this_run": 14303,
   "listings_per_variant": {
     "ultra": 1163,
-    "mango-loco": 836,
+    "mango-loco": 837,
     "ultra-paradise": 995,
     "ultra-fiesta": 567,
     "original": 1218,
@@ -49,12 +49,12 @@
     "aussie-lemonade": 434
   },
   "depletion_breakdown": {
-    "slowing": 5550,
-    "healthy": 1724,
-    "insufficient_data": 854,
-    "likely_out": 222
+    "slowing": 6122,
+    "healthy": 1162,
+    "insufficient_data": 852,
+    "likely_out": 215
   },
-  "live_listings": 8350,
+  "live_listings": 8351,
   "flavours_on_shelves": 13,
   "stores_per_chain": {
     "Super Pharm": 258,
@@ -162,7 +162,7 @@
       "min": 6.5,
       "median": 7.9,
       "max": 9.2,
-      "listings": 767
+      "listings": 768
     },
     "Salach Dabach": {
       "min": 7.9,
@@ -272,7 +272,7 @@
       "min": 6.8,
       "median": 9.9,
       "max": 13.0,
-      "listings": 836
+      "listings": 837
     },
     "monarch": {
       "min": 6.8,
@@ -1383,7 +1383,7 @@
     },
     {
       "date": "2026-10-25",
-      "observations": 26616,
+      "observations": 40919,
       "stores": 1347,
       "min": 4.9,
       "median": 9.9,
@@ -1395,12 +1395,12 @@
         "mango-loco": 9.9,
         "monarch": 9.9,
         "original": 10.5,
-        "pipeline-punch": 10.9,
+        "pipeline-punch": 10.5,
         "rossi": 9.9,
         "strawberry": 9.9,
         "ultra": 9.9,
         "ultra-fiesta": 9.9,
-        "ultra-paradise": 10.5,
+        "ultra-paradise": 9.9,
         "ultra-peachy-keen": 9.9
       }
     }
