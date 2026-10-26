@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-26T12:43:57.198659+00:00",
+  "generated_at": "2026-10-26T20:24:34.791279+00:00",
   "chains_covered": [
     "SHUFERSAL",
     "VICTORY_NEW_SOURCE",
@@ -31,28 +31,28 @@
     "WOLT"
   ],
   "store_count": 1418,
-  "total_observations": 1440289,
-  "observations_this_run": 9767,
+  "total_observations": 1451190,
+  "observations_this_run": 10901,
   "listings_per_variant": {
-    "mango-loco": 834,
+    "mango-loco": 835,
     "ultra": 1160,
     "ultra-paradise": 990,
     "ultra-fiesta": 570,
-    "original": 1216,
+    "original": 1215,
     "full-zero": 426,
     "ultra-peachy-keen": 461,
     "strawberry": 662,
     "rossi": 152,
     "pipeline-punch": 550,
-    "monarch": 389,
     "green-zero": 476,
+    "monarch": 389,
     "aussie-lemonade": 431
   },
   "depletion_breakdown": {
-    "slowing": 3927,
-    "healthy": 3445,
-    "insufficient_data": 833,
-    "likely_out": 112
+    "slowing": 3870,
+    "healthy": 3486,
+    "insufficient_data": 832,
+    "likely_out": 129
   },
   "live_listings": 8317,
   "flavours_on_shelves": 13,
@@ -272,7 +272,7 @@
       "min": 6.8,
       "median": 9.9,
       "max": 13.0,
-      "listings": 834
+      "listings": 835
     },
     "monarch": {
       "min": 6.8,
@@ -284,7 +284,7 @@
       "min": 4.9,
       "median": 9.9,
       "max": 14.9,
-      "listings": 1216
+      "listings": 1215
     },
     "pipeline-punch": {
       "min": 6.8,
@@ -1406,20 +1406,20 @@
     },
     {
       "date": "2026-10-26",
-      "observations": 18267,
-      "stores": 1343,
+      "observations": 29168,
+      "stores": 1354,
       "min": 4.9,
       "median": 9.9,
       "max": 14.9,
       "by_variant": {
         "aussie-lemonade": 10.9,
         "full-zero": 8.9,
-        "green-zero": 10.5,
+        "green-zero": 9.9,
         "mango-loco": 9.9,
         "monarch": 9.9,
         "original": 9.9,
         "pipeline-punch": 9.9,
-        "rossi": 9.9,
+        "rossi": 9.5,
         "strawberry": 9.5,
         "ultra": 9.9,
         "ultra-fiesta": 8.9,
