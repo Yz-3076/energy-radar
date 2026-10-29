@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-29T00:45:06.581313+00:00",
+  "generated_at": "2026-10-29T09:45:59.528019+00:00",
   "chains_covered": [
     "SHUFERSAL",
     "VICTORY_NEW_SOURCE",
@@ -30,31 +30,31 @@
     "HET_COHEN_NEW_SOURCE",
     "WOLT"
   ],
-  "store_count": 1415,
-  "total_observations": 1543681,
-  "observations_this_run": 16246,
+  "store_count": 1426,
+  "total_observations": 1552838,
+  "observations_this_run": 9157,
   "listings_per_variant": {
-    "ultra": 1152,
-    "mango-loco": 827,
-    "ultra-paradise": 984,
-    "original": 1209,
-    "full-zero": 418,
-    "ultra-fiesta": 567,
-    "ultra-peachy-keen": 466,
-    "strawberry": 656,
-    "rossi": 160,
-    "pipeline-punch": 548,
-    "monarch": 394,
-    "green-zero": 477,
-    "aussie-lemonade": 429
+    "ultra": 1157,
+    "mango-loco": 828,
+    "ultra-paradise": 985,
+    "ultra-fiesta": 569,
+    "original": 1210,
+    "full-zero": 425,
+    "ultra-peachy-keen": 464,
+    "strawberry": 655,
+    "rossi": 159,
+    "pipeline-punch": 546,
+    "green-zero": 473,
+    "monarch": 391,
+    "aussie-lemonade": 423
   },
   "depletion_breakdown": {
-    "slowing": 3963,
-    "insufficient_data": 778,
-    "healthy": 3470,
-    "likely_out": 76
+    "slowing": 3691,
+    "healthy": 3790,
+    "insufficient_data": 766,
+    "likely_out": 38
   },
-  "live_listings": 8287,
+  "live_listings": 8285,
   "flavours_on_shelves": 13,
   "stores_per_chain": {
     "Super Pharm": 258,
@@ -66,13 +66,13 @@
     "Victory New Source": 62,
     "Netiv Hased": 51,
     "Tiv Taam": 44,
+    "Super Sapir": 41,
     "Mahsani Ashuk New Source": 39,
     "Fresh Market And Super Dosh": 38,
-    "Super Sapir": 31,
     "Super Yuda": 26,
     "Wolt": 25,
+    "Zol Vebegadol": 22,
     "City Market Kiryatgat": 22,
-    "Zol Vebegadol": 21,
     "Osher Ad": 21,
     "Maayan 2000": 19,
     "Yohananof": 15,
@@ -90,13 +90,13 @@
       "min": 8.5,
       "median": 8.5,
       "max": 8.9,
-      "listings": 110
+      "listings": 90
     },
     "City Market Kiryatgat": {
       "min": 10.9,
       "median": 13.0,
       "max": 14.9,
-      "listings": 32
+      "listings": 31
     },
     "Dor Alon": {
       "min": 9.9,
@@ -114,7 +114,7 @@
       "min": 8.9,
       "median": 8.9,
       "max": 8.9,
-      "listings": 55
+      "listings": 60
     },
     "Keshet": {
       "min": 8.9,
@@ -126,7 +126,7 @@
       "min": 9.5,
       "median": 9.5,
       "max": 10.5,
-      "listings": 79
+      "listings": 78
     },
     "Maayan 2000": {
       "min": 7.5,
@@ -144,7 +144,7 @@
       "min": 9.3,
       "median": 9.4,
       "max": 9.4,
-      "listings": 71
+      "listings": 70
     },
     "Osher Ad": {
       "min": 4.9,
@@ -174,13 +174,13 @@
       "min": 7.0,
       "median": 9.9,
       "max": 9.9,
-      "listings": 1137
+      "listings": 1136
     },
     "Shuk Ahir": {
       "min": 8.9,
       "median": 8.9,
       "max": 9.9,
-      "listings": 86
+      "listings": 50
     },
     "Stop Market": {
       "min": 8.9,
@@ -192,13 +192,13 @@
       "min": 8.5,
       "median": 10.9,
       "max": 10.9,
-      "listings": 859
+      "listings": 858
     },
     "Super Sapir": {
       "min": 6.9,
       "median": 7.9,
       "max": 10.9,
-      "listings": 195
+      "listings": 249
     },
     "Super Yuda": {
       "min": 8.5,
@@ -210,7 +210,7 @@
       "min": 8.9,
       "median": 8.9,
       "max": 9.9,
-      "listings": 521
+      "listings": 520
     },
     "Victory New Source": {
       "min": 8.9,
@@ -246,7 +246,7 @@
       "min": 8.5,
       "median": 8.5,
       "max": 8.5,
-      "listings": 28
+      "listings": 29
     }
   },
   "price_by_variant": {
@@ -254,79 +254,79 @@
       "min": 7.9,
       "median": 10.9,
       "max": 13.0,
-      "listings": 429
+      "listings": 423
     },
     "full-zero": {
       "min": 6.8,
       "median": 8.9,
       "max": 14.9,
-      "listings": 418
+      "listings": 425
     },
     "green-zero": {
       "min": 6.8,
       "median": 10.5,
       "max": 13.0,
-      "listings": 477
+      "listings": 473
     },
     "mango-loco": {
       "min": 6.8,
       "median": 9.9,
       "max": 13.0,
-      "listings": 827
+      "listings": 828
     },
     "monarch": {
       "min": 6.8,
       "median": 9.9,
       "max": 14.9,
-      "listings": 394
+      "listings": 391
     },
     "original": {
       "min": 4.9,
       "median": 9.9,
       "max": 14.9,
-      "listings": 1209
+      "listings": 1210
     },
     "pipeline-punch": {
       "min": 6.8,
       "median": 9.9,
       "max": 13.0,
-      "listings": 548
+      "listings": 546
     },
     "rossi": {
       "min": 7.2,
       "median": 9.9,
       "max": 14.9,
-      "listings": 160
+      "listings": 159
     },
     "strawberry": {
       "min": 6.8,
       "median": 9.9,
       "max": 13.0,
-      "listings": 656
+      "listings": 655
     },
     "ultra": {
       "min": 6.5,
       "median": 9.9,
       "max": 13.0,
-      "listings": 1152
+      "listings": 1157
     },
     "ultra-fiesta": {
       "min": 6.8,
       "median": 9.9,
       "max": 13.0,
-      "listings": 567
+      "listings": 569
     },
     "ultra-paradise": {
       "min": 4.9,
       "median": 9.9,
       "max": 13.0,
-      "listings": 984
+      "listings": 985
     },
     "ultra-peachy-keen": {
       "min": 6.8,
       "median": 9.9,
       "max": 14.9,
-      "listings": 466
+      "listings": 464
     }
   },
   "cheapest_listing": {
@@ -1475,25 +1475,25 @@
     },
     {
       "date": "2026-10-29",
-      "observations": 16246,
-      "stores": 1257,
-      "min": 6.5,
+      "observations": 25403,
+      "stores": 1349,
+      "min": 4.9,
       "median": 8.9,
       "max": 14.9,
       "by_variant": {
-        "aussie-lemonade": 8.9,
+        "aussie-lemonade": 9.9,
         "full-zero": 8.9,
         "green-zero": 8.9,
         "mango-loco": 8.9,
         "monarch": 8.9,
-        "original": 8.9,
+        "original": 9.5,
         "pipeline-punch": 8.9,
         "rossi": 8.9,
         "strawberry": 8.9,
-        "ultra": 8.9,
+        "ultra": 9.9,
         "ultra-fiesta": 8.9,
-        "ultra-paradise": 8.9,
-        "ultra-peachy-keen": 8.9
+        "ultra-paradise": 9.9,
+        "ultra-peachy-keen": 9.9
       }
     }
   ]
