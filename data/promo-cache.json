@@ -5298,7 +5298,7 @@
     }
   },
   "DOR_ALON:576": {
-    "fetchedAt": "2026-10-29T10:28:30.910264+00:00",
+    "fetchedAt": "2026-10-30T10:36:13.480795+00:00",
     "promos": {
       "green-zero": [
         {
@@ -5423,7 +5423,7 @@
     }
   },
   "DOR_ALON:577": {
-    "fetchedAt": "2026-10-29T10:28:41.880376+00:00",
+    "fetchedAt": "2026-10-30T10:36:19.403717+00:00",
     "promos": {
       "green-zero": [
         {
@@ -5548,7 +5548,7 @@
     }
   },
   "DOR_ALON:578": {
-    "fetchedAt": "2026-10-29T10:28:49.174524+00:00",
+    "fetchedAt": "2026-10-30T10:36:24.080531+00:00",
     "promos": {
       "green-zero": [
         {
@@ -5673,7 +5673,7 @@
     }
   },
   "DOR_ALON:579": {
-    "fetchedAt": "2026-10-29T10:28:17.713463+00:00",
+    "fetchedAt": "2026-10-30T10:35:48.985498+00:00",
     "promos": {
       "green-zero": [
         {
@@ -5798,7 +5798,7 @@
     }
   },
   "DOR_ALON:580": {
-    "fetchedAt": "2026-10-29T10:28:23.726872+00:00",
+    "fetchedAt": "2026-10-30T10:36:04.055205+00:00",
     "promos": {
       "green-zero": [
         {
@@ -6048,7 +6048,7 @@
     }
   },
   "DOR_ALON:582": {
-    "fetchedAt": "2026-10-29T10:28:59.406278+00:00",
+    "fetchedAt": "2026-10-30T10:35:58.350547+00:00",
     "promos": {
       "green-zero": [
         {
@@ -6173,7 +6173,7 @@
     }
   },
   "DOR_ALON:583": {
-    "fetchedAt": "2026-10-29T10:29:03.011111+00:00",
+    "fetchedAt": "2026-10-30T10:36:14.057578+00:00",
     "promos": {
       "green-zero": [
         {
@@ -6298,7 +6298,7 @@
     }
   },
   "DOR_ALON:591": {
-    "fetchedAt": "2026-10-29T10:28:47.863291+00:00",
+    "fetchedAt": "2026-10-30T10:36:20.148204+00:00",
     "promos": {
       "green-zero": [
         {
@@ -6423,7 +6423,7 @@
     }
   },
   "DOR_ALON:594": {
-    "fetchedAt": "2026-10-29T10:28:35.565874+00:00",
+    "fetchedAt": "2026-10-30T10:35:44.133385+00:00",
     "promos": {
       "green-zero": [
         {
@@ -6548,7 +6548,7 @@
     }
   },
   "DOR_ALON:595": {
-    "fetchedAt": "2026-10-29T10:28:22.848076+00:00",
+    "fetchedAt": "2026-10-30T10:36:14.729969+00:00",
     "promos": {
       "green-zero": [
         {
@@ -6673,7 +6673,7 @@
     }
   },
   "DOR_ALON:596": {
-    "fetchedAt": "2026-10-29T10:28:51.853433+00:00",
+    "fetchedAt": "2026-10-30T10:36:01.070285+00:00",
     "promos": {
       "green-zero": [
         {
@@ -6798,7 +6798,7 @@
     }
   },
   "DOR_ALON:597": {
-    "fetchedAt": "2026-10-29T10:28:51.005499+00:00",
+    "fetchedAt": "2026-10-30T10:36:20.854676+00:00",
     "promos": {
       "green-zero": [
         {
@@ -6923,7 +6923,7 @@
     }
   },
   "DOR_ALON:599": {
-    "fetchedAt": "2026-10-29T10:28:27.891501+00:00",
+    "fetchedAt": "2026-10-30T10:36:00.905808+00:00",
     "promos": {
       "green-zero": [
         {
@@ -7048,20 +7048,8 @@
     }
   },
   "DOR_ALON:645": {
-    "fetchedAt": "2026-10-29T10:28:47.008602+00:00",
+    "fetchedAt": "2026-10-30T10:35:58.219789+00:00",
     "promos": {
-      "green-zero": [
-        {
-          "clubOnly": false,
-          "description": "משקה מונסטר 500מ ל 2 ב 22",
-          "discountRate": null,
-          "endsAt": "2026-11-09T23:59:00.000",
-          "maxQuantity": null,
-          "minQuantity": 2,
-          "startsAt": "2026-10-05T00:00:00.000",
-          "terms": null
-        }
-      ],
       "mango-loco": [
         {
           "clubOnly": false,
@@ -7161,7 +7149,7 @@
     }
   },
   "DOR_ALON:652": {
-    "fetchedAt": "2026-10-29T10:29:00.657626+00:00",
+    "fetchedAt": "2026-10-30T10:36:26.138365+00:00",
     "promos": {
       "green-zero": [
         {
@@ -7274,20 +7262,8 @@
     }
   },
   "DOR_ALON:666": {
-    "fetchedAt": "2026-10-29T10:28:57.095781+00:00",
+    "fetchedAt": "2026-10-30T10:36:07.764148+00:00",
     "promos": {
-      "green-zero": [
-        {
-          "clubOnly": false,
-          "description": "משקה מונסטר 500מ ל 2 ב 22",
-          "discountRate": null,
-          "endsAt": "2026-11-09T23:59:00.000",
-          "maxQuantity": null,
-          "minQuantity": 2,
-          "startsAt": "2026-10-05T00:00:00.000",
-          "terms": null
-        }
-      ],
       "mango-loco": [
         {
           "clubOnly": false,
@@ -7488,7 +7464,7 @@
     }
   },
   "DOR_ALON:702": {
-    "fetchedAt": "2026-10-29T10:28:29.562635+00:00",
+    "fetchedAt": "2026-10-30T10:35:34.084431+00:00",
     "promos": {
       "green-zero": [
         {
@@ -7589,7 +7565,7 @@
     }
   },
   "DOR_ALON:706": {
-    "fetchedAt": "2026-10-29T10:28:48.637399+00:00",
+    "fetchedAt": "2026-10-30T10:36:10.504683+00:00",
     "promos": {
       "green-zero": [
         {
@@ -7690,7 +7666,7 @@
     }
   },
   "DOR_ALON:707": {
-    "fetchedAt": "2026-10-29T10:28:57.214336+00:00",
+    "fetchedAt": "2026-10-30T10:35:52.211818+00:00",
     "promos": {
       "green-zero": [
         {
@@ -7791,7 +7767,7 @@
     }
   },
   "DOR_ALON:709": {
-    "fetchedAt": "2026-10-29T10:28:29.467141+00:00",
+    "fetchedAt": "2026-10-30T10:36:15.944927+00:00",
     "promos": {
       "green-zero": [
         {
@@ -7892,7 +7868,7 @@
     }
   },
   "DOR_ALON:711": {
-    "fetchedAt": "2026-10-29T10:28:38.931271+00:00",
+    "fetchedAt": "2026-10-30T10:36:07.943422+00:00",
     "promos": {
       "green-zero": [
         {
@@ -7993,7 +7969,7 @@
     }
   },
   "DOR_ALON:715": {
-    "fetchedAt": "2026-10-29T10:28:17.463081+00:00",
+    "fetchedAt": "2026-10-30T10:36:10.139392+00:00",
     "promos": {
       "green-zero": [
         {
@@ -8094,7 +8070,7 @@
     }
   },
   "DOR_ALON:717": {
-    "fetchedAt": "2026-10-29T10:28:29.785594+00:00",
+    "fetchedAt": "2026-10-30T10:35:54.913815+00:00",
     "promos": {
       "green-zero": [
         {
@@ -8195,7 +8171,7 @@
     }
   },
   "DOR_ALON:719": {
-    "fetchedAt": "2026-10-29T10:28:58.291715+00:00",
+    "fetchedAt": "2026-10-30T10:35:40.536692+00:00",
     "promos": {
       "green-zero": [
         {
@@ -8296,7 +8272,7 @@
     }
   },
   "DOR_ALON:721": {
-    "fetchedAt": "2026-10-29T10:29:05.407544+00:00",
+    "fetchedAt": "2026-10-30T10:35:51.474274+00:00",
     "promos": {
       "green-zero": [
         {
@@ -8397,7 +8373,7 @@
     }
   },
   "DOR_ALON:722": {
-    "fetchedAt": "2026-10-29T10:28:55.493258+00:00",
+    "fetchedAt": "2026-10-30T10:35:44.581617+00:00",
     "promos": {
       "green-zero": [
         {
@@ -8498,7 +8474,7 @@
     }
   },
   "DOR_ALON:723": {
-    "fetchedAt": "2026-10-29T10:28:21.739269+00:00",
+    "fetchedAt": "2026-10-30T10:36:01.684954+00:00",
     "promos": {
       "green-zero": [
         {
@@ -8599,7 +8575,7 @@
     }
   },
   "DOR_ALON:724": {
-    "fetchedAt": "2026-10-29T10:29:00.493728+00:00",
+    "fetchedAt": "2026-10-30T10:35:55.319138+00:00",
     "promos": {
       "green-zero": [
         {
@@ -8700,7 +8676,7 @@
     }
   },
   "DOR_ALON:726": {
-    "fetchedAt": "2026-10-29T10:28:54.924183+00:00",
+    "fetchedAt": "2026-10-30T10:35:34.599835+00:00",
     "promos": {
       "green-zero": [
         {
@@ -8801,20 +8777,8 @@
     }
   },
   "DOR_ALON:727": {
-    "fetchedAt": "2026-10-29T10:28:45.231244+00:00",
+    "fetchedAt": "2026-10-30T10:36:08.881283+00:00",
     "promos": {
-      "green-zero": [
-        {
-          "clubOnly": false,
-          "description": "משקה אנרגיה מונסטר 500מ ל  2 ב 17.90",
-          "discountRate": 12.25,
-          "endsAt": "2026-11-09T23:59:00.000",
-          "maxQuantity": null,
-          "minQuantity": 2,
-          "startsAt": "2026-10-05T00:00:00.000",
-          "terms": null
-        }
-      ],
       "mango-loco": [
         {
           "clubOnly": false,
@@ -8902,7 +8866,7 @@
     }
   },
   "DOR_ALON:730": {
-    "fetchedAt": "2026-10-29T10:28:33.744991+00:00",
+    "fetchedAt": "2026-10-30T10:35:41.113757+00:00",
     "promos": {
       "green-zero": [
         {
@@ -9003,7 +8967,7 @@
     }
   },
   "DOR_ALON:733": {
-    "fetchedAt": "2026-10-29T10:28:39.868454+00:00",
+    "fetchedAt": "2026-10-30T10:35:49.063515+00:00",
     "promos": {
       "green-zero": [
         {
@@ -9205,20 +9169,8 @@
     }
   },
   "DOR_ALON:801": {
-    "fetchedAt": "2026-10-29T10:28:44.515439+00:00",
+    "fetchedAt": "2026-10-30T10:36:18.068997+00:00",
     "promos": {
-      "green-zero": [
-        {
-          "clubOnly": false,
-          "description": "משקה מונסטר 500מ ל 2 ב 22",
-          "discountRate": null,
-          "endsAt": "2026-11-09T23:59:00.000",
-          "maxQuantity": null,
-          "minQuantity": 2,
-          "startsAt": "2026-10-05T00:00:00.000",
-          "terms": null
-        }
-      ],
       "mango-loco": [
         {
           "clubOnly": false,
@@ -9318,20 +9270,8 @@
     }
   },
   "DOR_ALON:804": {
-    "fetchedAt": "2026-10-29T10:28:36.239324+00:00",
+    "fetchedAt": "2026-10-30T10:36:01.573020+00:00",
     "promos": {
-      "green-zero": [
-        {
-          "clubOnly": false,
-          "description": "משקה מונסטר 500מ ל 2 ב 22",
-          "discountRate": null,
-          "endsAt": "2026-11-09T23:59:00.000",
-          "maxQuantity": null,
-          "minQuantity": 2,
-          "startsAt": "2026-10-05T00:00:00.000",
-          "terms": null
-        }
-      ],
       "mango-loco": [
         {
           "clubOnly": false,
@@ -9431,20 +9371,8 @@
     }
   },
   "DOR_ALON:807": {
-    "fetchedAt": "2026-10-29T10:28:19.052582+00:00",
+    "fetchedAt": "2026-10-30T10:35:37.089348+00:00",
     "promos": {
-      "green-zero": [
-        {
-          "clubOnly": false,
-          "description": "משקה מונסטר 500מ ל 2 ב 22",
-          "discountRate": null,
-          "endsAt": "2026-11-09T23:59:00.000",
-          "maxQuantity": null,
-          "minQuantity": 2,
-          "startsAt": "2026-10-05T00:00:00.000",
-          "terms": null
-        }
-      ],
       "mango-loco": [
         {
           "clubOnly": false,
@@ -9544,20 +9472,8 @@
     }
   },
   "DOR_ALON:808": {
-    "fetchedAt": "2026-10-29T10:28:55.397594+00:00",
+    "fetchedAt": "2026-10-30T10:35:45.691457+00:00",
     "promos": {
-      "green-zero": [
-        {
-          "clubOnly": false,
-          "description": "משקה מונסטר 500מ ל 2 ב 22",
-          "discountRate": null,
-          "endsAt": "2026-11-09T23:59:00.000",
-          "maxQuantity": null,
-          "minQuantity": 2,
-          "startsAt": "2026-10-05T00:00:00.000",
-          "terms": null
-        }
-      ],
       "mango-loco": [
         {
           "clubOnly": false,
@@ -9657,20 +9573,8 @@
     }
   },
   "DOR_ALON:814": {
-    "fetchedAt": "2026-10-29T10:28:32.110134+00:00",
+    "fetchedAt": "2026-10-30T10:36:21.342776+00:00",
     "promos": {
-      "green-zero": [
-        {
-          "clubOnly": false,
-          "description": "משקה מונסטר 500מ ל 2 ב 22",
-          "discountRate": null,
-          "endsAt": "2026-11-09T23:59:00.000",
-          "maxQuantity": null,
-          "minQuantity": 2,
-          "startsAt": "2026-10-05T00:00:00.000",
-          "terms": null
-        }
-      ],
       "mango-loco": [
         {
           "clubOnly": false,
@@ -9770,20 +9674,8 @@
     }
   },
   "DOR_ALON:823": {
-    "fetchedAt": "2026-10-29T10:28:35.129307+00:00",
+    "fetchedAt": "2026-10-30T10:35:47.456658+00:00",
     "promos": {
-      "green-zero": [
-        {
-          "clubOnly": false,
-          "description": "משקה מונסטר 500מ ל 2 ב 22",
-          "discountRate": null,
-          "endsAt": "2026-11-09T23:59:00.000",
-          "maxQuantity": null,
-          "minQuantity": 2,
-          "startsAt": "2026-10-05T00:00:00.000",
-          "terms": null
-        }
-      ],
       "mango-loco": [
         {
           "clubOnly": false,
@@ -9883,7 +9775,7 @@
     }
   },
   "DOR_ALON:824": {
-    "fetchedAt": "2026-10-29T10:28:35.440485+00:00",
+    "fetchedAt": "2026-10-30T10:36:04.309624+00:00",
     "promos": {
       "green-zero": [
         {
@@ -9984,7 +9876,7 @@
     }
   },
   "DOR_ALON:834": {
-    "fetchedAt": "2026-10-29T10:28:48.407432+00:00",
+    "fetchedAt": "2026-10-30T10:35:39.944003+00:00",
     "promos": {
       "mango-loco": [
         {
@@ -10085,7 +9977,7 @@
     }
   },
   "DOR_ALON:839": {
-    "fetchedAt": "2026-10-29T10:29:04.903102+00:00",
+    "fetchedAt": "2026-10-30T10:36:27.157580+00:00",
     "promos": {
       "mango-loco": [
         {
@@ -10186,7 +10078,7 @@
     }
   },
   "DOR_ALON:843": {
-    "fetchedAt": "2026-10-29T10:29:02.451894+00:00",
+    "fetchedAt": "2026-10-30T10:36:26.799858+00:00",
     "promos": {
       "mango-loco": [
         {
@@ -10287,20 +10179,8 @@
     }
   },
   "DOR_ALON:850": {
-    "fetchedAt": "2026-10-29T10:28:26.203323+00:00",
+    "fetchedAt": "2026-10-30T10:35:54.749815+00:00",
     "promos": {
-      "green-zero": [
-        {
-          "clubOnly": false,
-          "description": "משקה מונסטר 500מ ל 2 ב 22",
-          "discountRate": null,
-          "endsAt": "2026-11-09T23:59:00.000",
-          "maxQuantity": null,
-          "minQuantity": 2,
-          "startsAt": "2026-10-05T00:00:00.000",
-          "terms": null
-        }
-      ],
       "mango-loco": [
         {
           "clubOnly": false,
@@ -10400,7 +10280,7 @@
     }
   },
   "DOR_ALON:853": {
-    "fetchedAt": "2026-10-29T10:28:53.470877+00:00",
+    "fetchedAt": "2026-10-30T10:36:20.707742+00:00",
     "promos": {
       "mango-loco": [
         {
@@ -10501,7 +10381,7 @@
     }
   },
   "DOR_ALON:860": {
-    "fetchedAt": "2026-10-29T10:28:24.913339+00:00",
+    "fetchedAt": "2026-10-30T10:36:17.040102+00:00",
     "promos": {
       "mango-loco": [
         {
@@ -10602,7 +10482,7 @@
     }
   },
   "DOR_ALON:870": {
-    "fetchedAt": "2026-10-29T10:29:01.838576+00:00",
+    "fetchedAt": "2026-10-30T10:36:08.459429+00:00",
     "promos": {
       "mango-loco": [
         {
@@ -10703,7 +10583,7 @@
     }
   },
   "DOR_ALON:871": {
-    "fetchedAt": "2026-10-29T10:28:42.590284+00:00",
+    "fetchedAt": "2026-10-30T10:36:05.513141+00:00",
     "promos": {
       "mango-loco": [
         {
@@ -11030,20 +10910,8 @@
     }
   },
   "DOR_ALON:904": {
-    "fetchedAt": "2026-10-29T10:28:45.842855+00:00",
+    "fetchedAt": "2026-10-30T10:35:49.547157+00:00",
     "promos": {
-      "green-zero": [
-        {
-          "clubOnly": false,
-          "description": "משקה מונסטר 500מ ל 2 ב 22",
-          "discountRate": null,
-          "endsAt": "2026-11-09T23:59:00.000",
-          "maxQuantity": null,
-          "minQuantity": 2,
-          "startsAt": "2026-10-05T00:00:00.000",
-          "terms": null
-        }
-      ],
       "mango-loco": [
         {
           "clubOnly": false,
@@ -11143,20 +11011,8 @@
     }
   },
   "DOR_ALON:910": {
-    "fetchedAt": "2026-10-29T10:28:54.719033+00:00",
+    "fetchedAt": "2026-10-30T10:35:48.551334+00:00",
     "promos": {
-      "green-zero": [
-        {
-          "clubOnly": false,
-          "description": "משקה מונסטר 500מ ל 2 ב 22",
-          "discountRate": null,
-          "endsAt": "2026-11-09T23:59:00.000",
-          "maxQuantity": null,
-          "minQuantity": 2,
-          "startsAt": "2026-10-05T00:00:00.000",
-          "terms": null
-        }
-      ],
       "mango-loco": [
         {
           "clubOnly": false,
@@ -11256,7 +11112,7 @@
     }
   },
   "DOR_ALON:911": {
-    "fetchedAt": "2026-10-29T10:28:21.648199+00:00",
+    "fetchedAt": "2026-10-30T10:35:33.972383+00:00",
     "promos": {
       "mango-loco": [
         {
@@ -11357,7 +11213,7 @@
     }
   },
   "DOR_ALON:913": {
-    "fetchedAt": "2026-10-29T10:28:37.520396+00:00",
+    "fetchedAt": "2026-10-30T10:35:52.099611+00:00",
     "promos": {
       "mango-loco": [
         {
@@ -11458,7 +11314,7 @@
     }
   },
   "DOR_ALON:925": {
-    "fetchedAt": "2026-10-29T10:29:03.701222+00:00",
+    "fetchedAt": "2026-10-30T10:36:11.790044+00:00",
     "promos": {
       "mango-loco": [
         {
@@ -11559,20 +11415,8 @@
     }
   },
   "DOR_ALON:927": {
-    "fetchedAt": "2026-10-29T10:28:33.172663+00:00",
+    "fetchedAt": "2026-10-30T10:36:22.714598+00:00",
     "promos": {
-      "green-zero": [
-        {
-          "clubOnly": false,
-          "description": "משקה מונסטר 500מ ל 2 ב 22",
-          "discountRate": null,
-          "endsAt": "2026-11-09T23:59:00.000",
-          "maxQuantity": null,
-          "minQuantity": 2,
-          "startsAt": "2026-10-05T00:00:00.000",
-          "terms": null
-        }
-      ],
       "mango-loco": [
         {
           "clubOnly": false,
@@ -11672,7 +11516,7 @@
     }
   },
   "DOR_ALON:928": {
-    "fetchedAt": "2026-10-29T10:28:43.210698+00:00",
+    "fetchedAt": "2026-10-30T10:35:38.025022+00:00",
     "promos": {
       "mango-loco": [
         {
@@ -11773,20 +11617,8 @@
     }
   },
   "DOR_ALON:933": {
-    "fetchedAt": "2026-10-29T10:28:23.553307+00:00",
+    "fetchedAt": "2026-10-30T10:36:02.830402+00:00",
     "promos": {
-      "green-zero": [
-        {
-          "clubOnly": false,
-          "description": "משקה מונסטר 500מ ל 2 ב 22",
-          "discountRate": null,
-          "endsAt": "2026-11-09T23:59:00.000",
-          "maxQuantity": null,
-          "minQuantity": 2,
-          "startsAt": "2026-10-05T00:00:00.000",
-          "terms": null
-        }
-      ],
       "mango-loco": [
         {
           "clubOnly": false,
@@ -12112,7 +11944,7 @@
     }
   },
   "DOR_ALON:949": {
-    "fetchedAt": "2026-10-29T10:28:19.515897+00:00",
+    "fetchedAt": "2026-10-30T10:36:13.936582+00:00",
     "promos": {
       "mango-loco": [
         {
@@ -12213,20 +12045,8 @@
     }
   },
   "DOR_ALON:955": {
-    "fetchedAt": "2026-10-29T10:28:50.531685+00:00",
+    "fetchedAt": "2026-10-30T10:36:14.538045+00:00",
     "promos": {
-      "green-zero": [
-        {
-          "clubOnly": false,
-          "description": "משקה מונסטר 500מ ל 2 ב 22",
-          "discountRate": null,
-          "endsAt": "2026-11-09T23:59:00.000",
-          "maxQuantity": null,
-          "minQuantity": 2,
-          "startsAt": "2026-10-05T00:00:00.000",
-          "terms": null
-        }
-      ],
       "mango-loco": [
         {
           "clubOnly": false,
@@ -12326,7 +12146,7 @@
     }
   },
   "DOR_ALON:958": {
-    "fetchedAt": "2026-10-29T10:28:38.633358+00:00",
+    "fetchedAt": "2026-10-30T10:35:56.277512+00:00",
     "promos": {
       "mango-loco": [
         {
@@ -12540,7 +12360,7 @@
     }
   },
   "DOR_ALON:968": {
-    "fetchedAt": "2026-10-29T10:28:41.731729+00:00",
+    "fetchedAt": "2026-10-30T10:35:58.808943+00:00",
     "promos": {
       "mango-loco": [
         {
@@ -12641,20 +12461,8 @@
     }
   },
   "DOR_ALON:976": {
-    "fetchedAt": "2026-10-29T10:28:25.606524+00:00",
+    "fetchedAt": "2026-10-30T10:36:07.389290+00:00",
     "promos": {
-      "green-zero": [
-        {
-          "clubOnly": false,
-          "description": "משקה מונסטר 500מ ל 2 ב 22",
-          "discountRate": null,
-          "endsAt": "2026-11-09T23:59:00.000",
-          "maxQuantity": null,
-          "minQuantity": 2,
-          "startsAt": "2026-10-05T00:00:00.000",
-          "terms": null
-        }
-      ],
       "mango-loco": [
         {
           "clubOnly": false,
@@ -12754,7 +12562,7 @@
     }
   },
   "DOR_ALON:981": {
-    "fetchedAt": "2026-10-29T10:28:28.710504+00:00",
+    "fetchedAt": "2026-10-30T10:35:55.920235+00:00",
     "promos": {
       "mango-loco": [
         {
@@ -13151,7 +12959,7 @@
     "promos": {}
   },
   "MAAYAN_2000:4": {
-    "fetchedAt": "2026-10-29T10:29:07.141688+00:00",
+    "fetchedAt": "2026-10-30T10:36:28.131219+00:00",
     "promos": {}
   },
   "MAAYAN_2000:40": {
@@ -13187,7 +12995,7 @@
     "promos": {}
   },
   "MAAYAN_2000:64": {
-    "fetchedAt": "2026-10-29T10:29:06.828572+00:00",
+    "fetchedAt": "2026-10-30T10:36:28.422442+00:00",
     "promos": {}
   },
   "MAAYAN_2000:7": {
@@ -13391,87 +13199,91 @@
     "promos": {}
   },
   "OSHER_AD:1": {
-    "fetchedAt": "2026-10-29T10:28:13.683990+00:00",
+    "fetchedAt": "2026-10-30T10:35:17.069690+00:00",
     "promos": {}
   },
   "OSHER_AD:10": {
-    "fetchedAt": "2026-10-29T10:28:15.593494+00:00",
+    "fetchedAt": "2026-10-30T10:35:22.494816+00:00",
     "promos": {}
   },
   "OSHER_AD:13": {
-    "fetchedAt": "2026-10-29T10:28:07.230168+00:00",
+    "fetchedAt": "2026-10-30T10:35:00.332419+00:00",
     "promos": {}
   },
   "OSHER_AD:14": {
-    "fetchedAt": "2026-10-29T10:28:06.862233+00:00",
+    "fetchedAt": "2026-10-30T10:35:12.679802+00:00",
     "promos": {}
   },
   "OSHER_AD:16": {
-    "fetchedAt": "2026-10-29T10:28:11.938024+00:00",
+    "fetchedAt": "2026-10-30T10:35:11.785258+00:00",
+    "promos": {}
+  },
+  "OSHER_AD:18": {
+    "fetchedAt": "2026-10-30T10:35:20.802087+00:00",
     "promos": {}
   },
   "OSHER_AD:19": {
-    "fetchedAt": "2026-10-29T10:28:11.521047+00:00",
+    "fetchedAt": "2026-10-30T10:35:30.856706+00:00",
     "promos": {}
   },
   "OSHER_AD:20": {
-    "fetchedAt": "2026-10-29T10:28:06.114104+00:00",
+    "fetchedAt": "2026-10-30T10:34:57.644187+00:00",
     "promos": {}
   },
   "OSHER_AD:23": {
-    "fetchedAt": "2026-10-29T10:28:06.608443+00:00",
+    "fetchedAt": "2026-10-30T10:35:20.470392+00:00",
     "promos": {}
   },
   "OSHER_AD:24": {
-    "fetchedAt": "2026-10-29T10:28:08.310929+00:00",
+    "fetchedAt": "2026-10-30T10:35:12.052480+00:00",
     "promos": {}
   },
   "OSHER_AD:25": {
-    "fetchedAt": "2026-10-29T10:28:06.174284+00:00",
+    "fetchedAt": "2026-10-30T10:35:12.310556+00:00",
     "promos": {}
   },
   "OSHER_AD:26": {
-    "fetchedAt": "2026-10-29T10:28:04.664019+00:00",
+    "fetchedAt": "2026-10-30T10:35:06.558185+00:00",
     "promos": {}
   },
   "OSHER_AD:28": {
-    "fetchedAt": "2026-10-29T10:28:11.583941+00:00",
+    "fetchedAt": "2026-10-30T10:35:22.555449+00:00",
     "promos": {}
   },
   "OSHER_AD:29": {
-    "fetchedAt": "2026-10-29T10:28:01.356444+00:00",
+    "fetchedAt": "2026-10-30T10:35:07.133518+00:00",
     "promos": {}
   },
   "OSHER_AD:3": {
-    "fetchedAt": "2026-10-29T10:28:12.790713+00:00",
+    "fetchedAt": "2026-10-30T10:35:31.122638+00:00",
     "promos": {}
   },
   "OSHER_AD:30": {
-    "fetchedAt": "2026-10-29T10:28:12.639856+00:00",
+    "fetchedAt": "2026-10-30T10:35:13.506917+00:00",
     "promos": {}
   },
   "OSHER_AD:31": {
-    "fetchedAt": "2026-10-29T10:28:16.845305+00:00",
+    "fetchedAt": "2026-10-30T10:35:22.148939+00:00",
     "promos": {}
   },
   "OSHER_AD:32": {
-    "fetchedAt": "2026-10-29T10:28:10.265225+00:00",
+    "fetchedAt": "2026-10-30T10:35:01.694429+00:00",
     "promos": {}
   },
   "OSHER_AD:34": {
-    "fetchedAt": "2026-10-29T10:28:16.943249+00:00",
+    "fetchedAt": "2026-10-30T10:35:22.872723+00:00",
     "promos": {}
   },
   "OSHER_AD:5": {
-    "fetchedAt": "2026-10-29T10:28:00.066757+00:00",
+    "fetchedAt": "2026-10-30T10:35:28.640048+00:00",
     "promos": {}
   },
   "OSHER_AD:6": {
-    "fetchedAt": "2026-10-29T10:28:12.193775+00:00",
+    "fetchedAt": "2026-10-30T10:35:10.054474+00:00",
     "promos": {}
   },
   "OSHER_AD:9": {
-    "fetchedAt": "2026-10-29T10:28:07.451658+00:00",
+    "fetchedAt": "2026-10-30T10:35:23.550151+00:00",
     "promos": {}
   },
   "POLIZER:4": {
@@ -14154,7 +13966,7 @@
     "promos": {}
   },
   "RAMI_LEVY:710": {
-    "fetchedAt": "2026-10-29T10:27:59.854259+00:00",
+    "fetchedAt": "2026-10-30T10:34:42.491976+00:00",
     "promos": {}
   },
   "RAMI_LEVY:711": {
@@ -14447,7 +14259,7 @@
     "promos": {}
   },
   "SHUFERSAL:103": {
-    "fetchedAt": "2026-10-29T10:28:02.669681+00:00",
+    "fetchedAt": "2026-10-30T10:33:11.711071+00:00",
     "promos": {}
   },
   "SHUFERSAL:104": {
@@ -14463,15 +14275,15 @@
     "promos": {}
   },
   "SHUFERSAL:11": {
-    "fetchedAt": "2026-10-29T10:27:37.069047+00:00",
+    "fetchedAt": "2026-10-30T10:34:30.862677+00:00",
     "promos": {}
   },
   "SHUFERSAL:110": {
-    "fetchedAt": "2026-10-29T10:27:42.259694+00:00",
+    "fetchedAt": "2026-10-30T10:35:00.617870+00:00",
     "promos": {}
   },
   "SHUFERSAL:113": {
-    "fetchedAt": "2026-10-29T10:27:41.892216+00:00",
+    "fetchedAt": "2026-10-30T10:34:34.854251+00:00",
     "promos": {}
   },
   "SHUFERSAL:114": {
@@ -14499,7 +14311,7 @@
     "promos": {}
   },
   "SHUFERSAL:122": {
-    "fetchedAt": "2026-10-29T10:27:23.956270+00:00",
+    "fetchedAt": "2026-10-30T10:34:25.268133+00:00",
     "promos": {}
   },
   "SHUFERSAL:123": {
@@ -14595,7 +14407,7 @@
     "promos": {}
   },
   "SHUFERSAL:161": {
-    "fetchedAt": "2026-10-29T10:28:00.420190+00:00",
+    "fetchedAt": "2026-10-30T10:32:27.828922+00:00",
     "promos": {}
   },
   "SHUFERSAL:163": {
@@ -14611,7 +14423,7 @@
     "promos": {}
   },
   "SHUFERSAL:168": {
-    "fetchedAt": "2026-10-29T10:27:50.455711+00:00",
+    "fetchedAt": "2026-10-30T10:34:51.988270+00:00",
     "promos": {}
   },
   "SHUFERSAL:169": {
@@ -14623,7 +14435,7 @@
     "promos": {}
   },
   "SHUFERSAL:171": {
-    "fetchedAt": "2026-10-29T10:27:50.015265+00:00",
+    "fetchedAt": "2026-10-30T10:34:58.093542+00:00",
     "promos": {}
   },
   "SHUFERSAL:173": {
@@ -14635,7 +14447,7 @@
     "promos": {}
   },
   "SHUFERSAL:177": {
-    "fetchedAt": "2026-10-29T10:27:37.479693+00:00",
+    "fetchedAt": "2026-10-30T10:34:55.358006+00:00",
     "promos": {}
   },
   "SHUFERSAL:179": {
@@ -14655,7 +14467,7 @@
     "promos": {}
   },
   "SHUFERSAL:182": {
-    "fetchedAt": "2026-10-29T10:27:51.782180+00:00",
+    "fetchedAt": "2026-10-30T10:34:34.262846+00:00",
     "promos": {}
   },
   "SHUFERSAL:184": {
@@ -14683,7 +14495,7 @@
     "promos": {}
   },
   "SHUFERSAL:195": {
-    "fetchedAt": "2026-10-29T10:27:29.200024+00:00",
+    "fetchedAt": "2026-10-30T10:33:16.496865+00:00",
     "promos": {}
   },
   "SHUFERSAL:199": {
@@ -14703,7 +14515,7 @@
     "promos": {}
   },
   "SHUFERSAL:205": {
-    "fetchedAt": "2026-10-29T10:26:49.320853+00:00",
+    "fetchedAt": "2026-10-30T10:35:01.627067+00:00",
     "promos": {}
   },
   "SHUFERSAL:208": {
@@ -14747,7 +14559,7 @@
     "promos": {}
   },
   "SHUFERSAL:222": {
-    "fetchedAt": "2026-10-29T10:26:50.080200+00:00",
+    "fetchedAt": "2026-10-30T10:33:04.516276+00:00",
     "promos": {}
   },
   "SHUFERSAL:224": {
@@ -14775,7 +14587,7 @@
     "promos": {}
   },
   "SHUFERSAL:230": {
-    "fetchedAt": "2026-10-29T10:27:37.755470+00:00",
+    "fetchedAt": "2026-10-30T10:32:26.582624+00:00",
     "promos": {}
   },
   "SHUFERSAL:231": {
@@ -14791,11 +14603,11 @@
     "promos": {}
   },
   "SHUFERSAL:238": {
-    "fetchedAt": "2026-10-29T10:27:41.541349+00:00",
+    "fetchedAt": "2026-10-30T10:33:15.070153+00:00",
     "promos": {}
   },
   "SHUFERSAL:239": {
-    "fetchedAt": "2026-10-29T10:27:27.143976+00:00",
+    "fetchedAt": "2026-10-30T10:32:27.982483+00:00",
     "promos": {}
   },
   "SHUFERSAL:24": {
@@ -14803,7 +14615,7 @@
     "promos": {}
   },
   "SHUFERSAL:240": {
-    "fetchedAt": "2026-10-29T10:27:09.395448+00:00",
+    "fetchedAt": "2026-10-30T10:34:24.636856+00:00",
     "promos": {}
   },
   "SHUFERSAL:241": {
@@ -14815,7 +14627,7 @@
     "promos": {}
   },
   "SHUFERSAL:247": {
-    "fetchedAt": "2026-10-29T10:27:47.938007+00:00",
+    "fetchedAt": "2026-10-30T10:33:53.978186+00:00",
     "promos": {}
   },
   "SHUFERSAL:248": {
@@ -14855,7 +14667,7 @@
     "promos": {}
   },
   "SHUFERSAL:265": {
-    "fetchedAt": "2026-10-29T10:27:53.529577+00:00",
+    "fetchedAt": "2026-10-30T10:34:31.121954+00:00",
     "promos": {}
   },
   "SHUFERSAL:266": {
@@ -14867,7 +14679,7 @@
     "promos": {}
   },
   "SHUFERSAL:269": {
-    "fetchedAt": "2026-10-29T10:26:44.392119+00:00",
+    "fetchedAt": "2026-10-30T10:33:05.652678+00:00",
     "promos": {}
   },
   "SHUFERSAL:271": {
@@ -14879,7 +14691,7 @@
     "promos": {}
   },
   "SHUFERSAL:274": {
-    "fetchedAt": "2026-10-29T10:27:52.775722+00:00",
+    "fetchedAt": "2026-10-30T10:32:29.676583+00:00",
     "promos": {}
   },
   "SHUFERSAL:277": {
@@ -14903,7 +14715,7 @@
     "promos": {}
   },
   "SHUFERSAL:283": {
-    "fetchedAt": "2026-10-29T10:27:28.008595+00:00",
+    "fetchedAt": "2026-10-30T10:32:27.104780+00:00",
     "promos": {}
   },
   "SHUFERSAL:284": {
@@ -14931,7 +14743,7 @@
     "promos": {}
   },
   "SHUFERSAL:299": {
-    "fetchedAt": "2026-10-29T10:27:54.648225+00:00",
+    "fetchedAt": "2026-10-30T10:34:55.066373+00:00",
     "promos": {}
   },
   "SHUFERSAL:3": {
@@ -14939,7 +14751,7 @@
     "promos": {}
   },
   "SHUFERSAL:30": {
-    "fetchedAt": "2026-10-29T10:27:58.620381+00:00",
+    "fetchedAt": "2026-10-30T10:33:13.115391+00:00",
     "promos": {}
   },
   "SHUFERSAL:301": {
@@ -14991,7 +14803,7 @@
     "promos": {}
   },
   "SHUFERSAL:320": {
-    "fetchedAt": "2026-10-29T10:27:09.084307+00:00",
+    "fetchedAt": "2026-10-30T10:34:52.970319+00:00",
     "promos": {}
   },
   "SHUFERSAL:325": {
@@ -15007,7 +14819,7 @@
     "promos": {}
   },
   "SHUFERSAL:33": {
-    "fetchedAt": "2026-10-29T10:27:23.363085+00:00",
+    "fetchedAt": "2026-10-30T10:33:48.565871+00:00",
     "promos": {}
   },
   "SHUFERSAL:333": {
@@ -15067,7 +14879,7 @@
     "promos": {}
   },
   "SHUFERSAL:350": {
-    "fetchedAt": "2026-10-29T10:26:48.862048+00:00",
+    "fetchedAt": "2026-10-30T10:33:51.592635+00:00",
     "promos": {}
   },
   "SHUFERSAL:354": {
@@ -15123,7 +14935,7 @@
     "promos": {}
   },
   "SHUFERSAL:376": {
-    "fetchedAt": "2026-10-29T10:27:10.397787+00:00",
+    "fetchedAt": "2026-10-30T10:33:58.428030+00:00",
     "promos": {}
   },
   "SHUFERSAL:377": {
@@ -15227,7 +15039,7 @@
     "promos": {}
   },
   "SHUFERSAL:50": {
-    "fetchedAt": "2026-10-29T10:27:06.602565+00:00",
+    "fetchedAt": "2026-10-30T10:32:23.289365+00:00",
     "promos": {}
   },
   "SHUFERSAL:511": {
@@ -15239,7 +15051,7 @@
     "promos": {}
   },
   "SHUFERSAL:57": {
-    "fetchedAt": "2026-10-29T10:27:53.910602+00:00",
+    "fetchedAt": "2026-10-30T10:32:25.668118+00:00",
     "promos": {}
   },
   "SHUFERSAL:579": {
@@ -15263,11 +15075,11 @@
     "promos": {}
   },
   "SHUFERSAL:65": {
-    "fetchedAt": "2026-10-29T10:27:29.735562+00:00",
+    "fetchedAt": "2026-10-30T10:34:36.020564+00:00",
     "promos": {}
   },
   "SHUFERSAL:68": {
-    "fetchedAt": "2026-10-29T10:26:51.433422+00:00",
+    "fetchedAt": "2026-10-30T10:34:01.405704+00:00",
     "promos": {}
   },
   "SHUFERSAL:69": {
@@ -15283,7 +15095,7 @@
     "promos": {}
   },
   "SHUFERSAL:71": {
-    "fetchedAt": "2026-10-29T10:27:08.532170+00:00",
+    "fetchedAt": "2026-10-30T10:33:15.600156+00:00",
     "promos": {}
   },
   "SHUFERSAL:712": {
@@ -15299,7 +15111,7 @@
     "promos": {}
   },
   "SHUFERSAL:740": {
-    "fetchedAt": "2026-10-29T10:27:23.588099+00:00",
+    "fetchedAt": "2026-10-30T10:33:39.964626+00:00",
     "promos": {}
   },
   "SHUFERSAL:741": {
@@ -15319,7 +15131,7 @@
     "promos": {}
   },
   "SHUFERSAL:76": {
-    "fetchedAt": "2026-10-29T10:27:07.044801+00:00",
+    "fetchedAt": "2026-10-30T10:33:50.500248+00:00",
     "promos": {}
   },
   "SHUFERSAL:77": {
@@ -15391,11 +15203,11 @@
     "promos": {}
   },
   "SHUFERSAL:9": {
-    "fetchedAt": "2026-10-29T10:26:50.680236+00:00",
+    "fetchedAt": "2026-10-30T10:34:34.547927+00:00",
     "promos": {}
   },
   "SHUFERSAL:90": {
-    "fetchedAt": "2026-10-29T10:27:03.551777+00:00",
+    "fetchedAt": "2026-10-30T10:32:31.623001+00:00",
     "promos": {}
   },
   "SHUFERSAL:91": {
@@ -15403,7 +15215,7 @@
     "promos": {}
   },
   "SHUFERSAL:92": {
-    "fetchedAt": "2026-10-29T10:27:38.832999+00:00",
+    "fetchedAt": "2026-10-30T10:33:14.121855+00:00",
     "promos": {}
   },
   "SHUFERSAL:93": {
@@ -15415,7 +15227,7 @@
     "promos": {}
   },
   "SHUFERSAL:97": {
-    "fetchedAt": "2026-10-29T10:26:48.418125+00:00",
+    "fetchedAt": "2026-10-30T10:33:54.317205+00:00",
     "promos": {}
   },
   "SHUFERSAL:98": {
@@ -16277,19 +16089,19 @@
     "promos": {}
   },
   "SUPER_SAPIR:105": {
-    "fetchedAt": "2026-10-29T10:29:03.022923+00:00",
+    "fetchedAt": "2026-10-30T10:36:22.748696+00:00",
     "promos": {}
   },
   "SUPER_SAPIR:106": {
-    "fetchedAt": "2026-10-29T10:29:03.163824+00:00",
+    "fetchedAt": "2026-10-30T10:36:22.763465+00:00",
     "promos": {}
   },
   "SUPER_SAPIR:111": {
-    "fetchedAt": "2026-10-29T10:29:01.868164+00:00",
+    "fetchedAt": "2026-10-30T10:36:24.934321+00:00",
     "promos": {}
   },
   "SUPER_SAPIR:122": {
-    "fetchedAt": "2026-10-29T10:29:04.330393+00:00",
+    "fetchedAt": "2026-10-30T10:36:23.765965+00:00",
     "promos": {}
   },
   "SUPER_SAPIR:13": {
@@ -16297,19 +16109,19 @@
     "promos": {}
   },
   "SUPER_SAPIR:130": {
-    "fetchedAt": "2026-10-29T10:29:04.909005+00:00",
+    "fetchedAt": "2026-10-30T10:36:25.274718+00:00",
     "promos": {}
   },
   "SUPER_SAPIR:133": {
-    "fetchedAt": "2026-10-29T10:29:03.800753+00:00",
+    "fetchedAt": "2026-10-30T10:36:25.924477+00:00",
     "promos": {}
   },
   "SUPER_SAPIR:134": {
-    "fetchedAt": "2026-10-29T10:29:06.084377+00:00",
+    "fetchedAt": "2026-10-30T10:36:27.165359+00:00",
     "promos": {}
   },
   "SUPER_SAPIR:138": {
-    "fetchedAt": "2026-10-29T10:29:04.161978+00:00",
+    "fetchedAt": "2026-10-30T10:36:24.086956+00:00",
     "promos": {}
   },
   "SUPER_SAPIR:17": {
@@ -16381,7 +16193,7 @@
     "promos": {}
   },
   "SUPER_SAPIR:39": {
-    "fetchedAt": "2026-10-29T10:29:05.573633+00:00",
+    "fetchedAt": "2026-10-30T10:36:24.530591+00:00",
     "promos": {}
   },
   "SUPER_SAPIR:396": {
@@ -54579,7 +54391,7 @@
     }
   },
   "YELLOW:505": {
-    "fetchedAt": "2026-10-29T10:28:01.258657+00:00",
+    "fetchedAt": "2026-10-30T10:34:50.554831+00:00",
     "promos": {
       "aussie-lemonade": [
         {
