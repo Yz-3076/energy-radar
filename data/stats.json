@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-03T06:22:13.216659+00:00",
+  "generated_at": "2026-11-03T16:58:00.605700+00:00",
   "chains_covered": [
     "SHUFERSAL",
     "VICTORY_NEW_SOURCE",
@@ -31,13 +31,13 @@
     "WOLT"
   ],
   "store_count": 1423,
-  "total_observations": 1730487,
-  "observations_this_run": 8705,
+  "total_observations": 1740680,
+  "observations_this_run": 10193,
   "listings_per_variant": {
     "ultra": 1151,
     "mango-loco": 831,
     "ultra-paradise": 975,
-    "ultra-fiesta": 567,
+    "ultra-fiesta": 568,
     "original": 1209,
     "full-zero": 422,
     "ultra-peachy-keen": 456,
@@ -49,12 +49,12 @@
     "aussie-lemonade": 419
   },
   "depletion_breakdown": {
-    "healthy": 4283,
-    "slowing": 3223,
-    "insufficient_data": 695,
-    "likely_out": 56
+    "healthy": 3740,
+    "slowing": 3759,
+    "insufficient_data": 694,
+    "likely_out": 65
   },
-  "live_listings": 8257,
+  "live_listings": 8258,
   "flavours_on_shelves": 13,
   "stores_per_chain": {
     "Super Pharm": 258,
@@ -162,7 +162,7 @@
       "min": 6.5,
       "median": 7.9,
       "max": 9.2,
-      "listings": 764
+      "listings": 765
     },
     "Salach Dabach": {
       "min": 7.9,
@@ -314,7 +314,7 @@
       "min": 6.8,
       "median": 9.9,
       "max": 13.0,
-      "listings": 567
+      "listings": 568
     },
     "ultra-paradise": {
       "min": 4.9,
@@ -1590,23 +1590,23 @@
     },
     {
       "date": "2026-11-03",
-      "observations": 8705,
-      "stores": 1340,
+      "observations": 18898,
+      "stores": 1343,
       "min": 4.9,
       "median": 9.9,
       "max": 14.9,
       "by_variant": {
         "aussie-lemonade": 10.9,
         "full-zero": 8.9,
-        "green-zero": 10.5,
+        "green-zero": 9.9,
         "mango-loco": 9.9,
         "monarch": 9.9,
         "original": 9.9,
         "pipeline-punch": 9.9,
         "rossi": 9.9,
-        "strawberry": 9.9,
+        "strawberry": 9.5,
         "ultra": 9.9,
-        "ultra-fiesta": 9.9,
+        "ultra-fiesta": 8.9,
         "ultra-paradise": 9.9,
         "ultra-peachy-keen": 9.9
       }
