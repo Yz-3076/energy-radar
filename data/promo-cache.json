@@ -12627,7 +12627,7 @@
     "promos": {}
   },
   "FRESH_MARKET_AND_SUPER_DOSH:20": {
-    "fetchedAt": "2026-11-01T20:37:03.702198+00:00",
+    "fetchedAt": "2026-11-03T07:09:23.457213+00:00",
     "promos": {}
   },
   "FRESH_MARKET_AND_SUPER_DOSH:21": {
@@ -12719,7 +12719,7 @@
     "promos": {}
   },
   "FRESH_MARKET_AND_SUPER_DOSH:47": {
-    "fetchedAt": "2026-11-01T20:36:40.706023+00:00",
+    "fetchedAt": "2026-11-03T07:09:25.748954+00:00",
     "promos": {}
   },
   "FRESH_MARKET_AND_SUPER_DOSH:48": {
@@ -15606,6 +15606,10 @@
   },
   "SUPER_SAPIR:66": {
     "fetchedAt": "2026-11-02T22:43:16.942048+00:00",
+    "promos": {}
+  },
+  "SUPER_SAPIR:75": {
+    "fetchedAt": "2026-11-03T07:09:20.503540+00:00",
     "promos": {}
   },
   "SUPER_SAPIR:76": {
@@ -21386,7 +21390,7 @@
     }
   },
   "YELLOW:132": {
-    "fetchedAt": "2026-11-01T20:31:50.352609+00:00",
+    "fetchedAt": "2026-11-03T07:09:18.269532+00:00",
     "promos": {
       "aussie-lemonade": [
         {
@@ -51528,7 +51532,7 @@
     }
   },
   "YELLOW:423": {
-    "fetchedAt": "2026-11-01T20:32:20.617548+00:00",
+    "fetchedAt": "2026-11-03T07:09:18.002807+00:00",
     "promos": {
       "aussie-lemonade": [
         {
