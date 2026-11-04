@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-04T14:16:51.196224+00:00",
+  "generated_at": "2026-11-04T21:13:36.772140+00:00",
   "chains_covered": [
     "SHUFERSAL",
     "VICTORY_NEW_SOURCE",
@@ -31,8 +31,8 @@
     "WOLT"
   ],
   "store_count": 1423,
-  "total_observations": 1759762,
-  "observations_this_run": 10048,
+  "total_observations": 1770391,
+  "observations_this_run": 10629,
   "listings_per_variant": {
     "ultra": 1157,
     "mango-loco": 829,
@@ -49,10 +49,10 @@
     "aussie-lemonade": 422
   },
   "depletion_breakdown": {
-    "healthy": 4176,
-    "slowing": 3298,
-    "insufficient_data": 690,
-    "likely_out": 110
+    "healthy": 3372,
+    "slowing": 4069,
+    "insufficient_data": 687,
+    "likely_out": 146
   },
   "live_listings": 8274,
   "flavours_on_shelves": 13,
@@ -1613,8 +1613,8 @@
     },
     {
       "date": "2026-11-04",
-      "observations": 19082,
-      "stores": 1339,
+      "observations": 29711,
+      "stores": 1340,
       "min": 4.9,
       "median": 9.9,
       "max": 14.9,
@@ -1626,10 +1626,10 @@
         "monarch": 9.9,
         "original": 9.9,
         "pipeline-punch": 9.9,
-        "rossi": 9.7,
-        "strawberry": 9.9,
+        "rossi": 9.9,
+        "strawberry": 9.5,
         "ultra": 9.9,
-        "ultra-fiesta": 9.2,
+        "ultra-fiesta": 8.9,
         "ultra-paradise": 9.9,
         "ultra-peachy-keen": 9.9
       }
