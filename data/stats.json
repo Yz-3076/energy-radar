@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-05T06:19:28.375081+00:00",
+  "generated_at": "2026-11-05T17:17:17.906843+00:00",
   "chains_covered": [
     "SHUFERSAL",
     "VICTORY_NEW_SOURCE",
@@ -31,30 +31,30 @@
     "WOLT"
   ],
   "store_count": 1422,
-  "total_observations": 1779425,
-  "observations_this_run": 9034,
+  "total_observations": 1789839,
+  "observations_this_run": 10414,
   "listings_per_variant": {
     "ultra": 1159,
     "mango-loco": 824,
     "ultra-paradise": 969,
     "ultra-fiesta": 570,
     "full-zero": 422,
-    "original": 1204,
+    "original": 1205,
     "ultra-peachy-keen": 460,
     "strawberry": 655,
     "rossi": 161,
     "pipeline-punch": 541,
-    "monarch": 395,
     "green-zero": 483,
+    "monarch": 396,
     "aussie-lemonade": 418
   },
   "depletion_breakdown": {
-    "slowing": 3102,
-    "healthy": 4411,
-    "insufficient_data": 666,
-    "likely_out": 82
+    "slowing": 4063,
+    "healthy": 3415,
+    "insufficient_data": 665,
+    "likely_out": 120
   },
-  "live_listings": 8261,
+  "live_listings": 8263,
   "flavours_on_shelves": 13,
   "stores_per_chain": {
     "Super Pharm": 258,
@@ -162,7 +162,7 @@
       "min": 6.5,
       "median": 7.9,
       "max": 9.2,
-      "listings": 761
+      "listings": 762
     },
     "Salach Dabach": {
       "min": 7.9,
@@ -216,7 +216,7 @@
       "min": 8.9,
       "median": 8.9,
       "max": 9.9,
-      "listings": 108
+      "listings": 109
     },
     "Wolt": {
       "min": 10.9,
@@ -278,13 +278,13 @@
       "min": 6.8,
       "median": 9.9,
       "max": 14.9,
-      "listings": 395
+      "listings": 396
     },
     "original": {
       "min": 4.9,
       "median": 9.9,
       "max": 14.9,
-      "listings": 1204
+      "listings": 1205
     },
     "pipeline-punch": {
       "min": 6.8,
@@ -1636,23 +1636,23 @@
     },
     {
       "date": "2026-11-05",
-      "observations": 9034,
-      "stores": 1339,
+      "observations": 19448,
+      "stores": 1341,
       "min": 4.9,
       "median": 9.9,
       "max": 14.9,
       "by_variant": {
         "aussie-lemonade": 10.9,
         "full-zero": 8.9,
-        "green-zero": 10.9,
+        "green-zero": 9.9,
         "mango-loco": 9.9,
         "monarch": 9.9,
         "original": 9.9,
-        "pipeline-punch": 10.5,
+        "pipeline-punch": 9.9,
         "rossi": 9.9,
-        "strawberry": 9.9,
+        "strawberry": 9.5,
         "ultra": 9.9,
-        "ultra-fiesta": 9.9,
+        "ultra-fiesta": 8.9,
         "ultra-paradise": 9.9,
         "ultra-peachy-keen": 9.9
       }
