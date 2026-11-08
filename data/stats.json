@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-08T10:06:42.340450+00:00",
+  "generated_at": "2026-11-08T17:52:17.847544+00:00",
   "chains_covered": [
     "SHUFERSAL",
     "VICTORY_NEW_SOURCE",
@@ -31,30 +31,30 @@
     "WOLT"
   ],
   "store_count": 1423,
-  "total_observations": 1894120,
-  "observations_this_run": 9512,
+  "total_observations": 1904473,
+  "observations_this_run": 10353,
   "listings_per_variant": {
-    "ultra": 1157,
+    "ultra": 1158,
     "mango-loco": 824,
     "full-zero": 420,
     "ultra-paradise": 965,
-    "ultra-fiesta": 571,
+    "ultra-fiesta": 572,
     "original": 1211,
     "ultra-peachy-keen": 459,
-    "strawberry": 655,
+    "strawberry": 656,
     "rossi": 162,
     "pipeline-punch": 541,
-    "monarch": 392,
     "green-zero": 481,
+    "monarch": 392,
     "aussie-lemonade": 413
   },
   "depletion_breakdown": {
-    "slowing": 5286,
+    "slowing": 5267,
     "insufficient_data": 636,
-    "likely_out": 107,
-    "healthy": 2222
+    "likely_out": 87,
+    "healthy": 2264
   },
-  "live_listings": 8251,
+  "live_listings": 8254,
   "flavours_on_shelves": 13,
   "stores_per_chain": {
     "Super Pharm": 257,
@@ -162,7 +162,7 @@
       "min": 6.5,
       "median": 7.9,
       "max": 9.2,
-      "listings": 761
+      "listings": 764
     },
     "Salach Dabach": {
       "min": 7.9,
@@ -281,7 +281,7 @@
       "listings": 392
     },
     "original": {
-      "min": 6.8,
+      "min": 6.5,
       "median": 9.9,
       "max": 14.9,
       "listings": 1211
@@ -302,19 +302,19 @@
       "min": 6.8,
       "median": 9.9,
       "max": 13.0,
-      "listings": 655
+      "listings": 656
     },
     "ultra": {
       "min": 6.5,
       "median": 9.9,
       "max": 13.0,
-      "listings": 1157
+      "listings": 1158
     },
     "ultra-fiesta": {
       "min": 6.8,
       "median": 9.9,
       "max": 13.0,
-      "listings": 571
+      "listings": 572
     },
     "ultra-paradise": {
       "min": 6.5,
@@ -331,7 +331,7 @@
   },
   "cheapest_listing": {
     "price": 6.5,
-    "variantId": "ultra",
+    "variantId": "ultra-paradise",
     "storeId": "rami_levy-203",
     "storeName": "אילת",
     "chain": "Rami Levy"
@@ -1705,18 +1705,18 @@
     },
     {
       "date": "2026-11-08",
-      "observations": 27111,
-      "stores": 1338,
+      "observations": 37464,
+      "stores": 1340,
       "min": 6.5,
       "median": 8.9,
       "max": 14.9,
       "by_variant": {
-        "aussie-lemonade": 9.9,
+        "aussie-lemonade": 10.25,
         "full-zero": 8.9,
         "green-zero": 8.9,
         "mango-loco": 8.9,
         "monarch": 8.9,
-        "original": 8.9,
+        "original": 9.5,
         "pipeline-punch": 8.9,
         "rossi": 8.9,
         "strawberry": 8.9,
