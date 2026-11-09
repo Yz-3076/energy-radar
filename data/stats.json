@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-09T05:54:16.697484+00:00",
+  "generated_at": "2026-11-09T15:56:44.031804+00:00",
   "chains_covered": [
     "SHUFERSAL",
     "VICTORY_NEW_SOURCE",
@@ -31,12 +31,12 @@
     "WOLT"
   ],
   "store_count": 1424,
-  "total_observations": 1923571,
-  "observations_this_run": 8767,
+  "total_observations": 1933488,
+  "observations_this_run": 9917,
   "listings_per_variant": {
     "ultra": 1157,
     "mango-loco": 824,
-    "ultra-paradise": 965,
+    "ultra-paradise": 966,
     "ultra-fiesta": 571,
     "original": 1213,
     "full-zero": 421,
@@ -46,15 +46,15 @@
     "pipeline-punch": 541,
     "monarch": 393,
     "green-zero": 478,
-    "aussie-lemonade": 410
+    "aussie-lemonade": 411
   },
   "depletion_breakdown": {
-    "slowing": 4746,
-    "healthy": 2824,
-    "insufficient_data": 627,
-    "likely_out": 53
+    "slowing": 4763,
+    "healthy": 2721,
+    "insufficient_data": 629,
+    "likely_out": 139
   },
-  "live_listings": 8250,
+  "live_listings": 8252,
   "flavours_on_shelves": 13,
   "stores_per_chain": {
     "Super Pharm": 257,
@@ -162,7 +162,7 @@
       "min": 6.5,
       "median": 7.9,
       "max": 9.2,
-      "listings": 762
+      "listings": 763
     },
     "Salach Dabach": {
       "min": 7.9,
@@ -174,7 +174,7 @@
       "min": 7.0,
       "median": 9.9,
       "max": 9.9,
-      "listings": 1124
+      "listings": 1125
     },
     "Shuk Ahir": {
       "min": 8.9,
@@ -254,7 +254,7 @@
       "min": 7.5,
       "median": 10.9,
       "max": 13.0,
-      "listings": 410
+      "listings": 411
     },
     "full-zero": {
       "min": 6.8,
@@ -320,7 +320,7 @@
       "min": 6.5,
       "median": 9.9,
       "max": 13.0,
-      "listings": 965
+      "listings": 966
     },
     "ultra-peachy-keen": {
       "min": 6.8,
@@ -331,7 +331,7 @@
   },
   "cheapest_listing": {
     "price": 6.5,
-    "variantId": "ultra",
+    "variantId": "ultra-paradise",
     "storeId": "rami_levy-203",
     "storeName": "אילת",
     "chain": "Rami Levy"
@@ -1728,24 +1728,24 @@
     },
     {
       "date": "2026-11-09",
-      "observations": 8767,
-      "stores": 1261,
+      "observations": 18684,
+      "stores": 1342,
       "min": 6.5,
       "median": 9.9,
       "max": 14.9,
       "by_variant": {
         "aussie-lemonade": 10.9,
         "full-zero": 8.9,
-        "green-zero": 10.9,
+        "green-zero": 9.9,
         "mango-loco": 9.9,
         "monarch": 9.9,
-        "original": 10.35,
-        "pipeline-punch": 10.2,
+        "original": 9.9,
+        "pipeline-punch": 9.9,
         "rossi": 9.7,
         "strawberry": 9.9,
         "ultra": 9.9,
-        "ultra-fiesta": 9.2,
-        "ultra-paradise": 10.5,
+        "ultra-fiesta": 8.9,
+        "ultra-paradise": 9.9,
         "ultra-peachy-keen": 9.9
       }
     }
