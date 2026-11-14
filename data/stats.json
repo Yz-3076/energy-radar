@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-14T17:54:11.094514+00:00",
+  "generated_at": "2026-11-14T22:15:08.558929+00:00",
   "chains_covered": [
     "SHUFERSAL",
     "VICTORY_NEW_SOURCE",
@@ -31,8 +31,8 @@
     "WOLT"
   ],
   "store_count": 1426,
-  "total_observations": 2101471,
-  "observations_this_run": 10275,
+  "total_observations": 2110648,
+  "observations_this_run": 9177,
   "listings_per_variant": {
     "ultra": 1170,
     "mango-loco": 821,
@@ -49,10 +49,10 @@
     "aussie-lemonade": 407
   },
   "depletion_breakdown": {
-    "slowing": 4711,
-    "healthy": 2839,
-    "insufficient_data": 554,
-    "likely_out": 130
+    "slowing": 4615,
+    "healthy": 2940,
+    "insufficient_data": 551,
+    "likely_out": 128
   },
   "live_listings": 8234,
   "flavours_on_shelves": 13,
@@ -72,8 +72,8 @@
     "Super Yuda": 26,
     "Wolt": 25,
     "Zol Vebegadol": 23,
-    "Osher Ad": 22,
     "City Market Kiryatgat": 22,
+    "Osher Ad": 22,
     "Maayan 2000": 18,
     "Yohananof": 15,
     "King Store": 13,
@@ -1843,18 +1843,18 @@
     },
     {
       "date": "2026-11-14",
-      "observations": 36178,
-      "stores": 1342,
+      "observations": 45355,
+      "stores": 1344,
       "min": 6.5,
-      "median": 8.9,
+      "median": 9.2,
       "max": 14.9,
       "by_variant": {
-        "aussie-lemonade": 9.9,
+        "aussie-lemonade": 10.5,
         "full-zero": 8.9,
         "green-zero": 8.9,
         "mango-loco": 8.9,
         "monarch": 8.9,
-        "original": 9.5,
+        "original": 9.9,
         "pipeline-punch": 8.9,
         "rossi": 8.9,
         "strawberry": 9.2,
