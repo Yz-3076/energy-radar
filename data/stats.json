@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-18T11:27:47.595433+00:00",
+  "generated_at": "2026-11-18T20:20:44.888951+00:00",
   "chains_covered": [
     "SHUFERSAL",
     "VICTORY_NEW_SOURCE",
@@ -31,13 +31,13 @@
     "WOLT"
   ],
   "store_count": 1427,
-  "total_observations": 2203792,
-  "observations_this_run": 10525,
+  "total_observations": 2214962,
+  "observations_this_run": 11170,
   "listings_per_variant": {
     "ultra": 1171,
     "mango-loco": 819,
     "full-zero": 419,
-    "ultra-paradise": 929,
+    "ultra-paradise": 927,
     "ultra-fiesta": 571,
     "original": 1212,
     "ultra-peachy-keen": 457,
@@ -49,12 +49,12 @@
     "aussie-lemonade": 395
   },
   "depletion_breakdown": {
-    "healthy": 3908,
-    "slowing": 3735,
-    "insufficient_data": 523,
-    "likely_out": 44
+    "slowing": 4335,
+    "healthy": 3277,
+    "insufficient_data": 522,
+    "likely_out": 74
   },
-  "live_listings": 8210,
+  "live_listings": 8208,
   "flavours_on_shelves": 13,
   "stores_per_chain": {
     "Super Pharm": 257,
@@ -192,7 +192,7 @@
       "min": 8.5,
       "median": 10.9,
       "max": 10.9,
-      "listings": 819
+      "listings": 817
     },
     "Super Sapir": {
       "min": 6.9,
@@ -320,7 +320,7 @@
       "min": 6.5,
       "median": 9.9,
       "max": 13.0,
-      "listings": 929
+      "listings": 927
     },
     "ultra-peachy-keen": {
       "min": 6.8,
@@ -1935,13 +1935,13 @@
     },
     {
       "date": "2026-11-18",
-      "observations": 28825,
+      "observations": 39995,
       "stores": 1353,
       "min": 6.5,
       "median": 8.9,
       "max": 14.9,
       "by_variant": {
-        "aussie-lemonade": 9.2,
+        "aussie-lemonade": 9.9,
         "full-zero": 8.9,
         "green-zero": 8.9,
         "mango-loco": 8.9,
@@ -1950,10 +1950,10 @@
         "pipeline-punch": 8.9,
         "rossi": 8.9,
         "strawberry": 8.9,
-        "ultra": 9.2,
+        "ultra": 9.9,
         "ultra-fiesta": 8.9,
         "ultra-paradise": 9.9,
-        "ultra-peachy-keen": 9.2
+        "ultra-peachy-keen": 9.9
       }
     }
   ]
