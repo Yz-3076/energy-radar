@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-19T11:25:31.238863+00:00",
+  "generated_at": "2026-11-19T20:25:10.596023+00:00",
   "chains_covered": [
     "SHUFERSAL",
     "VICTORY_NEW_SOURCE",
@@ -30,34 +30,34 @@
     "HET_COHEN_NEW_SOURCE",
     "WOLT"
   ],
-  "store_count": 1431,
-  "total_observations": 2235501,
-  "observations_this_run": 9880,
+  "store_count": 1430,
+  "total_observations": 2245995,
+  "observations_this_run": 10494,
   "listings_per_variant": {
+    "original": 1212,
     "ultra": 1177,
     "mango-loco": 819,
-    "ultra-paradise": 925,
-    "ultra-fiesta": 570,
-    "original": 1213,
     "full-zero": 424,
+    "ultra-paradise": 926,
+    "ultra-fiesta": 570,
     "ultra-peachy-keen": 454,
     "strawberry": 666,
     "rossi": 160,
     "pipeline-punch": 541,
     "monarch": 399,
     "green-zero": 478,
-    "aussie-lemonade": 397
+    "aussie-lemonade": 396
   },
   "depletion_breakdown": {
-    "healthy": 3503,
-    "slowing": 4135,
-    "insufficient_data": 516,
-    "likely_out": 69
+    "slowing": 4363,
+    "healthy": 3195,
+    "insufficient_data": 515,
+    "likely_out": 149
   },
-  "live_listings": 8223,
+  "live_listings": 8222,
   "flavours_on_shelves": 13,
   "stores_per_chain": {
-    "Super Pharm": 257,
+    "Super Pharm": 256,
     "Shufersal": 241,
     "Yellow": 194,
     "Dor Alon": 102,
@@ -192,7 +192,7 @@
       "min": 8.5,
       "median": 10.9,
       "max": 10.9,
-      "listings": 817
+      "listings": 816
     },
     "Super Sapir": {
       "min": 6.9,
@@ -254,7 +254,7 @@
       "min": 7.9,
       "median": 10.9,
       "max": 13.0,
-      "listings": 397
+      "listings": 396
     },
     "full-zero": {
       "min": 6.8,
@@ -281,10 +281,10 @@
       "listings": 399
     },
     "original": {
-      "min": 6.5,
+      "min": 6.8,
       "median": 9.9,
       "max": 14.9,
-      "listings": 1213
+      "listings": 1212
     },
     "pipeline-punch": {
       "min": 6.8,
@@ -320,7 +320,7 @@
       "min": 6.5,
       "median": 9.9,
       "max": 13.0,
-      "listings": 925
+      "listings": 926
     },
     "ultra-peachy-keen": {
       "min": 6.8,
@@ -331,7 +331,7 @@
   },
   "cheapest_listing": {
     "price": 6.5,
-    "variantId": "original",
+    "variantId": "ultra-paradise",
     "storeId": "rami_levy-203",
     "storeName": "אילת",
     "chain": "Rami Levy"
@@ -1958,7 +1958,7 @@
     },
     {
       "date": "2026-11-19",
-      "observations": 20539,
+      "observations": 31033,
       "stores": 1352,
       "min": 6.5,
       "median": 9.9,
