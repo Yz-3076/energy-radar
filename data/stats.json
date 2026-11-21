@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-21T02:05:05.271000+00:00",
+  "generated_at": "2026-11-21T10:52:15.403203+00:00",
   "chains_covered": [
     "SHUFERSAL",
     "VICTORY_NEW_SOURCE",
@@ -31,30 +31,30 @@
     "WOLT"
   ],
   "store_count": 1433,
-  "total_observations": 2286372,
-  "observations_this_run": 10380,
+  "total_observations": 2296171,
+  "observations_this_run": 9799,
   "listings_per_variant": {
     "ultra": 1179,
-    "ultra-paradise": 927,
-    "ultra-fiesta": 574,
-    "original": 1216,
-    "full-zero": 425,
-    "mango-loco": 824,
-    "ultra-peachy-keen": 453,
+    "ultra-paradise": 923,
+    "ultra-fiesta": 571,
+    "original": 1213,
+    "full-zero": 424,
+    "mango-loco": 819,
+    "ultra-peachy-keen": 451,
     "strawberry": 671,
-    "rossi": 160,
-    "pipeline-punch": 542,
-    "monarch": 402,
-    "green-zero": 481,
-    "aussie-lemonade": 402
+    "rossi": 161,
+    "pipeline-punch": 540,
+    "monarch": 398,
+    "green-zero": 479,
+    "aussie-lemonade": 399
   },
   "depletion_breakdown": {
-    "healthy": 3919,
-    "slowing": 3726,
-    "insufficient_data": 505,
-    "likely_out": 106
+    "slowing": 4198,
+    "healthy": 3390,
+    "insufficient_data": 507,
+    "likely_out": 133
   },
-  "live_listings": 8256,
+  "live_listings": 8228,
   "flavours_on_shelves": 13,
   "stores_per_chain": {
     "Super Pharm": 257,
@@ -96,7 +96,7 @@
       "min": 10.9,
       "median": 13.0,
       "max": 14.9,
-      "listings": 32
+      "listings": 30
     },
     "Dor Alon": {
       "min": 9.9,
@@ -138,13 +138,13 @@
       "min": 7.3,
       "median": 8.5,
       "max": 8.5,
-      "listings": 73
+      "listings": 75
     },
     "Netiv Hased": {
       "min": 9.3,
       "median": 9.4,
       "max": 9.4,
-      "listings": 73
+      "listings": 74
     },
     "Osher Ad": {
       "min": 6.9,
@@ -180,7 +180,7 @@
       "min": 8.9,
       "median": 8.9,
       "max": 9.9,
-      "listings": 83
+      "listings": 53
     },
     "Stop Market": {
       "min": 8.9,
@@ -198,7 +198,7 @@
       "min": 6.9,
       "median": 7.9,
       "max": 10.9,
-      "listings": 259
+      "listings": 260
     },
     "Super Yuda": {
       "min": 8.5,
@@ -254,49 +254,49 @@
       "min": 7.5,
       "median": 10.9,
       "max": 13.0,
-      "listings": 402
+      "listings": 399
     },
     "full-zero": {
       "min": 6.8,
       "median": 8.9,
       "max": 14.9,
-      "listings": 425
+      "listings": 424
     },
     "green-zero": {
       "min": 6.8,
       "median": 9.9,
       "max": 13.0,
-      "listings": 481
+      "listings": 479
     },
     "mango-loco": {
       "min": 6.8,
       "median": 9.9,
       "max": 13.0,
-      "listings": 824
+      "listings": 819
     },
     "monarch": {
       "min": 6.8,
       "median": 9.9,
       "max": 14.9,
-      "listings": 402
+      "listings": 398
     },
     "original": {
       "min": 6.8,
       "median": 9.9,
       "max": 14.9,
-      "listings": 1216
+      "listings": 1213
     },
     "pipeline-punch": {
       "min": 6.8,
       "median": 9.9,
       "max": 13.0,
-      "listings": 542
+      "listings": 540
     },
     "rossi": {
       "min": 7.2,
       "median": 9.9,
       "max": 14.9,
-      "listings": 160
+      "listings": 161
     },
     "strawberry": {
       "min": 6.8,
@@ -314,19 +314,19 @@
       "min": 6.8,
       "median": 9.9,
       "max": 13.0,
-      "listings": 574
+      "listings": 571
     },
     "ultra-paradise": {
       "min": 6.5,
       "median": 9.9,
       "max": 13.0,
-      "listings": 927
+      "listings": 923
     },
     "ultra-peachy-keen": {
       "min": 6.8,
       "median": 9.9,
       "max": 14.9,
-      "listings": 453
+      "listings": 451
     }
   },
   "cheapest_listing": {
@@ -2004,23 +2004,23 @@
     },
     {
       "date": "2026-11-21",
-      "observations": 10380,
-      "stores": 1291,
+      "observations": 20179,
+      "stores": 1347,
       "min": 6.5,
       "median": 9.9,
       "max": 14.9,
       "by_variant": {
         "aussie-lemonade": 10.9,
         "full-zero": 8.9,
-        "green-zero": 9.5,
+        "green-zero": 9.9,
         "mango-loco": 9.9,
         "monarch": 9.9,
         "original": 9.9,
         "pipeline-punch": 9.9,
         "rossi": 9.9,
-        "strawberry": 9.2,
+        "strawberry": 9.4,
         "ultra": 9.9,
-        "ultra-fiesta": 9.2,
+        "ultra-fiesta": 8.9,
         "ultra-paradise": 9.9,
         "ultra-peachy-keen": 9.9
       }
