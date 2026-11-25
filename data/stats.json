@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-25T08:07:29.920564+00:00",
+  "generated_at": "2026-11-25T19:06:51.555893+00:00",
   "chains_covered": [
     "SHUFERSAL",
     "VICTORY_NEW_SOURCE",
@@ -31,12 +31,12 @@
     "WOLT"
   ],
   "store_count": 1428,
-  "total_observations": 2419459,
-  "observations_this_run": 9264,
+  "total_observations": 2430944,
+  "observations_this_run": 11485,
   "listings_per_variant": {
     "ultra": 1168,
     "mango-loco": 815,
-    "ultra-paradise": 917,
+    "ultra-paradise": 925,
     "ultra-fiesta": 569,
     "original": 1204,
     "full-zero": 426,
@@ -49,12 +49,12 @@
     "aussie-lemonade": 397
   },
   "depletion_breakdown": {
-    "slowing": 3839,
-    "healthy": 3822,
-    "insufficient_data": 487,
-    "likely_out": 48
+    "slowing": 4172,
+    "healthy": 3471,
+    "insufficient_data": 488,
+    "likely_out": 73
   },
-  "live_listings": 8196,
+  "live_listings": 8204,
   "flavours_on_shelves": 13,
   "stores_per_chain": {
     "Super Pharm": 257,
@@ -192,7 +192,7 @@
       "min": 1.9,
       "median": 10.9,
       "max": 10.9,
-      "listings": 793
+      "listings": 801
     },
     "Super Sapir": {
       "min": 6.9,
@@ -320,7 +320,7 @@
       "min": 6.5,
       "median": 9.9,
       "max": 13.0,
-      "listings": 917
+      "listings": 925
     },
     "ultra-peachy-keen": {
       "min": 6.8,
@@ -2096,7 +2096,7 @@
     },
     {
       "date": "2026-11-25",
-      "observations": 9264,
+      "observations": 20749,
       "stores": 1348,
       "min": 1.9,
       "median": 9.9,
@@ -2104,7 +2104,7 @@
       "by_variant": {
         "aussie-lemonade": 10.9,
         "full-zero": 8.9,
-        "green-zero": 10.5,
+        "green-zero": 9.9,
         "mango-loco": 9.9,
         "monarch": 9.9,
         "original": 9.9,
@@ -2112,7 +2112,7 @@
         "rossi": 9.5,
         "strawberry": 9.4,
         "ultra": 9.9,
-        "ultra-fiesta": 9.9,
+        "ultra-fiesta": 8.9,
         "ultra-paradise": 9.9,
         "ultra-peachy-keen": 9.9
       }
