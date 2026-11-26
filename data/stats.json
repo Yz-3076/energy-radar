@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-26T03:28:27.169472+00:00",
+  "generated_at": "2026-11-26T16:44:33.784797+00:00",
   "chains_covered": [
     "SHUFERSAL",
     "VICTORY_NEW_SOURCE",
@@ -31,30 +31,30 @@
     "WOLT"
   ],
   "store_count": 1429,
-  "total_observations": 2440382,
-  "observations_this_run": 9438,
+  "total_observations": 2451456,
+  "observations_this_run": 11074,
   "listings_per_variant": {
-    "ultra": 1168,
+    "ultra": 1166,
     "mango-loco": 815,
-    "ultra-fiesta": 569,
-    "full-zero": 427,
-    "ultra-paradise": 925,
+    "ultra-fiesta": 568,
+    "full-zero": 425,
+    "ultra-paradise": 921,
     "original": 1207,
-    "ultra-peachy-keen": 450,
+    "ultra-peachy-keen": 448,
     "strawberry": 673,
     "rossi": 162,
-    "pipeline-punch": 537,
-    "monarch": 399,
-    "green-zero": 472,
-    "aussie-lemonade": 395
+    "pipeline-punch": 536,
+    "monarch": 394,
+    "green-zero": 471,
+    "aussie-lemonade": 392
   },
   "depletion_breakdown": {
-    "slowing": 3853,
-    "healthy": 3806,
-    "insufficient_data": 483,
-    "likely_out": 57
+    "slowing": 4505,
+    "healthy": 3134,
+    "insufficient_data": 470,
+    "likely_out": 69
   },
-  "live_listings": 8199,
+  "live_listings": 8178,
   "flavours_on_shelves": 13,
   "stores_per_chain": {
     "Super Pharm": 257,
@@ -72,8 +72,8 @@
     "Super Yuda": 26,
     "Wolt": 25,
     "Zol Vebegadol": 23,
-    "City Market Kiryatgat": 21,
     "Osher Ad": 21,
+    "City Market Kiryatgat": 21,
     "Maayan 2000": 18,
     "Yohananof": 15,
     "King Store": 13,
@@ -96,7 +96,7 @@
       "min": 10.9,
       "median": 13.0,
       "max": 14.9,
-      "listings": 29
+      "listings": 30
     },
     "Dor Alon": {
       "min": 9.9,
@@ -114,7 +114,7 @@
       "min": 8.9,
       "median": 8.9,
       "max": 8.9,
-      "listings": 74
+      "listings": 63
     },
     "Keshet": {
       "min": 8.9,
@@ -150,7 +150,7 @@
       "min": 6.9,
       "median": 7.5,
       "max": 7.5,
-      "listings": 59
+      "listings": 58
     },
     "Polizer": {
       "min": 8.5,
@@ -222,7 +222,7 @@
       "min": 10.9,
       "median": 10.9,
       "max": 10.9,
-      "listings": 200
+      "listings": 190
     },
     "Yayno Bitan And Carrefour": {
       "min": 7.2,
@@ -254,19 +254,19 @@
       "min": 7.5,
       "median": 10.9,
       "max": 13.0,
-      "listings": 395
+      "listings": 392
     },
     "full-zero": {
       "min": 6.8,
       "median": 8.9,
       "max": 14.9,
-      "listings": 427
+      "listings": 425
     },
     "green-zero": {
       "min": 6.8,
       "median": 10.5,
       "max": 13.0,
-      "listings": 472
+      "listings": 471
     },
     "mango-loco": {
       "min": 6.8,
@@ -278,7 +278,7 @@
       "min": 6.8,
       "median": 9.9,
       "max": 14.9,
-      "listings": 399
+      "listings": 394
     },
     "original": {
       "min": 1.9,
@@ -290,7 +290,7 @@
       "min": 6.8,
       "median": 9.9,
       "max": 13.0,
-      "listings": 537
+      "listings": 536
     },
     "rossi": {
       "min": 7.2,
@@ -308,25 +308,25 @@
       "min": 6.5,
       "median": 9.9,
       "max": 13.0,
-      "listings": 1168
+      "listings": 1166
     },
     "ultra-fiesta": {
       "min": 6.8,
       "median": 9.9,
       "max": 13.0,
-      "listings": 569
+      "listings": 568
     },
     "ultra-paradise": {
       "min": 6.5,
       "median": 9.9,
       "max": 13.0,
-      "listings": 925
+      "listings": 921
     },
     "ultra-peachy-keen": {
       "min": 6.8,
       "median": 9.9,
       "max": 14.9,
-      "listings": 450
+      "listings": 448
     }
   },
   "cheapest_listing": {
@@ -2119,25 +2119,25 @@
     },
     {
       "date": "2026-11-26",
-      "observations": 9438,
-      "stores": 1325,
+      "observations": 20512,
+      "stores": 1348,
       "min": 1.9,
       "median": 9.9,
       "max": 14.9,
       "by_variant": {
         "aussie-lemonade": 10.9,
         "full-zero": 8.9,
-        "green-zero": 10.9,
+        "green-zero": 9.9,
         "mango-loco": 9.9,
         "monarch": 9.9,
-        "original": 10.9,
-        "pipeline-punch": 10.9,
+        "original": 9.9,
+        "pipeline-punch": 9.9,
         "rossi": 9.5,
-        "strawberry": 9.5,
+        "strawberry": 9.4,
         "ultra": 10.9,
-        "ultra-fiesta": 9.9,
-        "ultra-paradise": 10.9,
-        "ultra-peachy-keen": 10.9
+        "ultra-fiesta": 8.9,
+        "ultra-paradise": 10.5,
+        "ultra-peachy-keen": 9.9
       }
     }
   ]
