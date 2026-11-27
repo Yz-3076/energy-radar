@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-27T11:59:28.252016+00:00",
+  "generated_at": "2026-11-27T21:05:02.337871+00:00",
   "chains_covered": [
     "SHUFERSAL",
     "VICTORY_NEW_SOURCE",
@@ -31,12 +31,12 @@
     "WOLT"
   ],
   "store_count": 1429,
-  "total_observations": 2473619,
-  "observations_this_run": 9890,
+  "total_observations": 2484082,
+  "observations_this_run": 10463,
   "listings_per_variant": {
     "ultra": 1166,
     "mango-loco": 816,
-    "ultra-paradise": 920,
+    "ultra-paradise": 926,
     "ultra-fiesta": 568,
     "original": 1205,
     "full-zero": 425,
@@ -46,15 +46,15 @@
     "pipeline-punch": 535,
     "monarch": 395,
     "green-zero": 469,
-    "aussie-lemonade": 389
+    "aussie-lemonade": 390
   },
   "depletion_breakdown": {
-    "slowing": 3597,
-    "healthy": 4028,
-    "insufficient_data": 461,
-    "likely_out": 84
+    "slowing": 4128,
+    "healthy": 3467,
+    "insufficient_data": 460,
+    "likely_out": 122
   },
-  "live_listings": 8170,
+  "live_listings": 8177,
   "flavours_on_shelves": 13,
   "stores_per_chain": {
     "Super Pharm": 257,
@@ -192,7 +192,7 @@
       "min": 1.9,
       "median": 10.9,
       "max": 10.9,
-      "listings": 799
+      "listings": 806
     },
     "Super Sapir": {
       "min": 6.9,
@@ -254,7 +254,7 @@
       "min": 7.9,
       "median": 10.9,
       "max": 13.0,
-      "listings": 389
+      "listings": 390
     },
     "full-zero": {
       "min": 6.8,
@@ -320,7 +320,7 @@
       "min": 6.5,
       "median": 9.9,
       "max": 13.0,
-      "listings": 920
+      "listings": 926
     },
     "ultra-peachy-keen": {
       "min": 6.8,
@@ -2142,7 +2142,7 @@
     },
     {
       "date": "2026-11-27",
-      "observations": 22163,
+      "observations": 32626,
       "stores": 1351,
       "min": 1.9,
       "median": 9.9,
@@ -2154,9 +2154,9 @@
         "mango-loco": 9.9,
         "monarch": 9.9,
         "original": 9.9,
-        "pipeline-punch": 9.5,
+        "pipeline-punch": 9.2,
         "rossi": 9.9,
-        "strawberry": 8.9,
+        "strawberry": 9.2,
         "ultra": 9.9,
         "ultra-fiesta": 8.9,
         "ultra-paradise": 9.9,
